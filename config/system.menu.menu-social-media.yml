@@ -1,0 +1,8 @@
+uuid: 30de0974-7fc3-4dad-b4de-463201df8fec
+langcode: en
+status: true
+dependencies: {  }
+id: menu-social-media
+label: 'Social Media Links'
+description: 'Appears at the bottom of a page (just before Footer Utility Links).'
+locked: false

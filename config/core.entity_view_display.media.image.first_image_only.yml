@@ -1,0 +1,50 @@
+uuid: 30c51ad5-3027-4966-b68f-5797abae709f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.first_image_only
+    - field.field.media.image.field_file_description
+    - field.field.media.image.field_link
+    - field.field.media.image.field_media_image
+    - image.style.large
+    - media.type.image
+  module:
+    - image
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.image.first_image_only
+targetEntityType: media
+bundle: image
+mode: first_image_only
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_file_description: true
+  field_link: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

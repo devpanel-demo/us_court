@@ -1,0 +1,5 @@
+{{ include('uscgov:icon-link', {
+  icon: content.field_icon|add_suggestion('bare'),
+  title: content.field_fc_link.0['#title'],
+  url: content.field_fc_link.0['#url'],
+}, with_context = false) }}

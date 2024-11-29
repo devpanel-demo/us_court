@@ -1,0 +1,13 @@
+media-library-icon:
+  css:
+    theme:
+      css/media-library-icon.css: {}
+menu-link-form:
+  css:
+    theme:
+      css/menu-link-form.css: {}
+  js:
+    js/menu-link-form.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

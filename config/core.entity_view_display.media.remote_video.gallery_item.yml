@@ -1,0 +1,101 @@
+uuid: 5cd14a06-2a2e-4f1a-82d1-a06d2afd006a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.gallery_item
+    - field.field.media.remote_video.field_media_oembed_alt
+    - field.field.media.remote_video.field_media_oembed_description
+    - field.field.media.remote_video.field_media_oembed_title
+    - field.field.media.remote_video.field_media_oembed_video
+    - image.style.gallery_thumb
+    - media.type.remote_video
+  module:
+    - image
+    - nomarkup
+    - readmore
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.remote_video.gallery_item
+targetEntityType: media
+bundle: remote_video
+mode: gallery_item
+content:
+  field_media_oembed_description:
+    type: readmore
+    label: hidden
+    settings:
+      trim_length: 125
+      trim_on_break: false
+      show_readmore: false
+      show_readless: false
+      ellipsis: true
+      wordsafe: true
+      cut_on_first_sentence: 0
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_media_oembed_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: file
+      image_style: gallery_thumb
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_oembed_alt: true
+  field_media_oembed_video: true
+  name: true
+  search_api_excerpt: true
+  uid: true

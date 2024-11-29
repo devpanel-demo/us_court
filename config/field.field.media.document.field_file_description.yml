@@ -1,0 +1,22 @@
+uuid: 333def93-7636-4716-9d08-f92b40dbc133
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_file_description
+    - media.type.document
+  module:
+    - text
+id: media.document.field_file_description
+field_name: field_file_description
+entity_type: media
+bundle: document
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

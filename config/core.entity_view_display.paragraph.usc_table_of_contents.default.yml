@@ -1,0 +1,89 @@
+uuid: 63250961-0cad-4995-b7c7-79d0b8765f47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_table_of_contents.field_usc_content_nodes
+    - field.field.paragraph.usc_table_of_contents.field_usc_description
+    - field.field.paragraph.usc_table_of_contents.field_usc_label
+    - field.field.paragraph.usc_table_of_contents.field_usc_title
+    - paragraphs.paragraphs_type.usc_table_of_contents
+  module:
+    - field_formatter_range
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.usc_table_of_contents.default
+targetEntityType: paragraph
+bundle: usc_table_of_contents
+mode: default
+content:
+  field_usc_content_nodes:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 0
+        offset: 0
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_usc_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  field_usc_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+hidden:
+  field_usc_label: true
+  search_api_excerpt: true

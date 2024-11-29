@@ -1,0 +1,21 @@
+uuid: fa942791-2163-4515-89d0-7d6e2bc7fd16
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_homepage_hero_title
+id: config_pages.global_site_settings.field_homepage_hero_title
+field_name: field_homepage_hero_title
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Homepage Hero Title'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'The Federal Courts of the United States'
+default_value_callback: ''
+settings: {  }
+field_type: string

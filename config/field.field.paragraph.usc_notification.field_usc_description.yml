@@ -1,0 +1,26 @@
+uuid: 40a6e20b-3550-4fc6-b2e8-ddbb2fa95e55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_description
+    - filter.format.wysiwyg
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.usc_notification
+  module:
+    - text
+id: paragraph.usc_notification.field_usc_description
+field_name: field_usc_description
+entity_type: paragraph
+bundle: usc_notification
+label: 'Notification Text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+    - wysiwyg
+field_type: text_long

@@ -1,0 +1,86 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: de6431e7-3e35-42af-a33a-16ba7f97c86b
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Testing - Theme Tag and Logo for basic content type'
+  status: true
+  langcode: en
+  created: '1726518534'
+  changed: 1726518534
+  author: Emily_Poland@ao.uscourts.gov
+  url: /testing-theme-tag-and-logo-basic-content-type
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 74ce7344-1b0e-4772-87d1-0df70c0e4c8e
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1726518597'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags:
+    -
+      uuid: a20a5a3c-53fb-4c75-8b02-b20abf7d8d2f
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Test Report'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: tags
+    -
+      uuid: 73ccb1f5-7b91-4898-9194-e8ffde988c24
+      entity_type: taxonomy_term
+      base_fields:
+        name: Bankruptcy
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: tags
+    -
+      uuid: 150c0eb6-33b3-46d7-9a37-4549710059ad
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Bankruptcy Courts'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: tags
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

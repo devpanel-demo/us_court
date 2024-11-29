@@ -1,0 +1,21 @@
+uuid: 6187aaa2-f31a-408e-91ed-4bdca5f4a803
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_usc_code
+    - taxonomy.vocabulary.usc_court_finder_hierarchy
+_core:
+  default_config_hash: vbsyvb30f1S41OxXzcRQhnmwwXr1Or1A-6odzeqcwfE
+id: taxonomy_term.usc_court_finder_hierarchy.field_usc_code
+field_name: field_usc_code
+entity_type: taxonomy_term
+bundle: usc_court_finder_hierarchy
+label: Code
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

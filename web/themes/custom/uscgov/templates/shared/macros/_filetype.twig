@@ -1,0 +1,64 @@
+{% macro filetype(mimeType) %}
+	{% apply spaceless %}
+		{% if mimeType == 'application/pdf' %}
+			usc-icon--pdf
+		{% elseif mimeType in [
+			'application/msword',
+			'application/rtf',
+			'application/x-rtf',
+			'text/richtext'
+		] %}
+			usc-icon--word
+		{% elseif mimeType in [
+			'application/mspowerpoint',
+			'application/vnd.ms-powerpoint',
+			'application/x-mspowerpoint'
+		] %}
+			usc-icon--powerpoint
+		{% elseif mimeType in [
+			'application/excel',
+			'application/x-excel',
+			'application/x-msexcel',
+			'application/vnd.ms-excel',
+			'text/csv',
+			'text/tab-separated-values',
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+		] %}
+			usc-icon--excel
+		{% elseif mimeType in [
+			'application/x-cpio',
+			'application/x-shar',
+			'application/x-tar',
+			'application/gnutar',
+			'application/x-bzip',
+			'application/x-bzip2',
+			'application/x-gzip',
+			'multipart/x-gzip',
+			'application/x-lzip',
+			'application/x-lzma',
+			'application/x-lzop',
+			'application/x-xz',
+			'application/x-compress',
+			'application/x-7z-compressed',
+			'application/x-ace-compressed',
+			'application/vnd.android.package-archive',
+			'application/x-compressed',
+			'application/x-zip-compressed',
+			'application/zip',
+			'multipart/x-zip',
+			'application/x-zip'
+		] %}
+			usc-icon--archive
+		{% elseif 'image/' in mimeType %}
+			usc-icon--image
+		{% elseif 'audio/' in mimeType %}
+			usc-icon--audio
+		{% elseif 'video/' in mimeType %}
+			usc-icon--video
+		{% elseif 'text/' in mimeType %}
+			usc-icon--text
+		{% else %}
+			usc-icon--file
+		{% endif %}
+	{% endapply %}
+{% endmacro %}

@@ -1,0 +1,55 @@
+toolbar:
+  version: 'VERSION'
+  css:
+    theme:
+      css/toolbar.css: {}
+  dependencies:
+    - 'toolbar/toolbar'
+highcharts:
+  header: true
+  js:
+    js/highcharts/highcharts.js: {  }
+    js/highcharts/modules/exporting.js: {  }
+  dependencies:
+    - core/jquery
+
+tableau_css:
+  css:
+    theme:
+      css/tableau.css: {  }
+
+tableau:
+  js:
+    //www.visualizations.uscourts.gov/javascripts/api/tableau.embedding.3.latest.min.js: { external: true, attributes: { type: module } }
+  dependencies:
+    - usc_core/tableau_css
+
+map:
+  js:
+    //public.tableau.com/javascripts/api/viz_v1.js: { external: true }
+  dependencies:
+    - usc_core/tableau_css
+
+data_tables_date:
+  js:
+    js/data_tables_date.js: {  }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+gutenberg_customizations:
+  js:
+    js/gutenberg-customizations.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - gutenberg/drupal-gutenberg
+gutenberg_editor_restrictions:
+  js:
+    js/gutenberg-editor-restrictions.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - gutenberg/drupal-gutenberg

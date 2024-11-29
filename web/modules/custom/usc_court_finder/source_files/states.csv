@@ -1,0 +1,65 @@
+state_code,state_name,circuit_code
+AK,Alaska,09
+AL,Alabama,11
+AR,Arkansas,08
+AZ,Arizona,09
+CA,California,09
+CO,Colorado,10
+CT,Connecticut,02
+DC,"District of Columbia",DC
+DE,Delaware,03
+FL,Florida,11
+GA,Georgia,11
+GU,Guam,09
+HI,Hawaii,09
+IA,Iowa,08
+ID,Idaho,09
+IL,Illinois,07
+IN,Indiana,07
+KS,Kansas,10
+KY,Kentucky,06
+LA,Louisiana,05
+MA,Massachusetts,01
+MD,Maryland,04
+ME,Maine,01
+MI,Michigan,06
+MN,Minnesota,08
+MO,Missouri,08
+MP,"Northern Marianas",09
+MS,Mississippi,05
+MT,Montana,09
+NC,"North Carolina",04
+ND,"North Dakota",08
+NE,Nebraska,08
+NH,"New Hampshire",01
+NJ,"New Jersey",03
+NM,"New Mexico",10
+NV,Nevada,09
+NY,"New York",02
+OH,Ohio,06
+OK,Oklahoma,10
+OR,Oregon,09
+PA,Pennsylvania,03
+PR,"Puerto Rico",01
+RI,"Rhode Island",01
+SC,"South Carolina",04
+SD,"South Dakota",08
+TN,Tennessee,06
+TX,Texas,05
+UT,Utah,10
+VA,Virginia,04
+VI,"Virgin Islands",03
+VT,Vermont,02
+WA,Washington,09
+WI,Wisconsin,07
+WV,"West Virginia",04
+WY,Wyoming,10
+X1,"Supreme Court of the United States",OC
+X2,"Federal Circuit",OC
+X3,"Court of Appeals for the Armed Forces",OC
+X4,"Court of Federal Claims",OC
+X5,"Court of International Trade",OC
+X6,"Judicial Panel on Multidistrict Litigation",OC
+X7,"United States Tax Court",OC
+X8,"Court of Appeals for Veterans Claims",OC
+X9,"Other Judiciary Agencies",OC

@@ -1,0 +1,11 @@
+uuid: a0a5f122-b1f8-4df9-8dd4-2ca6997c0af5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.promo_header
+label: promo_header
+description: ''
+targetEntityType: node
+cache: true

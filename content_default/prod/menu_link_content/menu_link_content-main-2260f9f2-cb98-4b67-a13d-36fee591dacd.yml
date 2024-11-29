@@ -1,0 +1,86 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 2260f9f2-cb98-4b67-a13d-36fee591dacd
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Interpreter Categories'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/1950'
+      title: ''
+      options: {  }
+  weight: 0
+  parent:
+    uuid: 142b13a9-e5b0-4678-acb1-9c99e4d09ad6
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Federal Court Interpreters'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/1969'
+          title: ''
+          options: {  }
+      weight: 3
+      parent:
+        uuid: 9a51a6f3-19d1-4705-946b-f4fc46a287cd
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Court Programs'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/court-programs'
+              title: ''
+              options: {  }
+          weight: -70
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Learn about federal court programs and services to help provide fair and impartial justice. '
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/2805'
+              title: 'Bankruptcy Basics'
+              options: {  }
+            -
+              uri: 'entity:node/9330'
+              title: 'Filing Without an Attorney'
+              options: {  }
+            -
+              uri: 'entity:node/1769'
+              title: 'Summoned for Federal Jury Service?'
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Interpreters ensure that justice is carried out fairly for defendants and other stakeholders.'
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

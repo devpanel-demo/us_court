@@ -1,0 +1,11 @@
+uuid: 5875afe0-04fa-4462-bba2-e01c791cb26f
+langcode: en
+status: true
+dependencies:
+  module:
+    - usc_court_finder
+id: usc_location.finder_result
+label: 'Finder Result'
+description: 'The presentation for the Court Finder result.'
+targetEntityType: usc_location
+cache: true

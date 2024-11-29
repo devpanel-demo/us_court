@@ -1,0 +1,10 @@
+uuid: b55308f6-224b-4b81-80a6-38ab6ef9eea7
+langcode: en
+status: true
+dependencies: {  }
+id: usc_highcharts
+label: Highcharts
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean_usc_highcharts'
+behavior_plugins: {  }

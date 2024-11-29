@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: b1932773-aa47-4d2c-9cc4-aad86f644ac7
+entity_type: media
+bundle: icon
+base_fields:
+  name: play-circle-outline.svg
+  created: '1721137168'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/play-circle-outline.svg'
+      url: '/sites/default/files/icons/play-circle-outline.svg'

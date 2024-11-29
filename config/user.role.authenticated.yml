@@ -1,0 +1,50 @@
+uuid: 446c77e7-cff8-4107-80eb-7aadb4e5adb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.gutenberg
+    - filter.format.html_filtered
+    - filter.format.widget
+    - filter.format.wysiwyg
+  module:
+    - config_pages
+    - environment_indicator
+    - filter
+    - gutenberg
+    - legal
+    - media
+    - moderated_content_bulk_publish
+    - search
+    - search_autocomplete
+    - sitewide_alert
+    - system
+    - toolbar
+    - usc_court_finder
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'authenticated user'
+weight: -5
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access environment indicator'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'moderated content bulk draft'
+  - 'search content'
+  - 'use gutenberg'
+  - 'use search autocomplete'
+  - 'use text format basic_html'
+  - 'use text format gutenberg'
+  - 'use text format html_filtered'
+  - 'use text format widget'
+  - 'use text format wysiwyg'
+  - 'view Terms and Conditions'
+  - 'view court_finder_content'
+  - 'view global_site_settings config page entity'
+  - 'view media'
+  - 'view own unpublished media'
+  - 'view published sitewide alert entities'

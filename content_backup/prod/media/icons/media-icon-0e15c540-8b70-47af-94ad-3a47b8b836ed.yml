@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 0e15c540-8b70-47af-94ad-3a47b8b836ed
+entity_type: media
+bundle: icon
+base_fields:
+  name: cent-sign-solid.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/cent-sign-solid.svg'
+      url: '/sites/default/files/icons/cent-sign-solid.svg'

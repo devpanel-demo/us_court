@@ -1,0 +1,70 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 9a6aa1b2-0541-447c-b850-167ea92ec1ba
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Testing anchor button CE'
+  status: true
+  langcode: en
+  created: '1728408699'
+  changed: 1728408699
+  author: courtney_mcilroy@ao.uscourts.gov
+  url: /testing-anchor-button-ce
+  revision_log_message: null
+  revision_uid: '197'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Test text&nbsp;</p><p>The <a href="#a1">Sixth Amendment</a> to the United States Constitution guarantees an accused the right to representation by counsel in serious criminal prosecutions. The responsibility for appointing counsel in federal criminal proceedings for those unable to bear the cost of representation has historically rested in the federal judiciary. Before the enactment of the <a href="http://www.law.cornell.edu/uscode/18/3006A.html"><u>Criminal Justice Act(link is external)</u></a> (CJA), however, there was no authority to compensate appointed counsel for their services or litigation expenses, and federal judges depended on the professional obligation of lawyers to provide pro bono publico representation to defendants unable to retain counsel.</p><p>In 1964, the CJA was enacted to establish a comprehensive system for appointing and compensating lawyers to represent defendants financially unable to retain counsel in federal criminal proceedings. The CJA authorized reimbursement of reasonable out-of-pocket expenses and payment of expert and investigative services necessary for an adequate defense. While it provided for some compensation for appointed counsel (CJA panel attorneys), it did so at rates substantially below that which they would receive from their privately-retained clients.</p><p>In 1970, the CJA was <a href="/node/50157#b1">amended</a> to authorize districts to establish federal defender organizations as counterparts to federal prosecutors in U.S. Attorneys Offices and an institutional resource for providing defense counsel in those districts (or combinations of adjacent districts) where at least 200 persons annually require appointment of counsel.</p><p><a class="ck-anchor" id="a1"></a>Today, there are 82 authorized federal defender organizations. They employ more than 3,700 lawyers, investigators, paralegals, and support personnel and serve 92 of the 94 federal judicial districts. There are two types of federal defender organizations: federal public defender organizations and community defender organizations.</p>'
+      summary: ''
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: e92ad0f1-c2d2-4142-b0f4-22f975082fa5
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1728408786'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 2d08cc65-593f-49b3-a02c-af732d8062d4
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Defender Services'
+        weight: 10
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

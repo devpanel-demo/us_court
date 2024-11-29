@@ -1,0 +1,18 @@
+access uscourts configurations:
+  title: 'Access US Courts configuration overview'
+  description: 'Access the overview page for US Courts configurations/settings.'
+  restrict access: true
+
+administer uscourts configurations:
+  title: 'Administer US Courts configurations'
+  description: 'Administration configurations/settings for US Courts modules.'
+  restrict access: true
+
+show gutenberg advanced section:
+  title: 'Show Gutenberg Advanced Section'
+  description: 'Show the Advanced section from all Gutenberg blocks for users with this permission.'
+  restrict access: TRUE
+
+delete own draft revisions:
+  title: 'Delete own draft revisions'
+  description: 'Allows users to delete only their own draft revisions.'

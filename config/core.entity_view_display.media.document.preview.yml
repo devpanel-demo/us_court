@@ -1,0 +1,86 @@
+uuid: c8e1a53a-c126-4e4d-b195-edfce8de41b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.preview
+    - field.field.media.document.field_date_updated
+    - field.field.media.document.field_file_description
+    - field.field.media.document.field_file_title
+    - field.field.media.document.field_media_document
+    - image.style.thumbnail
+    - media.type.document
+  module:
+    - datetime
+    - image
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.document.preview
+targetEntityType: media
+bundle: document
+mode: preview
+content:
+  field_date_updated:
+    type: datetime_custom
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'F Y'
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_file_description:
+    type: text_trimmed
+    label: inline
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_file_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_document: true
+  name: true
+  search_api_excerpt: true
+  uid: true

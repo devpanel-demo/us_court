@@ -1,0 +1,9 @@
+name: Gutenberg - USWDS Icon List
+type: module
+description: USWDS Icon List Gutenberg block.
+package: Gutenberg
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - gutenberg:gutenberg
+  - gutenberg_uswds:gutenberg_uswds
+  - gutenberg_uswds_icon:gutenberg_uswds_icon

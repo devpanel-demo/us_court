@@ -1,0 +1,104 @@
+district_code,district_name,state_code,latitude,longitude
+AKX,"District of Alaska",AK,60.1293,-176.468
+ALM,"Middle District of Alabama",AL,31.8762,-85.637
+ALN,"Northern District of Alabama",AL,33.9417,-86.9169
+ALS,"Southern District of Alabama",AL,31.5179,-87.6289
+ARE,"Eastern District of Arkansas",AR,35.0537,-91.8089
+ARW,"Western District of Arkansas",AR,34.6785,-93.9415
+AZX,"District of Arizona",AZ,34.1477,-114.18
+CAC,"Central District of California",CA,34.3322,-118.208
+CAE,"Eastern District of California",CA,38.1704,-120.789
+CAN,"Northern District of California",CA,38.583,-122.597
+CAS,"Southern District of California",CA,34.8486,-117.661
+COX,"District of Colorado",CO,38.9764,-107.798
+CTX,"District of Connecticut",CT,41.4994,-73.3193
+DCX,"District of Columbia",DC,38.8936,-77.0848
+DEX,"District of Delaware",DE,39.1439,-75.9484
+FLM,"Middle District of Florida",FL,28.34,-81.8797
+FLN,"Northern District of Florida",FL,30.3133,-84.7042
+FLS,"Southern District of Florida",FL,26.646,-80.7114
+GAM,"Middle District of Georgia",GA,32.5659,-84
+GAN,"Northern District of Georgia",GA,33.9124,-84.6976
+GAS,"Southern District of Georgia",GA,32.0504,-82.2793
+GUX,"District of Guam",GU,13.4507,144.508
+HIX,"District of Hawaii",HI,20.3024,-159.679
+IAN,"Northern District of Iowa",IA,42.9157,-93.4822
+IAS,"Southern District of Iowa",IA,41.5141,-93.3667
+IDX,"District of Idaho",ID,45.4725,-116.391
+ILC,"Central District of Illinois",IL,40.3146,-89.1738
+ILN,"Northern District of Illinois",IL,41.9311,-88.9803
+ILS,"Southern District of Illinois",IL,38.1764,-88.976
+INN,"Northern District of Indiana",IN,40.7806,-86.2973
+INS,"Southern District of Indiana",IN,39.0517,-86.3684
+KSX,"District of Kansas",KS,38.4773,-100.568
+KYE,"Eastern District of Kentucky",KY,37.6034,-83.8544
+KYW,"Western District of Kentucky",KY,37.2099,-86.8951
+LAE,"Eastern District of Louisiana",LA,29.9612,-90.6394
+LAM,"Middle District of Louisiana",LA,30.4414,-91.2518
+LAW,"Western District of Louisiana",LA,31.2031,-92.8078
+MAX,"District of Massachusetts",MA,42.0314,-72.8071
+MDX,"District of Maryland",MD,38.7994,-78.3606
+MEX,"District of Maine",ME,45.1829,-70.1083
+MIE,"Eastern District of Michigan",MI,43.4542,-83.7065
+MIW,"Western District of Michigan",MI,44.3416,-86.6837
+MNX,"District of Minnesota",MN,46.4198,-95.6088
+MOE,"Eastern District of Missouri",MO,38.4559,-91.3316
+MOW,"Western District of Missouri",MO,38.7242,-93.5625
+MPX,"District Court for the Northern Mariana Islands",MP,17.3118,144.363
+MSN,"Northern District of Mississippi",MS,34.0297,-89.86
+MSS,"Southern District of Mississippi",MS,31.9011,-90.0908
+MTX,"District of Montana",MT,46.5917,-114.54
+NCE,"Eastern District of North Carolina",NC,35.4998,-77.7915
+NCM,"Middle District of North Carolina",NC,35.7128,-80.0853
+NCW,"Western District of North Carolina",NC,35.7384,-82.3404
+NDX,"District of North Dakota",ND,47.4459,-102.55
+NEX,"District of Nebraska",NE,41.4789,-101.929
+NHX,"District of New Hampshire",NH,43.9957,-72.6898
+NJX,"District of New Jersey",NJ,40.0717,-75.2861
+NMX,"District of New Mexico",NM,34.1457,-108.274
+NVX,"District of Nevada",NV,38.4805,-119.271
+NYE,"Eastern District of New York",NY,40.7919,-73.2788
+NYN,"Northern District of New York",NY,43.7078,-74.9955
+NYS,"Southern District of New York",NY,41.3102,-74.0002
+NYW,"Western District of New York",NY,42.0894,-79.8212
+OC1,"Supreme Court of the United States",X1,38.8936,-77.0848
+OC2,"Federal Circuit",X2,38.8936,-77.0848
+OC3,"Court of Appeals for the Armed Forces",X3,38.8936,-77.0848
+OC4,"Court of Federal Claims",X4,38.8936,-77.0848
+OC5,"Court of International Trade",X5,41.3102,-74.0002
+OC6,"Judicial Panel on Multidistrict Litigation",X6,38.8936,-77.0848
+OC7,"United States Tax Court",X7,38.8936,-77.0848
+OC8,"Court of Appeals for Veterans Claims",X8,38.8936,-77.0848
+OC9,"Other Judiciary Agencies",X9,38.8936,-77.0848
+OHN,"Northern District of Ohio",OH,41.0101,-82.6734
+OHS,"Southern District of Ohio",OH,39.4161,-82.8492
+OKE,"Eastern District of Oklahoma",OK,34.9107,-95.3812
+OKN,"Northern District of Oklahoma",OK,36.7103,-97.2269
+OKW,"Western District of Oklahoma",OK,35.7086,-99.0506
+ORX,"District of Oregon",OR,44.1234,-122.831
+PAE,"Eastern District of Pennsylvania",PA,40.2042,-75.6643
+PAM,"Middle District of Pennsylvania",PA,41.0961,-79.8533
+PAW,"Western District of Pennsylvania",PA,40.9054,-79.2019
+PRX,"District of Puerto Rico",PR,18.2052,-67.7097
+RIX,"District of Rhode Island",RI,41.557,-71.7788
+SCX,"District of South Carolina",SC,33.6194,-82.0503
+SDX,"District of South Dakota",SD,44.1907,-102.495
+TNE,"Eastern District of Tennessee",TN,35.7551,-84.1495
+TNM,"Middle District of Tennessee",TN,35.8617,-86.4907
+TNW,"Western District of Tennessee",TN,29.9436,-100.702
+TXE,"Eastern District of Texas",TX,31.6158,-94.7132
+TXN,"Northern District of Texas",TX,32.4838,-99.8768
+TXS,"Southern District of Texas",TX,28.559,-97.159
+TXW,"Western District of Texas",TX,30.394,-102.173
+UTX,"District of Utah",UT,39.4944,-112.671
+VAE,"Eastern District of Virginia",VA,37.5828,-77.191
+VAW,"Western District of Virginia",VA,37.2341,-79.8165
+VIX,"District Court of the Virgin Islands",VI,18.066,-65.3005
+VTX,"District of Vermont",VT,43.8704,-73.0132
+WAE,"Eastern District of Washington",WA,47.3016,-119.142
+WAW,"Western District of Washington",WA,47.1898,-122.873
+WIE,"Eastern District of Wisconsin",WI,44.1645,-88.5139
+WIW,"Western District of Wisconsin",WI,44.4321,-90.3262
+WVN,"Northern District of West Virginia",WV,38.9751,-80.0714
+WVS,"Southern District of West Virginia",WV,38.1444,-81.458
+WYX,"District of Wyoming",WY,42.9783,-109.802

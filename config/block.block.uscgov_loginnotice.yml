@@ -1,0 +1,33 @@
+uuid: a2bf6e61-4baf-457c-929c-fa420ce3bac5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - system
+    - usc_core
+  theme:
+    - uscgov
+id: uscgov_loginnotice
+theme: uscgov
+region: content
+weight: -3
+provider: null
+plugin: login_notice_block
+settings:
+  id: login_notice_block
+  label: 'Login Notice'
+  label_display: '0'
+  provider: usc_core
+  my_setting: 'testint title notice'
+  usc_login_notice_title: 'NOTICE TO USERS'
+  usc_login_notice_description: 'This is a restricted government system for official judiciary business only. All activities on this system for any purpose, and all access attempts, may be recorded and monitored or reviewed by persons authorized by the federal judiciary for improper use, protection of system security, performance of maintenance, and appropriate management by the judiciary of its systems. By using this system or any connected system, users expressly consent to system monitoring and to official access to data reviewed and created by them on the system. Any evidence of unlawful activity, including unauthorized access attempts, may be reported to law enforcement officials.'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/login

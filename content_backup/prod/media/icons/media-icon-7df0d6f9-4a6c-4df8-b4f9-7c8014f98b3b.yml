@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 7df0d6f9-4a6c-4df8-b4f9-7c8014f98b3b
+entity_type: media
+bundle: icon
+base_fields:
+  name: window-maximize.svg
+  created: '1721137264'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/window-maximize.svg'
+      url: '/sites/default/files/icons/window-maximize.svg'

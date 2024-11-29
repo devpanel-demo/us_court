@@ -1,0 +1,5 @@
+services:
+  opa_file.twig_extension:
+    class: Drupal\opa_file\TwigExtension\FileExt
+    tags:
+      - { name: twig.extension }

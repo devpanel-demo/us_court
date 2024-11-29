@@ -1,0 +1,54 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 82f2f7a2-05e8-4fbb-b111-b036d4559305
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Search Judiciary Jobs'
+  status: true
+  langcode: en
+  created: '1408174256'
+  changed: 1727753530
+  author: jamesdavison@ao.uscourts.gov
+  url: /careers/search-judiciary-jobs
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p>\r\n\tReview current Judiciary job openings below. Narrow your search below using keywords or location information. A state not listed in the drop down selection means there are no current openings in that state.\r\n</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>\r\n\tIf you are looking for federal law clerk or appellate staff attorney positions, go to the <a href=\"http://oscar.uscourts.gov\">OSCAR website </a>to register for an account.\r\n</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>\r\n\tPlease note <a href=\"node/12987\">citizenship requirements</a>.\r\n</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:drupalblock/views-block-vacancies-job-job-listing {\"blockId\":\"views_block:vacancies_job-job_listing\"} /-->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image:
+    -
+      uuid: 7335ba93-5c7f-4950-a304-fce6d11598a6
+      entity_type: media
+      base_fields:
+        name: search-jobs.jpg
+        created: '1426888709'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: '<p>Diverse career opportunities await within the federal courts, probation and pretrial services, public defender organizations, and the Administrative Office of the United States Courts.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: e652c93c-901b-4745-a836-b99e12d5fd6d
+      entity_type: taxonomy_term
+      base_fields:
+        name: Careers
+        weight: 7
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

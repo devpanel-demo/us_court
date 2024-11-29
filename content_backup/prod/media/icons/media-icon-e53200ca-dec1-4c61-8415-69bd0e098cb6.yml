@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: e53200ca-dec1-4c61-8415-69bd0e098cb6
+entity_type: media
+bundle: icon
+base_fields:
+  name: industry.svg
+  created: '1721137137'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/industry.svg'
+      url: '/sites/default/files/icons/industry.svg'

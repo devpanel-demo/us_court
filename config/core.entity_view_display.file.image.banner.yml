@@ -1,0 +1,22 @@
+uuid: 6b4e590d-c5cb-44e6-a8c3-90ed3a0394be
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.banner
+    - field.field.file.image.field_file_description
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+    - field.field.file.image.field_link
+  module:
+    - file
+id: file.image.banner
+targetEntityType: file
+bundle: image
+mode: banner
+content: {  }
+hidden:
+  field_file_description: true
+  field_file_image_alt_text: true
+  field_file_image_title_text: true
+  field_link: true

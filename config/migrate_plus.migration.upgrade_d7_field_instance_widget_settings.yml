@@ -1,0 +1,199 @@
+uuid: ea76b54e-7f5e-4dde-ab81-f54998c9238d
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_field_instance_widget_settings
+class: Drupal\migrate_drupal\Plugin\migrate\FieldMigration
+field_plugin_method: alterFieldWidgetMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+  - 'Bean map processed'
+migration_group: migrate_drupal_7
+label: 'Field instance widget configuration'
+source:
+  plugin: d7_field_instance_per_form_display
+  constants:
+    form_mode: default
+    third_party_settings: {  }
+    bean: bean
+  mapMigrationProcessValueToMedia: true
+process:
+  field_type_exists:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_field
+      source:
+        - field_name
+        - entity_type
+    -
+      plugin: extract
+      index:
+        - 0
+    -
+      plugin: skip_on_empty
+      method: row
+  bean_bundle:
+    -
+      plugin: bean_compare
+      source:
+        - entity_type
+        - constants/bean
+    -
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_bean_type_graphic_photo
+        - upgrade_bean_type_related_content
+        - upgrade_bean_type_related_files
+        - upgrade_bean_type_related_links
+        - upgrade_bean_type_table_of_contents
+        - upgrade_bean_type_video
+        - upgrade_bean_type_bean_usc_courtlocator
+        - upgrade_bean_type_bean_usc_govdelivery
+        - upgrade_bean_type_bean_usc_highcharts
+        - upgrade_bean_type_bean_usc_latestnews
+        - upgrade_bean_type_bean_usc_map
+        - upgrade_bean_type_bean_usc_notification
+        - upgrade_bean_type_bean_usc_youtube
+      no_stub: true
+      source: bundle
+    -
+      plugin: skip_on_empty
+      method: process
+  original_bundle:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_field_instance
+      source:
+        - entity_type
+        - bundle
+        - field_name
+    -
+      plugin: extract
+      index:
+        - 1
+  bundle:
+    -
+      plugin: null_coalesce
+      source:
+        - '@bean_bundle'
+        - '@original_bundle'
+  form_mode:
+    -
+      plugin: get
+      source: constants/form_mode
+  field_name:
+    -
+      plugin: get
+      source: field_name
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+    -
+      plugin: static_map
+      map:
+        bean: block_content
+      bypass: true
+    -
+      plugin: static_map
+      map:
+        file: media
+      bypass: true
+    -
+      plugin: static_map
+      map:
+        field_collection_item: paragraph
+        paragraphs_item: paragraph
+      bypass: true
+  options/weight:
+    -
+      plugin: get
+      source: widget/weight
+  widget_type:
+    -
+      plugin: process_field
+      source: type
+      method: getFieldWidgetType
+  options/type:
+    type:
+      plugin: static_map
+      bypass: true
+      source: '@widget_type'
+      map:
+        link_field: link_default
+        email_textfield: email_default
+        date_select: datetime_default
+        date_text: datetime_default
+        date_popup: datetime_default
+        media_generic: media_library_widget
+        phone_textfield: telephone_default
+        options_onoff: boolean_checkbox
+        entityreference_autocomplete: entity_reference_autocomplete
+        entityreference_autocomplete_tags: entity_reference_autocomplete_tags
+        taxonomy_autocomplete: entity_reference_autocomplete
+        inline_entity_form_single: inline_entity_form_simple
+        inline_entity_form: inline_entity_form_complex
+        d7_text: d7_text_default
+        image_image: media_library_widget
+        media_image: media_image_default
+        taxonomy_term_reference: taxonomy_term_reference_default
+        entityreference: entityreference_default
+        file_generic: media_library_widget
+        file_entity: file_entity_default
+        field_collection_embed: entity_reference_paragraphs
+        field_collection: field_collection_default
+        date: datetime_default
+        datetime: datetime_default
+        datestamp: datetime_timestamp
+        list: list_default
+        number_default: number_default_default
+  options/settings:
+    -
+      plugin: field_instance_widget_settings
+      source:
+        - widget/type
+        - widget/settings
+  options/third_party_settings:
+    -
+      plugin: get
+      source: constants/third_party_settings
+destination:
+  plugin: component_entity_form_display
+migration_dependencies:
+  required:
+    - upgrade_d7_field_instance
+  optional:
+    - upgrade_d7_field_collection_type
+    - upgrade_d7_field
+    - upgrade_bean_type_bean_usc_courtlocator
+    - upgrade_bean_type_bean_usc_govdelivery
+    - upgrade_bean_type_bean_usc_highcharts
+    - upgrade_bean_type_bean_usc_latestnews
+    - upgrade_bean_type_bean_usc_map
+    - upgrade_bean_type_bean_usc_notification
+    - upgrade_bean_type_bean_usc_youtube
+    - upgrade_bean_type_graphic_photo
+    - upgrade_bean_type_related_content
+    - upgrade_bean_type_related_files
+    - upgrade_bean_type_related_links
+    - upgrade_bean_type_table_of_contents
+    - upgrade_bean_type_video
+    - upgrade_d7_field_instance
+    - upgrade_bean_type_graphic_photo
+    - upgrade_bean_type_related_content
+    - upgrade_bean_type_related_files
+    - upgrade_bean_type_related_links
+    - upgrade_bean_type_table_of_contents
+    - upgrade_bean_type_video
+    - upgrade_bean_type_bean_usc_courtlocator
+    - upgrade_bean_type_bean_usc_govdelivery
+    - upgrade_bean_type_bean_usc_highcharts
+    - upgrade_bean_type_bean_usc_latestnews
+    - upgrade_bean_type_bean_usc_map
+    - upgrade_bean_type_bean_usc_notification
+    - upgrade_bean_type_bean_usc_youtube

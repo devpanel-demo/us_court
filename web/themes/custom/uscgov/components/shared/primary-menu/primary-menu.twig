@@ -1,0 +1,112 @@
+{% import _self as menu %}
+
+{# Wrapper necessary for once.js to process the behavior. #}
+<div class="primary-menu-wrapper">
+  {{ menu.menu_links(items, attributes, 0) }}
+</div>
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% set menu_level = items|first.menu_level %}
+
+  <ul{{attributes.addClass(['primary-menu', 'primary-menu--level-' ~ menu_level])}}>
+    {% for key, item in items %}
+      {% if key|first != '#' %}
+        {% set megamenu_enabled = item.entity.field_enable_megamenu.value %}
+        {% set dropdown_id = ('id-' ~ item.title ~ '-dropdown')|clean_unique_id %}
+        {% set menu_item_classes = [
+          'primary-menu__menu-item',
+          'primary-menu__menu-item--level-' ~ menu_level,
+          item.in_active_trail ? 'primary-menu__menu-item--active-trail',
+        ] %}
+
+        <li{{item.attributes.addClass(menu_item_classes)}}>
+          {% if menu_level == 0 and item.below %}
+            <button
+              type="button"
+              class="primary-menu__button"
+              aria-expanded="false"
+              aria-controls="{{ dropdown_id }}"
+              aria-label="{{ item.title }}"
+            >
+              <span class="primary-menu__link-main-text">
+                {{ item.title }}
+              </span>
+
+              {% if megamenu_enabled and item.entity.field_description_text.value %}
+                <span class="primary-menu__link-description-text">{{ item.entity.field_description_text.value }}</span>
+              {% endif %}
+            </button>
+
+            <div id="{{ dropdown_id }}" class="primary-menu__dropdown {{ megamenu_enabled ? 'primary-menu__dropdown--mega' : 'primary-menu__dropdown--simple' }}">
+              {{ item.content }}
+            </div>
+          {% elseif menu_level == 0 %}
+              <a href="{{ item.url }}" class="primary-menu__link primary-menu__link--level-{{ menu_level }}">
+                <span class="primary-menu__link-main-text">
+                  {{ item.title }}
+                </span>
+                {% if megamenu_enabled and item.entity.field_description_text.value %}
+                  <span class="primary-menu__link-description-text">
+                    {{ item.entity.field_description_text.value }}
+                  </span>
+                {% endif %}
+              </a>
+          {% elseif menu_level == 1 and item.below %}
+
+            {% set tertiary_wrapper_id = ('id-' ~ item.title )|clean_unique_id %}
+            {# This nest of <div>'s is to prevent Safari from breaking layout
+            when using CSS column. 🤮 #}
+            <div>
+              <div class="primary_menu__level-{{ menu_level }}-inner">
+                <button
+                  class="primary-menu__button primary-menu__button--level-{{ menu_level }}"
+                  aria-label="{{ item.title }}"
+                  aria-controls="{{ tertiary_wrapper_id }}"
+                >
+                  <span class="primary-menu__link-main-text">
+                    {{ item.title }}
+                  </span>
+                  {% if item.entity.field_description_text.value %}
+                    <span class="primary-menu__link-description-text">
+                      {{ item.entity.field_description_text.value }}
+                    </span>
+                  {% endif %}
+                </button>
+                <a href="{{ item.url }}" class="primary-menu__link--level-{{ menu_level }} primary-menu__link--has-children" aria-label="{{ item.title }}">
+                  <span class="primary-menu__link-main-text">
+                    {{ item.title }}
+                  </span>
+                  {% if item.entity.field_description_text.value %}
+                    <span class="primary-menu__link-description-text">
+                      {{ item.entity.field_description_text.value }}
+                    </span>
+                  {% endif %}
+                </a>
+
+                {{ item.content|set_attribute('id', tertiary_wrapper_id) }}
+              </div>
+            </div>
+          {% else %}
+            {# This nest of <div>'s is to prevent Safari from breaking layout
+            when using CSS column. 🤮 #}
+            <div>
+              <div class="primary_menu__level-{{ menu_level }}-inner">
+                <a href="{{ item.url }}" class="primary-menu__link--level-{{ menu_level }}" aria-label="{{ item.title }}">
+                  <span class="primary-menu__link-main-text">
+                    {{ item.title }}
+                  </span>
+                  {% if item.entity.field_description_text.value %}
+                    <span class="primary-menu__link-description-text">
+                      {{ item.entity.field_description_text.value }}
+                    </span>
+                  {% endif %}
+                </a>
+                {{ item.content }}
+              </div>
+            </div>
+          {% endif %}
+        </li>
+      {% endif %}
+  {% endfor %}
+  </ul>
+{% endmacro %}

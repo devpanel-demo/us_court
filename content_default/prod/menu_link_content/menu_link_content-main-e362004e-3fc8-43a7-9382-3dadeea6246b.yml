@@ -1,0 +1,78 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: e362004e-3fc8-43a7-9382-3dadeea6246b
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Reports of the Judicial Conference Proceedings'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/3254'
+      title: ''
+      options: {  }
+  weight: 1
+  parent:
+    uuid: d0763fd9-622b-4943-a6f4-d638011c9e9f
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Governance & the Judicial Conference'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/2751'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 723fb64b-6e47-4536-8468-7e967dd271f6
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Administration & Policies'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/administration-policies'
+              title: ''
+              options: {  }
+          weight: -69
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Administration and governance of the Judicial occurs at both a national and regional level.'
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/1796'
+              title: 'Code of Conduct for U.S. Judges'
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'The Judicial Conference of the U.S. is the national policymaking body for the federal courts.'
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

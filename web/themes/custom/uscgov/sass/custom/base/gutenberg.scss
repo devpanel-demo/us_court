@@ -1,0 +1,80 @@
+@use "uswds-core" as *;
+@import "../components/gutenberg/embed";
+
+.editor-styles-wrapper {
+  .block-editor-block-list__layout.is-root-container {
+    @include typeset($theme-prose-font-family);
+
+    & > {
+      @include usa-list-styles;
+      @include usa-table-styles;
+
+      p {
+        @include typeset-p-base;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @include typeset-heading-base;
+      }
+
+      * + * {
+        margin-top: $theme-paragraph-margin-top;
+        margin-bottom: 0;
+      }
+
+      * + {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin-top: $theme-heading-margin-top;
+        }
+      }
+
+      // Replaces styles from usa-headings-styles
+      h1 {
+        @include h1;
+        line-height: 1.15;
+      }
+      h2 {
+        @include h2;
+        line-height: 1.15;
+      }
+      h3 {
+        @include h3;
+        line-height: 1.15;
+      }
+      h4 {
+        @include h4;
+        line-height: 1.15;
+      }
+      h5 {
+        @include h5;
+        line-height: 1.15;
+      }
+      h6 {
+        @include h6;
+        line-height: 1.15;
+      }
+    }
+  }
+}
+
+.wp-block-embed {
+  @extend %wp-block-embed;
+
+  &-with-text {
+    @extend %wp-block-embed-with-text;
+  }
+}
+
+.editor-styles-wrapper a {
+  color: var(--text-link);
+}

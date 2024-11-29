@@ -1,0 +1,32 @@
+gutenberg_uswds_collection.search:
+  path: '/editor/search-collection/{type}/{search}'
+  defaults:
+    _controller: '\Drupal\gutenberg_uswds_collection\Controller\ContentController::search'
+  methods: 'GET'
+  requirements:
+    _permission: 'use gutenberg'
+    _format: json
+gutenberg_uswds_collection.load_single:
+  path: '/editor/collection/load/{nid}/{viewmode}'
+  defaults:
+    _controller: '\Drupal\gutenberg_uswds_collection\Controller\ContentController::loadById'
+  methods: 'GET'
+  requirements:
+    _permission: 'use gutenberg'
+    _format: json
+gutenberg_uswds_collection.load_multiple:
+  path: '/editor/content/loadmultiple/{nids}/{viewmode}'
+  defaults:
+    _controller: '\Drupal\gutenberg_uswds_collection\Controller\ContentController::loadByIds'
+  methods: 'GET'
+  requirements:
+    _permission: 'use gutenberg'
+    _format: json
+gutenberg_uswds_collection.load_latest:
+  path: '/editor/latestcontent/load/{bundle}/{items}'
+  defaults:
+    _controller: '\Drupal\gutenberg_uswds_collection\Controller\ContentController::loadByBundle'
+  methods: 'GET'
+  requirements:
+    _permission: 'use gutenberg'
+    _format: json

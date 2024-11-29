@@ -1,0 +1,30 @@
+uuid: 3081f160-6e9d-436b-9111-36898d5284e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subject_matter
+    - node.type.camera
+    - taxonomy.vocabulary.subject_matter
+id: node.camera.field_subject_matter
+field_name: field_subject_matter
+entity_type: node
+bundle: camera
+label: 'Subject Matter'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subject_matter: subject_matter
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+field_type: entity_reference

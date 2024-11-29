@@ -1,0 +1,70 @@
+uuid: 8909b2d6-6906-4a52-9cf4-d30c5f585785
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.judge_comments.body
+    - field.field.node.judge_comments.field_committee
+    - field.field.node.judge_comments.field_date_updated
+    - field.field.node.judge_comments.field_document_pdf
+    - field.field.node.judge_comments.field_rules_rule_or_form
+    - field.field.node.judge_comments.field_tags
+    - field.field.node.judge_comments.field_usc_additional_content
+    - field.field.node.judge_comments.field_usc_govdelivery_form
+    - field.field.node.judge_comments.field_usc_notification
+    - field.field.node.judge_comments.field_usc_related_news
+    - field.field.node.judge_comments.field_usc_table_of_contents
+    - field.field.node.judge_comments.field_workbench_access
+    - node.type.judge_comments
+  module:
+    - sdc_display
+    - summary_only
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.judge_comments.sidebar
+targetEntityType: node
+bundle: judge_comments
+mode: sidebar
+content:
+  body:
+    type: text_summary_only
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_summary: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  content_moderation_control: true
+  extra_field_child_menu_items: true
+  field_committee: true
+  field_date_updated: true
+  field_document_pdf: true
+  field_rules_rule_or_form: true
+  field_tags: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,7 @@
+libraryOverrides:
+  css:
+    component:
+      court-finder-block.css: {}
+      court-finder-dropdown.css: {}
+  dependencies:
+    - core/drupal.dialog

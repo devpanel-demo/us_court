@@ -1,0 +1,19 @@
+uuid: 3c7d5e6f-2bd3-404e-b466-32b46644dada
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - media
+id: media.field_link
+field_name: field_link
+entity_type: media
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

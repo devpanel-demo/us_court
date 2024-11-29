@@ -1,0 +1,15 @@
+usc_failtest.failtest:
+  path: '/failtest'
+  defaults:
+    _controller: '\Drupal\usc_failtest\Controller\FailTestPageController::failtest'
+    _title: 'U.S. Courts Failtest'
+  requirements:
+    _access: 'TRUE'
+
+usc_failtest.settings:
+  path: '/admin/config/usc_failtest'
+  defaults:
+    _form: '\Drupal\usc_failtest\Form\ModuleConfigurationForm'
+    _title: 'Failtest page settings'
+  requirements:
+    _permission: 'administer site configuration'

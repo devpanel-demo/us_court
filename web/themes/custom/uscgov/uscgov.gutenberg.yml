@@ -1,0 +1,236 @@
+libraries-edit:
+  - uscgov/variables
+  - uscgov/button
+  - uscgov/gutenberg
+  - uscgov/quotes
+  - uscgov/exposed_filters
+  - uscgov/gutenberg_components
+  - usc_core/gutenberg_editor_restrictions
+  # Will needed to be updated after SDC module is merged into core theme system.
+  - sdc/uscgov--usa_alert
+  - sdc/uscgov--usa_collection
+  - sdc/uscgov--usa_icon_list
+  - sdc/uscgov--usa_table
+  - sdc/uscgov--usa_card
+  - sdc/uscgov--usa_accordion
+  - sdc/uscgov--usa_summary_box
+  - sdc/uscgov--featured-item
+  - sdc/uscgov--list-item
+  - sdc/uscgov--usa_process_list
+  - sdc/uscgov--intro-text
+  - sdc/uscgov--usa_pagination_mini
+  - sdc/uscgov--usa_pagination
+  - sdc/uscgov--judicial-milestone
+  - sdc/uscgov--location-list-item
+
+custom-blocks:
+  categories:
+    - reference: uswds
+      name: USWDS
+      blocks:
+        - id: uswds/accordion
+          name: Accordion
+        - id: uswds/alert
+          name: Alert
+        - id: uswds/card
+          name: Card
+        - id: uswds/icon
+          name: Icon
+        - id: uswds/icon_list
+          name: Icon List
+        - id: uswds/intro_text
+          name: Intro Text
+        - id: uswds/process_list
+          name: Process List
+        - id: uswds/summary_box
+          name: Summary Box
+        - id: uswds/table
+          name: Table
+        - id: uswds/modal
+          name: Modal
+        - id: uswds/gallery
+          name: Gallery
+theme-support:
+  disableCustomColors: true
+  __experimentalFeatures:
+    blocks:
+      core/button:
+        color:
+          background: true
+          defaultPalette: false
+          __experimentalEnableContrastChecker: false
+          palette:
+            theme:
+              - slug: "primary"
+                name: "Primary"
+                color: "var(--surface-button)"
+              - slug: "accent"
+                name: "Accent"
+                color: "var(--surface-button-accent)"
+      core/separator:
+        color:
+          background: false
+          defaultPalette: false
+          __experimentalEnableContrastChecker: false
+          palette:
+            theme:
+    appearanceTools: false
+    typography:
+      customFontSize: false
+    spacing:
+      margin: true
+      padding: true
+      units:
+        - px
+        - em
+        - rem
+    layout:
+      contentSize: '720px'
+      wideSize: '1090px'
+    color:
+      background: true
+      button: false
+      caption: false
+      defaultDuotone: false
+      defaultGradients: false
+      text: false
+      custom: false
+      defaultPalette: false
+      palette:
+        theme:
+          - slug: "primary-lighter"
+            name: "primary-lighter"
+            color: "var(--surface-primary-lighter)"
+          - slug: "whites"
+            name: "Whites"
+            color: "var(--surface-primary-lighter)"
+          - slug: "brand-primary-1"
+            name: "Brand Primary 1"
+            color: "#E7F6F8"
+          - slug: "brand-primary-2"
+            name: "Brand Primary 2"
+            color: "#73A4CF"
+          - slug: "brand-primary-3"
+            name: "Brand Primary 3"
+            color: "#0057A3"
+          - slug: "brand-primary-4"
+            name: "Brand Primary 4"
+            color: "#01417F"
+          - slug: "brand-primary-5"
+            name: "Brand Primary 5"
+            color: "#002D5A"
+          - slug: "brand-primary-6"
+            name: "Brand Primary 6"
+            color: "#002045"
+          - slug: "brand-gold-1"
+            name: "Brand gold 1"
+            color: "#FCF6E7"
+          - slug: "brand-gold-2"
+            name: "Brand gold 2"
+            color: "#EFD388"
+          - slug: "brand-gold-3"
+            name: "Brand gold 3"
+            color: "#DFA611"
+          - slug: "brand-gold-4"
+            name: "Brand gold 4"
+            color: "#A07510"
+          - slug: "brand-gold-5"
+            name: "Brand gold 5"
+            color: "#725214"
+          - slug: "brand-gold-6"
+            name: "Brand gold 6"
+            color: "#433205"
+          - slug: "brand-red-1"
+            name: "Brand red 1"
+            color: "#DAB4A9"
+          - slug: "brand-red-2"
+            name: "Brand red 2"
+            color: "#C76F57"
+          - slug: "brand-red-3"
+            name: "Brand red 3"
+            color: "#A34329"
+          - slug: "brand-red-4"
+            name: "Brand red 4"
+            color: "#722F1D"
+          - slug: "brand-red-5"
+            name: "Brand red 5"
+            color: "#522215"
+          - slug: "brand-green-1"
+            name: "Brand green 1"
+            color: "#C9D6B3"
+          - slug: "brand-green-2"
+            name: "Brand green 2"
+            color: "#819E4D"
+          - slug: "brand-green-3"
+            name: "Brand green 3"
+            color: "#4B7500"
+          - slug: "brand-green-4"
+            name: "Brand green 4"
+            color: "#2D4600"
+          - slug: "brand-green-5"
+            name: "Brand green 5"
+            color: "#1E2F00"
+  __experimentalBlockPatternCategories:
+    -
+      label: Sections
+      name: sections
+    -
+      label: Media
+      name: media
+  __experimentalBlockPatterns:
+    -
+      categories:
+        - sections
+      content: |-
+        <!-- wp:heading -->
+        <h2>News</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:separator {"color":"brand-red-3","className":"is-style-wide"} -->
+        <hr class="wp-block-separator has-text-color has-background has-brand-red-3-background-color has-brand-red-3-color is-style-wide"/>
+        <!-- /wp:separator -->
+
+        <!-- wp:paragraph -->
+        <p></p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:drupalcontent/news {"nodeId":13610,"viewMode":"featured_item"} /--></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:drupalblock/views-block-news-and-announcements-newest-4 {"blockId":"views_block:news_and_announcements-newest_4"} /--></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+      description: "Two columns block with content and views"
+      name: uscgov/news-announcements
+      title: "News and Announcements"
+    -
+      categories:
+        - media
+      content: |-
+        <!-- wp:group -->
+        <div class="wp-block-group"><!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:embed {"url":"https://www.youtube.com/watch?v=BaDn3MqIHVA","type":"rich","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
+        <figure class="wp-block-embed is-type-rich is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+        https://www.youtube.com/watch?v=BaDn3MqIHVA
+        </div></figure>
+        <!-- /wp:embed --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"verticalAlignment":"center"} -->
+        <div class="wp-block-column is-vertically-aligned-center wp-block-embed-with-text"><!-- wp:heading -->
+        <h2>Headline video</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Fusce finibus est non sagittis finibus. Maecenas aliquam, dui non elementum hendrerit, felis velit sagittis</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group -->
+      description: "A block rendering a Highlighted video."
+      name: uscgov/video-highlighted
+      title: "Video Highlighted"

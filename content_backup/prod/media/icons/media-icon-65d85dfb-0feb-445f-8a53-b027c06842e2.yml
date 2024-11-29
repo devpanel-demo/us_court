@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 65d85dfb-0feb-445f-8a53-b027c06842e2
+entity_type: media
+bundle: icon
+base_fields:
+  name: school-flag-solid.svg
+  created: '1721137216'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/school-flag-solid.svg'
+      url: '/sites/default/files/icons/school-flag-solid.svg'

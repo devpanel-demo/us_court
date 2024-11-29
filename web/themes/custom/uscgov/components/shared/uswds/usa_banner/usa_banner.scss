@@ -1,0 +1,32 @@
+@forward "../../sass/uswds/settings";
+@forward "usa-banner";
+@forward "override";
+
+
+.usa-banner__content {
+  body & {
+    background-color: transparent;
+  }
+
+  @media (scripting: enabled) {
+    display: none;
+
+    .usa-banner__header--expanded + & {
+      display: block;
+    }
+  }
+}
+
+.usa-accordion__browsealoud {
+  margin-left: auto;
+  z-index: 1;
+
+  button {
+    color: var(--text-link);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--color-primitive-theme-primary-dark);
+    }
+  }
+}

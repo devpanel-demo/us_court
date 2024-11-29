@@ -1,0 +1,74 @@
+{% set classes = [
+  'usa-collection__item',
+  settings.flag ? 'usa-card--flag',
+  settings.media_right ? 'usa-card--media-right',
+  settings.header_first ? 'usa-card--header-first',
+] %}
+
+{% if url is iterable %}
+  {% set url = url.0['#markup'] %}
+{% endif %}
+
+<li class="usa-collection__item">
+  {% if image and image is iterable %}
+    {% if image['#field_type'] == 'image' or image['#field_type'] == 'entity_reference' %}
+      <div class="usa-collection__img">
+        {{ image }}
+      </div>
+    {% endif %}
+  {% else %}
+    {% if image.type != 'none' %}
+      {% if image.type == 'field' %}
+        {{ image }}
+      {% endif %}
+      {% if image.type == 'entity' %}
+        {{ image.entity }}
+      {% endif %}
+      {% if image.type == 'url' %}
+        <img
+          class="usa-collection__img"
+          src={{ image.url }}
+          alt="{{ image.alt }}"
+          title="{{ image.title }}"
+        />
+      {% endif %}
+    {% endif %}
+  {% endif %}
+  {% if date %}
+    {% if date is iterable %}
+      {% if date['#field_type'] == 'daterange' %}
+        {% set date = date.0.start_date['#text'] %}
+      {% endif %}
+    {% endif %}
+    <div class="usa-collection__calendar-date">
+      <time datetime="{{ date }}"
+        ><span class="usa-collection__calendar-date-month">{{ date|date("M") }}</span>
+        <span class="usa-collection__calendar-date-day">{{ date|date("d") }}</span></time
+      >
+    </div>
+  {% endif %}
+  <div class="usa-collection__body">
+    <h4 class="usa-collection__heading">
+      <a
+        class="usa-link"
+        href="{{ url }}"
+        >{{ title }}</a
+      >
+    </h4>
+    {% if body %}
+      <div class="usa-collection__description">
+        {{ body }}
+      </div>
+    {% endif %}
+    {% if publish_date %}
+      {{ publish_date }}
+    {% endif %}
+    {% if meta %}
+      {% for meta_list in meta %}
+        {{ include('uscgov:label-pill', {
+          items: meta_list.list_items,
+        }, with_context = false) }}
+      {% endfor %}
+    {% endif %}
+  </div>
+</li>

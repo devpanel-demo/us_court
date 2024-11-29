@@ -1,0 +1,41 @@
+<nav{{ attributes.addClass('usa-footer__nav').setAttribute('aria-label', 'Footer navigation'|t) }}>
+  {% if level == 0 %}
+    <ul class="grid-row grid-gap">
+  {% else %}
+    <ul id="{{ 'section-' ~ section }}" class="usa-nav__submenu">
+  {% endif %}
+
+  {% for item in items %}
+    {%
+      set classes = [
+        'mobile-lg:grid-col-6',
+        'desktop:grid-col-auto',
+        level == 0 ? 'usa-footer__primary-content' : 'usa-nav__submenu-item',
+        item.is_expanded ? 'menu-item--expanded',
+        item.is_collapsed ? 'menu-item--collapsed',
+        item.in_active_trail ? 'menu-item--active-trail',
+      ]
+    %}
+    <li{{ item.attributes.addClass(classes) }}>
+      {% if item.below %}
+        <button
+          type="button"
+          class="usa-accordion__button usa-nav__link{{ item.in_active_trail ? ' usa-current' }}"
+          aria-expanded="false"
+          aria-controls="{{ 'section-' ~ item.title|clean_class }}"
+        >
+          <span>{{ item.title }}</span>
+        </button>
+        {{ include('uscgov:footer_menu', {
+          section: item.title|clean_class,
+          items: item.below,
+          attributes,
+          level: level + 1,
+        }, with_context = false) }}
+      {% else %}
+        {{ link(item.title, item.url, create_attribute({'class': ['usa-footer__primary-link', item.in_active_trail ? 'usa-current']})) }}
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</nav>

@@ -1,0 +1,123 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 6bedb110-7b0b-4152-81a6-bbb2d1cb92a6
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Congressional and Supreme Court Rules Packages'
+  status: true
+  langcode: en
+  created: '1555511001'
+  changed: 1731537254
+  author: george_cherussery@ao.uscourts.gov
+  url: /records-rules-committees/congressional-and-supreme-court-rules-packages
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '9974'
+  menu_link:
+    uuid: 490d1f72-70bf-451b-9f56-035ee17bebbb
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Congressional and Supreme Court Rules Packages'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/17544'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 14caded5-40a4-4a36-abe9-455c299536e3
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Records of the Rules Committees'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/9366'
+              title: ''
+              options: {  }
+          weight: 5
+          parent:
+            uuid: cc5f410e-b67a-4fbc-82a1-fd7bdfae36c7
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Forms & Rules'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/9'
+                  title: ''
+                  options: {  }
+              weight: -67
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Link to the national federal rules of practice and procedures, and forms in effect.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/2004'
+                  title: 'Bankruptcy: Proof of Claim Form'
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Reference the records of the rules committees, including agendas, minutes, and rules suggestions.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:drupalblock/views-block-federal-rules-landing-rules-packages-block-federal-rules-landing-rules-packages {"blockId":"views_block:federal_rules_landing_rules_packages-block_federal_rules_landing_rules_packages"} /-->'
+      summary: "<p>\r\n\tThe Administrative Office of the U.S. Courts maintains the materials delivered to the United States Congress and the Supreme Court of the United States on proposals to amend the Federal Rules.\r\n</p>"
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>The Administrative Office of the U.S. Courts maintains the materials delivered to the United States Congress and the Supreme Court of the United States on proposals to amend the Federal Rules.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

@@ -1,0 +1,22 @@
+uuid: e0441de2-4bf6-44b3-bad3-ad87e012363a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_paragraph
+    - node.type.landing_view
+  module:
+    - text
+id: node.landing_view.field_lead_paragraph
+field_name: field_lead_paragraph
+entity_type: node
+bundle: landing_view
+label: 'Lead Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

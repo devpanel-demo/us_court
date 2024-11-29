@@ -1,0 +1,5 @@
+name: 'US Courts: Core'
+description: 'Core module for US Courts that provides common features.'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'

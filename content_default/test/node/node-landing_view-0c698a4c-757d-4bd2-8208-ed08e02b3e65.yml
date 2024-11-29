@@ -1,0 +1,32 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 0c698a4c-757d-4bd2-8208-ed08e02b3e65
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'test - Gutenberg Video Block embed & Column block styling'
+  status: true
+  langcode: en
+  created: '1725636634'
+  changed: 1725636634
+  author: Emily_Poland@ao.uscourts.gov
+  url: /test-gutenberg-video-block-embed-column-block-styling
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:group -->\r\n<div class=\"wp-block-group\"><!-- wp:columns {\"verticalAlignment\":\"top\"} -->\r\n<div class=\"wp-block-columns are-vertically-aligned-top\"><!-- wp:column {\"verticalAlignment\":\"top\"} -->\r\n<div class=\"wp-block-column is-vertically-aligned-top\"><!-- wp:embed {\"url\":\"https://youtu.be/1x1r3BvU2p8\",\"type\":\"rich\",\"providerNameSlug\":\"embed\",\"responsive\":true,\"className\":\"wp-embed-aspect-16-9 wp-has-aspect-ratio\"} -->\r\n<figure class=\"wp-block-embed is-type-rich is-provider-embed wp-block-embed-embed wp-embed-aspect-16-9 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\r\nhttps://youtu.be/1x1r3BvU2p8\r\n</div></figure>\r\n<!-- /wp:embed --></div>\r\n<!-- /wp:column -->\r\n\r\n<!-- wp:column {\"verticalAlignment\":\"top\",\"className\":\"wp-block-embed-with-text\"} -->\r\n<div class=\"wp-block-column is-vertically-aligned-top wp-block-embed-with-text\"><!-- wp:heading -->\r\n<h2>Headline video - 24 px?</h2>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>16 px?</p>\r\n<!-- /wp:paragraph --></div>\r\n<!-- /wp:column --></div>\r\n<!-- /wp:columns --></div>\r\n<!-- /wp:group -->\r\n\r\n<!-- wp:video -->\r\n<figure class=\"wp-block-video\"><video controls src=\"https://youtu.be/1x1r3BvU2p8\"></video></figure>\r\n<!-- /wp:video -->\r\n\r\n<!-- wp:paragraph -->\r\n<p></p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

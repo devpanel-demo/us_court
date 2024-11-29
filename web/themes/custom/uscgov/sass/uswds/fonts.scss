@@ -1,0 +1,17 @@
+@use "settings";
+@forward "uswds-fonts";
+
+// We declare size-adjust on fallback fonts to decrease flash of unstyled text
+// and to ensure that JS does not force primary menu into mobile mode when it
+// wraps (as it is prone to do because default fallback font size is larger).
+@font-face {
+  font-family: 'Helvetica Neue';
+  size-adjust: 92%;
+  src: local('Helvetica Neue');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  size-adjust: 92%;
+  src: local('Helvetica');
+}

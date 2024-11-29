@@ -1,0 +1,30 @@
+uuid: 52ec1548-a1b5-4d7b-b512-3e05dd23fb61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_procedural_posture
+    - node.type.camera
+    - taxonomy.vocabulary.procedural_posture
+id: node.camera.field_procedural_posture
+field_name: field_procedural_posture
+entity_type: node
+bundle: camera
+label: 'Procedural Posture'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      procedural_posture: procedural_posture
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+field_type: entity_reference

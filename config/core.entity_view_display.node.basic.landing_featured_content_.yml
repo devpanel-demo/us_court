@@ -1,0 +1,66 @@
+uuid: 1dff82bb-f083-4ce8-b068-9edea2a8724a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.landing_featured_content_
+    - field.field.node.basic.body
+    - field.field.node.basic.field_banner_image
+    - field.field.node.basic.field_body_enhanced
+    - field.field.node.basic.field_fc_be_audio
+    - field.field.node.basic.field_iframe
+    - field.field.node.basic.field_landing_page_image
+    - field.field.node.basic.field_lead_gallery
+    - field.field.node.basic.field_lead_paragraph
+    - field.field.node.basic.field_logo
+    - field.field.node.basic.field_metatag
+    - field.field.node.basic.field_tags
+    - field.field.node.basic.field_usc_additional_content
+    - field.field.node.basic.field_usc_govdelivery_form
+    - field.field.node.basic.field_usc_notification
+    - field.field.node.basic.field_usc_related_news
+    - field.field.node.basic.field_usc_table_of_contents
+    - field.field.node.basic.field_workbench_access
+    - node.type.basic
+  module:
+    - user
+id: node.basic.landing_featured_content_
+targetEntityType: node
+bundle: basic
+mode: landing_featured_content_
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  extra_field_child_menu_items: true
+  field_banner_image: true
+  field_body_enhanced: true
+  field_fc_be_audio: true
+  field_iframe: true
+  field_landing_page_image: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_logo: true
+  field_metatag: true
+  field_tags: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  search_api_excerpt: true

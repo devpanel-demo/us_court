@@ -1,0 +1,19 @@
+{#
+  Example embed code to utilize the card component.
+
+  Usage:
+    Copy and paste this code into your xxx--xxx.html.twig file, and adjust the
+    variables as necessary.
+ #}
+
+{% embed 'acusv2:usa_collection_item' with {
+  attributes,
+  title_suffix,
+  title: 'Example title'|t,
+  url: '/',
+  cta: { title: 'Read more'|t , url },
+} only %}
+  {% block body %}
+    <p>Is est, vitae finibus augue quam eu nisi. Praesent ullamcorper lobortis ipsum, non pharetra mauris. Vestibulum eget pretium risus. Morbi consectetur eu elit nec viverra. Donec faucibus, est ut porttitor.</p>
+  {% endblock %}
+{% endembed %}

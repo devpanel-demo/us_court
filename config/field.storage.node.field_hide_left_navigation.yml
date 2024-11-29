@@ -1,0 +1,18 @@
+uuid: bcc93cb2-0d1a-487a-9d7c-86c581bcc0f3
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hide_left_navigation
+field_name: field_hide_left_navigation
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

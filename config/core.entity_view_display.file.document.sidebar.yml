@@ -1,0 +1,20 @@
+uuid: 861a185b-69c3-4bb8-9f95-cec02f9294ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.sidebar
+    - field.field.file.document.field_date_updated
+    - field.field.file.document.field_file_description
+    - field.field.file.document.field_file_title
+  module:
+    - file
+id: file.document.sidebar
+targetEntityType: file
+bundle: document
+mode: sidebar
+content: {  }
+hidden:
+  field_date_updated: true
+  field_file_description: true
+  field_file_title: true

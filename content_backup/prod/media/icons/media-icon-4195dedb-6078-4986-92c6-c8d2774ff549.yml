@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 4195dedb-6078-4986-92c6-c8d2774ff549
+entity_type: media
+bundle: icon
+base_fields:
+  name: helicopter-symbol-solid.svg
+  created: '1721137124'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/helicopter-symbol-solid.svg'
+      url: '/sites/default/files/icons/helicopter-symbol-solid.svg'

@@ -1,0 +1,14 @@
+uuid: 96e9ef8c-8b14-4679-b00c-bc4478c70fd9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b1MFBmd_32NDElVgAK8bbCD61SK7ITy-dH2sOvub2nQ
+id: search_api__views_page__usc_court_finder_locations__page_1
+name: 'search_api:views_page__usc_court_finder_locations__page_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

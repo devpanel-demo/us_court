@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 7b4aab47-f081-42f0-83c9-c3ed96c75235
+entity_type: media
+bundle: icon
+base_fields:
+  name: eye-solid.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/eye-solid.svg'
+      url: '/sites/default/files/icons/eye-solid.svg'

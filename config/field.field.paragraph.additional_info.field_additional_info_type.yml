@@ -1,0 +1,21 @@
+uuid: bfc58821-d6c4-4441-9a30-bdd38a221791
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_additional_info_type
+    - paragraphs.paragraphs_type.additional_info
+  module:
+    - options
+id: paragraph.additional_info.field_additional_info_type
+field_name: field_additional_info_type
+entity_type: paragraph
+bundle: additional_info
+label: 'Additional Info Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

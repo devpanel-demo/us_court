@@ -1,0 +1,19 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 5ea4e475-e292-47c7-8875-1f550cc557eb
+entity_type: menu_link_content
+bundle: footer
+base_fields:
+  title: Careers
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: footer
+  description: null
+  link:
+    -
+      uri: 'entity:node/196'
+      title: ''
+      options: {  }
+  weight: -49
+  parent: ''
+custom_fields: {  }

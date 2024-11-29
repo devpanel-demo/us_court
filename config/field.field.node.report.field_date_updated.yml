@@ -1,0 +1,21 @@
+uuid: dba19fdf-c0b0-4a29-a04f-90aa463b4fb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_updated
+    - node.type.report
+  module:
+    - datetime
+id: node.report.field_date_updated
+field_name: field_date_updated
+entity_type: node
+bundle: report
+label: 'Last updated'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

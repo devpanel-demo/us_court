@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: e1f743cc-e854-4d60-b895-204e7bfee2c8
+entity_type: media
+bundle: icon
+base_fields:
+  name: restroom-solid.svg
+  created: '1721137202'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/restroom-solid.svg'
+      url: '/sites/default/files/icons/restroom-solid.svg'

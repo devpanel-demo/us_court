@@ -1,0 +1,19 @@
+<div class="homepage-hero hero-type-{{ hero_type|clean_class }}">
+  {% block homepage_hero_image %}{% endblock %}
+  <div class="container homepage-hero__container">
+    <div class="homepage-hero__left">
+      <h1 class="homepage-hero__title">
+        {{ title }}
+      </h1>
+      <div class="homepage-hero__description">
+        {{ description }}
+      </div>
+      <div class="homepage-hero__cta-wrapper">
+        {% block homepage_hero_link %}{% endblock %}
+      </div>
+    </div>
+    <div class="homepage-hero__right">
+      {% block hero_right_content %}{% endblock %}
+    </div>
+  </div>
+</div>

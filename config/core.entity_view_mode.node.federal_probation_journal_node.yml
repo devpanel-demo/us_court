@@ -1,0 +1,11 @@
+uuid: 2baefd42-01a1-4d63-895c-e5ad1ef0126f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.federal_probation_journal_node
+label: federal_probation_journal_node
+description: ''
+targetEntityType: node
+cache: true

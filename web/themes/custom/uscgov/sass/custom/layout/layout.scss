@@ -1,0 +1,153 @@
+@use "../global/media-queries" as *;
+
+:root {
+  --padding-left: 230px; // Magic number that aligns the left whitespace to the navigation.
+  --content-narrow: 820px; // Wide of narrow content (note that prose text inside is even skinnier).
+  --prose-max-width: 680px;
+  --container-small: 1000px; // Width of content on homepage.
+
+  .project-toolbox {
+    --container-small: var(--site-max-width); // Toolbox homepage width.
+
+    &.path-frontpage {
+      --prose-max-width: none; // No text max width on Toolbox homepages.
+    }
+  }
+}
+
+.container {
+  max-width: var(--site-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-inline-spacing);
+}
+
+.container--small {
+  max-width: var(--container-small);
+  margin-inline: auto;
+  padding-inline: var(--container-inline-spacing);
+}
+
+.container--text {
+  max-width: var(--prose-max-width);
+}
+
+.spacing:where(:not(:last-child)) {
+  margin-bottom: var(--spacing-component);
+}
+
+.spacing-inside {
+  > * {
+    margin-bottom: var(--spacing-component);
+  }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+
+  @media (min-width: 750px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid--tight {
+  gap: 0;
+}
+
+.spacing-component,
+p:has(+ [class*="wp-block"]) {
+  margin-bottom: var(--spacing-component);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.layout-main {
+  container-type: inline-size;
+
+  &:not(:has(> .layout-sidebar)) {
+    @media (min-width: 1400px) {
+      padding-left: var(--padding-left);
+    }
+
+    > * {
+      max-width: var(--content-narrow);
+    }
+  }
+
+  &:has(> .layout-sidebar) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media ($sidebar_break) {
+      flex-direction: row;
+    }
+  }
+
+  .path-frontpage & {
+    max-width: var(--container-small);
+    margin-inline: auto;
+    padding-inline: var(--container-inline-spacing);
+
+    .layout-content {
+      max-width: none;
+    }
+  }
+
+  .path-frontpage.project-toolbox & {
+    padding-inline: 0;
+  }
+}
+
+.layout-sidebar {
+  flex-basis: 300px;
+  flex-shrink: 0;
+  order: 2;
+  box-shadow: 0px 4px 8px 0px rgba(64, 72, 97, 0.12);
+  border: 0.5px solid var(--border-muted-light);
+
+  @media ($sidebar_break) {
+    order: revert;
+    margin-right: 68px;
+  }
+}
+
+.layout-content {
+  flex-grow: 1;
+  margin-top: 50px;
+  margin-bottom: var(--spacing-component);
+}
+
+.layout-main:not(:has(> .layout-sidebar)) .full-width-content {
+  --width: calc(var(--site-max-width) - var(--padding-left) - var(--container-inline-spacing));
+  --page-width: calc(100vw - 2 * var(--container-inline-spacing));
+
+  width: min(var(--page-width), var(--width));
+}

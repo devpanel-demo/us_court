@@ -1,0 +1,6 @@
+<figure{{ attributes.addClass('featured-image') }}>
+  {{ block('content_image') }}
+  {% if description %}
+    <figcaption class="featured-image__caption">{{ description }}</figcaption>
+  {% endif %}
+</figure>

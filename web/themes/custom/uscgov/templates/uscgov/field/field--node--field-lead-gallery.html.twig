@@ -1,0 +1,12 @@
+
+{# If there's only one item, don't render it in a gallery. #}
+{% if not items.1 %}
+  <div class="spacing-component">
+    {{ items.0.content }}
+  </div>
+{% else %}
+  {{ include('uscgov:gallery', {
+    title_suffix,
+    items,
+  }, with_context = false) }}
+{% endif %}

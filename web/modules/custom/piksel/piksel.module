@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations.
+ */
+
+/**
+ * Implements template_preprocess_pager().
+ */
+function piksel_preprocess_pager(&$variables) {
+  if ($variables['pager']['#route_name'] === 'piksel.search') {
+    foreach ($variables['items']['pages'] ?? [] as $page => $link) {
+      $variables['items']['pages'][$page]['href'] = str_replace('&ajax_form=1', '', $link['href']);
+    }
+    if (isset($variables['items']['first'])) {
+      $variables['items']['first']['href'] = str_replace('&ajax_form=1', '', $variables['items']['first']['href']);
+    }
+    if (isset($variables['items']['previous'])) {
+      $variables['items']['previous']['href'] = str_replace('&ajax_form=1', '', $variables['items']['previous']['href']);
+    }
+    if (isset($variables['items']['next'])) {
+      $variables['items']['next']['href'] = str_replace('&ajax_form=1', '', $variables['items']['next']['href']);
+    }
+    if (isset($variables['items']['last'])) {
+      $variables['items']['last']['href'] = str_replace('&ajax_form=1', '', $variables['items']['last']['href']);
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_media().
+ */
+function piksel_preprocess_media(&$variables) {
+  if ($variables['media']->getSource()->getPluginDefinition()['id'] == 'piksel') {
+    if ($variables['media']->get('field_file_title')->getValue()) {
+      $source_id = $variables['media']->get('field_file_title')->getValue()[0]['value'];
+      $player_endpoint = \Drupal::config('piksel.settings')->get('piksel_player_url');
+      $variables['player_url'] = str_replace('[source_id]', $source_id, $player_endpoint);
+    }
+  }
+}

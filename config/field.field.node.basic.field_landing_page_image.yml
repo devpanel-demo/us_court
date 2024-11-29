@@ -1,0 +1,24 @@
+uuid: 74690ec6-87d7-42a5-ab2b-464bd2a057ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_image
+    - media.type.image
+    - node.type.basic
+id: node.basic.field_landing_page_image
+field_name: field_landing_page_image
+entity_type: node
+bundle: basic
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

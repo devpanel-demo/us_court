@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 58b440e2-08bc-441c-a533-db98bd0c3afb
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Administration & Policies'
+  status: true
+  langcode: en
+  created: '1719234188'
+  changed: 1731343866
+  author: jamesdavison@ao.uscourts.gov
+  url: /administration-policies
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":["2751","4303","4346","29859","1843","2849","17118","1983"],"viewMode":"section_landing","collectionRange":8} /-->'
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>Administration and governance in the federal Judiciary occurs at both a national and regional level.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: f979f2cc-c919-413d-a2f6-7f2f52e86928
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Landing Pages'
+        weight: 2
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

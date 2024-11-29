@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 45a21465-2cee-4391-91c9-b37d40b6b801
+entity_type: media
+bundle: icon
+base_fields:
+  name: meta.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/meta.svg'
+      url: '/sites/default/files/icons/meta.svg'

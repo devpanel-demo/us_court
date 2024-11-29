@@ -1,0 +1,10 @@
+uuid: c741527a-9d58-4ec6-a811-8fa35302eea6
+langcode: en
+status: true
+dependencies: {  }
+id: usc_related_content
+label: 'Related Content'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean related_content'
+behavior_plugins: {  }

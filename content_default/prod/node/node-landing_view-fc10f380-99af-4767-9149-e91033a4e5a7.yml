@@ -1,0 +1,54 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: fc10f380-99af-4767-9149-e91033a4e5a7
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Cameras in Courts'
+  status: true
+  langcode: en
+  created: '1402429549'
+  changed: 1727753530
+  author: jamesdavison@ao.uscourts.gov
+  url: /about-federal-courts/judicial-administration/cameras-courts
+  revision_log_message: 'Edited by Paul.Williams.'
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p>\r\n\tThe Ninth Circuit Judicial Council, in cooperation with the Judicial Conference, has authorized the three districts in the Ninth Circuit (District Court for the Northern District of California, the District Court of Guam, and the District Court for the Western District of Washington) that participated in the <a href=\"node/14087\">2011-2015 cameras pilot</a> to continue the pilot program under the <a href=\"/file/2591/download\">same terms and conditions</a> to provide longer term data and information to the Committee on Court Administration and Case Management. \r\n</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:list -->\r\n<ul><li><a href=\"/about-federal-courts/judicial-administration/node/2758\">History of Cameras in Courts</a></li><li><a href=\"/about-federal-courts/judicial-administration/node/14087\">Case Video Archive</a></li><li><a href=\"/about-federal-courts/judicial-administration/node/36418\">Cameras in the Courtroom Policy</a></li></ul>\r\n<!-- /wp:list -->\r\n\r\n<!-- wp:heading -->\r\n<h2>\r\n\tAvailable Court Videos\r\n</h2>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>\r\n\tView video recordings of the cases from the District Court for the Northern District of California, the District Court of Guam, and the District Court for the Western District of Washington.\r\n</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n<p> Filter by court, subject matter, and procedural posture to find the case you want to view.  </p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:drupalblock/views-block-cameras-in-court-landing-block-cameras-in-court-landing {\"blockId\":\"views_block:cameras_in_court_landing-block_cameras_in_court_landing\"} /-->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image:
+    -
+      uuid: 9c110543-9ba0-4f93-bd1e-99d6c1ee21c5
+      entity_type: media
+      base_fields:
+        name: cameras-in-courts.jpg
+        created: '1430409237'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: '<p>The Judicial Conference&nbsp;<a href="node/2758#a1">cameras in court policy</a>&nbsp;lists the circumstances under which judges may authorize the use of cameras in courtrooms.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: ec1cf5d4-259c-43dd-968e-4d3196f11919
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Cameras in Courts'
+        weight: 6
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

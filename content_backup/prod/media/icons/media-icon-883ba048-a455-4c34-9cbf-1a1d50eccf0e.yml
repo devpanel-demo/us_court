@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 883ba048-a455-4c34-9cbf-1a1d50eccf0e
+entity_type: media
+bundle: icon
+base_fields:
+  name: balance-scale.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/balance-scale.svg'
+      url: '/sites/default/files/icons/balance-scale.svg'

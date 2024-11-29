@@ -1,0 +1,8 @@
+
+{{ include('uscgov:list-item', {
+  attributes,
+  title_suffix,
+  date: content.field_date_updated|add_suggestion('bare'),
+  url,
+  title: label|default(''),
+}) }}

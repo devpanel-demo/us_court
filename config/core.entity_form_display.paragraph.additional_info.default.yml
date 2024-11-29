@@ -1,0 +1,46 @@
+uuid: 17a82ca4-7f92-42bc-a9bb-8ec4a0d25f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_info.field_additional_info_type
+    - field.field.paragraph.additional_info.field_document_pdf
+    - field.field.paragraph.additional_info.field_file_description
+    - paragraphs.paragraphs_type.additional_info
+  module:
+    - maxlength
+    - media_library
+    - text
+id: paragraph.additional_info.default
+targetEntityType: paragraph
+bundle: additional_info
+mode: default
+content:
+  field_additional_info_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_document_pdf:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_file_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+hidden:
+  created: true
+  status: true

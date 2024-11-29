@@ -1,0 +1,48 @@
+name: uscgov
+type: theme
+core_version_requirement: ^10
+version: 1.0.0
+'base theme': false
+regions:
+  header: Header
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar: Sidebar
+  footer_above: 'Footer Above'
+  footer_main: 'Footer Main'
+libraries:
+  - uscgov/global
+  - uscgov/uswds
+  - uscgov/uswds-form
+  - uscgov/button
+  - uscgov/quotes
+  - uscgov/exposed_filters
+libraries-extend:
+  # Needed to properly load the SDC library. Note that when SDC becomes stable,
+  # this will need to be changed per https://www.drupal.org/project/drupal/issues/3352256
+  sitewide_alert/init:
+    - sdc/uscgov--usa_alert
+  extlink/drupal.extlink:
+    - uscgov/extlink
+  gutenberg/blocks-view:
+    - uscgov/gutenberg_components
+  webform/webform.form:
+    - uscgov/webform
+libraries-override:
+  faqfield/faqfield.accordion: false
+  sitewide_alert/init:
+    css:
+      theme:
+        css/sitewide_alert.css: false
+dependencies:
+# SDC will be merged into the Drupal core theming system in Drupal 10.4. When
+# this happens, we'll need to remove this dependency.
+# ⚠️⚠️⚠️
+# IMPORTANT: Also edit the usagov.gutenberg.yml file to edit references to SDC
+# libraries that will appear within the Gutenberg WYSIWYG.
+# ⚠️⚠️⚠️
+  - 'drupal:sdc'
+  - 'twig_tweak:twig_tweak'
+  - 'config_pages:config_pages'
+generator: 'uscgov:1.0.0'

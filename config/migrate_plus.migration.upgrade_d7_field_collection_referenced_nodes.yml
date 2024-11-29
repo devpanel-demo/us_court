@@ -1,0 +1,63 @@
+uuid: 580c0a48-faa9-4886-91e0-404f600a1a6a
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_field_collection_referenced_nodes
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Field Collection Content'
+migration_group: migrate_drupal_7
+label: 'Field Collections (Referenced nodes)'
+source:
+  plugin: d7_field_collection_item
+  field_name: field_referenced_nodes
+process:
+  type:
+    -
+      plugin: get
+      source: bundle
+  parent_id:
+    -
+      plugin: get
+      source: parent_id
+  parent_type:
+    -
+      plugin: get
+      source: parent_type
+  parent_field_name:
+    -
+      plugin: get
+      source: field_name
+  field_fc_rn_node_row:
+    -
+      plugin: get
+      source: field_fc_rn_node_row
+  field_fc_rn_row_style:
+    -
+      plugin: get
+      source: field_fc_rn_row_style
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: referenced_nodes
+migration_dependencies:
+  required:
+    - upgrade_d7_field_collection_type
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_http
+  optional:
+    - upgrade_d7_field_instance

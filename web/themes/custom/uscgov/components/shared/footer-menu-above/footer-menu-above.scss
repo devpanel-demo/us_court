@@ -1,0 +1,33 @@
+.footer-menu-above {
+  color: var(--text-on-surface-base-lightest);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-menu-above__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-menu-above__item {
+  margin: 24px 0;
+  padding: 0;
+
+  @media (min-width: 700px) {
+    display: inline;
+
+    &:not(:last-child):after {
+      white-space: pre;
+      content: "\0020\0020|\0020\0020";
+    }
+  }
+}

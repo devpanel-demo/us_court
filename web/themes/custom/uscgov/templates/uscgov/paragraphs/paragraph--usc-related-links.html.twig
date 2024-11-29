@@ -1,0 +1,5 @@
+{{ include('uscgov:related-links', {
+  title: content.field_usc_title|add_suggestion('bare'),
+  description: content.field_usc_description|add_suggestion('bare')|render|striptags|trim,
+  list_items: content.field_usc_links|add_suggestion('ordered-list')|add_class('related-links__list'),
+  }, with_context = false) }}

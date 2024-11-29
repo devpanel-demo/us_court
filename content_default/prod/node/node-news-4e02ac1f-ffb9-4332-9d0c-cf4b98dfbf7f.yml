@@ -1,0 +1,265 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 4e02ac1f-ffb9-4332-9d0c-cf4b98dfbf7f
+entity_type: node
+bundle: news
+base_fields:
+  title: 'Florida Courthouse Named for Influential Judge'
+  status: true
+  langcode: en
+  created: '1687374618'
+  changed: 1687374618
+  author: courtney_mcilroy@ao.uscourts.gov
+  url: /news/2023/06/29/florida-courthouse-named-influential-judge
+  revision_log_message: 'Edited by courtney.mcilroy.'
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: ''
+      summary: "<p>\r\n\tThe federal courthouse in Tallahassee, Florida will be named in honor of the late Judge Joseph W. Hatchett, a trailblazing jurist who was among the first African Americans appointed to the federal bench in the South. The naming ceremony for the Joseph Woodrow Hatchett U.S. Courthouse and Federal Building will be held on June 30.\r\n</p>\r\n"
+      format: wysiwyg
+  field_body_enhanced:
+    -
+      uuid: a9b41bbc-0a29-4080-8ccb-a7b87c61065c
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>The federal courthouse in Tallahassee, Florida will be named in honor of the late Judge Joseph W. Hatchett, a trailblazing jurist who was among the first African Americans appointed to the federal bench in the South.</p><p>The naming ceremony for the Joseph Woodrow Hatchett U.S. Courthouse and Federal Building will be held on June 30.</p><p>“Judge Hatchett was a role model for both the bench and the bar, a patriot who served the public with honor, humility, and integrity,” said Chief Judge William H. Pryor, Jr., of the U.S. Court of Appeals for the Eleventh Circuit. “Throughout his career, he was a trailblazer. Our court and nation owe him a debt of gratitude.”</p><p>Born in Clearwater in 1932, Hatchett was the youngest of five children. He grew up in poor segregated neighborhoods, attending all-black schools during the Jim Crow era. Hatchett’s father was a fruit picker and his mother was a maid. Both were devout Christians. They instilled in their children the importance of hard work and humility, said Hatchett’s grandson, Rashad Green, in an interview. In high school, Hatchett was athletic and studious, playing basketball all four years, joining the band program as a trombone player, and graduating second in his class.</p><p>At the onset of the Korean War, Hatchett enrolled in college at Florida A&amp;M University in Tallahassee on a full academic scholarship. After graduating with a major in political science in 1954, he served in the army and was stationed in West Germany as an anti-aircraft lieutenant in the 73rd AAA Battalion. It was the first time Hatchett lived in a place free of segregation, Green said.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: 53d46e41-cf38-4d43-bb17-8f50a2ac3c6d
+            entity_type: media
+            base_fields:
+              name: opt_hatchett_headshot_390px.png
+              created: '1687787605'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: dcac2771-01d7-415e-a0f7-73ff35ecf14a
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tRealizing a career in the military was not for him, Hatchett was accepted into Howard University’s law school in 1956, taking the advice of a high school civics teacher who once told him, “America would change when the law changed,” the judge said in a <a href=\"https://drive.google.com/file/d/1dSRsIP-GGA3EsIFHqv6vFSLglr2lq4Bx/view\">2018 interview</a>.\r\n</p>\r\n\r\n<p>\r\n\tAfter graduating and passing the Florida bar exam in 1959, Hatchett opened a law practice as the civil rights movement was gaining momentum. The National Association for the Advancement of Colored People was challenging discriminatory laws in courts across the country, and Hatchett partnered with the organization on several civil rights cases.\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery:
+          -
+            uuid: 0c76c2a9-01ed-4027-8351-d1d290bc67d9
+            entity_type: media
+            base_fields:
+              name: judge_joseph_w._hatchett_naming_ceremony.png
+              created: '1687786655'
+              status: true
+              langcode: en
+            bundle: image
+    -
+      uuid: 7b8e0f08-2c4f-4c8b-9c74-743dfc67674f
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tHatchett often defended demonstrators arrested during civil disobedience actions and filed lawsuits against local governments and businesses in Florida to stop discriminatory policies. He was once chased down U.S. Highway 1 by members of the Ku Klux Klan as he drove away from a county jail, where he had posted bail for a client. Hatchett managed to outrun them in his car, he recalled in the 2018 interview.\r\n</p>\r\n\r\n<p>\r\n\tHatchett’s work got him noticed by the Justice Department. In 1966, he was asked to join the U.S. Attorney’s Office for the Middle District of Florida. A year later, he became First Assistant U.S. Attorney.\r\n</p>\r\n\r\n<p>\r\n\tIn 1971, after Congress passed the <a href=\"file/25762/download\">Federal Magistrates Act of 1968</a>, Hatchett became one of the first U.S. magistrate judges, serving in the Middle District of Florida. Four years later, he was tapped by former Florida governor Reubin Askew to join the Florida Supreme Court, making him the court’s first black justice. The following year, Hatchett made history again when he successfully defended his seat on the high court, becoming the first African American candidate to win a statewide election in Florida. &nbsp;\r\n</p>\r\n\r\n<p>\r\n\tIn 1979, Hatchett was appointed by President Jimmy Carter to the U.S. Court of Appeals, leading to another career first, as the first African American to be appointed to the Fifth Circuit. He was reassigned to the Eleventh Circuit after legislation in 1981 divided the Fifth Circuit and created a new Eleventh. Hatchett served on the court for 20 years and was circuit chief judge from 1996 to 1999.\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: f816d29f-be60-49c8-80d4-66d7fec84570
+            entity_type: media
+            base_fields:
+              name: opt_hatchett_working_390px.png
+              created: '1687786737'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 2ed2deba-4d87-4018-b286-656f1836c36e
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tHatchett retired from the bench in 1999 and continued to practice law. He died on April 30, 2021, at the age of 88.\r\n</p>\r\n\r\n<p>\r\n\t“He demonstrated deep compassion for people, especially the less fortunate and oppressed, and he never lost sight of the role that the law and our courts can play in protecting the rights and lives of people,” said Eleventh Circuit Judge Charles R. Wilson, who clerked for Hatchett in 1981.\r\n</p>\r\n\r\n<p>\r\n\tHatchett received many honors during his career, including the American Bar Association’s <a href=\"https://www.floridabar.org/the-florida-bar-news/hatchett-wins-spirit-of-excellence-award/\">Spirit of Excellence Award</a> and the Florida Supreme Court Historical Society’s <a href=\"https://www.floridabar.org/the-florida-bar-news/hatchett-presented-historical-societys-lifetime-achievement-award/\">Lifetime Achievement Award</a>.\r\n</p>\r\n\r\n<p>\r\n\tWilson said Hatchett helped pave the way for him and other lawyers who now practice in law firms, serve in government, or sit on the bench.\r\n</p>\r\n\r\n<p>\r\n\t“Judge Hatchett had high expectations of his law clerks. And we didn’t want to disappoint him because we knew he had given us this rare and prominent opportunity that we might not otherwise have,” Wilson said. “As we received and carried out our assignments, we learned of his remarkable intellect, his sound judgment, and his unfailing and abiding faith in the law as an instrument to achieve justice.”\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: 0f5e13cf-b696-45fa-9414-1cf36de2508d
+            entity_type: media
+            base_fields:
+              name: opt_wilson_and_hatchett_390px.png
+              created: '1687787810'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2023-06-29'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_metatag: null
+  field_news_issue: null
+  field_related_topics:
+    -
+      uuid: 0c2a1f1a-2188-4e27-83e8-0ebb72e8477d
+      entity_type: taxonomy_term
+      base_fields:
+        name: Courthouses
+        weight: 0
+        langcode: en
+        description: '<p>All articles related to Courthouses.</p>'
+        parent: 0
+      bundle: topics
+    -
+      uuid: 2aff839e-baa0-49a8-83e5-a0c1f50f2051
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial History'
+        weight: 0
+        langcode: en
+        description: '<p>All articles related to Judicial History.</p>'
+        parent: 0
+      bundle: topics
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	Subscribe to be notified when the news section is updated.
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary | News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary | News'
+        field_usc_view_more:
+          -
+            uri: 'internal:/node/4283'
+            title: 'See All News Stories'
+            options:
+              attributes: {  }
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: e6e4aa9c-e40e-4002-a9a7-f95b3f1cc998
+      entity_type: taxonomy_term
+      base_fields:
+        name: News
+        weight: 20
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

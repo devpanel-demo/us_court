@@ -1,0 +1,19 @@
+uuid: 519b5dcb-f391-4d9e-bbb4-5f0788764d14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_district
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_district
+field_name: field_district
+entity_type: paragraph
+bundle: judicial_vacancy
+label: District
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

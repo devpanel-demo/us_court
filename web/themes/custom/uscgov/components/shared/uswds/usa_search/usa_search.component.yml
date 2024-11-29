@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Search
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - label
+    - name
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    variant:
+      type: string
+      title: Variant
+      description: Optional small or large variant
+      enum:
+        - big
+        - small
+    label:
+      title: Label
+      type: string
+      description: The search field label.
+    name:
+      title: Name
+      type: string
+      description: The search field name.
+libraryOverrides:
+  dependencies:
+    - uscgov/uswds-button
+    - uscgov/uswds-form

@@ -1,0 +1,22 @@
+uuid: 98cd590d-9451-4ce6-a438-7391cc516e09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_paragraph
+    - node.type.faqs
+  module:
+    - text
+id: node.faqs.field_lead_paragraph
+field_name: field_lead_paragraph
+entity_type: node
+bundle: faqs
+label: 'Lead Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,62 @@
+image: jidrone/drupal10ci:latest
+
+pipelines:
+  pull-requests:
+    '{feature/*,bugfix/*,hotfix/*}':
+      - parallel:
+          - step:
+              name: Coding Standards
+              caches:
+                - drupal-vendor
+                - drupal-core
+                - drupal-libraries
+                - drupal-modules
+                - drupal-profiles
+                - drupal-themes
+              script:
+                - composer install
+                - vendor/bin/robo ci:build
+                - vendor/bin/robo phpcs
+                - vendor/bin/robo analyse
+          - step:
+              name: Unit/Kernel tests
+              caches:
+                - drupal-vendor
+                - drupal-core
+                - drupal-libraries
+                - drupal-modules
+                - drupal-profiles
+                - drupal-themes
+              services:
+                - mysql
+              script:
+                - composer install
+                - vendor/bin/robo ci:build
+                - vendor/bin/robo ci:unit-tests
+  branches:
+    master:
+      - step:
+          name: Deploy to Dev
+          deployment: dev
+          max-time: 10
+          script:
+            - pipe: atlassian/ssh-run:0.7.1
+              variables:
+                SSH_USER: $SERVER_USER
+                SERVER: $SERVER_ADDRESS
+                MODE: 'script'
+                COMMAND: '.deploy/deploy.sh'
+definitions:
+  services:
+    mysql:
+      image: mysql:8.0.34
+      variables:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: drupal
+  caches:
+    drupal-vendor: vendor
+    drupal-core: web/core
+    drupal-libraries: web/libraries
+    drupal-modules: web/modules/contrib
+    drupal-profiles: web/profiles/contrib
+    drupal-themes: web/themes/contrib

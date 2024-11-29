@@ -1,0 +1,11 @@
+uuid: df32a107-0a23-40c2-91dc-b226ec4d0785
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.landing_page
+label: landing_page
+description: ''
+targetEntityType: node
+cache: true

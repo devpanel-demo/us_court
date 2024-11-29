@@ -1,0 +1,17 @@
+name: 'Federal court finder'
+description: 'Federal court finder.'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - token:token
+  - migrate_source_csv:migrate_source_csv
+  - geofield:geofield
+  - geocoder:geocoder
+  - linkit:linkit
+  - search_api_db:search_api_db
+  - search_api_location:search_api_location
+  - search_api_location_geocoder:search_api_location_geocoder
+  - search_api_location_views:search_api_location_views
+  - facets:facets
+  - facets:facets_summary

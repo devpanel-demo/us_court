@@ -1,0 +1,9 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Location Address
+status: stable
+props:
+  type: object
+  properties:
+    address:
+      title: Address
+      type: string

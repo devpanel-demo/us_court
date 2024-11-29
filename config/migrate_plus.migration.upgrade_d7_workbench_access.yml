@@ -1,0 +1,77 @@
+uuid: c7ebffd5-6b98-4290-9de8-14a591ca95d3
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_workbench_access
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+  - 'Workbench Access'
+migration_group: migrate_drupal_7
+label: 'Workbench Access'
+source:
+  plugin: usc_workbench_access_association
+process:
+  access_scheme:
+    -
+      plugin: get
+      source: access_type_id
+  access_id:
+    -
+      plugin: get
+      source: access_id
+    -
+      plugin: migration_lookup
+      no_stub: true
+      migration:
+        - upgrade_d7_taxonomy_term_site_sections
+  section_id:
+    -
+      plugin: null_coalesce
+      source:
+        - '@access_id'
+        - access_id
+  role_id:
+    -
+      plugin: get
+      source: roles
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: static_map
+          source: rid
+          map:
+            3: administrator
+            4: publisher
+            6: approver
+            5: content_creator
+  user_id:
+    -
+      plugin: get
+      source: users
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: uid
+          migration:
+            - upgrade_d7_user
+          no_stub: true
+  id:
+    -
+      plugin: entity_lookup
+      source: '@section_id'
+      value_key: section_id
+      entity_type: section_association
+destination:
+  plugin: 'entity:section_association'
+migration_dependencies:
+  required:
+    - upgrade_d7_user_role
+    - upgrade_d7_user
+  optional: {  }

@@ -1,0 +1,51 @@
+.node__content .usa-prose .usa-collection:last-child{
+	margin-bottom: var(--spacing-component);
+}
+
+.usa-collection__calendar-date[class] {
+  width: 53px;
+  margin-right: 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.usa-collection__calendar-date-month[class] {
+  height: 30px;
+  padding: 4px;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.usa-collection__calendar-date-day[class] {
+  height: 30px;
+  padding: 4px;
+  background-color: var(--surface-primary-lighter);
+  border-radius: 0 0 10px 10px;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.usa-collection__heading[class] {
+  margin-block: 0 24px;
+  font-size: 17px;
+  font-weight: bold;
+
+  a {
+    text-decoration: underline;
+  }
+ }
+
+ .usa-collection__description {
+  &, * {
+    font-size: 17px;
+  }
+}
+
+.usa-collection__body {
+  .field--name-body,
+  .published-on {
+    margin-bottom: 16px;
+  }
+}

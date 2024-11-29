@@ -1,0 +1,226 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 9e56d85f-3ed3-4e29-93ab-b69166e4d630
+entity_type: node
+bundle: news
+base_fields:
+  title: 'Testing tableau CE'
+  status: true
+  langcode: en
+  created: '1715778867'
+  changed: 1715778867
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-tableau-ce
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_body_enhanced:
+    -
+      uuid: 0ae9b3e7-6783-41a5-a4af-d588a914bb36
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715778980'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget:
+          -
+            uuid: 5d99e579-b233-4893-a191-e21c03f80a2d
+            entity_type: paragraph
+            bundle: usc_map
+            base_fields:
+              status: true
+              langcode: en
+              created: '1715779023'
+              behavior_settings: {  }
+            custom_fields:
+              field_usc_label:
+                -
+                  value: 'Test label'
+              field_usc_tableau_object_code:
+                -
+                  value: "<script type='text/javascript' src='https://www.visualizations.uscourts.gov/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 600px; height: 481px;'><object class='tableauViz' width='600' height='481' style='display:none;'><param name='host_url' value='https%3A%2F%2Fwww.visualizations.uscourts.gov%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;JDAO' /><param name='name' value='03-USCourtofAppealsfortheFederalCircuitAppealsFIledPendingTerminated_16881486347520&#47;Dashboard1' /><param name='tabs' value='no' /><param name=‘toolbar’ value=‘no’ /><param name='showAppBanner' value='false' /></object></div>"
+                  format: widget
+              field_usc_title:
+                -
+                  value: 'Appeals Federal Circuit'
+        field_fc_be_body:
+          -
+            value: '<h2>U.S. District Courts</h2><p>Combined filings in the U.S. district courts for civil cases and criminal defendants decreased by 27,043 (down 7 percent) to 353,170. Terminations rose by 80,502 (up 24 percent) to 412,052. As terminations exceeded filings, the total for pending civil cases and criminal defendants fell by 58,595 (down 8 percent) to 702,433.</p><h2>Civil Filings</h2><p>Civil case filings in the U.S. district courts dropped 8 percent (down 24,882 cases) to 284,220. This change occurred largely because of a reduction in multidistrict litigation (MDL) cases directly filed in a single district that alleged that the 3M Company sold its Combat Arms earplugs to the U.S. military without disclosing defects that reduced hearing protection.</p><p>Filings of cases involving diversity of citizenship (i.e., disputes between citizens of different states and/or between U.S. citizens and citizens of foreign nations) fell 23 percent to 109,095.</p><ul><li>Personal injury/product liability filings declined 39 percent (down 37,739 cases) as cases involving other personal injury/product liability fell by 30,525 filings (down 42 percent). The previous year, more than 64,000 MDL cases addressing 3M Combat Arms earplugs had been filed in the Northern District of Florida, compared with 29,504 filed in the 12-month period ending March 31, 2023.</li><li>Health care/pharmaceutical cases decreased 30 percent (down 7,251 cases), primarily because fewer MDL cases involving Johnson &amp; Johnson talcum powder were filed in the District of New Jersey.</li><li>Contract actions grew 22 percent (up 4,854 cases) as insurance cases increased 33 percent (up 4,296 cases).</li></ul>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: d9d59389-907a-4758-9b7b-d737c28ec6fe
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715779028'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget:
+          -
+            uuid: 34691391-8ff9-4619-b86e-f4bcf71908aa
+            entity_type: paragraph
+            bundle: usc_map
+            base_fields:
+              status: true
+              langcode: en
+              created: '1715779197'
+              behavior_settings: {  }
+            custom_fields:
+              field_usc_label:
+                -
+                  value: 'Civil Cases by Jurisdiction'
+              field_usc_tableau_object_code:
+                -
+                  value: "<script type='text/javascript' src='https://www.visualizations.uscourts.gov/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 600px; height: 481px;'><object class='tableauViz' width='600' height='481' style='display:none;'><param name='host_url' value='https%3A%2F%2Fwww.visualizations.uscourts.gov%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;JDAO' /><param name='name' value='5-CivilCasesFiledbyBasisofJurisdiction_16881490417420&#47;Dashboard1' /><param name='tabs' value='no' /><param name=‘toolbar’ value=‘no’ /><param name='showAppBanner' value='false' /></object></div>"
+                  format: widget
+              field_usc_title:
+                -
+                  value: 'Civil Cases by Jurisdiction'
+        field_fc_be_body:
+          -
+            value: '<h2>Criminal Filings</h2><p>Criminal defendant filings (including transfers) in the U.S. district courts decreased 3 percent (down 2,161 defendants) to 68,950.</p><p>Filings involving drug offenses, which accounted for 28 percent of total defendant filings, went down 10 percent to 19,207.</p><ul><li>Defendants charged with crimes involving drugs other than marijuana dropped 9 percent to 18,158.</li><li>Defendants charged with marijuana offenses declined 19 percent to 1,049.</li></ul><p>Reductions also occurred in filings in the following categories.</p><ul><li>Defendants facing charges related to firearms and explosives dropped 5 percent to 10,635.</li><li>Defendants prosecuted for property offenses fell 11 percent to 7,140.</li><li>Defendants accused of sex offenses decreased 6 percent to 3,050.</li><li>Defendants charged with violent offenses went down 9 percent to 2,630.</li><li>Defendants charged with general offenses (e.g., public-order crimes such as money laundering) declined 24 percent to 1,533.</li><li>Defendants prosecuted for regulatory offenses decreased 2 percent to 1,262.</li><li>Defendants accused of justice system offenses (i.e., crimes related to judicial proceedings, such as obstruction of justice or failure to appear) fell 14 percent to 724.</li></ul><p>Filings for defendants charged with immigration offenses, which constituted 29 percent of all criminal defendant filings, grew 10 percent to 20,134 (this total does not include defendants charged with immigration crimes in petty offense cases disposed of by magistrate judges).</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 37a19442-0c25-4ef2-8f29-2b3c95c6e380
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715779159'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget:
+          -
+            uuid: bbdb839d-5036-4e45-9056-cbc49fbcaab6
+            entity_type: paragraph
+            bundle: usc_map
+            base_fields:
+              status: true
+              langcode: en
+              created: '1715780486'
+              behavior_settings: {  }
+            custom_fields:
+              field_usc_label:
+                -
+                  value: Map
+              field_usc_tableau_object_code:
+                -
+                  value: "<script type='text/javascript' src='https://www.visualizations.uscourts.gov/javascripts/api/viz_v1.js'></script><divclass='tableauPlaceholder' style='width: 600px; height: 507px;'><object class='tableauViz' width='600' height='507' style='display:none;'><param name='host_url' value='https%3A%2F%2Fwww.visualizations.uscourts.gov%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;JDAO' /><param name='name' value='JudicialBusinessfromFlows_Sep2022&#47;CivilCriminalMapDash' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>"
+                  format: widget
+              field_usc_title:
+                -
+                  value: 'Map test'
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2023-09-30'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_metatag: null
+  field_news_issue: null
+  field_related_topics: null
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: '<p>Subscribe to be notified when the news section is updated.</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary News'
+        field_usc_view_more:
+          -
+            uri: 'internal:/'
+            title: 'Link text'
+            options:
+              href: /
+              data-entity-type: ''
+              data-entity-uuid: ''
+              data-entity-substitution: ''
+  field_usc_table_of_contents: null
+  field_workbench_access: null

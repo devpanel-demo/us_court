@@ -1,0 +1,10 @@
+entity.usc_location.edit_form:
+  route_name: entity.usc_location.edit_form
+  group: usc_location
+  title: 'Edit'
+
+entity.usc_location.delete_form:
+  route_name: entity.usc_location.delete_form
+  group: usc_location
+  title: 'Delete'
+  weight: 10

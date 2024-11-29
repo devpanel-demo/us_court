@@ -1,0 +1,56 @@
+.court-finder-result {
+  padding-block: var(--spacing-md-1);
+  border-bottom: solid 1px var(--border-muted-dark);
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.court-finder-result__distance--processed {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: var(--spacing-sm-1);
+
+  &:before {
+    width: 12px;
+    height: 12px;
+    mask-image: url('images/pin.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background: currentColor;
+    content: "";
+  }
+}
+
+.court-finder-result__headquarters,
+.court-finder-result__type {
+  @media (min-width: 900px) {
+    float: right;
+    clear: both;
+  }
+}
+
+.court-finder-result__headquarters:before {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  mask-image: url('images/university.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background: currentColor;
+  content: "";
+}
+
+.court-finder-result__cta {
+  margin-top: var(--spacing-sm-2);
+
+  .button {
+    margin-right: 8px;
+    padding: var(--spacing-xs-2) 12px;
+  }
+}

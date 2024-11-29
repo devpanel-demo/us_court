@@ -1,0 +1,541 @@
+@forward "../../sass/uswds/settings";
+@use "../../../sass/custom/global/media-queries" as *;
+@use "../../../sass/custom/global/mixins" as *;
+@use "uswds-core" as *;
+
+// .header--fixed class only applies to USCourts (non-toolbox) site.
+.header--fixed {
+  position: sticky;
+  top: var(--drupal-displace-offset-top, 0px);
+  z-index: 5;
+  background-color: var(--surface-base-lighter);
+  box-shadow: 0px 4px 8px 0px rgba(64, 72, 97, 0.12);
+  border-bottom: solid 1px var(--border-muted-dark);
+
+  .header__logo {
+    width: 170px;
+
+    img {
+      height: 82px;
+      width: auto;
+      transition: height 0.2s;
+    }
+  }
+
+  &.is-slim .header__logo img {
+    height: 62px;
+  }
+}
+
+.header__secondary-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 0 auto;
+  padding: var(--spacing-sm-1) 0;
+  max-height: 50px; // Necessary for transition.
+  list-style: none;
+  order: 1;
+  flex-basis: 100%;
+  border-top: solid 1px var(--border-muted-dark);
+  border-bottom: solid 1px var(--border-muted-dark);
+  text-align: center;
+  transition: max-height 0.2s, visibility 0.2s, opacity 0.2s, padding 0.2s;
+
+  @include custom-desktop-nav {
+    flex-basis: 100%;
+    order: -1;
+    text-align: right;
+  }
+
+  .is-slim & {
+    // Only hide at small and desktop viewports (never at tablet).
+    @media (max-width: 760px) or (min-width: 1400px) {
+      max-height: 0;
+      padding: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+.header__secondary-item {
+  display: inline;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: var(--text-link-dark);
+      text-decoration: underline;
+    }
+  }
+}
+
+.header__secondary-item--spacer {
+  color: var(--border-muted-dark);
+}
+
+.header__secondary-item--translate a.google-translator-switch,
+.header__secondary-item--translate a.google-translate-disclaimer {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  // Translate icon.
+  &:before {
+    display: block;
+    width: 15px;
+    height: 15px;
+    mask-image: url("images/translate.svg");
+    mask-repeat: none;
+    mask-position: center;
+    mask-size: contain;
+    background-color: currentColor;
+    content: "";
+  }
+
+  // Chevron icon.
+  &:after {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-top: -1px;
+    margin-right: 4px;
+    border-bottom: solid 2px currentColor;
+    border-left: solid 2px currentColor;
+    rotate: -45deg;
+    content: "";
+  }
+}
+// Google Translate.
+iframe.skiptranslate {
+  z-index: 10 !important;
+  position: absolute !important;
+}
+
+.header__icon-listen,
+.header__icon-pin {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  aspect-ratio: 1;
+  margin-right: 4px;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background-color: currentColor;
+
+  @media (forced-colors: active) {
+    background-color: linkText;
+  }
+}
+
+.header__icon-listen {
+  mask-image: url("images/listen.svg");
+}
+
+.header__icon-pin {
+  mask-image: url("images/pin.svg");
+}
+
+.header__main {
+  position: relative; // Anchor search wrapper / menu dropdown.
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  align-items: center;
+  padding-block: var(--spacing-sm-1);
+  transition: padding-block 0.2s;
+
+  @media ($tablet_break) {
+    padding-block: var(--spacing-sm-2);
+  }
+
+  .is-slim & {
+    padding-block: 8px;
+  }
+}
+
+.header__menu-wrapper {
+  @include custom-mobile-nav {
+    position: fixed;
+    right: 0;
+    top: var(--drupal-displace-offset-top, 0);
+    overflow: auto;
+    background: var(--surface-base-lightest);
+    visibility: hidden;
+    width: 400px;
+    max-width: 100%;
+    height: 100dvh;
+    translate: 100% 0;
+    z-index: 5;
+    transition: translate 0.2s, visibility 0.2s;
+
+    &.is-active {
+      visibility: visible;
+      translate: 0 0;
+    }
+  }
+
+  @include custom-desktop-nav {
+    flex-basis: 970px; // @todo Magic number here.
+  }
+}
+
+.header__menu-wrapper-header {
+  @include custom-mobile-nav {
+    padding: var(--spacing-sm-2) var(--spacing-sm-3);
+    background-color: var(--surface-body);
+    box-shadow: 0px 4px 8px 0px rgba(64, 72, 97, 0.12);
+  }
+
+  @include custom-desktop-nav {
+    @include visually-hidden;
+  }
+}
+
+.header__menu-wrapper-heading {
+  @include custom-mobile-nav {
+    margin-block: 60px 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.header__mobile-search-wrapper {
+  @include custom-desktop-nav {
+    display: none;
+  }
+}
+
+.header__menu-wrapper-close-button {
+  position: absolute;
+  top: var(--spacing-sm-2);
+  right: var(--spacing-sm-2);
+  z-index: 2; // Appear above mobile submenus.
+  width: 44px;
+  height: 44px;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  @include custom-desktop-nav {
+    display: none;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    rotate: 45deg;
+    width: 15px;
+    height: 0;
+    content: "";
+    border-top: solid 2px currentColor;
+  }
+
+  &:after {
+    rotate: -45deg;
+  }
+}
+
+.header__menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: #1e1e1e; // @todo One off.
+  opacity: 0.5;
+
+  @media (forced-colors: active) {
+    background-color: canvasText;
+  }
+
+  .header__menu-wrapper.is-active ~ & {
+    display: block;
+
+    @include custom-desktop-nav {
+      display: none;
+    }
+  }
+}
+
+.header__menu-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm-1);
+  margin-left: auto;
+  padding: var(--spacing-sm-1) var(--spacing-sm-2);
+  appearance: none;
+  border: 0;
+  background: none;
+  color: var(--text-link);
+  cursor: pointer;
+
+  @include custom-desktop-nav {
+    display: none;
+  }
+
+  &:hover {
+    color: var(--text-link-dark);
+  }
+
+  &:after {
+    display: inline-block;
+    width: var(--spacing-md-1);
+    height: var(--spacing-sm-3);
+    content: "";
+    mask-image: url("images/menu-magnify.svg");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: currentColor;
+
+    @media (forced-colors: active) {
+      background-color: buttonText;
+    }
+  }
+}
+
+body:has(.header__menu-button[aria-expanded="true"]) {
+  @include custom-mobile-nav {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+// USCGOV.
+.project-uscgov {
+  @media ($tablet_break) {
+    .header__secondary-menu {
+      display: unset;
+      flex-basis: unset;
+      order: unset;
+      border: unset;
+    }
+  }
+
+  @media ($uscgov_desktop_break) {
+    .header__secondary-menu:where(:not(body.is-mobile-nav *)) {
+      flex-basis: 100%;
+      order: -1;
+      text-align: right;
+    }
+  }
+
+  .header__menu-button {
+    @media ($tablet_break) {
+      margin-left: 40px;
+    }
+  }
+}
+
+// Toolbox.
+.project-toolbox {
+  .header {
+    box-shadow: 0px 4px 8px 0px rgba(64, 72, 97, 0.12);
+    z-index: 3; // Appear above content within certain variations of hero (e.g. featured content).
+    position: relative;
+  }
+
+  &:not(.is-mobile-nav) .header__main {
+    @media ($toolbox_desktop_break) {
+      padding-bottom: 0;
+
+      // @todo This is a workaround. To properly handle this case the header menus implementation may need a review.
+      // Adjust margin-bottom for all header menu buttons (in Desktop).
+      .primary-menu__button   { @include adjust-margin-bottom--header-menu-buttons(3px); } // "3px" was the previous value found in related files.
+      .desktop-search__button { @include adjust-margin-bottom--header-menu-buttons(5px); } // "5px" was the previous value found in related files.
+    }
+  }
+
+  .header__logo {
+    flex-basis: calc(100% - 130px);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    @media ($sidebar_break) {
+      flex-basis: auto;
+      margin-bottom: 0;
+      max-width: calc(100% - 350px);
+      margin-bottom: var(--spacing-sm-1);
+    }
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: var(--text-on-surface-secondary-lighter);
+    }
+
+    img {
+      float: left;
+      display: none;
+      width: 96px;
+      margin-right: 10px;
+
+      @media ($sidebar_break) {
+        display: block;
+      }
+    }
+  }
+
+  .header__info_wrapper {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .header__slogan {
+    font-size: 17px;
+  }
+
+  .header__site-name {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: var(--font-serif);
+    margin-bottom: 3px;
+
+    span {
+      font-weight: normal;
+      font-size: 17px;
+    }
+  }
+
+  // Google Translate.
+  .header__secondary-item--translate div.google-translator-switch {
+    display: inline-block;
+
+    a.google-translate-disclaimer {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transform: translateY(2px);
+
+      // Translate icon.
+      &:before {
+        display: block;
+        width: 15px;
+        height: 15px;
+        mask-image: url("images/translate.svg");
+        mask-repeat: none;
+        mask-position: center;
+        mask-size: contain;
+        background-color: currentColor;
+        content: "";
+      }
+
+      // Chevron icon.
+      &:after {
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin-top: -1px;
+        margin-right: 4px;
+        border-bottom: solid 2px currentColor;
+        border-left: solid 2px currentColor;
+        rotate: -45deg;
+        content: "";
+      }
+    }
+  }
+
+  .header__secondary-menu {
+    @media ($sidebar_break) {
+      display: unset;
+      flex-basis: unset;
+      order: unset;
+      border: unset;
+    }
+
+    @media ($toolbox_desktop_break) {
+      order: 2;
+      flex-basis: auto;
+    }
+  }
+
+  .desktop-search__button {
+    @media ($sidebar_break) {
+      margin-left: 40px;
+    }
+
+    @media ($toolbox_desktop_break) {
+      order: 4;
+    }
+  }
+
+  .desktop-search__button-close {
+    font-size: 16px;
+  }
+
+  .header__menu-button {
+    @media ($toolbox_desktop_break) {
+      order: 3;
+    }
+  }
+
+  .header__menu-wrapper {
+    @include custom-desktop-nav {
+      flex-basis: calc(100% - 185px);
+      order: 3;
+    }
+  }
+
+  .header__leadership_names-wrapper {
+    @media ($toolbox_mobile_break) {
+      display: none;
+    }
+    font-size: 14px;
+    line-height: 1.35;
+    color: var(--text-on-surface-base-light);
+
+    ul.header__leaderships_names {
+      margin: 0;
+      padding: 0;
+
+      @media ($tablet_break) {
+        list-style-type: disc;
+        li::marker {
+          font-size: 0;
+        }
+      }
+
+      li {
+        display: inline;
+        margin: 0 0.7em;
+        font-style: italic;
+        position: relative;
+
+        &:before {
+          content: ".";
+          display: inline-block;
+          font-weight: bold;
+          line-height: 1;
+          position: relative;
+          left: -8px;
+          margin-left: -4px;
+          top: -3px;
+        }
+
+        &:first-child {
+          list-style: none;
+          margin-left: 0px;
+
+          &:before {
+            content: "";
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+uuid: 671c27a8-3d51-480a-810d-5a2b179b8962
+langcode: en
+status: true
+dependencies: {  }
+id: usc_vacancies
+label: 'US Court Vacancies'
+description: 'Migrate Judiciary and Job vacancy data.'
+source_type: Xml
+module: null
+shared_configuration: null

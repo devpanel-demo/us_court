@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * US Courts migration helper.
+ */
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function usc_migrate_adjustments_migration_plugins_alter(array &$migrations) {
+  /** @var \Drupal\usc_migrate_adjustments\MigrateAlterer $migration_alterer */
+  $migration_alterer = \Drupal::service('usc_migrate_adjustments.migrate_alterer');
+  $migration_alterer->process($migrations);
+}

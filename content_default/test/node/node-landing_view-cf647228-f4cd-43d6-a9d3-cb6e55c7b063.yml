@@ -1,0 +1,32 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: cf647228-f4cd-43d6-a9d3-cb6e55c7b063
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Testing - Button Group movement & styling'
+  status: true
+  langcode: en
+  created: '1725634957'
+  changed: 1725634957
+  author: Emily_Poland@ao.uscourts.gov
+  url: /testing-button-group-movement-styling
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p>Button Group movement &amp; styling</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:drupalblock/views-block-vacancies-job-job-listing {\"blockId\":\"views_block:vacancies_job-job_listing\"} /-->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

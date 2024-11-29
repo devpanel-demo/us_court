@@ -1,0 +1,19 @@
+uuid: 50c708a5-0727-448d-8c3d-e518ca079f04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_alt
+    - media.type.remote_video
+id: media.remote_video.field_media_oembed_alt
+field_name: field_media_oembed_alt
+entity_type: media
+bundle: remote_video
+label: 'Alt text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

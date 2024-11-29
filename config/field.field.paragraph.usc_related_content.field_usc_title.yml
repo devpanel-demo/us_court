@@ -1,0 +1,19 @@
+uuid: 594e7b4b-0caf-43e4-b28c-09bccddfbaf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_title
+    - paragraphs.paragraphs_type.usc_related_content
+id: paragraph.usc_related_content.field_usc_title
+field_name: field_usc_title
+entity_type: paragraph
+bundle: usc_related_content
+label: Title
+description: 'The title of the Paragraph used to be shown on the attached page. Do not confuse it with a Label field.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

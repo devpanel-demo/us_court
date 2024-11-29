@@ -1,0 +1,56 @@
+uuid: 930b8ce9-29d7-4bae-81ec-b0536acafa6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_govdelivery.field_usc_category_topic_id
+    - field.field.paragraph.usc_govdelivery.field_usc_description
+    - field.field.paragraph.usc_govdelivery.field_usc_label
+    - field.field.paragraph.usc_govdelivery.field_usc_title
+    - paragraphs.paragraphs_type.usc_govdelivery
+  module:
+    - sdc_display
+    - text
+    - usc_core
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.usc_govdelivery.default
+targetEntityType: paragraph
+bundle: usc_govdelivery
+mode: default
+content:
+  field_usc_category_topic_id:
+    type: gov_delivery_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_usc_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_usc_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_usc_label: true
+  search_api_excerpt: true

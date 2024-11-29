@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Breadcrumb
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - items
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    items:
+      title: Items
+      type: array
+      items:
+        type: object
+        properties:
+          url:
+            title: URL
+            type: string
+            description: Link for the item.
+          text:
+            title: Text
+            type:
+              - string
+              - object
+            description: Anchor text of the item.

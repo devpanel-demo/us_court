@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: cEo6oao27fW_sAEC_fk9JMcsdlyzqm4dDD8ycRJNiKA
+component_tags:
+  'sdc_display:view_mode':
+    tag_id: 'sdc_display:view_mode'
+    allowed:
+      - 'uscgov:court-finder-result'
+      - 'uscgov:featured-item'
+      - 'uscgov:list-item'
+      - 'uscgov:usa_card'
+    forbidden: {  }
+    statuses:
+      - experimental

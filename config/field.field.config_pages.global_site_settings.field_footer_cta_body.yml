@@ -1,0 +1,19 @@
+uuid: f16fc071-8950-4af8-b06f-7ce7b12504ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_footer_cta_body
+id: config_pages.global_site_settings.field_footer_cta_body
+field_name: field_footer_cta_body
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Footer CTA Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

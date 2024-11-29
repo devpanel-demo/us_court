@@ -1,0 +1,16 @@
+.location-phone {
+  display: flex;
+  flex-direction: row;
+
+  .location-phone__icon {
+    width: 40px;
+  }
+
+  .extlink-nobreak svg {
+    display: none;
+  }
+
+  p {
+    margin: 0;
+  }
+}

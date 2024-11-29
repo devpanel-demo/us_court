@@ -1,0 +1,78 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 87cfd555-a011-49de-9ff9-ba3ab38121b4
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: Instructions
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/4379'
+      title: ''
+      options: {  }
+  weight: 2
+  parent:
+    uuid: 5ed22c0b-912e-4481-af66-c9d83428c242
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Privately Funded Seminars Disclosure System'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/2849'
+          title: ''
+          options: {  }
+      weight: 5
+      parent:
+        uuid: 723fb64b-6e47-4536-8468-7e967dd271f6
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Administration & Policies'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/administration-policies'
+              title: ''
+              options: {  }
+          weight: -69
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Administration and governance of the Judicial occurs at both a national and regional level.'
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/1796'
+              title: 'Code of Conduct for U.S. Judges'
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'This policy requires information about privately funded educational programs to be disclosed.'
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

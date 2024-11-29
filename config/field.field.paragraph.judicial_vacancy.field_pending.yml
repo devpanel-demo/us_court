@@ -1,0 +1,19 @@
+uuid: af4151d2-a338-45e5-9bd5-27fea33cc16c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pending
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_pending
+field_name: field_pending
+entity_type: paragraph
+bundle: judicial_vacancy
+label: 'Total Nominees Pending'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

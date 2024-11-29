@@ -1,0 +1,21 @@
+uuid: d1995ec8-7a06-4385-8b95-09de5048de1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_archive_id
+field_name: field_archive_id
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

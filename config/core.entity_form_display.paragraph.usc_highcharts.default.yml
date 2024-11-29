@@ -1,0 +1,43 @@
+uuid: 6264e9e2-05ca-4ad2-bd76-d407d4aea0ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_highcharts.field_usc_highcharts_script
+    - field.field.paragraph.usc_highcharts.field_usc_label
+    - field.field.paragraph.usc_highcharts.field_usc_title
+    - paragraphs.paragraphs_type.usc_highcharts
+  module:
+    - text
+id: paragraph.usc_highcharts.default
+targetEntityType: paragraph
+bundle: usc_highcharts
+mode: default
+content:
+  field_usc_highcharts_script:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

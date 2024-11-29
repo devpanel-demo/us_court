@@ -1,0 +1,10 @@
+{% embed 'uscgov:related-news' with {
+  attributes,
+  title: content.field_usc_title,
+  related_news: content.field_usc_related_news|add_suggestion('bare'),
+  related_news_more: content.field_usc_view_more|add_class('related-news__more'),
+  } only %}
+    {% block related_news_content %}
+      {{ related_news }}
+    {% endblock %}
+{% endembed %}

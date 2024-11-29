@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an example Gutenberg block server-side.
+ *
+ * Available variables:
+ * - block_name: The Gutenberg block name.
+ * - block_content: The content of this block.
+ * - block_attributes: The attributes of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *
+ * @see template_preprocess_gutenberg_block()
+ * @see template_preprocess_gutenberg_block__uswds__modal()
+ *
+ * @ingroup themeable
+ */
+#}
+{% embed 'uscgov:usa_modal' with {
+  attributes,
+  is_large: (block_attributes.large) ? true : false,
+  is_button_unstyled: (block_attributes.buttonUnstyled) ? true : false,
+  button_text: block_attributes.button,
+  modal_title: block_attributes.title,
+  modal_content: block_content
+} only %}
+  {% block modal_content %}
+    {{ modal_content }}
+  {% endblock %}
+{% endembed %}

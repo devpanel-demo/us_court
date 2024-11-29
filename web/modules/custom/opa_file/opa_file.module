@@ -1,0 +1,191 @@
+<?php
+
+/**
+ * @file
+ * Provides OPA_file hooks.
+ */
+
+use Drupal\file\FileInterface;
+
+/**
+ * Implements hook_file_validate().
+ */
+function opa_file_file_validate(FileInterface $file) {
+  $error_msg = t('There was a problem with this file\'s extension.');
+
+  $errors = [];
+  // First, pass basic file requirement checks.
+  if (empty($file->getFilename())) {
+    $errors[] = t("The file's name is empty. Please give a name to the file.");
+  }
+  if (strlen($file->getFilename()) > 255) {
+    $errors[] = t("The file's name exceeds the 255 characters limit. Please rename the file and try again.");
+  }
+
+  if (empty($file->getFileUri())) {
+    $errors[] = t("The file is not reachable");
+    return $errors;
+  }
+
+  // Get mime type from filename.
+  $file_mime = $file->getMimeType();
+
+  // Get file extension.
+  $fext = pathinfo($file->getFilename(), PATHINFO_EXTENSION);
+
+  // Get *actual* mime type from the file content.
+  // @see http://php.net/manual/en/fileinfo.constants.php for more information.
+  $finfo = finfo_open(FILEINFO_MIME_TYPE);
+  $real_mime = finfo_file($finfo, $file->getFileUri());
+
+  // For certain extensions, we want to allow mismatched
+  // mime values. We control this through a lookup array
+  // of special cases.
+  // In some of our special cases, the extension might report
+  // a different file_mime, a different real_mime or both (as
+  // can be verified when running the module in different envs).
+  // To handle this scenario, we support multiple file_name
+  // and real_mime values.
+  $extensions = [
+    'csv' => [
+      'file_mime' => ['text/csv'],
+      'real_mime' => [
+        'text/plain',
+        'application/csv',
+        'text/csv',
+      ],
+    ],
+    'docx' => [
+      'file_mime' => ['application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
+      'real_mime' => [
+        'application/zip',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      ],
+    ],
+    'm4a' => [
+      'file_mime' => ['audio/mpeg'],
+      'real_mime' => ['audio/mp4'],
+    ],
+    'm4v' => [
+      'file_mime' => ['video/x-m4v'],
+      'real_mime' => ['video/mp4'],
+    ],
+    'mp3' => [
+      'file_mime' => ['audio/mpeg'],
+      'real_mime' => ['audio/mpeg'],
+    ],
+    'mpeg' => [
+      'file_mime' => ['video/mpeg'],
+      'real_mime' => [
+        'application/octet-stream',
+        'video/mpeg',
+      ],
+    ],
+    'odp' => [
+      'file_mime' => ['application/vnd.oasis.opendocument.presentation'],
+      'real_mime' => [
+        'application/zip',
+        'application/vnd.oasis.opendocument.presentation',
+      ],
+    ],
+    'ods' => [
+      'file_mime' => ['application/vnd.oasis.opendocument.spreadsheet'],
+      'real_mime' => [
+        'application/zip',
+        'application/vnd.oasis.opendocument.spreadsheet',
+      ],
+    ],
+    'odt' => [
+      'file_mime' => ['application/vnd.oasis.opendocument.text'],
+      'real_mime' => [
+        'application/zip',
+        'application/vnd.oasis.opendocument.text',
+      ],
+    ],
+    'ogg' => [
+      'file_mime' => ['audio/ogg'],
+      'real_mime' => ['application/ogg'],
+    ],
+    'oga' => [
+      'file_mime' => ['audio/ogg'],
+      'real_mime' => ['application/ogg'],
+    ],
+    'ogv' => [
+      'file_mime' => ['video/ogg'],
+      'real_mime' => ['application/ogg'],
+    ],
+    'pps' => [
+      'file_mime' => ['application/vnd.ms-powerpoint'],
+      'real_mime' => [
+        'application/vnd.ms-powerpoint',
+        'application/vnd.ms-office',
+      ],
+    ],
+    'ppsx' => [
+      'file_mime' => ['application/vnd.openxmlformats-officedocument.presentationml.slideshow'],
+      'real_mime' => [
+        'application/zip',
+        'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+      ],
+    ],
+    'ppt' => [
+      'file_mime' => ['application/vnd.ms-powerpoint'],
+      'real_mime' => [
+        'application/vnd.ms-powerpoint',
+        'application/vnd.ms-office',
+      ],
+    ],
+    'pptx' => [
+      'file_mime' => ['application/vnd.openxmlformats-officedocument.presentationml.presentation'],
+      'real_mime' => [
+        'application/zip',
+        'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+      ],
+    ],
+    'webm' => [
+      'file_mime' => ['video/webm'],
+      'real_mime' => ['application/octet-stream', 'video/webm'],
+    ],
+    'webp' => [
+      'file_mime' => ['image/webp'],
+      'real_mime' => ['application/octet-stream', 'image/webp'],
+    ],
+    'wpd' => [
+      'file_mime' => ['application/wordperfect'],
+      'real_mime' => ['application/octet-stream'],
+    ],
+    'xlsx' => [
+      'file_mime' => ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'],
+      'real_mime' => [
+        'application/zip',
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      ],
+    ],
+  ];
+
+  // Is the file extension a key in our special cases array?
+  if (array_key_exists($fext, $extensions)) {
+    // Yeah? Make sure we have a matching file_mime and real_mime in our array.
+    if ((in_array($file_mime, $extensions[$fext]['file_mime'])) && (in_array($real_mime, $extensions[$fext]['real_mime']))) {
+      // We have a match; allow the file to be uploaded.
+    }
+    else {
+      // We do not have a matching file_mime and/or matching real_mime.
+      // Do not allow the upload.
+      $errors[] = $error_msg;
+    }
+  }
+  elseif ($file_mime != $real_mime) {
+    // We have exhausted our special case checks. If the reported real_mime
+    // and file_mime are not identical at this point, do not allow the file
+    // to be uploaded.
+    $errors[] = $error_msg;
+  }
+  else {
+    // Mime values match. Allow the file to be uploaded.
+  }
+
+  finfo_close($finfo);
+  return $errors;
+
+}

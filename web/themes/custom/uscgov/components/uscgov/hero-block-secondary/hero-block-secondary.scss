@@ -1,0 +1,55 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
+.hero-block-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid var(--border-muted-dark);
+  background: var(--surface-base-light);
+  color: var(--text-on-surface-base-light);
+}
+
+.hero-block-secondary__title {
+  @include u-font-family('sans');
+  margin: 0;
+  color: var(--text-on-surface-base-light-dark);
+  font-size: 22px;
+
+  @media (min-width: 700px) {
+    font-size: 24px;
+  }
+}
+
+.hero-block-secondary__description {
+  margin: 0;
+}
+
+.hero-block-secondary__cta-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  background-color: var(--surface-button);
+  color: var(--text-on-surface-button);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--text-on-surface-button);
+  }
+
+  &:after {
+    display: block;
+    width: 18px;
+    height: 18px;
+    content: "";
+    background: currentColor;
+    mask-image: url('images/arrow.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+  }
+}

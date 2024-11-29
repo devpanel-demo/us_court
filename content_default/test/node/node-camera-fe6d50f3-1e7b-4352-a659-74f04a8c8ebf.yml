@@ -1,0 +1,59 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: fe6d50f3-1e7b-4352-a659-74f04a8c8ebf
+entity_type: node
+bundle: camera
+base_fields:
+  title: 'Testing - Cameras in court: Missing caption data '
+  status: false
+  langcode: en
+  created: '1725632750'
+  changed: 1725632750
+  author: Emily_Poland@ao.uscourts.gov
+  url: /cameras-courts/testing-cameras-court-missing-caption-data
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: needs_review
+custom_fields:
+  body: null
+  field_court_name: null
+  field_date_updated: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_procedural_posture: null
+  field_program:
+    -
+      uuid: 60038293-e86d-42bb-a7db-59630946b51f
+      entity_type: media
+      base_fields:
+        name: 'Crawford v. Antonio B. Won Pat International Airport Authority, Guam et al'
+        created: '1717187304'
+        status: true
+        langcode: en
+      bundle: piksel_program
+    -
+      uuid: ec49639c-398a-48dd-a2e6-feb63f4c182b
+      entity_type: media
+      base_fields:
+        name: 'Aguero and Pangelinan v. Calvo and Garrido (Part 2)'
+        created: '1716217342'
+        status: true
+        langcode: en
+      bundle: piksel_program
+    -
+      uuid: 04055f66-4ccf-4245-9596-4eb1931506f8
+      entity_type: media
+      base_fields:
+        name: 'Aziz v. Knight Transportation (Part 1)'
+        created: '1714539110'
+        status: true
+        langcode: en
+      bundle: piksel_program
+  field_subject_matter: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

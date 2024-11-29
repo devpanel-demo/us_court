@@ -1,0 +1,107 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 8a2f9347-84a6-4f54-a826-48b9a532070c
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Letter to Editor: Jury Duty'
+  enabled: true
+  expanded: false
+  langcode: und
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/2756'
+      title: null
+      options: {  }
+  weight: 1
+  parent:
+    uuid: 42a9a768-e4d3-43ef-8959-27191d0d44eb
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Summoned for Federal Jury Service?'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/1769'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 0ca0ecba-73e8-47a0-b8af-0805f4b61d81
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Jury Service'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/33714'
+              title: ''
+              options: {  }
+          weight: 2
+          parent:
+            uuid: 9a51a6f3-19d1-4705-946b-f4fc46a287cd
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Court Programs'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'internal:/court-programs'
+                  title: ''
+                  options: {  }
+              weight: -70
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Learn about federal court programs and services to help provide fair and impartial justice. '
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/2805'
+                  title: 'Bankruptcy Basics'
+                  options: {  }
+                -
+                  uri: 'entity:node/9330'
+                  title: 'Filing Without an Attorney'
+                  options: {  }
+                -
+                  uri: 'entity:node/1769'
+                  title: 'Summoned for Federal Jury Service?'
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Jury service is an important civic duty to protect right and liberties. '
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu: null
+  field_popular_links: null

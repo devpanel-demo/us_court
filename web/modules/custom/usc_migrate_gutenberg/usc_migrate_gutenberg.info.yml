@@ -1,0 +1,8 @@
+name: 'US Courts Gutenberg migration tools'
+description: 'Migration tools from long text fields to Gutenberg'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - html_processors:html_processors
+  - migrate_plus:migrate_plus

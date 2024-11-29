@@ -1,0 +1,63 @@
+uuid: fce20f59-b616-4476-bd00-3156efd03d3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.milestone_activities.field_fc_be_body
+    - field.field.paragraph.milestone_activities.field_fc_jma_category
+    - field.field.paragraph.milestone_activities.field_fc_jma_court_name
+    - field.field.paragraph.milestone_activities.field_fc_jma_current_title
+    - field.field.paragraph.milestone_activities.field_fc_jma_date
+    - field.field.paragraph.milestone_activities.field_fc_jma_position
+    - paragraphs.paragraphs_type.milestone_activities
+  module:
+    - datetime
+    - text
+id: paragraph.milestone_activities.default
+targetEntityType: paragraph
+bundle: milestone_activities
+mode: default
+content:
+  field_fc_be_body:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_fc_jma_category:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fc_jma_court_name:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fc_jma_current_title:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fc_jma_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fc_jma_position:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

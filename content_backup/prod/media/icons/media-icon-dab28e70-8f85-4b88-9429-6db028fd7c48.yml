@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: dab28e70-8f85-4b88-9429-6db028fd7c48
+entity_type: media
+bundle: icon
+base_fields:
+  name: edit-solid.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/edit-solid.svg'
+      url: '/sites/default/files/icons/edit-solid.svg'

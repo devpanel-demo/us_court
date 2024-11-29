@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an example Gutenberg block server-side.
+ *
+ * Available variables:
+ * - block_name: The Gutenberg block name.
+ * - block_content: The content of this block.
+ * - block_attributes: The attributes of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *
+ * @see template_preprocess_gutenberg_block()
+ * @see template_preprocess_gutenberg_block__uswds__process_list()
+ *
+ * @ingroup themeable
+ */
+#}
+{% embed 'uscgov:usa_process_list' with {
+  attributes,
+  title: block_attributes.title|default(''),
+  is_alphabetical: block_attributes.layout == 'alphabetical' ? true : false,
+  list_items: block_content
+} only %}
+  {% block list_items %}
+    {{ list_items }}
+  {% endblock %}
+{% endembed %}

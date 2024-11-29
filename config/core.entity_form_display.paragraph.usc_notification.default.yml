@@ -1,0 +1,43 @@
+uuid: 61903e33-6887-4171-af6f-99c9bdd3c069
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_notification.field_usc_description
+    - field.field.paragraph.usc_notification.field_usc_label
+    - field.field.paragraph.usc_notification.field_usc_title
+    - paragraphs.paragraphs_type.usc_notification
+  module:
+    - text
+id: paragraph.usc_notification.default
+targetEntityType: paragraph
+bundle: usc_notification
+mode: default
+content:
+  field_usc_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

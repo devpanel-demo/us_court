@@ -1,0 +1,108 @@
+@use "../../../sass/custom/global/mixins" as *;
+
+.gov-delivery {
+  position: relative;
+  margin-bottom: var(--spacing-component);
+  padding-block: 50px 40px;
+  background-color: var(--surface-base-lightest);
+  border-top: solid 4px var(--border-secondary-dark);
+  border-bottom: solid 4px var(--border-secondary-dark);
+  color: var(--text-on-surface-base-lightest--dark);
+  text-align: center;
+
+  &:before {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    translate: -50% 0;
+    width: 52px;
+    height: 20px;
+    content: "";
+    background-color: var(--surface-base-lightest);
+  }
+
+  > svg {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    translate: -50% -50%;
+    width: 32px;
+    height: 32px;
+
+    path {
+      fill: var(--border-secondary-dark);
+    }
+  }
+}
+
+.gov-delivery__content {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.gov-delivery__title {
+  margin: 0;
+}
+
+.gov-delivery__description {
+  padding-block: 8px 22px;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:first-child {
+    margin-bottom: 0;
+  }
+}
+
+.gov-delivery-form.usa-form {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  gap: 10px;
+  border: solid 1px var(--border-muted-dark);
+  border-radius: 30px;
+  background-color: var(--surface-form);
+
+  &:focus-within {
+    outline: solid 4px var(--focus-ring);
+    outline-offset: 2px;
+
+    &:has([type="submit"]:focus) {
+      outline: 0;
+    }
+  }
+
+  label {
+    @include visually-hidden;
+  }
+
+  .form-type-email {
+    flex-grow: 1;
+    width: 0;
+  }
+
+  [type="email"] {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-inline: 10px;
+    border: 0;
+    border-radius: 30px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  [class][class][type="submit"] {
+    height: 40px;
+    margin: 0;
+    background-color: var(--accent);
+
+    &:focus {
+      outline-offset: 2px;
+    }
+  }
+}

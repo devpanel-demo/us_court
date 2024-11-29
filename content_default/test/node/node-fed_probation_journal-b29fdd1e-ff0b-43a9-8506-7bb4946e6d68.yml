@@ -1,0 +1,61 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: b29fdd1e-ff0b-43a9-8506-7bb4946e6d68
+entity_type: node
+bundle: fed_probation_journal
+base_fields:
+  title: 'Default Content - Federal Probation Journal'
+  status: true
+  langcode: en
+  created: '1717611852'
+  changed: 1717611852
+  author: jamesdavison@ao.uscourts.gov
+  url: /default-content-federal-probation-journal
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      summary: ''
+      format: wysiwyg
+  feeds_item: null
+  field_auther:
+    -
+      value: 'Test Author'
+  field_document_pdf:
+    -
+      uuid: 95242055-f777-42c5-b6ea-ed90fe251e14
+      entity_type: media
+      base_fields:
+        name: dummy.pdf
+        created: '1717611288'
+        status: true
+        langcode: en
+      bundle: document
+  field_metatag: null
+  field_mydate:
+    -
+      value: '2024-06-06'
+  field_tags: null
+  field_test:
+    -
+      uuid: a53ba484-e755-4c02-8b19-1ee5a8960aac
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Criminal Justice System'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: probation_journal_topic
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_import_timestamp: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_volume_and_issue_number:
+    -
+      value: 'Volumen test'
+  field_workbench_access: null

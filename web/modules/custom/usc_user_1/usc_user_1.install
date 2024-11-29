@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the USC user 1 module.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function usc_user_1_install() {
+  // Load the user account.
+  $user = User::load(1);
+  if ($user) {
+    // Block the user.
+    $user->block();
+    // Save the user account.
+    $user->save();
+  }
+}

@@ -1,0 +1,23 @@
+.usa-pagination__list {
+  flex-wrap: wrap;
+  gap: 0.5rem
+}
+
+.usa-pagination__item {
+  margin-inline: 0;
+}
+
+.usa-pagination .usa-current {
+  background: var(--surface-primary-dark);
+}
+
+.usa-pagination__button {
+  font-size: 16px;
+  font-weight: bold;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--border-primary-dark);
+  }
+}

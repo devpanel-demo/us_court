@@ -1,0 +1,108 @@
+uuid: baec089e-3f49-4a46-b8d7-bdf2cbd5dc7e
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_field_collection_revisions_milestone_activities
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Field Collection Revisions Content'
+migration_group: migrate_drupal_7
+label: 'Field Collection Revisions (Milestone activities)'
+source:
+  plugin: d7_field_collection_item_revision
+  field_name: field_milestone_activities
+process:
+  id:
+    -
+      plugin: paragraphs_lookup
+      tags:
+        - 'Field Collection Content'
+      source: item_id
+    -
+      plugin: extract
+      index:
+        - id
+  type:
+    -
+      plugin: get
+      source: bundle
+  parent_id:
+    -
+      plugin: get
+      source: parent_id
+  parent_type:
+    -
+      plugin: get
+      source: parent_type
+  parent_field_name:
+    -
+      plugin: get
+      source: field_name
+  field_fc_jma_category:
+    -
+      plugin: sub_process
+      source: field_fc_jma_category
+      process:
+        target_id: tid
+  field_fc_jma_position:
+    -
+      plugin: sub_process
+      source: field_fc_jma_position
+      process:
+        target_id: tid
+  field_fc_be_body:
+    -
+      plugin: get
+      source: field_fc_be_body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: ckeditor_link_file_to_linkit
+    -
+      plugin: img_tag_to_embed
+  field_fc_jma_date:
+    -
+      plugin: sub_process
+      source: field_fc_jma_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_fc_jma_current_title:
+    -
+      plugin: sub_process
+      source: field_fc_jma_current_title
+      process:
+        target_id: tid
+  field_fc_jma_court_name:
+    -
+      plugin: get
+      source: field_fc_jma_court_name
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  new_revisions: true
+  default_bundle: milestone_activities
+migration_dependencies:
+  required:
+    - upgrade_d7_field_collection_body_enhanced
+    - upgrade_d7_field_collection_referenced_nodes
+    - upgrade_d7_field_collection_milestone_activities
+    - upgrade_d7_field_collection_additional_info
+    - upgrade_d7_field_collection_piksel_programs
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+  optional: {  }

@@ -1,0 +1,24 @@
+uuid: 64218ea0-ca1f-4481-8b72-05fdb8ac8a2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_document_pdf
+    - media.type.document
+    - paragraphs.paragraphs_type.additional_info
+id: paragraph.additional_info.field_document_pdf
+field_name: field_document_pdf
+entity_type: paragraph
+bundle: additional_info
+label: File
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+field_type: entity_reference

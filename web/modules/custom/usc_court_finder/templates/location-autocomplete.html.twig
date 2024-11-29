@@ -1,0 +1,10 @@
+{% set input_value = getUrlParam('location') %}
+<form action="/federal-court-finder/find" class="court-finder-block__form court-finder-block__form--location">
+  <div class="court-finder-block__form-item-wrapper">
+    <input id="court-finder-by-location" class="court-finder-block__input" name="search_api_fulltext" type="text" value="{{ input_value }}">
+    <button class="court-finder-block__form-submit">
+      <span class="visually-hidden">{{ 'Submit'|t }}</span>
+    </button>
+  </div>
+  <label for="court-finder-by-location" class="court-finder-block__form-label">{{ 'Search by address, city, state, or ZIP code'|t }}</label>
+</form>

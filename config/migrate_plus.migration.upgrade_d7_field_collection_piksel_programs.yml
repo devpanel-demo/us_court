@@ -1,0 +1,60 @@
+uuid: b37d346f-aac6-48b2-84d5-54db48e5203e
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_field_collection_piksel_programs
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Field Collection Content'
+migration_group: migrate_drupal_7
+label: 'Field Collections (Piksel programs)'
+source:
+  plugin: d7_field_collection_item
+  field_name: field_piksel_programs
+process:
+  type:
+    -
+      plugin: get
+      source: bundle
+  parent_id:
+    -
+      plugin: get
+      source: parent_id
+  parent_type:
+    -
+      plugin: get
+      source: parent_type
+  parent_field_name:
+    -
+      plugin: get
+      source: field_name
+  name:
+    -
+      plugin: get
+      source: name
+  field_file_title:
+    -
+      plugin: get
+      source: field_piksel_program
+  field_program_description:
+    -
+      plugin: get
+      source: field_piksel_program_description
+  field_title:
+    -
+      plugin: get
+      source: field_piksel_program_title
+  field_alternate_text:
+    -
+      plugin: get
+      source: field_alternate_text
+destination:
+  plugin: 'entity:media'
+  default_bundle: piksel_program
+migration_dependencies:
+  optional:
+    - upgrade_d7_field_instance

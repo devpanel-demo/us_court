@@ -1,0 +1,42 @@
+uuid: ebe2aa60-07a9-4b44-870d-3a1feb49a88e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tableau_visualization.field_tv_share_link
+    - field.field.paragraph.tableau_visualization.field_tv_tabs
+    - field.field.paragraph.tableau_visualization.field_tv_title
+    - field.field.paragraph.tableau_visualization.field_tv_toolbar
+    - paragraphs.paragraphs_type.tableau_visualization
+  module:
+    - sdc_display
+    - usc_core
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.tableau_visualization.default
+targetEntityType: paragraph
+bundle: tableau_visualization
+mode: default
+content:
+  field_tv_share_link:
+    type: usc_tableau_script_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_tv_tabs: true
+  field_tv_title: true
+  field_tv_toolbar: true
+  search_api_excerpt: true

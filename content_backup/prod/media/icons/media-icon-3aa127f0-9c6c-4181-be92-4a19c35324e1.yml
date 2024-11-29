@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 3aa127f0-9c6c-4181-be92-4a19c35324e1
+entity_type: media
+bundle: icon
+base_fields:
+  name: save-outline.svg
+  created: '1721137216'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/save-outline.svg'
+      url: '/sites/default/files/icons/save-outline.svg'

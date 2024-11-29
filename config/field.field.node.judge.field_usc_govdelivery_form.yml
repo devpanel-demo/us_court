@@ -1,0 +1,72 @@
+uuid: 715d3f47-87b3-40fb-9d28-946744679ed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usc_govdelivery_form
+    - node.type.judge
+    - paragraphs.paragraphs_type.usc_govdelivery
+  module:
+    - entity_reference_revisions
+id: node.judge.field_usc_govdelivery_form
+field_name: field_usc_govdelivery_form
+entity_type: node
+bundle: judge
+label: 'GovDelivery Form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: usc_paragraph
+  handler_settings:
+    view:
+      view_name: usc_paragraph_library
+      display_name: entity_reference_1
+      arguments:
+        - usc_govdelivery
+    negate: '0'
+    target_bundles:
+      usc_govdelivery: usc_govdelivery
+    target_bundles_drag_drop:
+      additional_info:
+        weight: '14'
+        enabled: 0
+      body_enhanced:
+        weight: '15'
+        enabled: 0
+      criminogenic_extra_downlds:
+        weight: '16'
+        enabled: 0
+      criminogenic_worksheets:
+        weight: '17'
+        enabled: 0
+      icon_link:
+        weight: '18'
+        enabled: 0
+      milestone_activities:
+        weight: '19'
+        enabled: 0
+      piksel_programs:
+        weight: '20'
+        enabled: 0
+      referenced_nodes:
+        weight: '21'
+        enabled: 0
+      social_media_item:
+        weight: '22'
+        enabled: 0
+      usc_govdelivery:
+        enabled: '1'
+        weight: '23'
+      usc_notification:
+        weight: '24'
+        enabled: 0
+      usc_related_links:
+        weight: '25'
+        enabled: 0
+      usc_table_of_contents:
+        weight: '26'
+        enabled: 0
+field_type: entity_reference_revisions

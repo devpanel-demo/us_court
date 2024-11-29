@@ -1,0 +1,30 @@
+uuid: 26c52e62-c9fe-4f77-ae1c-d7cc4abcdc73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_issue
+    - node.type.news
+    - node.type.news_issue
+id: node.news.field_news_issue
+field_name: field_news_issue
+entity_type: node
+bundle: news
+label: 'Select News Issue Node'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      news_issue: news_issue
+    sort:
+      field: title
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

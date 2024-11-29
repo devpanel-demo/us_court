@@ -1,0 +1,19 @@
+uuid: 70d53be3-1898-4153-a098-65cd21b893f5
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_news_issue
+field_name: field_news_issue
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

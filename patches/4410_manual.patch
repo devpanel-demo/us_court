@@ -1,0 +1,288 @@
+diff --git a/core/lib/Drupal/Core/Entity/EntityReferenceSelection/SelectionPluginBase.php b/core/lib/Drupal/Core/Entity/EntityReferenceSelection/SelectionPluginBase.php
+index 29b683f972..8e842c8527 100644
+--- a/core/lib/Drupal/Core/Entity/EntityReferenceSelection/SelectionPluginBase.php
++++ b/core/lib/Drupal/Core/Entity/EntityReferenceSelection/SelectionPluginBase.php
+@@ -86,4 +86,58 @@ public function submitConfigurationForm(array &$form, FormStateInterface $form_s
+    */
+   public function entityQueryAlter(SelectInterface $query) {}
+ 
++  /**
++   * Build the form elements for selection plugins with autocreate support.
++   *
++   * @param array $form
++   *   An associative array containing the initial structure of the plugin form.
++   * @param array $bundles
++   *   An array of bundles to store new items in.
++   *
++   * @return array
++   *   The form structure.
++   */
++  protected function buildAutocreateConfigurationForm(array $form, array $bundles) {
++    $form['auto_create'] = [
++      '#type' => 'checkbox',
++      '#title' => $this->t("Create referenced entities if they don't already exist"),
++      '#default_value' => $this->configuration['auto_create'],
++      '#weight' => -2,
++    ];
++    $form['auto_create_bundle'] = [
++      '#type' => 'select',
++      '#title' => $this->t('Store new items in'),
++      '#options' => $this->getBundleOptions($bundles),
++      '#default_value' => $this->configuration['auto_create_bundle'],
++      '#access' => count($bundles) > 1,
++      '#states' => [
++        'visible' => [
++          ':input[name="settings[handler_settings][auto_create]"]' => ['checked' => TRUE],
++        ],
++      ],
++      '#weight' => -1,
++    ];
++    return $form;
++  }
++
++  /**
++   * Transforms bundles in the correct structure for a select element.
++   *
++   * @param array $bundles
++   *   An array of bundles in the structure of
++   *   Drupal\Core\Entity\EntityTypeBundleInfoInterface::getBundleInfo().
++   *
++   * @return array
++   *   An array of bundle labels keyed by the bundle name.
++   */
++  protected function getBundleOptions(array $bundles) {
++    $bundle_options = [];
++    foreach ($bundles as $bundle_name => $bundle_info) {
++      $bundle_options[$bundle_name] = $bundle_info['label'];
++    }
++    natsort($bundle_options);
++
++    return $bundle_options;
++  }
++
+ }
+diff --git a/core/lib/Drupal/Core/Entity/Plugin/EntityReferenceSelection/DefaultSelection.php b/core/lib/Drupal/Core/Entity/Plugin/EntityReferenceSelection/DefaultSelection.php
+index 4fd91204bf..90644f09bc 100644
+--- a/core/lib/Drupal/Core/Entity/Plugin/EntityReferenceSelection/DefaultSelection.php
++++ b/core/lib/Drupal/Core/Entity/Plugin/EntityReferenceSelection/DefaultSelection.php
+@@ -166,20 +166,11 @@ public function buildConfigurationForm(array $form, FormStateInterface $form_sta
+     $bundles = $this->entityTypeBundleInfo->getBundleInfo($entity_type_id);
+ 
+     if ($entity_type->hasKey('bundle')) {
+-      $bundle_options = [];
+-      foreach ($bundles as $bundle_name => $bundle_info) {
+-        $bundle_options[$bundle_name] = $bundle_info['label'];
+-      }
+-      natsort($bundle_options);
+-      $selected_bundles = array_intersect_key(
+-        $bundle_options,
+-        array_filter((array) $configuration['target_bundles'])
+-      );
+ 
+       $form['target_bundles'] = [
+         '#type' => 'checkboxes',
+         '#title' => $entity_type->getBundleLabel(),
+-        '#options' => $bundle_options,
++        '#options' => $this->getBundleOptions($bundles),
+         '#default_value' => (array) $configuration['target_bundles'],
+         '#required' => TRUE,
+         '#size' => 6,
+@@ -206,6 +197,10 @@ public function buildConfigurationForm(array $form, FormStateInterface $form_sta
+       ];
+     }
+ 
++    $selected_bundles = [];
++    if (!empty($configuration['target_bundles'])) {
++      $selected_bundles = array_intersect_key($this->getBundleOptions($bundles), array_filter((array) $configuration['target_bundles']));
++    }
+     if ($entity_type->entityClassImplements(FieldableEntityInterface::class)) {
+       $options = $entity_type->hasKey('bundle') ? $selected_bundles : $bundles;
+       $fields = [];
+@@ -280,29 +275,8 @@ public function buildConfigurationForm(array $form, FormStateInterface $form_sta
+       }
+ 
+     }
+-
+-    $form['auto_create'] = [
+-      '#type' => 'checkbox',
+-      '#title' => $this->t("Create referenced entities if they don't already exist"),
+-      '#default_value' => $configuration['auto_create'],
+-      '#weight' => -2,
+-    ];
+-
+-    if ($entity_type->hasKey('bundle')) {
+-      $form['auto_create_bundle'] = [
+-        '#type' => 'select',
+-        '#title' => $this->t('Store new items in'),
+-        '#options' => $selected_bundles,
+-        '#default_value' => $configuration['auto_create_bundle'],
+-        '#access' => count($selected_bundles) > 1,
+-        '#states' => [
+-          'visible' => [
+-            ':input[name="settings[handler_settings][auto_create]"]' => ['checked' => TRUE],
+-          ],
+-        ],
+-        '#weight' => -1,
+-      ];
+-    }
++    $bundles = array_intersect_key($bundles, array_filter((array) $configuration['target_bundles']));
++    $form = $this->buildAutocreateConfigurationForm($form, $bundles);
+ 
+     return $form;
+   }
+diff --git a/core/lib/Drupal/Core/Field/Plugin/Field/FieldWidget/EntityReferenceAutocompleteWidget.php b/core/lib/Drupal/Core/Field/Plugin/Field/FieldWidget/EntityReferenceAutocompleteWidget.php
+index f373ac800b..65e6432ed7 100644
+--- a/core/lib/Drupal/Core/Field/Plugin/Field/FieldWidget/EntityReferenceAutocompleteWidget.php
++++ b/core/lib/Drupal/Core/Field/Plugin/Field/FieldWidget/EntityReferenceAutocompleteWidget.php
+@@ -167,6 +167,11 @@ public function massageFormValues(array $values, array $form, FormStateInterface
+   protected function getAutocreateBundle() {
+     $bundle = NULL;
+     if ($this->getSelectionHandlerSetting('auto_create')) {
++      // If a bundle is explicitly defined, use it.
++      if ($bundle = $this->getSelectionHandlerSetting('auto_create_bundle')) {
++        return $bundle;
++      }
++
+       $target_bundles = $this->getSelectionHandlerSetting('target_bundles');
+       // If there's no target bundle at all, use the target_type. It's the
+       // default for bundleless entity types.
+@@ -177,9 +182,7 @@ protected function getAutocreateBundle() {
+       elseif (count($target_bundles) == 1) {
+         $bundle = reset($target_bundles);
+       }
+-      // If there's more than one target bundle, use the autocreate bundle
+-      // stored in selection handler settings.
+-      elseif (!$bundle = $this->getSelectionHandlerSetting('auto_create_bundle')) {
++      else {
+         // If no bundle has been set as auto create target means that there is
+         // an inconsistency in entity reference field settings.
+         trigger_error(sprintf(
+diff --git a/core/modules/field/tests/src/Functional/EntityReference/Views/SelectionTest.php b/core/modules/field/tests/src/Functional/EntityReference/Views/SelectionTest.php
+index ea0fa36604..fa698644df 100644
+--- a/core/modules/field/tests/src/Functional/EntityReference/Views/SelectionTest.php
++++ b/core/modules/field/tests/src/Functional/EntityReference/Views/SelectionTest.php
+@@ -8,6 +8,7 @@
+ use Drupal\Component\Utility\Crypt;
+ use Drupal\Component\Utility\Html;
+ use Drupal\Core\Site\Settings;
++use Drupal\entity_test\Entity\EntityTest;
+ use Drupal\Tests\BrowserTestBase;
+ use Drupal\Tests\field\Traits\EntityReferenceFieldCreationTrait;
+ use Drupal\views\Views;
+@@ -29,6 +30,7 @@ class SelectionTest extends BrowserTestBase {
+     'views',
+     'entity_reference_test',
+     'entity_test',
++    'views_entity_test',
+   ];
+ 
+   /**
+@@ -73,20 +75,20 @@ protected function setUp(): void {
+     entity_test_create_bundle('test_bundle');
+ 
+     // Create an entity reference field.
+-    $handler_settings = [
++    $this->handlerSettings = [
+       'view' => [
+         'view_name' => 'test_entity_reference',
+         'display_name' => 'entity_reference_1',
+       ],
+     ];
+-    $this->handlerSettings = $handler_settings;
+-    $this->createEntityReferenceField('entity_test', 'test_bundle', 'test_field', $this->randomString(), 'node', 'views', $handler_settings);
+   }
+ 
+   /**
+    * Tests that the Views selection handles the views output properly.
+    */
+   public function testAutocompleteOutput() {
++    $this->createEntityReferenceField('entity_test', 'test_bundle', 'test_field', $this->randomString(), 'node', 'views', $this->handlerSettings);
++
+     // Reset any internal static caching.
+     \Drupal::service('entity_type.manager')->getStorage('node')->resetCache();
+ 
+@@ -127,4 +129,60 @@ public function testAutocompleteOutput() {
+     $this->assertEquals($expected, $result, 'The autocomplete result of the Views entity reference selection handler contains the proper output.');
+   }
+ 
++  /**
++   * Tests that the Views selection can auto create an entity.
++   */
++  public function testAutocompleteAutoCreate() {
++    $type3 = $this->drupalCreateContentType()->id();
++
++    $account = $this->drupalCreateUser([
++      'access content',
++      'administer entity_test content',
++      "administer nodes",
++    ]);
++    $this->drupalLogin($account);
++
++    $this->handlerSettings['auto_create'] = TRUE;
++    $this->handlerSettings['auto_create_bundle'] = $type3;
++    $this->createEntityReferenceField('entity_test', 'entity_test', 'test_field', $this->randomString(), 'node', 'views_auto_create', $this->handlerSettings);
++
++    /** @var \Drupal\Core\Entity\EntityDisplayRepositoryInterface $entity_display_repository */
++    $entity_display_repository = \Drupal::service('entity_display.repository');
++    $entity_display_repository->getFormDisplay('entity_test', 'entity_test', 'default')
++      ->setComponent('test_field', [
++        'type' => 'entity_reference_autocomplete',
++      ])
++      ->save();
++
++    $this->drupalGet('/entity_test/add');
++
++    $this->assertSession()->elementExists('xpath', '//input[@id="edit-test-field-0-target-id" and contains(@class, "form-autocomplete")]');
++
++    $new_title = $this->randomMachineName();
++
++    // Assert referenced node does not exist.
++    $this->assertEmpty($this->drupalGetNodeByTitle($new_title), 'Referenced node does not exist yet.');
++
++    $edit = [
++      'name[0][value]' => $this->randomMachineName(),
++      'test_field[0][target_id]' => $new_title,
++    ];
++    $this->drupalGet('/entity_test/add');
++    $this->submitForm($edit, 'Save');
++
++    // Assert referenced node was created.
++    $referenced_node = $this->drupalGetNodeByTitle($new_title);
++    $this->assertNotEmpty($referenced_node, 'Referenced node was created.');
++    $this->assertSame($type3, $referenced_node->getType());
++
++    // Assert the referenced node is associated with referencing node.
++    $result = \Drupal::entityQuery('entity_test')
++      ->accessCheck(TRUE)
++      ->execute();
++
++    $referencing_nid = key($result);
++    $referencing_node = EntityTest::load($referencing_nid);
++    $this->assertEquals($referenced_node->id(), $referencing_node->test_field->target_id, 'Newly created node is referenced from the referencing node.');
++  }
++
+ }
+diff --git a/core/modules/views/config/schema/views.entity_reference.schema.yml b/core/modules/views/config/schema/views.entity_reference.schema.yml
+index f13645ab43..18eb4ebee0 100644
+--- a/core/modules/views/config/schema/views.entity_reference.schema.yml
++++ b/core/modules/views/config/schema/views.entity_reference.schema.yml
+@@ -20,3 +20,19 @@ entity_reference_selection.views:
+           sequence:
+             type: string
+             label: 'Argument'
++
++entity_reference_selection.views_auto_create:
++  type: entity_reference_selection.views
++  label: 'Views selection handler settings'
++  mapping:
++    auto_create:
++      type: boolean
++      label: 'Create referenced entities if they don''t already exist'
++    auto_create_bundle:
++      type: string
++      label: 'Bundle assigned to the auto-created entities.'
++
++# Schema for all entity reference 'views_auto_create:*' selection handlers that are not
++# providing a specific schema.
++entity_reference_selection.views_auto_create:*:
++  type: entity_reference_selection.views_auto_create

@@ -1,0 +1,7 @@
+{{ include('uscgov:usa_alert', {
+  heading_text: content.field_usc_title|add_suggestion('bare'),
+  messages: [content.field_usc_description|add_suggestion('bare')],
+  slim: false,
+  icon: true,
+  type: 'info',
+  }, with_context = false) }}

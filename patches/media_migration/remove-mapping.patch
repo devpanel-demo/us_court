@@ -1,0 +1,29 @@
+diff --git a/src/EventSubscriber/MediaMigrationSubscriber.php b/src/EventSubscriber/MediaMigrationSubscriber.php
+index 6b1c5a5..2b566a7 100644
+--- a/src/EventSubscriber/MediaMigrationSubscriber.php
++++ b/src/EventSubscriber/MediaMigrationSubscriber.php
+@@ -108,24 +108,6 @@ class MediaMigrationSubscriber implements EventSubscriberInterface {
+       }
+     }
+ 
+-    // Map path alias sources from file/1234 to media/1234.
+-    if (($source->getPluginId() == 'd7_url_alias') && (strpos($row->getSourceProperty('source'), 'file/') === 0)) {
+-      $source_url = preg_replace('/^file/', 'media', $row->getSourceProperty('source'));
+-      $row->setSourceProperty('source', $source_url);
+-    }
+-
+-    // Map redirections from file/1234 to media/1234.
+-    if (($source->getPluginId() == 'd7_path_redirect') && (strpos($row->getSourceProperty('redirect'), 'file/') === 0)) {
+-      $redirect = preg_replace('/^file/', 'media', $row->getSourceProperty('redirect'));
+-      $row->setSourceProperty('redirect', $redirect);
+-    }
+-
+-    // Map file menu links to media ones.
+-    if (($source->getPluginId() == 'menu_link') && (strpos($row->getSourceProperty('link_path'), 'file/') === 0)) {
+-      $link_path = preg_replace('/^file/', 'media', $row->getSourceProperty('link_path'));
+-      $row->setSourceProperty('link_path', $link_path);
+-    }
+-
+     // Prevent the migration of the alt and title field configurations for image
+     // media type bundles. These properties will be migrated into the image
+     // media's source field configuration (which is an image field).

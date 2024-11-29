@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: dc74832e-a475-4861-937a-216854e82bee
+entity_type: media
+bundle: icon
+base_fields:
+  name: newspaper-solid.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/newspaper-solid.svg'
+      url: '/sites/default/files/icons/newspaper-solid.svg'

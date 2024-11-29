@@ -1,0 +1,11 @@
+uuid: f5c0606a-84fb-4073-9d32-d368670021c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.list_item
+label: 'List Item'
+description: 'Present the content title as a list item, with an optional date.'
+targetEntityType: node
+cache: true

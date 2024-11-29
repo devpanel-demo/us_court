@@ -1,0 +1,11 @@
+uuid: 1599b8fa-c09a-4094-8e4c-0b6753a4ea19
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.landing_page
+label: landing_page
+description: ''
+targetEntityType: media
+cache: true

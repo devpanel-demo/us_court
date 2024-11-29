@@ -1,0 +1,214 @@
+uuid: 532db101-58e0-4882-ba70-7ab3b52e829d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.usc_location.usc_location.field_geofield
+  module:
+    - field_group
+    - nomarkup
+    - sdc_display
+    - usc_court_finder
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+  field_group:
+    group_useful_links:
+      children:
+        - extra_field_court_finder_court_page_link
+        - extra_field_court_finder_court_ecf_link
+        - extra_field_court_finder_court_jury_info_link
+        - extra_field_court_finder_court_ejuror_link
+      label: 'Useful Links for This Location'
+      parent_name: ''
+      region: content
+      weight: 9
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: true
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: usc_location.usc_location.default
+targetEntityType: usc_location
+bundle: usc_location
+mode: default
+content:
+  address:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  building_address:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  building_city:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  building_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  building_state:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  building_zip:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  closes:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  court_type:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  extra_field_court_finder_court_ecf_link:
+    type: extra_field_court_finder_court_ecf_link
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  extra_field_court_finder_court_ejuror_link:
+    type: extra_field_court_finder_court_ejuror_link
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  extra_field_court_finder_court_jury_info_link:
+    type: extra_field_court_finder_court_jury_info_link
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  extra_field_court_finder_court_page_link:
+    type: extra_field_court_finder_court_page_link
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  extra_field_court_finder_maps_url:
+    type: extra_field_court_finder_maps_url
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  lunch_end:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  lunch_start:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  main_office:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  opens:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  phone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  circuit_id: true
+  district_id: true
+  ecf_url: true
+  ecf_url2: true
+  ejuror_url: true
+  extra_field_court_finder_label: true
+  fax: true
+  field_geofield: true
+  has_public_library: true
+  jury_service_url: true
+  location_group: true
+  location_id: true
+  mail_box: true
+  mail_zip: true
+  office_name: true
+  org_code: true
+  room: true
+  search_api_excerpt: true
+  unit: true
+  url: true

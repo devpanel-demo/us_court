@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: eaa4710a-15bb-4f93-b8a0-9615f8ca9bab
+entity_type: media
+bundle: icon
+base_fields:
+  name: tag.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/tag.svg'
+      url: '/sites/default/files/icons/tag.svg'

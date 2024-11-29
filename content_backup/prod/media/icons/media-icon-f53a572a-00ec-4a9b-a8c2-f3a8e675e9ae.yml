@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: f53a572a-00ec-4a9b-a8c2-f3a8e675e9ae
+entity_type: media
+bundle: icon
+base_fields:
+  name: comment-solid.svg
+  created: '1721136999'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/comment-solid.svg'
+      url: '/sites/default/files/icons/comment-solid.svg'

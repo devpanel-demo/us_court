@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 6eb9cf54-e5eb-4f91-9206-0d4dd8e4576e
+entity_type: media
+bundle: icon
+base_fields:
+  name: sitemap.svg
+  created: '1721137216'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/sitemap.svg'
+      url: '/sites/default/files/icons/sitemap.svg'

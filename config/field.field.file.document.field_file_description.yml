@@ -1,0 +1,22 @@
+uuid: b4792fda-820b-4e12-8163-81eae390af52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.file.field_file_description
+  module:
+    - file
+    - text
+id: file.document.field_file_description
+field_name: field_file_description
+entity_type: file
+bundle: document
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

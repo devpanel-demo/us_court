@@ -1,0 +1,29 @@
+uuid: 4ad19678-5152-4035-9205-a80fd77cfad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.court_finder
+    - facets_summary.facets_summary.court_finder
+  module:
+    - block_visibility_groups
+    - facets_summary
+  theme:
+    - uscgov
+id: uscgov_courtfinder
+theme: uscgov
+region: sidebar
+weight: -7
+provider: null
+plugin: 'facets_summary_block:court_finder'
+settings:
+  id: 'facets_summary_block:court_finder'
+  label: 'Refine Search'
+  label_display: visible
+  provider: facets_summary
+  context_mapping: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: court_finder

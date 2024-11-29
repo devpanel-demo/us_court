@@ -1,0 +1,27 @@
+{% set intro = [
+  content.field_data_table_category_prefix|add_suggestion('bare')|render|striptags|trim,
+  content.field_data_table_title|add_suggestion('bare')|render|striptags|trim,
+  content.field_data_table_range|add_suggestion('bare')|render|striptags|trim
+] %}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% if intro.0 %}
+    <div class="spacing-component">
+      {{ intro|join('—') }}
+    </div>
+  {% endif %}
+
+  {{ content|without('field_data_table_category_prefix', 'field_data_table_title', 'field_data_table_range') }}
+
+</article>

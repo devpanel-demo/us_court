@@ -1,0 +1,48 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: ef0b5fe1-5d6f-4b27-b16b-55c575098d4d
+entity_type: node
+bundle: fee
+base_fields:
+  title: 'Default Content - Fee'
+  status: true
+  langcode: en
+  created: '1717612063'
+  changed: 1717612063
+  author: jamesdavison@ao.uscourts.gov
+  url: /default-content-fee
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      summary: ''
+      format: wysiwyg
+  field_date_effective:
+    -
+      value: '2024-06-06'
+  field_date_updated:
+    -
+      value: '2024-06-05'
+  field_lead_paragraph:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      format: wysiwyg
+  field_logo:
+    -
+      uuid: 1a79fe16-d2eb-4de6-b6f4-d73583fd139d
+      entity_type: media
+      base_fields:
+        name: nature-7045133_1920.jpeg
+        created: '1713912999'
+        status: true
+        langcode: en
+      bundle: image
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

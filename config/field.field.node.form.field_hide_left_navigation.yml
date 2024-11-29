@@ -1,0 +1,23 @@
+uuid: 95f60688-e397-4498-8164-7179d8fce87f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_left_navigation
+    - node.type.form
+id: node.form.field_hide_left_navigation
+field_name: field_hide_left_navigation
+entity_type: node
+bundle: form
+label: 'Hide Left Navigation'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Hide Left Navigation'
+  off_label: ''
+field_type: boolean

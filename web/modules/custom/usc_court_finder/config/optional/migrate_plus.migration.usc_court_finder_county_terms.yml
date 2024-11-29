@@ -1,0 +1,48 @@
+id: usc_court_finder_county_terms
+label: US Court Finder County terms
+migration_group: usc_court_finder
+
+source:
+  plugin: 'csv'
+  path: 'modules/custom/usc_court_finder/source_files/counties.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - name
+    - state_code
+  fields:
+    0:
+      name: name
+    1:
+      name: state_code
+    2:
+      name: district_code
+
+process:
+  name: name
+
+  field_usc_type:
+    plugin: default_value
+    default_value: county
+
+  parent:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: district_code
+    -
+      plugin: migration_lookup
+      migration:
+        - usc_court_finder_district_terms
+
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: usc_court_finder_hierarchy
+
+
+migration_dependencies:
+  required:
+    - usc_court_finder_circuit_terms
+    - usc_court_finder_state_terms
+    - usc_court_finder_district_terms

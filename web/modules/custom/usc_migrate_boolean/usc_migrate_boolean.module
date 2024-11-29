@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * @file
+ * USC Migrate boolean module.
+ */
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements migration_plugins_alter().
+ *
+ * @throws \Drupal\Core\Database\InvalidQueryException
+ */
+function usc_migrate_boolean_migration_plugins_alter(array &$migrations) {
+  foreach ($migrations as &$migration) {
+    // If this is not a Drupal 7 migration, we can skip processing it.
+    if (!in_array('Drupal 7', $migration['migration_tags'] ?? [])) {
+      continue;
+    }
+
+    // Find list fields converted to boolean and map values accordingly.
+    $boolean_fields = _usc_migrate_boolean_get_boolean_fields();
+
+    foreach ($migration['process'] as $process_key => $process_value) {
+      if (!array_key_exists($process_key, $boolean_fields)) {
+        continue;
+      }
+
+      $map = [];
+
+      foreach ($boolean_fields[$process_key]['allowed_values'] as $key => $value) {
+        $d10_value = $value['d10_key'] === 'on_label' ? 1 : 0;
+        $map[$key] = $d10_value;
+      }
+
+      $migration['process'][$process_key] = [
+        'plugin' => 'static_map',
+        'source' => $process_key,
+        'map' => $map,
+      ];
+    }
+  }
+}
+
+/**
+ * Provides a list of fields which will be migrated to boolean.
+ *
+ * @throws \Drupal\Core\Database\InvalidQueryException
+ */
+function _usc_migrate_boolean_get_boolean_fields(): array {
+
+  static $results = NULL;
+
+  if (is_null($results)) {
+
+    $results = [];
+
+    $connection = Database::getConnection('default', 'migration');
+
+    $options = [];
+    $options['fetch'] = \PDO::FETCH_ASSOC;
+    $query = $connection->select('field_config', 'fc', $options)
+      ->distinct()
+      ->fields('fc')
+      ->fields('fci', ['entity_type'])
+      ->condition('fc.active', 1)
+      ->condition('fc.storage_active', 1)
+      ->condition('fc.deleted', 0)
+      ->condition('fci.deleted', 0)
+      ->condition('fc.type', 'list_text');
+    $query->join('field_config_instance', 'fci', '[fc].[id] = [fci].[field_id]');
+
+    $fields = $query->execute()->fetchAll(\PDO::FETCH_ASSOC);
+
+    foreach ($fields as $field_definition) {
+      $data = unserialize($field_definition['data'], ['allowed_classes' => FALSE]);
+      // Find list fields with two options so they can be replaced
+      // as boolean.
+      if (!empty($data['settings']['allowed_values']) && count($data['settings']['allowed_values']) === 2) {
+
+        // Right now we assign the first key to 0 and the second key to 1.
+        // We might need something some sophisticated based on key values.
+        // For example: yes -> 1, no -> 0.
+        $allowed_values = [];
+        $label_keys = ['off_label', 'on_label'];
+        $i = 0;
+
+        foreach ($data['settings']['allowed_values'] as $key => $value) {
+          $allowed_values[$key] = [
+            'label' => $value,
+            'd10_key' => $label_keys[$i],
+          ];
+          $i++;
+        }
+
+        $results[$field_definition['field_name']] = [
+          'allowed_values' => $allowed_values,
+        ];
+      }
+    }
+  }
+
+  return $results;
+}

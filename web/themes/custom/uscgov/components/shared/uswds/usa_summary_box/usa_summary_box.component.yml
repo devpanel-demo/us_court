@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Summary Box
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - title
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    background_color:
+      title: Background Color
+      type: string
+      description: The box background color.
+    border_color:
+      title: Border Color
+      type: string
+      description: The box border color.
+    title:
+      title: Title
+      type: string
+      description: The title.
+slots:
+  content:
+    title: Content

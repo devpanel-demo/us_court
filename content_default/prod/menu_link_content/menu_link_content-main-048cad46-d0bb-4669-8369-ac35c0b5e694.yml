@@ -1,0 +1,86 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 048cad46-d0bb-4669-8369-ac35c0b5e694
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Bankruptcy Basics'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/2805'
+      title: ''
+      options: {  }
+  weight: -92
+  parent:
+    uuid: d2626662-f10a-4810-8a0f-86cf87668637
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: Bankruptcy
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'internal:/node/3266'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 9a51a6f3-19d1-4705-946b-f4fc46a287cd
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Court Programs'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/court-programs'
+              title: ''
+              options: {  }
+          weight: -70
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Learn about federal court programs and services to help provide fair and impartial justice. '
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/2805'
+              title: 'Bankruptcy Basics'
+              options: {  }
+            -
+              uri: 'entity:node/9330'
+              title: 'Filing Without an Attorney'
+              options: {  }
+            -
+              uri: 'entity:node/1769'
+              title: 'Summoned for Federal Jury Service?'
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Bankruptcy helps people who can no longer pay their debts get a fresh start by liquidating assets.'
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

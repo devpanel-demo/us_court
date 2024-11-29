@@ -1,0 +1,18 @@
+{
+  "name": "gutenberg_uswds_table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/drupal-js-build watch --css & webpack --watch",
+    "build": "./node_modules/.bin/drupal-gutenberg-translations && ./node_modules/.bin/drupal-js-build --css && webpack --config .webpack.config"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "drupal-gutenberg-translations": "^1.0.2",
+    "drupal-js-build": "^1.1.1",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

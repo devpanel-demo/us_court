@@ -1,0 +1,13 @@
+usc_vacancy_settings:
+  title: 'Vacancy Settings'
+  description: 'Manage settings for Job and Judicial vacancies.'
+  route_name: usc_vacancy_settings
+  parent: 'usc.admin'
+  weight: 0
+
+vacancies_archive_admin:
+  title: 'Vacancies Archive Admin'
+  description: 'Administer archived versions of vacancies.'
+  route_name: 'vacancies_archive_admin'
+  parent: 'usc.admin'
+  weight: 2

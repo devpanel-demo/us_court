@@ -1,0 +1,30 @@
+uuid: eff42b83-ef38-469d-9153-e536a173f4b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_entity_reference2
+    - node.type.federal_rules
+    - taxonomy.vocabulary.file_types
+id: node.federal_rules.field_term_entity_reference2
+field_name: field_term_entity_reference2
+entity_type: node
+bundle: federal_rules
+label: Category
+description: 'The selection here will determine which Landing View page on which the content will appear.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      file_types: file_types
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+field_type: entity_reference

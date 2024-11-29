@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: dc8d2c61-bc0c-4c37-ab34-2bfcba5a4760
+entity_type: media
+bundle: icon
+base_fields:
+  name: circle-info-solid.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/circle-info-solid.svg'
+      url: '/sites/default/files/icons/circle-info-solid.svg'

@@ -1,0 +1,28 @@
+{% set classes = [
+  'list_item',
+] %}
+
+{% if url is iterable %}
+  {% set url = url.0['#markup'] %}
+{% endif %}
+
+<li {{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+  <a class="list_item__link" href="{{ url|striptags }}">
+    {% if date %}
+      {% if date is iterable %}
+        {% if date['#field_type'] == 'daterange' %}
+          {% set date = date.0.start_date['#text'] %}
+        {% endif %}
+      {% endif %}
+
+      <div class="list_item__date">
+        {{ date }}
+      </div>
+    {% endif %}
+
+    <h3 class="list_item__heading">
+      {{ title }}
+    </h3>
+  </a>
+</li>

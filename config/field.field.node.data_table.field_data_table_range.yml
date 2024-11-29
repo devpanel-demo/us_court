@@ -1,0 +1,19 @@
+uuid: e27ca86c-0253-48d3-aa88-cbcef9e04ac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_table_range
+    - node.type.data_table
+id: node.data_table.field_data_table_range
+field_name: field_data_table_range
+entity_type: node
+bundle: data_table
+label: 'Date Range'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

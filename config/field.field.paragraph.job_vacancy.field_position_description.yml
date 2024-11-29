@@ -1,0 +1,24 @@
+uuid: 5bf36e09-4aa0-4102-8aeb-c4c0a33aa929
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_position_description
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - text
+id: paragraph.job_vacancy.field_position_description
+field_name: field_position_description
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Position Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

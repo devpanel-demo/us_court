@@ -1,0 +1,29 @@
+{%
+  set classes = [
+    'usa-summary-box',
+  ]
+%}
+
+{% set heading_id = 'id-' ~ title|clean_unique_id %}
+
+{%
+  set style = [
+    background_color ? "background-color:#{ background_color };",
+    border_color ? "border-color:#{ border_color };",
+  ]
+%}
+<div {{ attributes
+  .addClass(classes)
+  .setAttribute('role', 'region')
+  .setAttribute('aria-labelledby', heading_id)
+  .setAttribute('style', style|join()|default(false))
+}}>
+  <div class="usa-summary-box__body">
+    <h3 id="{{ heading_id }}" class="usa-summary-box__heading no-toc">
+      {{ title }}
+    </h3>
+    <div class="usa-summary-box__text">
+      {{ content }}
+    </div>
+  </div>
+</div>

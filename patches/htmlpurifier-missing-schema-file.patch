@@ -1,0 +1,13 @@
+diff --git a/config/schema/htmlpurifier.schema.yml b/config/schema/htmlpurifier.schema.yml
+new file mode 100644
+--- /dev/null	(date 1725920681000)
++++ b/config/schema/htmlpurifier.schema.yml	(date 1725920681000)
+@@ -0,0 +1,8 @@
++# Schema for the configuration files of the Taxonomy tooltip module.
++filter_settings.htmlpurifier:
++  type: mapping
++  label: 'HTMLpurifier filter'
++  mapping:
++    htmlpurifier_configuration:
++      type: string
++      label: 'Type'

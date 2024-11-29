@@ -1,0 +1,144 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 4d956455-cdd6-4d12-8021-8816e40ca637
+entity_type: node
+bundle: news
+base_fields:
+  title: 'Testing body enhanced gallery CE'
+  status: true
+  langcode: en
+  created: '1715782504'
+  changed: 1715782504
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-body-enhanced-gallery-ce
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_body_enhanced:
+    -
+      uuid: df052ccc-4a3d-44f3-a15d-38fabb8c4878
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715782612'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>“The reenactment of Korematsu v. U.S. and the legal proceedings that vacated his conviction 40 years later brought to light the history of Asian Pacific Americans who changed the world,” said Judge Leslie E. Kobayashi, of the District of Hawaii, who led the event at the Prince Kuhio Federal Building and U.S. Courthouse in Honolulu. “The students learned firsthand about the impact federal courts have on the course of history and on their daily lives.”</p><p>In <a href="https://edit.uscourts.gov/educational-resources/educational-activities/korematsu-v-us-balancing-liberties-and-safety">Korematsu v. U.S.</a>, Korematsu challenged his arrest when he tried to evade being relocated with more than 125,000 other Japanese Americans, under an order signed by President Franklin D. Roosevelt. He lost his case in 1944, when the U.S. Supreme Court upheld the constitutionality of excluding Japanese Americans from West Coast states. Some 40 years later, Dale Minami led a team of lawyers who were successful in having a federal court <a href="https://edit.uscourts.gov/news/2017/05/11/judging-injustice-during-asian-heritage-month-japanese-internments-are-recalled">vacate Korematsu’s conviction</a> and dismiss the underlying indictment.</p><p>“It was the case of a lifetime for someone like me to vindicate our families and community who were incarcerated in camps without due process or evidence that they presented a danger to America’s security,” said Minami. “It was an opportunity to correct the false narrative of our history, address the horrible precedents of the original cases, and lift the wrongful convictions of the courageous people who stood up against the racist military orders that led to the incarceration of more than 125,000 Japanese Americans.”</p><p>More than 80 students from three high schools witnessed local attorneys, a federal judge, and a law professor reenact Korematsu’s journey through the courts, then asked questions of panelists who included his daughter Karen Korematsu, executive director of the Fred T. Korematsu Institute, and three of her father’s attorneys, Dale Minami, Leigh-Ann Miyasato, and Eric Yamamoto.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery:
+          -
+            uuid: 86fe7f5d-88c0-421d-b792-d5180a26a175
+            entity_type: media
+            base_fields:
+              name: korematsu-panelists-and-volunteers_resize.png
+              created: '1715782290'
+              status: true
+              langcode: en
+            bundle: image
+          -
+            uuid: d628d03e-1f8d-4790-a8cf-86d11fa3d7d7
+            entity_type: media
+            base_fields:
+              name: karen-korematsu_resize.png
+              created: '1715782240'
+              status: true
+              langcode: en
+            bundle: image
+          -
+            uuid: f125e507-338c-49e6-ba66-e7d867340fe9
+            entity_type: media
+            base_fields:
+              name: korematsu-dale-minami_resize.png
+              created: '1715863067'
+              status: true
+              langcode: en
+            bundle: image
+  field_date_updated:
+    -
+      value: '2024-05-15'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_metatag: null
+  field_news_issue: null
+  field_related_topics: null
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: '<p>Subscribe to be notified when the news section is updated.</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary News'
+        field_usc_view_more:
+          -
+            uri: 'internal:/'
+            title: 'Link text'
+            options:
+              href: /
+              data-entity-type: ''
+              data-entity-uuid: ''
+              data-entity-substitution: ''
+  field_usc_table_of_contents: null
+  field_workbench_access: null

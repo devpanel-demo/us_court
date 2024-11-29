@@ -1,0 +1,53 @@
+uuid: d5ace9ba-b54e-43c4-b670-e4007135774c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sitewide_alert.sitewide_alert.field_title
+    - field.field.sitewide_alert.sitewide_alert.field_type
+  module:
+    - options
+    - sdc_display
+    - sitewide_alert
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: sitewide_alert.sitewide_alert.default
+targetEntityType: sitewide_alert
+bundle: sitewide_alert
+mode: default
+content:
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  message:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

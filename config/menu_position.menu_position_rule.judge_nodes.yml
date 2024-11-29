@@ -1,0 +1,27 @@
+uuid: a663bdd4-dadb-4641-8e47-55a312bbf9e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+id: judge_nodes
+label: 'Judge Nodes'
+menu_name: main
+parent: 'menu_link_content:90843bae-d6be-44ba-965b-e20b2a9f4d98'
+menu_link: 'menu_position_link:judge_nodes'
+enabled: true
+weight: -7
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      judge: judge

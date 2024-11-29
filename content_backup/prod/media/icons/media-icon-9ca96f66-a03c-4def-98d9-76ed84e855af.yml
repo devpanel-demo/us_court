@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 9ca96f66-a03c-4def-98d9-76ed84e855af
+entity_type: media
+bundle: icon
+base_fields:
+  name: 'american sign language interpreting.svg'
+  created: '1721136798'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/american sign language interpreting.svg'
+      url: '/sites/default/files/icons/american%20sign%20language%20interpreting.svg'

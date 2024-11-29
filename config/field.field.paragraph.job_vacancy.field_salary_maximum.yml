@@ -1,0 +1,23 @@
+uuid: 9104fe1c-6d22-4aa2-a01b-fa2feef64cdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_salary_maximum
+    - paragraphs.paragraphs_type.job_vacancy
+id: paragraph.job_vacancy.field_salary_maximum
+field_name: field_salary_maximum
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Maximum Salary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

@@ -1,0 +1,10 @@
+uuid: 876176bb-6b8f-4f63-a257-48fcc1442078
+langcode: en
+status: true
+dependencies: {  }
+id: piksel_programs
+label: 'Piksel programs'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_piksel_programs'
+behavior_plugins: {  }

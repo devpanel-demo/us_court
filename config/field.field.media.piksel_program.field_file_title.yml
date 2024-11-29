@@ -1,0 +1,19 @@
+uuid: 6b96c1b9-3363-4a1d-9673-45dbbc08cdff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_file_title
+    - media.type.piksel_program
+id: media.piksel_program.field_file_title
+field_name: field_file_title
+entity_type: media
+bundle: piksel_program
+label: 'Piksel ID'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

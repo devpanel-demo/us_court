@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 53eddcaa-3719-48e2-a6ba-c8dd0ca4bf22
+entity_type: media
+bundle: icon
+base_fields:
+  name: stopwatch.svg
+  created: '1721137227'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/stopwatch.svg'
+      url: '/sites/default/files/icons/stopwatch.svg'

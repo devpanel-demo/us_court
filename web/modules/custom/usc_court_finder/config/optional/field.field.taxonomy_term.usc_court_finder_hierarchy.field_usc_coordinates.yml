@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_usc_coordinates
+    - taxonomy.vocabulary.usc_court_finder_hierarchy
+  module:
+    - geofield
+id: taxonomy_term.usc_court_finder_hierarchy.field_usc_coordinates
+field_name: field_usc_coordinates
+entity_type: taxonomy_term
+bundle: usc_court_finder_hierarchy
+label: Coordinates
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

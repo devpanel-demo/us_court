@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 11107646-acf6-4e3c-8890-fe9c3082dd5f
+entity_type: media
+bundle: icon
+base_fields:
+  name: bell-slash-outline.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/bell-slash-outline.svg'
+      url: '/sites/default/files/icons/bell-slash-outline.svg'

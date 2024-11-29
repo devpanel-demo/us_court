@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: e55f25b2-b97e-4038-9505-0571c6dc18bd
+entity_type: media
+bundle: icon
+base_fields:
+  name: save-solid.svg
+  created: '1721137216'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/save-solid.svg'
+      url: '/sites/default/files/icons/save-solid.svg'

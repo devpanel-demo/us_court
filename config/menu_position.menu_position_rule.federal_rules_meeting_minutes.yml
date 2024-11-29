@@ -1,0 +1,33 @@
+uuid: e111dafa-6e89-4834-a979-5488d3755947
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - system
+id: federal_rules_meeting_minutes
+label: 'Federal Rules Meeting Minutes'
+menu_name: main
+parent: 'menu_link_content:fb03c23c-11c3-441d-8112-2abb40a17ba9'
+menu_link: 'menu_position_link:federal_rules_meeting_minutes'
+enabled: true
+weight: 2
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/rules-policies/archives/meeting-minutes/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      federal_rules: federal_rules

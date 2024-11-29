@@ -1,0 +1,33 @@
+@forward "../../sass/uswds/settings";
+@forward "usa-nav/src/styles";
+@forward "override";
+@use "uswds-core" as *;
+
+// Ensure mobile slide out is not obscured by Drupal's admin menu.
+@include at-media-max($theme-header-min-width) {
+  .usa-nav {
+    top: var(--drupal-displace-offset-top, 0px);
+  }
+}
+
+@include at-media($theme-header-min-width) {
+  // Use grid instead of USWDS grid system (which creates unnecessary complexity
+  // in the template.
+  .usa-nav__submenu-list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: units(4);
+  }
+
+  // Fix issue with basic header and megamenus where if the last item has a
+  // menu, it does not span the full width of the page.
+  .usa-header--basic .usa-nav__primary-item:has(.usa-megamenu):last-of-type {
+    position: static;
+  }
+}
+
+// Fix extended header submenu background to match full width.
+.usa-header--extended .usa-nav__primary .usa-megamenu.usa-nav__submenu::before,
+.usa-header--extended .usa-nav__primary .usa-megamenu.usa-nav__submenu::after {
+  width: calc(50vw - ((units($theme-header-max-width) - units($theme-site-margins-width) * 2) / 2));
+}

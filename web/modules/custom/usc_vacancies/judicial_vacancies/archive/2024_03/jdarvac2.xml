@@ -1,0 +1,864 @@
+<?xml version='1.0'?>                                                                                                        
+<data>
+<congress>118th Congress</congress>
+<vacancy>
+<nominee>Rikelman,Julie</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>06/20/2023</confirmation_date>
+<circuit>01</circuit>
+<district>CCA</district>
+<incumbent>Lynch,Sandra L.</incumbent>
+<vacancy_dt>12/31/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Guzman,Margaret R.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>03/01/2023</confirmation_date>
+<circuit>01</circuit>
+<district>MA</district>
+<incumbent>Hillman,Timothy S.</incumbent>
+<vacancy_dt>07/01/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Joun,Myong J.</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>07/12/2023</confirmation_date>
+<circuit>01</circuit>
+<district>MA</district>
+<incumbent>O'Toole Jr.,George A.</incumbent>
+<vacancy_dt>01/01/2018</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Kobick,Julia E.</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>11/07/2023</confirmation_date>
+<circuit>01</circuit>
+<district>MA</district>
+<incumbent>Young,William G.</incumbent>
+<vacancy_dt>07/01/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Mendez-Miro,Gina R.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/14/2023</confirmation_date>
+<circuit>01</circuit>
+<district>PR</district>
+<incumbent>Cerezo,Carmen Consuelo</incumbent>
+<vacancy_dt>02/28/2021</vacancy_dt>
+<vacancy_reason>Retired</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Kahn,Maria Araujo</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>03/09/2023</confirmation_date>
+<circuit>02</circuit>
+<district>CCA</district>
+<incumbent>Cabranes,Jose A.</incumbent>
+<vacancy_dt>03/09/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Oliver,Vernon D.</nominee>
+<nomination_date>05/04/2023</nomination_date>
+<confirmation_date>09/19/2023</confirmation_date>
+<circuit>02</circuit>
+<district>CT</district>
+<incumbent>Underhill,Stefan R.</incumbent>
+<vacancy_dt>11/01/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Choudhury,Nusrat Jahan</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>06/15/2023</confirmation_date>
+<circuit>02</circuit>
+<district>NYE</district>
+<incumbent>Bianco,Joseph F.</incumbent>
+<vacancy_dt>05/08/2019</vacancy_dt>
+<vacancy_reason>Elevated</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Merchant,Orelia Eleta</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>05/03/2023</confirmation_date>
+<circuit>02</circuit>
+<district>NYE</district>
+<incumbent>Kuntz II,William Francis</incumbent>
+<vacancy_dt>01/01/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Merle,Natasha C.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>06/21/2023</confirmation_date>
+<circuit>02</circuit>
+<district>NYE</district>
+<incumbent> </incumbent>
+<vacancy_dt>02/01/2021</vacancy_dt>
+<vacancy_reason>New Position</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Reyes Jr.,Ramon Ernesto</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>11/08/2023</confirmation_date>
+<circuit>02</circuit>
+<district>NYE</district>
+<incumbent>Matsumoto,Kiyo A.</incumbent>
+<vacancy_dt>07/23/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Clarke,Jessica G. L.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>03/16/2023</confirmation_date>
+<circuit>02</circuit>
+<district>NYS</district>
+<incumbent>McMahon,Colleen</incumbent>
+<vacancy_dt>04/10/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Garnett,Margaret M.</nominee>
+<nomination_date>07/11/2023</nomination_date>
+<confirmation_date>11/28/2023</confirmation_date>
+<circuit>02</circuit>
+<district>NYS</district>
+<incumbent>Briccetti,Vincent L.</incumbent>
+<vacancy_dt>04/21/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Ho,Dale E.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>06/14/2023</confirmation_date>
+<circuit>02</circuit>
+<district>NYS</district>
+<incumbent>Forrest,Katherine B.</incumbent>
+<vacancy_dt>09/11/2018</vacancy_dt>
+<vacancy_reason>Resigned</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Subramanian,Arun</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>03/07/2023</confirmation_date>
+<circuit>02</circuit>
+<district>NYS</district>
+<incumbent>Nathan,Alison J.</incumbent>
+<vacancy_dt>03/23/2022</vacancy_dt>
+<vacancy_reason>Elevated</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Chung,Cindy K.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/13/2023</confirmation_date>
+<circuit>03</circuit>
+<district>CCA</district>
+<incumbent>Smith,D. Brooks</incumbent>
+<vacancy_dt>12/04/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Hall,Jennifer L.</nominee>
+<nomination_date>07/11/2023</nomination_date>
+<confirmation_date>10/17/2023</confirmation_date>
+<circuit>03</circuit>
+<district>DE</district>
+<incumbent>Andrews,Richard G.</incumbent>
+<vacancy_dt>12/31/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Farbiarz,Michael</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>05/02/2023</confirmation_date>
+<circuit>03</circuit>
+<district>NJ</district>
+<incumbent>Hillman,Noel Lawrence</incumbent>
+<vacancy_dt>04/04/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Kirsch,Robert</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>05/02/2023</confirmation_date>
+<circuit>03</circuit>
+<district>NJ</district>
+<incumbent>Wolfson,Freda L.</incumbent>
+<vacancy_dt>02/01/2023</vacancy_dt>
+<vacancy_reason>Retired</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Semper,Jamel</nominee>
+<nomination_date>09/18/2023</nomination_date>
+<confirmation_date>11/29/2023</confirmation_date>
+<circuit>03</circuit>
+<district>NJ</district>
+<incumbent>Vazquez,John Michael</incumbent>
+<vacancy_dt>09/08/2023</vacancy_dt>
+<vacancy_reason>Resigned</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Mehalchick,Karoline</nominee>
+<nomination_date>07/11/2023</nomination_date>
+<confirmation_date>01/31/2024</confirmation_date>
+<circuit>03</circuit>
+<district>PAM</district>
+<incumbent>Jones III,John E.</incumbent>
+<vacancy_dt>08/01/2021</vacancy_dt>
+<vacancy_reason>Retired</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Munley,Julia Kathleen</nominee>
+<nomination_date>05/04/2023</nomination_date>
+<confirmation_date>10/17/2023</confirmation_date>
+<circuit>03</circuit>
+<district>PAM</district>
+<incumbent>Mariani,Robert D.</incumbent>
+<vacancy_dt>09/30/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Benjamin,DeAndrea Gist</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/09/2023</confirmation_date>
+<circuit>04</circuit>
+<district>CCA</district>
+<incumbent>Floyd,Henry F.</incumbent>
+<vacancy_dt>12/31/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Hurson,Brendan Abell</nominee>
+<nomination_date>03/21/2023</nomination_date>
+<confirmation_date>10/04/2023</confirmation_date>
+<circuit>04</circuit>
+<district>MD</district>
+<incumbent>Hazel,George Jarrod</incumbent>
+<vacancy_dt>02/24/2023</vacancy_dt>
+<vacancy_reason>Resigned</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Maddox,Matthew James</nominee>
+<nomination_date>03/21/2023</nomination_date>
+<confirmation_date>10/31/2023</confirmation_date>
+<circuit>04</circuit>
+<district>MD</district>
+<incumbent>Grimm,Paul W.</incumbent>
+<vacancy_dt>12/11/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Austin,Jacquelyn D.</nominee>
+<nomination_date>11/06/2023</nomination_date>
+<confirmation_date>01/24/2024</confirmation_date>
+<circuit>04</circuit>
+<district>SC</district>
+<incumbent>Childs,J. Michelle</incumbent>
+<vacancy_dt>07/19/2022</vacancy_dt>
+<vacancy_reason>Elevated</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Walker,Jamar K.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/28/2023</confirmation_date>
+<circuit>04</circuit>
+<district>VAE</district>
+<incumbent>Jackson,Raymond Alvin</incumbent>
+<vacancy_dt>11/23/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Ballou,Robert Stewart</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>03/07/2023</confirmation_date>
+<circuit>04</circuit>
+<district>VAW</district>
+<incumbent>Jones,James P.</incumbent>
+<vacancy_dt>08/30/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Ramirez,Irma Carrillo</nominee>
+<nomination_date>04/17/2023</nomination_date>
+<confirmation_date>12/04/2023</confirmation_date>
+<circuit>05</circuit>
+<district>CCA</district>
+<incumbent>Costa,Gregg Jeffrey</incumbent>
+<vacancy_dt>08/31/2022</vacancy_dt>
+<vacancy_reason>Resigned</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Long,Brandon S.</nominee>
+<nomination_date>06/08/2023</nomination_date>
+<confirmation_date>12/14/2023</confirmation_date>
+<circuit>05</circuit>
+<district>LAE</district>
+<incumbent>Feldman,Martin L. C.</incumbent>
+<vacancy_dt>01/26/2022</vacancy_dt>
+<vacancy_reason>Deceased</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Papillion,Darrel James</nominee>
+<nomination_date>03/21/2023</nomination_date>
+<confirmation_date>05/30/2023</confirmation_date>
+<circuit>05</circuit>
+<district>LAE</district>
+<incumbent>Barbier,Carl J.</incumbent>
+<vacancy_dt>01/01/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Edwards,Jr.,Jerry</nominee>
+<nomination_date>06/08/2023</nomination_date>
+<confirmation_date>12/14/2023</confirmation_date>
+<circuit>05</circuit>
+<district>LAW</district>
+<incumbent>Juneau,Michael Joseph</incumbent>
+<vacancy_dt>02/01/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Kazen,John A.</nominee>
+<nomination_date>09/11/2023</nomination_date>
+<confirmation_date>01/09/2024</confirmation_date>
+<circuit>05</circuit>
+<district>TXS</district>
+<incumbent>Gilmore,Vanessa D.</incumbent>
+<vacancy_dt>01/02/2022</vacancy_dt>
+<vacancy_reason>Retired</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Bloomekatz,Rachel</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>07/18/2023</confirmation_date>
+<circuit>06</circuit>
+<district>CCA</district>
+<incumbent>Cole Jr.,Ransey Guy</incumbent>
+<vacancy_dt>01/09/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>DeClercq,Susan Kim</nominee>
+<nomination_date>05/04/2023</nomination_date>
+<confirmation_date>10/04/2023</confirmation_date>
+<circuit>06</circuit>
+<district>MIE</district>
+<incumbent>Davis,Stephanie Dawkins</incumbent>
+<vacancy_dt>05/24/2022</vacancy_dt>
+<vacancy_reason>Elevated</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Grey,Jonathan James Canada</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>03/02/2023</confirmation_date>
+<circuit>06</circuit>
+<district>MIE</district>
+<incumbent>Hood,Denise Page</incumbent>
+<vacancy_dt>05/01/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>McMillion,Brandy R.</nominee>
+<nomination_date>07/11/2023</nomination_date>
+<confirmation_date>11/09/2023</confirmation_date>
+<circuit>06</circuit>
+<district>MIE</district>
+<incumbent>Drain,Gershwin A.</incumbent>
+<vacancy_dt>08/13/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Kolar,Joshua Paul</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>01/30/2024</confirmation_date>
+<circuit>07</circuit>
+<district>CCA</district>
+<incumbent>Kanne,Michael S.</incumbent>
+<vacancy_dt>06/16/2022</vacancy_dt>
+<vacancy_reason>Deceased</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Lawless,Colleen R.</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>03/02/2023</confirmation_date>
+<circuit>07</circuit>
+<district>ILC</district>
+<incumbent>Myerscough,Sue E.</incumbent>
+<vacancy_dt>03/02/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Cummings,Jeffrey Irvine</nominee>
+<nomination_date>01/31/2023</nomination_date>
+<confirmation_date>09/12/2023</confirmation_date>
+<circuit>07</circuit>
+<district>ILN</district>
+<incumbent> </incumbent>
+<vacancy_dt>12/05/2022</vacancy_dt>
+<vacancy_reason>New Position</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Daniel,Jeremy C.</nominee>
+<nomination_date>03/21/2023</nomination_date>
+<confirmation_date>05/17/2023</confirmation_date>
+<circuit>07</circuit>
+<district>ILN</district>
+<incumbent>Feinerman,Gary</incumbent>
+<vacancy_dt>12/31/2022</vacancy_dt>
+<vacancy_reason>Resigned</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Hunt,LaShonda A.</nominee>
+<nomination_date>01/31/2023</nomination_date>
+<confirmation_date>05/04/2023</confirmation_date>
+<circuit>07</circuit>
+<district>ILN</district>
+<incumbent>Norgle Sr.,Charles R.</incumbent>
+<vacancy_dt>10/04/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Jenkins,Lindsay C.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/14/2023</confirmation_date>
+<circuit>07</circuit>
+<district>ILN</district>
+<incumbent>Lee,John Z.</incumbent>
+<vacancy_dt>09/07/2022</vacancy_dt>
+<vacancy_reason>Elevated</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Brisco,Cristal C.</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>01/24/2024</confirmation_date>
+<circuit>07</circuit>
+<district>INN</district>
+<incumbent>Springmann,Theresa Lazar</incumbent>
+<vacancy_dt>01/23/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Lund,Gretchen S.</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>01/25/2024</confirmation_date>
+<circuit>07</circuit>
+<district>INN</district>
+<incumbent>DeGuilio,Jon E.</incumbent>
+<vacancy_dt>07/17/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Brookman,Matthew P.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>03/29/2023</confirmation_date>
+<circuit>07</circuit>
+<district>INS</district>
+<incumbent>Young,Richard L.</incumbent>
+<vacancy_dt>03/29/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Bryan,Jeffrey M.</nominee>
+<nomination_date>07/27/2023</nomination_date>
+<confirmation_date>11/28/2023</confirmation_date>
+<circuit>08</circuit>
+<district>MN</district>
+<incumbent>Tunheim,John R.</incumbent>
+<vacancy_dt>11/28/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Almadani,Monica Ramirez</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>11/09/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAC</district>
+<incumbent>Kronstadt,John A.</incumbent>
+<vacancy_dt>04/01/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Hsu,Wesley L.</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>05/03/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAC</district>
+<incumbent>Phillips,Virginia Anne</incumbent>
+<vacancy_dt>02/14/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Kato,Kenly Kiya</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>11/07/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAC</district>
+<incumbent>O'Connell,Beverly Reid</incumbent>
+<vacancy_dt>10/08/2017</vacancy_dt>
+<vacancy_reason>Deceased</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Vera,Hernan D.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>06/13/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAC</district>
+<incumbent>Morrow,Margaret M.</incumbent>
+<vacancy_dt>10/29/2015</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Calabretta,Daniel J.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/16/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAE</district>
+<incumbent>Mendez,John A.</incumbent>
+<vacancy_dt>04/17/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Sherriff,Kirk Edward</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>01/31/2024</confirmation_date>
+<circuit>09</circuit>
+<district>CAE</district>
+<incumbent>de Alba,Ana I.</incumbent>
+<vacancy_dt>11/13/2023</vacancy_dt>
+<vacancy_reason>Elevated</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Lin,Rita F.</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>09/19/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAN</district>
+<incumbent>Chen,Edward M.</incumbent>
+<vacancy_dt>05/17/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Martinez-Olguin,Araceli</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/28/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAN</district>
+<incumbent>White,Jeffrey Steven</incumbent>
+<vacancy_dt>02/01/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Pitts,P. Casey</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>06/14/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAN</district>
+<incumbent>Koh,Lucy H.</incumbent>
+<vacancy_dt>12/13/2021</vacancy_dt>
+<vacancy_reason>Elevated</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Schopler,Andrew G.</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>03/07/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAS</district>
+<incumbent>Burns,Larry A.</incumbent>
+<vacancy_dt>01/22/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Simmons Jr.,James Edward</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>03/09/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CAS</district>
+<incumbent>Battaglia,Anthony J.</incumbent>
+<vacancy_dt>03/31/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Johnstone,Anthony Devos</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>05/01/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CCA</district>
+<incumbent>Thomas,Sidney R.</incumbent>
+<vacancy_dt>05/01/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>de Alba,Ana</nominee>
+<nomination_date>04/17/2023</nomination_date>
+<confirmation_date>11/13/2023</confirmation_date>
+<circuit>09</circuit>
+<district>CCA</district>
+<incumbent>Watford,Paul J.</incumbent>
+<vacancy_dt>05/31/2023</vacancy_dt>
+<vacancy_reason>Resigned</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Park,Shanlyn A.S.</nominee>
+<nomination_date>09/27/2023</nomination_date>
+<confirmation_date>11/30/2023</confirmation_date>
+<circuit>09</circuit>
+<district>HI</district>
+<incumbent>Kobayashi,Leslie E.</incumbent>
+<vacancy_dt>10/09/2024</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Smith,Micah W.J.</nominee>
+<nomination_date>09/11/2023</nomination_date>
+<confirmation_date>11/29/2023</confirmation_date>
+<circuit>09</circuit>
+<district>HI</district>
+<incumbent>Seabright,J. Michael</incumbent>
+<vacancy_dt>01/30/2024</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Brailsford,Amanda K.</nominee>
+<nomination_date>01/31/2023</nomination_date>
+<confirmation_date>05/04/2023</confirmation_date>
+<circuit>09</circuit>
+<district>ID</district>
+<incumbent>Winmill,Barry Lynn</incumbent>
+<vacancy_dt>08/16/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Baggio,Amy M.</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>02/06/2024</confirmation_date>
+<circuit>09</circuit>
+<district>OR</district>
+<incumbent>Hernandez,Marco A.</incumbent>
+<vacancy_dt>08/21/2024</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Nelson,Adrienne C.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/15/2023</confirmation_date>
+<circuit>09</circuit>
+<district>OR</district>
+<incumbent>Mosman,Michael W.</incumbent>
+<vacancy_dt>12/27/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Cartwright,Tiffany M.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>07/12/2023</confirmation_date>
+<circuit>09</circuit>
+<district>WAW</district>
+<incumbent>Settle,Benjamin Hale</incumbent>
+<vacancy_dt>01/01/2020</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Evanson,Kymberly Kathryn</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>07/11/2023</confirmation_date>
+<circuit>09</circuit>
+<district>WAW</district>
+<incumbent>Martinez,Ricardo S.</incumbent>
+<vacancy_dt>09/05/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Whitehead,Jamal N.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/28/2023</confirmation_date>
+<circuit>09</circuit>
+<district>WAW</district>
+<incumbent>Jones,Richard A.</incumbent>
+<vacancy_dt>09/05/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Federico,Richard E.N.</nominee>
+<nomination_date>07/27/2023</nomination_date>
+<confirmation_date>12/11/2023</confirmation_date>
+<circuit>10</circuit>
+<district>CCA</district>
+<incumbent>Briscoe,Mary Beck</incumbent>
+<vacancy_dt>03/15/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Crews,S. Kato</nominee>
+<nomination_date>02/27/2023</nomination_date>
+<confirmation_date>01/10/2024</confirmation_date>
+<circuit>10</circuit>
+<district>CO</district>
+<incumbent>Moore,Raymond P.</incumbent>
+<vacancy_dt>06/20/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Gallagher,Gordon P.</nominee>
+<nomination_date>01/23/2023</nomination_date>
+<confirmation_date>03/22/2023</confirmation_date>
+<circuit>10</circuit>
+<district>CO</district>
+<incumbent>Martinez,William Joseph</incumbent>
+<vacancy_dt>02/10/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Garcia,Matthew L.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/14/2023</confirmation_date>
+<circuit>10</circuit>
+<district>NM</district>
+<incumbent>Herrera,Judith C.</incumbent>
+<vacancy_dt>07/01/2019</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Hill,Sara E.</nominee>
+<nomination_date>10/24/2023</nomination_date>
+<confirmation_date>12/19/2023</confirmation_date>
+<circuit>10</circuit>
+<district>OKN</district>
+<incumbent>Eagan,Claire V.</incumbent>
+<vacancy_dt>10/01/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Russell,John David</nominee>
+<nomination_date>10/24/2023</nomination_date>
+<confirmation_date>12/19/2023</confirmation_date>
+<circuit>10</circuit>
+<district>OKN</district>
+<incumbent>Dowdell,John E.</incumbent>
+<vacancy_dt>06/21/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Abudu,Nancy G.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>05/18/2023</confirmation_date>
+<circuit>11</circuit>
+<district>CCA</district>
+<incumbent>Martin,Beverly B.</incumbent>
+<vacancy_dt>09/30/2021</vacancy_dt>
+<vacancy_reason>Retired</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Sneed,Julie Simone</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>02/28/2024</confirmation_date>
+<circuit>11</circuit>
+<district>FLM</district>
+<incumbent>Dalton Jr.,Roy Bale</incumbent>
+<vacancy_dt>07/09/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Becerra,Jacqueline</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>02/27/2024</confirmation_date>
+<circuit>11</circuit>
+<district>FLS</district>
+<incumbent>Cooke,Marcia G.</incumbent>
+<vacancy_dt>07/15/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Damian,Melissa</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>02/28/2024</confirmation_date>
+<circuit>11</circuit>
+<district>FLS</district>
+<incumbent>Ungaro,Ursula</incumbent>
+<vacancy_dt>05/02/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Leibowitz,David Seymour</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>02/27/2024</confirmation_date>
+<circuit>11</circuit>
+<district>FLS</district>
+<incumbent>Moreno,Federico A.</incumbent>
+<vacancy_dt>07/17/2020</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Hadji,Philip S.</nominee>
+<nomination_date>06/08/2023</nomination_date>
+<confirmation_date>09/21/2023</confirmation_date>
+<circuit>CL</circuit>
+<district> </district>
+<incumbent>Griggsby,Lydia Kay</incumbent>
+<vacancy_dt>06/16/2021</vacancy_dt>
+<vacancy_reason>Elevated</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Silfen,Molly R.</nominee>
+<nomination_date>02/27/2023</nomination_date>
+<confirmation_date>06/08/2023</confirmation_date>
+<circuit>CL</circuit>
+<district> </district>
+<incumbent>Braden,Susan G.</incumbent>
+<vacancy_dt>07/13/2018</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Garcia,Bradley N.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>05/15/2023</confirmation_date>
+<circuit>DC</circuit>
+<district>CCA</district>
+<incumbent>Rogers,Judith W.</incumbent>
+<vacancy_dt>09/01/2022</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>AliKhan,Loren L.</nominee>
+<nomination_date>05/04/2023</nomination_date>
+<confirmation_date>12/05/2023</confirmation_date>
+<circuit>DC</circuit>
+<district>DC</district>
+<incumbent>Jackson,Amy Berman</incumbent>
+<vacancy_dt>05/01/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Reyes,Ana C.</nominee>
+<nomination_date>01/03/2023</nomination_date>
+<confirmation_date>02/15/2023</confirmation_date>
+<circuit>DC</circuit>
+<district>DC</district>
+<incumbent>Kollar-Kotelly,Colleen</incumbent>
+<vacancy_dt>02/15/2023</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Laroski Jr.,Joseph Albert</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>02/05/2024</confirmation_date>
+<circuit>IT</circuit>
+<district> </district>
+<incumbent>Stanceu,Timothy C.</incumbent>
+<vacancy_dt>04/05/2021</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+<vacancy>
+<nominee>Wang,Lisa W.</nominee>
+<nomination_date>01/08/2024</nomination_date>
+<confirmation_date>02/01/2024</confirmation_date>
+<circuit>IT</circuit>
+<district> </district>
+<incumbent>Gordon,Leo M.</incumbent>
+<vacancy_dt>03/22/2019</vacancy_dt>
+<vacancy_reason>Senior</vacancy_reason>
+</vacancy>
+</data>

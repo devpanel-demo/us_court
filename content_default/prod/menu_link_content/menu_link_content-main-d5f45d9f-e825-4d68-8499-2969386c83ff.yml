@@ -1,0 +1,124 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: d5f45d9f-e825-4d68-8499-2969386c83ff
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Issue 2: The Effective and Efficient Management of Public Resources'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/13305'
+      title: null
+      options: {  }
+  weight: 0
+  parent:
+    uuid: 5922548f-0fbe-4310-9485-e3dff8d9e7bb
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Strategic Plan for the Federal Judiciary'
+      enabled: true
+      expanded: false
+      langcode: und
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/13282'
+          title: null
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 8d1f1e81-5f2d-41d5-9044-21f4eccc2f48
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Strategic Planning'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/60004'
+              title: ''
+              options: {  }
+          weight: 3
+          parent:
+            uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: Reports
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/3129'
+                  title: ''
+                  options: {  }
+              weight: 1
+              parent:
+                uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Data & News'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/8'
+                      title: ''
+                      options: {  }
+                  weight: -68
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/16578'
+                      title: 'Federal Court Scams'
+                      options: {  }
+                    -
+                      uri: 'entity:node/3122'
+                      title: "Director's Annual Report"
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu: null
+  field_popular_links: null

@@ -1,0 +1,43 @@
+uuid: 6fb91f20-4509-4ede-8bcc-fd3892458a48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_related_content.field_usc_content_nodes
+    - field.field.paragraph.usc_related_content.field_usc_label
+    - field.field.paragraph.usc_related_content.field_usc_title
+    - paragraphs.paragraphs_type.usc_related_content
+id: paragraph.usc_related_content.default
+targetEntityType: paragraph
+bundle: usc_related_content
+mode: default
+content:
+  field_usc_content_nodes:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

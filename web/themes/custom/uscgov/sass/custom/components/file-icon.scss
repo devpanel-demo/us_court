@@ -1,0 +1,49 @@
+@use "../global/variables" as *;
+
+.usc-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  aspect-ratio: 1;
+  background: currentColor;
+  mask-image: url('#{$icon-path}/font-awesome/solid/file.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+
+  @media (forced-colors: active) {
+    background: linkText;
+  }
+}
+
+.usc-icon--pdf {
+  mask-image: url('#{$icon-path}/font-awesome/solid/file-pdf.svg');
+}
+
+.usc-icon--word {
+  mask-image: url('#{$icon-path}/font-awesome/solid/file-word.svg');
+}
+
+.usc-icon--powerpoint {
+  mask-image: url('#{$icon-path}/font-awesome/solid/file-powerpoint.svg');
+}
+
+.usc-icon--excel {
+  mask-image: url('#{$icon-path}/font-awesome/solid/file-excel.svg');
+}
+
+.usc-icon--archive {
+  mask-image: url('#{$icon-path}/font-awesome/solid/file-zipper.svg');
+}
+
+.usc-icon--image {
+  mask-image: url('#{$icon-path}/font-awesome/solid/file-image.svg');
+}
+
+.usc-icon--audio {
+  mask-image: url('#{$icon-path}/font-awesome/solid/file-audio.svg');
+}
+
+.usc-icon--text {
+  mask-image: url('#{$icon-path}/font-awesome/solid/file-lines.svg');
+}

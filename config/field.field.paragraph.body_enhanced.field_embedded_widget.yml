@@ -1,0 +1,102 @@
+uuid: c313aa8f-164e-472e-809c-f982ccc1023d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_embedded_widget
+    - paragraphs.paragraphs_type.body_enhanced
+    - paragraphs.paragraphs_type.tableau_visualization
+    - paragraphs.paragraphs_type.usc_highcharts
+    - paragraphs.paragraphs_type.usc_map
+    - paragraphs.paragraphs_type.usc_video
+  module:
+    - entity_reference_revisions
+id: paragraph.body_enhanced.field_embedded_widget
+field_name: field_embedded_widget
+entity_type: paragraph
+bundle: body_enhanced
+label: 'Embedded Widget'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: usc_paragraph
+  handler_settings:
+    view:
+      view_name: usc_paragraph_library
+      display_name: entity_reference_1
+      arguments:
+        - usc_highcharts+usc_map+usc_video+tableau_visualization
+    negate: '0'
+    target_bundles:
+      usc_highcharts: usc_highcharts
+      tableau_visualization: tableau_visualization
+      usc_map: usc_map
+      usc_video: usc_video
+    target_bundles_drag_drop:
+      usc_highcharts:
+        enabled: '1'
+        weight: '22'
+      additional_info:
+        weight: '23'
+        enabled: 0
+      body_enhanced:
+        weight: '24'
+        enabled: 0
+      icon_link:
+        weight: '27'
+        enabled: 0
+      job_vacancy:
+        weight: '28'
+        enabled: 0
+      judicial_vacancy:
+        weight: '29'
+        enabled: 0
+      milestone_activities:
+        weight: '30'
+        enabled: 0
+      piksel_programs:
+        weight: '31'
+        enabled: 0
+      tableau_visualization:
+        enabled: '1'
+        weight: '31'
+      referenced_nodes:
+        weight: '32'
+        enabled: 0
+      social_media_item:
+        weight: '33'
+        enabled: 0
+      usc_govdelivery:
+        weight: '34'
+        enabled: 0
+      usc_graphic_photo:
+        weight: '35'
+        enabled: 0
+      usc_notification:
+        weight: '36'
+        enabled: 0
+      usc_map:
+        enabled: '1'
+        weight: '37'
+      usc_related_content:
+        weight: '37'
+        enabled: 0
+      usc_related_files:
+        weight: '38'
+        enabled: 0
+      usc_related_links:
+        weight: '39'
+        enabled: 0
+      usc_related_news:
+        weight: '40'
+        enabled: 0
+      usc_table_of_contents:
+        weight: '41'
+        enabled: 0
+      usc_video:
+        enabled: '1'
+        weight: '42'
+field_type: entity_reference_revisions

@@ -1,0 +1,13 @@
+diff --git a/src/Plugin/migrate/source/d7/FieldCollectionItemRevision.php b/src/Plugin/migrate/source/d7/FieldCollectionItemRevision.php
+index bbc2188..2d41069 100644
+--- a/src/Plugin/migrate/source/d7/FieldCollectionItemRevision.php
++++ b/src/Plugin/migrate/source/d7/FieldCollectionItemRevision.php
+@@ -19,7 +19,7 @@ class FieldCollectionItemRevision extends FieldCollectionItem {
+   /**
+    * Join string for getting all except the current revisions.
+    */
+-  const JOIN = "f.item_id = fr.item_id AND f.revision_id <> fr.revision_id";
++  const JOIN = "f.item_id = fr.item_id";
+ 
+   /**
+    * {@inheritdoc}

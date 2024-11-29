@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an example Gutenberg block server-side.
+ *
+ * Available variables:
+ * - block_name: The Gutenberg block name.
+ * - block_content: The content of this block.
+ * - block_attributes: The attributes of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *
+ * @see template_preprocess_gutenberg_block()
+ * @see template_preprocess_gutenberg_block__uswds__alert()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set buttonAttributes = create_attribute() %}
+{% set alertType = block_attributes.alertType is defined ? block_attributes.alertType : 'info' %}
+{% set showIcon = block_attributes.showIcon is defined ? block_attributes.showIcon : true %}
+{% set showSlim = block_attributes.showSlim is defined ? block_attributes.showSlim : false %}
+
+{% embed 'uscgov:usa_alert' with {
+  type: alertType,
+  icon: showIcon,
+  slim: showSlim,
+  status_headings: {
+    (alertType): block_attributes.heading
+  },
+  messages: {
+    0: block_content
+  },
+} only %}
+  {% block body %}
+    {{ body }}
+  {% endblock %}
+{% endembed %}

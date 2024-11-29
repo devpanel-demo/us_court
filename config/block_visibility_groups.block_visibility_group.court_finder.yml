@@ -1,0 +1,17 @@
+uuid: c234d32d-3734-4239-95a4-7855e31d2910
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: court_finder
+label: 'Court Finder'
+logic: and
+conditions:
+  efc007d7-4d93-4286-ab08-430ae848db60:
+    id: request_path
+    negate: false
+    uuid: efc007d7-4d93-4286-ab08-430ae848db60
+    context_mapping: {  }
+    pages: /federal-court-finder/find
+allow_other_conditions: false

@@ -1,0 +1,10 @@
+uuid: 0e51a126-923e-4241-b2fb-8188d26baff5
+langcode: en
+status: true
+dependencies: {  }
+id: usc_notification
+label: Notification
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean usc_notification'
+behavior_plugins: {  }

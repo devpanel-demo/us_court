@@ -1,0 +1,142 @@
+.alert {
+  &.alert-standard {
+    .usa-alert {
+      height: 77px;
+
+      &__body {
+        padding-bottom: 1.1rem;
+        padding-top: 1.1rem;
+      }
+
+      &__dismiss {
+        top: 20px;
+      }
+    }
+  }
+
+  &.alert-slim {
+    .usa-alert {
+      height: 38px;
+
+      &__body {
+        padding-bottom: 0.5rem;
+        padding-top: 0.4rem;
+        padding-left: 60px;
+
+        &:before {
+          width: 18px;
+          height: 18px;
+          mask-size: 18px 18px;
+        }
+      }
+
+      &__dismiss {
+        top: 0;
+      }
+    }
+  }
+
+  &.alert-no-icon {
+    .usa-alert {
+      height: 54px;
+
+      &__body {
+        padding-top: 0.8rem;
+        padding-left: 1rem;
+        padding-bottom: 1.1rem;
+      }
+    }
+  }
+}
+
+[class] .usa-alert__body {
+  margin-left: 0;
+  padding-left: 77px;
+  max-width: none;
+
+  &:before {
+    top: 50%;
+    translate: 0 -50%;
+  }
+}
+
+.usa-alert--no-icon .usa-alert__body {
+  padding-left: 8px;
+}
+
+.usa-alert {
+  position: relative; // Anchor dismiss button.
+  margin-bottom: var(--spacing-component);
+  overflow: hidden;
+
+  [data-sitewide-alert] & {
+    margin-bottom: 4px;
+  }
+
+  &--emergency {
+    border-left: none;
+  }
+}
+
+.usa-alert__dismiss {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  appearance: none;
+  color: inherit;
+  cursor: pointer;
+
+  .usa-alert--emergency & {
+    color: white;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -1px;
+    width: 15px;
+    height: 0;
+    border-top: solid 2px currentColor;
+    rotate: 45deg;
+    content: "";
+  }
+
+  &:after {
+    rotate: -45deg;
+  }
+}
+
+.usa-alert__text {
+  font-size: 16px;
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.usa-alert--emergency a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.usa-alert .usa-alert__heading {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+}

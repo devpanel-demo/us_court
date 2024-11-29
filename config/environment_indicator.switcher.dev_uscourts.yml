@@ -1,0 +1,11 @@
+uuid: 4122062d-f0d1-4641-ac46-24e20d34a5cb
+langcode: en
+status: true
+dependencies: {  }
+machine: dev_uscourts
+description: null
+name: 'Dev USCourts'
+weight: 1
+url: 'http://uscourts-dev.jdc.ao.dcn'
+fg_color: '#ffffff'
+bg_color: '#8c91a0'

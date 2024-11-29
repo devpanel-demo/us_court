@@ -1,0 +1,7 @@
+{% for item in items %}
+  {% embed 'uscgov:intro-text' %}
+    {% block content %}
+      {{ item.content }}
+    {% endblock %}
+  {% endembed %}
+{% endfor %}

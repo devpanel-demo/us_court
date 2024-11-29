@@ -1,0 +1,20 @@
+uuid: 1a0511d7-5896-4de3-903d-5c3ee0038593
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_fc_jma_current_title
+field_name: field_fc_jma_current_title
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: f3d765c4-ebef-41a4-8d51-d5de1834325b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_highcharts_script
+    - filter.format.widget
+    - paragraphs.paragraphs_type.usc_highcharts
+  module:
+    - text
+id: paragraph.usc_highcharts.field_usc_highcharts_script
+field_name: field_usc_highcharts_script
+entity_type: paragraph
+bundle: usc_highcharts
+label: 'Highcharts script'
+description: 'Enter markup between <script>...</script> tag.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - widget
+field_type: text_long

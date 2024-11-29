@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 04b51387-0390-4602-afe0-e9ab0a62346c
+entity_type: media
+bundle: icon
+base_fields:
+  name: music.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/music.svg'
+      url: '/sites/default/files/icons/music.svg'

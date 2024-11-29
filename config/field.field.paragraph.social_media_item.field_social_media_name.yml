@@ -1,0 +1,19 @@
+uuid: 4a5fa5f2-34d8-4542-b687-7373e05661b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_name
+    - paragraphs.paragraphs_type.social_media_item
+id: paragraph.social_media_item.field_social_media_name
+field_name: field_social_media_name
+entity_type: paragraph
+bundle: social_media_item
+label: 'Social media name'
+description: 'Name of the social media network (e.g "Facebook"). This is important for screen reader users.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 0c6dbb7c-9961-4f93-9b3a-d61f38a9b8ee
+entity_type: media
+bundle: icon
+base_fields:
+  name: award-solid.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/award-solid.svg'
+      url: '/sites/default/files/icons/award-solid.svg'

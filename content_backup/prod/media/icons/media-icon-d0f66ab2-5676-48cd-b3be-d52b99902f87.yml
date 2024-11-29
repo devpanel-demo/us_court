@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: d0f66ab2-5676-48cd-b3be-d52b99902f87
+entity_type: media
+bundle: icon
+base_fields:
+  name: window-restore-outline.svg
+  created: '1721137264'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/window-restore-outline.svg'
+      url: '/sites/default/files/icons/window-restore-outline.svg'

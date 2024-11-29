@@ -1,0 +1,59 @@
+uuid: dac0eda2-ee24-4e59-a42a-00a76c5b6abc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: a-Xmfdq-GD32BOuRTsTEeiGSdBePacGDwnuJGJpwxDg
+id: usc_court_finder_district_terms
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: usc_court_finder
+label: 'US Court Finder District terms'
+source:
+  plugin: csv
+  path: modules/custom/usc_court_finder/source_files/districts.csv
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - code
+  fields:
+    -
+      name: code
+    -
+      name: name
+    -
+      name: state_code
+    -
+      name: latitude
+    -
+      name: longitude
+process:
+  field_usc_code: code
+  name: name
+  field_usc_type:
+    plugin: default_value
+    default_value: district
+  parent:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: state_code
+    -
+      plugin: migration_lookup
+      migration:
+        - usc_court_finder_state_terms
+  field_usc_coordinates:
+    plugin: geofield_latlon
+    source:
+      - latitude
+      - longitude
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: usc_court_finder_hierarchy
+migration_dependencies:
+  required:
+    - usc_court_finder_circuit_terms
+    - usc_court_finder_state_terms

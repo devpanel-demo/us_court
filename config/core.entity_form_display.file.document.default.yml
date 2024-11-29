@@ -1,0 +1,40 @@
+uuid: 776f27b7-a936-482e-b28a-72bb2f34df43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.file.document.field_date_updated
+    - field.field.file.document.field_file_description
+    - field.field.file.document.field_file_title
+  module:
+    - datetime
+    - file
+    - text
+id: file.document.default
+targetEntityType: file
+bundle: document
+mode: default
+content:
+  field_date_updated:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_file_description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_file_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

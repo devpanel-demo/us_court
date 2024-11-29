@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: b4c98c7b-4e4b-4170-95eb-4157281ccb4b
+entity_type: media
+bundle: icon
+base_fields:
+  name: chalkboard-user-solid.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/chalkboard-user-solid.svg'
+      url: '/sites/default/files/icons/chalkboard-user-solid.svg'

@@ -1,0 +1,15 @@
+{% embed 'uscgov:search-block' with {
+    search_type,
+    project_id,
+    content,
+  } %}
+
+  {% block above_text %}
+    {{ content.body|add_suggestion('bare') }}
+  {% endblock %}
+
+  {% block below_text %}
+    <p>{{ 'Still can\'t find what you\'re looking for? <a href="/contact-us">Contact us<a>.'|t }}</p>
+  {% endblock %}
+
+{% endembed %}

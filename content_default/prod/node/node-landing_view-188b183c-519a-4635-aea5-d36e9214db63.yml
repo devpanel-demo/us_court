@@ -1,0 +1,140 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 188b183c-519a-4635-aea5-d36e9214db63
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Judicial Milestones'
+  status: true
+  langcode: en
+  created: '1409164819'
+  changed: 1730912480
+  author: jamesdavison@ao.uscourts.gov
+  url: /judicial-milestones
+  revision_log_message: null
+  revision_uid: '9974'
+  menu_link:
+    uuid: 90843bae-d6be-44ba-965b-e20b2a9f4d98
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Judicial Milestones'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/1990'
+          title: ''
+          options: {  }
+      weight: -46
+      parent:
+        uuid: 75153e3b-b740-483d-b391-e261ad2fa3eb
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'About Federal Judges'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/5'
+              title: ''
+              options: {  }
+          weight: -51
+          parent:
+            uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'About Federal Courts'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/4'
+                  title: ''
+                  options: {  }
+              weight: -71
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/12916'
+                  title: 'Court Website Links'
+                  options: {  }
+                -
+                  uri: 'entity:node/2769'
+                  title: 'Authorized Judgeships'
+                  options: {  }
+                -
+                  uri: 'entity:node/4305'
+                  title: 'Supreme Court Landmarks'
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Federal judges work to ensure equal justice under the law.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:drupalblock/views-block-milestones-landing-block-milestones-landing {"blockId":"views_block:milestones_landing-block_milestones_landing"} /-->'
+      summary: "This section milestones in federal judges' careers, including appointments to the bench, elevations to a new judicial position, taking senior status, retiring, and death."
+      format: gutenberg
+  field_landing_page_image:
+    -
+      uuid: 3419407a-327b-4340-9fe8-92cff71dd995
+      entity_type: media
+      base_fields:
+        name: judicial-milestones.jpg
+        created: '1430412886'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: "<p>This table tracks milestones in federal judges' careers, including appointments to the bench, elevations to a new judicial position, taking senior status, retiring, and death.</p>"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1e8cbebb-f972-4a14-86ca-2dc19468810c
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Milestones'
+        weight: 16
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

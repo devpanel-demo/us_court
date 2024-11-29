@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: fd89676e-1436-4583-8887-2ed1bd6e6016
+entity_type: media
+bundle: icon
+base_fields:
+  name: file-alt.svg
+  created: '1721137082'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/file-alt.svg'
+      url: '/sites/default/files/icons/file-alt.svg'

@@ -1,0 +1,40 @@
+uuid: c33a4e80-fc33-411b-94ca-68ace32362be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_map.field_usc_label
+    - field.field.paragraph.usc_map.field_usc_tableau_object_code
+    - field.field.paragraph.usc_map.field_usc_title
+    - paragraphs.paragraphs_type.usc_map
+  module:
+    - sdc_display
+    - usc_core
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.usc_map.default
+targetEntityType: paragraph
+bundle: usc_map
+mode: default
+content:
+  field_usc_tableau_object_code:
+    type: usc_map_script_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_usc_label: true
+  field_usc_title: true
+  search_api_excerpt: true

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: ae94403c-5ab2-4bb3-ab3b-a6dfb6e5cf4e
+entity_type: media
+bundle: icon
+base_fields:
+  name: address-book-solid.svg
+  created: '1721136798'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/address-book-solid.svg'
+      url: '/sites/default/files/icons/address-book-solid.svg'

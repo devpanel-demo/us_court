@@ -1,0 +1,246 @@
+@use "../global/variables" as *;
+@use "../global/mixins" as *;
+@use "sass:selector";
+
+/**
+ * Custom button styles.
+ */
+a.button,
+.button,
+.wp-block-button__link,
+.usa-button[class], // Extra specificity.
+.usc-button[class], // Extra specificity.
+button.ui-widget.button, // Override "jquery_ui" buttons.
+input[type="submit"] {
+  --surface-color: var(--surface-button);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--surface-color);
+  border: solid 1px var(--border-color);
+  color: var(--text-color);
+  @include change-extlink-svg-color();
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 115%;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:where(:not([disabled])):hover {
+    --surface-color: var(--surface-button-dark);
+    text-decoration: underline;
+  }
+
+  &:where(:not([disabled])):active {
+    --surface-color: var(--surface-button-darker);
+    text-decoration: underline;
+  }
+
+  &[disabled] {
+    --surface-color: var(--surface-base-medium);
+    --text-color: var(--text-on-surface-base-medium);
+
+    cursor: not-allowed;
+  }
+
+  &[href^="tel:"] {
+    &:after {
+      content: "";
+      height: 10px;
+      width: 10px;
+      background: currentColor;
+      mask-image: url('#{$icon-path}/font-awesome/solid/phone.svg');
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+    }
+  }
+
+  &:is(.button--outline, .usa-button--outline) {
+    --surface-color: transparent;
+    --text-color: var(--text-link);
+    --border-color: currentColor;
+
+    &:where(:not([disabled])):hover,
+    &:where(:not([disabled])):active {
+      --surface-color: var(--surface-primary-lighter);
+    }
+
+    &:where(:not([disabled])):active {
+      border-width: 3px;
+    }
+
+    &[disabled] {
+      --text-color: var(--color-primitive-neutral-gray-muted-dark);
+    }
+
+    &:active {
+      border-width: 1px;
+    }
+  }
+
+  &.button--ghost {
+    --surface-color: transparent;
+    --text-color: var(--text-link);
+    --border-color: transparent;
+
+    padding-inline: 0;
+    box-shadow: none;
+
+    &:where(:not([disabled])):hover {
+      --text-color: var(--text-on-surface-base-lighter--primary);
+    }
+
+    &:where(:not([disabled])):active {
+      --text-color: var(--color-primitive-theme-primary-darker);
+    }
+
+    &[disabled] {
+      --text-color: var(--color-primitive-neutral-gray-muted-dark);
+
+      background: transparent;
+    }
+  }
+
+  &.button--arrow:after {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    mask-image: url('../../../uswds/img/usa-icons/arrow_forward.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: currentColor;
+  }
+
+  &.button--arrow-back:after {
+    mask-image: url('../../../uswds/img/usa-icons/arrow_back.svg');
+  }
+
+  &.button--small {
+    padding: var(--spacing-xs-2) 12px;
+  }
+
+  // Selectors to exclude from button coloring behaviour (e.g. those that were already handled above).
+  $excluded-selectors-for-button-color: selector.parse((
+    ':disabled',
+    '.button--ghost',
+    '.button--outline, .usa-button--outline',
+  ));
+  // Apply button coloring behaviour.
+  &[class]:where(:not(:is(#{$excluded-selectors-for-button-color}))) {
+    // Set button colors according to palette and variant.
+    --surface-color: var(--button-color-surface);
+    --surface-color-hover: var(--button-color-surface-hover);
+    --surface-color-active: var(--button-color-surface-active);
+    --text-color: var(--button-color-text);
+    --text-color-hover: var(--button-color-text-hover);
+    --text-color-active: var(--button-color-text-active);
+    --border-color: var(--button-color-border);
+    --border-color-active: var(--button-color-border-active);
+
+    border: solid 0.5px var(--border-color);
+    
+    &:focus,
+    &:hover {
+      --surface-color: var(--surface-color-hover);
+      --text-color: var(--text-color-hover);
+    }
+    &:active {
+      --surface-color: var(--surface-color-active);
+      --text-color: var(--text-color-active);
+      --border-color: var(--border-color-active);
+      // Emulate a wider border without affecting button's size.
+      box-shadow: inset 0 0 0 2.5px var(--border-color-active);
+    }
+  }
+
+}
+
+// Gutenberg outline button.
+div.wp-block-button.is-style-outline {
+  .wp-block-button__link {
+    --surface-color: transparent;
+    --text-color: var(--text-link);
+    --border-color: currentColor;
+
+    color: var(--text-color);
+    border: solid 1px currentColor;
+
+    &.has-brand-primary-1-color {
+      --text-color: var(--color-primitive-theme-primary-lighter);
+    }
+    &.has-brand-primary-2-color {
+      --text-color: var(--color-primitive-theme-primary-light);
+    }
+    &.has-brand-primary-3-color {
+      --text-color: var(--color-primitive-theme-primary-primary);
+    }
+    &.has-brand-primary-4-color {
+      --text-color: var(--color-primitive-theme-primary-dark);
+    }
+    &.has-brand-primary-5-color {
+      --text-color: var(--color-primitive-theme-primary-darker);
+    }
+    &.has-brand-primary-6-color {
+      --text-color: var(--color-primitive-theme-primary-darkest);
+    }
+    &.has-brand-gold-1-color {
+      --text-color: var(--color-primitive-theme-secondary-gold-lighter);
+    }
+    &.has-brand-gold-2-color {
+      --text-color: var(--color-primitive-theme-secondary-gold-light);
+    }
+    &.has-brand-gold-3-color {
+      --text-color: var(color-primitive-theme-secondary-gold-primary);
+    }
+    &.has-brand-gold-4-color {
+      --text-color: var(--color-primitive-theme-secondary-gold-dark);
+    }
+    &.has-brand-gold-5-color {
+      --text-color: var(--color-primitive-theme-secondary-gold-darker);
+    }
+    &.has-brand-gold-6-color {
+      --text-color: var(--color-primitive-theme-secondary-gold-darkest);
+    }
+    &.has-brand-red-1-color {
+      --text-color: var(--color-primitive-theme-accent-red-lighter);
+    }
+    &.has-brand-red-2-color {
+      --text-color: var(--color-primitive-theme-accent-red-light);
+    }
+    &.has-brand-red-3-color {
+      --text-color: var(--color-primitive-theme-accent-red-primary);
+    }
+    &.has-brand-red-4-color {
+      --text-color: var(--color-primitive-theme-accent-red-dark);
+    }
+    &.has-brand-red-5-color {
+      --text-color: var(--color-primitive-theme-accent-red-darker);
+    }
+    &.has-brand-green-1-color {
+      --text-color: var(--color-primitive-theme-accent-green-lighter);
+    }
+    &.has-brand-green-2-color {
+      --text-color: var(--color-primitive-theme-accent-green-light);
+    }
+    &.has-brand-green-3-color {
+      --text-color: var(--color-primitive-theme-accent-green-primary);
+    }
+    &.has-brand-green-4-color {
+      --text-color: var(--color-primitive-theme-accent-green-dark);
+    }
+    &.has-brand-green-5-color {
+      --text-color: var(--color-primitive-theme-accent-green-darker);
+    }
+  }
+}
+
+.wp-block-buttons {
+  column-gap: 8px;
+}

@@ -1,0 +1,35 @@
+uuid: cdc07644-730d-43f7-b898-894a5b5e5845
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.vacancies_judicial_archives
+  module:
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - uscgov
+id: uscgov_views_block__vacancies_judicial_archives_current_year
+theme: uscgov
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:vacancies_judicial_archives-current_year'
+settings:
+  id: 'views_block:vacancies_judicial_archives-current_year'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/judges-judgeships/judicial-vacancies/archive-judicial-vacancies\r\n/node/4424"

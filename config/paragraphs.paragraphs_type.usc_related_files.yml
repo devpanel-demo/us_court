@@ -1,0 +1,10 @@
+uuid: 2bbb7718-527b-46c1-9209-8f9a82e87bdf
+langcode: en
+status: true
+dependencies: {  }
+id: usc_related_files
+label: 'Related Downloads'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean related_files'
+behavior_plugins: {  }

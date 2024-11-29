@@ -1,0 +1,21 @@
+// Grid treatment for cards within landing page. This can be seen on
+// `/data-news/reports`.
+.usa-collection.view-mode--featured,
+.usa-collection.view-mode--section_landing {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 24px;
+
+  // Gutenberg editor adds an empty div.
+  > div:not([class]) {
+    display: contents;
+  }
+
+  .usa-card {
+    margin-bottom: 0;
+  }
+
+  @media (width > 750px) {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}

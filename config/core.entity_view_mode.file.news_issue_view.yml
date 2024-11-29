@@ -1,0 +1,11 @@
+uuid: 5a542a51-df46-4a23-8d16-33c2b7a5961a
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.news_issue_view
+label: news_issue_view
+description: ''
+targetEntityType: file
+cache: true

@@ -1,0 +1,124 @@
+uuid: ce704a66-a31f-4af6-a6a5-c45619aabe8e
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_related_content
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - Sidebar
+migration_group: migrate_drupal_7
+label: 'Sidebar (Related Content) to Paragraphs'
+source:
+  plugin: bean
+  type: related_content
+process:
+  id:
+    -
+      plugin: migration_lookup
+      migration: sidebar_related_content
+      no_stub: true
+      source: bid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 0
+  revision_id:
+    -
+      plugin: migration_lookup
+      migration: sidebar_related_content
+      no_stub: true
+      source:
+        - bid
+        - vid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 1
+  langcode:
+    -
+      plugin: default_value
+      default_value: en
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  changed:
+    -
+      plugin: get
+      source: changed
+  revision_created:
+    -
+      plugin: get
+      source: created
+  field_usc_label: label
+  field_usc_title: title
+  field_usc_description:
+    -
+      plugin: get
+      source: field_bean_description
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: ckeditor_link_file_to_linkit
+    -
+      plugin: img_tag_to_embed
+  field_usc_content_nodes:
+    -
+      plugin: get
+      source: field_bean_node
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          -
+            plugin: migration_lookup
+            source: target_id
+            migration:
+              - upgrade_d7_node_complete_basic
+              - upgrade_d7_node_complete_basic_simple
+              - upgrade_d7_node_complete_camera
+              - upgrade_d7_node_complete_data_table
+              - upgrade_d7_node_complete_educational_activity
+              - upgrade_d7_node_complete_faqs
+              - upgrade_d7_node_complete_federal_rules
+              - upgrade_d7_node_complete_fee
+              - upgrade_d7_node_complete_form
+              - upgrade_d7_node_complete_judge
+              - upgrade_d7_node_complete_landing_featured_content
+              - upgrade_d7_node_complete_landing_view
+              - upgrade_d7_node_complete_news
+              - upgrade_d7_node_complete_news_issue
+              - upgrade_d7_node_complete_report
+            no_stub: true
+          -
+            plugin: skip_on_empty
+            method: process
+          -
+            plugin: extract
+            index:
+              - 0
+destination:
+  plugin: 'entity_complete:paragraph'
+  default_bundle: usc_related_content
+  translations: true
+migration_dependencies: {  }

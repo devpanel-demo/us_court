@@ -1,0 +1,9 @@
+{%
+  set classes = [
+    'usa-icon-list',
+    size != 'default' ? 'usa-icon-list--size-' ~ size,
+  ]
+%}
+<ul {{ attributes.addClass(classes) }}>
+  {{ list_items }}
+</ul>

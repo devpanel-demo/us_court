@@ -1,0 +1,28 @@
+uscgov.hero_full.small600:
+  label: 'Small (600)'
+  mediaQuery: '(max-width: 600px)'
+  weight: 3
+  multipliers:
+    - 1x
+  group: uscgov.hero_full
+uscgov.hero_full.medium1000:
+  label: 'Medium (1000)'
+  mediaQuery: '(max-width: 1000px)'
+  weight: 2
+  multipliers:
+    - 1x
+  group: uscgov.hero_full
+uscgov.hero_full.medium1200:
+  label: 'Medium (1200)'
+  mediaQuery: '(max-width: 1200px)'
+  weight: 1
+  multipliers:
+    - 1x
+  group: uscgov.hero_full
+uscgov.hero_full.large1600:
+  label: 'Large (1600)'
+  mediaQuery: '(max-width: 1600px)'
+  weight: 0
+  multipliers:
+    - 1x
+  group: uscgov.hero_full

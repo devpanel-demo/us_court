@@ -1,0 +1,7 @@
+piksel.settings:
+  path: '/admin/config/piksel/settings'
+  defaults:
+    _form: '\Drupal\piksel\Form\PikselSettingsForm'
+    _title: 'Piksel settings'
+  requirements:
+    _permission: 'administer site configuration'

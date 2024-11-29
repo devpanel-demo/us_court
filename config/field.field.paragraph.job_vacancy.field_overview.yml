@@ -1,0 +1,24 @@
+uuid: 5deb9fa6-efee-4cf3-8699-c88e0784fee2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overview
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - text
+id: paragraph.job_vacancy.field_overview
+field_name: field_overview
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Overview of the Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

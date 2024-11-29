@@ -1,0 +1,23 @@
+uuid: 62888e3a-1d1c-493a-b8bc-9f47b105ce7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_open_until_filled
+    - paragraphs.paragraphs_type.job_vacancy
+id: paragraph.job_vacancy.field_open_until_filled
+field_name: field_open_until_filled
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Open Until Filled'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

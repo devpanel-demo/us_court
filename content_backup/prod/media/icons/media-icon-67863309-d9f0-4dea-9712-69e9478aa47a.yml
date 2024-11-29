@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 67863309-d9f0-4dea-9712-69e9478aa47a
+entity_type: media
+bundle: icon
+base_fields:
+  name: download.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/download.svg'
+      url: '/sites/default/files/icons/download.svg'

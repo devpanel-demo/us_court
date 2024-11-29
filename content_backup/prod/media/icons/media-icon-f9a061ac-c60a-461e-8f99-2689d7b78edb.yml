@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: f9a061ac-c60a-461e-8f99-2689d7b78edb
+entity_type: media
+bundle: icon
+base_fields:
+  name: message-solid.svg
+  created: '1721137137'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/message-solid.svg'
+      url: '/sites/default/files/icons/message-solid.svg'

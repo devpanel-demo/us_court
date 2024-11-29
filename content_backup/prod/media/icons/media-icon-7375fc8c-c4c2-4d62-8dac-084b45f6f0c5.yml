@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 7375fc8c-c4c2-4d62-8dac-084b45f6f0c5
+entity_type: media
+bundle: icon
+base_fields:
+  name: birthday-cake.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/birthday-cake.svg'
+      url: '/sites/default/files/icons/birthday-cake.svg'

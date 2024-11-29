@@ -1,0 +1,21 @@
+uuid: 3ffa2790-3201-4e55-b753-3614fda77b57
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_fed_probation_journal
+label: 'Content - Federal Probation Journal'
+type: 'canonical_entities:node'
+pattern: 'federal-probation-journal/[node:field_mydate:date:custom:Y]/[node:field_mydate:date:custom:m]/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      fed_probation_journal: fed_probation_journal
+selection_logic: and
+weight: -6
+relationships: {  }

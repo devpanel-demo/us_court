@@ -1,0 +1,28 @@
+block-edit:
+  version: VERSION
+  js:
+    js/bundle.js: { }
+  css:
+    theme:
+      css/style.css: { }
+      css/edit.css: { }
+  dependencies:
+    - gutenberg/edit-node
+
+block-view:
+  version: VERSION
+  js:
+    js/uswds-table.js: { }
+  css:
+    theme:
+      css/style.css: { }
+  dependencies:
+    - core/drupal
+    - core/once
+    - gutenberg_uswds_table/listjs
+    - sdc/uscgov--usa_table
+
+listjs:
+  version: VERSION
+  js:
+    js/list.min.js: { minified: true }

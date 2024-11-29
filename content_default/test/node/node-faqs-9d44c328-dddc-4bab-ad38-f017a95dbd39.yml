@@ -1,0 +1,33 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 9d44c328-dddc-4bab-ad38-f017a95dbd39
+entity_type: node
+bundle: faqs
+base_fields:
+  title: 'Frequently Asked Questions - emily test'
+  status: true
+  langcode: en
+  created: '1714843346'
+  changed: 1714843346
+  author: jamesdavison@ao.uscourts.gov
+  url: /frequently-asked-questions-emily-test
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Answer your questions about working with the federal courts.&nbsp;</p>'
+      summary: ''
+      format: wysiwyg
+  field_faqs:
+    -
+      question: 'Who appoints federal judges? '
+      answer: '<p>Supreme Court justices, court of appeals judges, and district court judges are nominated by the President and confirmed by the United States Senate, as stated in the Constitution. The names of potential nominees are often recommended by senators or sometimes by members of the House who are of the President''s political party. The Senate Judiciary Committee typically conducts confirmation hearings for each nominee. Article III of the Constitution states that these judicial officers are appointed for a life term. The federal Judiciary, the Judicial Conference of the <a href="www.uscourts.gov">United States, and the</a> Administrative Office of the U.S. Courts play no role in the nomination and confirmation process.</p>'
+      answer_format: wysiwyg
+    -
+      question: 'How are new judgeships created?'
+      answer: '<p>Court of appeals and district court judgeships are created by legislation that must be enacted by Congress. The Judicial Conference (through its Judicial Resources Committee) surveys the judgeship needs of the courts every other year. A threshold for the number of weighted filings per judgeship is the key factor in determining when an additional judgeship will be requested. Other factors may include geography, number of senior judges, and mix of cases. The Judicial Conference presents its <a href="https://www.uscourts.gov/file/361/download">judgeship recommendations</a> to Congress.</p>'
+      answer_format: wysiwyg
+  field_lead_paragraph: null
+  field_metatag: null
+  field_workbench_access: null

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 70ef6d45-385a-47a4-a2d3-8d7d93b43788
+entity_type: media
+bundle: icon
+base_fields:
+  name: graduation-cap-solid.svg
+  created: '1721137124'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/graduation-cap-solid.svg'
+      url: '/sites/default/files/icons/graduation-cap-solid.svg'

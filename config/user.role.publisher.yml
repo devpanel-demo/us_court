@@ -1,0 +1,156 @@
+uuid: 52b831a7-4c4e-4c94-b8c7-44f34706bbe7
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.gutenberg
+    - filter.format.widget
+    - filter.format.wysiwyg
+    - media.type.audio
+    - media.type.banner_image
+    - node.type.landing_view
+    - workflows.workflow.us_courts_workflow
+  module:
+    - book
+    - config_pages
+    - content_moderation
+    - contextual
+    - field_ui
+    - file
+    - filter
+    - gutenberg
+    - help
+    - media
+    - moderated_content_bulk_publish
+    - node
+    - paragraphs
+    - path
+    - pathauto
+    - quick_node_clone
+    - redirect
+    - scheduler
+    - search
+    - search_autocomplete
+    - sitewide_alert
+    - system
+    - taxonomy
+    - toolbar
+    - usc_core
+    - usc_court_finder
+    - webform
+    - workbench_access
+id: publisher
+label: publisher
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access config_pages overview'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access uscourts configurations'
+  - 'access user profiles'
+  - 'add content to books'
+  - 'add sitewide alert entities'
+  - 'administer book outlines'
+  - 'administer media'
+  - 'administer menu'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer nodes'
+  - 'administer paragraph display'
+  - 'administer paragraph fields'
+  - 'administer redirects'
+  - 'administer sitewide alert entities'
+  - 'administer taxonomy'
+  - 'administer uscourts configurations'
+  - 'administer workbench access'
+  - 'assign workbench access'
+  - 'batch update workbench access'
+  - 'bypass node access'
+  - 'clone basic content'
+  - 'clone book content'
+  - 'clone camera content'
+  - 'clone court content'
+  - 'clone data_table content'
+  - 'clone educational_activity content'
+  - 'clone faqs content'
+  - 'clone fed_probation_journal content'
+  - 'clone federal_rules content'
+  - 'clone fee content'
+  - 'clone form content'
+  - 'clone judge content'
+  - 'clone judge_comments content'
+  - 'clone landing_view content'
+  - 'clone news content'
+  - 'clone news_issue content'
+  - 'clone report content'
+  - 'clone webform content'
+  - 'create landing_view content'
+  - 'create media'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any file'
+  - 'delete any media'
+  - 'delete any webform submission'
+  - 'delete media'
+  - 'delete own draft revisions'
+  - 'delete own files'
+  - 'delete sitewide alert entities'
+  - 'edit any audio media'
+  - 'edit any banner_image media'
+  - 'edit any landing_view content'
+  - 'edit global_site_settings config page entity'
+  - 'edit own landing_view content'
+  - 'edit sitewide alert entities'
+  - 'moderated content bulk publish'
+  - 'moderated content bulk unpublish'
+  - 'notify of path changes'
+  - 'revert all revisions'
+  - 'schedule publishing of nodes'
+  - 'search content'
+  - 'update any media'
+  - 'update media'
+  - 'use gutenberg'
+  - 'use search autocomplete'
+  - 'use text format basic_html'
+  - 'use text format gutenberg'
+  - 'use text format widget'
+  - 'use text format wysiwyg'
+  - 'use us_courts_workflow transition draft_draft'
+  - 'use us_courts_workflow transition draft_needs_review'
+  - 'use us_courts_workflow transition needs_review_draft'
+  - 'use us_courts_workflow transition needs_review_ready_publishing'
+  - 'use us_courts_workflow transition published_draft'
+  - 'use us_courts_workflow transition published_needs_review'
+  - 'use us_courts_workflow transition published_ready_publishing'
+  - 'use us_courts_workflow transition ready_publishing_draft'
+  - 'use us_courts_workflow transition ready_publishing_needs_review'
+  - 'use us_courts_workflow transition ready_publishing_published'
+  - 'use us_courts_workflow transition unpublished'
+  - 'use workbench access'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view all sitewide alert revisions'
+  - 'view any unpublished content'
+  - 'view any webform submission'
+  - 'view config_pages entity'
+  - 'view court_finder_content'
+  - 'view global_site_settings config page entity'
+  - 'view landing_view revisions'
+  - 'view latest version'
+  - 'view media'
+  - 'view own unpublished media'
+  - 'view own webform submission'
+  - 'view scheduled content'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view unpublished sitewide alert entities'
+  - 'view workbench access information'

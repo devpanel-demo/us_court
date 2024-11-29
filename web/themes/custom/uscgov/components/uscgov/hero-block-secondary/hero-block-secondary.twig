@@ -1,0 +1,11 @@
+<div class="hero-block-secondary">
+  <h2 class="hero-block-secondary__title">{{ title }}</h2>
+  {% if description %}
+    <p class="hero-block-secondary__description">
+      {{ description }}
+    </p>
+  {% endif %}
+  <div class="hero-block-secondary__cta-wrapper">
+    {% block cta %}{% endblock %}
+  </div>
+</div>

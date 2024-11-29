@@ -1,0 +1,11 @@
+{% set quicklinks_id = 'quicklinks-title'|clean_unique_id %}
+<nav class="quicklinks {{ project_id == 'uscgov' ? 'container--small' : '' }}" aria-labelledby="{{ quicklinks_id }}">
+  <h2 id="{{ quicklinks_id }}" class="quicklinks__title">{{ title }}</h2>
+  <ul class="quicklinks__list">
+    {% for quicklink in quicklinks %}
+      <li class="quicklinks__item">
+        {{ include('uscgov:quicklink-item', { quicklink }, with_context = false) }}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

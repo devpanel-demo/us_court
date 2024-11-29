@@ -1,0 +1,59 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 39e2b42d-c08e-4dc4-95c6-94cc624703c5
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Post-Conviction Supervision'
+  status: true
+  langcode: en
+  created: '1719255187'
+  changed: 1719255209
+  author: jamesdavison@ao.uscourts.gov
+  url: /post-conviction-supervision
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: c2380e9a-6c4a-4d2f-be42-690ad049b5c9
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719255204'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>Following a conviction, probation officers work to protect the community and to assist individuals with making long-term positive changes in their lives, relying on proactive interventions and evidence-based practices.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

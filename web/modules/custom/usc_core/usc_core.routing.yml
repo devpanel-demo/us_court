@@ -1,0 +1,40 @@
+usc.admin:
+  path: '/admin/uscourts'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'US Courts'
+  requirements:
+    _custom_access: '\Drupal\usc_core\Access\MenuAccess::accessUscMenu'
+
+usc_core.old_file_download_redirect:
+  path: '/file/{fid}/download'
+  defaults:
+    _controller: '\Drupal\usc_core\Controller\OldFileRedirectController'
+  requirements:
+    _permission: 'access content'
+
+usc_core.old_file_redirect:
+  path: '/file/{fid}'
+  defaults:
+    _controller: '\Drupal\usc_core\Controller\OldFileRedirectController'
+  requirements:
+    _permission: 'access content'
+
+usc_core.vacancies_year_paths_redirect:
+  path: '/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/{year}'
+  defaults:
+    _controller: '\Drupal\usc_core\Controller\VacanciesPathRedirectController'
+  requirements:
+    _permission: 'access content'
+    year: '\d{4}'
+
+usc_core.vacancies_year_month_paths_redirect:
+  path: '/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/{year}/{month}/{suffix}/{format}'
+  defaults:
+    _controller: '\Drupal\usc_core\Controller\VacanciesPathRedirectController'
+  requirements:
+    _permission: 'access content'
+    year: '\d{4}'
+    month: '\d{2}'
+    suffix: '^(confirmations|emergencies|future|summary|vacancies)$'
+    format: '^(html|pdf)$'

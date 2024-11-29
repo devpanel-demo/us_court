@@ -1,0 +1,15 @@
+uuid: 704a0d54-52c5-493f-bbdf-f513e958385c
+langcode: en
+status: true
+dependencies: {  }
+name: piksel_thumbnail
+label: 'Piksel thumbnail'
+effects:
+  89402aef-2a0f-44e3-9077-cbecc76c7263:
+    uuid: 89402aef-2a0f-44e3-9077-cbecc76c7263
+    id: image_scale
+    weight: 1
+    data:
+      width: 350
+      height: null
+      upscale: false

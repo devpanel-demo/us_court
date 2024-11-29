@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: aa7b0577-003f-4f94-9f16-a0cc40abe2c4
+entity_type: media
+bundle: icon
+base_fields:
+  name: instagram.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/instagram.svg'
+      url: '/sites/default/files/icons/instagram.svg'

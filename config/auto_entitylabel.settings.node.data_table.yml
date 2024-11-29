@@ -1,0 +1,9 @@
+status: 1
+pattern: 'Table [node:field_current_table_number]—[node:field_publication_type] [node:field_report_name] ([node:field_date_updated:date:month_first])'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.data_table

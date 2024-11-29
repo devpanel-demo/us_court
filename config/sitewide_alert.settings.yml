@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: 0y_QHS2RsEHVusPnhiEqDUshLy8-YqDaXtafZJdYjXA
+show_on_admin: 0
+alert_styles: "standard|Standard\r\nslim|Slim\r\nno-icon|No Icon"
+display_order: descending
+refresh_interval: 60
+automatic_refresh: 1
+cache_max_age: 15

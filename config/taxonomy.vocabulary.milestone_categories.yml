@@ -1,0 +1,9 @@
+uuid: 241f00f3-d45d-4710-9086-e51c73c633a3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Milestone Categories'
+vid: milestone_categories
+description: 'Used as category in Judge content type.'
+weight: 0
+new_revision: false

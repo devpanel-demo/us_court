@@ -1,0 +1,166 @@
+uuid: 0e58ae41-44ef-4c83-b73b-cc79a056f14f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.featured_item
+    - field.field.node.news.body
+    - field.field.node.news.field_body_enhanced
+    - field.field.node.news.field_date_updated
+    - field.field.node.news.field_fc_be_audio
+    - field.field.node.news.field_landing_page_image
+    - field.field.node.news.field_lead_gallery
+    - field.field.node.news.field_lead_paragraph
+    - field.field.node.news.field_metatag
+    - field.field.node.news.field_news_issue
+    - field.field.node.news.field_related_topics
+    - field.field.node.news.field_tags
+    - field.field.node.news.field_toc
+    - field.field.node.news.field_usc_additional_content
+    - field.field.node.news.field_usc_govdelivery_form
+    - field.field.node.news.field_usc_notification
+    - field.field.node.news.field_usc_related_news
+    - field.field.node.news.field_usc_table_of_contents
+    - field.field.node.news.field_workbench_access
+    - image.style.wide
+    - node.type.news
+  module:
+    - datetime
+    - media
+    - nomarkup
+    - sdc_display
+    - smart_trim
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'uscgov:featured-item'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: 'Content title'
+          url: 'https://example.com'
+          date: ''
+        slots:
+          image:
+            value: ''
+            format: wysiwyg
+          content:
+            value: ''
+            format: wysiwyg
+      dynamic:
+        props:
+          title_suffix: ''
+          title: title
+          url: url
+          date: field_date_updated
+        slots:
+          image:
+            field_landing_page_image: field_landing_page_image
+          content:
+            body: body
+id: node.news.featured_item
+targetEntityType: node
+bundle: news
+mode: featured_item
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_date_updated:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_first
+    third_party_settings:
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_landing_page_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: wide
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  url:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  field_body_enhanced: true
+  field_fc_be_audio: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_metatag: true
+  field_news_issue: true
+  field_related_topics: true
+  field_tags: true
+  field_toc: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  field_yoast_seo: true
+  links: true
+  search_api_excerpt: true

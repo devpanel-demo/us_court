@@ -1,0 +1,21 @@
+uuid: 6ccf2a6f-0d09-4505-a9fc-f3c038f6b6ff
+langcode: en
+status: true
+dependencies: {  }
+name: gallery_thumb
+label: 'Gallery Thumb (350x350)'
+effects:
+  379b253d-2926-4e5f-a52a-6cdc121077f1:
+    uuid: 379b253d-2926-4e5f-a52a-6cdc121077f1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 350
+      anchor: center-center
+  e27800e2-cba6-4831-a117-fbf3e0eee87c:
+    uuid: e27800e2-cba6-4831-a117-fbf3e0eee87c
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

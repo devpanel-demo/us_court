@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: c0eb5301-5f54-4977-bae6-2c956bc21960
+entity_type: media
+bundle: icon
+base_fields:
+  name: calculator.svg
+  created: '1721136830'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/calculator.svg'
+      url: '/sites/default/files/icons/calculator.svg'

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: bcca8c96-41bc-424b-9c9c-1e6abeef59a6
+entity_type: media
+bundle: icon
+base_fields:
+  name: book-open-reader-solid.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/book-open-reader-solid.svg'
+      url: '/sites/default/files/icons/book-open-reader-solid.svg'

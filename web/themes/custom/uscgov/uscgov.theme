@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\Core\Site\Settings;
+
+// Include shared preprocessors.
+require_once dirname(__FILE__) . '/preprocessors/shared.theme';
+
+// Include the project preprocessors.
+$project_id = Settings::get('project_identifier', 'uscgov');
+require_once dirname(__FILE__) . '/preprocessors/' . $project_id . '.theme';

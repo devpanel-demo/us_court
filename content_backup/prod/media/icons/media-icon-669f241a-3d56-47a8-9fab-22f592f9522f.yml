@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 669f241a-3d56-47a8-9fab-22f592f9522f
+entity_type: media
+bundle: icon
+base_fields:
+  name: rotate-left-solid.svg
+  created: '1721137202'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/rotate-left-solid.svg'
+      url: '/sites/default/files/icons/rotate-left-solid.svg'

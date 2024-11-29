@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: e35d0a7b-ec98-49b9-92ba-8f44254dcd04
+entity_type: media
+bundle: icon
+base_fields:
+  name: headset-solid.svg
+  created: '1721137124'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/headset-solid.svg'
+      url: '/sites/default/files/icons/headset-solid.svg'

@@ -1,0 +1,137 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 0cfd3875-5eea-44f2-8292-df94074dd8a9
+entity_type: node
+bundle: camera
+base_fields:
+  title: 'Default Content - Cameras in Court Program'
+  status: true
+  langcode: en
+  created: '1717608846'
+  changed: 1717608846
+  author: jamesdavison@ao.uscourts.gov
+  url: /default-content-cameras-court-program
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      summary: ''
+      format: wysiwyg
+  field_court_name:
+    -
+      uuid: 2aefea3b-7470-4655-bb2a-74536e7b9846
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'District of Guam'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: court_name
+  field_date_updated:
+    -
+      value: '2024-06-06'
+  field_lead_paragraph:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_procedural_posture:
+    -
+      uuid: 528324c7-30d0-4f57-a3e3-c6a7c746afea
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Case Management Conference'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: procedural_posture
+  field_program: null
+  field_subject_matter:
+    -
+      uuid: b771cd34-fc24-444d-90fb-a95977c6ae79
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Americans with Disabilities Act'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: subject_matter
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary News'
+        field_usc_view_more:
+          -
+            uri: 'internal:/'
+            title: 'Link text'
+            options:
+              href: /
+              data-entity-type: ''
+              data-entity-uuid: ''
+              data-entity-substitution: ''
+  field_usc_table_of_contents:
+    -
+      uuid: 24f0980d-ee31-4770-ae02-1638f106f30c
+      entity_type: paragraph
+      bundle: usc_table_of_contents
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715284729'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_content_nodes:
+          -
+            uuid: 7ec3e002-e5c9-406d-84f4-2970a9ba18f4
+            entity_type: node
+            base_fields: {  }
+            bundle: educational_activity
+          -
+            uuid: a5098ddc-75c2-4a32-a4ca-436a705a4285
+            entity_type: node
+            base_fields: {  }
+            bundle: educational_activity
+          -
+            uuid: deaa9d8c-d66f-49cd-a1e3-3ece2c95e0de
+            entity_type: node
+            base_fields: {  }
+            bundle: educational_activity
+        field_usc_description:
+          -
+            value: '<p>Where does this show up?</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Test label'
+        field_usc_title:
+          -
+            value: 'Tables of Contents'
+  field_workbench_access: null

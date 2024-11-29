@@ -1,0 +1,113 @@
+.view-search-media,
+.view-search-content {
+  .views-exposed-form {
+    margin-bottom: 10px;
+
+    .form--inline {
+      background: none;
+      border: 0;
+      padding: 0;
+    }
+
+    @media (max-width: 600px) {
+      .form-item {
+        width: 100%;
+      }
+
+      .form-actions {
+        margin-top: 10px;
+        width: 100%;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.view-search-content,
+.view-search-media {
+  margin-bottom: 20px;
+
+  .view-header {
+    ul {
+      display: block;
+      border: 0;
+      border-bottom: 1px solid
+        var(--color-primitive-neutral-gray-surface-variant-dark);
+      padding: 0;
+      margin-left: 0;
+      margin-bottom: 1.154em;
+
+      li {
+        display: inline-block;
+        list-style: none;
+        position: relative;
+        bottom: -1px;
+        margin-right: 10px;
+
+        a.active {
+          background-color: var(--color-primitive-neutral-gray-surface-variant-dark);
+          color: var(--color-token-base-theme-base-dark);
+        }
+
+        a {
+          padding: 4px 12px 5px 12px;
+          margin-right: 0;
+          text-decoration: none;
+          background-color: var(--color-primitive-theme-secondary-gray-lighter);
+          border: 1px solid
+            var(--color-primitive-theme-secondary-gray-lighter);
+          display: inline-block;
+          border-radius: 4px 4px 0 0;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    margin-bottom: 40px;
+
+    .views-row {
+      border-bottom: 1px solid
+        var(--color-primitive-neutral-gray-surface-variant-dark);
+      padding: 35px 0;
+
+      &:first-child {
+        border-top: 1px solid
+          var(--color-primitive-neutral-gray-surface-variant-dark);
+      }
+
+      .field--name-title,
+      h2 {
+        font-size: 22px;
+        margin: 0 0 20px;
+
+        a {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            color: var(--color-primitive-theme-primary-primary);
+          }
+        }
+      }
+
+      .node__content {
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-primitive-neutral-base-dark);
+      }
+
+      .spacing-component {
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+  }
+}

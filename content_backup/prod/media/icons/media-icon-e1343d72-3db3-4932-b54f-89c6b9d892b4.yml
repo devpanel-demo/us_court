@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: e1343d72-3db3-4932-b54f-89c6b9d892b4
+entity_type: media
+bundle: icon
+base_fields:
+  name: calendar-alt-solid.svg
+  created: '1721136830'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/calendar-alt-solid.svg'
+      url: '/sites/default/files/icons/calendar-alt-solid.svg'

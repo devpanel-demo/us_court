@@ -1,0 +1,82 @@
+@use "../global/media-queries" as *;
+
+// Resolves an issue where the Drupal toolbar isn't fixed at mobile widths.
+.toolbar-oriented .toolbar-bar {
+  position: fixed;
+}
+
+.field--name-field-fc-be-image {
+  margin-block: 24px;
+
+  @media ($tablet_break) {
+    float: right;
+    width: min(300px, 43%);
+    margin: .5em 0 1em 1em;
+    clear: right;
+  }
+
+  figure {
+    width: min-content;
+    margin-inline: auto;
+
+    @media ($tablet_break) {
+      width: revert;
+      margin-inline: 0;
+    }
+  }
+
+  img {
+    max-width: 90vw;
+
+    @media ($tablet_break) {
+      max-width: 100%;
+    }
+  }
+}
+
+.back-to-top-wrapper {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  transition: opacity 0.2s, visibility 0.2s;
+
+  &.is-hidden:not(:focus-within) {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.back-to-top[class][class] {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-block: var(--spacing-sm-1);
+  margin-left: auto;
+  background-color: var(--surface-body);
+
+  &:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: currentColor;
+    mask-image: url('/themes/custom/uscgov/icons/misc/arrow-up.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
+
+// Video image captions don't have a wrapping element to style. The content
+// editor manually ensures that within the body enhanced field, the video
+// immediately precedes the caption. To style this, we have to add margin-top on
+// the video (if caption is present) and then style the caption.
+.field--name-field-fc-be-video:has(+ .field--name-field-fc-be-video-caption) {
+  margin-top: var(--spacing-component);
+}
+
+.field--name-field-fc-be-video-caption {
+  margin-block: 4px var(--spacing-component);
+  font-size: 14px;
+  font-style: italic;
+}

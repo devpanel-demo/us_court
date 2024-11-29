@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 1b8b33a8-4919-40d9-8067-c5fb4989bec0
+entity_type: media
+bundle: icon
+base_fields:
+  name: qrcode.svg
+  created: '1721137188'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/qrcode.svg'
+      url: '/sites/default/files/icons/qrcode.svg'

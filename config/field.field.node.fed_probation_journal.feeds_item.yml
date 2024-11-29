@@ -1,0 +1,23 @@
+uuid: 941a4968-39fa-412b-801b-257b83994bfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.fed_probation_journal
+  module:
+    - feeds
+id: node.fed_probation_journal.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: fed_probation_journal
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

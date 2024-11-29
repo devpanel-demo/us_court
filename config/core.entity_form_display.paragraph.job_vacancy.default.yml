@@ -1,0 +1,242 @@
+uuid: dd89f944-726e-4774-9904-2b170df6918b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.job_vacancy.field_announcement_number
+    - field.field.paragraph.job_vacancy.field_application_info
+    - field.field.paragraph.job_vacancy.field_city
+    - field.field.paragraph.job_vacancy.field_closing_date
+    - field.field.paragraph.job_vacancy.field_court
+    - field.field.paragraph.job_vacancy.field_duration
+    - field.field.paragraph.job_vacancy.field_employee_benefits
+    - field.field.paragraph.job_vacancy.field_general_experience
+    - field.field.paragraph.job_vacancy.field_grade
+    - field.field.paragraph.job_vacancy.field_job_id
+    - field.field.paragraph.job_vacancy.field_job_title
+    - field.field.paragraph.job_vacancy.field_job_url
+    - field.field.paragraph.job_vacancy.field_miscellaneous
+    - field.field.paragraph.job_vacancy.field_open_until_filled
+    - field.field.paragraph.job_vacancy.field_opening_date
+    - field.field.paragraph.job_vacancy.field_overview
+    - field.field.paragraph.job_vacancy.field_position_description
+    - field.field.paragraph.job_vacancy.field_qualifications
+    - field.field.paragraph.job_vacancy.field_salary_maximum
+    - field.field.paragraph.job_vacancy.field_salary_minimum
+    - field.field.paragraph.job_vacancy.field_specialized_experience
+    - field.field.paragraph.job_vacancy.field_state
+    - field.field.paragraph.job_vacancy.field_website
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - datetime
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_job_details:
+      children:
+        - field_position_description
+        - field_qualifications
+        - field_general_experience
+        - field_specialized_experience
+        - field_employee_benefits
+        - field_miscellaneous
+        - field_application_info
+      label: 'Job Details'
+      region: content
+      parent_name: ''
+      weight: 16
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+id: paragraph.job_vacancy.default
+targetEntityType: paragraph
+bundle: job_vacancy
+mode: default
+content:
+  field_announcement_number:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_application_info:
+    type: text_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_city:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_closing_date:
+    type: datetime_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_court:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_duration:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_employee_benefits:
+    type: text_textarea
+    weight: 19
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_general_experience:
+    type: text_textarea
+    weight: 17
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_grade:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_job_id:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_job_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_job_url:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_miscellaneous:
+    type: text_textarea
+    weight: 20
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_open_until_filled:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_opening_date:
+    type: datetime_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_overview:
+    type: text_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_position_description:
+    type: text_textarea
+    weight: 15
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_qualifications:
+    type: text_textarea
+    weight: 16
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_salary_maximum:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_salary_minimum:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_specialized_experience:
+    type: text_textarea
+    weight: 18
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_state:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_website:
+    type: link_default
+    weight: 14
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

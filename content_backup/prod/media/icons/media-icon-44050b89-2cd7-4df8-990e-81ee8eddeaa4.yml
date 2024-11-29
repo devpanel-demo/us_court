@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 44050b89-2cd7-4df8-990e-81ee8eddeaa4
+entity_type: media
+bundle: icon
+base_fields:
+  name: bullseye-solid.svg
+  created: '1721136830'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/bullseye-solid.svg'
+      url: '/sites/default/files/icons/bullseye-solid.svg'

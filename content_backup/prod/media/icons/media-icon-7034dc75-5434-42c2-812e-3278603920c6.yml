@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 7034dc75-5434-42c2-812e-3278603920c6
+entity_type: media
+bundle: icon
+base_fields:
+  name: microphone-slash.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/microphone-slash.svg'
+      url: '/sites/default/files/icons/microphone-slash.svg'

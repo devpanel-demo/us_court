@@ -1,0 +1,134 @@
+uuid: bc490e8a-5545-4bf5-a344-0f6e6d1541eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.gutenberg
+    - filter.format.widget
+    - filter.format.wysiwyg
+    - media.type.audio
+    - media.type.banner_image
+    - media.type.document
+    - media.type.high_resolution_image
+    - media.type.icon
+    - media.type.image
+    - media.type.piksel_program
+    - media.type.remote_video
+    - node.type.basic
+    - node.type.book
+    - node.type.data_table
+    - node.type.educational_activity
+    - node.type.faqs
+    - node.type.fed_probation_journal
+    - node.type.federal_rules
+    - node.type.fee
+    - node.type.form
+    - node.type.judge
+    - node.type.landing_view
+    - node.type.news
+    - node.type.news_issue
+    - node.type.report
+    - workflows.workflow.us_courts_workflow
+  module:
+    - book
+    - config_pages
+    - content_moderation
+    - filter
+    - gutenberg
+    - help
+    - media
+    - moderated_content_bulk_publish
+    - node
+    - paragraphs
+    - pathauto
+    - quick_node_clone
+    - search
+    - search_autocomplete
+    - system
+    - toolbar
+    - usc_core
+    - usc_court_finder
+    - workbench_access
+id: approver
+label: approver
+weight: -7
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'add content to books'
+  - 'clone landing_view content'
+  - 'create basic content'
+  - 'create book content'
+  - 'create data_table content'
+  - 'create educational_activity content'
+  - 'create faqs content'
+  - 'create federal_rules content'
+  - 'create fee content'
+  - 'create form content'
+  - 'create judge content'
+  - 'create landing_view content'
+  - 'create media'
+  - 'create news content'
+  - 'create news_issue content'
+  - 'create report content'
+  - 'delete media'
+  - 'delete own draft revisions'
+  - 'edit any audio media'
+  - 'edit any banner_image media'
+  - 'edit any basic content'
+  - 'edit any book content'
+  - 'edit any data_table content'
+  - 'edit any document media'
+  - 'edit any educational_activity content'
+  - 'edit any faqs content'
+  - 'edit any fed_probation_journal content'
+  - 'edit any federal_rules content'
+  - 'edit any fee content'
+  - 'edit any form content'
+  - 'edit any high_resolution_image media'
+  - 'edit any icon media'
+  - 'edit any image media'
+  - 'edit any judge content'
+  - 'edit any landing_view content'
+  - 'edit any news content'
+  - 'edit any news_issue content'
+  - 'edit any piksel_program media'
+  - 'edit any remote_video media'
+  - 'edit any report content'
+  - 'edit own landing_view content'
+  - 'moderated content bulk publish'
+  - 'moderated content bulk unpublish'
+  - 'notify of path changes'
+  - 'revert all revisions'
+  - 'search content'
+  - 'update media'
+  - 'use gutenberg'
+  - 'use search autocomplete'
+  - 'use text format basic_html'
+  - 'use text format gutenberg'
+  - 'use text format widget'
+  - 'use text format wysiwyg'
+  - 'use us_courts_workflow transition draft_draft'
+  - 'use us_courts_workflow transition draft_needs_review'
+  - 'use us_courts_workflow transition needs_review_draft'
+  - 'use us_courts_workflow transition needs_review_ready_publishing'
+  - 'use workbench access'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view court_finder_content'
+  - 'view global_site_settings config page entity'
+  - 'view landing_view revisions'
+  - 'view latest version'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view workbench access information'

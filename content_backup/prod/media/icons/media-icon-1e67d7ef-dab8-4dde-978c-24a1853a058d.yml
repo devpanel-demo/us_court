@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 1e67d7ef-dab8-4dde-978c-24a1853a058d
+entity_type: media
+bundle: icon
+base_fields:
+  name: upload.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/upload.svg'
+      url: '/sites/default/files/icons/upload.svg'

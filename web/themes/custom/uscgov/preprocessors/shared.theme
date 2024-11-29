@@ -1,0 +1,466 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in both projects.
+ */
+
+use Drupal\config_pages\Entity\ConfigPages;
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Site\Settings;
+use Drupal\file\FileInterface;
+use Drupal\media\Entity\Media;
+
+/**
+ * Implements hook_preprocess().
+ */
+function uscgov_preprocess(array &$variables) {
+  $variables['project_id'] = Settings::get('project_identifier', 'uscgov');
+  // Site name.
+  $global_site_settings = ConfigPages::config('global_site_settings');
+  if ($global_site_settings && $global_site_settings->hasField('field_site_name')) {
+    // Color palette.
+    $variables['site_name'] = $global_site_settings->get('field_site_name')->value ?? \Drupal::config('system.site')->get('name');
+  }
+}
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function uscgov_preprocess_image_widget(array &$variables) {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_pager().
+ */
+function uscgov_preprocess_pager(array &$variables) {
+  if (!isset($variables['items'])) {
+    return;
+  }
+  $element = $variables['pager']['#element'];
+  /** @var \Drupal\Core\Pager\PagerManagerInterface $pager_manager */
+  $pager_manager = \Drupal::service('pager.manager');
+  $pager = $pager_manager->getPager($element);
+  $variables['last_page'] = $pager->getTotalPages();
+  $variables['items']['first']['visible'] = _is_page_link_visible($variables['current'], $variables['pager']['#quantity'], 1);
+  $variables['items']['last']['visible'] = _is_page_link_visible($variables['current'], $variables['pager']['#quantity'], $variables['last_page']);
+}
+
+/**
+ * Calculates if an page link is visible in the pagination items.
+ *
+ * That is needed in USWDS to know when to show the first and last item.
+ *
+ * @param int $current_page
+ *   The current page.
+ * @param int $total_visible_links
+ *   The total visible items.
+ * @param int $page_to_check
+ *   The page to verify if it is visible.
+ *
+ * @return bool
+ *   TRUE is page is visible, FALSE otherwise.
+ *
+ * @see https://designsystem.digital.gov/components/pagination/#using-the-pagination-component-2
+ */
+function _is_page_link_visible($current_page, $total_visible_links, $page_to_check) {
+  // Calculate the half of totalVisibleLinks (assuming it's an odd number).
+  $half_visible_links = ($total_visible_links - 1) / 2;
+
+  // Calculate the minimum and maximum visible page numbers around the current page.
+  $min_visible_page = $current_page - $half_visible_links;
+  $max_visible_page = $current_page + $half_visible_links;
+
+  // Adjust the range if the totalVisibleLinks is even.
+  if ($total_visible_links % 2 == 0) {
+    $max_visible_page += 1;
+  }
+
+  // Check if the page_to_check falls within the visible range.
+  return $min_visible_page <= $page_to_check && $page_to_check <= $max_visible_page;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function uscgov_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#form_id'] == 'search_block_form') {
+    $suggestions[] = 'form__search_form';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function uscgov_theme_suggestions_views_view_fields_alter(array &$suggestions, array $variables) {
+  if (isset($variables['view'])) {
+    $view_id = $variables['view']->id();
+    $display_id = $variables['view']->current_display;
+    $suggestions[] = 'views_view_fields__' . $view_id . '__' . $display_id;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function uscgov_theme_suggestions_field_alter(&$suggestions, array $variables) {
+  $project_id = Settings::get('project_identifier', 'uscgov');
+  $element = $variables['element'];
+  $suggestions[] = 'field__' . $element['#entity_type'] . '__' . $element['#field_name'];
+  $suggestions[] = 'field__' . $element['#entity_type'] . '__' . $element['#field_name'] . '__' . $element['#bundle'] . '__' . $element['#view_mode'];
+
+  if ($project_id == 'toolbox') {
+    $new_suggestions = [];
+
+    foreach ($suggestions as $suggestion) {
+      $new_suggestion = str_replace('field__', 'field__project_' . $project_id . '__', $suggestion);
+      array_push($new_suggestions, $suggestion);
+      array_push($new_suggestions, $new_suggestion);
+    }
+
+    $suggestions = $new_suggestions;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function uscgov_theme_suggestions_node_alter(&$suggestions, array $variables) {
+  $project_id = Settings::get('project_identifier', 'uscgov');
+  $content_type = $variables['elements']['#node']->getType();
+
+  if ($project_id == 'toolbox') {
+    $new_suggestions = [];
+
+    foreach ($suggestions as $suggestion) {
+      $new_suggestion = str_replace('node__', 'node__project_' . $project_id . '__', $suggestion);
+      array_push($new_suggestions, $suggestion);
+      array_push($new_suggestions, $new_suggestion);
+    }
+
+    $suggestions = $new_suggestions;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-task templates.
+ */
+function uscgov_preprocess_menu_local_task(&$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'tabs__link';
+  $variables['link']['#options']['attributes']['class'][] = 'js-tabs-link';
+
+  // Ensure is-active class is set when the tab is active. The generic active
+  // link handler applies stricter comparison rules than what is necessary for
+  // tabs.
+  if (isset($variables['is_active']) && $variables['is_active'] === TRUE) {
+    $variables['link']['#options']['attributes']['class'][] = 'is-active';
+  }
+
+  if (isset($variables['element']['#level'])) {
+    $variables['level'] = $variables['element']['#level'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for the config pages social media fields.
+ *
+ * This creates a 'social_media' array that's used by the social media
+ * menu component.
+ *
+ * @throws Drupal\Core\File\Exception\InvalidStreamWrapperException
+ */
+function uscgov_preprocess_field__config_pages__field_social_media(&$variables) {
+  foreach ($variables['items'] as &$item) {
+    /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+    $paragraph = $item['content']['#paragraph'];
+    if ($paragraph->get('field_svg_icon')->entity instanceof Media) {
+      $media = $paragraph->get('field_svg_icon')->entity;
+      $source_field = $media->getSource()->getConfiguration()['source_field'];
+      $icon = $paragraph->get('field_svg_icon')->entity->{$source_field}->entity->uri->value;
+    }
+    else {
+      /** @var \Drupal\file\FileInterface $file */
+      $file = $paragraph->get('field_svg_icon')->entity;
+      $icon = $file->get('uri')->value;
+    }
+    $variables['social_media'][] = [
+      'url' => $paragraph->get('field_hyperlink')->uri ?? '',
+      'title' => $paragraph->get('field_social_media_name')->value,
+      'path_to_logo' => \Drupal::service('file_url_generator')->generateString($icon),
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Adds cache dependency for page settings(config page).
+ */
+function uscgov_preprocess_page(&$variables) {
+  $global_site_settings = ConfigPages::config('global_site_settings');
+  if ($global_site_settings) {
+    // Add a cache dependency.
+    CacheableMetadata::createFromObject($global_site_settings)->applyTo($variables);
+  }
+  // Search type.
+  $variables['search_type'] = 'searchapi';
+    // $module_handler = \Drupal::service('module_handler');
+    // $variables['search_type'] = $module_handler->moduleExists('usc_search') ? 'searchgov' : 'searchapi';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uscgov_preprocess_block__uscgov_searchformforpagenotfound(&$variables) {
+  $variables['search_type'] = 'searchapi';
+    // $module_handler = \Drupal::service('module_handler');
+    // $variables['search_type'] = $module_handler->moduleExists('usc_search') ? 'searchgov' : 'searchapi';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uscgov_preprocess_field(&$variables) {
+  $rich_field_types = ['text_with_summary', 'text', 'text_long'];
+  if (in_array($variables['field_type'], $rich_field_types, TRUE)) {
+    $variables['attributes']['class'][] = 'usa-prose';
+    $variables['attributes']['class'][] = 'spacing-component';
+  }
+}
+
+/**
+ * Implements hook_preprocess_form_element().
+ */
+function uscgov_preprocess_form_element(array &$variables) {
+  // Pass the form element type to the label template preprocess.
+  $variables['label']['#attributes']["data-element-type"] = $variables['element']['#type'];
+}
+
+/**
+ * Implements hook_preprocess_form_element_label().
+ */
+function uscgov_preprocess_form_element_label(&$variables) {
+  $element_type = FALSE;
+
+  if (isset($variables['attributes']['data-element-type'])) {
+    $element_type = $variables['attributes']['data-element-type'];
+  }
+
+  if (!empty($variables['required'])) {
+    $variables['attributes']['class'][] = 'usa-input-required';
+  }
+
+  $variables['is_checkbox'] = $element_type == 'checkbox' ? TRUE : FALSE;
+  $variables['is_radio'] = $element_type == 'radio' ? TRUE : FALSE;
+}
+
+/**
+ * Implements hook_preprocess_preprocess_input().
+ */
+function uscgov_preprocess_input(&$variables) {
+  $haystack = $variables['attributes']['class'] ?? [];
+
+  // If 'error' CSS class is present, add the appropriate USWDS CSS class.
+  if (in_array('error', $haystack)) {
+    $variables['attributes']['class'][] = 'usa-input--error';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Adds a page_title variable to the breadcrumb template.
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function uscgov_preprocess_breadcrumb(&$variables) {
+  if ($variables['breadcrumb']) {
+    $request = \Drupal::request();
+    $route_match = \Drupal::routeMatch();
+    $variables['page_title'] = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+    foreach ($variables['breadcrumb'] as $key => $item) {
+      // Unset links with missing text.
+      $text = $item['text'];
+      if (!$text) {
+        unset($variables['breadcrumb'][$key]);
+        continue;
+      }
+      if ($item['url'] && $item['url'] === '/%3Cmenu-position-current%3E') {
+        unset($variables['breadcrumb'][$key]);
+      }
+    }
+
+    if ($route_match->getRouteName() == 'view.vacancies_job.job_detail_page') {
+      $paragraph_id = $route_match->getParameter('arg_0');
+      if ($paragraph_id) {
+        /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+        $paragraph = \Drupal::entityTypeManager()->getStorage('paragraph')->load($paragraph_id);
+        if ($paragraph && $paragraph->hasField('field_job_title')) {
+          $variables['page_title'] = t('Job Details for ') . $paragraph->get('field_job_title')->value;
+        }
+      }
+    }
+    elseif ($route_match->getRouteName() == 'view.federal_probation_journal_author.page_1') {
+      $page_title = $route_match->getParameter('arg_0');
+      if ($page_title) {
+        $variables['page_title'] = $page_title;
+      }
+    }
+
+    $node = $route_match->getParameter('node');
+    if ($node) {
+      if (empty($variables['#cache']['tags'])) {
+        $variables['#cache']['tags'] = $node->getCacheTags();
+      }
+      else {
+        $variables['#cache']['tags'] = array_merge($variables['#cache']['tags'], $node->getCacheTags());
+      }
+    }
+    if (empty($variables['#cache']['contexts'])) {
+      $variables['#cache']['contexts'] = ['url.path'];
+    }
+    else {
+      $variables['#cache']['contexts'] = array_merge($variables['#cache']['contexts'], ['url.path']);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function uscgov_preprocess_block__google_translator(&$variables) {
+  $variables['content']['link']['#value'] = t('Select language');
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function uscgov_page_attachments_alter(array &$attachments) {
+  $global_site_settings = ConfigPages::config('global_site_settings');
+  if ($global_site_settings && $global_site_settings->hasField('field_color_palette')) {
+    // Color palette.
+    $palette = $global_site_settings->get('field_color_palette')->value ?? NULL;
+    if ($palette && $palette != 'gold_red') {
+      $attachments['#attached']['library'][] = 'uscgov/' . $palette;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function uscgov_form_alter(&$form, &$form_state, $form_id) {
+  if (str_contains('views_exposed_form', $form['#form_id'])) {
+    if (isset($form['actions']['reset'])) {
+      $form['actions']['reset']['#attributes']['class'][] = 'button--outline';
+    }
+  }
+
+  if ($form['#form_id'] == 'legal_login') {
+    $legal_accept_label = preg_replace('/<\/?strong>/', '', $form['legal']['legal_accept']['#title']);
+    $form['legal']['legal_accept']['#title'] = $legal_accept_label;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uscgov_preprocess_form(&$variables) {
+  if (!empty($variables['element']['#form_id']) || $variables['element']['#form_id'] == 'user_login_form') {
+    $variables['attributes']['class'][] = 'spacing-component';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uscgov_preprocess_views_view__news_and_announcements(&$variables) {
+  $variables['#attached']['library'][] = 'uscgov/news-and-announcements';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uscgov_preprocess_views_view__news_landing(&$variables) {
+  $variables['#attached']['library'][] = 'uscgov/news-landing';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for file_managed_file.
+ */
+function uscgov_preprocess_file_managed_file(&$variables) {
+  // Produce the same renderable element structure as image widget has.
+  $child_keys = Element::children($variables['element']);
+  foreach ($child_keys as $child_key) {
+    $variables['data'][$child_key] = $variables['element'][$child_key];
+  }
+  _uscgov_preprocess_file_and_image_widget($variables);
+}
+
+/**
+ * Helper pre-process callback for file_managed_file and image_widget.
+ *
+ * @param array $variables
+ *   The renderable array of image and file widgets, with 'element' and 'data'
+ *   keys.
+ */
+function _uscgov_preprocess_file_and_image_widget(array &$variables) {
+  $element = $variables['element'];
+  $main_item_keys = [
+    'upload',
+    'upload_button',
+    'remove_button',
+  ];
+  // Calculate helper values for the template.
+  $upload_is_accessible = !isset($element['upload']['#access']) || $element['upload']['#access'] !== FALSE;
+  $is_multiple = !empty($element['#cardinality']) && $element['#cardinality'] !== 1;
+  $has_value = isset($element['#value']['fids']) && !empty($element['#value']['fids']);
+  // File widget properties.
+  $display_can_be_displayed = !empty($element['#display_field']);
+  // Display is rendered in a separate table cell for multiple value widgets.
+  $display_is_visible = $display_can_be_displayed && !$is_multiple && isset($element['display']['#type']) && $element['display']['#type'] !== 'hidden';
+  $description_can_be_displayed = !empty($element['#description_field']);
+  $description_is_visible = $description_can_be_displayed && isset($element['description']);
+  // Image widget properties.
+  $alt_can_be_displayed = !empty($element['#alt_field']);
+  $alt_is_visible = $alt_can_be_displayed && (!isset($element['alt']['#access']) || $element['alt']['#access'] !== FALSE);
+  $title_can_be_displayed = !empty($element['#title_field']);
+  $title_is_visible = $title_can_be_displayed && (!isset($element['title']['#access']) || $element['title']['#access'] !== FALSE);
+  $variables['multiple'] = $is_multiple;
+  $variables['upload'] = $upload_is_accessible;
+  $variables['has_value'] = $has_value;
+  $variables['has_meta'] = $alt_is_visible || $title_is_visible || $display_is_visible || $description_is_visible;
+  $variables['display'] = $display_is_visible;
+  // Handle the default checkbox display after the file is uploaded.
+  if (array_key_exists('display', $element)) {
+    $variables['data']['display']['#checked'] = $element['display']['#value'];
+  }
+  // Render file upload input and upload button (or file name and remove button,
+  // if the field is not empty) in an emphasized div.
+  foreach ($variables['data'] as $key => $item) {
+    $item_is_filename = isset($item['filename']['#file']) && $item['filename']['#file'] instanceof FileInterface;
+    // Move filename to main items.
+    if ($item_is_filename) {
+      $variables['main_items']['filename'] = $item;
+      unset($variables['data'][$key]);
+      continue;
+    }
+    // Move buttons, upload input and hidden items to main items.
+    if (in_array($key, $main_item_keys)) {
+      $variables['main_items'][$key] = $item;
+      unset($variables['data'][$key]);
+    }
+  }
+}

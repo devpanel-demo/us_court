@@ -1,0 +1,11 @@
+uuid: e6f8c31e-8ffd-4567-b049-a45f10917e1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.section_landing
+label: section_landing
+description: ''
+targetEntityType: paragraph
+cache: true

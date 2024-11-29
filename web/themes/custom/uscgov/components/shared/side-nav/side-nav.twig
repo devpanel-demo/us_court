@@ -1,0 +1,33 @@
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 1) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('side-nav__menu side-nav__menu--level-' ~ menu_level) }}>
+    {% else %}
+      <ul class="side-nav__menu side-nav__menu--level-{{ menu_level }}">
+    {% endif %}
+    {% for item in items %}
+      {%
+        set classes = [
+          'side-nav__menu-item',
+          'side-nav__menu-item--level-' ~ menu_level,
+          item.is_expanded ? 'side-nav__menu-item--expanded',
+          item.is_collapsed ? 'side-nav__menu-item--collapsed',
+          item.in_active_trail ? 'side-nav__menu-item--active-trail',
+          item.below ? 'side-nav__menu-item--children',
+        ]
+      %}
+      <li{{ item.attributes.addClass(classes) }}>
+        {{ link(item.title, item.url, create_attribute({'class': ['side-nav__link', 'side-nav__link--level-' ~ menu_level,]})) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

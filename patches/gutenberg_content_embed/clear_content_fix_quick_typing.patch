@@ -1,0 +1,608 @@
+diff --git a/js/components/drupal-content-embed.es6.js b/js/components/drupal-content-embed.es6.js
+index 1824107..4d35c6a 100644
+--- a/js/components/drupal-content-embed.es6.js
++++ b/js/components/drupal-content-embed.es6.js
+@@ -3,7 +3,7 @@
+   const { element, components, blockEditor } = wp;
+   const { Component, Fragment } = element;
+   const { Placeholder, PanelBody, SelectControl, RangeControl } = components;
+-  const { InspectorControls, BlockIcon } = blockEditor;
++  const { InspectorControls, BlockIcon, BlockControls } = blockEditor;
+   const __ = Drupal.t;
+
+   async function getContent(item, viewMode = 'default') {
+@@ -16,16 +16,13 @@
+         }
+       }
+     );
+-    const content = await response.json();
+-
+-    return content;
++    return await response.json();
+   }
+
+   function processHtml(html) {
+     const node = document.createElement('div');
+     node.innerHTML = html;
+
+-    // Disable form elements.
+     const formElements = node.querySelectorAll(
+       'input, select, button, textarea, checkbox, radio',
+     );
+@@ -35,7 +32,6 @@
+       element.setAttribute('disabled', true);
+     });
+
+-    // Disable links.
+     const linkElements = node.querySelectorAll('a');
+     linkElements.forEach(element => {
+       element.setAttribute('href', 'javascript:void(0)');
+@@ -47,7 +43,6 @@
+   function hasEmptyContent(html) {
+     const node = document.createElement('div');
+     node.innerHTML = html;
+-
+     return node.innerText.trim() ? false : true;
+   }
+
+@@ -61,26 +56,25 @@
+         showSuggestions: false,
+         userInput: ""
+       };
+-      // Loading html if we have the node id.
++
+       const { nodeId, viewMode } = this.props.attributes;
+       if (nodeId !== undefined) {
+         getContent(nodeId, viewMode)
+           .then(content => {
+-            this.setState({
+-              html: content
+-            });
+-          })
++            this.setState({ html: content });
++          });
+       }
+-      // Binding this.
+-      this.onKeyDown = this.onKeyDown.bind(this);
++
++      // Bind methods
+       this.onChange = this.onChange.bind(this);
++      this.onKeyDown = this.onKeyDown.bind(this);
+       this.onClick = this.onClick.bind(this);
++      this.clearContent = this.clearContent.bind(this);
+     }
+
+     componentDidMount() {
+       const { nodeId } = this.props.attributes;
+       if (nodeId) {
+-        // Dispatching event.
+         const event = new CustomEvent('contentEmbedded', { detail: { contentType: this.props.contentType } });
+         document.dispatchEvent(event);
+       }
+@@ -89,30 +83,30 @@
+     onChange(event) {
+       const { contentType } = this.props;
+       const userInput = event.currentTarget.value;
++
++      this.setState({ userInput });
++
+       if (userInput) {
+         fetch('/editor/search-content/' + contentType + '/' + userInput, {
+           method: 'GET',
+           headers: {
+-            'Accept': 'application/json'
+-          }
+-        }).then((response) => {
++            'Accept': 'application/json',
++          },
++        }).then(response => {
+           if (response.ok) {
+             response.json().then(data => {
+               this.setState({
+                 activeSuggestion: 0,
+                 filteredSuggestions: data,
+                 showSuggestions: true,
+-                userInput: userInput
++                userInput: userInput,
+               });
+-            })
+-          }
+-          else {
+-            // Show in console on error.
++            });
++          } else {
+             console.log(response);
+           }
+         });
+-      }
+-      else {
++      } else {
+         this.setState({
+           activeSuggestion: 0,
+           filteredSuggestions: [],
+@@ -135,17 +129,14 @@
+
+         getContent(nid, initialViewMode)
+           .then(content => {
+-            this.setState({
+-              html: content,
+-              userInput: nodeLabel
+-            });
+-            // Dispatching event.
++            this.setState({ html: content, userInput: nodeLabel });
++
+             const event = new CustomEvent('contentEmbedded', { detail: { contentType: this.props.contentType } });
+             document.dispatchEvent(event);
+           })
+           .catch(r => {
+             this.setState({
+-              html: __('An error occured when loading the content.') + r,
++              html: __('An error occurred when loading the content.') + r,
+               userInput: nodeLabel
+             });
+           });
+@@ -158,28 +149,32 @@
+         this.setState({
+           activeSuggestion: 0,
+           showSuggestions: false,
+-          userInput: filteredSuggestions[activeSuggestion]
++          userInput: filteredSuggestions[activeSuggestion].title
+         });
+       } else if (event.keyCode === 38) {
+-        if (activeSuggestion === 0) {
+-          return;
+-        }
++        if (activeSuggestion === 0) return;
+         this.setState({ activeSuggestion: activeSuggestion - 1 });
+-      }
+-      // User pressed the down arrow, increment the index
+-      else if (event.keyCode === 40) {
+-        if (activeSuggestion - 1 === filteredSuggestions.length) {
+-          return;
++      } else if (event.keyCode === 40) {
++        if (activeSuggestion < filteredSuggestions.length - 1) {
++          this.setState({ activeSuggestion: activeSuggestion + 1 });
+         }
+-        this.setState({ activeSuggestion: activeSuggestion + 1 });
+       }
+     }
+
++    clearContent(event) {
++      this.props.setAttributes({
++        nodeId: null,
++        viewMode: null
++      });
++      this.setState({ html: '' });
++    }
++
+     render() {
+       const {
+         onChange,
+         onClick,
+         onKeyDown,
++        clearContent,
+         state: {
+           html,
+           activeSuggestion,
+@@ -188,22 +183,18 @@
+           userInput
+         }
+       } = this;
++
+       const { className, viewModes, attributes, setAttributes, contentTypeLabel, widthControl } = this.props;
+-      // Suggestions List.
++
+       let suggestionsListComponent;
+       if (showSuggestions && userInput) {
+         if (filteredSuggestions.length) {
+           suggestionsListComponent = (
+-            <ul class="suggestions">
++            <ul className="suggestions">
+               {filteredSuggestions.map((suggestion, index) => {
+-                let className;
+-
+-                // Flag the active suggestion with a class
+-                if (index === activeSuggestion) {
+-                  className = "suggestion-active";
+-                }
++                let suggestionClass = index === activeSuggestion ? "suggestion-active" : '';
+                 return (
+-                  <li className={className} key={suggestion.id} nid={suggestion.id} onClick={onClick}>
++                  <li className={suggestionClass} key={suggestion.id} nid={suggestion.id} onClick={onClick}>
+                     {suggestion.title}
+                   </li>
+                 );
+@@ -212,107 +203,107 @@
+           );
+         } else {
+           suggestionsListComponent = (
+-            <div class="no-suggestions">
++            <div className="no-suggestions">
+               <em>No suggestions available.</em>
+             </div>
+           );
+         }
+       }
+-      // View modes options.
+-      let viewModesOptions = []
++
++      let viewModesOptions = [];
+       for (const viewModeId in viewModes) {
+         if (Object.hasOwnProperty.call(viewModes, viewModeId)) {
+           const viewModeLabel = viewModes[viewModeId];
+           viewModesOptions.push({ value: viewModeId, label: viewModeLabel });
+         }
+       }
+-      // Add width to class name.
++
+       let componentClass = className;
+       if (widthControl && widthControl.includes(attributes.viewMode)) {
+         componentClass += ' width-' + attributes.pageWidth;
+       }
+-      // Render.
++
+       return (
+         <Fragment>
+-          { html ?
+-              <Fragment>
+-                <div
+-                  className={componentClass}
+-                  // eslint-disable-next-line react/no-danger
+-                  dangerouslySetInnerHTML={{ __html: processHtml(html) }}
++          {html ?
++            <Fragment>
++              <div
++                className={componentClass}
++                dangerouslySetInnerHTML={{ __html: processHtml(html) }}
++              />
++              {hasEmptyContent(html) && (
++                <Placeholder
++                  label={userInput}
++                  instructions={__('This content is rendering empty content.')}
+                 />
+-                {hasEmptyContent(html) && (
+-                  <Placeholder
+-                    label={ userInput }
+-                    instructions={ __('This content is rendering empty content.') }
+-                  >
+-                  </Placeholder>
+-                )}
+-                <InspectorControls>
+-                    <Fragment>
+-                      <PanelBody title={__('Content Settings')} initialOpen={false}>
+-                        <SelectControl
+-                          label={__('View mode')}
+-                          value={attributes.viewMode}
+-                          options={viewModesOptions}
+-                          onChange={newViewMode => {
+-                            setAttributes({
+-                              viewMode: newViewMode,
+-                              pageWidth: 100
++              )}
++              <InspectorControls>
++                <Fragment>
++                  <PanelBody title={__('Content Settings')} initialOpen={false}>
++                    <SelectControl
++                      label={__('View mode')}
++                      value={attributes.viewMode}
++                      options={viewModesOptions}
++                      onChange={newViewMode => {
++                        setAttributes({ viewMode: newViewMode, pageWidth: 100 });
++                        getContent(attributes.nodeId, newViewMode)
++                          .then(content => {
++                            this.setState({ html: content });
++                          })
++                          .catch(r => {
++                            this.setState({
++                              html: __('An error occurred when loading the content.') + r,
+                             });
+-                            getContent(attributes.nodeId, newViewMode)
+-                              .then(content => {
+-                                this.setState({
+-                                  html: content,
+-                                });
+-                              })
+-                              .catch(r => {
+-                                this.setState({
+-                                  html: __('An error occured when loading the content.') + r,
+-                                });
+-                              });
++                          });
+
+-                            // Dispatching event.
+-                            const event = new CustomEvent('changedViewMode', { detail: { contentType: this.props.contentType, viewMode: newViewMode } });
+-                            document.dispatchEvent(event);
+-                          }}
+-                        />
+-                      </PanelBody>
+-                      { (widthControl && widthControl.includes(attributes.viewMode)) &&
+-                        <PanelBody title={ __('Content Width Percentage') }>
+-                          <RangeControl
+-                            value={ attributes.pageWidth }
+-                            onChange={ ( width ) => setAttributes({
+-                              pageWidth: width
+-                            }) }
+-                            min={ 25 }
+-                            max={ 100 }
+-                            step={ 25 }
+-                            help={ __('Content width percentage relative to the total page width on Desktop/Large devices.') }
+-                          />
+-                        </PanelBody>
+-                      }
+-                    </Fragment>
+-                </InspectorControls>
+-              </Fragment>
++                        const event = new CustomEvent('changedViewMode', { detail: { contentType: this.props.contentType, viewMode: newViewMode } });
++                        document.dispatchEvent(event);
++                      }}
++                    />
++                  </PanelBody>
++                  {widthControl && widthControl.includes(attributes.viewMode) &&
++                    <PanelBody title={__('Content Width Percentage')}>
++                      <RangeControl
++                        value={attributes.pageWidth}
++                        onChange={width => setAttributes({ pageWidth: width })}
++                        min={25}
++                        max={100}
++                        step={25}
++                        help={__('Content width percentage relative to the total page width on Desktop/Large devices.')}
++                      />
++                    </PanelBody>
++                  }
++                </Fragment>
++              </InspectorControls>
++              <BlockControls>
++                <Toolbar
++                  controls={[
++                    {
++                      icon: 'no',
++                      title: __('Clear content'),
++                      onClick: clearContent,
++                    },
++                  ]}
++                />
++              </BlockControls>
++            </Fragment>
+             :
+-              <Fragment>
+-                <Placeholder
+-                  icon={<BlockIcon icon="media-document" />}
+-                  label={__('Content :') + contentTypeLabel}
+-                  instructions={__('Start typing to find the content you want to embed.')}
+-                  className="content-embed-autocomplete"
+-                >
+-                  <input
+-                    type="text"
+-                    onChange={onChange}
+-                    onKeyDown={onKeyDown}
+-                    value={userInput}
+-                    placeholder={__('Search for content...')}
+-                  />
+-                  {suggestionsListComponent}
+-                </Placeholder>
+-              </Fragment>
++            <Fragment>
++              <Placeholder
++                icon={<BlockIcon icon="media-document" />}
++                label={__('Content: ') + contentTypeLabel}
++                instructions={__('Start typing to find the content you want to embed.')}
++                className="content-embed-autocomplete"
++              >
++                <input
++                  type="text"
++                  onChange={onChange}
++                  onKeyDown={onKeyDown}
++                  placeholder={__('Search for content...')}
++                />
++                {suggestionsListComponent}
++              </Placeholder>
++            </Fragment>
+           }
+         </Fragment>
+       );
+diff --git a/js/components/drupal-content-embed.js b/js/components/drupal-content-embed.js
+index f8c5212..5690715 100644
+--- a/js/components/drupal-content-embed.js
++++ b/js/components/drupal-content-embed.js
+@@ -43,7 +43,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+       SelectControl = components.SelectControl,
+       RangeControl = components.RangeControl;
+   var InspectorControls = blockEditor.InspectorControls,
+-      BlockIcon = blockEditor.BlockIcon;
++      BlockIcon = blockEditor.BlockIcon,
++      BlockControls = blockEditor.BlockControls;
+   var __ = Drupal.t;
+
+   function getContent(_x) {
+@@ -54,7 +55,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+     _getContent = _asyncToGenerator(regeneratorRuntime.mark(function _callee(item) {
+       var viewMode,
+           response,
+-          content,
+           _args = arguments;
+       return regeneratorRuntime.wrap(function _callee$(_context) {
+         while (1) {
+@@ -75,10 +75,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+               return response.json();
+
+             case 6:
+-              content = _context.sent;
+-              return _context.abrupt("return", content);
++              return _context.abrupt("return", _context.sent);
+
+-            case 8:
++            case 7:
+             case "end":
+               return _context.stop();
+           }
+@@ -140,9 +139,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+         });
+       }
+
+-      _this.onKeyDown = _this.onKeyDown.bind(_assertThisInitialized(_this));
+       _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
++      _this.onKeyDown = _this.onKeyDown.bind(_assertThisInitialized(_this));
+       _this.onClick = _this.onClick.bind(_assertThisInitialized(_this));
++      _this.clearContent = _this.clearContent.bind(_assertThisInitialized(_this));
+       return _this;
+     }
+
+@@ -167,6 +167,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+
+         var contentType = this.props.contentType;
+         var userInput = event.currentTarget.value;
++        this.setState({
++          userInput: userInput
++        });
+
+         if (userInput) {
+           fetch('/editor/search-content/' + contentType + '/' + userInput, {
+@@ -226,7 +229,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+             document.dispatchEvent(event);
+           }).catch(function (r) {
+             _this3.setState({
+-              html: __('An error occured when loading the content.') + r,
++              html: __('An error occurred when loading the content.') + r,
+               userInput: nodeLabel
+             });
+           });
+@@ -243,26 +246,32 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+           this.setState({
+             activeSuggestion: 0,
+             showSuggestions: false,
+-            userInput: filteredSuggestions[activeSuggestion]
++            userInput: filteredSuggestions[activeSuggestion].title
+           });
+         } else if (event.keyCode === 38) {
+-          if (activeSuggestion === 0) {
+-            return;
+-          }
+-
++          if (activeSuggestion === 0) return;
+           this.setState({
+             activeSuggestion: activeSuggestion - 1
+           });
+         } else if (event.keyCode === 40) {
+-          if (activeSuggestion - 1 === filteredSuggestions.length) {
+-            return;
++          if (activeSuggestion < filteredSuggestions.length - 1) {
++            this.setState({
++              activeSuggestion: activeSuggestion + 1
++            });
+           }
+-
+-          this.setState({
+-            activeSuggestion: activeSuggestion + 1
+-          });
+         }
+       }
++    }, {
++      key: "clearContent",
++      value: function clearContent(event) {
++        this.props.setAttributes({
++          nodeId: null,
++          viewMode: null
++        });
++        this.setState({
++          html: ''
++        });
++      }
+     }, {
+       key: "render",
+       value: function render() {
+@@ -271,6 +280,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+         var onChange = this.onChange,
+             onClick = this.onClick,
+             onKeyDown = this.onKeyDown,
++            clearContent = this.clearContent,
+             _this$state2 = this.state,
+             html = _this$state2.html,
+             activeSuggestion = _this$state2.activeSuggestion,
+@@ -289,16 +299,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+         if (showSuggestions && userInput) {
+           if (filteredSuggestions.length) {
+             suggestionsListComponent = React.createElement("ul", {
+-              class: "suggestions"
++              className: "suggestions"
+             }, filteredSuggestions.map(function (suggestion, index) {
+-              var className;
+-
+-              if (index === activeSuggestion) {
+-                className = "suggestion-active";
+-              }
+-
++              var suggestionClass = index === activeSuggestion ? "suggestion-active" : '';
+               return React.createElement("li", {
+-                className: className,
++                className: suggestionClass,
+                 key: suggestion.id,
+                 nid: suggestion.id,
+                 onClick: onClick
+@@ -306,7 +311,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+             }));
+           } else {
+             suggestionsListComponent = React.createElement("div", {
+-              class: "no-suggestions"
++              className: "no-suggestions"
+             }, React.createElement("em", null, "No suggestions available."));
+           }
+         }
+@@ -355,7 +360,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+               });
+             }).catch(function (r) {
+               _this4.setState({
+-                html: __('An error occured when loading the content.') + r
++                html: __('An error occurred when loading the content.') + r
+               });
+             });
+             var event = new CustomEvent('changedViewMode', {
+@@ -379,18 +384,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
+           max: 100,
+           step: 25,
+           help: __('Content width percentage relative to the total page width on Desktop/Large devices.')
+-        }))))) : React.createElement(Fragment, null, React.createElement(Placeholder, {
++        })))), React.createElement(BlockControls, null, React.createElement(Toolbar, {
++          controls: [{
++            icon: 'no',
++            title: __('Clear content'),
++            onClick: clearContent
++          }]
++        }))) : React.createElement(Fragment, null, React.createElement(Placeholder, {
+           icon: React.createElement(BlockIcon, {
+             icon: "media-document"
+           }),
+-          label: __('Content :') + contentTypeLabel,
++          label: __('Content: ') + contentTypeLabel,
+           instructions: __('Start typing to find the content you want to embed.'),
+           className: "content-embed-autocomplete"
+         }, React.createElement("input", {
+           type: "text",
+           onChange: onChange,
+           onKeyDown: onKeyDown,
+-          value: userInput,
+           placeholder: __('Search for content...')
+         }), suggestionsListComponent)));
+       }
+diff --git a/js/drupal-gutenberg-translations.js b/js/drupal-gutenberg-translations.js
+index 19f1e07..2f684c2 100644
+--- a/js/drupal-gutenberg-translations.js
++++ b/js/drupal-gutenberg-translations.js
+@@ -2,14 +2,15 @@
+ 	File generated by drupal-gutenberg-translations tool.
+ */
+ /*
+-	Drupal.t("An error occured when loading the content.");
++	Drupal.t("An error occurred when loading the content.");
+ 	Drupal.t("This content is rendering empty content.");
+ 	Drupal.t("Content Settings");
+ 	Drupal.t("View mode");
+-	Drupal.t("An error occured when loading the content.");
++	Drupal.t("An error occurred when loading the content.");
+ 	Drupal.t("Content Width Percentage");
+ 	Drupal.t("Content width percentage relative to the total page width on Desktop/Large devices.");
+-	Drupal.t("Content :");
++	Drupal.t("Clear content");
++	Drupal.t("Content: ");
+ 	Drupal.t("Start typing to find the content you want to embed.");
+ 	Drupal.t("Search for content...");
+ */

@@ -1,0 +1,5 @@
+{{ include('uscgov:in-this-section', {
+  title: content.field_usc_title,
+  description: content.field_usc_description,
+  list_items: content.field_usc_content_nodes|add_suggestion('ordered-list')|add_class('in-this-section__list'),
+  }, with_context = false) }}

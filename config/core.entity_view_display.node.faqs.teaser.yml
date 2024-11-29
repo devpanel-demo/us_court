@@ -1,0 +1,89 @@
+uuid: e127ddb4-e6df-4478-a96c-bab59e0d5555
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faqs.body
+    - field.field.node.faqs.field_faqs
+    - field.field.node.faqs.field_lead_paragraph
+    - field.field.node.faqs.field_metatag
+    - field.field.node.faqs.field_workbench_access
+    - node.type.faqs
+  module:
+    - nomarkup
+    - sdc_display
+    - smart_trim
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.faqs.teaser
+targetEntityType: node
+bundle: faqs
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  field_faqs: true
+  field_lead_paragraph: true
+  field_metatag: true
+  field_workbench_access: true
+  search_api_excerpt: true

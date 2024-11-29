@@ -1,0 +1,123 @@
+<?xml version='1.0'?>                                                                                                        
+<data>
+<evac>
+<circuit>05</circuit>
+<district>LA-E</district>
+<vacated_by>Fallon,Eldon E.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>01/01/2024</vacancy_dt>
+<days_pending>91</days_pending>
+<weighted>717</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>05</circuit>
+<district>LA-E</district>
+<vacated_by>Vance,Sarah S.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>01/16/2024</vacancy_dt>
+<days_pending>76</days_pending>
+<weighted>717</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>05</circuit>
+<district>MS-N</district>
+<vacated_by>Mills,Michael P.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>11/01/2021</vacancy_dt>
+<days_pending>882</days_pending>
+<weighted>438</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>05</circuit>
+<district>TX-W</district>
+<vacated_by>Guaderrama,David C.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>05/27/2023</vacancy_dt>
+<days_pending>310</days_pending>
+<weighted>773</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>05</circuit>
+<district>TX-W</district>
+<vacated_by>Yeakel III,Earl L.</vacated_by>
+<reason>Retired</reason>
+<vacancy_dt>05/01/2023</vacancy_dt>
+<days_pending>336</days_pending>
+<weighted>773</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>08</circuit>
+<district>SD</district>
+<vacated_by>Viken,Jeffrey L.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>10/01/2021</vacancy_dt>
+<days_pending>913</days_pending>
+<weighted>447</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>09</circuit>
+<district>CA-C</district>
+<vacated_by>Wu,George H.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>11/03/2023</vacancy_dt>
+<days_pending>150</days_pending>
+<weighted>616</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>09</circuit>
+<district>CA-S</district>
+<vacated_by>Hayes,William Q.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>08/01/2021</vacancy_dt>
+<days_pending>974</days_pending>
+<weighted>454</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>10</circuit>
+<district>UT</district>
+<vacated_by>Nuffer,David O.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>04/02/2022</vacancy_dt>
+<days_pending>730</days_pending>
+<weighted>466</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>11</circuit>
+<district>FL-M</district>
+<vacated_by>Edwards-Honeywell,Charlene</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>12/04/2023</vacancy_dt>
+<days_pending>119</days_pending>
+<weighted>668</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>11</circuit>
+<district>FL-M</district>
+<vacated_by>Davis,Brian J.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>12/30/2023</vacancy_dt>
+<days_pending>93</days_pending>
+<weighted>668</weighted>
+<adjusted>0</adjusted>
+</evac>
+<evac>
+<circuit>11</circuit>
+<district>FL-S</district>
+<vacated_by>Scola Jr.,Robert N.</vacated_by>
+<reason>Senior</reason>
+<vacancy_dt>10/31/2023</vacancy_dt>
+<days_pending>153</days_pending>
+<weighted>1085</weighted>
+<adjusted>0</adjusted>
+</evac>
+</data>

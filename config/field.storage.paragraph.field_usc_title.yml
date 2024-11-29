@@ -1,0 +1,21 @@
+uuid: f69acfbb-43f5-4372-87cb-6acb7a491587
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_usc_title
+field_name: field_usc_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,37 @@
+uuid: 23e46713-4f10-43cf-abab-310d947e2ced
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.full_page_hero_1000
+    - image.style.full_page_hero_1200
+    - image.style.full_page_hero_1600
+    - image.style.full_page_hero_600
+    - image.style.full_page_hero_full
+  theme:
+    - uscgov
+id: hero_full
+label: 'Hero Full'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: full_page_hero_600
+    breakpoint_id: uscgov.hero_full.small600
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: full_page_hero_1000
+    breakpoint_id: uscgov.hero_full.medium1000
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: full_page_hero_1200
+    breakpoint_id: uscgov.hero_full.medium1200
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: full_page_hero_1600
+    breakpoint_id: uscgov.hero_full.large1600
+    multiplier: 1x
+breakpoint_group: uscgov.hero_full
+fallback_image_style: full_page_hero_full

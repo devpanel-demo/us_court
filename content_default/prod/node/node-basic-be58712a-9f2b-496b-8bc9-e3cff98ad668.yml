@@ -1,0 +1,73 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: be58712a-9f2b-496b-8bc9-e3cff98ad668
+entity_type: node
+bundle: basic
+base_fields:
+  title: "Access to Court Proceedings\_"
+  status: true
+  langcode: en
+  created: '1719251667'
+  changed: 1731349820
+  author: jamesdavison@ao.uscourts.gov
+  url: /access-court-proceedings
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<h2>Access for All&nbsp;</h2><p>Most courtroom proceedings are open to the public on a first come, first served basis. A person who wishes to observe a court in session may check their local federal court calendar online or at the courthouse and watch a proceeding in person.&nbsp;</p><p>In a few situations the public may not have full access to court proceedings.&nbsp;</p><ul><li>In a court proceeding with significant public interest, available space may limit the number of observers.</li><li>Security reasons may limit access, such as the protection of a juvenile or a confidential informant.</li></ul><p>Visit a <a href="/node/12916" data-entity-type="node" data-entity-uuid="587c8944-527e-46b0-ae1a-ae3255291fa1" data-entity-substitution="canonical"><u>federal court website</u></a> to find the court’s calendar.&nbsp;</p><h2>Before Visiting a Courthouse&nbsp;&nbsp;</h2><p>Courts set local rules on what items are permitted into the courthouse. This includes personal electronic devices (such as cell phones, laptops, and tablets).</p><p>Consult the court’s rules or administrative/standing orders <a href="/node/12916" data-entity-type="node" data-entity-uuid="587c8944-527e-46b0-ae1a-ae3255291fa1" data-entity-substitution="canonical">on its website</a> or contact the clerk of court’s office for a list of permitted items.</p><p>Members of the public should also be prepared to pass through a metal detector and agree to any additional requested screening by court security officers when entering a federal courthouse.&nbsp;</p><p>Any form of photography, broadcasting, or audio recording in the courtroom during judicial proceedings is prohibited.&nbsp;&nbsp;</p><h2>Court Documents&nbsp;</h2><p>The public may view most court case files via the <a href="https://www.uscourts.gov/court-records/find-case-pacer"><u>Public Access to Court Electronic Records service</u></a>, better known as PACER. <a href="https://pacer.uscourts.gov/register-account"><u>Register for a PACER account</u></a>.&nbsp;</p><p>Case files may also be accessed from the public access terminals in the clerk’s office of the court where the case was filed.</p><p>To protect private information in case files and transcripts, certain information may be redacted from filings before they are submitted to the courts. A judge may also seal certain documents, such as confidential or classified information, and certain documents in criminal cases, like those related to ongoing investigations and juvenile records, from the public case file.</p><p>View the <a href="/node/1988" data-entity-type="node" data-entity-uuid="32b64b2a-5750-4116-8dca-540edcb7dbf4" data-entity-substitution="canonical">privacy policy for electronic case files</a>.</p><h2>Remote Public Access&nbsp;</h2><p>Many federal court proceedings must be seen in person. Judiciary policy permits some <a href="/node/36115" data-entity-type="node" data-entity-uuid="3f5c34af-9def-4ee1-9830-d7254bfcb245" data-entity-substitution="canonical">remote access to court</a> proceedings.&nbsp;&nbsp;</p><h2>Educational Visits&nbsp;</h2><p>Federal courts offer tours and other educational programs for students. <a href="/node/4345" data-entity-type="node" data-entity-uuid="ac2be919-6875-4c62-9a7d-2b75189b45de" data-entity-substitution="canonical"><u>Visiting your local federal court</u></a> is a great way to learn first-hand about the tradition and purpose of the federal judicial process.&nbsp;</p>'
+      summary: "The public may visit a federal court to watch each step of the federal judicial process, with few exceptions.\_ \_"
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 70b84b90-78ac-4309-a6cb-520279880c1b
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719251750'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>The public may visit a federal court to watch each step of the federal judicial process, with few exceptions.&nbsp; &nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: f58101c0-fb1d-4837-8cc6-a990226d28be
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Court Services'
+        weight: 9
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

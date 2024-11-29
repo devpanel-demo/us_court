@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 15ce6572-baab-4f1d-aaf5-81943bb47e92
+entity_type: media
+bundle: icon
+base_fields:
+  name: sticky-note-outline.svg
+  created: '1721137216'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/sticky-note-outline.svg'
+      url: '/sites/default/files/icons/sticky-note-outline.svg'

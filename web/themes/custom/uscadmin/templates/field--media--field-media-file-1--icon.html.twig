@@ -1,0 +1,17 @@
+{{ attach_library('uscadmin/media-library-icon') }}
+
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    {%  set icon_path = '--icon-path: url(\'' ~ item.content|render|trim ~ '\')' %}
+    <div{{ item.attributes.addClass('field__item', 'media-library-icon').setAttribute('style', icon_path) }}></div>
+  {% endfor %}
+</div>

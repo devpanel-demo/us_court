@@ -1,0 +1,9 @@
+{{ include('uscgov:teaser', {
+  attributes,
+  title_suffix,
+  title: label,
+  meta: content.field_date_updated,
+  body: content.body|render|striptags|trim ? content.body : content.field_body_enhanced,
+  image: content.field_lead_gallery,
+  url,
+}, with_context = false) }}

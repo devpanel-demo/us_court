@@ -1,0 +1,19 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 3c9a3dbb-87a9-451b-b0c4-3c6e63f3dd12
+entity_type: menu_link_content
+bundle: footer-bottom
+base_fields:
+  title: 'Privacy & Security Policy'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: footer-bottom
+  description: null
+  link:
+    -
+      uri: 'entity:node/8934'
+      title: ''
+      options: {  }
+  weight: -50
+  parent: ''
+custom_fields: {  }

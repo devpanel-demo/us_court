@@ -1,0 +1,2 @@
+piksel_endpoint: 'https://player.piksel.tech/ws/[ws]/api/[token]/mode/json/apiv/5'
+piksel_player_url: 'https://player.piksel.tech/v/[source_id]?de-responsive=true'

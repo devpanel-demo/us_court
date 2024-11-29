@@ -1,0 +1,17 @@
+# Court Finder entities
+administer usc_court_finder:
+  title: 'Administer Court Finder entities'
+  description: 'Allow to access the administration form to configure Court Finder entities.'
+  restrict access: true
+
+create court_finder_content:
+  title: 'Create new Court Finder entity of any type'
+
+delete court_finder_content:
+  title: 'Delete any Court Finder entity of any type'
+
+edit court_finder_content:
+  title: 'Edit any Court Finder entity of any type'
+
+view court_finder_content:
+  title: 'View Court Finder entities'

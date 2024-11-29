@@ -1,0 +1,35 @@
+uuid: 70d91ed9-a6f2-4d98-a115-1ce7affad5fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - term_condition
+id: federal_rules_archived_rules_comments
+label: 'Federal Rules Archived Rules Comments'
+menu_name: main
+parent: 'menu_link_content:cf9b0530-511d-4fce-80e5-f8665b75999c'
+menu_link: 'menu_position_link:federal_rules_archived_rules_comments'
+enabled: true
+weight: -1
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  term:
+    id: term
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    term_uuids:
+      - b612c2da-c9d8-4de2-9124-ff490e5b3917
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      federal_rules: federal_rules

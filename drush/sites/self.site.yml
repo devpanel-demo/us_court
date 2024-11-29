@@ -1,0 +1,6 @@
+lando-behat:
+  root: /app/web
+  uri: http://appserver:80
+ci-behat:
+  root: /opt/atlassian/pipelines/agent/build/web
+  uri: http://localhost

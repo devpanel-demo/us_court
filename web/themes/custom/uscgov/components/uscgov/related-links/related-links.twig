@@ -1,0 +1,9 @@
+<div{{ attributes.addClass('related-links') }}>
+  <h2 class="related-links__title">{{ title }}</h2>
+  {% if description %}
+    <div class="related-links__description">
+      {{ description }}
+    </div>
+  {% endif %}
+  {{ list_items }}
+</div>

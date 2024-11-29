@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.994" height="28" viewBox="0 0 27.994 28">
+  <g id="floppy-disk-regular" style="isolation: isolate">
+    <path id="floppy-disk-regular-2" data-name="floppy-disk-regular" d="M3,36V56a1,1,0,0,0,1,1H24a1,1,0,0,0,1-1V40.656a1,1,0,0,0-.294-.706l2.119-2.119a4,4,0,0,1,1.169,2.831V56a4,4,0,0,1-4,4H4a4,4,0,0,1-4-4V36a4,4,0,0,1,4-4H19.344a4,4,0,0,1,2.831,1.169l4.656,4.656-2.119,2.119-4.663-4.65-.05-.05V41.5A1.5,1.5,0,0,1,18.5,43H6.5A1.5,1.5,0,0,1,5,41.5V35H4A1,1,0,0,0,3,36Zm5-1v5h9V35Zm2,15a4,4,0,1,1,4,4A4,4,0,0,1,10,50Z" transform="translate(0 -32)"/>
+  </g>
+</svg>

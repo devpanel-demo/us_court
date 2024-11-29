@@ -1,0 +1,12 @@
+uuid: 1b430435-2997-4dd9-8da8-23dcddd3b4f7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GdWWgs88LaetibOiazdnv8PY1g5t6Y_CjWUS8YXuGV8
+id: usc_court_finder
+label: 'US Court Finder data'
+description: 'Migration US Court Finder entities'
+source_type: Mixed
+module: null
+shared_configuration: null

@@ -1,0 +1,17 @@
+uuid: 52d3d294-b29c-45b7-8f2b-8f2e588a6be5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  keywords: '[node:field_tags]'
+  og_title: '[current-page:title]'
+  og_type: '[node:content-type]'
+  og_url: '[current-page:url:absolute]'
+  shortlink: '[current-page:url:unaliased]'
+  title: '[node:title]'

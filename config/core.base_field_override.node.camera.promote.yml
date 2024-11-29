@@ -1,0 +1,22 @@
+uuid: d1a2571b-3747-4bbf-bbe5-daf74bc16fe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.camera
+id: node.camera.promote
+field_name: promote
+entity_type: node
+bundle: camera
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,314 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 79479079-bf76-43a4-97dd-a6614e9c8142
+entity_type: node
+bundle: news
+base_fields:
+  title: 'Test TOC news'
+  status: true
+  langcode: en
+  created: '1715284633'
+  changed: '1715284633'
+  author: jamesdavison@ao.uscourts.gov
+  url: /test-toc-news
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_body_enhanced:
+    -
+      uuid: 5543835b-c46d-4f27-ba1f-66ec3e8bb836
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715284670'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2024-05-09'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_metatag: null
+  field_news_issue: null
+  field_related_topics: null
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: '<p>Subscribe to be notified when the news section is updated.</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary | News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary | News'
+        field_usc_view_more:
+          -
+            uri: 'route:<nolink>'
+            title: null
+            options:
+              attributes: {  }
+  field_usc_table_of_contents:
+    -
+      uuid: 24f0980d-ee31-4770-ae02-1638f106f30c
+      entity_type: paragraph
+      bundle: usc_table_of_contents
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715284729'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_content_nodes:
+          -
+            uuid: 7ec3e002-e5c9-406d-84f4-2970a9ba18f4
+            entity_type: node
+            bundle: educational_activity
+            base_fields:
+              title: 'Facts and Case Summary — Korematsu v. U.S. '
+              status: true
+              langcode: und
+              created: '1493211506'
+              changed: '1493211506'
+              author: user43@example.com
+              url: /educational-resources/educational-activities/facts-and-case-summary-korematsu-v-us
+              revision_log_message: 'Edited by courtney.mcilroy.'
+              revision_uid: '197'
+              moderation_state: published
+            custom_fields:
+              body:
+                -
+                  value: "<h2>\r\n\tBackground\r\n</h2>\r\n\r\n<p>\r\n\tAbout 10 weeks after the U.S. entered World War II, President Franklin D. Roosevelt on February 19, 1942 signed Executive Order 9066. The order authorized the Secretary of War and the armed forces to remove people of Japanese ancestry from what they designated as military areas and surrounding communities in the United States. These areas were legally off limits to Japanese aliens and Japanese-American citizens.\r\n</p>\r\n\r\n<p>\r\n\tThe order set in motion the mass transportation and relocation of more than 120,000 Japanese people to sites the government called detention camps that were set up and occupied in about 14 weeks. Most of the people who were relocated lived on the West Coast and two-thirds were American citizens. In accordance with the order, the military transported them to some 26 sites in seven western states, including remote locations in Washington, Idaho, Utah, and Arizona.\r\n</p>\r\n\r\n<h2>\r\n\tFacts\r\n</h2>\r\n\r\n<p>\r\n\tFred Korematsu, 23, was a Japanese-American citizen who did not comply with the order to leave his home and job, despite the fact that his parents had abandoned their home and their flower-nursery business in preparation for reporting to a camp.&nbsp; Korematsu planned to stay behind.&nbsp; He had plastic surgery on his eyes to alter his appearance; changed his name to Clyde Sarah; and claimed that he was of Spanish and Hawaiian descent.\r\n</p>\r\n\r\n<p>\r\n\tOn May 30, 1942, about six months after the Japanese attack on Pearl Harbor, the FBI arrested Korematsu for failure to report to a relocation center. After his arrest, while waiting in jail, he decided to allow the American Civil Liberties Union to represent him and make his case a test case to challenge the constitutionality of the government’s order. Korematsu was tried in federal court in San Francisco, convicted of violating military orders issued under Executive Order 9066, given five years on probation, and sent to an Assembly Center in San Bruno, CA.\r\n</p>\r\n\r\n<p>\r\n\tKorematsu’s attorneys appealed the trial court’s decision to the U.S. Court of Appeals, which agreed with the trial court that he had violated military orders. Korematsu asked the Supreme Court of the United States to hear his case. On December 18, 1944, a divided Supreme Court ruled, in a 6-3 decision, that the detention was a “military necessity” not based on race.&nbsp;\r\n</p>\r\n\r\n<h2>\r\n\tReopening the Case\r\n</h2>\r\n\r\n<p>\r\n\tIn 1983, a pro bono legal team with new evidence filed a “coram nobis” petition and re-opened the 40-year-old case in a federal district court on the basis of egregious government misconduct in falsifying the record on military necessity. The young lawyers, mostly Japanese Americans, showed that the government’s legal team had intentionally suppressed or destroyed evidence from government intelligence agencies reporting that Japanese Americans posed no military threat to the U.S. The official reports, including those from the FBI under J. Edgar Hoover, were not presented in court. On November 10, 1983, federal judge Marylyn Hall Patel overturned Korematsu’s conviction in the same San Francisco courthouse where he had been convicted as a young man.\r\n</p>\r\n\r\n<p>\r\n\tThe district court ruling cleared Korematsu’s name, but the Supreme Court decision still stood as discredited precedent, yet precedent nonetheless. In 1944, writing for the Supreme Court majority, Justice Hugo Black announced that “all legal restrictions which curtail the civil rights of a single racial group are immediately suspect” and subject to tests of \"the most rigid scrutiny,” not all such restrictions are inherently unconstitutional. “Pressing public necessity,” he wrote, \"may sometimes justify the existence of such restrictions; racial antagonism never can.”\r\n</p>\r\n\r\n<p>\r\n\tIn a strongly worded dissent, Justice Robert Jackson contended: \"Korematsu ... has been convicted of an act not commonly thought a crime,\" he wrote. \"It consists merely of being present in the state whereof he is a citizen, near the place where he was born, and where all his life he has lived.\" The nation's wartime security concerns, he contended, were not wholly adequate to strip Korematsu and the other internees of their constitutionally protected civil rights.\r\n</p>\r\n\r\n<p>\r\n\tAnother dissenting Justice, Frank Murphy, called the government’s mass exclusion order “the legalization of racism” that violated the Equal Protection Clause of the Fourteenth Amendment. He compared the exclusion order to the “abhorrent and despicable treatment of minority groups by the dictatorial tyrannies which this nation is now pledged to destroy. He concluded that the exclusion order violated the Fourteenth Amendment by “fall[ing] into the ugly abyss of racism.”\r\n</p>\r\n\r\n<h2>\r\n\tProcedural History\r\n</h2>\r\n\r\n<h3>\r\n\tLower Court\r\n</h3>\r\n\r\n<p>\r\n\tU.S. District Court, Northern District of California\r\n</p>\r\n\r\n<p>\r\n\tLower court held: Korematsu was convicted of violating an exclusion order by the military.\r\n</p>\r\n\r\n<h3>\r\n\tLower Court\r\n</h3>\r\n\r\n<p>\r\n\tNinth Circuit Court of Appeals\r\n</p>\r\n\r\n<p>\r\n\tLower court held: Upheld the trial court’s decision. Conviction upheld.\r\n</p>\r\n\r\n<p>\r\n\t140 F.2d 289 (9th Cir. 1944)\r\n</p>\r\n\r\n<h3>\r\n\tSupreme Court Ruling\r\n</h3>\r\n\r\n<p>\r\n\tAffirmed the lower courts. Conviction upheld.\r\n</p>\r\n\r\n<ul>\r\n\t<li>\r\n\t\tSupreme Court vote: 6-3\r\n\t</li>\r\n\t<li>\r\n\t\tArgued: October 11-12, 1944\r\n\t</li>\r\n\t<li>\r\n\t\tDecided: December 18, 1944\r\n\t</li>\r\n</ul>\r\n\r\n<p>\r\n\tMajority opinion written by: Justice Black\r\n</p>\r\n\r\n<p>\r\n\tMajority: Conviction affirmed. The Supreme Court ruled that the evacuation order violated by Korematsu was valid, and it was not necessary to address the constitutional racial discrimination issues in this case.\r\n</p>\r\n\r\n<p>\r\n\tConcurring Opinion Written by: Justice Frankfurter\r\n</p>\r\n\r\n<p>\r\n\tConcurrence: The constitutional issues should be addressed, but in evaluating them, it is clear that the “martial necessity arising from the danger of espionage and sabotage” warranted the military’s evacuation order. Conviction affirmed\r\n</p>\r\n\r\n<p>\r\n\tDissenting opinion written by: Justice Jackson\r\n</p>\r\n\r\n<p>\r\n\tIn a strongly worded dissent, Justice Robert Jackson contended: \"Korematsu ... has been convicted of an act not commonly thought a crime. It consists merely of being present in the state whereof he is a citizen, near the place where he was born, and where all his life he has lived.\" The nation's wartime security concerns, he contended, were not adequate to strip Korematsu and the other internees of their constitutionally protected civil rights.\r\n</p>\r\n\r\n<p>\r\n\tJustice Jackson called the exclusion order “the legalization of racism” that violated the Equal Protection Clause of the Fourteenth Amendment. He compared the exclusion order to the “abhorrent and despicable treatment of minority groups by the dictatorial tyrannies which this nation is now pledged to destroy.&nbsp; He concluded that the exclusion order violated the Fourteenth Amendment by “fall[ing] into the ugly abyss of racism.”\r\n</p>\r\n\r\n<h4>\r\n\tIssue\r\n</h4>\r\n\r\n<p>\r\n\tWas the military’s exclusion order justified?\r\n</p>\r\n\r\n<h4>\r\n\tReasoning\r\n</h4>\r\n\r\n<p>\r\n\tThe majority opinion ruled that the court should not address the entirety of the order under which Korematsu was convicted, which included provisions requiring citizens to report to assembly and relocation centers. The majority found it necessary only to rule on the validity of the specific provision under which Korematsu was convicted: the provision requiring him to leave the designated area.\r\n</p>\r\n\r\n<p>\r\n\tBecause the order applied only to people who were Japanese or of Japanese descent, it was subject to the “most rigid scrutiny.” The majority found that although the exclusion of citizens from their homes is generally an impermissible use of government authority, there is an exception where there is “grave [&nbsp; ] imminent danger to the public safety” as long as there is a definition and close relationship between the government’s actions and the prevention against espionage and sabotage. The majority ruled that there was sufficient danger and a sufficient relationship between the order and the prevention of the danger to justify requiring Korematsu to evacuate.&nbsp; The majority said the order was valid.\r\n</p>\r\n\r\n<p>\r\n\tThe dissenters disagreed.&nbsp; They put forth their position that the order should have been considered as a whole, and the Court should have considered the other contemporaneous orders, all of which, when considered together resulted in the imprisonment of U.S. citizens in what were essentially concentration camps, based only on their race.&nbsp;\r\n</p>\r\n"
+                  summary: ''
+                  format: wysiwyg
+              field_activity_category: null
+              field_body_enhanced:
+                -
+                  uuid: 49103f7a-d307-44e3-9724-864b676efe02
+                  entity_type: paragraph
+                  bundle: body_enhanced
+                  base_fields:
+                    status: true
+                    langcode: en
+                    created: '1714539110'
+                    behavior_settings: {  }
+                  custom_fields:
+                    field_callout_attribution: null
+                    field_callout_body: null
+                    field_callout_pull_quote:
+                      -
+                        value: '0'
+                    field_callout_title: null
+                    field_embedded_widget: null
+                    field_fc_be_body: null
+                    field_fc_be_heading: null
+                    field_fc_be_image: null
+                    field_fc_be_video: null
+                    field_fc_be_video_caption: null
+                    field_gallery: null
+              field_fc_be_audio: null
+              field_landing_page_image: null
+              field_lead_gallery: null
+              field_lead_paragraph: null
+              field_logo: null
+              field_metatag:
+                robots: ''
+              field_table_of_contents: null
+              field_tags: null
+              field_usc_additional_content: null
+              field_usc_govdelivery_form: null
+              field_usc_notification: null
+              field_usc_related_news: null
+              field_usc_table_of_contents: null
+          -
+            uuid: a5098ddc-75c2-4a32-a4ca-436a705a4285
+            entity_type: node
+            bundle: educational_activity
+            base_fields:
+              title: 'The Power of Fiery Dissents — Korematsu v. U.S.'
+              status: true
+              langcode: und
+              created: '1493212087'
+              changed: '1493212087'
+              author: user43@example.com
+              url: /educational-resources/educational-activities/power-fiery-dissents-korematsu-v-us
+              revision_log_message: 'Edited by courtney.mcilroy.'
+              revision_uid: '197'
+              moderation_state: published
+            custom_fields:
+              body:
+                -
+                  value: "<p>\r\n\tThe dissents in <em>Korematsu v. U.S.</em> (1944) are still talked about today and brought into discussions of contemporary issues. The following are excerpts from the dissents written by three Associate Justices who sat on the <em>Korematsu </em>case.\r\n</p>\r\n\r\n<h2>\r\n\tJustice Owen J. Roberts wrote:\r\n</h2>\r\n\r\n<p>\r\n\t\"This is not a case of keeping people off the streets at night, as was&nbsp;Hirabayashi v. United States, 320 U.S. 81, [p226] nor a case of temporary exclusion of a citizen from an area for his own safety or that of the community, nor a case of offering him an opportunity to go temporarily out of an area where his presence might cause danger to himself or to his fellows. On the contrary, it is the case of convicting a citizen as a punishment for not submitting to imprisonment in a concentration camp, based on his ancestry, and solely because of his ancestry, without evidence or inquiry concerning his loyalty and good disposition towards the United States. If this be a correct statement of the facts disclosed by this record, and facts of which we take judicial notice, I need hardly labor the conclusion that Constitutional rights have been violated.\"\r\n</p>\r\n\r\n<h2>\r\n\tJustice Frank Murphy wrote:\r\n</h2>\r\n\r\n<p>\r\n\t\"I dissent, therefore, from this legalization of racism. Racial discrimination in any form and in any degree has no justifiable part whatever in our democratic way of life. It is unattractive in any setting, but it is utterly revolting among a free people who have embraced the principles set forth in the Constitution of the United States. All residents of this nation are kin in some way by blood or culture to a foreign land. Yet they are primarily and necessarily a part of the new and distinct civilization of the United States. They must, accordingly, be treated at all times as the heirs of the American experiment, and as entitled to all the rights and freedoms guaranteed by the Constitution.\"\r\n</p>\r\n\r\n<h2>\r\n\tJustice Robert H. Jackson wrote:\r\n</h2>\r\n\r\n<p>\r\n\t\"Korematsu was born on our soil, of parents born in Japan. The Constitution makes him a citizen of the United States by nativity and a citizen of California by residence. No claim is made that he is not loyal to this country. There is no suggestion that apart from the matter involved here he is not law abiding and well disposed. Korematsu, however, has been convicted of an act not commonly a crime. It consists merely of being present in the state whereof he is a citizen, near the place where he was born, and where all his life he has lived.\r\n</p>\r\n\r\n<p>\r\n\t[...] [H]is crime would result, not from anything he did, said, or thought, different than they, but only in that he was born of different racial stock. Now, if any fundamental assumption underlies our system, it is that guilt is personal and not inheritable. Even if all of one's antecedents had been convicted of treason, the Constitution forbids its penalties to be visited upon him. But here is an attempt to make an otherwise innocent act a crime merely because this prisoner is the son of parents as to whom he had no choice, and belongs to a race from which there is no way to resign. If Congress in peace-time legislation should enact such a criminal law, I should suppose this Court would refuse to enforce it.\"\r\n</p>\r\n"
+                  summary: ''
+                  format: wysiwyg
+              field_activity_category: null
+              field_body_enhanced:
+                -
+                  uuid: b5491a9d-8de8-4201-9da8-8a9f637677ff
+                  entity_type: paragraph
+                  bundle: body_enhanced
+                  base_fields:
+                    status: true
+                    langcode: en
+                    created: '1714539110'
+                    behavior_settings: {  }
+                  custom_fields:
+                    field_callout_attribution: null
+                    field_callout_body: null
+                    field_callout_pull_quote:
+                      -
+                        value: '0'
+                    field_callout_title: null
+                    field_embedded_widget: null
+                    field_fc_be_body: null
+                    field_fc_be_heading: null
+                    field_fc_be_image: null
+                    field_fc_be_video: null
+                    field_fc_be_video_caption: null
+                    field_gallery: null
+              field_fc_be_audio: null
+              field_landing_page_image: null
+              field_lead_gallery: null
+              field_lead_paragraph:
+                -
+                  value: "<p>\r\n\tWell-reasoned, colorful dissents that pack an emotional punch are often referred to as “fiery dissents.” Some of the fiery dissents written by Supreme Court Justices have a lasting impact.\r\n</p>\r\n"
+                  format: wysiwyg
+              field_logo: null
+              field_metatag: null
+              field_table_of_contents: null
+              field_tags: null
+              field_usc_additional_content: null
+              field_usc_govdelivery_form: null
+              field_usc_notification: null
+              field_usc_related_news: null
+              field_usc_table_of_contents: null
+          -
+            uuid: deaa9d8c-d66f-49cd-a1e3-3ece2c95e0de
+            entity_type: node
+            bundle: educational_activity
+            base_fields:
+              title: 'Courtroom Simulation Talking Points — Korematsu v. U.S.'
+              status: true
+              langcode: und
+              created: '1493215968'
+              changed: '1493215968'
+              author: user43@example.com
+              url: /educational-resources/educational-activities/courtroom-simulation-talking-points-korematsu-v-us
+              revision_log_message: 'Edited by courtney.mcilroy.'
+              revision_uid: '197'
+              moderation_state: published
+            custom_fields:
+              body: null
+              field_activity_category: null
+              field_body_enhanced:
+                -
+                  uuid: 79544a5b-2294-4b11-9de5-156042a13e31
+                  entity_type: paragraph
+                  bundle: body_enhanced
+                  base_fields:
+                    status: true
+                    langcode: en
+                    created: '1714539110'
+                    behavior_settings: {  }
+                  custom_fields:
+                    field_callout_attribution: null
+                    field_callout_body: null
+                    field_callout_pull_quote:
+                      -
+                        value: '0'
+                    field_callout_title: null
+                    field_embedded_widget: null
+                    field_fc_be_body:
+                      -
+                        value: "<p>\r\n\tThis activity is a modification of an <a href=\"node/4339\">Oxford style debate</a>. The presiding judge asks three central questions and gives each side the opportunity to respond, using the suggested talking points. Participants may read the points as scripted, but are encouraged to incorporate their own thoughts and opinions. The judge asks each participant-attorney unscripted follow-up questions at the podium before he/she returns to the counsel table.\r\n</p>\r\n\r\n<h2>\r\n\tOpening Protocol\r\n</h2>\r\n\r\n<p>\r\n\t<strong>A Law Clerk announces the Judge.&nbsp;</strong>\r\n</p>\r\n\r\n<p>\r\n\tThe Judge takes the bench, welcomes the group, and says: The overarching issue that we are dealing with today is: During times of war or imminent danger, does the Constitution give the government the authority to restrict individual rights in favor of public safety?\r\n</p>\r\n\r\n<p>\r\n\t<strong>Judge</strong>: Is Counsel for the Plaintiff ready?&nbsp;\r\n</p>\r\n\r\n<p>\r\n\t<em>Korematsu’s Attorney #1</em> <em>(Stands at counsel table)</em>: Yes, Your Honor.\r\n</p>\r\n\r\n<p>\r\n\t<strong>Judge</strong>: Is Counsel for the Government ready?\r\n</p>\r\n\r\n<p>\r\n\t<strong>Government’s Attorney #1</strong>&nbsp;<em>(Stands at counsel table):</em> Yes, Your Honor.\r\n</p>\r\n\r\n<p>\r\n\t<strong>Judge</strong>: Counsel for the Plaintiff may proceed.\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorneys for the Plaintiff&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #1</strong> <em>(Goes to the lectern)</em>\r\n</p>\r\n\r\n<p>\r\n\t\"May it please the Court?&nbsp; My name is <em>{insert name}</em>. I am from <em>{insert place}</em>. My colleagues and I are counsel for Mr. Fred Korematsu, the Plaintiff before this Court today. There are three issues before the Court.&nbsp;I will argue the first issue. Seated at the Plaintiff’s counsel table are my colleagues who will handle the other issues and closing arguments.They will introduce themselves and tell you where they are from. <em>(Attorney #1 sits down.)</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #2</strong> <em>(Stands at counsel table)</em>\r\n</p>\r\n\r\n<p>\r\n\tI am <em>{insert name}</em> from <em>{insert place}</em> and I will be handling Issue #2. <em>(Sits down.)</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #3</strong> <em>(Stands at counsel table)</em>\r\n</p>\r\n\r\n<p>\r\n\tI am <em>{insert name}</em> from <em>{insert place}</em> and I will be handling Issue #3. <em>(Sits down.)</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #4</strong> <em>(Stands at counsel table)</em>\r\n</p>\r\n\r\n<p>\r\n\tI am <em>{insert name}</em> from <em>{insert place}</em> and I will be handling the closing arguments for the Plaintiff. <em>(Sits down.)</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Judge</strong>: Counsel for the Defendant may proceed with your introductions.\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorneys for the Defendant</strong>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #1</strong> <em>(Goes to the lectern)</em>\r\n</p>\r\n\r\n<p>\r\n\t\"May it please the Court?&nbsp; My name is <em>{insert name}</em>. I am from <em>{insert place}</em> and I will be arguing the first issue on behalf of the Government. Seated at the counsel table are my colleagues who will handle the other issues and closing arguments.&nbsp;They will introduce themselves and tell you where they are from. <em>(Sits down.)</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #2</strong> <em>(Stands at counsel table)</em>\r\n</p>\r\n\r\n<p>\r\n\t&nbsp;I am <em>{insert name}</em> from <em>{insert place}</em> and I will be handling Issue #2. <em>(Sits down.)</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #3</strong> <em>(Stands at counsel table)</em>\r\n</p>\r\n\r\n<p>\r\n\tI am <em>{insert name}</em> from <em>{insert place}</em> and I will be handling Issue #3. <em>(Sits down.)</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #4</strong> <em>(Stands at counsel table)</em>\r\n</p>\r\n\r\n<p>\r\n\tI am <em>{insert name}</em> from <em>{insert place}</em> and I will be handling the closing arguments for the Defendant. <em>(Sits down)</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Judge</strong>: The attorneys will make their arguments, then we will open the floor to you, in the gallery, to join in the debate as jurors.&nbsp; At the end, we will take a vote to determine the verdict.\r\n</p>\r\n\r\n<h2>\r\n\tThe Issues\r\n</h2>\r\n\r\n<h3>\r\n\tIssue 1\r\n</h3>\r\n\r\n<p>\r\n\tDuring times of war or imminent danger, does the Constitution give the government authority to restrict individual rights in favor of public safety?\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #1 for Korematsu</strong>: No. &nbsp;The government can never discriminate on the basis of race, ethnicity, country of origin, or religion. The government cannot justify discriminatory action against an entire group and it can never engage in collective suspicion or collective guilt.&nbsp;\r\n</p>\r\n\r\n<p>\r\n\tPresident Roosevelt’s Executive Order 9006 went well beyond the war powers of Congress, military authorities, and the President as Commander in Chief. The exclusion order, as it was called at the time, gave the military the authority to exclude people of Japanese descent from certain areas, particularly military bases the surrounding area. &nbsp;\r\n</p>\r\n\r\n<p>\r\n\tThe order allowed the military to round up, relocate, and detain for an indefinite time an entire race of people living on the West Coast. To apply such orders only to one race is obvious racial discrimination that is prohibited by the Constitution.<br />\r\n\tThe government had already established a curfew only for people of Japanese descent. &nbsp;The exclusion order went too far. &nbsp;It forced Japanese people — two-thirds of whom were American citizens — to abandon their homes and their businesses. Once they were gathered at regional assembly centers they were transported to remote locations in seven states and detained there for up to four years. &nbsp;\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #1 for U.S. Government</strong>: &nbsp;Yes. We are talking here about times of war or imminent danger. And we are talking about the government’s first priority — keeping us safe. To effectively protect us, the government must take actions that are equal to the threats we face.&nbsp;\r\n</p>\r\n\r\n<p>\r\n\tOn December 7, 1941 we were in a war emergency. The Japanese launched a surprise attack on Pearl Harbor in Hawaii which, at that time, was a U.S. territory. No one knew if the Japanese had already infiltrated the mainland of the United States. However, that would have been a logical assumption.\r\n</p>\r\n\r\n<p>\r\n\tOf course, emergencies should never be used to justify racial discrimination or harassment. That is why our system of checks and balances is so vital. The Judicial Branch must exercise its power to provide a check and balance on the war powers of the Executive and the Legislative branches. &nbsp;In such instances, courts must apply “rigid scrutiny” to the issues. Sometimes the courts will find that actions that would not be acceptable in peace time turn out to be Constitutional in times of war.\r\n</p>\r\n\r\n<p>\r\n\tWe will continue to aspire to the lofty ideals in the Constitution. However, if we are going to keep our Constitutional government and our democratic way of life, we have to safeguard our ideals with common sense.&nbsp;\r\n</p>\r\n\r\n<p>\r\n\tIt’s a matter of being smart about the threats we face and about activating our system of checks and balances. These are not easy decisions to make but, ultimately, we have to strike a balance between individual rights and public safety. &nbsp;\r\n</p>\r\n\r\n<p>\r\n\t<em>Judge might ask follow-up questions after each attorney speaks.</em>\r\n</p>\r\n\r\n<h3>\r\n\tIssue 2\r\n</h3>\r\n\r\n<p>\r\n\tShould the government defer to the military in times of war or imminent danger?\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #2 for Korematsu</strong>: No. It is the duty of the courts to uphold the Constitution, even in times of imminent danger or war.\r\n</p>\r\n\r\n<p>\r\n\tThe exclusion order was an action based on a plea of military necessity.&nbsp; The need for it was neither substantiated by the facts nor justified by the actions of the targeted group.&nbsp;\r\n</p>\r\n\r\n<p>\r\n\tThe exclusion order was a wholesale confiscation of the rights of more than 120,000 people of Japanese descent, the majority of whom were American citizens.\r\n</p>\r\n\r\n<p>\r\n\tUnlike other countries, America has a long and proud tradition of a civilian-run military to prevent military overreach.\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #2 for U.S. Government</strong>:&nbsp;Yes. The war-making branches of government — the Executive Branch and the Legislative Branch — have the authority to take measures to protect the country. The military is under the command of the President.\r\n</p>\r\n\r\n<p>\r\n\tIn times of imminent danger the military makes decisions based on information and intelligence that is not accessible to the Judicial Branch.\r\n</p>\r\n\r\n<p>\r\n\tPresident Roosevelt did not surrender his authority as the civilian Commander in Chief.&nbsp; He issued the order and the military followed it. In times of imminent danger the military must be given discretion in how to implement an Executive Order.\r\n</p>\r\n\r\n<p>\r\n\tLet’s keep in mind the anti-Japanese sentiment in the country at the time. The Japanese were under military protection from the time they reported to the assembly centers, through the transportation process to other locations to the designated sites, and during the time they lived in the safety of the camps.\r\n</p>\r\n\r\n<p>\r\n\t<em>Judge might ask follow-up questions after each attorney speaks.</em>\r\n</p>\r\n\r\n<h3>\r\n\tIssue 3\r\n</h3>\r\n\r\n<p>\r\n\tIs the government ever justified in sending U.S. citizens to detention centers when they have not been charged with or convicted of a crime?\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #3 for Korematsu</strong>: No. The government can fulfill its responsibility for public safety without imprisoning law-abiding citizens.&nbsp;\r\n</p>\r\n\r\n<p>\r\n\tGovernment officials have many tools at their disposal. They can impose curfews that keep people off the streets during certain hours. They also can ban people from certain places, like nuclear plants, for example.&nbsp;\r\n</p>\r\n\r\n<p>\r\n\tHowever, detaining Americans on American soil, when the detainees have not been charged with nor convicted of a crime is always — and should always be — unconstitutional.&nbsp;&nbsp;\r\n</p>\r\n\r\n<p>\r\n\t<strong>Attorney #3 for U.S. Government</strong>: Yes.In times of grave peril or imminent danger the government’s primary responsibility is to keep people safe.&nbsp; At such times it becomes necessary to give up some individual liberties in the name of public safety.\r\n</p>\r\n\r\n<p>\r\n\tTimes of imminent danger force a society to rethink and, sometimes, make adjustments to the balance between public safety and individual liberties. Because war time presents unique threats and challenges, government action taken in this environment should be understood in the context of war time — not in the context of peace time.\r\n</p>\r\n\r\n<p>\r\n\tThe government’s power to protect must be equal to the level of danger that is threatened. Everyone suffers hardships in times of war and, unfortunately, those hardships are not shared equally by all. It is unfortunate, but it is reality.\r\n</p>\r\n\r\n<p>\r\n\tWhen the country’s very survival hangs in the balance, that changes the equation from theoretical to imminent danger. That is the time when we must decide in favor of public safety, even if the decision puts some limits on individual liberty.\r\n</p>\r\n\r\n<p>\r\n\t<em>Judge might ask follow-up questions after each attorney speaks.</em>\r\n</p>\r\n\r\n<h2>\r\n\tClosing Arguments\r\n</h2>\r\n\r\n<p>\r\n\tPurpose of Closing Arguments: To persuade the jurors to adopt your view of the significant points favoring your team's position on each issue. In their closing, each attorney argues the merits of their case.\r\n</p>\r\n\r\n<p>\r\n\t<strong>Each Attorney #4 addresses the judge and jurors</strong>:\r\n</p>\r\n\r\n<p>\r\n\tI would like to review with you the key points presented today.\r\n</p>\r\n\r\n<p>\r\n\tIssue #1: During times of war or imminent danger, can race, ethnicity, country of origin, or religion be the basis for assessing a threat to national security and taking action against a particular group?\r\n</p>\r\n\r\n<p>\r\n\t<em>{Write the key words from the main point that you want to emphasize.&nbsp;Why should the jury support your position on this point?}</em>\r\n</p>\r\n\r\n<p>\r\n\tIssue #2: Should the government defer to the military in times of war or imminent danger?\r\n</p>\r\n\r\n<p>\r\n\t<em>{Write the key words from the main point that you want to emphasize.&nbsp;Why should the jury support your position on this point?}</em>\r\n</p>\r\n\r\n<p>\r\n\tIssue #3: Is the government ever justified in sending U.S. citizens to detention centers when they have not been charged with or convicted of a crime?\r\n</p>\r\n\r\n<p>\r\n\t<em>{Write the key words from the main point that you want to emphasize.&nbsp;Why should the jury support your position on this point?}</em>\r\n</p>\r\n\r\n<p>\r\n\tSummary:<em>{Of all the points argued, what is the most compelling reason the jury should decide in favor of your client?}</em>\r\n</p>\r\n\r\n<p>\r\n\t<strong>Judge </strong><em>(after the last closing argument)</em>: Now that you’ve heard the closing arguments, I will turn over the program to the moderator to facilitate the jury deliberations.&nbsp;&nbsp;\r\n</p>\r\n"
+                        format: wysiwyg
+                    field_fc_be_heading: null
+                    field_fc_be_image: null
+                    field_fc_be_video: null
+                    field_fc_be_video_caption: null
+                    field_gallery: null
+              field_fc_be_audio: null
+              field_landing_page_image: null
+              field_lead_gallery: null
+              field_lead_paragraph:
+                -
+                  value: "<p>\r\n\tCourtroom activities like this one engage every learning style and give every student an opportunity to interact with a federal judge and volunteer attorneys.\r\n</p>\r\n"
+                  format: wysiwyg
+              field_logo: null
+              field_metatag: null
+              field_table_of_contents: null
+              field_tags: null
+              field_usc_additional_content: null
+              field_usc_govdelivery_form: null
+              field_usc_notification: null
+              field_usc_related_news: null
+              field_usc_table_of_contents: null
+        field_usc_description:
+          -
+            value: '<p>Where does this show up?</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Test label'
+        field_usc_title:
+          -
+            value: 'Tables of Contents'

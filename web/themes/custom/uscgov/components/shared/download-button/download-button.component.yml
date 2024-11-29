@@ -1,0 +1,3 @@
+libraryOverrides:
+  dependencies:
+    - uscgov/file-icon

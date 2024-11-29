@@ -1,0 +1,24 @@
+uuid: 1a150a94-de38-4455-8dea-ec75391b9c8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.judge
+  module:
+    - text
+id: node.judge.body
+field_name: body
+entity_type: node
+bundle: judge
+label: Profile
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

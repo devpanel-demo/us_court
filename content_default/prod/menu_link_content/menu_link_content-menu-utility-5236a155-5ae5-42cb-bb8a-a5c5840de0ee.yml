@@ -1,0 +1,55 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 5236a155-5ae5-42cb-bb8a-a5c5840de0ee
+entity_type: menu_link_content
+bundle: menu-utility
+base_fields:
+  title: 'Applicant Complaint: Criminal History Inquiry'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: menu-utility
+  description: null
+  link:
+    -
+      uri: 'entity:node/24665'
+      title: ''
+      options: {  }
+  weight: -49
+  parent:
+    uuid: bd4f908d-c9f2-4529-8a5b-8b703bf830c4
+    entity_type: menu_link_content
+    bundle: menu-utility
+    base_fields:
+      title: 'Search Judiciary Jobs'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: menu-utility
+      description: null
+      link:
+        -
+          uri: 'entity:node/1693'
+          title: ''
+          options: {  }
+      weight: -50
+      parent:
+        uuid: 1b580eb9-403e-4eed-bf9f-ddd386aca527
+        entity_type: menu_link_content
+        bundle: menu-utility
+        base_fields:
+          title: Careers
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: menu-utility
+          description: null
+          link:
+            -
+              uri: 'entity:node/196'
+              title: ''
+              options: {  }
+          weight: 0
+          parent: ''
+        custom_fields: {  }
+    custom_fields: {  }
+custom_fields: {  }

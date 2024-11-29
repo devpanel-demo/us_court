@@ -1,0 +1,12 @@
+services:
+  usc_court_finder.twig_extension:
+    class: Drupal\usc_court_finder\TwigExtension\UscCourtFinderTwig
+    arguments: ['@request_stack']
+    tags:
+      - { name: twig.extension }
+  usc_court_finder.event_subscriber:
+    class: Drupal\usc_court_finder\EventSubscriber\CourtFinderSubscriber
+    arguments:
+      - '@entity_type.manager'
+    tags:
+      - { name: event_subscriber }

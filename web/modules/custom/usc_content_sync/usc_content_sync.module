@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file
+ * Provides USC Content Sync hooks.
+ */
+
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Alters the node form for all content types.
+ */
+function usc_content_sync_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /** @var \Drupal\Core\Entity\EntityFormInterface $form_object */
+  $form_object = $form_state->getFormObject();
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_object->getEntity();
+
+  $form['usc_content_sync'] = [
+    '#type' => 'details',
+    '#title' => t('Default content'),
+    '#open' => FALSE,
+    '#group' => 'advanced',
+    '#description' => t('Default content and syncing process'),
+  ];
+  $synced_file = FALSE;
+  if (!empty($node)) {
+    $sync_service = \Drupal::service('usc_content_sync.sync_service');
+    $synced_file = $sync_service->isSyncing($node);
+  }
+  // Add a field to this section.
+  $form['usc_content_sync']['sync_node'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Add to the default content'),
+    '#description' => t('Enabling this option will deploy the changes made to this node to other environments and keep them immutable from migration scripts.'),
+    '#default_value' => $synced_file
+  ];
+  $form['actions']['submit']['#submit'][] = 'usc_content_sync_sync_node_form_submit';
+}
+
+/**
+ * Custom submit handler to check the value of the checkbox.
+ */
+function usc_content_sync_sync_node_form_submit(&$form, FormStateInterface $form_state) {
+  // Get the value of the custom checkbox.
+  $checkbox_value = $form_state->getValue('sync_node');
+  /** @var \Drupal\Core\Entity\EntityFormInterface $form_object */
+  $form_object = $form_state->getFormObject();
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_object->getEntity();
+
+  // Check if the checkbox is TRUE (i.e., checked).
+  if (!empty($node)) {
+    $sync_service = \Drupal::service('usc_content_sync.sync_service');
+    if ($checkbox_value) {
+      $sync_service->exportNodeYml($node);
+      \Drupal::messenger()->addStatus(t('This node has been exported to the default content.'));
+    }
+    else {
+      $default_value = $form['usc_content_sync']['sync_node']['#default_value'];
+      if ($default_value == TRUE && $checkbox_value == FALSE) {
+        $sync_service->deleteFile($node);
+        \Drupal::messenger()->addStatus(t('This node has been excluded from the default content.'));
+      }
+    }
+  }
+}

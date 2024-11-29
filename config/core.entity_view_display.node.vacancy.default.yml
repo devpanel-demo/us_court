@@ -1,0 +1,109 @@
+uuid: 2d65bd68-f0c1-4616-9354-3f79d5e62b50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vacancy.field_archive_id
+    - field.field.node.vacancy.field_congress
+    - field.field.node.vacancy.field_legacy_table_data
+    - field.field.node.vacancy.field_pdf_document
+    - field.field.node.vacancy.field_source_type
+    - field.field.node.vacancy.field_vacancy_reference
+    - field.field.node.vacancy.field_vacancy_type
+    - field.field.node.vacancy.field_year
+    - node.type.vacancy
+  module:
+    - entity_reference_revisions
+    - file
+    - sdc_display
+    - text
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.vacancy.default
+targetEntityType: node
+bundle: vacancy
+mode: default
+content:
+  field_authorized_judgeships:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_legacy_table_data:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_pdf_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_source_type:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_table_preamble:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_total_future_pending:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_total_nominees_pending:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_total_vacancies:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_vacancy_reference:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_year:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  field_archive_id: true
+  field_congress: true
+  field_vacancy_type: true
+  links: true
+  search_api_excerpt: true

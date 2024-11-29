@@ -1,0 +1,51 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 23413c28-8ab4-4b5b-b3c8-abace54ec969
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Access to Court Proceedings'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'internal:/access-court-proceedings'
+      title: ''
+      options: {  }
+  weight: 3
+  parent:
+    uuid: 72790a00-4c27-45a1-b94a-4bc19802ecec
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Court Records'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/7'
+          title: ''
+          options: {  }
+      weight: -66
+      parent: ''
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Learn how to file and access case files and court records information. '
+      field_enable_megamenu:
+        -
+          value: '1'
+      field_popular_links: null
+custom_fields:
+  field_description_text:
+    -
+      value: 'The public may visit a federal court to watch each step of the federal judicial process.'
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

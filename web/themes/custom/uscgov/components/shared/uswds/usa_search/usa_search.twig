@@ -1,0 +1,22 @@
+{% set theme_path = '/' ~ componentMetadata.path|replace({"/components/uswds/usa_search": ''}) %}
+{% set classes = [
+  'usa-search',
+  variant ? 'usa-search--' ~ variant,
+] %}
+
+<section aria-label="{{ 'Search'|t }}">
+  <form{{ attributes.addClass(classes).setAttribute('role', 'search') }}>
+    <label class="usa-sr-only" for="search-field">{{ label }}</label>
+    <input class="usa-input" id="search-field" type="search" name="{{ name }}" />
+    <button class="usa-button" type="submit">
+      {% if variant != 'small' %}
+        <span class="usa-search__submit-text">{{ 'Search'|t }}</span>
+      {% endif %}
+      <img
+        src="{{ theme_path ~ '/dist/uswds/img/usa-icons-bg/search--white.svg' }}"
+        class="usa-search__submit-icon"
+        alt="{{ label }}"
+      />
+    </button>
+  </form>
+</section>

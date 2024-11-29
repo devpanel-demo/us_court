@@ -1,0 +1,26 @@
+uuid: f7de1db7-e058-40f8-afb6-6af087b167c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_report_name
+    - node.type.report
+    - taxonomy.vocabulary.report_names
+id: node.report.field_report_name
+field_name: field_report_name
+entity_type: node
+bundle: report
+label: 'Report Name'
+description: 'Use this field to auto generate list of data tables associated with this report.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      report_names: report_names
+    sort:
+      field: _none
+field_type: entity_reference

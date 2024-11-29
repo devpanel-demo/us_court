@@ -1,0 +1,19 @@
+uuid: 59d793f4-e84d-43b8-b4cc-30b170fe2226
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_court
+    - paragraphs.paragraphs_type.job_vacancy
+id: paragraph.job_vacancy.field_court
+field_name: field_court
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Court Name/Organization'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

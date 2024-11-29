@@ -1,0 +1,21 @@
+uuid: 6ab6a293-f285-4f14-83d7-28f59e306fe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_updated
+    - node.type.fee
+  module:
+    - datetime
+id: node.fee.field_date_updated
+field_name: field_date_updated
+entity_type: node
+bundle: fee
+label: 'Published on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

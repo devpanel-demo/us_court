@@ -1,0 +1,24 @@
+uuid: b0e3984a-1a33-4e9e-92f8-5b2e654e72ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_application_info
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - text
+id: paragraph.job_vacancy.field_application_info
+field_name: field_application_info
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Application Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: fd7ced95-77b4-4c3f-9b9c-58140bac8ed2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_superseded
+    - node.type.form
+id: node.form.field_superseded
+field_name: field_superseded
+entity_type: node
+bundle: form
+label: Superseded
+description: 'Click this box to indicate if a form is no longer valid or been replaced.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

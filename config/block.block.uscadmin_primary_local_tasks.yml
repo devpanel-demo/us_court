@@ -1,0 +1,22 @@
+uuid: fb2f22d8-ba4d-432b-b43e-f1ee74d2f265
+langcode: en
+status: true
+dependencies:
+  theme:
+    - uscadmin
+_core:
+  default_config_hash: ACjBZI5shAMiiUpsz-inLYVXDqNNXRnSzAWV3kV_8Hw
+id: uscadmin_primary_local_tasks
+theme: uscadmin
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

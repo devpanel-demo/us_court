@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: f881d777-a86c-41f4-ad39-2d3426102e76
+entity_type: media
+bundle: icon
+base_fields:
+  name: backward.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/backward.svg'
+      url: '/sites/default/files/icons/backward.svg'

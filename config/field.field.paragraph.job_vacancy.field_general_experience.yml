@@ -1,0 +1,24 @@
+uuid: 48bb5bac-5c03-4426-a97b-25ed3fe90d81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_general_experience
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - text
+id: paragraph.job_vacancy.field_general_experience
+field_name: field_general_experience
+entity_type: paragraph
+bundle: job_vacancy
+label: 'General Experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

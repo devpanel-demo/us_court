@@ -1,0 +1,55 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 0dce3e41-5e57-4d1a-857d-db005d6fe669
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Judiciary Financial Disclosure Reports'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/29859'
+      title: ''
+      options: {  }
+  weight: 4
+  parent:
+    uuid: 723fb64b-6e47-4536-8468-7e967dd271f6
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Administration & Policies'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'internal:/administration-policies'
+          title: ''
+          options: {  }
+      weight: -69
+      parent: ''
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Administration and governance of the Judicial occurs at both a national and regional level.'
+      field_enable_megamenu:
+        -
+          value: '1'
+      field_popular_links:
+        -
+          uri: 'entity:node/1796'
+          title: 'Code of Conduct for U.S. Judges'
+          options: {  }
+custom_fields:
+  field_description_text:
+    -
+      value: 'Search for financial disclosure reports for judicial officers.'
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 8d469e93-6dd3-4d33-b4c2-18afe2ecb26d
+entity_type: media
+bundle: icon
+base_fields:
+  name: folder-open-outline.svg
+  created: '1721137093'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/folder-open-outline.svg'
+      url: '/sites/default/files/icons/folder-open-outline.svg'

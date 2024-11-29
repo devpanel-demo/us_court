@@ -1,0 +1,113 @@
+%gallery_title {
+  font-weight: 700;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
+%gallery_desc {
+  margin: 0;
+  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
+.slide-content-wrapper {
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--border-form);
+  border-radius: 10px;
+
+  // Check to see if the image is getting the image from piksel. If so, we
+  // assume this is a video and put a play button above the thumbnail.
+  &:has(img[src*="piksel_thumbnail"]),
+  &:has([asset-url*="youtu"]) {
+    &:before {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      content: "";
+      background-image: url('/themes/custom/uscgov/icons/misc/gallery-video-play.svg');
+      width: 54px;
+      height: 55px;
+      aspect-ratio: 1;
+      pointer-events: none;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+    display: block;
+  }
+
+  .details-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(82, 86, 97, 0.85);
+    padding: 16px var(--spacing-sm-3);
+    color: var(--color-primitive-neutral-white);
+    border-radius: 0 0 9px 9px;
+
+    .field--name-field-title{
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .spacing-component {
+      margin-bottom: 0;
+    }
+
+    p {
+      @extend %gallery_desc;
+    }
+
+    strong {
+      @extend %gallery_title;
+    }
+
+    strong + p,
+    strong + .readmore-summary {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .details-box {
+      background: var(--surface-primary-dark);
+    }
+  }
+
+  // Hide the description from the slide view.
+  .field--name-field-program-description {
+    display: none;
+  }
+}
+
+// Add some top margin around piksel iframes.
+.gslide-media iframe {
+  margin-top: 22px;
+}
+
+.gslide-description {
+  &.description-bottom {
+    .gslide-desc {
+      p {
+        @extend %gallery_desc;
+      }
+
+      strong {
+        @extend %gallery_title;
+      }
+    }
+  }
+}
+
+#glightbox-slider{
+  .field--name-modal-description{
+    display: none;
+  }
+}

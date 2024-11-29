@@ -1,0 +1,19 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 699d3374-bf89-4b63-99be-015a3e72e4f9
+entity_type: menu_link_content
+bundle: footer
+base_fields:
+  title: FAQs
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: footer
+  description: null
+  link:
+    -
+      uri: 'entity:node/12693'
+      title: ''
+      options: {  }
+  weight: -48
+  parent: ''
+custom_fields: {  }

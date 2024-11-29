@@ -1,0 +1,31 @@
+<div{{ attributes.addClass('judicial-milestone') }}>
+  <div class="judicial-milestone__activity">
+    {{ activity }}
+  </div>
+  <h3 class="judicial-milestone__name">
+    <a href="{{ url }}">{{ name }}</a>
+  </h3>
+  {{ position|render ? include('uscgov:label-pill', {
+    items: [position],
+    label: 'Position'|t,
+    field_name: 'position',
+    }, with_context = false) }}
+  {{ current_title|render ? include('uscgov:label-pill', {
+    items: [current_title],
+    label: 'Current title'|t,
+    field_name: 'current_title',
+    }, with_context = false) }}
+  {{ court|render ? include('uscgov:label-pill', {
+    items: [court],
+    label: 'Court'|t,
+    field_name: 'court',
+    }, with_context = false) }}
+  {{ date|render ? include('uscgov:label-pill', {
+    items: [date],
+    label: 'Date'|t,
+    field_name: 'date',
+    }, with_context = false) }}
+  <div class="judicial-milestone__body">
+    {{ body }}
+  </div>
+</div>

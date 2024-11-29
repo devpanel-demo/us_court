@@ -1,0 +1,19 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 0324b992-bc27-4eb5-968c-b42cee4589d6
+entity_type: menu_link_content
+bundle: footer
+base_fields:
+  title: 'Glossary of Legal Terms'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: footer
+  description: null
+  link:
+    -
+      uri: 'internal:/glossary'
+      title: ''
+      options: {  }
+  weight: -50
+  parent: ''
+custom_fields: {  }

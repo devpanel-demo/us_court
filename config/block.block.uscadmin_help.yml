@@ -1,0 +1,22 @@
+uuid: 3265fa17-6d2b-4375-a643-a30ece9d1c11
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - uscadmin
+_core:
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: uscadmin_help
+theme: uscadmin
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

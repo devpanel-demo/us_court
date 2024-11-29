@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: cb9849d8-c8ab-4383-a03d-f334ad33911a
+entity_type: media
+bundle: icon
+base_fields:
+  name: fingerprint-solid.svg
+  created: '1721137093'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/fingerprint-solid.svg'
+      url: '/sites/default/files/icons/fingerprint-solid.svg'

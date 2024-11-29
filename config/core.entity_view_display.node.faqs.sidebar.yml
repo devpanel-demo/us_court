@@ -1,0 +1,56 @@
+uuid: cb51636b-1703-4fdc-8843-2261e2bd1d31
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.faqs.body
+    - field.field.node.faqs.field_faqs
+    - field.field.node.faqs.field_lead_paragraph
+    - field.field.node.faqs.field_metatag
+    - field.field.node.faqs.field_workbench_access
+    - node.type.faqs
+  module:
+    - sdc_display
+    - summary_only
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.faqs.sidebar
+targetEntityType: node
+bundle: faqs
+mode: sidebar
+content:
+  body:
+    type: text_summary_only
+    label: hidden
+    settings:
+      trim_summary: false
+      trim_length: '600'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  content_moderation_control: true
+  extra_field_child_menu_items: true
+  field_faqs: true
+  field_lead_paragraph: true
+  field_metatag: true
+  field_workbench_access: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,800 @@
+uuid: ba42e81e-bfd1-49f9-b05c-9add2eb17ccf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_pdf
+    - field.storage.node.field_form_category
+    - field.storage.node.field_form_number
+    - field.storage.node.field_short_title
+    - node.type.form
+    - taxonomy.vocabulary.form_categories
+  module:
+    - node
+    - taxonomy
+    - user
+id: forms_landing_superseded
+label: 'Forms Landing Superseded'
+module: views
+description: ''
+tag: 'landing page'
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: ''
+      fields:
+        field_form_number:
+          id: field_form_number
+          table: node__field_form_number
+          field: field_form_number
+          plugin_id: field
+          element_label_class: sortInitialOrder-asc
+          element_label_colon: false
+          element_default_classes: false
+          type: string
+          settings:
+            max_length: 25
+            case_sensitive: false
+            is_ascii: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: 'Form Name'
+          alter:
+            word_boundary: false
+            ellipsis: false
+        field_form_category:
+          id: field_form_category
+          table: node__field_form_category
+          field: field_form_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Category
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_document_pdf:
+          id: field_document_pdf
+          table: node__field_document_pdf
+          field: field_document_pdf
+          plugin_id: field
+          label: Download
+          exclude: true
+          alter:
+            text: 'Download {{ field_form_number }} - {{ title }}'
+          element_label_class: 'sorter-false hidden'
+          element_label_colon: false
+          element_default_classes: false
+          click_sort_column: fid
+          type: entity_reference_label
+          settings:
+            target_type: media
+          delta_limit: 1
+          delta_offset: 0
+          ui_name: 'Form File'
+        field_short_title:
+          id: field_short_title
+          table: node__field_short_title
+          field: field_short_title
+          plugin_id: field
+          label: ''
+          exclude: true
+          element_label_colon: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: 'Apply Filters'
+          reset_button: true
+          reset_button_label: 'Reset Filters'
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: false
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          empty: true
+          content:
+            value: 'Your search did not match any forms. Please try again using more general search criteria.'
+            format: wysiwyg
+      sorts: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            form: form
+          group: 1
+        combine:
+          id: combine
+          table: views
+          field: combine
+          plugin_id: combine
+          operator: allwords
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: 'Search by form number, name or keyword'
+            operator: combine_op
+            identifier: k
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+          fields:
+            field_form_number: field_form_number
+            title: title
+            field_form_category: field_form_category
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: term_node_tid_depth_op
+            label: 'Select a form category'
+            description: ''
+            use_operator: false
+            operator: in
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: c
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: form_categories
+          type: select
+          hierarchy: true
+          limit: true
+          error_message: true
+          depth: '1'
+          ui_name: 'Form Category'
+        field_superseded_value:
+          id: field_superseded_value
+          table: node__field_superseded
+          field: field_superseded_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          accept_null: true
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          columns:
+            field_form_number: field_form_number
+            title: title
+            field_form_category: field_form_category
+            field_document_pdf: field_document_pdf
+            field_short_title: field_short_title
+          default: field_form_number
+          info:
+            field_form_number:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_form_category:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_document_pdf:
+              align: ''
+              separator: '<br/>'
+              empty_column: false
+              responsive: ''
+            field_short_title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: false
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      query:
+        type: views_query
+        options: {  }
+      use_more_always: false
+      display_extenders: {  }
+      style_plugin: table
+      style_options:
+        default_row_class: false
+        row_class_special: false
+        columns:
+          field_form_number: field_form_number
+          title: title
+          field_form_category: field_form_category
+          field_document_pdf: field_document_pdf
+          field_short_title: field_short_title
+        default: '-1'
+        info:
+          field_form_number:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          title:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_form_category:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_document_pdf:
+            align: ''
+            separator: '<br/>'
+            empty_column: 0
+          field_short_title:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+        override: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document_pdf'
+        - 'config:field.storage.node.field_form_category'
+        - 'config:field.storage.node.field_form_number'
+        - 'config:field.storage.node.field_short_title'
+  page_1:
+    id: page_1
+    display_title: Superseded
+    display_plugin: page
+    position: 3
+    display_options:
+      enabled: true
+      title: 'Superseded Bankruptcy Forms'
+      fields:
+        field_form_number:
+          id: field_form_number
+          table: node__field_form_number
+          field: field_form_number
+          plugin_id: field
+          element_label_class: sortInitialOrder-asc
+          element_label_colon: false
+          element_default_classes: false
+          type: string
+          settings:
+            max_length: 25
+            case_sensitive: false
+            is_ascii: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: 'Form Name'
+          alter:
+            alter_text: true
+            text: '{{ title }} (Superseded)'
+            word_boundary: false
+            ellipsis: false
+        field_form_category:
+          id: field_form_category
+          table: node__field_form_category
+          field: field_form_category
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Category
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_document_pdf:
+          id: field_document_pdf
+          table: node__field_document_pdf
+          field: field_document_pdf
+          plugin_id: field
+          label: Download
+          exclude: true
+          alter:
+            text: 'Download {{ field_form_number }} - {{ title }}'
+          element_label_class: 'sorter-false hidden'
+          element_label_colon: false
+          element_default_classes: false
+          click_sort_column: fid
+          type: entity_reference_label
+          settings:
+            target_type: media
+          delta_limit: 1
+          delta_offset: 0
+          ui_name: 'Form File'
+        field_short_title:
+          id: field_short_title
+          table: node__field_short_title
+          field: field_short_title
+          plugin_id: field
+          label: ''
+          exclude: true
+          element_label_colon: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            form: form
+          group: 1
+        field_superseded_value:
+          id: field_superseded_value
+          table: node__field_superseded
+          field: field_superseded_value
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        title: false
+        fields: false
+        arguments: false
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+      path: forms/superseded-bankruptcy-forms
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document_pdf'
+        - 'config:field.storage.node.field_form_category'
+        - 'config:field.storage.node.field_form_number'
+        - 'config:field.storage.node.field_short_title'
+  page_2:
+    id: page_2
+    display_title: 'Taxonomy Display'
+    display_plugin: page
+    position: 3
+    display_options:
+      sorts:
+        field_form_number_value:
+          id: field_form_number_value
+          table: node__field_form_number
+          field: field_form_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments:
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: taxonomy_index_tid_depth
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: '{{ arguments.term_node_tid_depth }}'
+          default_argument_type: taxonomy_tid
+          default_argument_options:
+            term_page: '1'
+            node: false
+            limit: false
+            vids: {  }
+            anyall: ','
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          depth: 3
+          use_taxonomy_term_path: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            form: form
+          group: 1
+        field_superseded_value:
+          id: field_superseded_value
+          table: node__field_superseded
+          field: field_superseded_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          accept_null: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          columns:
+            field_form_number: field_form_number
+            title: title
+            field_form_category: field_form_category
+            field_document_pdf: field_document_pdf
+            field_short_title: field_short_title
+          default: field_form_number
+          info:
+            field_form_number:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_form_category:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_document_pdf:
+              align: ''
+              separator: '<br/>'
+              empty_column: false
+              responsive: ''
+            field_short_title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: false
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        sorts: false
+        arguments: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
+      path: content/taxonomy/forms
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document_pdf'
+        - 'config:field.storage.node.field_form_category'
+        - 'config:field.storage.node.field_form_number'
+        - 'config:field.storage.node.field_short_title'

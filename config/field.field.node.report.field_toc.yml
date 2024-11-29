@@ -1,0 +1,21 @@
+uuid: fdddb66f-2ddb-49cc-99fa-2c6e0c32ffb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_toc
+    - node.type.report
+id: node.report.field_toc
+field_name: field_toc
+entity_type: node
+bundle: report
+label: 'In Page Navigation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

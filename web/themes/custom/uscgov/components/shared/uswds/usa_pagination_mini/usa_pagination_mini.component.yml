@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Pagination Mini
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - items
+  properties:
+    items:
+      type: object
+      required:
+        - current
+      properties:
+        previous:
+          type: object
+        next:
+          type: object
+        current:
+          type: number
+libraryOverrides:
+  dependencies:
+    - uscgov/uswds-icon

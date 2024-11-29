@@ -1,0 +1,24 @@
+uuid: c4fb2552-de86-47da-b758-521131faca54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_qualifications
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - text
+id: paragraph.job_vacancy.field_qualifications
+field_name: field_qualifications
+entity_type: paragraph
+bundle: job_vacancy
+label: Qualifications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

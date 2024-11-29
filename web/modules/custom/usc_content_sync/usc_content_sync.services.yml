@@ -1,0 +1,16 @@
+services:
+  usc_content_sync.sync_service:
+    class: Drupal\usc_content_sync\NodeSyncService
+    arguments:
+      - '@messenger'
+      - '@module_handler'
+      - '@config.factory'
+      - '@state'
+      - '@keyvalue'
+      - '@datetime.time'
+      - '@file_system'
+      - '@logger.factory'
+      - '@entity_type.manager'
+      - '@single_content_sync.helper'
+      - '@single_content_sync.exporter'
+      - '@file.repository'

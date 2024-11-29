@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: c104cd7e-9fe2-4eb9-a281-328d306ee10e
+entity_type: media
+bundle: icon
+base_fields:
+  name: face-frown-solid.svg
+  created: '1721137067'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/face-frown-solid.svg'
+      url: '/sites/default/files/icons/face-frown-solid.svg'

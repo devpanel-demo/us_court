@@ -1,0 +1,28 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: a43acdea-da55-4364-9cd0-b0aa041354d9
+entity_type: node
+bundle: faqs
+base_fields:
+  title: 'Default Content - FAQs'
+  status: true
+  langcode: en
+  created: '1717611756'
+  changed: 1717611756
+  author: jamesdavison@ao.uscourts.gov
+  url: /default-content-faqs
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      summary: ''
+      format: wysiwyg
+  field_faqs: null
+  field_lead_paragraph:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      format: wysiwyg
+  field_metatag: null
+  field_workbench_access: null

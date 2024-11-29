@@ -1,0 +1,24 @@
+uuid: ad45727e-334b-47d5-9008-2c2791c108dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.federal_rules
+  module:
+    - text
+id: node.federal_rules.body
+field_name: body
+entity_type: node
+bundle: federal_rules
+label: Description
+description: 'Use the Description field to display additional detailed Status information for Suggestions as well as “Resp. date” on the detail page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

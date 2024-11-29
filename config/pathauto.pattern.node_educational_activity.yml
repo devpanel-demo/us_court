@@ -1,0 +1,21 @@
+uuid: e50fc265-ae07-455e-a19b-2fff5930ca9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_educational_activity
+label: 'Content - Educational Activity'
+type: 'canonical_entities:node'
+pattern: 'educational-resources/educational-activities/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      educational_activity: educational_activity
+selection_logic: and
+weight: -7
+relationships: {  }

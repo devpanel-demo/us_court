@@ -1,0 +1,19 @@
+uuid: fb491f90-55a2-413d-bcfc-3f4736d48594
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vacancies
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_vacancies
+field_name: field_vacancies
+entity_type: paragraph
+bundle: judicial_vacancy
+label: 'Total Vacancies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

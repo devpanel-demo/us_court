@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 954cbc2f-f2a4-43bc-9170-c61c59f6850d
+entity_type: media
+bundle: icon
+base_fields:
+  name: lira-sign.svg
+  created: '1721137137'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/lira-sign.svg'
+      url: '/sites/default/files/icons/lira-sign.svg'

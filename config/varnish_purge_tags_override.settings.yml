@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: DhgbxGtYXqXkvlS3_aXRT8Ilu49Ahsnr1zJTgWIQ8G8
+maximum_header_value_size: 2000
+pages: ''
+per_bundle: true
+types:
+  - block_content
+  - config_pages
+  - file
+  - job_schedule
+  - media
+  - node
+  - taxonomy_term
+  - usc_court_finder_item
+  - usc_location
+  - paragraph

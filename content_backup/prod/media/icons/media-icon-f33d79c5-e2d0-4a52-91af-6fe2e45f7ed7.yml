@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: f33d79c5-e2d0-4a52-91af-6fe2e45f7ed7
+entity_type: media
+bundle: icon
+base_fields:
+  name: stop-circle-solid.svg
+  created: '1721137227'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/stop-circle-solid.svg'
+      url: '/sites/default/files/icons/stop-circle-solid.svg'

@@ -1,0 +1,13 @@
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'clearfix',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+</div>

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 9c125bfc-341b-46f9-adc3-d05d54424519
+entity_type: media
+bundle: icon
+base_fields:
+  name: rupee-sign.svg
+  created: '1721137216'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/rupee-sign.svg'
+      url: '/sites/default/files/icons/rupee-sign.svg'

@@ -1,0 +1,32 @@
+{% set theme_path = '/' ~ componentMetadata.path|replace({"/components/uswds/usa_header": ''}) %}
+{%
+  set classes = [
+    'usa-header',
+    extended ? 'usa-header--extended' : 'usa-header--basic',
+  ]
+%}
+<div class="usa-overlay"></div>
+<header{{ attributes.addClass(classes) }}>
+  {{ not extended ? '<div class="usa-nav-container">' }}
+    {{ branding }}
+    <nav aria-label="{{ 'Primary navigation'|t }}" class="usa-nav">
+      {{ extended ? '<div class="usa-nav__inner">' }}
+        <button type="button" class="usa-nav__close">
+          <img src="{{ theme_path ~ '/dist/uswds/img/usa-icons/close.svg' }}" alt="{{ 'Close'|t }}">
+        </button>
+        {{ main_menu }}
+
+        {# Secondary menu and search (extended variant only). #}
+        {% if extended and (secondary_menu or search_box) %}
+          <div class="usa-nav__secondary">
+            {{ secondary_menu }}
+            {{ search_box }}
+          </div>
+        {% else %}
+          {{ search_box }}
+        {% endif %}
+
+      {{ extended ? '</div>' }}
+    </nav>
+  {{ not extended ? '</div>' }}
+</header>

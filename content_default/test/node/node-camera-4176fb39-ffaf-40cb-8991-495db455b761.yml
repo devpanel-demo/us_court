@@ -1,0 +1,41 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 4176fb39-ffaf-40cb-8991-495db455b761
+entity_type: node
+bundle: camera
+base_fields:
+  title: 'test piksel ce'
+  status: true
+  langcode: en
+  created: '1716217259'
+  changed: 1716217259
+  author: jamesdavison@ao.uscourts.gov
+  url: /test-piksel-ce
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_court_name: null
+  field_date_updated: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_procedural_posture: null
+  field_program:
+    -
+      uuid: ec49639c-398a-48dd-a2e6-feb63f4c182b
+      entity_type: media
+      base_fields:
+        name: 'Aguero and Pangelinan v. Calvo and Garrido (Part 2)'
+        created: '1716217342'
+        status: true
+        langcode: en
+      bundle: piksel_program
+  field_subject_matter: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

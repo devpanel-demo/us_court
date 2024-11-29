@@ -1,0 +1,9 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Location Image
+status: stable
+props:
+  type: object
+  properties:
+    image:
+      title: Image
+      type: string

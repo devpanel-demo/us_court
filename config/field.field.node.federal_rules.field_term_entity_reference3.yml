@@ -1,0 +1,30 @@
+uuid: 892c5e5e-aecd-49c6-897d-d49d29af9ebe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_entity_reference3
+    - node.type.federal_rules
+    - taxonomy.vocabulary.submitted_to
+id: node.federal_rules.field_term_entity_reference3
+field_name: field_term_entity_reference3
+entity_type: node
+bundle: federal_rules
+label: 'Submitted to'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      submitted_to: submitted_to
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

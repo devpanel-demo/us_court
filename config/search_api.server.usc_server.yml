@@ -1,0 +1,17 @@
+uuid: e81b6973-9a9f-4186-b9cb-1abc7ea82578
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+_core:
+  default_config_hash: 1V66UP93rzmNk5piRCU1VwL9VBm5_Pixj8NMZgJmukA
+id: usc_server
+name: 'USC server'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: partial
+  phrase: bigram

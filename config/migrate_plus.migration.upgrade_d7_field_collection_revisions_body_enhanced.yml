@@ -1,0 +1,177 @@
+uuid: dc8dd7b3-b5cb-4ca2-9d1b-0caf29af23b5
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_field_collection_revisions_body_enhanced
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Field Collection Revisions Content'
+migration_group: migrate_drupal_7
+label: 'Field Collection Revisions (Body enhanced)'
+source:
+  plugin: d7_field_collection_item_revision
+  field_name: field_body_enhanced
+process:
+  type:
+    -
+      plugin: get
+      source: bundle
+  parent_id:
+    -
+      plugin: get
+      source: parent_id
+  parent_type:
+    -
+      plugin: get
+      source: parent_type
+  parent_field_name:
+    -
+      plugin: get
+      source: field_name
+  field_fc_be_heading:
+    -
+      plugin: get
+      source: field_fc_be_heading
+  field_fc_be_image:
+    -
+      plugin: media_migration_delta_sort
+      source: field_fc_be_image
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: fid
+          migration:
+            - upgrade_d7_file_entity_document_public
+            - upgrade_d7_file_entity_document_http
+            - upgrade_d7_file_entity_image_public
+            - upgrade_d7_file_entity_banner_image_public
+            - upgrade_d7_file_entity_audio_public
+            - upgrade_d7_file_entity_video_youtube
+            - upgrade_d7_file_entity_file_public
+            - upgrade_d7_file_entity_image_https
+            - upgrade_d7_file_entity_image_http
+          no_stub: true
+  field_fc_be_body:
+    -
+      plugin: get
+      source: field_fc_be_body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: ckeditor_link_file_to_linkit
+    -
+      plugin: img_tag_to_embed
+  field_fc_be_video:
+    -
+      plugin: media_migration_delta_sort
+      source: field_fc_be_video
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: fid
+          migration:
+            - upgrade_d7_file_entity_document_public
+            - upgrade_d7_file_entity_document_http
+            - upgrade_d7_file_entity_image_public
+            - upgrade_d7_file_entity_banner_image_public
+            - upgrade_d7_file_entity_audio_public
+            - upgrade_d7_file_entity_video_youtube
+            - upgrade_d7_file_entity_file_public
+            - upgrade_d7_file_entity_image_https
+            - upgrade_d7_file_entity_image_http
+          no_stub: true
+  field_callout_title:
+    -
+      plugin: get
+      source: field_callout_title
+  field_callout_body:
+    -
+      plugin: get
+      source: field_callout_body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: ckeditor_link_file_to_linkit
+  field_callout_pull_quote:
+    -
+      plugin: get
+      source: field_callout_pull_quote
+  field_embedded_widget:
+    -
+      plugin: usc_blocks_to_paragraphs
+      source: field_embedded_widget
+      migration:
+        - embedded_widget_highcharts
+        - embedded_widget_map
+        - embedded_widget_youtube_playlist
+  field_gallery:
+    -
+      plugin: media_migration_delta_sort
+      source: field_gallery
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: fid
+          migration:
+            - upgrade_d7_file_entity_document_public
+            - upgrade_d7_file_entity_document_http
+            - upgrade_d7_file_entity_image_public
+            - upgrade_d7_file_entity_banner_image_public
+            - upgrade_d7_file_entity_audio_public
+            - upgrade_d7_file_entity_video_youtube
+            - upgrade_d7_file_entity_file_public
+            - upgrade_d7_file_entity_image_https
+            - upgrade_d7_file_entity_image_http
+          no_stub: true
+  field_fc_be_video_caption:
+    -
+      plugin: get
+      source: field_fc_be_video_caption
+  field_callout_attribution:
+    -
+      plugin: get
+      source: field_callout_attribution
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  new_revisions: true
+  default_bundle: body_enhanced
+migration_dependencies:
+  required:
+    - upgrade_d7_field_collection_body_enhanced
+    - upgrade_d7_field_collection_referenced_nodes
+    - upgrade_d7_field_collection_milestone_activities
+    - upgrade_d7_field_collection_additional_info
+    - upgrade_d7_field_collection_piksel_programs
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+  optional:
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_file_public

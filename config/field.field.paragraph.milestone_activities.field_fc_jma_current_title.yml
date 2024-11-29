@@ -1,0 +1,29 @@
+uuid: fb68e816-46d5-4a56-8d9a-ae28a30f9709
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fc_jma_current_title
+    - paragraphs.paragraphs_type.milestone_activities
+    - taxonomy.vocabulary.milestone_positions
+id: paragraph.milestone_activities.field_fc_jma_current_title
+field_name: field_fc_jma_current_title
+entity_type: paragraph
+bundle: milestone_activities
+label: 'Current Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      milestone_positions: milestone_positions
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

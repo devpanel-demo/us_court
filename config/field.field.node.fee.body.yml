@@ -1,0 +1,24 @@
+uuid: 6f85cede-091a-4f37-85bf-39c51dd18a44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fee
+  module:
+    - text
+id: node.fee.body
+field_name: body
+entity_type: node
+bundle: fee
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

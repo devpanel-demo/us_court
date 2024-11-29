@@ -1,0 +1,18 @@
+uuid: 3962de53-9481-4f5b-b9de-91007886a70a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.judge
+id: node.judge.title
+field_name: title
+entity_type: node
+bundle: judge
+label: Name
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 951c0033-e00f-44ab-917c-91239315303b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.vacancy_latest
+label: 'Vacancy Latest'
+description: 'View mode intended for the content of type Vacancy that will be used in the view result.'
+targetEntityType: node
+cache: true

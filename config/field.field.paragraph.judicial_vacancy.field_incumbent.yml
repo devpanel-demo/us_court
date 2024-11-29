@@ -1,0 +1,19 @@
+uuid: c2112cb7-47ca-49ba-84ac-ceb094b52068
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_incumbent
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_incumbent
+field_name: field_incumbent
+entity_type: paragraph
+bundle: judicial_vacancy
+label: Incumbent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

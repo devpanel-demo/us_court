@@ -1,0 +1,10 @@
+uuid: ded4c9f3-81b5-41d1-8d2d-6a40d8a287f4
+langcode: en
+status: true
+dependencies: {  }
+id: body_enhanced
+label: 'Body enhanced'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_body_enhanced'
+behavior_plugins: {  }

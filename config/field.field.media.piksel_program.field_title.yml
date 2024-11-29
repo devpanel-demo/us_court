@@ -1,0 +1,19 @@
+uuid: 3332eec8-5949-4ed7-b111-7d0e1fd6c8f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_title
+    - media.type.piksel_program
+id: media.piksel_program.field_title
+field_name: field_title
+entity_type: media
+bundle: piksel_program
+label: 'Program Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

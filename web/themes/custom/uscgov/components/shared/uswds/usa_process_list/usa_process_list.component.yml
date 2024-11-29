@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Process List
+status: experimental
+group: USWDS
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    title:
+      title: Title
+      type: string
+      description: The List title.
+    is_alphabetical:
+      title: Is Alphabetical
+      type: boolean
+      description: Show list in alphabetical order.
+slots:
+  list_items:
+    title: List Items

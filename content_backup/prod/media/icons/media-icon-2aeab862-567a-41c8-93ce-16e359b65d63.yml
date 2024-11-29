@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 2aeab862-567a-41c8-93ce-16e359b65d63
+entity_type: media
+bundle: icon
+base_fields:
+  name: universal-access.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/universal-access.svg'
+      url: '/sites/default/files/icons/universal-access.svg'

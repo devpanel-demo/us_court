@@ -1,0 +1,25 @@
+@forward "../../sass/uswds/settings";
+
+.feature-item {
+  .feature-item__image {
+    margin-bottom: var(--spacing-sm-3);
+
+    img {
+      border-radius: 30px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .feature-item__date {
+    color: var(--text-on-surface-base-light);
+    font-size: 14px;
+    margin-top: var(--spacing-xs-3);
+  }
+
+  .feature-item__heading {
+    margin-top: var(--spacing-sm-1);
+    font-size: 1.25rem;
+  }
+}
+

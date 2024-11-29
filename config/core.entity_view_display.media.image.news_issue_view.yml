@@ -1,0 +1,50 @@
+uuid: 3857bd00-4104-4b06-b401-b7c75d15ea9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.news_issue_view
+    - field.field.media.image.field_file_description
+    - field.field.media.image.field_link
+    - field.field.media.image.field_media_image
+    - image.style.thumbnail
+    - media.type.image
+  module:
+    - image
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.image.news_issue_view
+targetEntityType: media
+bundle: image
+mode: news_issue_view
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_file_description: true
+  field_link: true
+  field_media_image: true
+  name: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,43 @@
+uuid: 63768f1f-eb09-457e-b9b1-976d71cc299a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_map.field_usc_label
+    - field.field.paragraph.usc_map.field_usc_tableau_object_code
+    - field.field.paragraph.usc_map.field_usc_title
+    - paragraphs.paragraphs_type.usc_map
+  module:
+    - text
+id: paragraph.usc_map.default
+targetEntityType: paragraph
+bundle: usc_map
+mode: default
+content:
+  field_usc_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_tableau_object_code:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

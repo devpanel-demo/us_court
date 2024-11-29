@@ -1,0 +1,7 @@
+alternatives: ''
+exclusions: ''
+lifetime:
+  alternatives: 0
+  301: 1800
+  302: 1800
+  404: 0

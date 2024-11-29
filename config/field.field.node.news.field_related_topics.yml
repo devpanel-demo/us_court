@@ -1,0 +1,26 @@
+uuid: c675011c-5c2a-4d13-aee4-cb26e5493317
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_topics
+    - node.type.news
+    - taxonomy.vocabulary.topics
+id: node.news.field_related_topics
+field_name: field_related_topics
+entity_type: node
+bundle: news
+label: 'Related Topics'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      topics: topics
+    sort:
+      field: _none
+field_type: entity_reference

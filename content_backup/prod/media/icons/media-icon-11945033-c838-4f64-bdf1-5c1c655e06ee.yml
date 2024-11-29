@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 11945033-c838-4f64-bdf1-5c1c655e06ee
+entity_type: media
+bundle: icon
+base_fields:
+  name: phone-volume.svg
+  created: '1721137168'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/phone-volume.svg'
+      url: '/sites/default/files/icons/phone-volume.svg'

@@ -1,0 +1,48 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
+.hero-block-secondary {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid var(--border-muted-dark);
+  background: var(--surface-base-light);
+  color: var(--text-on-surface-base-light);
+
+  img {
+    border-radius: 10px;
+    margin-bottom: var(--spacing-sm-3);
+  }
+}
+
+.hero-block-secondary__title {
+  @include u-font-family('sans');
+  margin: 0;
+  font-size: 24px;
+  color: var(--text-on-surface-base-light-dark);
+}
+
+.hero-block-secondary__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.hero-block-secondary__cta-wrapper {
+  margin-top: auto;
+
+  a {
+    &:after {
+      display: block;
+      width: 18px;
+      height: 18px;
+      content: "";
+      background: currentColor;
+      mask-image: url('images/arrow.svg');
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+    }
+  }
+}

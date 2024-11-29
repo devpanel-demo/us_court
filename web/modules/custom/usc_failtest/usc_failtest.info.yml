@@ -1,0 +1,6 @@
+name: 'US Courts failtest'
+description: 'Provides a path to display a special failtest message to anonymous users so that the site maintainers can ensure that the failover site is serving current content..'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+configure: usc_failtest.settings

@@ -1,0 +1,21 @@
+uuid: 40979f66-d7d5-4f9f-be51-5e63823205e4
+langcode: en
+status: true
+dependencies: {  }
+id: usc_court_finder_search_homepage
+label: 'Court Finder search homepage'
+selector: '.court-finder-block__form--name input.court-finder-block__input'
+minChar: 4
+autoSubmit: false
+autoRedirect: true
+maxSuggestions: 99
+noResultLabel: 'No results found for [search-phrase].'
+noResultValue: '[search-phrase]'
+noResultLink: ''
+moreResultsLabel: ''
+moreResultsValue: ''
+moreResultsLink: ''
+source: 'usc_autocomplete_court_search_terms::autocompletion_callback'
+theme: minimal.css
+editable: true
+deletable: true

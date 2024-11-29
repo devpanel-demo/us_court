@@ -1,0 +1,10 @@
+uuid: 3f924845-fd60-438a-b4ed-dcf84191cd25
+langcode: en
+status: true
+dependencies: {  }
+id: usc_table_of_contents
+label: 'Table of Contents'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean table_of_contents'
+behavior_plugins: {  }

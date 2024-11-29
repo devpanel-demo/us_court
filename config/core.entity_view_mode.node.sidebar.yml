@@ -1,0 +1,11 @@
+uuid: 904f5f06-00af-4c3e-86fe-f93724ecd90a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sidebar
+label: 'Related content'
+description: 'Related content block in sidebar.'
+targetEntityType: node
+cache: true

@@ -1,0 +1,24 @@
+<div class="hero-block-secondary">
+  {% if hero_type == 'minimal' %}
+    {{ image }}
+    <div class="content-wrapper">
+  {% endif %}
+  <h2 class="hero-block-secondary__title">{{ title }}</h2>
+  {% if description %}
+    <div class="hero-block-secondary__description spacing">
+      {{ description }}
+    </div>
+  {% endif %}
+  <div class="hero-block-secondary__cta-wrapper">
+    {% set button_variant = hero_type == 'minimal' ? 'accent' : 'primary' %}
+    {% embed 'uscgov:link-button' with {
+      classes: '',
+      variant: button_variant,
+      cta: cta
+    } %}
+    {% endembed %}
+  </div>
+  {% if hero_type == 'minimal' %}
+   </div>
+  {% endif %}
+</div>

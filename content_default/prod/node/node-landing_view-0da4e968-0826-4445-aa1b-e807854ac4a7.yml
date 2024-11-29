@@ -1,0 +1,127 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 0da4e968-0826-4445-aa1b-e807854ac4a7
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Strategic Planning'
+  status: true
+  langcode: en
+  created: '1719238358'
+  changed: 1731344750
+  author: jamesdavison@ao.uscourts.gov
+  url: /data-news/reports/strategic-planning
+  revision_log_message: null
+  revision_uid: '43'
+  menu_link:
+    uuid: 8d1f1e81-5f2d-41d5-9044-21f4eccc2f48
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Strategic Planning'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/60004'
+          title: ''
+          options: {  }
+      weight: 3
+      parent:
+        uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: Reports
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/3129'
+              title: ''
+              options: {  }
+          weight: 1
+          parent:
+            uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Data & News'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/8'
+                  title: ''
+                  options: {  }
+              weight: -68
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/16578'
+                  title: 'Federal Court Scams'
+                  options: {  }
+                -
+                  uri: 'entity:node/3122'
+                  title: "Director's Annual Report"
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":["13282","2998","2874"],"viewMode":"featured","collectionRange":3} /-->'
+      summary: 'Find strategic planning documents for the federal Judiciary.'
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>Find strategic planning documents for the federal Judiciary.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

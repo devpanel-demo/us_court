@@ -1,0 +1,9 @@
+# Libraries to be injected on editor (node edit)
+libraries-edit:
+  - gutenberg_uswds_gallery/block-edit
+# Libraries to be injected on node view
+libraries-view:
+  - gutenberg_uswds_gallery/block-view
+# Blocks which can be rendered server side.
+dynamic-blocks:
+  uswds/gallery: {}

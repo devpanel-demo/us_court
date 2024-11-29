@@ -1,0 +1,93 @@
+uuid: fe1d372b-22b1-41fc-8fff-fb84bf0b67d1
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_related_links
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - Sidebar
+migration_group: migrate_drupal_7
+label: 'Sidebar (Related Links) to Paragraphs'
+source:
+  plugin: bean
+  type: related_links
+process:
+  id:
+    -
+      plugin: migration_lookup
+      migration: sidebar_related_links
+      no_stub: true
+      source: bid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 0
+  revision_id:
+    -
+      plugin: migration_lookup
+      migration: sidebar_related_links
+      no_stub: true
+      source:
+        - bid
+        - vid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 1
+  langcode:
+    -
+      plugin: default_value
+      default_value: en
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  changed:
+    -
+      plugin: get
+      source: changed
+  revision_created:
+    -
+      plugin: get
+      source: created
+  field_usc_label: label
+  field_usc_title: title
+  field_usc_description:
+    -
+      plugin: get
+      source: field_bean_description
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: ckeditor_link_file_to_linkit
+    -
+      plugin: img_tag_to_embed
+  field_usc_links:
+    -
+      plugin: field_link
+      source: field_bean_links
+destination:
+  plugin: 'entity_complete:paragraph'
+  default_bundle: usc_related_links
+  translations: true
+migration_dependencies: {  }

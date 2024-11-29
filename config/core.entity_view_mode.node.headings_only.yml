@@ -1,0 +1,11 @@
+uuid: 43548e7c-c254-4a48-87e5-585881a5cc13
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.headings_only
+label: 'Headings Only'
+description: ''
+targetEntityType: node
+cache: true

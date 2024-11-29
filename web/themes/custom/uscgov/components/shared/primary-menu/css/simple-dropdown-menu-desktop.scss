@@ -1,0 +1,71 @@
+@forward "../../sass/uswds/settings";
+@use "../../../../sass/custom/global/media-queries" as *;
+@use "../../../../sass/custom/global/mixins" as *;
+@use "uswds-core" as *;
+
+@include custom-desktop-nav {
+  .primary-menu__menu-item:has(.primary-menu__dropdown--simple) .primary-menu__button[aria-expanded=true]:before {
+    height: 3px;
+  }
+
+  .primary-menu__dropdown--simple {
+    --border-radius: 10px;
+
+    top: calc(100%); // @todo
+    flex-direction: column;
+    width: 210px;
+    min-width: calc(100% + 20px);
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+    box-shadow: 0px 8px 8px 0px rgba(64, 72, 97, 0.24), 0px 24px 24px 0px rgba(160, 163, 176, 0.24);
+
+    .primary-menu__link-description-text {
+      display: none;
+    }
+
+    .primary-menu__dropdown-title {
+      margin: 0;
+    }
+
+    .primary-menu__dropdown-title-link,
+    .primary-menu__link--level-1 {
+      display: block;
+      padding: 13.5px 16px;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .primary-menu__dropdown-title-link {
+      color: var(--text-link);
+      border-top-right-radius: var(--border-radius, 0);
+      border-top: solid 1px transparent;
+      border-bottom: solid 1px transparent;
+
+      &:hover {
+        background: var(--surface-primary-lighter);
+        border-top-color: var(--border-primary);
+        border-bottom-color: var(--border-primary);
+      }
+    }
+
+    .primary-menu__dropdown-title-link .last-word::after {
+      margin-bottom: -2px;
+    }
+
+    .primary-menu__link--level-1 {
+      text-decoration: none;
+      color: var(--text-on-surface-base-lightest--dark);
+      border-top: solid 1px transparent;
+      border-bottom: solid 1px transparent;
+
+      &:hover {
+        background: var(--surface-primary-lighter);
+        border-top-color: var(--border-primary);
+        border-bottom-color: var(--border-primary);
+      }
+    }
+
+    .primary-menu__menu-item--level-1:last-child .primary-menu__link--level-1 {
+      border-radius: 0 0 var(--border-radius, 0) var(--border-radius, 0);
+    }
+  }
+}

@@ -1,0 +1,92 @@
+uuid: a23a7bb8-277a-41c4-87dc-024334eaebfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usc_additional_content
+    - node.type.educational_activity
+    - paragraphs.paragraphs_type.usc_graphic_photo
+    - paragraphs.paragraphs_type.usc_related_content
+    - paragraphs.paragraphs_type.usc_related_files
+    - paragraphs.paragraphs_type.usc_related_links
+    - paragraphs.paragraphs_type.usc_video
+  module:
+    - entity_reference_revisions
+id: node.educational_activity.field_usc_additional_content
+field_name: field_usc_additional_content
+entity_type: node
+bundle: educational_activity
+label: 'Additional Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: usc_paragraph
+  handler_settings:
+    view:
+      view_name: usc_paragraph_library
+      display_name: entity_reference_1
+      arguments:
+        - usc_related_links+usc_video+usc_related_files+usc_related_content+usc_graphic_photo
+    negate: '0'
+    target_bundles:
+      usc_related_links: usc_related_links
+      usc_graphic_photo: usc_graphic_photo
+      usc_related_content: usc_related_content
+      usc_related_files: usc_related_files
+      usc_video: usc_video
+    target_bundles_drag_drop:
+      additional_info:
+        weight: '11'
+        enabled: 0
+      body_enhanced:
+        weight: '12'
+        enabled: 0
+      criminogenic_extra_downlds:
+        weight: '13'
+        enabled: 0
+      criminogenic_worksheets:
+        weight: '14'
+        enabled: 0
+      icon_link:
+        weight: '15'
+        enabled: 0
+      milestone_activities:
+        weight: '16'
+        enabled: 0
+      piksel_programs:
+        weight: '17'
+        enabled: 0
+      referenced_nodes:
+        weight: '18'
+        enabled: 0
+      social_media_item:
+        weight: '19'
+        enabled: 0
+      usc_related_links:
+        enabled: '1'
+        weight: '20'
+      usc_govdelivery:
+        weight: '21'
+        enabled: 0
+      usc_notification:
+        weight: '24'
+        enabled: 0
+      usc_table_of_contents:
+        weight: '26'
+        enabled: 0
+      usc_graphic_photo:
+        enabled: '1'
+        weight: '28'
+      usc_related_content:
+        enabled: '1'
+        weight: '30'
+      usc_related_files:
+        enabled: '1'
+        weight: '31'
+      usc_video:
+        enabled: '1'
+        weight: '34'
+field_type: entity_reference_revisions

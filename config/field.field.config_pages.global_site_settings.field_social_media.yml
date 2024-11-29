@@ -1,0 +1,46 @@
+uuid: 4c9e6dea-aa2c-4014-9852-cdb3bcaf2753
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_social_media
+    - paragraphs.paragraphs_type.social_media_item
+  module:
+    - entity_reference_revisions
+id: config_pages.global_site_settings.field_social_media
+field_name: field_social_media
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Social Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_media_item: social_media_item
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 10
+        enabled: false
+      body_enhanced:
+        weight: 11
+        enabled: false
+      milestone_activities:
+        weight: 14
+        enabled: false
+      piksel_programs:
+        weight: 15
+        enabled: false
+      referenced_nodes:
+        weight: 16
+        enabled: false
+      social_media_item:
+        weight: 9
+        enabled: true
+field_type: entity_reference_revisions

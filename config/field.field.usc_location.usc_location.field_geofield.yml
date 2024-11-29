@@ -1,0 +1,23 @@
+uuid: 9689d8ab-5233-43ab-92ce-329b7c557093
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.usc_location.field_geofield
+  module:
+    - geofield
+    - usc_court_finder
+_core:
+  default_config_hash: n3aTldotUnT43l5EieUDbLidzapNQFqLoEbkRQP2_YM
+id: usc_location.usc_location.field_geofield
+field_name: field_geofield
+entity_type: usc_location
+bundle: usc_location
+label: Coordinates
+description: 'Geographic coordinates'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

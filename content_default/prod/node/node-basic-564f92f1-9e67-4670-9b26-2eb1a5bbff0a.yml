@@ -1,0 +1,261 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 564f92f1-9e67-4670-9b26-2eb1a5bbff0a
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Judicial Conference Regulations on Gifts '
+  status: true
+  langcode: en
+  created: '1423160241'
+  changed: 1423160241
+  author: paul_williams@ao.uscourts.gov
+  url: /administration-policies/judiciary-policies/judicial-conference-regulations-gifts
+  revision_log_message: 'Edited by Shao.Chen.'
+  revision_uid: '43'
+  menu_link:
+    uuid: eeff6f87-3f1b-48ad-93af-eb29d7727bd1
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Judicial Conference Regulations on Gifts'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/4360'
+          title: ''
+          options: {  }
+      weight: 12
+      parent:
+        uuid: c2d8ce5e-02f9-4c0a-8864-dfed0dff70ad
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Ethics Policies'
+          enabled: true
+          expanded: false
+          langcode: und
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/1764'
+              title: null
+              options: {  }
+          weight: 6
+          parent:
+            uuid: 55deb605-f6af-409a-960b-073c772000bb
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Judiciary Policies'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/1983'
+                  title: ''
+                  options: {  }
+              weight: 7
+              parent:
+                uuid: 723fb64b-6e47-4536-8468-7e967dd271f6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Administration & Policies'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'internal:/administration-policies'
+                      title: ''
+                      options: {  }
+                  weight: -69
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'Administration and governance of the Judicial occurs at both a national and regional level.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/1796'
+                      title: 'Code of Conduct for U.S. Judges'
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'This policy guidance governs the national operations of the federal judiciary.'
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu: null
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p><a href="/file/2855" data-entity-type="media" data-entity-uuid="23d63bc5-ee3e-47c7-bab4-7c8bdb86378d" data-entity-substitution="media">Judicial Conference Regulations on Gifts</a> (PDF) (<em>Guide to Judiciary Policy</em>, Vol. 2, Pt. C., Ch. 6)</p>'
+      summary: ''
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 11859deb-caef-48cf-8ffc-9350bd787e01
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>These regulations address the giving, solicitation, or acceptance of certain gifts by officers and employees of the judicial branch.&nbsp; The regulations do not prohibit all gifts, but only those from certain persons and in certain circumstances.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: 382c32cf-2247-477c-aec3-d6a0a8b5a7d5
+      entity_type: paragraph
+      bundle: usc_related_files
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_document:
+          -
+            uuid: 23d63bc5-ee3e-47c7-bab4-7c8bdb86378d
+            entity_type: media
+            base_fields:
+              name: vol02c-ch06.pdf
+              created: '1627584535'
+              status: true
+              langcode: en
+            bundle: document
+        field_usc_label:
+          -
+            value: 'Related Downloads Download the Policy'
+        field_usc_title:
+          -
+            value: 'Download the Policy'
+    -
+      uuid: c6888914-8558-47e3-a868-9bfe742dac5e
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_label:
+          -
+            value: 'Related Links Related Policies'
+        field_usc_links:
+          -
+            uri: 'internal:/node/1764'
+            title: 'Code of Conduct for U.S. Judges'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'internal:/node/4361'
+            title: 'Outside Earned Income, Honoraria, and Employment'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'internal:/node/4357'
+            title: 'Code of Conduct for Judicial Employees'
+            options:
+              attributes:
+                target: 0
+        field_usc_title:
+          -
+            value: 'Related Policies'
+  field_usc_govdelivery_form:
+    -
+      uuid: bb7b1480-e8c6-44a4-9559-1818494e0f74
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_369
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	Subscribe to be notified when we update this policy.
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Ethics Policy Updates'
+        field_usc_title:
+          -
+            value: 'Ethics Policy Updates'
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 88a7b5f3-a2f7-4edb-986d-b09d68bd7489
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'About Federal Courts'
+        weight: 3
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

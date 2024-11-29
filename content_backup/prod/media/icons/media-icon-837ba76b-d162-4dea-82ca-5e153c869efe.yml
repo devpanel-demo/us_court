@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 837ba76b-d162-4dea-82ca-5e153c869efe
+entity_type: media
+bundle: icon
+base_fields:
+  name: code-branch.svg
+  created: '1721136999'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/code-branch.svg'
+      url: '/sites/default/files/icons/code-branch.svg'

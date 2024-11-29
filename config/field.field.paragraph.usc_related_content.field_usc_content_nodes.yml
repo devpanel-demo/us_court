@@ -1,0 +1,53 @@
+uuid: 355a1980-0c82-4c51-8b6d-a9526c65665a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_content_nodes
+    - node.type.basic
+    - node.type.camera
+    - node.type.data_table
+    - node.type.educational_activity
+    - node.type.faqs
+    - node.type.federal_rules
+    - node.type.fee
+    - node.type.form
+    - node.type.judge
+    - node.type.landing_view
+    - node.type.news
+    - node.type.news_issue
+    - node.type.report
+    - paragraphs.paragraphs_type.usc_related_content
+id: paragraph.usc_related_content.field_usc_content_nodes
+field_name: field_usc_content_nodes
+entity_type: paragraph
+bundle: usc_related_content
+label: 'Content Nodes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic: basic
+      camera: camera
+      data_table: data_table
+      educational_activity: educational_activity
+      faqs: faqs
+      federal_rules: federal_rules
+      fee: fee
+      form: form
+      judge: judge
+      landing_view: landing_view
+      news: news
+      news_issue: news_issue
+      report: report
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: basic
+field_type: entity_reference

@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Accordion
+status: experimental
+group: USWDS
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    title_suffix:
+      type: array
+      description: title_suffix is necessary for contextual links.
+    classes:
+      title: Extra CSS classes
+      type: string
+      description: Extra CSS classes that get added to wrapper element.
+    multiselect:
+      title: Multiselect
+      type: boolean
+      description: Allows multiple accordion items to be open at the same time.
+    control_button:
+      title: Control Button
+      type: boolean
+      description: Show expand all/collapse all button.
+slots:
+  accordion_items:
+    title: Accordion Items

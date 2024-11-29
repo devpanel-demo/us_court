@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: c0e97aa5-1f69-494f-b967-a3bc947241cd
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Data & News'
+  status: true
+  langcode: en
+  created: '1392670509'
+  changed: 1731343998
+  author: jamesdavison@ao.uscourts.gov
+  url: /data-news
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":[2526,3129,"4282","4283"],"viewMode":"section_landing","collectionRange":4} /-->'
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>This section of uscourts.gov provides statistical data and analysis on the business of the federal Judiciary. Specific publications address the work of the appellate, district, and bankruptcy courts; the probation and pretrial services systems; and other components of the U.S. courts.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: fd3653fb-7da9-49f8-85d2-cf599d0a5730
+      entity_type: taxonomy_term
+      base_fields:
+        name: Statistics
+        weight: 24
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

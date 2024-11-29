@@ -1,0 +1,140 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: a2f7a928-4f7d-497f-a936-b43562aa5825
+entity_type: node
+bundle: data_table
+base_fields:
+  title: 'Table 1.1—Delayed Notice Search Warrant Civil Justice Reform Act (CJRA) (March 31, 2024)'
+  status: true
+  langcode: en
+  created: '1717611176'
+  changed: 1717611176
+  author: jamesdavison@ao.uscourts.gov
+  url: /table-11-delayed-notice-search-warrant-civil-justice-reform-act-cjra-march-31-2024
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      summary: ''
+      format: wysiwyg
+  feeds_item: null
+  field_current_table_number:
+    -
+      uuid: 54d012d8-7ab6-48c7-ad32-029a11282dc7
+      entity_type: taxonomy_term
+      base_fields:
+        name: '1.1'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: table_number
+  field_data_table_all_tables:
+    -
+      value: '0'
+  field_data_table_category_prefix:
+    -
+      uuid: 94fc8d26-5072-414f-844a-9c1ed0d9d0c3
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Delayed Notice Search Warrant'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: data_table_category_prefix
+  field_data_table_range:
+    -
+      value: 'Now and Forever'
+  field_data_table_title:
+    -
+      value: 'Default Content'
+  field_date_updated:
+    -
+      value: '2024-03-31'
+  field_document_pdf:
+    -
+      uuid: 95242055-f777-42c5-b6ea-ed90fe251e14
+      entity_type: media
+      base_fields:
+        name: dummy.pdf
+        created: '1717611288'
+        status: true
+        langcode: en
+      bundle: document
+  field_metatag: null
+  field_publication_table_number:
+    -
+      uuid: 54d012d8-7ab6-48c7-ad32-029a11282dc7
+      entity_type: taxonomy_term
+      base_fields:
+        name: '1.1'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: table_number
+  field_publication_type:
+    -
+      uuid: 76ecc03c-30a0-4c38-833c-f7df02104a50
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Delayed Notice Search Warrant'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: data_table_publication_types
+  field_reporting_period_increment:
+    -
+      uuid: c97f6db1-2eca-45d6-9443-9c5549603d8d
+      entity_type: taxonomy_term
+      base_fields:
+        name: '1 Month'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: period_time
+  field_report_name:
+    -
+      uuid: ce35613f-8b1a-4042-9340-3d56c61d85b6
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Civil Justice Reform Act (CJRA)'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: report_names
+  field_tags: null
+  field_topic:
+    -
+      uuid: b264123e-1019-47d2-825a-fe475b3e963b
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Bankruptcy Appellate Panels'
+        weight: 0
+        langcode: en
+        description: null
+        parent:
+          uuid: 2431b82b-33b7-4893-9860-0ef7d3c6f604
+          entity_type: taxonomy_term
+          bundle: data_table_topics
+          base_fields:
+            name: 'U.S. Courts of Appeals'
+            weight: 0
+            langcode: en
+            description: '<p>U.S. Courts of Appeals</p>'
+            parent: 0
+          custom_fields: {  }
+      bundle: data_table_topics
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_import_timestamp: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

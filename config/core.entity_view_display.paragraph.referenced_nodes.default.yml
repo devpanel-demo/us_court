@@ -1,0 +1,25 @@
+uuid: 69655d4e-c2c0-4587-9d3b-d558884d664a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.referenced_nodes.field_fc_rn_node_row
+    - field.field.paragraph.referenced_nodes.field_fc_rn_row_style
+    - paragraphs.paragraphs_type.referenced_nodes
+id: paragraph.referenced_nodes.default
+targetEntityType: paragraph
+bundle: referenced_nodes
+mode: default
+content:
+  field_fc_rn_node_row:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: landing_page
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_fc_rn_row_style: true
+  search_api_excerpt: true

@@ -1,0 +1,55 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 441a7a55-b7fb-4aa0-9168-6bba587c1208
+entity_type: node
+bundle: judge_comments
+base_fields:
+  title: 'Default Content - Judge Comments'
+  status: true
+  langcode: en
+  created: '1717612312'
+  changed: 1717612312
+  author: jamesdavison@ao.uscourts.gov
+  url: /default-content-judge-comments
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      summary: ''
+      format: wysiwyg
+  field_committee:
+    -
+      uuid: 359e9448-728f-41d5-a000-db4553bf234c
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Codes of Conduct'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: committees_judge_comments
+  field_date_updated:
+    -
+      value: '2024-06-05'
+  field_document_pdf:
+    -
+      uuid: 95242055-f777-42c5-b6ea-ed90fe251e14
+      entity_type: media
+      base_fields:
+        name: dummy.pdf
+        created: '1717611288'
+        status: true
+        langcode: en
+      bundle: document
+  field_rules_rule_or_form:
+    -
+      value: Test
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

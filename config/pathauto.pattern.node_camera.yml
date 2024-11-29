@@ -1,0 +1,21 @@
+uuid: 03c1eec4-e27f-4368-8952-d93dbdb8fbc5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_camera
+label: 'Content - Cameras in Court Program'
+type: 'canonical_entities:node'
+pattern: 'cameras-courts/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      camera: camera
+selection_logic: and
+weight: -10
+relationships: {  }

@@ -1,0 +1,98 @@
+@forward "../../uswds/settings";
+@use "uswds-core" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  // When scrolling to anchor, make sure to leave space to accommodate the fixed
+  // header. Using !important to override Drupal inline style.
+  scroll-padding-top: calc(200px + var(--drupal-displace-offset-top, 0px)) !important;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: revert;
+  }
+}
+
+// Extra specificity to override USWDS.
+body[class] {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--surface-base-lighter);
+  line-height: 1.15;
+}
+
+a {
+  color: var(--text-link);
+
+  &:hover {
+    color: var(--color-primitive-theme-primary-dark);
+  }
+}
+
+button {
+  font-family: inherit;
+}
+
+ul {
+  line-height: 1.5;
+}
+
+$list-styles: lower-roman, upper-roman, lower-alpha;
+
+ol {
+  @each $list-style in $list-styles {
+    &.list-style-type-#{$list-style} {
+      list-style-type: $list-style;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+
+  img {
+    display: block;
+  }
+}
+
+figcaption {
+  margin-top: 8px;
+  color: var(--text-on-surface-base-lighter--light);
+  font-style: italic;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+
+  .media--type-remote-video & {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+hr {
+  border-color: var(--accent);
+}
+
+audio {
+  width: 100%;
+  margin-block: 24px;
+}

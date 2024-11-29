@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: de9cb83c-c722-42df-b649-bbedf32b0a33
+entity_type: media
+bundle: icon
+base_fields:
+  name: cut.svg
+  created: '1721137017'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/cut.svg'
+      url: '/sites/default/files/icons/cut.svg'

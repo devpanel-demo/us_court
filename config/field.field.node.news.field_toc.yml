@@ -1,0 +1,21 @@
+uuid: aeceed87-f058-4092-b02c-a1a548c3fc3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_toc
+    - node.type.news
+id: node.news.field_toc
+field_name: field_toc
+entity_type: node
+bundle: news
+label: 'In Page Navigation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

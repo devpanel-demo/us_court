@@ -1,0 +1,87 @@
+uuid: 6d8359ff-d6ad-478b-acfa-13a79368205a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vacancy_reference
+    - node.type.vacancy
+    - paragraphs.paragraphs_type.job_vacancy
+    - paragraphs.paragraphs_type.judicial_vacancy
+  module:
+    - entity_reference_revisions
+id: node.vacancy.field_vacancy_reference
+field_name: field_vacancy_reference
+entity_type: node
+bundle: vacancy
+label: 'Vacancy Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      judicial_vacancy: judicial_vacancy
+      job_vacancy: job_vacancy
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 19
+        enabled: false
+      body_enhanced:
+        weight: 20
+        enabled: false
+      criminogenic_extra_downlds:
+        weight: 21
+        enabled: false
+      criminogenic_worksheets:
+        weight: 22
+        enabled: false
+      icon_link:
+        weight: 23
+        enabled: false
+      job_vacancy:
+        weight: 25
+        enabled: true
+      judicial_vacancy:
+        weight: 24
+        enabled: true
+      milestone_activities:
+        weight: 25
+        enabled: false
+      piksel_programs:
+        weight: 26
+        enabled: false
+      referenced_nodes:
+        weight: 27
+        enabled: false
+      social_media_item:
+        weight: 28
+        enabled: false
+      usc_govdelivery:
+        weight: 29
+        enabled: false
+      usc_graphic_photo:
+        weight: 30
+        enabled: false
+      usc_notification:
+        weight: 31
+        enabled: false
+      usc_related_content:
+        weight: 32
+        enabled: false
+      usc_related_files:
+        weight: 33
+        enabled: false
+      usc_related_links:
+        weight: 34
+        enabled: false
+      usc_table_of_contents:
+        weight: 35
+        enabled: false
+      usc_video:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

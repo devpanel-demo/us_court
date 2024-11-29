@@ -1,0 +1,29 @@
+uuid: 9b54886b-bff5-480f-a5ce-2a687d908a0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_table_category_prefix
+    - node.type.data_table
+    - taxonomy.vocabulary.data_table_category_prefix
+id: node.data_table.field_data_table_category_prefix
+field_name: field_data_table_category_prefix
+entity_type: node
+bundle: data_table
+label: 'Category Prefix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      data_table_category_prefix: data_table_category_prefix
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

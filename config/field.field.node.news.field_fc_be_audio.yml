@@ -1,0 +1,24 @@
+uuid: 3caf1166-2e5f-45cb-b3ce-ddde5946163d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fc_be_audio
+    - media.type.audio
+    - node.type.news
+id: node.news.field_fc_be_audio
+field_name: field_fc_be_audio
+entity_type: node
+bundle: news
+label: Audio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+field_type: entity_reference

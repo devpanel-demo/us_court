@@ -1,0 +1,19 @@
+uuid: 9de98c8a-e0cd-44da-8a3b-30be319bbdc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_category_topic_id
+    - paragraphs.paragraphs_type.usc_govdelivery
+id: paragraph.usc_govdelivery.field_usc_category_topic_id
+field_name: field_usc_category_topic_id
+entity_type: paragraph
+bundle: usc_govdelivery
+label: 'Category/Topic ID'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

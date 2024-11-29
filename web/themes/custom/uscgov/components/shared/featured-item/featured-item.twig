@@ -1,0 +1,41 @@
+{% set classes = [
+  'feature-item',
+] %}
+
+{% if url is iterable %}
+  {% set url = url.0['#markup'] %}
+{% endif %}
+
+<div {{ attributes.addClass(classes) }}>
+    {% if block('image')|trim %}
+      <div class="feature-item__image">
+        {% block image %}{% endblock %}
+      </div>
+    {% endif %}
+
+    {% if date %}
+      {% if date is iterable %}
+        {% if date['#field_type'] == 'daterange' %}
+          {% set date = date.0.start_date['#text'] %}
+        {% endif %}
+      {% endif %}
+
+      <div class="feature-item__date">
+        {{ date }}
+      </div>
+    {% endif %}
+
+    <h3 class="feature-item__heading">
+      <a
+        class="usa-link"
+        href="{{ url }}"
+        >{{ title }}</a
+      >
+    </h3>
+
+    {% if block('content')|trim %}
+      <div class="feature-item__body">
+        {% block content %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>

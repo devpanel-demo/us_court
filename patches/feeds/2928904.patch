@@ -1,0 +1,528 @@
+From 8be0a36d168d1ecea1b0e58e05c45d87b9cbba4d Mon Sep 17 00:00:00 2001
+From: jidrone <jidrone20@gmail.com>
+Date: Mon, 1 Apr 2024 15:44:56 -0500
+Subject: [PATCH 1/3] Added media target
+
+---
+ src/Feeds/Target/File.php                  |  14 +-
+ src/Feeds/Target/Media.php                 | 360 +++++++++++++++++++++
+ src/Plugin/Type/Target/FieldTargetBase.php |   2 +-
+ 3 files changed, 369 insertions(+), 7 deletions(-)
+ create mode 100644 src/Feeds/Target/Media.php
+
+diff --git a/src/Feeds/Target/File.php b/src/Feeds/Target/File.php
+index b7fb4caa..8891028d 100644
+--- a/src/Feeds/Target/File.php
++++ b/src/Feeds/Target/File.php
+@@ -185,8 +185,7 @@ class File extends EntityReference {
+     }
+ 
+     // Compose file path.
+-    $filepath = $this->getDestinationDirectory() . '/' . $this->getFileName($value);
+-
++    $filepath = $this->getFilepath($value);
+     switch ($this->configuration['existing']) {
+       case FileSystemInterface::EXISTS_ERROR:
+         if (file_exists($filepath) && $fid = $this->findEntity('uri', $filepath)) {
+@@ -212,15 +211,18 @@ class File extends EntityReference {
+   }
+ 
+   /**
+-   * Prepares destination directory and returns its path.
++   * Prepares destination directory returns the filepath.
++   *
++   * @param string $url
++   *   The URL of file.
+    *
+    * @return string
+-   *   The directory to save the file to.
++   *   The filepath.
+    */
+-  protected function getDestinationDirectory() {
++  protected function getFilepath($url) {
+     $destination = $this->token->replace($this->settings['uri_scheme'] . '://' . trim($this->settings['file_directory'], '/'));
+     $this->fileSystem->prepareDirectory($destination, FileSystemInterface::MODIFY_PERMISSIONS | FileSystemInterface::CREATE_DIRECTORY);
+-    return $destination;
++    return $destination . '/' . $this->getFileName($url);
+   }
+ 
+   /**
+diff --git a/src/Feeds/Target/Media.php b/src/Feeds/Target/Media.php
+new file mode 100644
+index 00000000..0d966be5
+--- /dev/null
++++ b/src/Feeds/Target/Media.php
+@@ -0,0 +1,360 @@
++<?php
++
++namespace Drupal\feeds\Feeds\Target;
++
++use Drupal\Core\Config\ImmutableConfig;
++use Drupal\Core\Entity\EntityFieldManagerInterface;
++use Drupal\Core\Entity\EntityInterface;
++use Drupal\Core\Entity\EntityTypeManagerInterface;
++use Drupal\Core\Field\FieldDefinitionInterface;
++use Drupal\Core\File\FileSystemInterface;
++use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Utility\Token;
++use Drupal\feeds\EntityFinderInterface;
++use Drupal\feeds\Exception\EmptyFeedException;
++use Drupal\feeds\Exception\ReferenceNotFoundException;
++use Drupal\feeds\Exception\TargetValidationException;
++use Drupal\feeds\FeedInterface;
++use Drupal\feeds\FeedTypeInterface;
++use Drupal\feeds\FieldTargetDefinition;
++use Drupal\feeds\Plugin\Type\Processor\EntityProcessorInterface;
++use Drupal\feeds\StateInterface;
++use Drupal\file\FileRepositoryInterface;
++use Drupal\file\Plugin\Field\FieldType\FileItem;
++use Drupal\media\Entity\MediaType;
++use Drupal\media\Entity\Media as MediaEntity;
++use Drupal\media\MediaInterface;
++use GuzzleHttp\ClientInterface;
++use Symfony\Component\DependencyInjection\ContainerInterface;
++
++/**
++ * Defines a media field mapper.
++ *
++ * @FeedsTarget(
++ *   id = "media",
++ *   field_types = {"entity_reference"}
++ * )
++ */
++class Media extends File {
++
++  /**
++   * Constructs a File object.
++   *
++   * @param array $configuration
++   *   The plugin configuration.
++   * @param string $plugin_id
++   *   The plugin id.
++   * @param array $plugin_definition
++   *   The plugin definition.
++   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
++   *   The entity type manager.
++   * @param \GuzzleHttp\ClientInterface $client
++   *   The http client.
++   * @param \Drupal\Core\Utility\Token $token
++   *   The token service.
++   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
++   *   The entity field manager.
++   * @param \Drupal\feeds\EntityFinderInterface $entity_finder
++   *   The Feeds entity finder service.
++   * @param \Drupal\Core\File\FileSystemInterface $file_system
++   *   The file and stream wrapper helper.
++   * @param \Drupal\file\FileRepositoryInterface|null $file_repository
++   *   The file repository.
++   * @param \Drupal\Core\Config\ImmutableConfig $file_config
++   *   The system.file configuration.
++   */
++  public function __construct(array $configuration, $plugin_id, array $plugin_definition, EntityTypeManagerInterface $entity_type_manager, ClientInterface $client, Token $token, EntityFieldManagerInterface $entity_field_manager, EntityFinderInterface $entity_finder, FileSystemInterface $file_system, FileRepositoryInterface $file_repository, ImmutableConfig $file_config) {
++    $this->settings = $this->getMediaFieldsSettings($configuration);
++    parent::__construct($configuration, $plugin_id, $plugin_definition, $entity_type_manager, $client, $token, $entity_field_manager, $entity_finder, $file_system, $file_repository, $file_config);
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
++    return new static(
++      $configuration,
++      $plugin_id,
++      $plugin_definition,
++      $container->get('entity_type.manager'),
++      $container->get('http_client'),
++      $container->get('token'),
++      $container->get('entity_field.manager'),
++      $container->get('feeds.entity_finder'),
++      $container->get('file_system'),
++      $container->get('file.repository'),
++      $container->get('config.factory')->get('system.file'),
++    );
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public static function targets(array &$targets, FeedTypeInterface $feed_type, array $definition) {
++    // Don't show mapping target to media if the module is not enabled.
++    if (!\Drupal::moduleHandler()->moduleExists('media')) {
++      return;
++    }
++
++    $processor = $feed_type->getProcessor();
++
++    if (!$processor instanceof EntityProcessorInterface) {
++      return $targets;
++    }
++    $field_definitions = \Drupal::service('entity_field.manager')->getFieldDefinitions($processor->entityType(), $processor->bundle());
++
++    // Only use this target if field is media and at least one of its bundles
++    // has a source field that extends from FileItem.
++    foreach ($field_definitions as $id => $field_definition) {
++      if ($field_definition->getType() == 'entity_reference' && $field_definition->getSetting('target_type') == 'media') {
++        $media_field_settings = $field_definition->getSettings();
++        foreach ($media_field_settings['handler_settings']['target_bundles'] as $media_type_id) {
++          $media_type = MediaType::load($media_type_id);
++          $source_field_definition = $media_type->getSource()->getSourceFieldDefinition($media_type);
++          if (is_a($source_field_definition->getItemDefinition()->getClass(), FileItem::class, TRUE)) {
++            if ($target = static::prepareTarget($field_definition)) {
++              $target->setPluginId($definition['id']);
++              $targets[$id] = $target;
++              break;
++            }
++          }
++        }
++      }
++    }
++  }
++
++  /**
++   * {@inheritDoc}
++   */
++  public function setTarget(FeedInterface $feed, EntityInterface $entity, $field_name, array $raw_values) {
++    $values = [];
++    $entity_target = $this->getEntityTarget($feed, $entity);
++    foreach ($raw_values as $delta => $columns) {
++      try {
++        // Remove query parameter from URL to prevent invalid extension error.
++        $columns['target_id'] = strtok($columns['target_id'], '?');
++        $media_type_id = $this->getMediaType($columns['target_id']);
++        $this->prepareValue($delta, $columns, $media_type_id);
++        if (!isset($media) && !empty($columns['target_id'])) {
++          // If we already have a Media entity with the current fid then we
++          // don't need a new one.
++          $query = $this->entityTypeManager->getStorage("media")->getQuery();
++          $source_field = $this->settings['bundles'][$media_type_id]['source_field'];
++          if ($mid = $query->condition($source_field, $columns['target_id'])->accessCheck(FALSE)->execute()) {
++            $mids = array_values($mid);
++            $mid = array_shift($mids);
++            // Do not add an existing media to avoid duplicates.
++            if ($entity_target) {
++              $item_list = $entity_target->get($field_name);
++              foreach ($item_list->getValue() as $value) {
++                if ($value['target_id'] == $mid) {
++                  continue 2;
++                }
++              }
++            }
++            $media = MediaEntity::load($mid);
++          }
++          else {
++            // Create a new media entity.
++            $processor_owner_id = $feed->getType()->getProcessor()->configuration['owner_id'];
++            $media = $this->createMedia($entity, $columns['target_id'], $media_type_id, $processor_owner_id);
++          }
++          /** @var \Drupal\media\MediaInterface $media */
++          $media->setPublished(TRUE)->save();
++          // Add media id as target id.
++          $columns['target_id'] = $media->id();
++        }
++        $values[] = $columns;
++        unset($media);
++      }
++      catch (ReferenceNotFoundException $e) {
++        // The referenced entity is not found. We need to enforce Feeds to try
++        // to import the same item again on the next import.
++        // Feeds stores a hash of every imported item in order to make the
++        // import process more efficient by ignoring items it has already seen.
++        // In this case we need to destroy the hash in order to be able to
++        // import the reference on a next import.
++        $entity->get('feeds_item')->hash = NULL;
++        $feed->getState(StateInterface::PROCESS)->setMessage($e->getFormattedMessage(), 'warning', TRUE);
++      }
++      catch (EmptyFeedException $e) {
++        // Nothing wrong here.
++      }
++      catch (TargetValidationException $e) {
++        // Validation failed.
++        $this->addMessage($e->getFormattedMessage(), 'error');
++      }
++    }
++
++    if (!empty($values) && $entity_target) {
++      $item_list = $entity_target->get($field_name);
++
++      // Append these values to the existing values.
++      $values = array_merge($item_list->getValue(), $values);
++      $item_list->setValue($values);
++    }
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
++    $form = parent::buildConfigurationForm($form, $form_state);
++
++    // Remove autocreate option, when enabled it bypasses the right file management.
++    unset($form['autocreate']);
++
++    return $form;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getSummary() {
++    $summary = parent::getSummary();
++
++    // Remove autocreate from the summary to avoid confusion.
++    foreach ($summary as $position => $line) {
++      if (preg_match('/^Autocreate/', $line->__toString())) {
++        unset($summary[$position]);
++      }
++    }
++
++    return $summary;
++  }
++
++  /**
++   * Prepares a single value.
++   *
++   * @param int $delta
++   *   The field delta.
++   * @param array $values
++   *   The values.
++   * @param string $media_type_id
++   *   The target media type.
++   */
++  protected function prepareValue($delta, array &$values, $media_type_id = NULL) {
++    foreach ($values as $column => $value) {
++      switch ($column) {
++        case 'target_id':
++          $values[$column] = $this->getFile($value);
++          break;
++      }
++    }
++
++    if ($media_type_id) {
++      $values['display'] = (int) $this->settings['bundles'][$media_type_id]['display_default'];
++    }
++    else {
++      $values['display'] = (int) $this->settings['display_default'];
++    }
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  protected static function prepareTarget(FieldDefinitionInterface $field_definition) {
++    // Only reference media entities.
++    $type = $field_definition->getSetting('target_type');
++
++    if (!\Drupal::entityTypeManager()->getDefinition($type)->entityClassImplements(MediaInterface::class)) {
++      return;
++    }
++
++    return FieldTargetDefinition::createFromFieldDefinition($field_definition)
++      ->addProperty('target_id');
++  }
++
++  /**
++   * Constructs a File object.
++   *
++   * @param array $configuration
++   *   The plugin configuration.
++   */
++  protected function getMediaFieldsSettings(array $configuration) {
++    $settings = [
++      'file_extensions' => [],
++    ];
++    $this->targetDefinition = $configuration['target_definition'];
++    $media_field_settings = $this->targetDefinition->getFieldDefinition()->getSettings();
++    foreach ($media_field_settings['handler_settings']['target_bundles'] as $media_type_id) {
++      $media_type = MediaType::load($media_type_id);
++      $source_field_definition = $media_type->getSource()->getSourceFieldDefinition($media_type);
++      // Only extracting extensions from fields that extend FileItem.
++      if (is_a($source_field_definition->getItemDefinition()->getClass(), FileItem::class, TRUE)) {
++        $settings['bundles'][$media_type_id] = $source_field_definition->getSettings();
++        $settings['bundles'][$media_type_id]['source_field'] = $source_field_definition->getName();
++        $normalized_extensions = str_replace(',', ' ', $settings['bundles'][$media_type_id]['file_extensions']);
++        $settings['bundles'][$media_type_id]['file_extensions'] = $normalized_extensions;
++        $settings['file_extensions'] += explode(' ', $normalized_extensions);
++      }
++    }
++    $settings['file_extensions'] = implode(' ', $settings['file_extensions']);
++    return $settings;
++  }
++
++  /**
++   * Returns the media type that matches based on the file extension.
++   *
++   * @param string $file_path
++   *   The file path.
++   *
++   * @return string
++   *   The media type id.
++   */
++  protected function getMediaType($file_path): string {
++    $bundles = $this->settings['bundles'];
++    // If only one bundle then return it.
++    if (count($bundles) === 1) {
++      return array_key_first($bundles);
++    }
++
++    // When multiple bundles then find the best based on the extension.
++    $extension = pathinfo($file_path, PATHINFO_EXTENSION);
++    foreach ($bundles as $media_type_id => $source_field_settings) {
++      $extensions = $source_field_settings['file_extensions'];
++      $extensions = explode(' ', $source_field_settings['file_extensions'] ?: '');
++      if (in_array($extension, $extensions, TRUE)) {
++        return $media_type_id;
++      }
++    };
++  }
++
++  /**
++   * Creates a Media entity.
++   *
++   * @param \Drupal\Core\Entity\EntityInterface $entity
++   *   The target object.
++   * @param int $target_id
++   *   The id of the target to set.
++   * @param string $media_type_id
++   *   The target media type.
++   * @param int $processor_owner_id
++   *   The target media type.
++   *
++   * @return EntityInterface|null
++   *   The Media entity.
++   */
++  protected function createMedia(EntityInterface $entity, $target_id, $media_type_id, $processor_owner_id) {
++    $source_field = $this->settings['bundles'][$media_type_id]['source_field'];
++    return MediaEntity::create([
++      'bundle' => $media_type_id,
++      'name' => $entity->label(),
++      'uid' => $processor_owner_id,
++      $source_field => [
++        'target_id' => $target_id,
++      ],
++    ]);
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  protected function getFilepath($url) {
++    $media_type_id = $this->getMediaType($url);
++    $destination = $this->token->replace($this->settings['bundles'][$media_type_id]['uri_scheme'] . '://' . trim($this->settings['bundles'][$media_type_id]['file_directory'], '/'));
++    $this->fileSystem->prepareDirectory($destination, FileSystemInterface::MODIFY_PERMISSIONS | FileSystemInterface::CREATE_DIRECTORY);
++    return $destination . '/' . $this->getFileName($url);
++  }
++
++}
+diff --git a/src/Plugin/Type/Target/FieldTargetBase.php b/src/Plugin/Type/Target/FieldTargetBase.php
+index 331753ee..55d927d0 100644
+--- a/src/Plugin/Type/Target/FieldTargetBase.php
++++ b/src/Plugin/Type/Target/FieldTargetBase.php
+@@ -81,7 +81,7 @@ abstract class FieldTargetBase extends TargetBase implements ConfigurableTargetI
+    */
+   public function __construct(array $configuration, $plugin_id, array $plugin_definition) {
+     $this->targetDefinition = $configuration['target_definition'];
+-    $this->settings = $this->targetDefinition->getFieldDefinition()->getSettings();
++    $this->settings = $this->settings ?? $this->targetDefinition->getFieldDefinition()->getSettings();
+     parent::__construct($configuration, $plugin_id, $plugin_definition);
+   }
+ 
+-- 
+GitLab
+
+
+From 8bc493e826b271800ef726b7a9708f53f8f23d17 Mon Sep 17 00:00:00 2001
+From: jidrone <jidrone20@gmail.com>
+Date: Mon, 1 Apr 2024 22:20:19 -0500
+Subject: [PATCH 2/3] Fixed getDestinationDirectory method
+
+---
+ src/Feeds/Target/File.php  | 11 ++++++-----
+ src/Feeds/Target/Media.php |  4 ++--
+ 2 files changed, 8 insertions(+), 7 deletions(-)
+
+diff --git a/src/Feeds/Target/File.php b/src/Feeds/Target/File.php
+index b44adeff..fdd1bdc0 100644
+--- a/src/Feeds/Target/File.php
++++ b/src/Feeds/Target/File.php
+@@ -211,7 +211,8 @@ class File extends EntityReference {
+     }
+ 
+     // Compose file path.
+-    $filepath = $this->getFilepath($value);
++    $filepath = $this->getDestinationDirectory($value) . '/' . $this->getFileName($value);
++
+     switch ($this->configuration['existing']) {
+       case FileSystemInterface::EXISTS_ERROR:
+         if (file_exists($filepath) && $fid = $this->findEntity('uri', $filepath)) {
+@@ -237,18 +238,18 @@ class File extends EntityReference {
+   }
+ 
+   /**
+-   * Prepares destination directory returns the filepath.
++   * Prepares destination directory and returns its path.
+    *
+    * @param string $url
+    *   The URL of file.
+    *
+    * @return string
+-   *   The filepath.
++   *   The directory to save the file to.
+    */
+-  protected function getFilepath($url) {
++  protected function getDestinationDirectory($url) {
+     $destination = $this->token->replace($this->settings['uri_scheme'] . '://' . trim($this->settings['file_directory'], '/'));
+     $this->fileSystem->prepareDirectory($destination, FileSystemInterface::MODIFY_PERMISSIONS | FileSystemInterface::CREATE_DIRECTORY);
+-    return $destination . '/' . $this->getFileName($url);
++    return $destination;
+   }
+ 
+   /**
+diff --git a/src/Feeds/Target/Media.php b/src/Feeds/Target/Media.php
+index 0d966be5..72aa7c5f 100644
+--- a/src/Feeds/Target/Media.php
++++ b/src/Feeds/Target/Media.php
+@@ -350,11 +350,11 @@ class Media extends File {
+   /**
+    * {@inheritdoc}
+    */
+-  protected function getFilepath($url) {
++  protected function getDestinationDirectory($url) {
+     $media_type_id = $this->getMediaType($url);
+     $destination = $this->token->replace($this->settings['bundles'][$media_type_id]['uri_scheme'] . '://' . trim($this->settings['bundles'][$media_type_id]['file_directory'], '/'));
+     $this->fileSystem->prepareDirectory($destination, FileSystemInterface::MODIFY_PERMISSIONS | FileSystemInterface::CREATE_DIRECTORY);
+-    return $destination . '/' . $this->getFileName($url);
++    return $destination;
+   }
+ 
+ }
+-- 
+GitLab
+
+
+From d851660bc21944e1281c8c4d0ae0daa88e8fc111 Mon Sep 17 00:00:00 2001
+From: jidrone <jidrone20@gmail.com>
+Date: Tue, 2 Apr 2024 00:05:53 -0500
+Subject: [PATCH 3/3] Added check to skip empty value before trying to set the
+ target
+
+---
+ src/Feeds/Target/Media.php | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/Feeds/Target/Media.php b/src/Feeds/Target/Media.php
+index 72aa7c5f..14f05a5d 100644
+--- a/src/Feeds/Target/Media.php
++++ b/src/Feeds/Target/Media.php
+@@ -131,6 +131,9 @@ class Media extends File {
+     $entity_target = $this->getEntityTarget($feed, $entity);
+     foreach ($raw_values as $delta => $columns) {
+       try {
++        if (!isset($columns['target_id'])) {
++          continue;
++        }
+         // Remove query parameter from URL to prevent invalid extension error.
+         $columns['target_id'] = strtok($columns['target_id'], '?');
+         $media_type_id = $this->getMediaType($columns['target_id']);
+-- 
+GitLab
+

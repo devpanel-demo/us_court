@@ -1,0 +1,30 @@
+uuid: f191da9d-473f-468d-9aef-e939eb15200d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.court_finder
+    - facets.facet.usc_court_type
+  module:
+    - block_visibility_groups
+    - facets
+  theme:
+    - uscgov
+id: uscgov_courttype
+theme: uscgov
+region: sidebar
+weight: -5
+provider: null
+plugin: 'facet_block:usc_court_type'
+settings:
+  id: 'facet_block:usc_court_type'
+  label: 'Court Type'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: uscgov_courttype
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: court_finder

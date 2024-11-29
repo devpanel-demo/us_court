@@ -1,0 +1,26 @@
+uuid: 2251571e-6783-4938-8dba-fdd585157648
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.file.document.field_date_updated
+    - field.field.file.document.field_file_description
+    - field.field.file.document.field_file_title
+  module:
+    - file
+id: file.document.default
+targetEntityType: file
+bundle: document
+mode: default
+content:
+  field_file_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_date_updated: true
+  field_file_description: true

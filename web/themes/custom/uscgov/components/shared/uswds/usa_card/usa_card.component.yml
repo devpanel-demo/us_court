@@ -1,0 +1,141 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Card
+status: experimental
+group: USWDS
+props:
+  type: object
+  properties:
+    title_suffix:
+      type: array
+      description: title_suffix is necessary for contextual links.
+    settings:
+      type: object
+      properties:
+        wrapper_element:
+          title: Wrapping element
+          type: string
+          description: Wrapping HTML element. Defaults to <article>.
+        flag:
+          title: Flag
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: Display in a horizontal (“flag”) orientation at a specified width ($theme-card-flag-min-width).
+        media_right:
+          title: Media right
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: In combination with usa-card--flag, sets the media element on the right. (Flag cards display media on the left by default.)
+        header_first:
+          title: Header first
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: Displays the header element before the media element.
+        media_inset:
+          title: Inset media
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: Indents the media element so it doesn't extend to the edge of the card.
+        media_exdent:
+          title: Extend media
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: Extends the media element out over the card border. Useful for light-bordered cards.
+        body_exdent:
+          title: Extend body
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: Extends the body element out over the card border. Useful for light-bordered cards.
+        footer_exdent:
+          title: Extend footer
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: Extends the footer element out over the card border. Useful for light-bordered cards.
+    classes:
+      title: Extra CSS classes
+      type: string
+      description: Extra CSS classes that get added to wrapper element.
+    title:
+      title: Title
+      type: string
+      description: Title of the card.
+      default: ''
+    image:
+      title: Image
+      type:
+        - object
+        - string
+      properties:
+        type:
+          title: Type
+          type: string
+          description: The type of image entity or url.
+        entity:
+          title: The file entity.
+          type: object
+          description: The file entity.
+        url:
+          title: URL
+          type: string
+          description: The image URL.
+        alt:
+          title: Alt
+          type: string
+          description: The image alt.
+        title:
+          title: Title
+          type: string
+          description: The image title.
+    cta:
+      title: CTA
+      type: object
+      description: Title and CTA that generates a button link.
+      properties:
+        url:
+          title: URL
+          type: string
+          description: Link for the button.
+        title:
+          title: Title
+          type: string
+          description: Anchor text of the button.
+        new_tab:
+          title: Open in new tab
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: If the link should open in new tab when clicked.
+          default: false
+        show:
+          title: Complete Card CTA
+          type: 
+            - boolean
+            - string
+            - 'null'
+          description: If the link should cover the entire card.
+          default: false
+    child_items:
+      title: Child Items
+      type: string
+      description: Additional items or links.
+      default: ''
+slots:
+  body:
+    title: Body
+libraryOverrides:
+  dependencies:
+    - uscgov/button

@@ -1,0 +1,23 @@
+uuid: 129a3740-3e10-4163-9621-d1ca277d22f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tv_toolbar
+    - paragraphs.paragraphs_type.tableau_visualization
+  module:
+    - options
+id: paragraph.tableau_visualization.field_tv_toolbar
+field_name: field_tv_toolbar
+entity_type: paragraph
+bundle: tableau_visualization
+label: 'Show toolbar?'
+description: 'When enabled, the toolbar allows the user to download the visualization, inspect the share code, etc.'
+required: false
+translatable: false
+default_value:
+  -
+    value: hidden
+default_value_callback: ''
+settings: {  }
+field_type: list_string

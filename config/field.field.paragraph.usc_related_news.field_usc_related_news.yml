@@ -1,0 +1,36 @@
+uuid: 0dd9b81c-f5f9-4198-a09c-5e4825aa892a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_related_news
+    - paragraphs.paragraphs_type.usc_related_news
+    - views.view.usc_latest_news
+  module:
+    - viewsreference
+id: paragraph.usc_related_news.field_usc_related_news
+field_name: field_usc_related_news
+entity_type: paragraph
+bundle: usc_related_news
+label: 'Related News'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: b77e8bfb-93f8-470c-9cee-1d85ac56b191
+    display_id: block_1
+    data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+    auto_create_bundle: ''
+  plugin_types:
+    block: block
+  preselect_views:
+    usc_latest_news: usc_latest_news
+  enabled_settings: {  }
+field_type: viewsreference

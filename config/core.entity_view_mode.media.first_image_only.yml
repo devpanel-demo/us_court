@@ -1,0 +1,11 @@
+uuid: 4b5bab5e-5bc9-499b-94ce-3123c72faa6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.first_image_only
+label: 'First image only'
+description: 'Shows the first image only (without any caption)'
+targetEntityType: media
+cache: true

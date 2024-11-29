@@ -1,0 +1,8 @@
+{% set data = items.0.content|render|split(':') %}
+{% set content = 'Volume '|t ~ data.0 ~ ' Number '|t ~ data.1 %}
+{% set items = [{ content }] %}
+
+{{ include('uscgov:label-pill', {
+  field_name,
+  items,
+}, with_context = false) }}

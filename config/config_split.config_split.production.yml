@@ -1,0 +1,21 @@
+uuid: 882707b4-a751-40f4-be24-42c18494e512
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: Production
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config_split/prod/
+module: {  }
+theme: {  }
+complete_list:
+  - google_tag.container.gtm_khxckx8p
+partial_list:
+  - autologout.settings
+  - core.extension
+  - system.logging
+  - usc_content_sync.settings

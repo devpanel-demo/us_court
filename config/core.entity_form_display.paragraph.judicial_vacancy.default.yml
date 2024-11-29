@@ -1,0 +1,188 @@
+uuid: fa384170-a308-4d37-9054-cd30b2afbd5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.judicial_vacancy.field_adjusted
+    - field.field.paragraph.judicial_vacancy.field_authorized_judgeships
+    - field.field.paragraph.judicial_vacancy.field_circuit
+    - field.field.paragraph.judicial_vacancy.field_confirmation_date
+    - field.field.paragraph.judicial_vacancy.field_court_type
+    - field.field.paragraph.judicial_vacancy.field_days_pending
+    - field.field.paragraph.judicial_vacancy.field_district
+    - field.field.paragraph.judicial_vacancy.field_future_pending
+    - field.field.paragraph.judicial_vacancy.field_incumbent
+    - field.field.paragraph.judicial_vacancy.field_nomination_date
+    - field.field.paragraph.judicial_vacancy.field_nominee
+    - field.field.paragraph.judicial_vacancy.field_notice_date
+    - field.field.paragraph.judicial_vacancy.field_opening_date
+    - field.field.paragraph.judicial_vacancy.field_pending
+    - field.field.paragraph.judicial_vacancy.field_reason
+    - field.field.paragraph.judicial_vacancy.field_vacancies
+    - field.field.paragraph.judicial_vacancy.field_weighted
+    - paragraphs.paragraphs_type.judicial_vacancy
+  module:
+    - datetime
+    - field_group
+third_party_settings:
+  field_group:
+    group_summary:
+      children:
+        - field_court_type
+        - field_authorized_judgeships
+        - field_vacancies
+        - field_pending
+        - field_future_pending
+      label: Summary
+      region: content
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+        open: false
+id: paragraph.judicial_vacancy.default
+targetEntityType: paragraph
+bundle: judicial_vacancy
+mode: default
+content:
+  field_adjusted:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_authorized_judgeships:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  field_circuit:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_confirmation_date:
+    type: datetime_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_court_type:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  field_days_pending:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_district:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_future_pending:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_incumbent:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nomination_date:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nominee:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_notice_date:
+    type: datetime_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_opening_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_pending:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_reason:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_vacancies:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_weighted:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  group_summary:
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+hidden:
+  created: true
+  status: true

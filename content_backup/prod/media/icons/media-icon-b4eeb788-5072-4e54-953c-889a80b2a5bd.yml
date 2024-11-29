@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: b4eeb788-5072-4e54-953c-889a80b2a5bd
+entity_type: media
+bundle: icon
+base_fields:
+  name: clipboard-outline.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/clipboard-outline.svg'
+      url: '/sites/default/files/icons/clipboard-outline.svg'

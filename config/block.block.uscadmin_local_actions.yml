@@ -1,0 +1,20 @@
+uuid: 860ca948-43e8-4fc4-80fb-016bd2f9fbd6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - uscadmin
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: uscadmin_local_actions
+theme: uscadmin
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

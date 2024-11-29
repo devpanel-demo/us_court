@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{{ include('uscgov:usa_breadcrumb', {
+  items: breadcrumb,
+  page_title,
+  }, with_context = false) }}

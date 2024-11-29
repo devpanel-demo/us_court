@@ -1,0 +1,19 @@
+uuid: c069d384-7feb-48f0-95f8-e0e4cd1a24e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_tv_share_link
+field_name: field_tv_share_link
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

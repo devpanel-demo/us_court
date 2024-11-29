@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an example Gutenberg block server-side.
+ *
+ * Available variables:
+ * - block_name: The Gutenberg block name.
+ * - block_content: The content of this block.
+ * - block_attributes: The attributes of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *
+ * @see template_preprocess_gutenberg_block()
+ * @see template_preprocess_gutenberg_block__uswds__icon()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('gutenberg_uswds_icon/block-view') }}
+{% set buttonAttributes = create_attribute() %}
+{%
+  set classes = [
+    'wp-block-uswds-icon usa-icon-container',
+  ]
+%}
+<div {{ buttonAttributes.addClass(classes) }} style="text-align: {{block_attributes.align}}">
+  <svg
+    class="usa-icon {{block_attributes.iconType}}"
+    aria-hidden="true"
+    aria-labelledby="media-icon-{{block_attributes.mediaEntityId}}"
+    viewBox="{{block_attributes.viewBox}}"
+    style="background-color: {{block_attributes.backgroundColor}}; color:{{block_attributes.svgColor}}"
+  >
+    {{block_attributes.mediaEntity.svg|raw}}
+    <title id="media-icon-{{block_attributes.mediaEntityId}}">{{block_attributes.imageAlt}}</title>
+  </svg>
+</div>

@@ -1,0 +1,21 @@
+uuid: 588eb4f4-8c51-4471-9aa3-c08d38b33927
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_landing_featured_content
+label: 'Content - Landing (Overview)'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      landing_featured_content: landing_featured_content
+selection_logic: and
+weight: -1
+relationships: {  }

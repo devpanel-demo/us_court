@@ -1,0 +1,84 @@
+uuid: 10d83e24-01ae-4c45-912e-1b7736ead03b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.gallery_item
+    - field.field.media.piksel_program.field_alternate_text
+    - field.field.media.piksel_program.field_file_title
+    - field.field.media.piksel_program.field_program_description
+    - field.field.media.piksel_program.field_title
+    - image.style.piksel_thumbnail
+    - media.type.piksel_program
+  module:
+    - image
+    - nomarkup
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.piksel_program.gallery_item
+targetEntityType: media
+bundle: piksel_program
+mode: gallery_item
+content:
+  field_program_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  thumbnail:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: file
+      image_style: piksel_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_alternate_text: true
+  field_file_title: true
+  name: true
+  search_api_excerpt: true
+  uid: true

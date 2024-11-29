@@ -1,0 +1,5 @@
+name: 'US Courts liveness modules'
+description: 'Provides a path to display a liveness message to determine whether the web server is operative.'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'

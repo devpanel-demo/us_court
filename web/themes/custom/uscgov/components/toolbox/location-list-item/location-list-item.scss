@@ -1,0 +1,98 @@
+@use "../../../sass/custom/global/media-queries" as *;
+@use "../../../sass/custom/global/mixins" as *;
+
+.location__list_item {
+  text-decoration: none;
+  margin-bottom: 50px;
+  display: block;
+
+  .location__list_item__image {
+    flex-shrink: 0;
+
+    img {
+      border-radius: 10px;
+      display: block;
+    }
+  }
+
+  h4.location__list_item__heading {
+    font-weight: 700;
+    margin-block: var(--spacing-header-top) var(--spacing-header-bottom);
+
+    @media ($tablet_break) {
+      margin-block: 0 var(--spacing-header-bottom);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+  }
+
+  .location__list_item__address,
+  .location__list_item__phone {
+    color: var(--color-primitive-neutral-base-dark);
+    font-size: 16px;
+
+    .field__item {
+      margin-left: 30px;
+    }
+
+    &:before {
+      float: left;
+      margin-top: 5px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: "";
+      mask-image: url('images/location_on.svg');
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      background-color: currentColor;
+    }
+  }
+
+  .location__list_item__address {
+    margin-bottom: 0.5rem;
+    line-height: 21px;
+
+    .address-line1-element {
+      display: block;
+    }
+
+    a {
+      display: inline-block;
+      @include change-extlink-svg-color();
+
+      .extlink-nobreak {
+        svg {
+          width: 20px;
+          height: 23px;
+          transform: translateY(4px);
+          path {
+            stroke-width: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .location__list_item__phone {
+    &:before {
+      mask-image: url('images/phone.svg');
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .location__list_item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 50px;
+
+    .location__list_item__image {
+      width: 40%;
+    }
+  }
+}

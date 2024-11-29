@@ -1,0 +1,163 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 86627d2e-c5a9-426a-934a-a63c5722496b
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Case Video Archive'
+  status: true
+  langcode: en
+  created: '1460062378'
+  changed: 1727753530
+  author: Emily_Poland@ao.uscourts.gov
+  url: /case-video-archive
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '1'
+  menu_link:
+    uuid: a5c883c7-021b-4aad-b780-0d188642e49f
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Case Video Archive'
+      enabled: true
+      expanded: false
+      langcode: und
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/14087'
+          title: null
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 3261bc4a-337a-487d-986e-27e509aa9703
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Cameras in Courts'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/235'
+              title: ''
+              options: {  }
+          weight: 4
+          parent:
+            uuid: 8108b000-d527-43c2-aa29-4babc8326bf6
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Remote Public Access to Proceedings'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/36115'
+                  title: ''
+                  options: {  }
+              weight: 0
+              parent:
+                uuid: 23413c28-8ab4-4b5b-b3c8-abace54ec969
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Access to Court Proceedings'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'internal:/access-court-proceedings'
+                      title: ''
+                      options: {  }
+                  weight: 3
+                  parent:
+                    uuid: 72790a00-4c27-45a1-b94a-4bc19802ecec
+                    entity_type: menu_link_content
+                    bundle: main
+                    base_fields:
+                      title: 'Court Records'
+                      enabled: true
+                      expanded: false
+                      langcode: en
+                      menu_name: main
+                      description: null
+                      link:
+                        -
+                          uri: 'entity:node/7'
+                          title: ''
+                          options: {  }
+                      weight: -66
+                      parent: ''
+                    custom_fields:
+                      field_description_text:
+                        -
+                          value: 'Learn how to file and access case files and court records information. '
+                      field_enable_megamenu:
+                        -
+                          value: '1'
+                      field_popular_links: null
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'The public may visit a federal court to watch each step of the federal judicial process.'
+                  field_enable_megamenu:
+                    -
+                      value: '0'
+                  field_popular_links: null
+            custom_fields:
+              field_description_text: null
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<p>\r\n\tThe Conference most recently experimented with cameras in 2010, when it authorized a pilot in 14 district courts. The pilot program took place from July 18, 2011 to July 18, 2015. March 15, 2016, the Judicial Conference received the report of its Committee on Court Administration and Case Management and agreed not to make any changes to the Conference's cameras policy at this time.\r\n</p>\r\n<h2>\r\n\tArchived Court Videos<br>\r\n</h2>\r\n<p>\r\n\tVideo recordings and brief summaries of the cases from the pilot available. <a href=\"node/235\">View videos</a> from the 9th Circuit courts still participating in the pilot.&nbsp;Filter by court, subject matter, and procedural posture to find the case you want to view.&nbsp;\r\n</p>\r\n\r\n<!-- wp:drupalblock/views-block-cameras-in-court-landing-block-1 {\"blockId\":\"views_block:cameras_in_court_landing-block_1\"} /-->"
+      summary: "<p>\r\n\tThe Judicial Conference has examined the use of cameras in federal courts on several occasions.\r\n</p>\r\n"
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>The Judicial Conference has examined the use of cameras in federal courts on several occasions.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: ec1cf5d4-259c-43dd-968e-4d3196f11919
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Cameras in Courts'
+        weight: 6
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

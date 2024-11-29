@@ -1,0 +1,367 @@
+uuid: ffc12096-ddde-4641-ad3c-54968a1a014c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news_issue.body
+    - field.field.node.news_issue.field_banner_image
+    - field.field.node.news_issue.field_landing_page_image
+    - field.field.node.news_issue.field_lead_paragraph
+    - field.field.node.news_issue.field_logo
+    - field.field.node.news_issue.field_usc_additional_content
+    - field.field.node.news_issue.field_usc_govdelivery_form
+    - field.field.node.news_issue.field_usc_notification
+    - field.field.node.news_issue.field_usc_related_news
+    - field.field.node.news_issue.field_usc_table_of_contents
+    - field.field.node.news_issue.field_workbench_access
+    - node.type.news_issue
+    - workflows.workflow.us_courts_workflow
+  module:
+    - content_moderation
+    - field_group
+    - inline_entity_form
+    - media_library
+    - path
+    - scheduler
+    - scheduler_content_moderation_integration
+    - text
+third_party_settings:
+  field_group:
+    group_node_form:
+      children:
+        - group_banner_image
+        - group_lead_elements
+        - group_summary
+        - group_sidebar
+        - group_featured_page
+      label: 'Node Form'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+        direction: vertical
+        width_breakpoint: 640
+    group_banner_image:
+      children:
+        - field_banner_image
+      label: 'Banner Image'
+      region: content
+      parent_name: group_node_form
+      weight: 18
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_lead_elements:
+      children:
+        - field_logo
+        - field_lead_paragraph
+      label: 'Lead Elements'
+      region: content
+      parent_name: group_node_form
+      weight: 19
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_summary:
+      children:
+        - body
+      label: Summary
+      region: content
+      parent_name: group_node_form
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_sidebar:
+      children:
+        - field_usc_additional_content
+        - field_usc_govdelivery_form
+        - field_usc_notification
+        - field_usc_table_of_contents
+        - field_usc_related_news
+      label: 'Additional Content'
+      region: content
+      parent_name: group_node_form
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_featured_page:
+      children:
+        - field_landing_page_image
+      label: 'Featured Page'
+      region: content
+      parent_name: group_node_form
+      weight: 22
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.news_issue.default
+targetEntityType: node
+bundle: news_issue
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 5
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_landing_page_image:
+    type: media_library_widget
+    weight: 7
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_lead_paragraph:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_logo:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_usc_additional_content:
+    type: inline_entity_form_complex
+    weight: 9
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_usc_govdelivery_form:
+    type: inline_entity_form_complex
+    weight: 10
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_usc_notification:
+    type: inline_entity_form_complex
+    weight: 11
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_usc_related_news:
+    type: inline_entity_form_complex
+    weight: 13
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: false
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_usc_table_of_contents:
+    type: inline_entity_form_complex
+    weight: 12
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_workbench_access:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 53
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  unpublish_on: true
+  unpublish_state: true

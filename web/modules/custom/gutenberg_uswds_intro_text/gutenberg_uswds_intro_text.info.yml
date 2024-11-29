@@ -1,0 +1,9 @@
+name: Gutenberg - USWDS Intro Text
+type: module
+description: USWDS Intro Text Gutenberg block.
+package: Gutenberg
+core_version_requirement: ^9 || ^10
+dependencies:
+  - gutenberg:gutenberg
+  - gutenberg_uswds:gutenberg_uswds
+  - drupal:media_library

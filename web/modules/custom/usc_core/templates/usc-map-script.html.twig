@@ -1,0 +1,16 @@
+{# templates/usc-tableau-script.html.twig #}
+
+{#
+  Theme implementation for interactive map script.
+
+  Available variables:
+  - script: The interactive map script.
+  - id: The interactive map script id.
+#}
+{% if script is defined %}
+  <div class="content" id="{{ id }}">
+    <object class="tableauViz">
+      {{ script|raw }}
+    </object>
+  </div>
+{% endif %}

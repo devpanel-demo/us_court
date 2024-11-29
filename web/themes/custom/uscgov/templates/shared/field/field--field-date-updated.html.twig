@@ -1,0 +1,3 @@
+{{ include('uscgov:published-on', {
+  date: items.0.content|render|striptags|trim,
+}, with_context = false) }}

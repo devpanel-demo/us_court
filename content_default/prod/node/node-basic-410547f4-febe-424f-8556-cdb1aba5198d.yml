@@ -1,0 +1,179 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 410547f4-febe-424f-8556-cdb1aba5198d
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Judiciary Conferences That Cost More Than $100,000'
+  status: true
+  langcode: en
+  created: '1421935231'
+  changed: 1731344818
+  author: paul_williams@ao.uscourts.gov
+  url: /data-news/reports/annual-reports/judiciary-conferences-cost-more-100000
+  revision_log_message: null
+  revision_uid: '43'
+  menu_link:
+    uuid: 5d9dc7a8-ce9f-44c0-8836-cb5d5c934b5b
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Judiciary Conferences That Cost More Than $100,000'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/4326'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 5eb0f660-d6df-495c-8fa0-e1ee74d9721c
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Annual Reports'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/data-news/reports/annual-reports'
+              title: ''
+              options: {  }
+          weight: 1
+          parent:
+            uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: Reports
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/3129'
+                  title: ''
+                  options: {  }
+              weight: 1
+              parent:
+                uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Data & News'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/8'
+                      title: ''
+                      options: {  }
+                  weight: -68
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/16578'
+                      title: 'Federal Court Scams'
+                      options: {  }
+                    -
+                      uri: 'entity:node/3122'
+                      title: "Director's Annual Report"
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>In fiscal year 2022, the judiciary&nbsp;<a href="file/64304/download">held 50 conferences that cost more than $100,000</a>&nbsp;(pdf). These conferences play a critical role in furthering the administration of justice. Congress recognized the value of the circuit judicial conferences by specific authorization in 28 U.S.C. § 333. Furthermore, Congress created the Federal Judicial Center and authorized its educational mission in 28 U.S.C. § 620; and authorized the U.S. Sentencing Commission to provide guidance and instruction in the sentencing process in 28 U.S.C. § 995.</p><p>The Judicial Conference of the United States’ policies that govern meeting planning and administration provide guidance and oversight of conferences and ensure that funds are used properly and effectively to promote the mission of the federal judiciary. Additionally, the policies require that consideration be given to minimize meeting related costs, including administrative costs, travel, and staff time away from daily duties. Conferences that are estimated to cost over $100,000 involving courts and the Administrative Office are reviewed by the AO Director or his or her assignee. Conferences sponsored by the Federal Judicial Center or the U.S. Sentencing Commission that are estimated to cost over $100,000, are reviewed by assignees of the Center’s Director or Commission’s Chair, respectively.</p><p>Conferences that are expected to exceed $500,000 must be approved in advance by the Director of the Administrative Office, the Director of the Federal Judicial Center, or the Chair of the U.S. Sentencing Commission. For circuit judicial conferences estimated to cost more than $500,000, approval by the Judicial Conference Executive Committee is required. This approval is designed to ensure that conference expenditures and arrangements are advantageous to the judiciary, that appropriate internal controls and procedures are applied, costs are reasonable, and that the objectives of the conference are best met by an in-person experience.</p><h3>Reports for Previous Fiscal Years</h3><ul><li><a href="file/62696/download">Fiscal Year 2021&nbsp;Judiciary Conferences That Cost More Than $100,000</a> (pdf)</li><li><a href="file/29194/download">Fiscal Year 2020&nbsp;Judiciary Conferences That Cost More Than $100,000</a> (pdf)</li><li><a href="file/27855/download">Fiscal Year 2019&nbsp;Judiciary Conferences That Cost More Than $100,000</a>&nbsp;(pdf)</li><li><a href="/file/25654/download">Fiscal Year 2018 Judiciary Conferences That Cost More Than $100,000</a>&nbsp;(pdf)</li><li><a href="/file/24021/download">Fiscal Year 2017 Judiciary Conferences That Cost More Than $100,000</a> (pdf)</li><li><a href="/file/21678/download">Fiscal Year 2016&nbsp;Judiciary Conferences That Cost More Than $100,000</a>&nbsp;(pdf)</li><li><a href="file/19847">Fiscal Year 2015 Judiciary Conferences That Cost More Than $100,000</a>&nbsp;(pdf)</li><li><a href="file/14406">Fiscal Year 2014 Judiciary Conferences That Cost More Than $100,000</a> (pdf)</li><li><a href="file/2750">Fiscal Year 2013 Judiciary Conferences That Cost More Than $100,000</a> (pdf)</li></ul>'
+      summary: 'Annual reports on conferences that cost more than $100,000 and the purposes of the events.'
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: 025b450f-790a-4bbe-9971-95f1184ec207
+      entity_type: paragraph
+      bundle: usc_related_files
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_document:
+          -
+            uuid: e5edc5e6-4e1e-4499-8327-b705577dd373
+            entity_type: media
+            base_fields:
+              name: fy_2023_judiciary_meetings_and_conferences_over_100k.pdf
+              created: '1711051331'
+              status: true
+              langcode: en
+            bundle: document
+        field_usc_label:
+          -
+            value: 'Related Downloads Download the Report'
+        field_usc_title:
+          -
+            value: 'Download the Report'
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 0f304352-989d-4ef0-a66a-8555520cac77
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Deputy Director’s Office'
+        weight: 11
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

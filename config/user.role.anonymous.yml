@@ -1,0 +1,28 @@
+uuid: b3b4a364-09ee-438c-912f-0a548439f94e
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - legal
+    - media
+    - search
+    - search_autocomplete
+    - sitewide_alert
+    - system
+    - usc_court_finder
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'anonymous user'
+weight: -4
+is_admin: false
+permissions:
+  - 'access content'
+  - 'search content'
+  - 'use search autocomplete'
+  - 'view Terms and Conditions'
+  - 'view court_finder_content'
+  - 'view global_site_settings config page entity'
+  - 'view media'
+  - 'view published sitewide alert entities'

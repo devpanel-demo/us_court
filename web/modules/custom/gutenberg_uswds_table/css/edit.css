@@ -1,0 +1,125 @@
+/**
+ * Don't edit this file. Find all style at ./sass folder.
+ **/
+table.wp-block-uswds-table thead th {
+  background-color: #e6e6e6;
+  color: #1b1b1b;
+  background-clip: padding-box;
+  font-weight: 700;
+  line-height: 1.3;
+  border: 1px solid #1b1b1b;
+  padding: 0.5rem 1rem;
+  text-transform: none;
+}
+table.wp-block-uswds-table.usa-table--borderless thead th {
+  background-color: transparent;
+  border-top: 0;
+  color: #1b1b1b;
+  border-left: 0;
+  border-right: 0;
+}
+
+.table-options .blocks-table__placeholder-form {
+  display: block;
+  width: 100%;
+}
+.table-options .components-input-control {
+  margin-right: 10px;
+  float: left;
+}
+.table-options .components-input-control__input {
+  height: 36px !important;
+}
+.table-options .components-button {
+  margin-top: 20px;
+}
+.table-options .components-form-file-upload .components-button {
+  height: 50px;
+  margin-top: 10px;
+}
+
+.usa-pagination ul.usa-pagination__list {
+  margin: 0;
+  padding: 0;
+}
+.usa-pagination ul.usa-pagination__list li {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.wp-block-uswds-table input.search {
+  max-width: 100%;
+  width: 49%;
+}
+.wp-block-uswds-table .block-views .view {
+  pointer-events: none;
+}
+.wp-block-uswds-table .block-views .view-filters .form-row {
+  display: block;
+}
+.wp-block-uswds-table .block-views .view-filters .form-type-textfield {
+  padding: 0;
+  background-color: #fff;
+  border: 0;
+  width: 50%;
+}
+.wp-block-uswds-table .block-views .view-filters .form-type-textfield label {
+  font-weight: normal;
+}
+.wp-block-uswds-table .block-views .view-filters input.form-control {
+  border-radius: 0;
+  color: #3d4551;
+  display: block;
+  margin-top: 0.5rem;
+  max-width: 30rem;
+  padding: 0.5rem;
+  border-width: 1px;
+  border-color: #565c65;
+  border-style: solid;
+  height: 2.5rem;
+  width: 100%;
+}
+.wp-block-uswds-table .block-views .view-filters .form-actions {
+  align-self: flex-end;
+  margin-left: 10px;
+}
+.wp-block-uswds-table .block-views .view-filters .button:disabled {
+  display: none;
+}
+.wp-block-uswds-table .block-views table thead th {
+  background-color: #dfe1e2;
+  border: 1px solid #3d4551;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.wp-block-uswds-table .block-views table thead th a {
+  color: #343a40;
+}
+.wp-block-uswds-table.usa-table--borderless table {
+  border: 0;
+}
+.wp-block-uswds-table.usa-table--borderless table thead th {
+  background-color: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.wp-block-uswds-table.usa-table--striped table thead th {
+  background-color: transparent;
+}
+.wp-block-uswds-table.fixed-layout table {
+  table-layout: fixed;
+}
+
+.usa-label {
+  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.06rem;
+  line-height: 1.3;
+  display: block;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  max-width: 30rem;
+}
+
+/*# sourceMappingURL=edit.css.map */

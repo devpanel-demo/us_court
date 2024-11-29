@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Gallery
+status: experimental
+group: Custom
+props:
+  type: object
+  required:
+    - items
+  properties:
+    title_suffix:
+      type: array
+      description: title_suffix is necessary for contextual links.
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    label:
+      type:
+        - string
+        - boolean
+    items:
+      type: array
+      description: Gallery items.
+libraryOverrides:
+  dependencies:
+    - usc_galleries/gallery

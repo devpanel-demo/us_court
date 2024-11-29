@@ -1,0 +1,4 @@
+{{ include('uscgov:lead-image', {
+  image: content.field_media_image,
+  caption: content.field_file_description|add_suggestion('bare'),
+}, with_context = false) }}

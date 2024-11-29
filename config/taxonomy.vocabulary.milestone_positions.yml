@@ -1,0 +1,9 @@
+uuid: f33e1068-195c-4f39-b015-f3545c48ab72
+langcode: en
+status: true
+dependencies: {  }
+name: 'Milestone Positions'
+vid: milestone_positions
+description: 'Used in Judge content type.'
+weight: 0
+new_revision: false

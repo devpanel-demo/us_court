@@ -1,0 +1,49 @@
+uuid: d66450a8-d60a-4798-bfd4-fc1cab76322c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.court.body
+    - field.field.node.court.field_metatag
+    - node.type.court
+  module:
+    - sdc_display
+    - summary_only
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.court.sidebar
+targetEntityType: node
+bundle: court
+mode: sidebar
+content:
+  body:
+    type: text_summary_only
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_summary: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  field_metatag: true
+  links: true
+  search_api_excerpt: true

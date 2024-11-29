@@ -1,0 +1,380 @@
+uuid: 861d3041-1da6-456d-81f1-06a300c333b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.data_table.body
+    - field.field.node.data_table.field_current_table_number
+    - field.field.node.data_table.field_data_table_all_tables
+    - field.field.node.data_table.field_data_table_category_prefix
+    - field.field.node.data_table.field_data_table_range
+    - field.field.node.data_table.field_data_table_title
+    - field.field.node.data_table.field_date_updated
+    - field.field.node.data_table.field_document_pdf
+    - field.field.node.data_table.field_publication_table_number
+    - field.field.node.data_table.field_publication_type
+    - field.field.node.data_table.field_report_name
+    - field.field.node.data_table.field_reporting_period_increment
+    - field.field.node.data_table.field_topic
+    - field.field.node.data_table.field_workbench_access
+    - node.type.data_table
+  module:
+    - feeds_log
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      51c171ea-059a-4b9a-802e-d97e37ae6775:
+        text: '[reporting_period_month_e_g_september], [reporting_period_end_year_e_g_2013]'
+        uuid: 51c171ea-059a-4b9a-802e-d97e37ae6775
+        plugin: rewrite
+        source: date
+        weight: 0
+        label: Rewrite
+      ae4ba8d1-67eb-4b1a-a63e-9f8522516cc9:
+        default_value: ready_publishing
+        only_if_empty: false
+        uuid: ae4ba8d1-67eb-4b1a-a63e-9f8522516cc9
+        plugin: default_value
+        source: published
+        weight: 0
+        label: 'Set as published'
+      a289317d-6770-4c84-ba7b-fc5df6612fb4:
+        text: '[parent:field_location_of_files][file_name]'
+        uuid: a289317d-6770-4c84-ba7b-fc5df6612fb4
+        plugin: rewrite
+        source: file_name
+        weight: 0
+        label: Rewrite
+      a5d183a5-f0be-4a8e-9586-4a66c3c7230e:
+        true_value: 'Y'
+        false_value: 'N'
+        match_case: false
+        no_match_value: false
+        uuid: a5d183a5-f0be-4a8e-9586-4a66c3c7230e
+        plugin: convert_boolean
+        source: all_tables_flag
+        weight: 0
+        label: 'Convert to Boolean'
+      5a779214-8793-421f-ba12-ee4c57765e4b:
+        text: '[parent:field_location_of_files][other_format_file_path_url]'
+        uuid: 5a779214-8793-421f-ba12-ee4c57765e4b
+        plugin: rewrite
+        source: other_format_file_path_url
+        weight: -9
+        label: Rewrite
+      cccdb0de-047b-4eac-aeba-21f29bc5e4a6:
+        uuid: cccdb0de-047b-4eac-aeba-21f29bc5e4a6
+        plugin: skip_on_empty
+        source: other_format_file_path_url
+        weight: -10
+        label: 'Skip tampers on empty'
+      b395c55a-bebf-4028-b260-5b13c499724b:
+        separator: ','
+        limit: null
+        uuid: b395c55a-bebf-4028-b260-5b13c499724b
+        plugin: explode
+        source: topic_e_g_value_1_value_2_value_3
+        weight: -9
+        label: Explode
+      d479ef3f-e991-4f74-9d3f-1ed68ad92148:
+        uuid: d479ef3f-e991-4f74-9d3f-1ed68ad92148
+        plugin: skip_on_empty
+        source: topic_e_g_value_1_value_2_value_3
+        weight: -10
+        label: 'Skip tampers on empty'
+      26b623be-c163-421c-8837-114f22a2e642:
+        default_value: Statistics
+        only_if_empty: true
+        uuid: 26b623be-c163-421c-8837-114f22a2e642
+        plugin: default_value
+        source: '107'
+        weight: 0
+        label: 'Set value or default value'
+label: 'Data Tables'
+id: data_tables
+description: 'Import data tables'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: data_table
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  short_table_name_table_title:
+    value: 'Short table name: Table Title'
+    label: 'Short table name: Table Title'
+    machine_name: short_table_name_table_title
+    type: csv
+  short_table_name_category_prefix:
+    value: 'Short table name: Category Prefix'
+    label: 'Short table name: Category Prefix'
+    machine_name: short_table_name_category_prefix
+    type: csv
+  short_table_name_date_range_suffix:
+    value: 'Short table name: Date Range Suffix'
+    label: 'Short table name: Date Range Suffix'
+    machine_name: short_table_name_date_range_suffix
+    type: csv
+  long_table_name_description:
+    value: 'Long table name (description)'
+    label: 'Long table name (description)'
+    machine_name: long_table_name_description
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: blank
+  reporting_period_month_e_g_september:
+    value: 'Reporting period month (e.g. September)'
+    label: 'Reporting period month (e.g. September)'
+    machine_name: reporting_period_month_e_g_september
+    type: csv
+  reporting_period_end_year_e_g_2013:
+    value: 'Reporting period end year (e.g 2013)'
+    label: 'Reporting period end year (e.g 2013)'
+    machine_name: reporting_period_end_year_e_g_2013
+    type: csv
+  reporting_period_increment_e_g_12_months:
+    value: 'Reporting period increment (e.g. 12 months)'
+    label: 'Reporting period increment (e.g. 12 months)'
+    machine_name: reporting_period_increment_e_g_12_months
+    type: csv
+  other_format_file_path_url:
+    value: 'Other Format file path/URL'
+    label: 'Other Format file path/URL'
+    machine_name: other_format_file_path_url
+    type: csv
+  publication_category:
+    value: 'Publication Category'
+    label: 'Publication Category'
+    machine_name: publication_category
+    type: csv
+  publication_table_number:
+    value: 'Publication Table Number'
+    label: 'Publication Table Number'
+    machine_name: publication_table_number
+    type: csv
+  current_table_number:
+    value: 'Current Table Number'
+    label: 'Current Table Number'
+    machine_name: current_table_number
+    type: csv
+  publication_name:
+    value: 'Publication Name'
+    label: 'Publication Name'
+    machine_name: publication_name
+    type: csv
+  topic_e_g_value_1_value_2_value_3:
+    value: 'Topic (e.g.Value 1, Value 2, Value 3)'
+    label: 'Topic (e.g.Value 1, Value 2, Value 3)'
+    machine_name: topic_e_g_value_1_value_2_value_3
+    type: csv
+  all_tables_flag:
+    value: 'All Tables Flag'
+    label: 'All Tables Flag'
+    machine_name: all_tables_flag
+    type: csv
+  file_name:
+    value: 'File Name'
+    label: 'File Name'
+    machine_name: file_name
+    type: csv
+  date:
+    value: date
+    label: date
+    machine_name: date
+    type: blank
+  published:
+    value: published
+    label: published
+    machine_name: published
+    type: blank
+  107:
+    value: Statistics
+    label: Section
+    machine_name: '107'
+    type: blank
+mappings:
+  -
+    target: field_data_table_title
+    map:
+      value: short_table_name_table_title
+    settings:
+      language: ''
+    unique: {  }
+  -
+    target: field_data_table_category_prefix
+    map:
+      target_id: short_table_name_category_prefix
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+      autocreate_bundle: data_table_category_prefix
+  -
+    target: field_data_table_range
+    map:
+      value: short_table_name_date_range_suffix
+    settings:
+      language: ''
+    unique: {  }
+  -
+    target: body
+    map:
+      value: long_table_name_description
+      summary: ''
+    settings:
+      language: ''
+      format: basic_html
+  -
+    target: field_date_updated
+    map:
+      value: date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_reporting_period_increment
+    map:
+      target_id: reporting_period_increment_e_g_12_months
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+      autocreate_bundle: period_time
+  -
+    target: field_publication_type
+    map:
+      target_id: publication_category
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+      autocreate_bundle: data_table_publication_types
+  -
+    target: field_publication_table_number
+    map:
+      target_id: publication_table_number
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: table_number
+  -
+    target: field_current_table_number
+    map:
+      target_id: current_table_number
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: table_number
+  -
+    target: field_report_name
+    map:
+      target_id: publication_name
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: report_names
+  -
+    target: field_topic
+    map:
+      target_id: topic_e_g_value_1_value_2_value_3
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+      autocreate_bundle: data_table_topics
+  -
+    target: field_data_table_all_tables
+    map:
+      value: all_tables_flag
+    settings:
+      language: ''
+  -
+    target: temporary_target
+    map:
+      temporary: 'parent:field_location_of_files'
+  -
+    target: temporary_target
+    map:
+      temporary: reporting_period_month_e_g_september
+  -
+    target: temporary_target
+    map:
+      temporary: reporting_period_end_year_e_g_2013
+  -
+    target: moderation_state
+    map:
+      value: published
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_document_pdf
+    map:
+      target_id: file_name
+    settings:
+      language: ''
+      reference_by: filename
+      autocreate: 0
+      existing: '2'
+      autocreate_bundle: false
+  -
+    target: field_document_pdf
+    map:
+      target_id: other_format_file_path_url
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+      autocreate_bundle: false
+  -
+    target: field_workbench_access
+    map:
+      target_id: '107'
+    settings:
+      language: en
+      reference_by: name
+      autocreate: 0
+      autocreate_bundle: site_sections

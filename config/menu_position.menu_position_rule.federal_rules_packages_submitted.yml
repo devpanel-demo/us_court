@@ -1,0 +1,33 @@
+uuid: 580380ee-979c-4512-b2a6-baafe1dd1457
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - system
+id: federal_rules_packages_submitted
+label: 'Federal Rules Packages Submitted'
+menu_name: main
+parent: 'menu_link_content:490d1f72-70bf-451b-9f56-035ee17bebbb'
+menu_link: 'menu_position_link:federal_rules_packages_submitted'
+enabled: true
+weight: 4
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/rules-policies/archives/packages-submitted/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      federal_rules: federal_rules

@@ -1,0 +1,20 @@
+.usa-summary-box {
+  padding: var(--spacing-sm-3);
+  background: var(--surface-secondary-lighter);
+  border-color: var(--border-secondary);
+  color: var(--text-on-surface-secondary-lighter);
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  .usa-summary-box__heading {
+    font-size: 24px;
+    font-family: var(--sans);
+    font-weight: bold;
+  }
+}

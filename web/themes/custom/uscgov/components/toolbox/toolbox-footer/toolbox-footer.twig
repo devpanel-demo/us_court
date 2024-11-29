@@ -1,0 +1,74 @@
+<footer class="footer">
+  <div class="footer__back-to-top-wrapper container">
+    {% embed 'uscgov:link-button' with {
+      classes: 'footer__back-to-top',
+      outline: true,
+      cta: { title: 'Return to top'|t, url: '#' },
+    } %}
+    {% endembed %}
+  </div>
+  <div class="footer__top">
+    <div class="container">
+      {% block footer_above %}{% endblock %}
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-container container">
+      <div class="footer__bottom-first">
+        <a href="{{ path('<front>') }}" class="footer_branding">
+          <span class="visually-hidden">{{ 'Home'|t }}</span>
+          {% block logo %}{% endblock %}
+          <div class="footer__info_wrapper">
+            <div class="footer__slogan">
+              {% block slogan %}{% endblock %}
+            </div>
+            <div class="footer__site-name">
+              {% block site_name %}{% endblock %}
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="footer__bottom-second">
+        {% block footer_below %}{% endblock %}
+      </div>
+      <div class="footer__bottom-third">
+        <ul class="footer__contact">
+          {% if footer_phone|render %}
+             <li class="footer__contact-item">
+              <span class="footer__icon footer__icon-phone"></span>
+              {{ footer_phone }}
+            </li>
+          {% endif %}
+          {% if footer_email|render %}
+          <li class="footer__contact-item">
+             <span class="footer__icon footer__icon-envelope"></span>
+             {{ footer_email }}
+          </li>
+          {% endif %}
+          {% if find_a_location_link %}
+            <li class="footer__contact-item">
+              <a href="{{ find_a_location_link }}">
+                <span class="footer__icon footer__icon-pin"></span>
+                {{ 'Find a location'|t }}
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+        {% block footer_social_media %}{% endblock %}
+      </div>
+    </div>
+    {% block footer_slogan %}
+      {% if add_footer_slogan['#items'].value == '1' and footer_site_slogan is not empty %}
+        <div class="footer__bottom-absolute">
+          <div class="container">
+            <ul class="footer__slogan">
+              {% for item in footer_site_slogan['#items'] %}
+                <li>{{ item.value }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endif %}
+    {% endblock %}
+  </div>
+</footer>

@@ -1,0 +1,27 @@
+uuid: b9a95617-144c-431f-8a50-aa9b46c6166e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file_1
+    - media.type.icon
+  module:
+    - file
+id: media.icon.field_media_file_1
+field_name: field_media_file_1
+entity_type: media
+bundle: icon
+label: File
+description: 'SVG icon. Note that the icon will automatically inherit colors from the component in which it resides. It will be monochromatic.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: svg
+  max_filesize: ''
+  description_field: false
+field_type: file

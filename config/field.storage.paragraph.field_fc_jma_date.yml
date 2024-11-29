@@ -1,0 +1,20 @@
+uuid: f9d914d1-eec1-4a5b-a894-2f9b6a2a2679
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_fc_jma_date
+field_name: field_fc_jma_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

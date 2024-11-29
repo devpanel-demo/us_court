@@ -1,0 +1,15 @@
+@forward "../../sass/uswds/settings";
+@forward "usa-search/src/styles";
+@forward "override";
+
+// @todo
+// We redeclare this ruleset with additional specificity because of invalid
+// source order caused by SDC bug https://www.drupal.org/i/3374901
+.usa-input[type=search],
+.usa-search__input {
+  margin: 0;
+
+  &:not(.usa-search--big *) {
+    height: 2rem;
+  }
+}

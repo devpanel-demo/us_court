@@ -1,0 +1,11 @@
+uuid: 9b73d7a8-802b-4c9c-837e-b83167fadbdb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.news_issue_view
+label: news_issue_view
+description: ''
+targetEntityType: node
+cache: true

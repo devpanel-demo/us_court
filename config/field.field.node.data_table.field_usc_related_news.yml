@@ -1,0 +1,87 @@
+uuid: da3b01ea-f55c-4830-b82a-e682b5ba1a3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usc_related_news
+    - node.type.data_table
+    - paragraphs.paragraphs_type.usc_related_news
+  module:
+    - entity_reference_revisions
+id: node.data_table.field_usc_related_news
+field_name: field_usc_related_news
+entity_type: node
+bundle: data_table
+label: 'Related News'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: usc_paragraph
+  handler_settings:
+    view:
+      view_name: usc_paragraph_library
+      display_name: entity_reference_1
+      arguments:
+        - usc_related_news
+    negate: '0'
+    target_bundles:
+      usc_related_news: usc_related_news
+    target_bundles_drag_drop:
+      additional_info:
+        weight: '19'
+        enabled: 0
+      body_enhanced:
+        weight: '20'
+        enabled: 0
+      criminogenic_extra_downlds:
+        weight: '21'
+        enabled: 0
+      criminogenic_worksheets:
+        weight: '22'
+        enabled: 0
+      icon_link:
+        weight: '23'
+        enabled: 0
+      milestone_activities:
+        weight: '24'
+        enabled: 0
+      piksel_programs:
+        weight: '25'
+        enabled: 0
+      referenced_nodes:
+        weight: '26'
+        enabled: 0
+      social_media_item:
+        weight: '27'
+        enabled: 0
+      usc_govdelivery:
+        weight: '28'
+        enabled: 0
+      usc_graphic_photo:
+        weight: '29'
+        enabled: 0
+      usc_notification:
+        weight: '30'
+        enabled: 0
+      usc_related_content:
+        weight: '31'
+        enabled: 0
+      usc_related_files:
+        weight: '32'
+        enabled: 0
+      usc_related_links:
+        weight: '33'
+        enabled: 0
+      usc_related_news:
+        enabled: '1'
+        weight: '34'
+      usc_table_of_contents:
+        weight: '35'
+        enabled: 0
+      usc_video:
+        weight: '36'
+        enabled: 0
+field_type: entity_reference_revisions

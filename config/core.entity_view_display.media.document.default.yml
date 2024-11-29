@@ -1,0 +1,73 @@
+uuid: 2c6b7496-a328-4bc2-8b65-619994c2d62f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document.field_date_updated
+    - field.field.media.document.field_file_description
+    - field.field.media.document.field_file_title
+    - field.field.media.document.field_media_document
+    - media.type.document
+  module:
+    - file
+    - nomarkup
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.document.default
+targetEntityType: media
+bundle: document
+mode: default
+content:
+  field_file_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  field_media_document:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_date_updated: true
+  field_file_description: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

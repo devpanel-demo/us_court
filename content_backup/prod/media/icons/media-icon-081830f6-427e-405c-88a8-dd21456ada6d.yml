@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 081830f6-427e-405c-88a8-dd21456ada6d
+entity_type: media
+bundle: icon
+base_fields:
+  name: closed-captioning-outline.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/closed-captioning-outline.svg'
+      url: '/sites/default/files/icons/closed-captioning-outline.svg'

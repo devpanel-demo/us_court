@@ -1,0 +1,25 @@
+uuid: 2426ef3e-451f-4d04-b4a8-900a497849e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-bottom
+  module:
+    - system
+  theme:
+    - uscgov
+id: uscgov_footerbottom
+theme: uscgov
+region: footer_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-bottom'
+settings:
+  id: 'system_menu_block:footer-bottom'
+  label: 'Footer Bottom'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

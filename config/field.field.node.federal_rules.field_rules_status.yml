@@ -1,0 +1,21 @@
+uuid: 60f4f8ac-9069-4bfe-88d2-750f6220a8dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rules_status
+    - node.type.federal_rules
+id: node.federal_rules.field_rules_status
+field_name: field_rules_status
+entity_type: node
+bundle: federal_rules
+label: 'Rules Status'
+description: 'This optional field should be used ONLY for Suggestions. More detailed status information, such as date and action of committee, should go in the Description (Body) field.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Considered
+  off_label: 'Pending consideration'
+field_type: boolean

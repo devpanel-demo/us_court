@@ -1,0 +1,47 @@
+uuid: c2041322-1921-4462-9c7b-3d01ccf15b12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_item.field_hyperlink
+    - field.field.paragraph.social_media_item.field_social_media_name
+    - field.field.paragraph.social_media_item.field_svg_icon
+    - paragraphs.paragraphs_type.social_media_item
+  module:
+    - link
+id: paragraph.social_media_item.default
+targetEntityType: paragraph
+bundle: social_media_item
+mode: default
+content:
+  field_hyperlink:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_media_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_svg_icon:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 6bdaa689-48d6-4476-be19-ce02c272d7ed
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Forms & Rules'
+  status: true
+  langcode: en
+  created: '1392670541'
+  changed: 1731345910
+  author: jamesdavison@ao.uscourts.gov
+  url: /forms-rules
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":["2524",1955,1763,1953,1954,9366],"viewMode":"section_landing","collectionRange":6} /-->'
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>The federal rules of practice and procedure govern litigation in the federal courts. This site provides access to the federal rules and forms in effect, information on the rulemaking process (including proposed and pending rules amendments), and historical and archival records.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: f979f2cc-c919-413d-a2f6-7f2f52e86928
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Landing Pages'
+        weight: 2
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

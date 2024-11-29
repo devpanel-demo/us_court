@@ -1,0 +1,9 @@
+name: 'USC Judicial Vacancies'
+description: 'Custom functionality to facilitate importing and managing Judicial and Job vacancies.'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - usc_core:usc_core
+  - migrate_plus:migrate_plus
+  - migrate_child_entity_generate:migrate_child_entity_generate

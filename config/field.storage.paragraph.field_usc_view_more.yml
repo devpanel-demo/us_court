@@ -1,0 +1,19 @@
+uuid: c26cb503-1a6c-4771-bf14-e8a81886fc4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_usc_view_more
+field_name: field_usc_view_more
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

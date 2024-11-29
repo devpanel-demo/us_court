@@ -1,0 +1,135 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 864323d3-4c39-4055-aaf7-019dae4e46b2
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Testing Additional Content Blocks'
+  status: true
+  langcode: en
+  created: '1714672284'
+  changed: 1714672284
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-additional-content-blocks
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Testing additional content fields</p>'
+      summary: ''
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 67e3f868-e69b-4ef7-a0ac-8f46e6ba1acd
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714682856'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: 6e1cbb41-ece7-4f7f-b13a-27c79e728ac2
+      entity_type: paragraph
+      bundle: usc_related_content
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714682928'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_content_nodes:
+          -
+            uuid: 463f2e7e-e5c4-49f6-8e5e-9ed2d734ed1f
+            entity_type: node
+            base_fields: {  }
+            bundle: data_table
+          -
+            uuid: 2452d439-3738-4161-b90e-d364da23e187
+            entity_type: node
+            base_fields: {  }
+            bundle: data_table
+        field_usc_label:
+          -
+            value: 'testing related content block - 1'
+        field_usc_title:
+          -
+            value: 'View latest CJRA tables'
+    -
+      uuid: 75882dc6-6b1e-4ebc-87e4-55d023b9b24b
+      entity_type: paragraph
+      bundle: usc_related_files
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714683076'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: '<p>View the most recent data tables from the Civil Justice Reform Act.&nbsp;</p>'
+            format: wysiwyg
+        field_usc_document:
+          -
+            uuid: 4c1a42f7-3675-4d95-8c3e-9b1430273dc2
+            entity_type: media
+            base_fields:
+              name: cjra_8_0930.2023.pdf
+              created: '1705520559'
+              status: true
+              langcode: en
+            bundle: document
+          -
+            uuid: 967bf61d-ecb1-4a05-81ad-37a0dc0e18e9
+            entity_type: media
+            base_fields:
+              name: cjra_9_0930.2023.pdf
+              created: '1705520559'
+              status: true
+              langcode: en
+            bundle: document
+          -
+            uuid: a5f069d9-7d58-4fe7-a6a6-efcdf592feb6
+            entity_type: media
+            base_fields:
+              name: cjra_7_0930.2023.pdf
+              created: '1705520557'
+              status: true
+              langcode: en
+            bundle: document
+        field_usc_label:
+          -
+            value: 'Testing additional content block - downloads'
+        field_usc_title:
+          -
+            value: 'Download recent CJRA tables'
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

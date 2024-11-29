@@ -1,0 +1,21 @@
+uuid: 0265fb9a-7084-4289-8bc5-2b9a19853b87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_confirmation_date
+    - paragraphs.paragraphs_type.judicial_vacancy
+  module:
+    - datetime
+id: paragraph.judicial_vacancy.field_confirmation_date
+field_name: field_confirmation_date
+entity_type: paragraph
+bundle: judicial_vacancy
+label: 'Confirmation Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

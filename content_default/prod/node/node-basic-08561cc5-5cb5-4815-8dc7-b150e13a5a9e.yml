@@ -1,0 +1,72 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 08561cc5-5cb5-4815-8dc7-b150e13a5a9e
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'About U.S. Bankruptcy Courts'
+  status: true
+  langcode: en
+  created: '1719249602'
+  changed: 1731348369
+  author: jamesdavison@ao.uscourts.gov
+  url: /about-us-bankruptcy-courts
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 12bba20b-afa1-48a9-a32a-170a45eddde0
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719249688'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<h2>What are Bankruptcy Courts?&nbsp;</h2><p>A fundamental goal of&nbsp;federal bankruptcy law is to give debtors a “fresh start” from certain debts.&nbsp; Federal courts have exclusive jurisdiction over <a href="https://www.uscourts.gov/about-federal-courts/types-cases/bankruptcy-cases"><u>bankruptcy cases</u></a>.&nbsp;</p><p>A petition for bankruptcy may be filed by an individual, by spouses together, or by a corporation or other entity.</p><h2>What is the Structure of Bankruptcy Courts?&nbsp;</h2><p>Bankruptcy courts are units of the district courts that hear and determine bankruptcy cases and proceedings referred to them by the district courts. There are 90 bankruptcy courts.&nbsp;</p><p>The U.S. Bankruptcy Code provides the law applicable to bankruptcy cases and proceedings and the Federal Rules of Bankruptcy Procedure and local rules of the bankruptcy courts provide procedural requirements.&nbsp;</p><p>A bankruptcy court’s rulings can be appealed to the district court, to a bankruptcy appellate panel in circuits that have them, or to the court of appeals directly, if certain statutory requirements are met.&nbsp;</p><p>Bankruptcy Appellate Panels (BAPs) are three-judge panels authorized to hear appeals of bankruptcy court decisions.&nbsp;A BAP is established by a circuit’s judicial council, and five circuits have BAPs: <a href="http://www.bap1.uscourts.gov/"><u>First Circuit</u></a>, <a href="http://www.ca6.uscourts.gov/internet/bap/bap.htm"><u>Sixth Circuit</u></a>, <a href="http://www.ca8.uscourts.gov/bankruptcy-appellate-panel"><u>Eighth Circuit</u></a>, <a href="http://www.ca9.uscourts.gov/bap/"><u>Ninth Circuit</u></a>, and <a href="http://www.bap10.uscourts.gov/"><u>Tenth Circuit</u></a>.&nbsp;</p><h2>What Types of Cases are Heard in Bankruptcy Courts?&nbsp;</h2><p>Bankruptcy generally provides two options: liquidation or reorganization.</p><ul><li>Liquidation is the selling of a debtor’s assets, if any are available, to pay creditors.&nbsp;</li><li>Reorganization involves obtaining a bankruptcy judge’s approval of a plan for repayment over time of all or a portion of the debts owed to creditors.&nbsp;</li></ul><p>There are <a href="https://www.uscourts.gov/about-federal-courts/types-cases/bankruptcy-cases"><u>different types of bankruptcies</u></a>, which are usually referred to by their chapter under the U.S. Bankruptcy Code. Learn more about federal <a href="https://www.uscourts.gov/services-forms/bankruptcy/bankruptcy-basics"><u>bankruptcy laws and the bankruptcy process</u></a>.&nbsp;</p><h2>Who Serves in Bankruptcy Courts?&nbsp;</h2><p><a href="https://www.uscourts.gov/judges-judgeships/about-federal-judges"><u>Bankruptcy judges</u></a> are judicial officers of the district court who preside over bankruptcy cases and proceedings referred to them by the district courts.&nbsp;&nbsp;</p><h2>Bankruptcy Court Statistics&nbsp;</h2><p>Review <a href="https://www.uscourts.gov/statistics-reports/analysis-reports/bankruptcy-filings-statistics"><u>bankruptcy filings statistics</u></a> for quarterly filings data tables.&nbsp;</p><p>View the <a href="https://www.uscourts.gov/statistics-reports/analysis-reports/bankruptcy-abuse-prevention-and-consumer-protection-act-report"><u>Bankruptcy Abuse Prevention and Consumer Protection Act (BAPCPA) Report,</u></a> an annual report that provides statistics on debtors seeking bankruptcy relief under chapters 7, 11, and 13 of the Bankruptcy Code.&nbsp;</p><p>For additional information about bankruptcy courts, see:&nbsp;</p><ul><li><a href="https://www.uscourts.gov/sites/default/files/understanding-federal-courts.pdf"><u>Understanding the Federal Courts</u></a>&nbsp;&nbsp;</li><li><a href="https://www.uscourts.gov/statistics-reports/federal-court-media-basics-journalists-guide"><u>A Journalist’s Guide to Federal Courts</u></a>&nbsp;</li></ul>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>Bankruptcy courts help people and businesses who cannot pay their debts get a fresh start.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 267b88a0-59ee-45d0-bded-9321a87bd2bb
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Services'
+        weight: 17
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

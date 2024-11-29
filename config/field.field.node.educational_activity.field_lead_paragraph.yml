@@ -1,0 +1,22 @@
+uuid: f33e27ab-2f13-4984-996b-f5a109c8a7bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_paragraph
+    - node.type.educational_activity
+  module:
+    - text
+id: node.educational_activity.field_lead_paragraph
+field_name: field_lead_paragraph
+entity_type: node
+bundle: educational_activity
+label: 'Lead Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

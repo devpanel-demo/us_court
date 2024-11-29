@@ -1,0 +1,23 @@
+uuid: 15a3da1d-2c09-40d5-90bd-0ee78d5b9b89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_links
+    - paragraphs.paragraphs_type.usc_related_links
+  module:
+    - link
+id: paragraph.usc_related_links.field_usc_links
+field_name: field_usc_links
+entity_type: paragraph
+bundle: usc_related_links
+label: Links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

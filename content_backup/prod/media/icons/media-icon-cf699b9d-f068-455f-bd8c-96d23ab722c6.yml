@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: cf699b9d-f068-455f-bd8c-96d23ab722c6
+entity_type: media
+bundle: icon
+base_fields:
+  name: code.svg
+  created: '1721136999'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/code.svg'
+      url: '/sites/default/files/icons/code.svg'

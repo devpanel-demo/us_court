@@ -1,0 +1,107 @@
+uuid: 891b3928-3ffb-4f61-973a-21a1ad8e0641
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.landing_page
+    - field.field.node.landing_view.body
+    - field.field.node.landing_view.field_landing_page_image
+    - field.field.node.landing_view.field_lead_paragraph
+    - field.field.node.landing_view.field_logo
+    - field.field.node.landing_view.field_metatag
+    - field.field.node.landing_view.field_tags
+    - field.field.node.landing_view.field_usc_additional_content
+    - field.field.node.landing_view.field_usc_govdelivery_form
+    - field.field.node.landing_view.field_usc_notification
+    - field.field.node.landing_view.field_usc_related_news
+    - field.field.node.landing_view.field_usc_table_of_contents
+    - field.field.node.landing_view.field_workbench_access
+    - image.style.featured_image
+    - node.type.landing_view
+  module:
+    - media
+    - nomarkup
+    - sdc_display
+    - text
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.landing_view.landing_page
+targetEntityType: node
+bundle: landing_view
+mode: landing_page
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_landing_page_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: featured_image
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_lead_paragraph:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  extra_field_child_menu_items: true
+  field_logo: true
+  field_metatag: true
+  field_tags: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  search_api_excerpt: true

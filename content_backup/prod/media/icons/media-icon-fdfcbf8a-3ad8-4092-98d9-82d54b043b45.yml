@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: fdfcbf8a-3ad8-4092-98d9-82d54b043b45
+entity_type: media
+bundle: icon
+base_fields:
+  name: window-close-outline.svg
+  created: '1721137264'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/window-close-outline.svg'
+      url: '/sites/default/files/icons/window-close-outline.svg'

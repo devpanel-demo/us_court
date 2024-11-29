@@ -1,0 +1,22 @@
+uuid: cd541c45-0240-4a9a-a5c1-112fbd8d07a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - geofield
+    - taxonomy
+_core:
+  default_config_hash: nzJ93RbNUJfBv6xl0N58dJFJupdnYZwnJsJu1j9Kmzo
+id: taxonomy_term.field_usc_coordinates
+field_name: field_usc_coordinates
+entity_type: taxonomy_term
+type: geofield
+settings:
+  backend: geofield_backend_default
+module: geofield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 0672d36b-bea9-4749-b8f5-d97e22e6e4a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.form
+  module:
+    - metatag
+id: node.form.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: form
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

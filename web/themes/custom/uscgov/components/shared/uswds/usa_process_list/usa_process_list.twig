@@ -1,0 +1,10 @@
+{%
+  set classes = [
+    'usa-process-list',
+    is_alphabetical ? 'usa-process-list--alphabetical'
+  ]
+%}
+<h3 class="usa-process-list__title">{{ title }}</h3>
+<ol {{ attributes.addClass(classes) }}>
+  {{ list_items }}
+</ol>

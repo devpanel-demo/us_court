@@ -1,0 +1,7 @@
+name: 'US Courts Migration Adjustments'
+description: 'Helper module to adjust some migrations'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - migrate_plus:migrate_plus

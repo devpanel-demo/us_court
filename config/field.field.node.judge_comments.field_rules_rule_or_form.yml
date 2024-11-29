@@ -1,0 +1,19 @@
+uuid: deee3c2d-e550-413a-89f5-bcb957e9f832
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rules_rule_or_form
+    - node.type.judge_comments
+id: node.judge_comments.field_rules_rule_or_form
+field_name: field_rules_rule_or_form
+entity_type: node
+bundle: judge_comments
+label: 'Rule or Form'
+description: 'This optional field should ONLY be used for Comments and Suggestions.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

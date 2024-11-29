@@ -1,0 +1,76 @@
+uuid: 682cf1a2-8682-47a1-a93c-197b711de424
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.piksel_program.field_alternate_text
+    - field.field.media.piksel_program.field_file_title
+    - field.field.media.piksel_program.field_program_description
+    - field.field.media.piksel_program.field_title
+    - media.type.piksel_program
+id: media.piksel_program.media_library
+targetEntityType: media
+bundle: piksel_program
+mode: media_library
+content:
+  field_alternate_text:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_file_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_program_description:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  publish_on: true
+  publish_state: true
+  scheduler_settings: true
+  status: true
+  uid: true
+  unpublish_on: true
+  unpublish_state: true

@@ -1,0 +1,51 @@
+uuid: 269aad22-b7dd-474c-a5bf-05e2dd3fc7cd
+langcode: en
+status: true
+dependencies: {  }
+id: entity_video_youtube_playlist
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Media Migration'
+  - 'Media Entity'
+  - 'Embedded Widget'
+migration_group: migrate_drupal_7
+label: 'Entity migration (Youtube Playlist)'
+source:
+  plugin: bean
+  type: bean_usc_youtube
+process:
+  uid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_user
+      source: uid
+    -
+      plugin: default_value
+      default_value: 1
+  name:
+    -
+      plugin: get
+      source: title
+  created:
+    -
+      plugin: get
+      source: timestamp
+  status:
+    -
+      plugin: default_value
+      default_value: 1
+  field_media_oembed_video/value:
+    -
+      plugin: get
+      source: data/url
+destination:
+  plugin: 'entity:media'
+  default_bundle: remote_video
+migration_dependencies:
+  required: {  }
+  optional:
+    - upgrade_d7_user

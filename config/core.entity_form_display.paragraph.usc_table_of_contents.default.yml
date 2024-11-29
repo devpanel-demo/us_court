@@ -1,0 +1,54 @@
+uuid: 8ddfdee4-9999-4861-9641-8ed8e68d7321
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_table_of_contents.field_usc_content_nodes
+    - field.field.paragraph.usc_table_of_contents.field_usc_description
+    - field.field.paragraph.usc_table_of_contents.field_usc_label
+    - field.field.paragraph.usc_table_of_contents.field_usc_title
+    - paragraphs.paragraphs_type.usc_table_of_contents
+  module:
+    - text
+id: paragraph.usc_table_of_contents.default
+targetEntityType: paragraph
+bundle: usc_table_of_contents
+mode: default
+content:
+  field_usc_content_nodes:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

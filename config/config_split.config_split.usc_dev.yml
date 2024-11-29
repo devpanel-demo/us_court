@@ -1,0 +1,20 @@
+uuid: fdd73471-0aef-4806-a03f-11b401c14598
+langcode: en
+status: false
+dependencies: {  }
+id: usc_dev
+label: 'USC dev'
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config_split/usc_dev/
+module:
+  devel: 0
+theme: {  }
+complete_list:
+  - robotstxt.settings
+  - google_tag.container.gtm_khxckx8p
+partial_list:
+  - core.extension

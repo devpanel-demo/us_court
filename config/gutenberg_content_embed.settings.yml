@@ -1,0 +1,245 @@
+_core:
+  default_config_hash: FHr-4ZpHTPnw0FLiJKckQ2ed-QgocdJnPebt1VgSRPo
+allowed_content_embed:
+  basic:
+    label: Basic
+    allowed_view_modes:
+      featured: featured
+      section_landing: section_landing
+      default: 0
+      landing_featured_content_: 0
+      landing_page: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      featured: 0
+      landing_featured_content_: 0
+      landing_page: 0
+      section_landing: 0
+      sidebar: 0
+      teaser: 0
+  book:
+    label: 'Book page'
+    allowed_view_modes:
+      default: 0
+      teaser: 0
+    width_control:
+      default: 0
+      teaser: 0
+  camera:
+    label: 'Cameras in Court Program'
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  court:
+    label: Court
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  data_table:
+    label: 'Data Table'
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  educational_activity:
+    label: 'Educational Activity'
+    allowed_view_modes:
+      featured: featured
+      section_landing: section_landing
+      default: 0
+      landing_page: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      featured: 0
+      landing_page: 0
+      section_landing: 0
+      sidebar: 0
+      teaser: 0
+  faqs:
+    label: FAQs
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  federal_rules:
+    label: 'Federal Rules'
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  fed_probation_journal:
+    label: 'Federal Probation Journal'
+    allowed_view_modes:
+      default: 0
+      federal_probation_journal_node: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      federal_probation_journal_node: 0
+      sidebar: 0
+      teaser: 0
+  fee:
+    label: Fee
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  form:
+    label: Form
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  judge:
+    label: Judge
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  judge_comments:
+    label: 'Judge Comments'
+    allowed_view_modes:
+      default: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      sidebar: 0
+      teaser: 0
+  landing_view:
+    label: 'Landing Page'
+    allowed_view_modes:
+      featured: featured
+      section_landing: section_landing
+      default: 0
+      landing_page: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      featured: 0
+      landing_page: 0
+      section_landing: 0
+      sidebar: 0
+      teaser: 0
+  news:
+    label: News
+    allowed_view_modes:
+      calendar: calendar
+      collection_default: collection_default
+      featured: featured
+      headings_only: headings_only
+      media_thumbnail: media_thumbnail
+      section_landing: section_landing
+      default: 0
+      featured_item: 0
+      landing_page: 0
+      list_item: 0
+      news_issue_view: 0
+      related_news: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      calendar: 0
+      collection_default: 0
+      featured: 0
+      featured_item: 0
+      headings_only: 0
+      landing_page: 0
+      list_item: 0
+      media_thumbnail: 0
+      news_issue_view: 0
+      related_news: 0
+      section_landing: 0
+      sidebar: 0
+      teaser: 0
+  news_issue:
+    label: 'News Issue'
+    allowed_view_modes:
+      featured: featured
+      section_landing: section_landing
+      default: 0
+      landing_page: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      featured: 0
+      landing_page: 0
+      section_landing: 0
+      sidebar: 0
+      teaser: 0
+  report:
+    label: Report
+    allowed_view_modes:
+      featured: featured
+      section_landing: section_landing
+      default: 0
+      landing_page: 0
+      sidebar: 0
+      teaser: 0
+    width_control:
+      default: 0
+      featured: 0
+      landing_page: 0
+      section_landing: 0
+      sidebar: 0
+      teaser: 0
+  vacancy:
+    label: Vacancy
+    allowed_view_modes:
+      default: 0
+      teaser: 0
+      vacancy_latest: 0
+    width_control:
+      default: 0
+      teaser: 0
+      vacancy_latest: 0
+  webform:
+    label: Webform
+    allowed_view_modes:
+      default: 0
+      teaser: 0
+    width_control:
+      default: 0
+      teaser: 0

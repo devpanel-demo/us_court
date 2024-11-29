@@ -1,0 +1,84 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 764f4930-b8c3-4850-bee6-ebed199f7d31
+entity_type: node
+bundle: report
+base_fields:
+  title: 'Test highchart CE'
+  status: true
+  langcode: en
+  created: '1715717397'
+  changed: 1715717397
+  author: jamesdavison@ao.uscourts.gov
+  url: /test-highchart-ce
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 9f60a2c1-f414-4fb6-91fd-024f7c9496a7
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715717406'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget:
+          -
+            uuid: 735205da-aad4-4755-bdd5-6a5bb02d8295
+            entity_type: paragraph
+            bundle: usc_highcharts
+            base_fields:
+              status: true
+              langcode: en
+              created: '1715717432'
+              behavior_settings: {  }
+            custom_fields:
+              field_usc_highcharts_script:
+                -
+                  value: "<script type=\"text/javascript\">\r\n\r\n(function($) {\r\nHighcharts.setOptions({\r\n colors: ['#0071BC', '#112E51', '#871517', '#C5AA63', '#7E6B59', '#2E8540', '#4C2C92', '#98897A']\r\n    });\r\n    var chart;\r\n     jQuery(document).ready(function() {\r\n        chart = new Highcharts.Chart({\r\n            chart: {\r\n                renderTo: 'container2',\r\n                type: 'column'\r\n            },\r\n            title: {\r\n                text: 'Civil Cases Filed, by Nature of Suit'\r\n            },\r\n            subtitle: {\r\n                text: ' '\r\n            },\r\n            xAxis: {\r\n                title: {\r\n                    text: ''\r\n                },\r\n                categories: [\r\n                    '2012',\r\n                    '2013',\r\n                    '2014',\r\n                    '2015',\r\n\t\t     '2016'\r\n                ]\r\n            },\r\n            yAxis: {\r\n                min: 0,\r\n                max:80000,\r\n                title: {\r\n                    text: null\r\n                },\r\n                labels: {\r\n                    formatter: function() {\r\n                          return Highcharts.numberFormat(this.value, 0);\r\n                    }\r\n               }\r\n            },\r\n            tooltip: {\r\n                formatter: function() {\r\n                    return ''+\r\n                       this.series.name +': '+ Highcharts.numberFormat(this.y, 0) +'';\r\n                }\r\n            },\r\n            plotOptions: {\r\n                column: {\r\n                    pointPadding: 0.2,\r\n                    borderWidth: 0\r\n                }\r\n            },\r\n                series: [{\r\n                name: 'Personal Injury',\r\n                color: '#4572A7',\r\n                data: [57151, 63316, 76463, 61093, 55283]\r\n    \r\n            }, {\r\n                name: 'Prisoner Petitions',\r\n                color: '#AA4643',\r\n                data: [54300, 56955, 60675, 52531, 73725]\r\n    \r\n            }, {\r\n                name: 'Civil Rights',\r\n                color: '#89A54E',\r\n                data: [37705, 35307, 35274, 37384, 38002]\r\n    \r\n            }, {\r\n                name: 'Consumer Credit',\r\n                color: '#80699B',\r\n                data: [9320, 8974, 8547, 9801, 9745]\r\n    \r\n            }, {\r\n                name: 'Personal Property Damage',\r\n                color: '#3D96AE',\r\n                data: [4155, 4422, 3527, 7786, 6212]\r\n    \r\n            }]\r\n        });\r\n    });\r\n    \r\n})(jQuery);\r\n</script>"
+                  format: widget
+              field_usc_label:
+                -
+                  value: 'Test label'
+              field_usc_title:
+                -
+                  value: 'Test highchart CE'
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated: null
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_report_children: null
+  field_report_name: null
+  field_sidebar_title:
+    -
+      value: 'Does this field work :)'
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

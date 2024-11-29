@@ -1,0 +1,10 @@
+uuid: aa490b3d-956c-48b0-ad7b-84817305d32c
+langcode: en
+status: true
+dependencies: {  }
+id: judicial_vacancy
+label: 'Judicial Vacancy'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

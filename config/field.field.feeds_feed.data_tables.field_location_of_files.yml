@@ -1,0 +1,21 @@
+uuid: dc1d69d3-15ca-43e4-9114-2cbd8e12bd83
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.data_tables
+    - field.storage.feeds_feed.field_location_of_files
+id: feeds_feed.data_tables.field_location_of_files
+field_name: field_location_of_files
+entity_type: feeds_feed
+bundle: data_tables
+label: 'Location of file attachments'
+description: 'The base URL of the place where you uploaded the file attachments.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'https://www.uscourts.gov/courts/data_tables/'
+default_value_callback: ''
+settings: {  }
+field_type: string

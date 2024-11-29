@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: ab4ead63-5489-4d7a-b3ce-3f6b8d79f1d4
+entity_type: media
+bundle: icon
+base_fields:
+  name: volume-down.svg
+  created: '1721137253'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/volume-down.svg'
+      url: '/sites/default/files/icons/volume-down.svg'

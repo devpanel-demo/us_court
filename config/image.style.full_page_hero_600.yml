@@ -1,0 +1,21 @@
+uuid: d79cb7df-1af1-45a6-80de-77f200c4cd4a
+langcode: en
+status: true
+dependencies: {  }
+name: full_page_hero_600
+label: 'Full page hero 600'
+effects:
+  e8a53e7f-fc34-4532-8705-c7bf59e1b84b:
+    uuid: e8a53e7f-fc34-4532-8705-c7bf59e1b84b
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: false
+  c3359afb-2f54-4236-9094-556e19d367ad:
+    uuid: c3359afb-2f54-4236-9094-556e19d367ad
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

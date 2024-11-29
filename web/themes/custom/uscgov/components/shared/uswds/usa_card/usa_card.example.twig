@@ -1,0 +1,35 @@
+{#
+  Example embed code to utilize the card component.
+
+  Usage:
+    Copy and paste this code into your xxx--xxx.html.twig file, and adjust the
+    variables as necessary.
+ #}
+
+{% set body = content.body %}
+
+{% set settings = {
+  wrapper_element: 'article',
+  flag: false,
+  header_first: false,
+  media_inset: false,
+  media_right: false,
+  media_exdent: false,
+  body_exdent: false,
+  footer_exdent: false,
+} %}
+
+{% embed 'uscgov:usa_card' with {
+  attributes,
+  title_suffix,
+  classes: '',
+  settings,
+  title: label,
+  image: content.field_image,
+  body: body,
+  cta: { title: 'Read more'|t , url },
+} only %}
+  {% block body %}
+    {{ body }}
+  {% endblock %}
+{% endembed %}

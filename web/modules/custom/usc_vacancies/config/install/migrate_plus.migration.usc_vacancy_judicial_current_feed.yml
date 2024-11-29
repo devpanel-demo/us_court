@@ -1,0 +1,141 @@
+uuid: dda757d3-61d8-45cb-a7d6-1f9af2af6426
+langcode: en
+status: true
+dependencies: {  }
+id: usc_vacancy_judicial_current_feed
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: usc_vacancies
+label: 'US Court HRMIS Current Judicial Vacancies'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: simple_xml
+  urls:
+    callback: usc_vacancies_migrate_urls
+  item_selector: /data
+
+  constants:
+    TITLE_PREFIX: 'Judicial Vacancy List for '
+  fields:
+    -
+      name: archive_id
+      label: 'Archive ID'
+      selector: /data
+    -
+      name: congress
+      label: Congress
+      selector: congress
+    -
+      name: circuit
+      label: Circuit
+      selector: vacancy/circuit
+    -
+      name: district
+      label: District
+      selector: vacancy/district
+    -
+      name: incumbent
+      label: Incumbent
+      selector: vacancy/incumbent
+    -
+      name: reason
+      label: Reason
+      selector: vacancy/reason
+    -
+      name: vac_dt
+      label: 'Vacancy Date'
+      selector: vacancy/vac_dt
+    -
+      name: nominee
+      label: Nominee
+      selector: vacancy/nominee
+    -
+      name: nom_dt
+      label: 'Nomination Date'
+      selector: vacancy/nom_dt
+    -
+      name: vacancies
+      label: Vacancies
+      selector: vacancy
+  ids:
+    archive_id:
+      type: string
+process:
+  title:
+    plugin: concat
+    source:
+      - constants/TITLE_PREFIX
+      - node_title_date
+  path/pathauto:
+    plugin: default_value
+    default_value: 0 # Disable pathauto.
+  path/alias: custom_alias # This comes from hook_migrate_prepare_row().
+  field_source_type: field_source_type # This comes from hook_migrate_prepare_row().
+  field_vacancy_type:
+    plugin: default_value
+    default_value: judicial_vacancy
+  field_year: field_year
+  field_congress: congress
+  field_archive_id: archive_id # provided by usc_vacancies_migrate_prepare_row()
+  field_vacancy_reference:
+    -
+      plugin: sub_process
+      source: vacancy_rows # provided by usc_vacancies_migrate_prepare_row()
+      process:
+        circ: circuit
+        dist: district
+        inc: incumbent
+        reas: reason
+        vacdt:
+          -
+            plugin: skip_on_empty
+            method: process
+            source: vac_dt
+          -
+            plugin: skip_on_value
+            method: process
+            source: vac_dt
+            value:
+              - ' '
+              - TBD
+          -
+            plugin: format_date
+            from_format: m/d/Y
+            to_format: Y-m-d
+        nom: nominee
+        nomdt:
+          -
+            plugin: skip_on_empty
+            method: process
+            source: nom_dt
+          -
+            plugin: skip_on_value
+            method: process
+            source: nom_dt
+            value:
+              - ' '
+              - TBD
+          -
+            plugin: format_date
+            from_format: m/d/Y
+            to_format: Y-m-d
+    -
+      plugin: child_entity_generate
+      entity_type: paragraph
+      bundle: judicial_vacancy
+      values:
+        field_circuit: circ
+        field_district: dist
+        field_incumbent: inc
+        field_reason: reas
+        field_opening_date: vacdt
+        field_nominee: nom
+        field_nomination_date: nomdt
+destination:
+  plugin: 'entity:node'
+  default_bundle: vacancy
+  new_revision: false
+migration_dependencies: {  }

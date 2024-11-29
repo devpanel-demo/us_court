@@ -1,0 +1,21 @@
+uuid: 88de8ba8-64a1-4dde-bd31-ae15d9fce1c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_form
+label: 'Content - Form'
+type: 'canonical_entities:node'
+pattern: 'forms/[node:field_form_category]/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      form: form
+selection_logic: and
+weight: -4
+relationships: {  }

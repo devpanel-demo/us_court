@@ -1,0 +1,50 @@
+uuid: e7fa48b3-0eb2-44e1-a7d9-566ac2a7ffc0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 0Jw_BFJCCtWk187tIYvME58VFpYwPaAdrc4eRtAyHH0
+label: Default
+id: default
+description: 'A default Linkit profile'
+matchers:
+  556010a3-e317-48b3-b4ed-854c10f4b950:
+    id: 'entity:node'
+    uuid: 556010a3-e317-48b3-b4ed-854c10f4b950
+    settings:
+      metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
+      bundles:
+        basic: basic
+        book: book
+        camera: camera
+        data_table: data_table
+        educational_activity: educational_activity
+        faqs: faqs
+        federal_rules: federal_rules
+        fee: fee
+        form: form
+        judge: judge
+        landing_view: landing_view
+        news: news
+        news_issue: news_issue
+        report: report
+        webform: webform
+      group_by_bundle: true
+      substitution_type: canonical
+      limit: 100
+      include_unpublished: false
+    weight: 0
+  9c1f726b-6e7f-499e-81aa-cc723740015f:
+    id: 'entity:media'
+    uuid: 9c1f726b-6e7f-499e-81aa-cc723740015f
+    settings:
+      metadata: ''
+      bundles:
+        audio: audio
+        document: document
+      group_by_bundle: true
+      substitution_type: media
+      limit: 100
+    weight: 0

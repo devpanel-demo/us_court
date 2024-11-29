@@ -1,0 +1,33 @@
+google_maps_places:
+  js:
+    https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places: { type: external }
+  dependencies:
+    - core/drupal
+    - core/once
+
+location_autocomplete:
+  js:
+    js/location-autocomplete.js: { }
+  dependencies:
+    - jquery_ui_autocomplete/autocomplete
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+    - usc_court_finder/google_maps_places
+
+districts_facets:
+  js:
+    js/districts-facets.js: { }
+  dependencies:
+    - core/jquery.once
+    - core/drupal
+
+google_analytics:
+  js:
+    js/google-analytics-service.js: {}
+    js/google-analytics-events.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupalSettings

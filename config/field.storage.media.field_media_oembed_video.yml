@@ -1,0 +1,21 @@
+uuid: a279f7e9-3a3f-48ae-9e12-556fa91b0bbb
+langcode: und
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_media_oembed_video
+field_name: field_media_oembed_video
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

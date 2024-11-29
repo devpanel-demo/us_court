@@ -1,0 +1,21 @@
+uuid: 58bc6dce-81b9-4dd3-8065-2a1b82fa58ff
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_piksel_program_title
+field_name: field_piksel_program_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

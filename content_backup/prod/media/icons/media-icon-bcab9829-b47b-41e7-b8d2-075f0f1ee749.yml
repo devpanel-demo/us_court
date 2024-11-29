@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: bcab9829-b47b-41e7-b8d2-075f0f1ee749
+entity_type: media
+bundle: icon
+base_fields:
+  name: copyright-outline.svg
+  created: '1721137017'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/copyright-outline.svg'
+      url: '/sites/default/files/icons/copyright-outline.svg'

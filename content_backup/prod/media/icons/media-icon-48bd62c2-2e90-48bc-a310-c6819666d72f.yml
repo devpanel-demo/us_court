@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 48bd62c2-2e90-48bc-a310-c6819666d72f
+entity_type: media
+bundle: icon
+base_fields:
+  name: window-minimize.svg
+  created: '1721137264'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/window-minimize.svg'
+      url: '/sites/default/files/icons/window-minimize.svg'

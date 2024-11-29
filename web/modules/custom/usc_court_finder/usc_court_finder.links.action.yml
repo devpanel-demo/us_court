@@ -1,0 +1,10 @@
+entity.usc_court_finder_item.add_form:
+  route_name: entity.usc_court_finder_item.add_form
+  title: 'Add Court Finder Item'
+  appears_on:
+    - entity.usc_court_finder_item.collection
+entity.usc_location.add_form:
+  route_name: 'entity.usc_location.add_form'
+  title: 'Add Location'
+  appears_on:
+    - entity.usc_location.collection

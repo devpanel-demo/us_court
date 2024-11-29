@@ -1,0 +1,32 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 5738dcd7-63a2-495c-a5f6-35df2edf3846
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Testing - Color selectors: Buttons'
+  status: true
+  langcode: en
+  created: '1726519291'
+  changed: 1726519291
+  author: Emily_Poland@ao.uscourts.gov
+  url: /testing-color-selectors-buttons
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:buttons -->\r\n<div class=\"wp-block-buttons\"><!-- wp:button -->\r\n<div class=\"wp-block-button has-primary-background-color has-background\"><a class=\"wp-block-button__link has-primary-background-color has-background\">help!</a></div>\r\n<!-- /wp:button --></div>\r\n<!-- /wp:buttons -->\r\n\r\n<!-- wp:buttons -->\r\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"accent\",\"className\":\"is-style-fill\"} -->\r\n<div class=\"wp-block-button is-style-fill has-accent-background-color has-background\"><a class=\"wp-block-button__link has-accent-background-color has-background\">Please!</a></div>\r\n<!-- /wp:button --></div>\r\n<!-- /wp:buttons -->\r\n\r\n<!-- wp:paragraph -->\r\n<p></p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

@@ -1,0 +1,11 @@
+<div class="usc-callout">
+  {% if callout_title|render|striptags|trim %}
+    <h2 class="usc-callout__title">{{ callout_title }}</h2>
+  {% endif %}
+  <div class="usc-callout__content">
+    <div class="usc-callout__body">{{ callout_body }}</div>
+    {% if callout_attribution|render|striptags|trim %}
+      <div class="usc-callout__attribution">{{ callout_attribution }}</div>
+    {% endif %}
+  </div>
+</div>

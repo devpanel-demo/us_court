@@ -1,0 +1,49 @@
+uuid: 2ba57dbc-b699-4170-b2b4-42be949e484f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.sidebar
+    - field.field.media.audio.field_file_description
+    - field.field.media.audio.field_file_title
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
+  module:
+    - file
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.audio.sidebar
+targetEntityType: media
+bundle: audio
+mode: sidebar
+content:
+  field_media_audio_file:
+    type: file_audio
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_file_description: true
+  field_file_title: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

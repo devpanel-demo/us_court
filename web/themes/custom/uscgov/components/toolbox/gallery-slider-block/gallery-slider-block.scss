@@ -1,0 +1,27 @@
+@forward "../../sass/uswds/settings";
+@use "../../../sass/custom/global/media-queries" as *;
+@use "uswds-core" as *;
+
+.splide {
+  .splide__pagination {
+    bottom: 0;
+    counter-reset: pagination-num;
+  }
+
+  .splide__pagination__page {
+    width: 25px;
+    height: 25px;
+    margin-inline: 5px;
+
+    &:before {
+      counter-increment: pagination-num;
+      content: counter( pagination-num );
+    }
+
+    &.is-active {
+      background-color: var(--surface-primary-dark);
+      color: var(--text-on-surface-primary-darker);
+      transform: scale(1.1);
+    }
+  }
+}

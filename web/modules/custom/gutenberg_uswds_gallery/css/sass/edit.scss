@@ -1,0 +1,31 @@
+@import "../../../../../themes/custom/uscgov/components/shared/gallery/gallery";
+@import "../../../../../themes/custom/uscgov/components/shared/gallery-item/gallery-item";
+
+.usc-gallery {
+  .main-slider {
+    .splide__list {
+      margin: 0;
+      padding: 0;
+      max-width: 960px;
+      white-space: nowrap;
+      overflow: auto;
+
+      .splide__slide {
+        opacity: 1;
+        margin: 0.2rem;
+        display: inline-block;
+
+        .slide-content-wrapper {
+          .details-box {
+            white-space: normal;
+            width: 100%;
+          }
+
+          img {
+            width: revert-layer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: c3c8227c-f5b3-494e-ad17-350d1aee8919
+entity_type: media
+bundle: icon
+base_fields:
+  name: play.svg
+  created: '1721137168'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/play.svg'
+      url: '/sites/default/files/icons/play.svg'

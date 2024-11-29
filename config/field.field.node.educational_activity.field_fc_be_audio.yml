@@ -1,0 +1,24 @@
+uuid: 26916476-db66-4a51-9494-763951659e95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fc_be_audio
+    - media.type.audio
+    - node.type.educational_activity
+id: node.educational_activity.field_fc_be_audio
+field_name: field_fc_be_audio
+entity_type: node
+bundle: educational_activity
+label: Audio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+field_type: entity_reference

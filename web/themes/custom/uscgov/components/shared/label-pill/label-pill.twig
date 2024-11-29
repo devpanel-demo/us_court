@@ -1,0 +1,17 @@
+{% set attributes = attributes ?: create_attribute() %}
+{% set fieldname_attribute = field_name ? 'data-test-' ~ field_name|clean_class : false %}
+
+<div{{ attributes.setAttribute(fieldname_attribute, true) }} class="label-pill">
+  {% if label %}
+    <div class="label-pill__label">
+      {{ label }}:
+    </div>
+  {% endif %}
+  <div class="label-pill__content">
+    {% for item in items %}
+      <div class="label-pill__content-item">
+        {{ item.content ?: item }}
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,23 @@
+uuid: c86243c3-97ef-4e83-9aa9-95915e9a98ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_adjusted
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_adjusted
+field_name: field_adjusted
+entity_type: paragraph
+bundle: judicial_vacancy
+label: Adjusted
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,22 @@
+uuid: 01315863-34a5-4b16-b207-d0239fc6a45a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fc_rn_row_style
+    - paragraphs.paragraphs_type.referenced_nodes
+  module:
+    - options
+id: paragraph.referenced_nodes.field_fc_rn_row_style
+field_name: field_fc_rn_row_style
+entity_type: paragraph
+bundle: referenced_nodes
+label: Style
+description: |
+
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

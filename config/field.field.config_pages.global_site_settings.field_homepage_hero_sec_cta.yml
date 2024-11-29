@@ -1,0 +1,23 @@
+uuid: f9536a2f-76ef-41f2-b0d5-c63fde4dfc7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_homepage_hero_sec_cta
+  module:
+    - link
+id: config_pages.global_site_settings.field_homepage_hero_sec_cta
+field_name: field_homepage_hero_sec_cta
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Homepage Hero Secondary Block CTA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

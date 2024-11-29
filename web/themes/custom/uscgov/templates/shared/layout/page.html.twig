@@ -1,0 +1,133 @@
+{% set find_a_location_link = config_pages_field('global_site_settings', 'field_find_location_link', 'full')|add_suggestion('bare')|render|striptags|trim  ?: '/offices' %}
+
+<div class="layout-container">
+  {% embed 'uscgov:header' with {
+      main_menu: page.header.uscgov_main_menu,
+      google_translate: page.header.uscgov_googletranslator,
+      project_id,
+      search_type,
+      header_leadership_names: config_pages_field('global_site_settings', 'field_leadership_names', 'full')|add_suggestion('bare'),
+      add_header_leaderships_names: config_pages_field('global_site_settings', 'field_header_leadership_names', 'full')|add_suggestion('bare'),
+      find_a_location_link,
+    } %}
+    {% block logo %}
+      {{ config_pages_field('global_site_settings', 'field_site_logo', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+    {% block site_name %}
+      {% if config_pages_field('global_site_settings', 'field_cir_name_pre_text', 'full')|render %}
+        <span>
+          {{ config_pages_field('global_site_settings', 'field_cir_name_pre_text', 'full')|add_suggestion('bare') }}
+        </span>
+      {% endif %}
+      {{ config_pages_field('global_site_settings', 'field_site_name', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+    {% block slogan %}
+      {{ config_pages_field('global_site_settings', 'field_slogan', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+    {% block main_menu %}
+      {{ main_menu }}
+    {% endblock %}
+  {% endembed %}
+  {% if is_front %}
+    {% if project_id == 'uscgov' %}
+      {% embed 'uscgov:homepage-hero' with {
+        title: config_pages_field('global_site_settings', 'field_homepage_hero_title', 'full')|add_suggestion('bare'),
+        description: config_pages_field('global_site_settings', 'field_homepage_hero_description', 'full')|add_suggestion('bare'),
+        hero_block_secondary_title: config_pages_field('global_site_settings', 'field_homepage_hero_secondary_bl', 'full')|add_suggestion('bare'),
+        hero_block_secondary_description: config_pages_field('global_site_settings', 'field_homepage_hero_seco_desc', 'full')|add_suggestion('bare'),
+      } %}
+        {% block homepage_hero_image %}
+          {{ config_pages_field('global_site_settings', 'field_hero_background_image', 'full')|add_suggestion('bare') }}
+        {% endblock %}
+        {% block homepage_hero_link %}
+          {{ config_pages_field('global_site_settings', 'field_homepage_hero_cta', 'full')|add_suggestion('bare') }}
+        {% endblock %}
+        {% block hero_block_secondary_cta %}
+          {{ config_pages_field('global_site_settings', 'field_homepage_hero_sec_cta', 'full')|add_suggestion('bare') }}
+        {% endblock %}
+      {% endembed %}
+
+      {{ config_pages_field('global_site_settings', 'field_hompage_quick_links', 'full') }}
+    {% endif %}
+    {% if project_id == 'toolbox' %}
+      {{ include('@uscgov/toolbox/includes/_toolbox_heros.twig') }}
+    {% endif %}
+  {% endif %}
+
+  <main class="container">
+    <div class="layout-main">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      {% if page.sidebar|render|striptags('<drupal-render-placeholder>')|trim %}
+        <aside class="layout-sidebar">
+          {{ page.sidebar }}
+        </aside>
+      {% endif %}
+
+      <div class="layout-content">
+        {{ page.highlighted }}
+        {{ page.help }}
+        {{ page.breadcrumb }}
+        {{ page.content }}
+      </div>
+    </div>
+    <div class="back-to-top-wrapper container is-hidden">
+      <a href="#" class="back-to-top button button--outline">{{ 'Return to top'|t }}</a>
+    </div>
+  </main>
+  {% if project_id == 'uscgov' %}
+    {% embed 'uscgov:gov-footer' with {
+      footer_above_region: page.footer_above,
+      footer_main_region: page.footer_main,
+      brand_text: config_pages_field('global_site_settings', 'field_seal_te', 'full')|add_suggestion('bare'),
+      footer_cta_title: config_pages_field('global_site_settings', 'field_footer_cta_title', 'full')|add_suggestion('bare'),
+      footer_cta_body: config_pages_field('global_site_settings', 'field_footer_cta_body', 'full')|add_suggestion('bare'),
+      footer_cta_link: config_pages_field('global_site_settings', 'field_footer_cta_link', 'full')|add_suggestion('bare'),
+      footer_site_slogan: config_pages_field('global_site_settings', 'field_leadership_names', 'full')|add_suggestion('bare'),
+      add_footer_slogan: config_pages_field('global_site_settings', 'field_footer_leadership_names', 'full')|add_suggestion('bare'),
+      project_id,
+    } only %}
+      {% block footer_seal %}
+        {{ config_pages_field('global_site_settings', 'field_footer_seal', 'full')|add_suggestion('bare') }}
+      {% endblock %}
+      {% block footer_above %}
+        {{ footer_above_region }}
+      {% endblock %}
+      {% block footer_below %}
+        {{ footer_main_region }}
+      {% endblock %}
+      {% block footer_social_media %}
+        {{ config_pages_field('global_site_settings', 'field_social_media', 'full') }}
+      {% endblock %}
+    {% endembed %}
+  {% elseif project_id == 'toolbox' %}
+    {% embed 'uscgov:toolbox-footer' with {
+      footer_above_region: page.footer_above,
+      footer_main_region: page.footer_main,
+      footer_phone: config_pages_field('global_site_settings', 'field_footer_phone', 'full')|add_suggestion('bare'),
+      footer_email: config_pages_field('global_site_settings', 'field_footer_email', 'full')|add_suggestion('bare'),
+      footer_site_slogan: config_pages_field('global_site_settings', 'field_leadership_names', 'full')|add_suggestion('bare'),
+      add_footer_slogan: config_pages_field('global_site_settings', 'field_footer_leadership_names', 'full')|add_suggestion('bare'),
+      find_a_location_link,
+      project_id,
+    } only %}
+      {% block logo %}
+        {{ config_pages_field('global_site_settings', 'field_site_logo', 'full')|add_suggestion('bare') }}
+      {% endblock %}
+      {% block site_name %}
+        {{ config_pages_field('global_site_settings', 'field_site_name', 'full')|add_suggestion('bare') }}
+      {% endblock %}
+      {% block slogan %}
+        {{ config_pages_field('global_site_settings', 'field_slogan', 'full')|add_suggestion('bare') }}
+      {% endblock %}
+      {% block footer_above %}
+        {{ footer_above_region }}
+      {% endblock %}
+      {% block footer_below %}
+        {{ footer_main_region }}
+      {% endblock %}
+      {% block footer_social_media %}
+        {{ config_pages_field('global_site_settings', 'field_social_media', 'full') }}
+      {% endblock %}
+    {% endembed %}
+  {% endif %}
+</div>

@@ -1,0 +1,102 @@
+uuid: 57be3df9-9792-4358-b0ba-be1468937b10
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_related_files
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - Sidebar
+migration_group: migrate_drupal_7
+label: 'Sidebar (Related Downloads) to Paragraphs'
+source:
+  plugin: bean
+  type: related_files
+process:
+  id:
+    -
+      plugin: migration_lookup
+      migration: sidebar_related_files
+      no_stub: true
+      source: bid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 0
+  revision_id:
+    -
+      plugin: migration_lookup
+      migration: sidebar_related_files
+      no_stub: true
+      source:
+        - bid
+        - vid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 1
+  langcode:
+    -
+      plugin: default_value
+      default_value: en
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  changed:
+    -
+      plugin: get
+      source: changed
+  revision_created:
+    -
+      plugin: get
+      source: created
+  field_usc_label: label
+  field_usc_title: title
+  field_usc_description:
+    -
+      plugin: get
+      source: field_bean_description
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: ckeditor_link_file_to_linkit
+    -
+      plugin: img_tag_to_embed
+  field_usc_document:
+    -
+      plugin: media_migration_delta_sort
+      source: field_bean_document
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: fid
+          migration:
+            - upgrade_d7_file_entity_document_public
+          no_stub: true
+destination:
+  plugin: 'entity_complete:paragraph'
+  default_bundle: usc_related_files
+  translations: true
+migration_dependencies: {  }

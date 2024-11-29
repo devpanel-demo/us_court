@@ -1,0 +1,19 @@
+uuid: 0d2ce0c2-2bec-4ea1-bae9-be0d543cf6d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_title
+    - node.type.report
+id: node.report.field_sidebar_title
+field_name: field_sidebar_title
+entity_type: node
+bundle: report
+label: 'Sidebar Title'
+description: 'Use this field to override the page title when rendering a link in the right sidebar.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

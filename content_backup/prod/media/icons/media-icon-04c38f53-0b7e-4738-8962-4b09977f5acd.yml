@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 04c38f53-0b7e-4738-8962-4b09977f5acd
+entity_type: media
+bundle: icon
+base_fields:
+  name: bullseye.svg
+  created: '1721136830'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/bullseye.svg'
+      url: '/sites/default/files/icons/bullseye.svg'

@@ -1,0 +1,21 @@
+uuid: 94bb4e9e-128c-4f27-ba58-4ade93f29328
+langcode: en
+status: true
+dependencies: {  }
+name: news_issue
+label: 'News issue'
+effects:
+  8d87e3ce-15ae-4158-b3b7-b8f58914fe09:
+    uuid: 8d87e3ce-15ae-4158-b3b7-b8f58914fe09
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: false
+  e19eda5d-f85a-42aa-83d3-210ecacd66b7:
+    uuid: e19eda5d-f85a-42aa-83d3-210ecacd66b7
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

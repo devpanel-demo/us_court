@@ -1,0 +1,11 @@
+uuid: 8f7b078c-bc7a-4f62-a398-b6cc0314992f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.related_downloads
+label: 'Related downloads'
+description: ''
+targetEntityType: media
+cache: true

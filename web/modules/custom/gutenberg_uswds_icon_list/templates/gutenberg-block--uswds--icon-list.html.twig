@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an example Gutenberg block server-side.
+ *
+ * Available variables:
+ * - block_name: The Gutenberg block name.
+ * - block_content: The content of this block.
+ * - block_attributes: The attributes of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *
+ * @see template_preprocess_gutenberg_block()
+ * @see template_preprocess_gutenberg_block__uswds__icon_list()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('gutenberg_uswds_icon_list/block-view') }}
+{%
+  set classes = [
+    'usa-icon-list',
+    block_attributes.size != 'default' ? 'usa-icon-list--size-' ~ block_attributes.size,
+  ]
+%}
+<ul {{ attributes.addClass(classes) }}>
+  {{ block_content }}
+</ul>

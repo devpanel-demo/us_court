@@ -1,0 +1,49 @@
+uuid: c9363cf7-25ac-4700-9b01-d4729a6d2179
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: P_bP1rZxXPKZ5LV66NzR52MZOpFkDK3byouy-HVRgaE
+id: usc_court_finder_state_terms
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: usc_court_finder
+label: 'US Court Finder State terms'
+source:
+  plugin: csv
+  path: modules/custom/usc_court_finder/source_files/states.csv
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - code
+  fields:
+    -
+      name: code
+    -
+      name: name
+    -
+      name: circuit_code
+process:
+  field_usc_code: code
+  name: name
+  field_usc_type:
+    plugin: default_value
+    default_value: state
+  parent:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: circuit_code
+    -
+      plugin: migration_lookup
+      migration:
+        - usc_court_finder_circuit_terms
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: usc_court_finder_hierarchy
+migration_dependencies:
+  required:
+    - usc_court_finder_circuit_terms

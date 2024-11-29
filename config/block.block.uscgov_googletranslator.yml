@@ -1,0 +1,25 @@
+uuid: 1ea5b052-4830-42c7-acb2-aa7ba709c8d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - google_translator
+  theme:
+    - uscgov
+id: uscgov_googletranslator
+theme: uscgov
+region: header
+weight: 0
+provider: null
+plugin: google_translator
+settings:
+  id: google_translator
+  label: 'Translate this page'
+  label_display: ''
+  provider: google_translator
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''

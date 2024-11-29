@@ -1,0 +1,5 @@
+media.settings:
+  title: 'Piksel settings'
+  parent: system.admin_config_media
+  description: 'Manage Piksel integration settings.'
+  route_name: piksel.settings

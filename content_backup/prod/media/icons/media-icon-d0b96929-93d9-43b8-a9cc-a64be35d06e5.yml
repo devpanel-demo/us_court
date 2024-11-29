@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: d0b96929-93d9-43b8-a9cc-a64be35d06e5
+entity_type: media
+bundle: icon
+base_fields:
+  name: list-solid.svg
+  created: '1724357494'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/list-solid.svg'
+      url: '/sites/default/files/icons/list-solid.svg'
+      description: ''

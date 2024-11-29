@@ -1,0 +1,27 @@
+uuid: 21b82507-d249-4ca2-bda6-6b0c4cd4b00c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+id: data_tables
+label: 'Data tables'
+menu_name: main
+parent: 'menu_link_content:3f2e70e9-b726-4ce3-9a9a-f18956a85b79'
+menu_link: 'menu_position_link:data_tables'
+enabled: true
+weight: -3
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      data_table: data_table

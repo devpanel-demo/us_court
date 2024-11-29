@@ -1,0 +1,29 @@
+uuid: cdc43b62-5bc0-4314-919c-82a1c2162f44
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.landing_page
+    - field.field.file.image.field_file_description
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+    - field.field.file.image.field_link
+  module:
+    - file
+id: file.image.landing_page
+targetEntityType: file
+bundle: image
+mode: landing_page
+content:
+  field_file_image_title_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_file_description: true
+  field_file_image_alt_text: true
+  field_link: true

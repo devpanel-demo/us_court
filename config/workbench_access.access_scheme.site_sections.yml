@@ -1,0 +1,89 @@
+uuid: ba615a1d-580a-4415-a01a-b1f979423b62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.basic.field_workbench_access
+    - field.field.node.camera.field_workbench_access
+    - field.field.node.data_table.field_workbench_access
+    - field.field.node.educational_activity.field_workbench_access
+    - field.field.node.faqs.field_workbench_access
+    - field.field.node.fed_probation_journal.field_workbench_access
+    - field.field.node.federal_rules.field_workbench_access
+    - field.field.node.fee.field_workbench_access
+    - field.field.node.form.field_workbench_access
+    - field.field.node.judge.field_workbench_access
+    - field.field.node.judge_comments.field_workbench_access
+    - field.field.node.landing_view.field_workbench_access
+    - field.field.node.news.field_workbench_access
+    - field.field.node.news_issue.field_workbench_access
+    - field.field.node.report.field_workbench_access
+    - taxonomy.vocabulary.site_sections
+id: site_sections
+plural_label: 'Site Sections'
+label: 'Site Section'
+scheme: taxonomy
+scheme_settings:
+  vocabularies:
+    - site_sections
+  fields:
+    -
+      entity_type: node
+      bundle: basic
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: camera
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: data_table
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: educational_activity
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: faqs
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: federal_rules
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: fed_probation_journal
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: fee
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: form
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: judge
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: judge_comments
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: landing_view
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: news
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: news_issue
+      field: field_workbench_access
+    -
+      entity_type: node
+      bundle: report
+      field: field_workbench_access

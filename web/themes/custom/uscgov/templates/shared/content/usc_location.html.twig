@@ -1,0 +1,14 @@
+{{ include('uscgov:court-finder-court', {
+  attributes,
+  address: content.address|add_suggestion('bare')|render,
+  directions_url: content.extra_field_court_finder_maps_url,
+  opens: content.opens|add_suggestion('bare')|render|striptags|trim,
+  closes: content.closes|add_suggestion('bare')|render|striptags|trim,
+  lunch_start: content.lunch_start|add_suggestion('bare')|render|striptags|trim,
+  lunch_end: content.lunch_end|add_suggestion('bare')|render|striptags|trim,
+  phone: content.phone|add_suggestion('bare')|render|striptags|trim,
+  court_type: content.court_type|add_suggestion('bare')|render,
+  main_office: content.main_office|add_suggestion('bare')|render,
+  links: content.group_useful_links,
+  }, with_context = false)
+}}

@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 9b499584-dc0a-49e3-a0cd-f6954ed44759
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Annual Reports'
+  status: true
+  langcode: en
+  created: '1719237799'
+  changed: 1731345184
+  author: jamesdavison@ao.uscourts.gov
+  url: /data-news/reports/annual-reports
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":["3122","13180","4326"],"viewMode":"featured","collectionRange":3} /-->'
+      summary: 'The federal Judiciary and Administrative Office produce a number of reports for Congress and public on an annual basis. '
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>The federal Judiciary and Administrative Office produce a number of reports for Congress and public on an annual basis.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

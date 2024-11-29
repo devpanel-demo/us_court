@@ -1,0 +1,43 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 879a1ed6-704c-4295-aea9-3682de70f6a1
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: Homepage
+  status: true
+  langcode: en
+  created: '1713642898'
+  changed: 1728260136
+  author: jamesdavison@ao.uscourts.gov
+  url: /homepage
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p>This is the homepage.</p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag:
+    title: 'United States Courts'
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 619af81f-d2ea-463c-8acf-4c525466e55e
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Front Page'
+        weight: 1
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

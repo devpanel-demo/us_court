@@ -1,0 +1,39 @@
+uuid: 2c82cdd7-a1f7-477e-b68f-92ddb34e0fde
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_vacancy_type
+field_name: field_vacancy_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: judicial_summary
+      label: 'Judicial Summary'
+    -
+      value: judicial_vacancy
+      label: 'Current Judicial Vacancy'
+    -
+      value: judicial_future
+      label: 'Future Judicial Vacancy'
+    -
+      value: judicial_confirmation
+      label: 'Confirmation Listing'
+    -
+      value: judicial_emergency
+      label: 'Judicial Emergency'
+    -
+      value: job_vacancy
+      label: 'Job Vacancy'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

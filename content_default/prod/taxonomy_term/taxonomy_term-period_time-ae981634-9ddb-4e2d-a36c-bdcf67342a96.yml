@@ -1,0 +1,11 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 0533218f-3da0-45b4-8347-fd23fbcf832c
+entity_type: taxonomy_term
+bundle: period_time
+base_fields:
+  name: Pending
+  weight: 6
+  langcode: en
+  description: null
+  parent: 0
+custom_fields: {  }

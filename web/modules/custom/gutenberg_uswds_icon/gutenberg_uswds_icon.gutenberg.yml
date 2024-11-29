@@ -1,0 +1,7 @@
+# Libraries to be injected on editor (node edit)
+libraries-edit:
+  - gutenberg_uswds_icon/block-edit
+# Libraries to be injected on node view
+libraries-view: {}
+dynamic-blocks:
+  uswds/icon: {}

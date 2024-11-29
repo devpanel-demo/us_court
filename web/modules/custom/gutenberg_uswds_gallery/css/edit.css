@@ -1,0 +1,135 @@
+/**
+ * Don't edit this file. Find all style at ./sass folder.
+ **/
+.usc-gallery {
+  margin: var(--spacing-md-1) 0;
+}
+.usc-gallery .main-slider {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+}
+.usc-gallery .splide__track {
+  grid-column: 1/-1;
+  padding: var(--spacing-md-1) 0;
+}
+.usc-gallery .splide__track .splide__slide {
+  transition: opacity 0.3s ease-in-out;
+}
+.usc-gallery .splide__track .splide__slide:not(.is-visible) {
+  opacity: 0.4;
+}
+.usc-gallery .splide__arrows {
+  text-align: right;
+  grid-column-end: -1;
+}
+.usc-gallery .splide__arrows .button {
+  --surface-color: var(--accent);
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+  margin-left: 8px;
+}
+.usc-gallery .splide__arrows .button[disabled] {
+  --surface-color: var(--surface-base-medium);
+}
+.usc-gallery .splide__arrows .button.button--arrow::after {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: var(--spacing-xs-3);
+  color: white;
+}
+.usc-gallery .usc-gallery__label {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 24px;
+}
+.usc-gallery .splide__pagination {
+  grid-column: 1/-1;
+  justify-content: center;
+  padding: 0;
+}
+.usc-gallery .splide__pagination button {
+  width: 12px;
+  height: 12px;
+  display: block;
+  background-color: var(--color-primitive-theme-accent-red-darker);
+  padding: 0;
+  border-radius: 50%;
+  margin-left: var(--spacing-xs-3);
+  border: none;
+  cursor: pointer;
+}
+.usc-gallery .splide__pagination button.is-active {
+  background-color: var(--accent);
+}
+
+#glightbox-slider .gslide-external {
+  flex: 1 0 100%;
+}
+#glightbox-slider .gslide-description {
+  flex: 1 0 10%;
+}
+
+.splide__slide__container img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.slide-content-wrapper {
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--border-form);
+  border-radius: 10px;
+}
+.slide-content-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 9px;
+  display: block;
+}
+.slide-content-wrapper .details-box {
+  position: absolute;
+  bottom: 0;
+  background: rgba(82, 86, 97, 0.85);
+  padding: 0 var(--spacing-sm-3);
+  color: var(--color-primitive-neutral-white);
+  border-radius: 0 0 9px 9px;
+}
+.slide-content-wrapper .details-box .spacing-component {
+  margin-bottom: 0;
+}
+.slide-content-wrapper .details-box > p {
+  display: none;
+}
+.slide-content-wrapper:hover .details-box {
+  background: var(--surface-primary-dark);
+}
+.slide-content-wrapper .field--name-field-program-description {
+  display: none;
+}
+
+.usc-gallery .main-slider .splide__list {
+  margin: 0;
+  padding: 0;
+  max-width: 960px;
+  white-space: nowrap;
+  overflow: auto;
+}
+.usc-gallery .main-slider .splide__list .splide__slide {
+  opacity: 1;
+  margin: 0.2rem;
+  display: inline-block;
+}
+.usc-gallery .main-slider .splide__list .splide__slide .slide-content-wrapper .details-box {
+  white-space: normal;
+  width: 100%;
+}
+.usc-gallery .main-slider .splide__list .splide__slide .slide-content-wrapper img {
+  width: revert-layer;
+}
+
+/*# sourceMappingURL=edit.css.map */

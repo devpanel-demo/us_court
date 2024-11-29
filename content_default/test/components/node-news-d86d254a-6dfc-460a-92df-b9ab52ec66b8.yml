@@ -1,0 +1,117 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: d86d254a-6dfc-460a-92df-b9ab52ec66b8
+entity_type: node
+bundle: news
+base_fields:
+  title: 'Testing in-page navigation'
+  status: true
+  langcode: en
+  created: '1716150503'
+  changed: '1716150503'
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-page-navigation
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>The federal judiciary operates separately from the executive and legislative branches, but often works with them as the Constitution requires. Federal laws are passed by Congress and signed by the President. The judicial branch decides the constitutionality of federal laws and resolves other disputes about federal laws. However, judges depend on our government’s executive branch to enforce court decisions.</p><p>Courts decide what really happened and what should be done about it. They decide whether a person committed a crime and what the punishment should be. They also provide a peaceful way to decide private disputes that people can’t resolve themselves. Depending on the dispute or crime, some cases end up in the federal courts and some end up in state courts. Learn more about the different types of federal courts.</p><h2>Supreme Court</h2><p>The Supreme Court is the highest court in the United States. Article III of the U.S. Constitution created the Supreme Court and authorized Congress to pass laws establishing a system of lower courts. In the federal court system’s present form, 94 district level trial courts and 13 courts of appeals sit below the Supreme Court. <a href="http://www.supremecourt.gov/">Learn more about the Supreme Court.</a></p><h2>Courts of Appeals</h2><p>There are 13 appellate courts that sit below the U.S. Supreme Court, and they are called the U.S. Courts of Appeals. The 94 federal judicial districts are organized into 12 regional circuits, each of which has a court of appeals.&nbsp; The appellate court’s task is to determine whether or not the law was applied correctly in the trial court. Appeals courts consist of three judges and do not use a jury.</p><p>A court of appeals hears challenges to district court decisions from courts located within its circuit, as well as appeals from decisions of federal administrative agencies.</p><p>In addition, the Court of Appeals for the Federal Circuit has nationwide jurisdiction to hear appeals in specialized cases, such as those involving patent laws, and cases decided by the <a href="http://www.cit.uscourts.gov/">U.S. Court of International Trade</a> and the <a href="http://www.uscfc.uscourts.gov/">U.S. Court of Federal Claims</a>.</p><p>Learn more about the <a href="node/14335">courts of appeals</a>.&nbsp;</p><h3>Bankruptcy Appellate Panels</h3><p>Bankruptcy Appellate Panels (BAPs) are 3-judge panels authorized to hear appeals of bankruptcy court decisions. These panels are a unit of the federal courts of appeals, and must be established by that circuit.&nbsp;</p><p>Five circuits have established panels: <a href="http://www.bap1.uscourts.gov/">First Circuit</a>, <a href="http://www.ca6.uscourts.gov/internet/bap/bap.htm">Sixth Circuit</a>, <a href="http://www.ca8.uscourts.gov/bankruptcy-appellate-panel">Eighth Circuit</a>, <a href="http://www.ca9.uscourts.gov/bap/">Ninth Circuit</a>, and <a href="http://www.bap10.uscourts.gov/">Tenth Circuit</a>.</p><h2>District Courts</h2><p>The nation’s 94 district or trial courts are called U.S. District Courts. District courts resolve disputes by determining the facts and applying legal principles to decide who is right. &nbsp;</p><p>Trial courts include the district judge who tries the case and a jury that decides the case. Magistrate judges assist district judges in preparing cases for trial. They may also conduct trials in misdemeanor cases.</p><p>There is at least one district court in each state, and the District of Columbia. Each district includes a U.S. bankruptcy court as a unit of the district court. Four territories of the United States have U.S. district courts that hear federal cases, including bankruptcy cases: Puerto Rico, the Virgin Islands, Guam, and the Northern Mariana Islands.</p><p>There are also two special trial courts. The <a href="http://www.cit.uscourts.gov/">Court of International Trade</a> addresses cases involving international trade and customs laws. The <a href="http://www.uscfc.uscourts.gov/">U.S. Court&nbsp;of Federal Claims</a> deals with most claims for money damages against the U.S. government.&nbsp;</p><h2>Bankruptcy Courts</h2><p>Federal courts have exclusive jurisdiction over bankruptcy cases involving personal, business, or farm bankruptcy. This means a bankruptcy case cannot be filed in state court. Through the bankruptcy process, individuals or businesses that can no longer pay their creditors may either seek a court-supervised liquidation of their assets, or they may reorganize their financial affairs and work out a plan to pay their debts.</p><h2>Article I Courts</h2><p>Congress created several Article I, or legislative courts, that do not have full judicial power. Judicial power is the authority to be the final decider in all questions of Constitutional law, all questions of federal law and to hear claims at the core of habeas corpus issues.&nbsp;Article I Courts are:</p><ul><li><a href="http://www.uscourts.cavc.gov/">U.S. Court of Appeals for Veterans Claims</a></li><li><a href="http://www.armfor.uscourts.gov/newcaaf/home.htm">U.S. Court of Appeals for the Armed Forces</a></li><li><a href="http://www.ustaxcourt.gov/">U.S. Tax Court</a></li></ul>'
+      summary: ''
+      format: wysiwyg
+  field_body_enhanced:
+    -
+      uuid: 135095bd-d85e-41fc-bfb4-fa11208da2bc
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1716150909'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2024-05-20'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>Federal courts hear cases involving the constitutionality of a law, cases involving the laws and treaties of the U.S. ambassadors and public ministers, disputes between two or more states, admiralty law, also known as maritime law, and bankruptcy cases.</p>'
+      format: wysiwyg
+  field_metatag: null
+  field_news_issue: null
+  field_related_topics: null
+  field_tags: null
+  field_toc:
+    -
+      value: '1'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: '<p>Subscribe to be notified when the news section is updated.</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary | News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary | News'
+        field_usc_view_more:
+          -
+            uri: 'route:<nolink>'
+            title: null
+            options:
+              attributes: {  }
+  field_usc_table_of_contents: null

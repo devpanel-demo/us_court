@@ -1,0 +1,23 @@
+uuid: 340637ff-c42d-41bb-af38-2bd38bc179f6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: J2n0RpFzS0-bgSyxjs6rSdgxB1rb-bTAgqywNx_964M
+name: large
+label: 'Large (480×480)'
+effects:
+  ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
+    uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d
+    id: image_scale
+    weight: 0
+    data:
+      width: 480
+      height: 480
+      upscale: false
+  a4e46c42-6bdd-4d4b-8f09-e367e4e7f261:
+    uuid: a4e46c42-6bdd-4d4b-8f09-e367e4e7f261
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

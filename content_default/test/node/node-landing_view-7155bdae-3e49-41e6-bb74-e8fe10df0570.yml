@@ -1,0 +1,42 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 7155bdae-3e49-41e6-bb74-e8fe10df0570
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'testing you tube'
+  status: false
+  langcode: en
+  created: '1728397062'
+  changed: 1728397062
+  author: uscourts@agileana.com
+  url: /testing-you-tube
+  revision_log_message: null
+  revision_uid: '9974'
+  moderation_state: draft
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:embed {\"url\":\"https://youtu.be/FIRDIM4mqPQ?feature=shared\",\"type\":\"rich\",\"providerNameSlug\":\"youtube\",\"responsive\":true,\"className\":\"wp-embed-aspect-16-9 wp-has-aspect-ratio\"} -->\r\n<figure class=\"wp-block-embed is-type-rich is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\r\nhttps://youtu.be/FIRDIM4mqPQ?feature=shared\r\n</div></figure>\r\n<!-- /wp:embed -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>This is a paragraph block: Above is the youtube block</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n<p></p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

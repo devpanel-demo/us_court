@@ -1,0 +1,10 @@
+uuid: 43a43cb1-cd7e-428b-b09d-c1c5a0168d9e
+langcode: en
+status: true
+dependencies: {  }
+id: usc_map
+label: 'Interactive Map'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean_usc_map'
+behavior_plugins: {  }

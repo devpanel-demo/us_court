@@ -1,0 +1,23 @@
+.teaser {
+  container-type: inline-size;
+}
+
+.teaser__meta {
+  margin-block: 16px;
+
+  .spacing-component {
+    margin: 0;
+  }
+}
+
+.teaser__content {
+  margin-bottom: 16px;
+
+  img {
+    @container (inline-size > 500px) {
+      max-width: 300px;
+      float: right;
+      margin: 8px;
+    }
+  }
+}

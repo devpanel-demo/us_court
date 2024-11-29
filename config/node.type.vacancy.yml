@@ -1,0 +1,31 @@
+uuid: 7d4412a5-726d-45cd-82fb-ca23e150d800
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Vacancy
+type: vacancy
+description: 'A Vacancy is a Judiciary or Job opening. <strong>Note:</strong> These are predominantly populated via an import process.'
+help: null
+new_revision: false
+preview_mode: 0
+display_submitted: false

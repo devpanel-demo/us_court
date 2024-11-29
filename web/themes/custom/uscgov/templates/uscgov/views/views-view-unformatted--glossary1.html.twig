@@ -1,0 +1,10 @@
+<div class="glossary__letter-group">
+  {% if title %}
+    <h3 class="glossary__letter" id="letter-{{ title|striptags|trim|lower }}">{{ title }}</h3>
+  {% endif %}
+  {% for row in rows %}
+    <div class="glossary_item">
+      {{- row.content -}}
+    </div>
+  {% endfor %}
+</div>

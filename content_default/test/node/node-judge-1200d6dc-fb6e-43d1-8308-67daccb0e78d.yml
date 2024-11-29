@@ -1,0 +1,92 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 1200d6dc-fb6e-43d1-8308-67daccb0e78d
+entity_type: node
+bundle: judge
+base_fields:
+  title: 'Default Content - Judge'
+  status: true
+  langcode: en
+  created: '1717612397'
+  changed: 1717612397
+  author: jamesdavison@ao.uscourts.gov
+  url: /default-content-judge
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      summary: ''
+      format: wysiwyg
+  field_landing_page_image:
+    -
+      uuid: 1a79fe16-d2eb-4de6-b6f4-d73583fd139d
+      entity_type: media
+      base_fields:
+        name: nature-7045133_1920.jpeg
+        created: '1713912999'
+        status: true
+        langcode: en
+      bundle: image
+  field_milestone_activities:
+    -
+      uuid: 8ff25a5d-ac83-413a-8d39-3fa7c6f44844
+      entity_type: paragraph
+      bundle: milestone_activities
+      base_fields:
+        status: true
+        langcode: en
+        created: '1717612407'
+        behavior_settings: {  }
+      custom_fields:
+        field_fc_be_body:
+          -
+            value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+            format: wysiwyg
+        field_fc_jma_category:
+          -
+            uuid: bcff4f1a-aab7-433f-b23d-14f6cc0878ed
+            entity_type: taxonomy_term
+            base_fields:
+              name: Appointed
+              weight: 0
+              langcode: en
+              description: null
+              parent: 0
+            bundle: milestone_categories
+        field_fc_jma_court_name:
+          -
+            value: Default
+        field_fc_jma_current_title:
+          -
+            uuid: 3078a7e8-8a65-4886-ae06-c95657250c9a
+            entity_type: taxonomy_term
+            base_fields:
+              name: 'Chief Judge'
+              weight: 0
+              langcode: en
+              description: null
+              parent: 0
+            bundle: milestone_positions
+        field_fc_jma_date:
+          -
+            value: '2024-06-06'
+        field_fc_jma_position:
+          -
+            uuid: 3078a7e8-8a65-4886-ae06-c95657250c9a
+            entity_type: taxonomy_term
+            base_fields:
+              name: 'Chief Judge'
+              weight: 0
+              langcode: en
+              description: null
+              parent: 0
+            bundle: milestone_positions
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

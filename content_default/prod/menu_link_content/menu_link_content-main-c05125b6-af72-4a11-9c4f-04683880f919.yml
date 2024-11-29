@@ -1,0 +1,151 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: c05125b6-af72-4a11-9c4f-04683880f919
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Discussion Questions - Gideon v. Wainwright'
+  enabled: true
+  expanded: false
+  langcode: und
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/3584'
+      title: null
+      options: {  }
+  weight: 0
+  parent:
+    uuid: 9636cc45-f9ce-4ef1-88e4-2aa16bb89aa5
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Gideon v. Wainwright'
+      enabled: true
+      expanded: false
+      langcode: und
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/2815'
+          title: null
+          options: {  }
+      weight: 3
+      parent:
+        uuid: c06af1a1-1f05-4f2f-b9d3-544b56b8d36f
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Sixth Amendment Activities'
+          enabled: true
+          expanded: false
+          langcode: und
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/8932'
+              title: ''
+              options: {  }
+          weight: -44
+          parent:
+            uuid: 2f0ea32c-b1d8-4c3d-9b41-fa77b0b9fbcc
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Educational Activities'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/9111'
+                  title: ''
+                  options: {  }
+              weight: 0
+              parent:
+                uuid: 04eb5c59-a6cb-4eba-8826-69f380a397f3
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Educational Resources'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/4314'
+                      title: ''
+                      options: {  }
+                  weight: -48
+                  parent:
+                    uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+                    entity_type: menu_link_content
+                    bundle: main
+                    base_fields:
+                      title: 'About Federal Courts'
+                      enabled: true
+                      expanded: false
+                      langcode: en
+                      menu_name: main
+                      description: null
+                      link:
+                        -
+                          uri: 'entity:node/4'
+                          title: ''
+                          options: {  }
+                      weight: -71
+                      parent: ''
+                    custom_fields:
+                      field_description_text:
+                        -
+                          value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+                      field_enable_megamenu:
+                        -
+                          value: '1'
+                      field_popular_links:
+                        -
+                          uri: 'entity:node/12916'
+                          title: 'Court Website Links'
+                          options: {  }
+                        -
+                          uri: 'entity:node/2769'
+                          title: 'Authorized Judgeships'
+                          options: {  }
+                        -
+                          uri: 'entity:node/4305'
+                          title: 'Supreme Court Landmarks'
+                          options: {  }
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'Find realistic simulations and memorable, interactive approaches to court basics.'
+                  field_enable_megamenu:
+                    -
+                      value: '0'
+                  field_popular_links: null
+            custom_fields:
+              field_description_text: null
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu: null
+  field_popular_links: null

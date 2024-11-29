@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Provides USC Migration hooks.
+ */
+
+/**
+ * Implements migration_plugins_alter().
+ */
+function usc_migrate_list_migration_plugins_alter(array &$migrations) {
+  $fieldNames = [
+    "field_criminogenic_subject_area" => [
+      "bundle" => "subject"
+    ],
+    "field_reporting_period_increment" => [
+      "bundle" => "period_time"
+    ],
+  ];
+
+  foreach ($migrations as $key => $migration) {
+    if ($migration["source"]["plugin"] == "d7_node_complete") {
+      foreach ($fieldNames as $key2 => $field) {
+        if (!empty($migrations[$key]["process"][$key2])) {
+          $migrations[$key]["process"][$key2] = [
+            [
+              "plugin"      => "entity_generate",
+              "value_key"   => "name",
+              "bundle_key"  => "vid",
+              "bundle"      => $field["bundle"],
+              "entity_type" => "taxonomy_term",
+              "source"      => $key2,
+            ]
+          ];
+        }
+      }
+    }
+  }
+}

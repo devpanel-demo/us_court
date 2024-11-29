@@ -1,0 +1,114 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+$hero_break: 'min-width: 700px';
+
+.homepage-hero {
+  position: relative;
+  color: var(--text-on-surface-primary-darker);
+}
+
+.homepage-hero__background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 750px;
+
+  @media (min-width: 400px) {
+    height: 600px;
+  }
+
+  @media (min-width: 550px) {
+    height: 500px;
+  }
+
+  @media ($hero_break) {
+    height: 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(113deg, rgba(0, 45, 90, 0.87) 52.24%, rgba(230, 241, 250, 0.00) 102.01%);
+  }
+}
+
+.homepage-hero__container {
+  position: relative; // Establish stacking context;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 24px;
+  padding-block: 48px;
+
+  @media ($hero_break) {
+    grid-template-columns: 4fr 3fr;
+    column-gap: 50px;
+  }
+
+  @media (min-width: 900px) {
+    column-gap: 100px;
+  }
+}
+
+.homepage-hero__first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  grid-row: span 2;
+}
+
+.homepage-hero__title {
+  margin: 0;
+  font-size: 56px;
+  text-wrap: pretty;
+}
+
+.homepage-hero__description {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.homepage-hero__cta-wrapper {
+  margin-top: 8px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    background-color: var(--surface-button-secondary);
+    color: var(--text-on-surface-button-secondary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--text-on-surface-button-secondary);
+    }
+
+    &:before {
+      display: block;
+      width: 18px;
+      height: 18px;
+      content: "";
+      background-color: currentColor;
+      mask-image: url('images/court.svg');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+  }
+}

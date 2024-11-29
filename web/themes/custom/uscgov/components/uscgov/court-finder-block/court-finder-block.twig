@@ -1,0 +1,39 @@
+{% set court_input_value = getUrlParam('search_api_fulltext') %}
+{# Set checked finder. #}
+{% if court_input_value %}
+  {% set court_input_checked = 'checked' %}
+  {% set location_input_checked = '' %}
+  {% set active_input = 'court-name-radio' %}
+{% else %}
+  {% set court_input_checked = '' %}
+  {% set location_input_checked = 'checked' %}
+  {% set active_input = 'court-location-radio' %}
+{% endif %}
+
+
+<div class="court-finder-block" data-active="{{ active_input }}">
+  <h2 class="court-finder-block__title">{{ 'Find a Federal Court'|t }}</h2>
+  <p class="court-finder-block__description">{{ 'Find a federal court by location or court name.'|t }}</p>
+  <fieldset class="court-finder-block__toggle">
+    <div class="court-finder-block__toggle-wrapper">
+      {% set location_id = 'court-location-radio' %}
+      <input id="{{ location_id }}" name="find-type" class="visually-hidden" type="radio" {{ location_input_checked }}>
+      <label for="{{ location_id }}" class="court-finder-block__toggle-label">{{ 'Location'|t }}</label>
+    </div>
+     <div class="court-finder-block__toggle-wrapper">
+      {% set court_name_id = 'court-name-radio' %}
+      <input id="{{ court_name_id }}" name="find-type" class="visually-hidden" type="radio" {{ court_input_checked }}>
+      <label for="{{ court_name_id }}" class="court-finder-block__toggle-label">{{ 'Court name'|t }}</label>
+    </div>
+  </fieldset>
+  {{ getLocationAutocomplete() }}
+  <form action="/federal-court-finder/find" class="court-finder-block__form court-finder-block__form--name">
+    <div class="court-finder-block__form-item-wrapper">
+      <input id="court-finder-by-name" class="court-finder-block__input" name="search_api_fulltext" type="text" value="{{ court_input_value }}">
+      <button class="court-finder-block__form-submit">
+        <span class="visually-hidden">{{ 'Submit'|t }}</span>
+      </button>
+    </div>
+    <label for="court-finder-by-name" class="court-finder-block__form-label">{{ 'Search by court, circuit, district, or building'|t }}</label>
+  </form>
+</div>

@@ -1,0 +1,257 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: cab2c77c-7a79-4a09-a975-bfbfaa902afe
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Court Role and Structure'
+  status: true
+  langcode: en
+  created: '1409160829'
+  changed: 1731102164
+  author: james_davison@ao.uscourts.gov
+  url: /about-federal-courts/court-role-and-structure
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '43'
+  menu_link:
+    uuid: e4bb4697-84a5-458b-ad4a-6fa3908a64c0
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Court Role and Structure'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/1977'
+          title: ''
+          options: {  }
+      weight: -53
+      parent:
+        uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'About Federal Courts'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/4'
+              title: ''
+              options: {  }
+          weight: -71
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/12916'
+              title: 'Court Website Links'
+              options: {  }
+            -
+              uri: 'entity:node/2769'
+              title: 'Authorized Judgeships'
+              options: {  }
+            -
+              uri: 'entity:node/4305'
+              title: 'Supreme Court Landmarks'
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'The judicial branch is one of the three separate and distinct branches of the federal government.'
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>These three branches — legislative, executive, and judicial — operate within a constitutional system of “checks and balances.” This means that although each branch is formally separate from the other two, the Constitution often requires cooperation among the branches. Federal laws, for example, are passed by Congress and signed by the President. The judicial branch, in turn, has the authority to decide the constitutionality of federal laws and resolve other cases involving federal laws. But judges depend upon the executive branch to enforce court decisions.</p><p>Courts provide a peaceful way to decide private disputes that people can’t resolve themselves. Depending on the dispute or crime, some cases end up in the federal courts and some end up in state courts.&nbsp;</p><p>Learn about the <a href="/node/2925" data-entity-type="node" data-entity-uuid="12b1aaff-3a03-4f58-a09b-724855dbb98e" data-entity-substitution="canonical">difference between federal and state courts</a>.&nbsp;</p><h2>Supreme Court</h2><p>The U.S. Supreme Court is the highest court in the United States. Article III of the U.S. Constitution created the Supreme Court and authorized Congress to pass laws establishing a system of lower courts. Learn more about the <a href="http://www.supremecourt.gov/">Supreme Court</a>.</p><h2>Courts of Appeals</h2><p>There are 13 appellate courts that sit below the U.S. Supreme Court, and they are called U.S. courts of appeals. The appellate court’s task is to determine whether the law was applied correctly in the trial court or federal administrative agency. Learn more about <a href="/node/60001" data-entity-type="node" data-entity-uuid="a3fc428c-7b73-475e-8c1f-b9ffdf1aead2" data-entity-substitution="canonical">courts of appeals</a>.&nbsp;</p><h2>District Courts</h2><p>The nation’s 94 district or trial courts are called U.S. district courts. District courts resolve disputes by determining the facts and applying the law to those facts. Learn more about <a href="/node/60003" data-entity-type="node" data-entity-uuid="bf07667e-4771-4957-8879-b599ad39d8e2" data-entity-substitution="canonical">district courts</a>.</p><h2>Bankruptcy Courts</h2><p>There are 90 U.S. bankruptcy courts. Bankruptcy courts help people and businesses who cannot pay their debts get a “fresh start.” Learn more about <a href="/node/60000" data-entity-type="node" data-entity-uuid="08561cc5-5cb5-4815-8dc7-b150e13a5a9e" data-entity-substitution="canonical">bankruptcy courts</a>.</p><h2>Article I Courts</h2><p>Congress created several Article I that are not part of the Third Branch. Article I Courts include:</p><ul><li><a href="http://www.uscourts.cavc.gov/">U.S. Court of Appeals for Veterans Claims</a></li><li><a href="http://www.armfor.uscourts.gov/newcaaf/home.htm">U.S. Court of Appeals for the Armed Forces</a></li><li><a href="http://www.ustaxcourt.gov/">U.S. Tax Court</a></li></ul>'
+      summary: ''
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 8b8ac5d5-1d23-4f06-8cae-929d385ba4f0
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1730169174'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image:
+    -
+      uuid: 0a07c979-33f0-42ba-8c9b-6a83488dd596
+      entity_type: media
+      base_fields:
+        name: court-role-structure-scales.jpg
+        created: '1430410020'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>Article III of the U.S. Constitution establishes the judicial branch as one of the three separate and distinct branches of the federal government.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: 6762542b-fb18-4ef3-abfb-0ec822493cf6
+      entity_type: paragraph
+      bundle: usc_video
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	Step inside the U.S. Courts of Appeals. Learn about processes, court culture, and landmark cases.&nbsp;
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Video Inside Look: Appellate Courts'
+        field_usc_title:
+          -
+            value: 'Inside Look: Appellate Courts'
+        field_usc_video:
+          -
+            uuid: efd46b13-574f-4546-b864-26b310de4c3d
+            entity_type: media
+            base_fields:
+              name: 'Knowledge Seminar: An Inside Look at Federal Appellate Courts'
+              created: '1550181164'
+              status: true
+              langcode: en
+            bundle: remote_video
+    -
+      uuid: 7172ac83-5891-4cf4-8138-35ebb2085048
+      entity_type: paragraph
+      bundle: usc_graphic_photo
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_image:
+          -
+            uuid: 65787192-0454-4958-b7c1-db1da9b05014
+            entity_type: media
+            base_fields:
+              name: mallet.jpg
+              created: '1488312497'
+              status: true
+              langcode: en
+            bundle: image
+        field_usc_label:
+          -
+            value: 'Graphic/Photo Understanding the Federal Courts'
+        field_usc_title:
+          -
+            value: 'Understanding the Federal Courts'
+    -
+      uuid: 5da0cda0-6f01-4679-b516-e1863a23a8db
+      entity_type: paragraph
+      bundle: usc_related_content
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_content_nodes:
+          -
+            uuid: cea7c88b-0f99-4208-b77d-f0de54b5da80
+            entity_type: node
+            base_fields: {  }
+            bundle: basic
+          -
+            uuid: 968b1e6d-dce0-455d-87ca-c33434bd397c
+            entity_type: node
+            base_fields: {  }
+            bundle: basic
+        field_usc_label:
+          -
+            value: 'Related Content'
+        field_usc_title:
+          -
+            value: 'Related Content'
+    -
+      uuid: c1c6afc4-8205-4daa-9a99-11b7248c1cb9
+      entity_type: paragraph
+      bundle: usc_graphic_photo
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_image:
+          -
+            uuid: 6b5f5401-8f94-4ac1-961d-eca78fe984f8
+            entity_type: media
+            base_fields:
+              name: u.s._federal_courts_map.png
+              created: '1555592406'
+              status: true
+              langcode: en
+            bundle: image
+        field_usc_label:
+          -
+            value: 'Graphic/Photo U.S. Federal Courts Circuit Map'
+        field_usc_title:
+          -
+            value: 'U.S. Federal Courts Circuit Map'
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 88a7b5f3-a2f7-4edb-986d-b09d68bd7489
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'About Federal Courts'
+        weight: 3
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

@@ -1,0 +1,27 @@
+_core:
+  default_config_hash: vOaSYBgSyTzn8_p0MSY8B-ygp9V0Nc6qnX0vy9KYGeo
+extlink_use_external_js_file: false
+extlink_exclude_admin_routes: false
+extlink_target: true
+extlink_target_no_override: false
+extlink_nofollow: false
+extlink_noreferrer: true
+extlink_follow_no_override: false
+extlink_subdomains: true
+extlink_alert: true
+extlink_alert_text: "You are now leaving 'Gov Demo' website. \r\n\r\nThe 'Gov Demo' website provides this link for your convenience. The 'Gov Demo' website takes no responsibility for and exercises no control over the organizations, views, accuracy, copyright or trademark compliance, or legality of the material contained on the site you are about to access.\r\n\r\nThank you for visiting our site."
+extlink_exclude: \.gov
+extlink_include: ''
+extlink_class: ext
+extlink_label: '(link is external)'
+extlink_img_class: false
+extlink_css_exclude: ''
+extlink_css_explicit: ''
+extlink_mailto_class: mailto
+extlink_mailto_label: '(link sends email)'
+extlink_use_font_awesome: true
+extlink_font_awesome_classes:
+  links: external-link--link
+  mailto: external-link--mail
+extlink_icon_placement: append
+whitelisted_domains: {  }

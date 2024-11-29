@@ -1,0 +1,226 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 818f185f-fd41-4d20-a90b-6f228ad1c48c
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Judiciary News'
+  status: true
+  langcode: en
+  created: '1419001058'
+  changed: 1727753530
+  author: jamesdavison@ao.uscourts.gov
+  url: /judiciary-news
+  revision_log_message: 'Edited by courtney.mcilroy.'
+  revision_uid: '1'
+  menu_link:
+    uuid: 7f95704e-e532-4b0f-bdc0-47af94f4c9aa
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: News
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/4283'
+          title: ''
+          options: {  }
+      weight: 3
+      parent:
+        uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Data & News'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/8'
+              title: ''
+              options: {  }
+          weight: -68
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/16578'
+              title: 'Federal Court Scams'
+              options: {  }
+            -
+              uri: 'entity:node/3122'
+              title: "Director's Annual Report"
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Learn about the work of the federal Judiciary. '
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:drupalblock/views-block-news-landing-block-news-landing {"blockId":"views_block:news_landing-block_news_landing"} /-->'
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: a1cda911-6e2a-4ef3-b527-a3fc16d3424e
+      entity_type: paragraph
+      bundle: usc_graphic_photo
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_image:
+          -
+            uuid: d76207bb-bac0-4667-bd7c-3c87d14bc2e7
+            entity_type: media
+            base_fields:
+              name: the_jcus_100th_anniversary_icon.png
+              created: '1664478567'
+              status: true
+              langcode: en
+            bundle: image
+        field_usc_label:
+          -
+            value: 'Graphic/Photo Judicial Conference at 100'
+        field_usc_title:
+          -
+            value: 'Judicial Conference at 100'
+    -
+      uuid: f4544ebe-9f7f-42f8-a1ef-f2dcba89f4c6
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_label:
+          -
+            value: 'Related Links'
+        field_usc_links:
+          -
+            uri: 'internal:/node/1990'
+            title: 'Judicial Milestones'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'internal:/node/2875'
+            title: "Journalist's Guide to the Federal Courts"
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://www.youtube.com/user/uscourts'
+            title: 'Federal Judiciary YouTube Channel'
+            options:
+              attributes:
+                target: 0
+        field_usc_title:
+          -
+            value: 'Related Links'
+    -
+      uuid: ba01f9cb-310e-4b24-a07b-b1e29f984a9e
+      entity_type: paragraph
+      bundle: usc_related_content
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_content_nodes:
+          -
+            uuid: 579fff32-13aa-490b-a25e-c45dd669995e
+            entity_type: node
+            base_fields: {  }
+            bundle: news_issue
+          -
+            uuid: 508ba20c-6a57-4a17-9183-ed524b35a44d
+            entity_type: node
+            base_fields: {  }
+            bundle: news_issue
+          -
+            uuid: f8017748-b820-4965-a25a-2753d813c97d
+            entity_type: node
+            base_fields: {  }
+            bundle: news_issue
+          -
+            uuid: 6ce74990-4dbc-4baf-ba37-2a329aeef0a5
+            entity_type: node
+            base_fields: {  }
+            bundle: news_issue
+        field_usc_label:
+          -
+            value: 'Related Content'
+        field_usc_title:
+          -
+            value: 'Related Content'
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	Subscribe to be notified when the news section is updated.
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: e6e4aa9c-e40e-4002-a9a7-f95b3f1cc998
+      entity_type: taxonomy_term
+      base_fields:
+        name: News
+        weight: 20
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

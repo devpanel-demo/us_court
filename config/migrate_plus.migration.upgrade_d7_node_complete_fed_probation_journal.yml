@@ -1,0 +1,231 @@
+uuid: 7ddbeea1-e1ef-4109-84b9-ea6794972691
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_fed_probation_journal
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Scheduler Data'
+migration_group: migrate_drupal_7
+label: 'Node complete (Federal Probation Journal)'
+source:
+  plugin: d7_node_complete
+  node_type: fed_probation_journal
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_fed_probation_journal/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: ckeditor_link_file_to_linkit
+    -
+      plugin: img_tag_to_embed
+  field_auther:
+    -
+      plugin: get
+      source: field_auther
+  field_document_pdf:
+    -
+      plugin: media_migration_delta_sort
+      source: field_document_pdf
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: fid
+          migration:
+            - upgrade_d7_file_entity_document_public
+            - upgrade_d7_file_entity_document_http
+            - upgrade_d7_file_entity_image_public
+            - upgrade_d7_file_entity_banner_image_public
+            - upgrade_d7_file_entity_audio_public
+            - upgrade_d7_file_entity_video_youtube
+            - upgrade_d7_file_entity_file_public
+            - upgrade_d7_file_entity_image_https
+            - upgrade_d7_file_entity_image_http
+          no_stub: true
+  field_mydate:
+    -
+      plugin: sub_process
+      source: field_mydate
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_usc_additional_content:
+    -
+      plugin: usc_blocks_to_paragraphs
+      source: field_sidebar
+      migration:
+        - sidebar_related_links
+        - sidebar_related_files
+        - sidebar_video
+        - sidebar_graphic_photo
+        - sidebar_related_content
+  field_usc_govdelivery_form:
+    -
+      plugin: usc_blocks_to_paragraphs
+      source: field_sidebar
+      migration:
+        - sidebar_gov_delivery
+  field_usc_notification:
+    -
+      plugin: usc_blocks_to_paragraphs
+      source: field_sidebar
+      migration:
+        - sidebar_notifications
+  field_usc_table_of_contents:
+    -
+      plugin: usc_blocks_to_paragraphs
+      source: field_sidebar
+      migration:
+        - sidebar_table_of_contents
+  field_tags:
+    -
+      plugin: sub_process
+      source: field_tags
+      process:
+        target_id: tid
+  field_test:
+    -
+      plugin: sub_process
+      source: field_test
+      process:
+        target_id: tid
+  field_usc_import_timestamp:
+    -
+      plugin: get
+      source: field_usc_import_timestamp
+  field_volume_and_issue_number:
+    -
+      plugin: get
+      source: field_volume_and_issue_number
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+  field_workbench_access:
+    -
+      plugin: migration_lookup
+      source: workbench_access
+      no_stub: true
+      migration:
+        - upgrade_d7_taxonomy_term_site_sections
+  publish_on:
+    -
+      plugin: get
+      source: scheduler_publish_on
+  unpublish_on:
+    -
+      plugin: get
+      source: scheduler_unpublish_on
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: fed_probation_journal
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_image_http
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_http
+    - upgrade_d7_metatag_field_node
+    - upgrade_d7_metatag_field_instance_node_fed_probation_journal
+    - upgrade_d7_metatag_field_instance_widget_settings_node_fed_probation_journal
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_image_http

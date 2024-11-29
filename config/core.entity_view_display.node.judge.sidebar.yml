@@ -1,0 +1,66 @@
+uuid: eaebeb0f-5e86-48b0-95be-c21b92f460db
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.judge.body
+    - field.field.node.judge.field_landing_page_image
+    - field.field.node.judge.field_milestone_activities
+    - field.field.node.judge.field_tags
+    - field.field.node.judge.field_usc_additional_content
+    - field.field.node.judge.field_usc_govdelivery_form
+    - field.field.node.judge.field_usc_notification
+    - field.field.node.judge.field_usc_related_news
+    - field.field.node.judge.field_usc_table_of_contents
+    - field.field.node.judge.field_workbench_access
+    - node.type.judge
+  module:
+    - sdc_display
+    - summary_only
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.judge.sidebar
+targetEntityType: node
+bundle: judge
+mode: sidebar
+content:
+  body:
+    type: text_summary_only
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_summary: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  content_moderation_control: true
+  extra_field_child_menu_items: true
+  field_landing_page_image: true
+  field_milestone_activities: true
+  field_tags: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  links: true
+  search_api_excerpt: true

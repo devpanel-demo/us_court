@@ -1,0 +1,14 @@
+uuid: eaa31521-489c-4760-9f87-e5953ad1c560
+langcode: en
+status: true
+dependencies:
+  module:
+    - usc_court_finder
+id: location_aliases_d7
+label: 'Location Aliases d7'
+type: 'canonical_entities:usc_location'
+pattern: '/federal-court-finder/location/[usc_location:location_id]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

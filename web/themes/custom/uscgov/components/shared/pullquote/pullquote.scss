@@ -1,0 +1,42 @@
+.usc-pullquote {
+  margin: 0;
+  padding: 24px;
+  border-left: 4px solid var(--border-secondary-dark);
+  background: var(--surface-body);
+
+  .pullquote-body {
+    font-family: var(--font-serif);
+    font-size: 22px;
+
+    p {
+      font-size: inherit;
+    }
+
+    :first-child {
+      margin-top: 0;
+
+      &:before {
+        content: "\201C"
+      }
+    }
+
+    :last-child {
+      margin-bottom: 0;
+
+      &:after {
+        content: "\201D"
+      }
+    }
+  }
+
+  .pullquote-attribution {
+    display: block;
+    margin-top: 16px;
+    text-transform: capitalize;
+    font-style: italic;
+
+    &:before {
+      content: "\2014 "
+    }
+  }
+}

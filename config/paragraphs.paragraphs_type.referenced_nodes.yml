@@ -1,0 +1,10 @@
+uuid: d8d4939b-2880-4a73-8074-91e7e8728132
+langcode: en
+status: true
+dependencies: {  }
+id: referenced_nodes
+label: 'Referenced nodes'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_referenced_nodes'
+behavior_plugins: {  }

@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Process List Item
+status: experimental
+group: USWDS
+props:
+  type: object
+  properties:
+    heading:
+      title: Heading
+      type: string
+      description: The item heading.
+slots:
+  content:
+    title: Content

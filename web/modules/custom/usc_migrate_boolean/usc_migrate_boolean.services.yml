@@ -1,0 +1,9 @@
+services:
+  usc_boolean_migration.event_subscriber:
+    class: Drupal\usc_migrate_boolean\EventSubscriber\BooleanMigrationSubscriber
+    arguments:
+      - '@entity_type.manager'
+      - '@plugin.manager.migration'
+      - '@migrate.lookup'
+    tags:
+      - { name: event_subscriber }

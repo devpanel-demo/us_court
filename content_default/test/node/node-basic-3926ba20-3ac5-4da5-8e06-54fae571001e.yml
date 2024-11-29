@@ -1,0 +1,107 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 3926ba20-3ac5-4da5-8e06-54fae571001e
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'testing gallery'
+  status: true
+  langcode: en
+  created: '1715721663'
+  changed: 1715721663
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-gallery
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: b83fc7bd-eebd-4ed3-adf5-8a08181103d6
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715721675'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<h2>Jury Service</h2><p>U.S. citizens at least 18 years of age may be called to jury service, one of the most important ways individual citizens become involved with the federal courts. Learn more about jury service and <a href="https://edit.uscourts.gov/services-forms/jury-service"><u>what to do if you were summoned to federal jury service</u></a>.&nbsp;</p><h2>Court Cases</h2><p>Federal courts have jurisdiction over cases involving:</p><ul><li>the United States government,</li><li>the Constitution or federal laws, or</li><li>controversies between states or between the U.S. government and foreign governments.</li></ul><p>For instance, a claim by an individual to receive money under a federal government program such as Social Security, a claim by the government that someone has violated federal laws, or a challenge to actions taken by a federal agency might all be heard in federal court.</p><p>In contrast, most family law matters are addressed in state court, since federal court jurisdiction granted by the U.S. Constitution does not include this area of law.</p><p>Few cases wind up in federal trial court, also called U.S. District Court. Judges encourage parties involved in a dispute to reach an agreement and avoid the expense and delay of a trial.</p><p><a href="https://edit.uscourts.gov/about-federal-courts/court-role-and-structure/comparing-federal-state-courts"><u>Compare federal and state courts</u></a> to find out who does what.&nbsp;</p><h2>Bankruptcy</h2><p>Federal courts have total jurisdiction over all bankruptcy cases, which Congress has determined should be addressed in federal courts rather than state courts. This means that a bankruptcy case may not be filed in a state court.</p><p>The primary purposes of bankruptcy law is to help honest people who can no longer pay their creditors get a new start by liquidating their assets to pay debts, or by creating a repayment plan. Bankruptcy laws also protect troubled businesses and provide for orderly distributions to business creditors through reorganization or liquidation.</p><p><a href="https://edit.uscourts.gov/services-forms/bankruptcy"><u>Information about the bankruptcy process</u></a> helps citizens decide how to file for bankruptcy and where to get help.&nbsp;</p><h2>Naturalization Ceremonies</h2><p>Federal courts hold ceremonies throughout the year where United States citizenship is formally granted and new citizens are officially welcomed. Many are held on or around September 17 to celebrate Constitution Day and Citizenship Day. <a href="https://edit.uscourts.gov/about-federal-courts/educational-resources/annual-observances/naturalization-ceremonies"><u>Naturalization ceremonies</u></a> are open to the public and may be attended by hundreds and sometimes thousands of people. These important civic events, conducted in courtrooms and at sites in the community, present an educational opportunity for promoting public understanding of the federal courts.</p><h2>Landmark Cases</h2><p>The impact of the federal courts on our lives is best known by&nbsp;<a href="https://edit.uscourts.gov/about-federal-courts/educational-resources/supreme-court-landmarks"><u>landmark Supreme Court cases</u></a>&nbsp;and other federal court cases that show the judicial branch is significant to the way we live and the rights we have. &nbsp;&nbsp;</p><h2>News stories</h2><p>The news media, whether on television, online, or in printed formats often describe how issues of current interest in society wind up in the federal courts. These stories may involve issues such as civil rights cases involving national laws, acts of national terrorism, takeovers of publicly-held corporations, disputes between states, or traffic violations or misdemeanors occurring on federal property, such as in a national park.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery:
+          -
+            uuid: 3e333b04-e3d9-42e9-a286-cdda4b8e2345
+            entity_type: media
+            base_fields:
+              name: constitutionday1_opt.jpg
+              created: '1715284473'
+              status: true
+              langcode: en
+            bundle: image
+          -
+            uuid: 65931b26-f440-4f08-b42a-58e925b3279d
+            entity_type: media
+            base_fields:
+              name: opt_roadways-to-the-bench_florida.png
+              created: '1715963002'
+              status: true
+              langcode: en
+            bundle: image
+          -
+            uuid: 86fe7f5d-88c0-421d-b792-d5180a26a175
+            entity_type: media
+            base_fields:
+              name: korematsu-panelists-and-volunteers_resize.png
+              created: '1715782290'
+              status: true
+              langcode: en
+            bundle: image
+          -
+            uuid: 8992da0d-7986-4aee-b0aa-86bb5db0174b
+            entity_type: media
+            base_fields:
+              name: karen-korematsu_resize.png
+              created: '1715782124'
+              status: true
+              langcode: en
+            bundle: image
+          -
+            uuid: cc9158c3-ea48-407e-9a7c-ac1a3871f67c
+            entity_type: media
+            base_fields:
+              name: image-1.png
+              created: '1715282783'
+              status: true
+              langcode: en
+            bundle: image
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>The work&nbsp;of the federal courts impacts the lives of the&nbsp;American public in many ways. This section discusses the most common ways people&nbsp;interact with the U.S. Courts.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

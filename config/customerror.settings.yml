@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: DIuRxgLzDh82NlGr5h67xrsGSi4HzpJenEqDeWfYKc8
+403:
+  title: 'Access denied'
+  body: 'Access denied.'
+  theme: ''
+404:
+  title: 'Requested page not found'
+  body: 'Requested page not found.'
+  theme: ''
+redirect: ''

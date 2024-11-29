@@ -1,0 +1,82 @@
+@forward "../../sass/uswds/settings";
+@forward "usa-table/src/styles";
+@forward "override";
+
+// Sort link.
+.usa-table__header__link {
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  height: 24px;
+  width: 24px;
+  transform: translate(0, -50%);
+
+  .usa-icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.usa-table th.field-sortable {
+  padding-right: 2.5rem;
+  position: relative;
+}
+
+.usa-table {
+  width: 100%;
+
+  .sortInitialOrder-asc {
+    position: relative;
+    padding-right: 2rem;
+  }
+}
+
+table:is(.wp-block-uswds-table, .usa-table)[class] caption {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-on-surface-primary-light);
+}
+
+.usa-table :is(th, td) {
+  padding: 15px 10px;
+  border-color: var(--border-muted-dark);
+  background-color: var(--surface-base-lighter);
+  color: var(--text-on-surface-base-lighter);
+  font-size: 16px;
+}
+
+.usa-table thead th[aria-sort] {
+  position: relative; // Anchor sort icon.
+  padding-right: 30px;
+}
+
+.usa-table thead th[aria-sort],
+.usa-table :is(td, th)[data-sort-active] {
+  background-color: var(--surface-base-lightest);
+  color: var(--text-on-surface-base-lightest--dark);
+}
+
+.usa-table thead :is(th, td) {
+  background-color: var(--surface-base-muted-light);
+  color: var(--text-on-surface-base-muted-light);
+
+  &[aria-sort],
+  &[data-sort-active],
+  &.sort:is(.desc, .asc) {
+    background-color: var(--surface-primary-light);
+    color: var(--text-on-surface-primary-light);
+  }
+}
+
+.usa-table tbody tr:nth-child(even) td {
+  background-color: var(--surface-base-medium);
+
+  &[data-sort-active] {
+    background-color: var(--surface-primary-lighter);
+  }
+}
+
+.usa-table-container--scrollable td {
+  white-space: revert;
+}

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 69753c8a-e895-4e67-8751-d62c0f7e9ebd
+entity_type: media
+bundle: icon
+base_fields:
+  name: suitcase.svg
+  created: '1721137227'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/suitcase.svg'
+      url: '/sites/default/files/icons/suitcase.svg'

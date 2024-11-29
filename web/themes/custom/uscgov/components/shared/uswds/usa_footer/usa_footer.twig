@@ -1,0 +1,60 @@
+{% set variant = 'slim' %}
+
+{%
+  set classes = [
+    'usa-footer',
+    'usa-footer--' ~ variant,
+  ]
+%}
+
+{% if variant == 'slim' %}
+<footer{{ attributes.addClass(classes) }}>
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">{{ 'Return to top'|t }}</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__primary-container grid-row">
+      <div class="mobile-lg:grid-col-8">
+        <nav class="usa-footer__nav" aria-label="Footer navigation,">
+          {{ footer_primary }}
+        </nav>
+      </div>
+      {% if phone or email %}
+        <div class="mobile-lg:grid-col-4">
+          <address class="usa-footer__address">
+            <div class="grid-row grid-gap">
+              {% if phone %}
+                <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
+                  <div class="usa-footer__contact-info">
+                    <a href="tel:{{ phone|trim }}">{{ phone }}</a>
+                  </div>
+                </div>
+              {% endif %}
+              {% if email %}
+                <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
+                  <div class="usa-footer__contact-info">
+                    <a href="mailto:{{ email }}">{{ email }}</a>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </address>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      {# {{ footer_secondary }} #}
+      <div class="usa-footer__logo grid-row grid-gap-2">
+        <div class="grid-col-auto">
+          <img class="usa-footer__logo-img" src="{{ logo.path }}" alt="{{ logo.alt }}" width="{{ logo.width }}" height="{{ logo.height }}">
+        </div>
+        <div class="grid-col-auto">
+          <p class="usa-footer__logo-heading">{{ org_name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endif %}

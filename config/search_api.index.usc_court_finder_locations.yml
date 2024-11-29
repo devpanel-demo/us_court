@@ -1,0 +1,157 @@
+uuid: 8e075465-5d59-4cf7-9b17-399b26946c42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.usc_location.field_geofield
+    - search_api.server.usc_server
+  module:
+    - usc_court_finder
+    - search_api_location
+    - taxonomy
+    - search_api
+_core:
+  default_config_hash: XNU3CqH0UfHQAxZ3bXspPgeSV938j0ERoCJje5Bo2gg
+id: usc_court_finder_locations
+name: 'USC court finder - locations'
+description: ''
+read_only: false
+field_settings:
+  address:
+    label: Address
+    datasource_id: 'entity:usc_location'
+    property_path: address
+    type: text
+    dependencies:
+      module:
+        - usc_court_finder
+  building_city:
+    label: 'Building City'
+    datasource_id: 'entity:usc_location'
+    property_path: building_city
+    type: text
+    dependencies:
+      module:
+        - usc_court_finder
+  building_name:
+    label: 'Building Name'
+    datasource_id: 'entity:usc_location'
+    property_path: building_name
+    type: text
+    dependencies:
+      module:
+        - usc_court_finder
+  building_state:
+    label: 'Building State'
+    datasource_id: 'entity:usc_location'
+    property_path: building_state
+    type: text
+    dependencies:
+      module:
+        - usc_court_finder
+  circuit_id:
+    label: 'Circuit ID'
+    datasource_id: 'entity:usc_location'
+    property_path: circuit_id
+    type: integer
+    dependencies:
+      module:
+        - usc_court_finder
+  court_type:
+    label: 'Court Type'
+    datasource_id: 'entity:usc_location'
+    property_path: court_type
+    type: string
+    dependencies:
+      module:
+        - usc_court_finder
+  court_type_weight:
+    label: 'Court Type Weight'
+    datasource_id: 'entity:usc_location'
+    property_path: court_type_weight
+    type: integer
+    dependencies:
+      module:
+        - usc_court_finder
+  district_id:
+    label: 'District ID'
+    datasource_id: 'entity:usc_location'
+    property_path: district_id
+    type: integer
+    dependencies:
+      module:
+        - usc_court_finder
+  field_geofield:
+    label: Coordinates
+    datasource_id: 'entity:usc_location'
+    property_path: field_geofield
+    type: location
+    dependencies:
+      config:
+        - field.storage.usc_location.field_geofield
+  location_id:
+    label: 'Location Id'
+    datasource_id: 'entity:usc_location'
+    property_path: location_id
+    type: integer
+    dependencies:
+      module:
+        - usc_court_finder
+  main_office:
+    label: 'Main Office'
+    datasource_id: 'entity:usc_location'
+    property_path: main_office
+    type: text
+    dependencies:
+      module:
+        - usc_court_finder
+  name:
+    label: 'District ID » Taxonomy term » Name'
+    datasource_id: 'entity:usc_location'
+    property_path: 'district_id:entity:name'
+    type: text
+    dependencies:
+      module:
+        - taxonomy
+        - usc_court_finder
+  office_name:
+    label: 'Office Name'
+    datasource_id: 'entity:usc_location'
+    property_path: office_name
+    type: text
+    dependencies:
+      module:
+        - usc_court_finder
+datasource_settings:
+  'entity:usc_location': {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  hierarchy:
+    weights:
+      preprocess_index: -45
+    fields:
+      district_id: taxonomy_term-parent
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: false
+    fields:
+      - address
+      - building_name
+      - building_state
+      - name
+      - office_name
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: usc_server

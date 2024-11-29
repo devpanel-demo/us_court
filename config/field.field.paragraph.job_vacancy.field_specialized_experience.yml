@@ -1,0 +1,24 @@
+uuid: b444f723-aa59-4c0c-9b50-3400c6d5cd6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_specialized_experience
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - text
+id: paragraph.job_vacancy.field_specialized_experience
+field_name: field_specialized_experience
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Specialized Experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Featured image
+props:
+  type: object
+  properties:
+    description:
+      title: Description
+      type: string
+slots:
+  image:
+    title: Image
+    required: true

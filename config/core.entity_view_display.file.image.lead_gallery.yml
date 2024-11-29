@@ -1,0 +1,29 @@
+uuid: 5f9085ef-404e-4283-a142-407c5b010ead
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.lead_gallery
+    - field.field.file.image.field_file_description
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+    - field.field.file.image.field_link
+  module:
+    - file
+    - text
+id: file.image.lead_gallery
+targetEntityType: file
+bundle: image
+mode: lead_gallery
+content:
+  field_file_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_title_text: true
+  field_link: true

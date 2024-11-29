@@ -1,0 +1,19 @@
+<nav class="usa-breadcrumb usa-breadcrumb--wrap" aria-label="{{ 'Breadcrumbs'|t }}">
+  <ol class="usa-breadcrumb__list">
+    {% for item in items %}
+        {% if item.url %}
+          <li class="usa-breadcrumb__list-item">
+            <a href="{{ item.url }}" class="usa-breadcrumb__link"><span>{{ item.text }}</span></a>
+          </li>
+        {% else %}
+          <li class="usa-breadcrumb__list-item usa-current" aria-current="page">
+            <span>{{ item.text }}</span>
+          </li>
+        {% endif %}
+      </li>
+    {% endfor %}
+    <li class="usa-breadcrumb__list-item">
+      {{ page_title }}
+    </li>
+  </ol>
+</nav>

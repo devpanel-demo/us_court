@@ -1,0 +1,21 @@
+uuid: 7e8cfeb9-eec5-4820-96e1-c2bf56bf3c45
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_judge
+label: 'Content - Judge'
+type: 'canonical_entities:node'
+pattern: 'judicial-milestones/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      judge: judge
+selection_logic: and
+weight: -3
+relationships: {  }

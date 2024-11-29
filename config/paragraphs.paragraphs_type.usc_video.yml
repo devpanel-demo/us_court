@@ -1,0 +1,10 @@
+uuid: e76b74ea-d710-4294-9bfe-fe4e46435b69
+langcode: en
+status: true
+dependencies: {  }
+id: usc_video
+label: Video
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean video'
+behavior_plugins: {  }

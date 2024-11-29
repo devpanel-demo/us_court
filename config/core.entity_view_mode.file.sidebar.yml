@@ -1,0 +1,11 @@
+uuid: 91ef3dea-bcd9-4bde-aee7-83772ffc4542
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.sidebar
+label: sidebar
+description: ''
+targetEntityType: file
+cache: true

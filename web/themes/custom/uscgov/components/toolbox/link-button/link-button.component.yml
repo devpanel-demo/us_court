@@ -1,0 +1,46 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USCgov Link as button
+status: experimental
+props:
+  type: object
+  properties:
+    # TODO: Implement attributes.
+    # attributes:
+    #   type: Drupal\Core\Template\Attribute
+    outline:
+      title: Outline button
+      type: 
+        - boolean
+        - string
+        - 'null'
+      description: If the button should be outlined.
+      default: false
+    variant:
+      type: string
+      title: Button variant
+      description: Optional button variants
+      enum:
+        - "primary"
+        - "secondary"
+        - "accent"
+      default: 'primary'
+    classes:
+      title: Extra CSS classes
+      type: string
+      description: Extra CSS classes that get added to wrapper element.
+    cta:
+      title: CTA
+      type: object
+      description: Title and CTA that generates a button link.
+      properties:
+        # TODO: Implement attributes.
+        # attributes:
+        #   type: Drupal\Core\Template\Attribute
+        url:
+          title: URL
+          type: string
+          description: Link for the button.
+        title:
+          title: Title
+          type: string
+          description: Anchor text of the button.

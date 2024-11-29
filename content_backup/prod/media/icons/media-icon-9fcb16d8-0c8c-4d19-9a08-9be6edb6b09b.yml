@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 9fcb16d8-0c8c-4d19-9a08-9be6edb6b09b
+entity_type: media
+bundle: icon
+base_fields:
+  name: probation-solid.svg
+  created: '1721137188'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/probation-solid.svg'
+      url: '/sites/default/files/icons/probation-solid.svg'

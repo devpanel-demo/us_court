@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 514db014-5e01-4ed7-9070-750d25c71704
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Glossary of Legal Terms'
+  status: true
+  langcode: en
+  created: '1726514164'
+  changed: 1728485662
+  author: jS4OdzB2@example.com
+  url: /glossary
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:drupalblock/views-block-glossary1-block-1 {"blockId":"views_block:glossary1-block_1"} /-->'
+      summary: 'Find definitions of legal terms to help understand the federal court system.'
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>Find definitions of legal terms to help understand the federal court system.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: cfcee9b9-dc60-4e8a-b48d-f7a76641319a
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Conference'
+        weight: 14
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

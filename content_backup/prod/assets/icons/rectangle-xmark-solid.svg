@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28">
+  <g id="rectangle-xmark-solid" style="isolation: isolate">
+    <path id="rectangle-xmark-solid-2" data-name="rectangle-xmark-solid" d="M4,32a4,4,0,0,0-4,4V56a4,4,0,0,0,4,4H28a4,4,0,0,0,4-4V36a4,4,0,0,0-4-4Zm6.938,8.938a1.494,1.494,0,0,1,2.119,0l2.938,2.938,2.938-2.937a1.5,1.5,0,1,1,2.119,2.119l-2.937,2.938,2.938,2.938a1.5,1.5,0,0,1-2.119,2.119l-2.937-2.937L13.056,51.05a1.5,1.5,0,0,1-2.119-2.119l2.938-2.937-2.937-2.937A1.494,1.494,0,0,1,10.938,40.938Z" transform="translate(0 -32)"/>
+  </g>
+</svg>

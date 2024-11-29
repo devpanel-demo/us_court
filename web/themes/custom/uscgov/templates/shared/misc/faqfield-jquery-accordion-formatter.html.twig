@@ -1,0 +1,19 @@
+{% embed 'uscgov:usa_accordion' with {
+ control_button: true,
+ multiselect: true,
+} %}
+  {% block accordion_items %}
+    {% for item in items %}
+      {% embed 'uscgov:usa_accordion_item' with {
+        attributes,
+        open: 'false',
+        heading: item.question|default(''),
+        content: item.answer|default(''),
+      } only %}
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      {% endembed %}
+    {% endfor %}
+  {% endblock %}
+{% endembed %}

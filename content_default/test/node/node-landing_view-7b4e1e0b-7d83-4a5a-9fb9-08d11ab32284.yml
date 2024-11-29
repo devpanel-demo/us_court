@@ -1,0 +1,262 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 7b4e1e0b-7d83-4a5a-9fb9-08d11ab32284
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Educational Activities'
+  status: true
+  langcode: en
+  created: '1428004313'
+  changed: 1730914915
+  author: Emily_Poland@ao.uscourts.gov
+  url: /about-federal-courts/educational-resources/educational-activities
+  revision_log_message: null
+  revision_uid: '9974'
+  menu_link:
+    uuid: 2f0ea32c-b1d8-4c3d-9b41-fa77b0b9fbcc
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Educational Activities'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/9111'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 04eb5c59-a6cb-4eba-8826-69f380a397f3
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Educational Resources'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/4314'
+              title: ''
+              options: {  }
+          weight: -48
+          parent:
+            uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'About Federal Courts'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/4'
+                  title: ''
+                  options: {  }
+              weight: -71
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/12916'
+                  title: 'Court Website Links'
+                  options: {  }
+                -
+                  uri: 'entity:node/2769'
+                  title: 'Authorized Judgeships'
+                  options: {  }
+                -
+                  uri: 'entity:node/4305'
+                  title: 'Supreme Court Landmarks'
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Find realistic simulations and memorable, interactive approaches to court basics.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":[16167,37586,8926,8927,8929,8932,18722,14332,15070],"viewMode":"featured","collectionRange":9} /-->'
+      summary: 'Work with federal judges in the distance-learning space to bring the founding fundamentals of rule of law, separation of powers, and judicial independence into real-life.'
+      format: gutenberg
+  field_landing_page_image:
+    -
+      uuid: a931deb8-c59b-40d7-ad66-a5be323b3eb8
+      entity_type: media
+      base_fields:
+        name: educational-activities.jpg
+        created: '1535124900'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: '<p>Work with federal judges in the distance-learning space to bring the founding fundamentals of rule of law, separation of powers, and judicial independence into real-life.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: d5dbb875-e452-47a8-9595-2186e9238374
+      entity_type: paragraph
+      bundle: usc_graphic_photo
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_image:
+          -
+            uuid: 857e4059-b27c-400d-bf0f-232c02d6bb79
+            entity_type: media
+            base_fields:
+              name: student_protest.png
+              created: '1678204258'
+              status: true
+              langcode: en
+            bundle: image
+        field_usc_label:
+          -
+            value: 'Graphic/Photo The First Amendment and Protests'
+        field_usc_title:
+          -
+            value: 'The First Amendment and Protests'
+    -
+      uuid: f4d1a02e-1c0c-47cc-bdb8-d2ef57883cb8
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	Read the U.S. Constitution and&nbsp;Bill of Rights, and explore other civics resources.
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Related Links Constitution Resources'
+        field_usc_links:
+          -
+            uri: 'http://www.archives.gov/exhibits/charters/constitution.html'
+            title: 'U.S. Constitution & Bill of Rights'
+            options:
+              attributes:
+                target: _blank
+          -
+            uri: 'https://www.civicsrenewalnetwork.org/'
+            title: 'Civics Renewal Network'
+            options:
+              attributes:
+                target: _blank
+          -
+            uri: 'https://constitutioncenter.org/interactive-constitution'
+            title: 'Constitution Center Interactive Constitution'
+            options:
+              attributes:
+                target: 0
+        field_usc_title:
+          -
+            value: 'Constitution Resources'
+    -
+      uuid: f7d5eb41-d9ce-4092-b024-d04ae8e6d044
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_label:
+          -
+            value: 'Related Links Related Videos'
+        field_usc_links:
+          -
+            uri: 'https://youtu.be/bmAKAHDSnGs'
+            title: 'Court Shorts: Rule of Law'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://youtu.be/fVrb5mHFyvg'
+            title: 'Court Shorts: Separation of Powers'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://youtu.be/FNGMgrSP6r8'
+            title: 'Court Shorts: Fair and Impartial Judiciary'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://youtu.be/4YwHLjZdebM'
+            title: 'Court Shorts: Jury Service, Hands-on Justice'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://youtu.be/d89WyKPgczY'
+            title: 'Court Shorts: The Right to Counsel'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'internal:/node/1855'
+            title: 'Pathways to the Bench: Profiles of Federal Judges'
+            options:
+              attributes:
+                target: 0
+        field_usc_title:
+          -
+            value: 'Related Videos'
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: bf31b7f6-d55e-4cf1-98e8-fb1df54e5666
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Educational  Resources'
+        weight: 12
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

@@ -1,0 +1,32 @@
+entity_types:
+  block_content:
+    - reusable_block
+  config_pages:
+    - global_site_settings
+  media:
+    - audio
+    - banner_image
+    - document
+    - high_resolution_image
+    - icon
+    - image
+    - piksel_program
+    - remote_video
+  node:
+    - basic
+    - book
+    - camera
+    - court
+    - data_table
+    - educational_activity
+    - faqs
+    - federal_rules
+    - fed_probation_journal
+    - fee
+    - form
+    - judge
+    - judge_comments
+    - news
+    - news_issue
+    - report
+    - vacancy

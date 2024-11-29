@@ -1,0 +1,46 @@
+uuid: 3109b023-8fd9-4699-a499-6d39cff40cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.sitewide_alert.sitewide_alert.field_title
+    - field.field.sitewide_alert.sitewide_alert.field_type
+  module:
+    - datetime_range
+    - maxlength
+    - sitewide_alert
+    - text
+id: sitewide_alert.sitewide_alert.default
+targetEntityType: sitewide_alert
+bundle: sitewide_alert
+mode: default
+content:
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields: {  }
+  field_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+hidden:
+  user_id: true

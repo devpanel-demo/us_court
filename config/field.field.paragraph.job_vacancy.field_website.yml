@@ -1,0 +1,23 @@
+uuid: 8f1aa370-17f5-4577-ad22-27f67cfa979b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_website
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - link
+id: paragraph.job_vacancy.field_website
+field_name: field_website
+entity_type: paragraph
+bundle: job_vacancy
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

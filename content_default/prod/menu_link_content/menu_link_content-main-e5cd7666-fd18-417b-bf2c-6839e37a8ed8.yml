@@ -1,0 +1,86 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: e5cd7666-fd18-417b-bf2c-6839e37a8ed8
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Bankruptcy Court Fees'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/1827'
+      title: ''
+      options: {  }
+  weight: -98
+  parent:
+    uuid: 4e3c3760-1ebd-441a-ad89-82091e4a43f6
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: Fees
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/1770'
+          title: ''
+          options: {  }
+      weight: 1
+      parent:
+        uuid: 9a51a6f3-19d1-4705-946b-f4fc46a287cd
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Court Programs'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/court-programs'
+              title: ''
+              options: {  }
+          weight: -70
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Learn about federal court programs and services to help provide fair and impartial justice. '
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/2805'
+              title: 'Bankruptcy Basics'
+              options: {  }
+            -
+              uri: 'entity:node/9330'
+              title: 'Filing Without an Attorney'
+              options: {  }
+            -
+              uri: 'entity:node/1769'
+              title: 'Summoned for Federal Jury Service?'
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'The U.S. courts publishes a list of fees that are charged for services provided by a specific court.'
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

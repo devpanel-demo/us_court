@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for USC Galleries module.
+ */
+
+use Drupal\media\Plugin\media\Source\OEmbedInterface;
+
+/**
+ * Implements hook_preprocess_media().
+ */
+function usc_galleries_preprocess_media(&$variables) {
+  /** @var \Drupal\media\MediaInterface $media */
+  $media = $variables['elements']['#media'];
+  // Sending video url for gallery.
+  if ($media->hasField('field_media_oembed_video')) {
+    $video_url = $media->get('field_media_oembed_video')->value;
+    // Change youtube url to the full version.
+    $variables['remote_video_url'] = preg_replace('/https:\/\/youtu.be\//', 'https://www.youtube.com/watch?v=', $video_url);
+  }
+  // Sending provider id to media templates.
+  $source = $media->getSource();
+  if ($source instanceof OEmbedInterface) {
+    $provider_id = $source->getMetadata($media, 'provider_name');
+    if ($provider_id) {
+      $provider_id = \Drupal::transliteration()->transliterate($provider_id);
+      $provider_id = preg_replace('/[^a-z0-9_]+/', '_', mb_strtolower($provider_id));
+      $variables['provider'] = $provider_id;
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Loading templates from the module.
+ */
+function usc_galleries_theme($existing, $type, $theme, $path) {
+  $templates = $path . '/templates';
+  return [
+    'field__gallery_items' => [
+      'template' => 'field--gallery-items',
+      'path' => $templates,
+      'base hook' => 'field'
+    ],
+    'field__media__field_media_image' => [
+      'template' => 'field--media--field-media-image',
+      'path' => $templates,
+      'base hook' => 'field'
+    ],
+    'media__image__gallery_item' => [
+      'template' => 'media--image--gallery-item',
+      'path' => $templates,
+      'base hook' => 'media'
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_hook().
+ */
+function usc_galleries_theme_suggestions_field(array $variables) {
+  $suggestions = [];
+  if ($variables['element']['#formatter'] == 'usc_galleries_gallery') {
+    $suggestions[] = 'field__gallery_items';
+  }
+  return $suggestions;
+}

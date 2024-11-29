@@ -1,0 +1,123 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: df84bd85-fbe8-479b-b8a1-bad9d6062e96
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Preliminary Drafts of Proposed Rule Amendments'
+  status: true
+  langcode: en
+  created: '1555511596'
+  changed: 1731537080
+  author: george_cherussery@ao.uscourts.gov
+  url: /records-rules-committees/preliminary-drafts-proposed-rule-amendments
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '9974'
+  menu_link:
+    uuid: 8ebd282a-fb3a-45b7-9d9c-e8ee0bf59a0a
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Preliminary Drafts of Proposed Rule Amendments'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/17545'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 14caded5-40a4-4a36-abe9-455c299536e3
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Records of the Rules Committees'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/9366'
+              title: ''
+              options: {  }
+          weight: 5
+          parent:
+            uuid: cc5f410e-b67a-4fbc-82a1-fd7bdfae36c7
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Forms & Rules'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/9'
+                  title: ''
+                  options: {  }
+              weight: -67
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Link to the national federal rules of practice and procedures, and forms in effect.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/2004'
+                  title: 'Bankruptcy: Proof of Claim Form'
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Reference the records of the rules committees, including agendas, minutes, and rules suggestions.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:list -->\r\n<ul><li><a href=\"/node/1954\">Review the current preliminary drafts</a>&nbsp;of the proposed amendments to the Federal Rules and forms published for public comment.</li><li><a href=\"/node/1955\">Read about the rulemaking process</a>.</li></ul>\r\n<!-- /wp:list -->\r\n\r\n<!-- wp:drupalblock/views-block-federal-rules-landing-rules-amendments-block-federal-rules-landing-rules-amendments {\"blockId\":\"views_block:federal_rules_landing_rules_amendments-block_federal_rules_landing_rules_amendments\"} /-->"
+      summary: "<p>\r\n\tFind historic packages of proposed amendments to the Federal Rules and forms published for public comment, also known as “Preliminary Drafts.”&nbsp;\r\n</p>"
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>Find historic packages of proposed amendments to the Federal Rules and forms published for public comment, also known as “Preliminary Drafts.” These documents are maintained by the Administrative Office of the U.S. Courts.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

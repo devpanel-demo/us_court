@@ -1,0 +1,63 @@
+uuid: d2114c2d-8c4b-4a67-ae20-3027e0677008
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vacancy.field_archive_id
+    - field.field.node.vacancy.field_congress
+    - field.field.node.vacancy.field_legacy_table_data
+    - field.field.node.vacancy.field_pdf_document
+    - field.field.node.vacancy.field_source_type
+    - field.field.node.vacancy.field_vacancy_reference
+    - field.field.node.vacancy.field_vacancy_type
+    - field.field.node.vacancy.field_year
+    - node.type.vacancy
+  module:
+    - user
+id: node.vacancy.teaser
+targetEntityType: node
+bundle: vacancy
+mode: teaser
+content:
+  field_authorized_judgeships:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_table_preamble:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_total_future_pending:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_total_nominees_pending:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_total_vacancies:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  field_archive_id: true
+  field_congress: true
+  field_legacy_table_data: true
+  field_pdf_document: true
+  field_source_type: true
+  field_vacancy_reference: true
+  field_vacancy_type: true
+  field_year: true
+  search_api_excerpt: true

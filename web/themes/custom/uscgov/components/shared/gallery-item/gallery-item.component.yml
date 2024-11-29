@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Gallery Item
+status: experimental
+group: Custom
+props:
+  type: object
+  required:
+    - media
+  properties:
+    title_suffix:
+      type: array
+      description: title_suffix is necessary for contextual links.
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    hash:
+      type: string
+      title: URL Hash
+    media:
+      title: Media
+      type: object
+      description: The media item.
+slots:
+  details:
+    title: Media Details

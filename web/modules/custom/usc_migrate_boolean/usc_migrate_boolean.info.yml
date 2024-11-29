@@ -1,0 +1,7 @@
+name: 'US Courts boolean'
+description: 'Migration tools from text lists to boolean'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - migrate_plus:migrate_plus

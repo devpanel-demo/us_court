@@ -1,0 +1,11 @@
+uuid: fe305faf-ed75-4b36-aee5-acd54cb51d1e
+langcode: en
+status: true
+dependencies: {  }
+machine: test_uscourts
+description: null
+name: 'Test USCourts'
+weight: 2
+url: 'http://uscourts-test.jdc.ao.dcn'
+fg_color: '#ffffff'
+bg_color: '#73a4cf'

@@ -1,0 +1,127 @@
+uuid: dda757d3-61d8-45cb-a7d6-1f9af2af8965
+langcode: en
+status: true
+dependencies: {  }
+id: usc_vacancy_judicial_emergency_feed
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: usc_vacancies
+label: 'US Court HRMIS Emergency Judicial Vacancies'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: simple_xml
+  urls:
+    callback: usc_vacancies_migrate_urls
+  item_selector: /data
+  constants:
+    TITLE_PREFIX: 'Judicial Emergencies for '
+  fields:
+    -
+      name: archive_id
+      label: 'Archive ID'
+      selector: /data
+    -
+      name: circuit
+      label: Circuit
+      selector: evac/circuit
+    -
+      name: district
+      label: District
+      selector: evac/district
+    -
+      name: vacated_by
+      label: 'Vacated By'
+      selector: evac/vacated_by
+    -
+      name: reason
+      label: Reason
+      selector: evac/reason
+    -
+      name: vacancy_dt
+      label: 'Vacancy Date'
+      selector: evac/vacancy_dt
+    -
+      name: days_pending
+      label: 'Days Pending'
+      selector: evac/days_pending
+    -
+      name: weighted
+      label: 'Weighted Filings'
+      selector: evac/weighted
+    -
+      name: adjusted
+      label: 'Adjusted Filings'
+      selector: evac/adjusted
+    -
+      name: vacancies
+      label: Vacancies
+      selector: evac
+  ids:
+    archive_id:
+      type: string
+process:
+  title:
+    plugin: concat
+    source:
+      - constants/TITLE_PREFIX
+      - node_title_date
+  path/pathauto:
+    plugin: default_value
+    default_value: 0
+  path/alias: custom_alias
+  field_source_type:
+    plugin: default_value
+    default_value: xml
+  field_vacancy_type:
+    plugin: default_value
+    default_value: judicial_emergency
+  field_year: field_year
+  field_archive_id: archive_id
+  field_vacancy_reference:
+    -
+      plugin: sub_process
+      source: vacancy_rows
+      process:
+        circ: circuit
+        dist: district
+        inc: vacated_by
+        reas: reason
+        vacdt:
+          -
+            plugin: skip_on_empty
+            method: process
+            source: vacancy_dt
+          -
+            plugin: skip_on_value
+            method: process
+            source: vacancy_dt
+            value:
+              - ' '
+          -
+            plugin: format_date
+            from_format: m/d/Y
+            to_format: Y-m-d
+        pend: days_pending
+        wght: weighted
+        adj: adjusted
+    -
+      plugin: child_entity_generate
+      entity_type: paragraph
+      bundle: judicial_vacancy
+      values:
+        field_circuit: circ
+        field_district: dist
+        field_incumbent: inc
+        field_reason: reas
+        field_opening_date: vacdt
+        field_days_pending: pend
+        field_weighted: wght
+        field_adjusted: adj
+destination:
+  plugin: 'entity:node'
+  default_bundle: vacancy
+  new_revision: false
+migration_dependencies: {  }

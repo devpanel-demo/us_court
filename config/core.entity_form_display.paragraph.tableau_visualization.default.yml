@@ -1,0 +1,48 @@
+uuid: d2eccf9d-e43e-40f0-a1f2-a96259127b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tableau_visualization.field_tv_share_link
+    - field.field.paragraph.tableau_visualization.field_tv_tabs
+    - field.field.paragraph.tableau_visualization.field_tv_title
+    - field.field.paragraph.tableau_visualization.field_tv_toolbar
+    - paragraphs.paragraphs_type.tableau_visualization
+  module:
+    - text
+id: paragraph.tableau_visualization.default
+targetEntityType: paragraph
+bundle: tableau_visualization
+mode: default
+content:
+  field_tv_share_link:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_tv_tabs:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tv_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tv_toolbar:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

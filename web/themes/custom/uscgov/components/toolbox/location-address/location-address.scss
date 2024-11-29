@@ -1,0 +1,23 @@
+.location-address {
+  display: flex;
+  flex-direction: row;
+
+  .location-address__icon {
+    width: 40px;
+  }
+
+  .location-address__text {
+    a {
+      display: inline-block;
+    }
+  }
+
+  .address-line1-element,
+  .country-code-element {
+    display: block;
+  }
+
+  p {
+    margin: 0;
+  }
+}

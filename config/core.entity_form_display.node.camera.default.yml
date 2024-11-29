@@ -1,0 +1,384 @@
+uuid: 4d7783f4-02d1-4d6f-afdb-9fb8f8dcab04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.camera.body
+    - field.field.node.camera.field_court_name
+    - field.field.node.camera.field_date_updated
+    - field.field.node.camera.field_lead_paragraph
+    - field.field.node.camera.field_logo
+    - field.field.node.camera.field_metatag
+    - field.field.node.camera.field_procedural_posture
+    - field.field.node.camera.field_program
+    - field.field.node.camera.field_subject_matter
+    - field.field.node.camera.field_tags
+    - field.field.node.camera.field_usc_additional_content
+    - field.field.node.camera.field_usc_govdelivery_form
+    - field.field.node.camera.field_usc_notification
+    - field.field.node.camera.field_usc_related_news
+    - field.field.node.camera.field_usc_table_of_contents
+    - field.field.node.camera.field_workbench_access
+    - node.type.camera
+    - workflows.workflow.us_courts_workflow
+  module:
+    - content_moderation
+    - datetime
+    - field_group
+    - inline_entity_form
+    - media_library
+    - media_library_edit
+    - metatag
+    - path
+    - scheduler
+    - scheduler_content_moderation_integration
+    - text
+third_party_settings:
+  field_group:
+    group_node_form:
+      children:
+        - group_lead_elements
+        - group_case_info
+        - group_sidebar
+        - group_video_reference
+      label: 'Node Form'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+        direction: vertical
+        width_breakpoint: 640
+    group_lead_elements:
+      children:
+        - field_lead_paragraph
+      label: 'Lead Elements'
+      region: content
+      parent_name: group_node_form
+      weight: 25
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_case_info:
+      children:
+        - field_court_name
+        - field_subject_matter
+        - field_procedural_posture
+        - field_date_updated
+        - body
+      label: 'Case Info'
+      region: content
+      parent_name: group_node_form
+      weight: 26
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_sidebar:
+      children:
+        - field_usc_additional_content
+        - field_usc_govdelivery_form
+        - field_usc_notification
+        - field_usc_table_of_contents
+        - field_usc_related_news
+      label: 'Additional Content'
+      region: content
+      parent_name: group_node_form
+      weight: 27
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_video_reference:
+      children:
+        - field_program
+      label: 'Video Reference'
+      region: content
+      parent_name: group_node_form
+      weight: 28
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.camera.default
+targetEntityType: node
+bundle: camera
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 9
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_court_name:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_updated:
+    type: datetime_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lead_paragraph:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 12
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_procedural_posture:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_program:
+    type: media_library_widget
+    weight: 11
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  field_subject_matter:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_usc_additional_content:
+    type: inline_entity_form_complex
+    weight: 9
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_usc_govdelivery_form:
+    type: inline_entity_form_complex
+    weight: 10
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_usc_notification:
+    type: inline_entity_form_complex
+    weight: 11
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_usc_related_news:
+    type: inline_entity_form_complex
+    weight: 14
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: false
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+    third_party_settings: {  }
+  field_usc_table_of_contents:
+    type: inline_entity_form_complex
+    weight: 12
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_workbench_access:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 53
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_logo: true
+  field_tags: true
+  unpublish_on: true
+  unpublish_state: true

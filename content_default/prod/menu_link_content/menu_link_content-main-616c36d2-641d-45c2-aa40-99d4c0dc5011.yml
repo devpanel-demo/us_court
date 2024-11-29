@@ -1,0 +1,124 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 616c36d2-641d-45c2-aa40-99d4c0dc5011
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Reporting on Criminal Cases – Journalist’s Guide'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/16396'
+      title: null
+      options: {  }
+  weight: 4
+  parent:
+    uuid: e3375931-a758-47f8-8b74-0fee98fb8d17
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'A Journalist’s Guide to the Federal Courts'
+      enabled: true
+      expanded: false
+      langcode: und
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/16391'
+          title: null
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 50f26b60-541e-4465-8437-b667ea848b71
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Handbooks & Manuals'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/3267'
+              title: ''
+              options: {  }
+          weight: 2
+          parent:
+            uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: Reports
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/3129'
+                  title: ''
+                  options: {  }
+              weight: 1
+              parent:
+                uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Data & News'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/8'
+                      title: ''
+                      options: {  }
+                  weight: -68
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/16578'
+                      title: 'Federal Court Scams'
+                      options: {  }
+                    -
+                      uri: 'entity:node/3122'
+                      title: "Director's Annual Report"
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu: null
+  field_popular_links: null

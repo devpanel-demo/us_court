@@ -1,0 +1,10 @@
+uuid: 0aa4cc85-fb0e-4c6f-8e21-cc7efbccbb07
+langcode: en
+status: true
+dependencies: {  }
+id: job_vacancy
+label: 'Job Vacancy'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

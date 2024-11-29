@@ -1,0 +1,33 @@
+uuid: b535c1fe-ab07-4ee3-a58a-749e6eb4b14c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - system
+id: federal_rules_agenda_books
+label: 'Federal Rules Agenda Books'
+menu_name: main
+parent: 'menu_link_content:ac9843c4-c6de-461b-8f0d-43375d16bb50'
+menu_link: 'menu_position_link:federal_rules_agenda_books'
+enabled: true
+weight: -2
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/rules-policies/archives/agenda-books/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      federal_rules: federal_rules

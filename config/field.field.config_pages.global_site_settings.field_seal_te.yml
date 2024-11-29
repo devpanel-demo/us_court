@@ -1,0 +1,21 @@
+uuid: e9d797e0-b739-4542-845f-4078256bc56c
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_seal_te
+id: config_pages.global_site_settings.field_seal_te
+field_name: field_seal_te
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Seal text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'This site is maintained by the Administrative Office of the U.S. Courts on behalf of the Federal Judiciary.'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

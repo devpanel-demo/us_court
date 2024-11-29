@@ -1,0 +1,6 @@
+usc_content_settings:
+  title: 'Content Sync Settings'
+  description: 'Manage settings for content sync.'
+  route_name: usc_content_settings
+  parent: 'usc.admin'
+  weight: 4

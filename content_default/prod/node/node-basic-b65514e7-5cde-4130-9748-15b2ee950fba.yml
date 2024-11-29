@@ -1,0 +1,182 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: b65514e7-5cde-4130-9748-15b2ee950fba
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Long Range Plan for the Federal Courts'
+  status: true
+  langcode: en
+  created: '1411051041'
+  changed: 1731344906
+  author: said_abbou@ao.uscourts.gov
+  url: /data-news/reports/strategic-planning/long-range-plan-federal-courts
+  revision_log_message: null
+  revision_uid: '43'
+  menu_link:
+    uuid: f5f01933-2445-4e3b-a2e0-093a2f0d6bbd
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Long Range Plan for the Federal Courts'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/2998'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 8d1f1e81-5f2d-41d5-9044-21f4eccc2f48
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Strategic Planning'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/60004'
+              title: ''
+              options: {  }
+          weight: 3
+          parent:
+            uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: Reports
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/3129'
+                  title: ''
+                  options: {  }
+              weight: 1
+              parent:
+                uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Data & News'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/8'
+                      title: ''
+                      options: {  }
+                  weight: -68
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/16578'
+                      title: 'Federal Court Scams'
+                      options: {  }
+                    -
+                      uri: 'entity:node/3122'
+                      title: "Director's Annual Report"
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>The plan included 93 recommendations and 76 implementation strategies covering topics including</p><ul><li>judicial federalism</li><li>the structure of courts</li><li>the adjudication process</li><li>judicial governance</li><li>resources, and</li><li>the relationship between the judiciary and society.</li></ul><p>The plan also included statements of the federal judiciary’s vision, mission, and core values.&nbsp;</p><p>The Long Range Plan helped guide federal judiciary policy-making activities for many years, with the Judicial Conference and its committees bearing much of the responsibility for its implementation.&nbsp; The Long Range Plan also guided and influenced the strategic planning activities of courts and other judicial branch entities.</p><p>In 2010, the Strategic Plan for the Federal Judiciary succeeded the Long Range Plan as the strategic plan for the Judicial Conference and its committees.&nbsp; However, its recommendations and implementation strategies include many statements of Judicial Conference policy that, unless superseded by later Judicial Conference action, remain in effect to this day.</p>'
+      summary: 'The first comprehensive long-range or strategic plan for the federal judiciary that continues to have relevance for the judiciary today.'
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>\r\n\tThe Long Range Plan for the Federal Courts (1995) was the first comprehensive long-range or strategic plan for the federal judiciary.&nbsp;&nbsp;\r\n</p>\r\n"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: 4ca08ff7-d230-4dc9-b145-bfe97a0e822d
+      entity_type: paragraph
+      bundle: usc_related_files
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_document:
+          -
+            uuid: 3be361d6-f225-49b2-bbe9-f364c420362d
+            entity_type: media
+            base_fields:
+              name: federalcourtslongrangeplan.pdf
+              created: '1422991745'
+              status: true
+              langcode: en
+            bundle: document
+        field_usc_label:
+          -
+            value: 'Related Downloads Download the Plan'
+        field_usc_title:
+          -
+            value: 'Download the Plan'
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 0f304352-989d-4ef0-a66a-8555520cac77
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Deputy Director’s Office'
+        weight: 11
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

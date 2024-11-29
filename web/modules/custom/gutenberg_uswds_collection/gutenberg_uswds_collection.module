@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Gutenberg Content Embed module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\gutenberg_uswds_collection\EntityTypeConfig;
+
+/**
+ * Implements hook_library_info_alter().
+ *
+ * @throws \Drupal\Core\Extension\Exception\UnknownExtensionException
+ * @throws \Drupal\Core\Extension\Exception\UnknownExtensionTypeException
+ */
+function gutenberg_uswds_collection_library_info_alter(&$libraries, $extension) {
+  if ($extension == 'gutenberg' && isset($libraries['edit-node'])) {
+    $module_path = \Drupal::service('extension.path.resolver')->getPath('module', 'gutenberg_uswds_collection');
+    $libraries['edit-node']['js']["/$module_path/js/components/uswds-collection-content.js"] = [];
+    $libraries['edit-node']['js']["/$module_path/js/uswds-collection.js"] = [];
+    $libraries['edit-node']['css']['theme']["/$module_path/css/styles.css"] = [];
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ * @throws \InvalidArgumentException
+ */
+function gutenberg_uswds_collection_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(EntityTypeConfig::class)
+    ->formNodeTypeAlter($form, $form_state, $form_id);
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * @throws \InvalidArgumentException
+ */
+function gutenberg_uswds_collection_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(EntityTypeConfig::class)
+    ->formNodeAlter($form, $form_state);
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function gutenberg_uswds_collection_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'form_alter') {
+    $group = $implementations['gutenberg_uswds_collection'];
+    unset($implementations['gutenberg_uswds_collection']);
+    $implementations['gutenberg_uswds_collection'] = $group;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function gutenberg_uswds_collection_theme() {
+  return [
+    'collection_container' => [
+      'variables' => [
+        'content' => NULL,
+        'view_mode' => NULL,
+      ],
+      'template' => 'gutenberg-block--uswds--collection',
+    ],
+  ];
+}

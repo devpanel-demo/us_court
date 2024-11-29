@@ -1,0 +1,40 @@
+uuid: 9d91a8bb-b960-4a8d-b32b-f38e4a402f66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fc_rn_node_row
+    - node.type.basic
+    - node.type.educational_activity
+    - node.type.landing_view
+    - node.type.news
+    - node.type.news_issue
+    - node.type.report
+    - paragraphs.paragraphs_type.referenced_nodes
+id: paragraph.referenced_nodes.field_fc_rn_node_row
+field_name: field_fc_rn_node_row
+entity_type: paragraph
+bundle: referenced_nodes
+label: Nodes
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic: basic
+      educational_activity: educational_activity
+      landing_view: landing_view
+      news: news
+      news_issue: news_issue
+      report: report
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+field_type: entity_reference

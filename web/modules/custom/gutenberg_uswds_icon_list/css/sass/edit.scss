@@ -1,0 +1,10 @@
+ul.usa-icon-list{
+  padding-left: 0;
+  padding-right: 15px;
+  .wp-block-uswds-icon-list-item {
+    display: flex;  
+  }
+  .usa-icon-list__content .block-editor-inner-blocks p{
+    margin: 2px 4px;
+  }
+}

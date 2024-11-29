@@ -1,0 +1,50 @@
+uuid: 41e1d450-ff7a-479d-ac58-f768599da261
+langcode: en
+status: true
+dependencies:
+  module:
+    - html_processors
+id: convert_body_html_to_gutenberg
+label: 'Convert body HTML to Gutenberg'
+type: node
+plugin: html_processors_convert_to_gutenberg
+configuration:
+  gutenberg_processors:
+    map:
+      disabled: 0
+      id: map
+    table_cell:
+      id: table_cell
+      disabled: false
+      allowed_node_names: 'a #text strong img br'
+      allowed_attributes: class
+    image:
+      remote_url: 'https://uscourts-dev.agileana.com'
+      disabled: false
+      id: image
+    heading:
+      disabled: 0
+      id: heading
+    ordered_list:
+      disabled: 0
+      id: ordered_list
+    unordered_list:
+      disabled: 0
+      id: unordered_list
+    list_item:
+      disabled: 0
+      id: list_item
+    separator:
+      disabled: 0
+      id: separator
+    table:
+      id: table
+      disabled: false
+      first_row_to_thead: true
+      header_attribute: ''
+    paragraph:
+      disabled: 0
+      id: paragraph
+    container:
+      disabled: 0
+      id: container

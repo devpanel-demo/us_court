@@ -1,0 +1,33 @@
+uuid: 7f911a33-d197-4252-9e4b-2fcb65b1d031
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - system
+id: federal_rules_committee_reports
+label: 'Federal Rules Committee Reports'
+menu_name: main
+parent: 'menu_link_content:244b5afa-62a8-40b5-bdca-afbd47429e35'
+menu_link: 'menu_position_link:federal_rules_committee_reports'
+enabled: true
+weight: 1
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/rules-policies/archives/committee-reports/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      federal_rules: federal_rules

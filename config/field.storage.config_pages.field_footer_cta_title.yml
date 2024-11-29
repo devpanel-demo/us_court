@@ -1,0 +1,21 @@
+uuid: a6987a28-af9a-4bf3-897c-ff898136ba48
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+id: config_pages.field_footer_cta_title
+field_name: field_footer_cta_title
+entity_type: config_pages
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

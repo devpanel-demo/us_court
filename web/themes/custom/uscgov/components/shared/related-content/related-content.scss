@@ -1,0 +1,26 @@
+@import "../related-content-item/related-content-item";
+
+.related-content {
+  margin-bottom: var(--spacing-component);
+}
+
+.related-content__title {
+  margin: 0 0 4px;
+  font-family: var(--font-sans);
+  line-height: 115%;
+  font-size: 24px;
+}
+
+.related-content {
+  article {
+    @extend .related-content-item;
+
+    h2 {
+      @extend .related-content-item__title;
+    }
+
+    .node__content {
+      @extend .related-content-item__body;
+    }
+  }
+}

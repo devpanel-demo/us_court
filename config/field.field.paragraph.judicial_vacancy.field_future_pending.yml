@@ -1,0 +1,19 @@
+uuid: ca83d18a-b8fd-42f7-9878-a4d4f883de80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_future_pending
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_future_pending
+field_name: field_future_pending
+entity_type: paragraph
+bundle: judicial_vacancy
+label: 'Future Pending'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: aa953d7e-a973-40ac-b5ba-99d837e69be4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.fed_probation_journal
+  module:
+    - metatag
+id: node.fed_probation_journal.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: fed_probation_journal
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

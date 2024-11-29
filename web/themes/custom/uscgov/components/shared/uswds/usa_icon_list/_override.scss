@@ -1,0 +1,23 @@
+ul.usa-icon-list {
+  margin: 0;
+  padding: 0;
+
+  .usa-icon-list__item {
+    padding-top: .75rem;
+  }
+
+  .usa-icon-list__content p,
+  .list-content-blocks p {
+    margin: 2px 4px;
+  }
+
+  .usa-icon p {
+    margin: 0;
+  }
+
+  [data-type="uswds/icon-list-item"] {
+    margin: 0;
+  }
+}
+
+

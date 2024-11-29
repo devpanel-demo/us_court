@@ -1,0 +1,251 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: fd0d4470-1c74-4087-81ee-6ec053c97493
+entity_type: node
+bundle: news
+base_fields:
+  title: 'Jury Service: What to Expect When Answering the Call'
+  status: true
+  langcode: en
+  created: '1692899409'
+  changed: 1692899409
+  author: courtney_mcilroy@ao.uscourts.gov
+  url: /news/2023/10/17/jury-service-what-expect-when-answering-call
+  revision_log_message: 'Edited by courtney.mcilroy.'
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_body_enhanced:
+    -
+      uuid: b8a9b07c-7026-45c3-89f7-e3cdb3c5ba2d
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Federal jurors can fade to the background in popular courtroom dramas full of surprise witnesses and passionate sidebars, but they’re center stage in the real justice system.</p><p>“It’s not Hollywood,” said Kris Porter, a jury administrator in the Western District of Washington. “The stuff on TV shows is very different from the courtroom.”</p><p>When a summons could arrive in the mail any day, it helps to know what’s fact and what’s fiction about jury service. A federal judge, juror, and two jury administrators answered frequently asked questions about jury service to dispel misconceptions about <a href="https://node/33714">serving on a jury</a>. Their answers have been edited for clarity.</p><h2>What is the role of a jury?</h2><p>“Juries are collections of people drawn from the community, and they have the same role in all courts,” said Judge Edward M. Chen of the Northern District of California. “They’re charged with finding the facts, determining what happened, applying the instructions on the law given by the judge, and rendering a verdict.”</p><h2>What are the qualifications to become a juror?</h2><p>U.S. citizens who are at least 18 years old generally <a href="https://node/1766">qualify for federal jury service</a>, and no special training is required to become a juror, said Porter, a jury administrator in the Western District of Washington.</p><p>“All you have to do is listen and judge fairly,” Porter added. “Jury service is part of your civic duty, and the administration of justice can’t happen without the American public’s involvement in the jury process.”</p><h2>How long do federal jury trials last, and how likely am I to be summoned?</h2><p>“Most trials are only three to four days, and a very small percentage of Americans ever get the chance to serve on a jury,” said Anne Brabham, a jury administrator in the Northern District of Texas. “If you are summoned, you’re lucky. The jurors who do serve email us back and say, ‘I’m glad I did this.’”</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: ce29bc5c-b695-495f-98a2-0f25867f4d36
+            entity_type: media
+            base_fields:
+              name: kris_porter_opt.png
+              created: '1697123723'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: a886f860-014e-473d-af24-e9e74eb3fc14
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Brabham added that courts are careful not to summon more jurors than are needed to <a href="node/2434">select an impartial panel</a>. “A frequent complaint I hear from jurors is, ‘I came in, just sat down, and wasted my time.’ I try to convey that each juror’s participation in the process is essential to our constitutional right to trial by jury. While cases often settle or defendants decide to enter pleas on the day of trial, the readiness of the jury may be the catalyst needed to bring the case to conclusion. We release jurors as quickly as possible to minimize the impact on their time.”</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: 9f6e1b5a-5c09-4707-96e8-a10f74612893
+            entity_type: media
+            base_fields:
+              name: anne_brabham_opt_resize.jpg
+              created: '1696959011'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: b2ccaa5f-444a-4454-8ab1-5c3cce4e59e7
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<h2>What is it like to serve as a juror?</h2><p>“Before serving on a jury, I wasn’t fully aware of how <a href="node/2434">the judge and jury work together</a>,” said Diane Wilkinson, a juror in a recent trial in the Western District of Washington. “The judge’s instructions and decisions helped me have confidence in the process. It was also helpful to be reminded that our decision had to be based on the law, whether we agreed with it or not and whether we liked it or not. I am more convinced than ever that we are lucky to have jury trials in our nation, and jury service is our chance to contribute to our country.”</p><h2>How do diverse juries serve justice?</h2><p>“It’s important to have a jury of our peers – a breadth of views,” said Judge Chen. “It’s useful to have people from different perspectives in the same room because not all people have the same experience and see things the same way. There are studies that show the more representative jurors are, the more complete discussions they have.”</p><h2>Why does jury service matter?</h2>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: cf8d989e-18b9-41b6-9252-aeeb1efa572d
+            entity_type: media
+            base_fields:
+              name: diane_wilkinson_opt.jpg
+              created: '1696958853'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 840c7b71-085a-44d2-bc18-4fd04e53d16e
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Jury service is a civic duty enshrined in the country’s founding documents and allows U.S. citizens to be direct participants in administering justice.</p><p>For Judge Chen, jury service “keeps the law close to the people.”</p><p>“Jury service is a part of democracy in action – people from the community sitting in judgment of people from the community,” Chen said. “Jury service is a valuable experience for jurors and essential to the courts. Jury service is their chance to contribute to our legal and justice system, and we need their voices and their collective judgment.”</p><p>For more information about this important public civic duty, visit the <a href="node/33714">Jury Service section</a>. &nbsp;</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: 82ce9660-5913-4286-9e7c-f59cf6c6f620
+            entity_type: media
+            base_fields:
+              name: judge_edward_m._chen_resize1.jpg
+              created: '1697124406'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2023-10-17'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_metatag: null
+  field_news_issue: null
+  field_related_topics:
+    -
+      uuid: abf5cd33-41f6-49f0-88f3-c3f71efce6e7
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Jury Service'
+        weight: 0
+        langcode: en
+        description: '<p>All articles related to Jury Service.</p>'
+        parent: 0
+      bundle: topics
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	Subscribe to be notified when the news section is updated.
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary | News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary | News'
+        field_usc_view_more:
+          -
+            uri: 'internal:/node/4283'
+            title: 'See All News Stories'
+            options:
+              attributes: {  }
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: e6e4aa9c-e40e-4002-a9a7-f95b3f1cc998
+      entity_type: taxonomy_term
+      base_fields:
+        name: News
+        weight: 20
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

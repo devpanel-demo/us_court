@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: fef0d5b4-156f-4155-b165-d3ced98b2bf4
+entity_type: media
+bundle: icon
+base_fields:
+  name: envelope-solid.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/envelope-solid.svg'
+      url: '/sites/default/files/icons/envelope-solid.svg'

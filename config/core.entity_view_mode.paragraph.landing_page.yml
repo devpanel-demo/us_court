@@ -1,0 +1,11 @@
+uuid: 2e971aa9-1460-4bf3-ade5-2e0bf1f175ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.landing_page
+label: landing_page
+description: ''
+targetEntityType: paragraph
+cache: true

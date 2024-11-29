@@ -1,0 +1,76 @@
+uuid: 03657bf7-637e-45e3-94e6-c6d952a91a90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_related_links.field_usc_description
+    - field.field.paragraph.usc_related_links.field_usc_label
+    - field.field.paragraph.usc_related_links.field_usc_links
+    - field.field.paragraph.usc_related_links.field_usc_title
+    - paragraphs.paragraphs_type.usc_related_links
+  module:
+    - field_formatter_range
+    - link
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.usc_related_links.default
+targetEntityType: paragraph
+bundle: usc_related_links
+mode: default
+content:
+  field_usc_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_usc_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 0
+        offset: 0
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_usc_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_usc_label: true
+  search_api_excerpt: true

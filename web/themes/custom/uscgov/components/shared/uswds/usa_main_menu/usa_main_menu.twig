@@ -1,0 +1,43 @@
+{% set top_level = level == 0 %}
+{% set submenu = level == 1 %}
+
+{% if top_level %}
+  <ul{{ attributes.addClass('usa-nav__primary usa-accordion') }}>
+{% elseif submenu and not megamenu %}
+  <ul id="{{ 'section-' ~ section }}" class="usa-nav__submenu">
+{% elseif submenu and megamenu %}
+  <div id="{{ section_id }}" class="usa-nav__submenu usa-megamenu">
+    <ul class="usa-nav__submenu-list">
+{% endif %}
+
+  {% for item in items %}
+    <li{{ item.attributes.addClass(top_level ? 'usa-nav__primary-item' : 'usa-nav__submenu-item') }}>
+      {% if item.below %}
+        {% set section_id = 'section-' ~ item.title|clean_class %}
+        <button
+          type="button"
+          class="usa-accordion__button usa-nav__link{{ item.in_active_trail ? ' usa-current' }}"
+          aria-expanded="false"
+          aria-controls="{{ section_id }}"
+        >
+          <span>{{ item.title }}</span>
+        </button>
+        {{ include('uscgov:usa_main_menu', {
+          section: item.title|clean_class,
+          items: item.below,
+          attributes,
+          level: level + 1,
+          megamenu,
+          section_id,
+        }, with_context = false) }}
+      {% else %}
+        {{ link(item.title, item.url, create_attribute({'class': ['usa-nav-link', item.in_active_trail ? 'usa-current']})) }}
+      {% endif %}
+    </li>
+  {% endfor %}
+
+{% if submenu and megamenu %}
+  </ul></div>
+{% else %}
+  </ul>
+{% endif %}

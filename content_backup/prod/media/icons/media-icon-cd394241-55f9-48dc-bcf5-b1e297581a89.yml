@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: cd394241-55f9-48dc-bcf5-b1e297581a89
+entity_type: media
+bundle: icon
+base_fields:
+  name: blind.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/blind.svg'
+      url: '/sites/default/files/icons/blind.svg'

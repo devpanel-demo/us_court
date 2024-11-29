@@ -1,0 +1,56 @@
+// Court name lookup dropdown.
+ul[data-input-ref="usc_court_finder_search_homepage"] {
+  max-height: 250px;
+  overflow: auto;
+
+  // Content container
+  .ui-autocomplete-content {
+    background: white;
+  }
+
+  .ui-menu-item a {
+    display: block;
+    padding: 10px 20px;
+
+    &:hover {
+      background-color: var(--surface-base-medium);
+      color: var(--text-on-surface-base-medium);
+    }
+  }
+
+  // Heading
+  .ui-autocomplete-field-group {
+    padding: 10px 20px;
+    color: inherit;
+    opacity: revert;
+    font-weight: bold;
+    pointer-events: auto;
+
+    ~ .ui-menu-item a {
+      padding-left: 30px;
+    }
+  }
+
+  .ui-autocomplete-container-more_results {
+    display: none;
+  }
+}
+
+// Location lookup dropdown.
+.ui-autocomplete {
+  // LI > DIV
+  .ui-menu-item-wrapper {
+    padding: 10px 20px;
+
+    &:hover {
+      border-color: transparent;
+      background-color: var(--surface-base-medium);
+      color: var(--text-on-surface-base-medium);
+    }
+  }
+}
+
+[data-input-ref="usc_court_finder_search_homepage"] {
+  max-height: 250px;
+  overflow: auto;
+}

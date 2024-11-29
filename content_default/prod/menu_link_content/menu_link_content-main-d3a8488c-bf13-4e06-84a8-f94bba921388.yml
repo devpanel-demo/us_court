@@ -1,0 +1,105 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: d3a8488c-bf13-4e06-84a8-f94bba921388
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Centennial of the Judicial Conference of the United States'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/29712'
+      title: ''
+      options: {  }
+  weight: 4
+  parent:
+    uuid: 46486e8b-7fdb-4003-8998-5547b68ba8b9
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Current News Issues'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/4391'
+          title: ''
+          options: {  }
+      weight: 1
+      parent:
+        uuid: 7f95704e-e532-4b0f-bdc0-47af94f4c9aa
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: News
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/4283'
+              title: ''
+              options: {  }
+          weight: 3
+          parent:
+            uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Data & News'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/8'
+                  title: ''
+                  options: {  }
+              weight: -68
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/16578'
+                  title: 'Federal Court Scams'
+                  options: {  }
+                -
+                  uri: 'entity:node/3122'
+                  title: "Director's Annual Report"
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Learn about the work of the federal Judiciary. '
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

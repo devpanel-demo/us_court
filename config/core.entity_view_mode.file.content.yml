@@ -1,0 +1,11 @@
+uuid: a4af85b7-d7f5-4f2e-9cd9-992d6d1a4950
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.content
+label: content
+description: ''
+targetEntityType: file
+cache: true

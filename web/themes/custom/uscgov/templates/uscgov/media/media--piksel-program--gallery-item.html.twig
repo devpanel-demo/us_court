@@ -1,0 +1,11 @@
+{% embed 'uscgov:gallery-item' with {
+  title_suffix,
+  media: content.thumbnail,
+  asset: player_url,
+  hash: media.id,
+  details: content|without('thumbnail'),
+} only %}
+  {% block details %}
+    {{ details|without('name') }}
+  {% endblock %}
+{% endembed %}

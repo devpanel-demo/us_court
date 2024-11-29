@@ -1,0 +1,60 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Table
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - rows
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    title:
+      title: Title
+      type: string
+    header:
+      title: Header
+      type: array
+      description: Pagination items.
+      items:
+        type: array
+        items:
+          type: object
+          required:
+            - content
+          properties:
+            content:
+              title: Column Content
+              type: string
+    caption_needed:
+      title: Caption is needed
+      type: boolean
+      description: Is the caption tag needed.
+    rows:
+      title: Rows
+      type: array
+      items:
+        type: object
+        required:
+          - columns
+        properties:
+          columns:
+            title: Columns
+            type: object
+    striped:
+      title: Striped
+      type: boolean
+    borderless:
+      title: Borderless
+      type: boolean
+    responsive:
+      title: Responsive
+      type: boolean
+    sticky:
+      title: Sticky
+      type: boolean
+slots:
+  caption:
+    title: Caption
+  summary:
+    title: Summary

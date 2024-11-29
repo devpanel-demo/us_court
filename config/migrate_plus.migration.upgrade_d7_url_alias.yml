@@ -1,0 +1,130 @@
+uuid: 795f2023-557d-4166-8476-6e8b50148328
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_url_alias
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'URL aliases'
+source:
+  plugin: d7_url_alias
+  constants:
+    slash: /
+process:
+  id:
+    -
+      plugin: get
+      source: pid
+  _path:
+    -
+      plugin: concat
+      source:
+        - constants/slash
+        - source
+  alias:
+    -
+      plugin: concat
+      source:
+        - constants/slash
+        - alias
+  node_translation:
+    -
+      plugin: explode
+      source: source
+      delimiter: /
+    -
+      plugin: extract
+      default: INVALID_NID
+      index:
+        - 1
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_node_complete_basic
+        - upgrade_d7_node_complete_basic_simple
+        - upgrade_d7_node_complete_camera
+        - upgrade_d7_node_complete_court
+        - upgrade_d7_node_complete_data_table
+        - upgrade_d7_node_complete_educational_activity
+        - upgrade_d7_node_complete_faq
+        - upgrade_d7_node_complete_faqs
+        - upgrade_d7_node_complete_federal_rules
+        - upgrade_d7_node_complete_fed_probation_journal
+        - upgrade_d7_node_complete_fee
+        - upgrade_d7_node_complete_form
+        - upgrade_d7_node_complete_front_promo_box
+        - upgrade_d7_node_complete_judge
+        - upgrade_d7_node_complete_judge_comments
+        - upgrade_d7_node_complete_landing_featured_content
+        - upgrade_d7_node_complete_landing_view
+        - upgrade_d7_node_complete_news
+        - upgrade_d7_node_complete_news_issue
+        - upgrade_d7_node_complete_report
+        - upgrade_d7_node_complete_usc_alert
+        - upgrade_d7_node_complete_user_alert
+        - upgrade_d7_node_complete_webform
+    -
+      plugin: node_complete_node_translation_lookup
+  langcode:
+    -
+      plugin: null_coalesce
+      source:
+        - '@node_translation/1'
+        - language
+  path:
+    -
+      plugin: path_set_translated
+      source:
+        - '@_path'
+        - '@node_translation'
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:path_alias'
+migration_dependencies:
+  required: {  }
+  optional:
+    - upgrade_d7_node_complete_basic
+    - upgrade_d7_node_complete_basic_simple
+    - upgrade_d7_node_complete_camera
+    - upgrade_d7_node_complete_data_table
+    - upgrade_d7_node_complete_educational_activity
+    - upgrade_d7_node_complete_faqs
+    - upgrade_d7_node_complete_federal_rules
+    - upgrade_d7_node_complete_fed_probation_journal
+    - upgrade_d7_node_complete_fee
+    - upgrade_d7_node_complete_form
+    - upgrade_d7_node_complete_judge
+    - upgrade_d7_node_complete_judge_comments
+    - upgrade_d7_node_complete_landing_featured_content
+    - upgrade_d7_node_complete_landing_view
+    - upgrade_d7_node_complete_news
+    - upgrade_d7_node_complete_news_issue
+    - upgrade_d7_node_complete_report
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_node_complete_basic
+    - upgrade_d7_node_complete_basic_simple
+    - upgrade_d7_node_complete_camera
+    - upgrade_d7_node_complete_data_table
+    - upgrade_d7_node_complete_educational_activity
+    - upgrade_d7_node_complete_faq
+    - upgrade_d7_node_complete_faqs
+    - upgrade_d7_node_complete_federal_rules
+    - upgrade_d7_node_complete_fed_probation_journal
+    - upgrade_d7_node_complete_fee
+    - upgrade_d7_node_complete_form
+    - upgrade_d7_node_complete_judge
+    - upgrade_d7_node_complete_judge_comments
+    - upgrade_d7_node_complete_landing_featured_content
+    - upgrade_d7_node_complete_landing_view
+    - upgrade_d7_node_complete_news
+    - upgrade_d7_node_complete_news_issue
+    - upgrade_d7_node_complete_report
+    - upgrade_d7_node_complete_webform

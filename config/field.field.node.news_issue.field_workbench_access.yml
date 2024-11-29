@@ -1,0 +1,29 @@
+uuid: 42c1ff00-fa87-4c27-a1bd-158cc59e9eb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_workbench_access
+    - node.type.news_issue
+    - taxonomy.vocabulary.site_sections
+id: node.news_issue.field_workbench_access
+field_name: field_workbench_access
+entity_type: node
+bundle: news_issue
+label: Section
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      site_sections: site_sections
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

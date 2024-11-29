@@ -1,0 +1,35 @@
+uuid: ef8459c5-a404-465b-b3a1-632d6f3b38d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - term_condition
+id: federal_rules_superseded_rules
+label: 'Federal Rules Superseded Rules'
+menu_name: main
+parent: 'menu_link_content:d969e84d-4ab8-4860-9942-a92c1d60a889'
+menu_link: 'menu_position_link:federal_rules_superseded_rules'
+enabled: true
+weight: 3
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  term:
+    id: term
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    term_uuids:
+      - c3f78277-2ab8-4fbb-b55e-a534b6d5bb99
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      federal_rules: federal_rules

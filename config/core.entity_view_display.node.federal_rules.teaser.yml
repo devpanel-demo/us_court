@@ -1,0 +1,115 @@
+uuid: be8f0c79-efb3-48f9-bddc-5240c064755e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.federal_rules.body
+    - field.field.node.federal_rules.feeds_item
+    - field.field.node.federal_rules.field_date_updated
+    - field.field.node.federal_rules.field_document_pdf
+    - field.field.node.federal_rules.field_metatag
+    - field.field.node.federal_rules.field_rules_rule_or_form
+    - field.field.node.federal_rules.field_rules_status
+    - field.field.node.federal_rules.field_tags
+    - field.field.node.federal_rules.field_term_entity_reference
+    - field.field.node.federal_rules.field_term_entity_reference2
+    - field.field.node.federal_rules.field_term_entity_reference3
+    - field.field.node.federal_rules.field_usc_additional_content
+    - field.field.node.federal_rules.field_usc_govdelivery_form
+    - field.field.node.federal_rules.field_usc_import_timestamp
+    - field.field.node.federal_rules.field_usc_notification
+    - field.field.node.federal_rules.field_usc_related_news
+    - field.field.node.federal_rules.field_usc_table_of_contents
+    - field.field.node.federal_rules.field_workbench_access
+    - node.type.federal_rules
+  module:
+    - nomarkup
+    - sdc_display
+    - smart_trim
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.federal_rules.teaser
+targetEntityType: node
+bundle: federal_rules
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  feeds_item: true
+  field_date_updated: true
+  field_document_pdf: true
+  field_metatag: true
+  field_rules_rule_or_form: true
+  field_rules_status: true
+  field_tags: true
+  field_term_entity_reference: true
+  field_term_entity_reference2: true
+  field_term_entity_reference3: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_import_timestamp: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  search_api_excerpt: true

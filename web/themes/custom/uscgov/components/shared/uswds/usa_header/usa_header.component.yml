@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Header
+status: experimental
+group: USWDS
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    extended:
+      type: boolean
+slots:
+  branding:
+    title: Branding
+  main_menu:
+    title: Main menu
+  search_box:
+    title: Search Box

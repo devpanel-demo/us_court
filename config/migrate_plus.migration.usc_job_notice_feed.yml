@@ -1,0 +1,239 @@
+uuid: dda757d3-61d8-45cb-a7d6-1f9af2af6313
+langcode: en
+status: true
+dependencies: {  }
+id: usc_job_notice_feed
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: usc_vacancies
+label: 'US Court jNet Job Vacancies'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: simple_xml
+  urls:
+    callback: usc_vacancies_migrate_urls
+  item_selector: /job-list
+  constants:
+    TITLE_VALUE: 'Judiciary Job Listing'
+  fields:
+    -
+      name: archive_id
+      label: 'Archive ID'
+      selector: /job-list
+    -
+      name: job_title
+      label: 'Job Title'
+      selector: job/title
+    -
+      name: announcement_number
+      label: 'Announcement Number'
+      selector: job/AnnouncementNumber
+    -
+      name: open_until_filled
+      label: 'OpenUntil Filled'
+      selector: job/OpenUntilFilled
+    -
+      name: opening_date
+      label: 'Opening Date'
+      selector: job/OpeningDate
+    -
+      name: closing_date
+      label: 'Closing Date'
+      selector: job/ClosingDate
+    -
+      name: origin_link
+      label: 'Link to Original Job Post'
+      selector: job/LinkOriginalJob
+    -
+      name: duration
+      label: Duration
+      selector: job/Duration
+    -
+      name: city
+      label: DutyStationCity
+      selector: job/DutyStationCity
+    -
+      name: state
+      label: DutyStationState
+      selector: job/DutyStationState
+    -
+      name: website
+      label: DutyStationWebsite
+      selector: job/DutyStationWebsite
+    -
+      name: employee_benefits
+      label: EmployeeBenefits
+      selector: job/EmployeeBenefits
+    -
+      name: general_experience
+      label: GeneralExperience
+      selector: job/GeneralExperience
+    -
+      name: application_info
+      label: HowtoApply-InformationforApplicants
+      selector: job/HowtoApply-InformationforApplicants
+    -
+      name: job_grade
+      label: JobGrade
+      selector: job/JobGrade
+    -
+      name: miscellaneous
+      label: Miscellaneous
+      selector: job/Miscellaneous
+    -
+      name: court_name
+      label: CourtName
+      selector: job/CourtName
+    -
+      name: position_description
+      label: PositionDescription
+      selector: job/PositionDescription
+    -
+      name: post_to
+      label: Postto
+      selector: job/Postto
+    -
+      name: qualifications
+      label: QualificationRequirements
+      selector: job/QualificationRequirements
+    -
+      name: salary_max
+      label: SalaryRangeMax
+      selector: job/SalaryRangeMax
+    -
+      name: salary_min
+      label: SalaryRangeMin
+      selector: job/SalaryRangeMin
+    -
+      name: specialized_experience
+      label: SpecializedExperience
+      selector: job/SpecializedExperience
+    -
+      name: nid
+      label: 'Unique ID'
+      selector: job/Nid
+    -
+      name: overview
+      label: Overview-of-the-Position
+      selector: job/Overview-of-the-Position
+    -
+      name: vacancies
+      label: Vacancies
+      selector: job
+  ids:
+    archive_id:
+      type: string
+process:
+  title: constants/TITLE_VALUE
+  changed:
+    plugin: get
+    source: changed
+  created:
+    plugin: get
+    source: changed
+  field_vacancy_type:
+    plugin: default_value
+    default_value: job_vacancy
+  field_archive_id: archive_id
+  field_source_type:
+    plugin: default_value
+    default_value: xml
+  field_vacancy_reference:
+    -
+      plugin: sub_process
+      source: vacancy_rows
+      process:
+        field_job_title: job_title
+        field_job_id: nid
+        field_announcement_number: announcement_number
+        field_overview: overview
+        field_city: city
+        field_state: state
+        field_website: website
+        field_job_url: origin_link
+        field_salary_maximum: salary_max
+        field_salary_minimum: salary_min
+        field_grade: job_grade
+        field_opening_date:
+          plugin: format_date
+          from_format: m/d/Y
+          to_format: Y-m-d
+          source: opening_date
+        field_closing_date:
+          plugin: format_date
+          from_format: m/d/Y
+          to_format: Y-m-d
+          source: closing_date
+        field_open_until_filled:
+          plugin: static_map
+          source: open_until_filled
+          map:
+            'Yes': '1'
+            'No': '0'
+          default_value: '0'
+        field_duration: duration
+        field_court: court_name
+        field_position_description/value:
+          plugin: callback
+          callable: html_entity_decode
+          source: position_description
+        field_qualifications/value:
+          plugin: callback
+          callable: html_entity_decode
+          source: qualifications
+        field_general_experience/value:
+          plugin: callback
+          callable: html_entity_decode
+          source: general_experience
+        field_specialized_experience/value:
+          plugin: callback
+          callable: html_entity_decode
+          source: specialized_experience
+        field_employee_benefits/value:
+          plugin: callback
+          callable: html_entity_decode
+          source: employee_benefits
+        field_miscellaneous/value:
+          plugin: callback
+          callable: html_entity_decode
+          source: position_description
+        field_application_info/value:
+          plugin: callback
+          callable: html_entity_decode
+          source: application_info
+    -
+      plugin: child_entity_generate
+      entity_type: paragraph
+      bundle: job_vacancy
+      values:
+        field_job_title: field_job_title
+        field_job_id: field_job_id
+        field_announcement_number: field_announcement_number
+        field_overview: field_overview
+        field_city: field_city
+        field_state: field_state
+        field_website: field_website
+        field_job_url: field_job_url
+        field_salary_maximum: field_salary_maximum
+        field_salary_minimum: field_salary_minimum
+        field_grade: field_grade
+        field_opening_date: field_opening_date
+        field_closing_date: field_closing_date
+        field_open_until_filled: field_open_until_filled
+        field_duration: field_duration
+        field_court: field_court
+        field_position_description: field_position_description
+        field_qualifications: field_qualifications
+        field_general_experience: field_general_experience
+        field_specialized_experience: field_specialized_experience
+        field_employee_benefits: field_employee_benefits
+        field_miscellaneous: field_miscellaneous
+        field_application_info: field_application_info
+destination:
+  plugin: 'entity:node'
+  default_bundle: vacancy
+  new_revision: false
+migration_dependencies: {  }

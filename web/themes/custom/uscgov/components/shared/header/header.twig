@@ -1,0 +1,81 @@
+{{ include('uscgov:usa_banner') }}
+{% set menu_wrapper_id = 'menu-wrapper'|clean_unique_id %}
+
+<header class="header {{ project_id == 'uscgov' ? 'header--fixed' }}">
+  <div class="header__main container">
+    <a href="{{ path('<front>') }}" class="header__logo">
+      <span class="visually-hidden">{{ 'Home'|t }}</span>
+      {% block logo %}{% endblock %}
+      {% if project_id == 'toolbox' %}
+        <div class="header__info_wrapper">
+          <div class="header__slogan">
+            {% block slogan %}{% endblock %}
+          </div>
+          <div class="header__site-name">
+            {% block site_name %}{% endblock %}
+          </div>
+          {% block court_site_leaderships %}
+            {% if add_header_leaderships_names['#items'].value == '1' and header_leadership_names is not empty %}
+              <div class="header__leadership_names-wrapper">
+                <ul class="header__leaderships_names">
+                  {% for item in header_leadership_names['#items'] %}
+                    <li>{{ item.value }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          {% endblock %}
+        </div>
+      {% endif %}
+    </a>
+    <div id="{{ menu_wrapper_id }}" class="header__menu-wrapper">
+      <button class="header__menu-wrapper-close-button" aria-controls="{{ menu_wrapper_id }}">
+        <span class="visually-hidden">{{ 'Close menu'|t }}</span>
+      </button>
+
+      {% set nav_id = 'primary-navigation-heading'|clean_unique_id %}
+      <div class="header__menu-wrapper-header">
+        <h2 id="{{ nav_id }}" class="header__menu-wrapper-heading">{{ 'Main Menu'|t }}</h2>
+      </div>
+      {{ include('uscgov:mobile-search', {
+        search_type,
+        project_id,
+      }, with_context = false) }}
+      <nav aria-labelledby="{{ nav_id }}" class="header__navigation">
+        {{ main_menu }}
+      </nav>
+    </div>
+    <div class="header__menu-overlay"></div>
+    {# <ul class="header__secondary-menu">
+      <li class="header__secondary-item header__secondary-item--translate">
+        {{ google_translate }}
+      </li>
+      <li class="header__secondary-item header__secondary-item--spacer" aria-hidden="true">
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+      </li> #}
+      {# Show court finder link only of .gov #}
+      {# <li class="header__secondary-item">
+        {% if project_id == 'uscgov' %}
+          <a href="/federal-court-finder/find" id="fcf-site-header">
+            <span class="header__icon-pin"></span>
+            {{ 'Find a Federal Court'|t }}
+          </a>
+        {% else %}
+          {% if find_a_location_link %}
+            <a href="{{ find_a_location_link }}" id="fcf-site-header">
+              <span class="header__icon-pin"></span>
+              {{ 'Find a location'|t }}
+            </a>
+          {% endif %}
+        {% endif %}
+      </li>
+    </ul> #}
+    {{ include('uscgov:desktop-search', {
+      search_type,
+      project_id,
+    }, with_context = false) }}
+    <button class="header__menu-button" aria-expanded="false" aria-controls="{{ menu_wrapper_id }}">
+      {{ 'Menu'|t }}
+    </button>
+  </div>
+</header>

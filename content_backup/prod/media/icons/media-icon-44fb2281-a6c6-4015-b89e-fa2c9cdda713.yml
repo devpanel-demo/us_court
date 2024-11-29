@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 44fb2281-a6c6-4015-b89e-fa2c9cdda713
+entity_type: media
+bundle: icon
+base_fields:
+  name: list-ol-solid.svg
+  created: '1724357514'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/list-ol-solid.svg'
+      url: '/sites/default/files/icons/list-ol-solid.svg'
+      description: ''

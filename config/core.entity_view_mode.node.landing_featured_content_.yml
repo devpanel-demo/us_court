@@ -1,0 +1,11 @@
+uuid: 3a1e95d6-83e3-4959-8ac3-6d5f57ca7915
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.landing_featured_content_
+label: landing_featured_content_
+description: ''
+targetEntityType: node
+cache: true

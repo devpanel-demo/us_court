@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 17d78155-2741-4d71-820c-ec6283738265
+entity_type: media
+bundle: icon
+base_fields:
+  name: fast-backward.svg
+  created: '1721137067'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/fast-backward.svg'
+      url: '/sites/default/files/icons/fast-backward.svg'

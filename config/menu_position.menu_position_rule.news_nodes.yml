@@ -1,0 +1,27 @@
+uuid: 9684da2e-e165-40d3-a3d1-f640740f52d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+id: news_nodes
+label: 'News Nodes'
+menu_name: main
+parent: 'menu_link_content:7f95704e-e532-4b0f-bdc0-47af94f4c9aa'
+menu_link: 'menu_position_link:news_nodes'
+enabled: true
+weight: -5
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      news: news

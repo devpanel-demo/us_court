@@ -1,0 +1,30 @@
+uuid: 2cb220f4-974c-475d-bb77-fa5eb0be8161
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.court_finder
+    - facets.facet.usc_district_id
+  module:
+    - block_visibility_groups
+    - facets
+  theme:
+    - uscgov
+id: uscgov_districtid
+theme: uscgov
+region: sidebar
+weight: -4
+provider: null
+plugin: 'facet_block:usc_district_id'
+settings:
+  id: 'facet_block:usc_district_id'
+  label: 'Closest Districts'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: uscgov_districtid
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: court_finder

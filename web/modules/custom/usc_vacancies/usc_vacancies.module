@@ -1,0 +1,875 @@
+<?php
+
+/**
+ * @file
+ * Provides USC Vacancies hooks.
+ */
+
+use Drupal\Core\Database\Query\AlterableInterface;
+use Drupal\Core\Database\Query\SelectInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\language\Entity\ContentLanguageSettings;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Plugin\Migration;
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\Row;
+use Drupal\node\NodeInterface;
+use Drupal\paragraphs\ParagraphInterface;
+use Drupal\views\ViewExecutable;
+use Masterminds\HTML5;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Custom callback to dynamically provide urls for migrations.
+ *
+ * @param Drupal\migrate\Plugin\Migration $migration
+ *   The migration to provide urls for.
+ *
+ * @return array
+ *   The array of urls to import.
+ */
+function usc_vacancies_migrate_urls(Migration $migration): array {
+  $urls = [];
+
+  /*
+   * If we got here from the admin form, the file path should be defined for us.
+   */
+  if (isset($migration->archive_path) && isset($migration->archive_filename)) {
+    $urls[] = $migration->archive_path . '/' . $migration->archive_filename;
+    return $urls;
+  }
+
+  /*
+   * If we got here from migration UI or drush, we need to find the path to the file based on the Y_m archive id.
+   */
+  $full_path = $filename = '';
+  $vacancy_config = \Drupal::service('config.factory')->getEditable('usc_vacancies.settings');
+
+  switch ($migration->id()) {
+    case 'usc_job_notice_feed':
+      $job_base_path = $vacancy_config->get('usc_dir_job');
+      $job_file_name = $vacancy_config->get('usc_file_job_vacancies');
+      $full_path = $job_base_path . '/' . $job_file_name;
+      if (file_exists($full_path) && is_file($full_path)) {
+        $urls[] = $full_path;
+      }
+      break;
+
+    case 'usc_vacancy_judicial_current_feed':
+    case 'usc_vacancy_judicial_future_feed':
+    case 'usc_vacancy_judicial_confirmation_feed':
+    case 'usc_vacancy_judicial_emergency_feed':
+    case 'usc_vacancy_judicial_summary_feed':
+      $paths[] = $vacancy_config->get('usc_dir_judicial');
+      $paths[] = $vacancy_config->get('usc_dir_judicial_archive');
+
+      if (isset($migration->archive_id)) {
+        $archive_id = $migration->archive_id;
+        $paths[] = $archive_id;
+      }
+
+      // See if the directory exists.
+      $dir = implode('/', $paths);
+      $is_dir = is_dir($dir);
+
+      // If the directory exists, let's scan for the file types within.
+      if ($is_dir) {
+        switch ($migration->id()) {
+          case 'usc_vacancy_judicial_current_feed':
+            $filename = $vacancy_config->get('usc_dir_judicial_vacancies');
+            break;
+
+          case 'usc_vacancy_judicial_future_feed':
+            $filename = $vacancy_config->get('usc_dir_judicial_future');
+            break;
+
+          case 'usc_vacancy_judicial_confirmation_feed':
+            $filename = $vacancy_config->get('usc_dir_judicial_confirmations');
+            break;
+
+          case 'usc_vacancy_judicial_emergency_feed':
+            $filename = $vacancy_config->get('usc_dir_judicial_emergencies');
+            break;
+
+          case 'usc_vacancy_judicial_summary_feed':
+            $filename = $vacancy_config->get('usc_dir_judicial_summary');
+            break;
+
+          default:
+            break;
+        }
+
+        /*
+         * Scan the directory to compare against its contents.
+         */
+        $dir_files = scandir($dir, 1);
+        if (in_array($filename, $dir_files)) {
+          $paths[] = $filename;
+        }
+
+      }
+
+      $full_path = implode('/', $paths);
+
+      // Double checking that it exists after we put it all together.
+      if (file_exists($full_path) && is_file($full_path)) {
+        $urls[] = $full_path;
+      }
+      break;
+
+    default:
+      break;
+  }
+
+  return $urls;
+
+}
+
+/**
+ * Implements hook_migrate_prepare_row().
+ *
+ * @throws \Exception
+ */
+function usc_vacancies_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+  switch ($migration->id()) {
+    case 'usc_job_notice_feed':
+      /*
+       * We use this to set the archive_id for jobs.
+       */
+      // @phpstan-ignore-next-line
+      $migration->archive_id = 'usc_job';
+      $row->setSourceProperty('archive_id', 'usc_job');
+
+      /*
+       * Compile the individual array data into a cohesive array for processing.
+       * The child_entity_generate plugin doesn't handle xml data seamlessly so we massage it here.
+       */
+      $vacancy_rows = usc_vacancies_compile_vacancy_rows_data($row, $source, $migration->id());
+      $row->setSourceProperty('vacancy_rows', $vacancy_rows);
+      if (!empty($migration->archive_path) && !empty($migration->archive_filename)) {
+        $file = $migration->archive_path . '/' . $migration->archive_filename;
+        if (file_exists($file)) {
+          $time = filemtime($file);
+          $row->setSourceProperty('changed', $time);
+          $row->setSourceProperty('created', $time);
+        }
+      }
+      break;
+
+    default:
+      // Hide from all non-judicial vacancy migrations.
+      if (!str_starts_with($migration->id(), 'usc_vacancy_judicial')) {
+        break;
+      }
+
+      /*
+       * We need to determine the source file type and set the field appropriately because display will be impacted.
+       * We start with the source based on config, but need to see if the file truly exists. The 3 possible file types
+       * are xml, html, and pdf.
+       */
+      $available_types = [
+        'xml',
+        'html',
+        'pdf',
+      ];
+
+      foreach ($available_types as $type) {
+        $suffix_exists = strpos($source->__toString(), $type);
+        if ($suffix_exists > 0) {
+          $row->setSourceProperty('field_source_type', $type);
+        }
+      }
+
+      /*
+       * If we are dealing with a html file, grab its contents for the legacy table field.
+       */
+      if ($row->getSourceProperty('field_source_type') == 'html') {
+        if (file_exists($source)) {
+          $html = new Html5();
+          $dom = $html->load($source);
+          // Get all table elements.
+          $tables = $dom->getElementsByTagName("table");
+
+          // Add class to each table.
+          foreach ($tables as $table) {
+            // Only apply setAttribute to DOMElement nodes.
+            if ($table instanceof \DOMElement) {
+              // Check if the table already has a class attribute.
+              if ($table->hasAttribute('class')) {
+                // Append new class to the existing class.
+                $existing_classes = $table->getAttribute('class');
+                $table->setAttribute('class', $existing_classes . ' usa-table');
+              }
+              else {
+                // Set the class if no class attribute exists.
+                $table->setAttribute('class', 'usa-table');
+              }
+            }
+          }
+          $body = $dom->getElementsByTagName("body");
+          $inner_html = '';
+          $script_tags = $dom->getElementsByTagName('script');
+          while ($script_tags->length > 0) {
+            // Remove the script tag.
+            $script_tags->item(0)->parentNode->removeChild($script_tags->item(0));
+          }
+          foreach ($body as $table) {
+            $children = $table->childNodes;
+
+            foreach ($children as $child) {
+              if ($child instanceof \DOMElement && !in_array($child->tagName, ['script'])) {
+                $inner_html .= $html->saveHTML($child);
+              }
+            }
+          }
+          $inner_html = trim($inner_html);
+          $inner_html = preg_replace("/\<a([^>]*)\>([^<]*)\<\/a\>/i", "$2", $inner_html);
+          $field_legacy_table_data = [
+            'format' => 'wysiwyg',
+            'value' => $inner_html,
+          ];
+          $row->setSourceProperty('field_legacy_table_data', $field_legacy_table_data);
+        }
+      }
+
+      /*
+       * We are manually setting the archive_id in a form submission elsewhere.
+       */
+      $archive_id = date('Y_m');
+      if (isset($migration->archive_id)) {
+        $archive_id = $migration->archive_id;
+      }
+
+      /*
+       * Need to convert YYYY_MM into a timestamp.
+       */
+      $date_parts = explode('_', $archive_id);
+      // Need a date string in dd/mm/yyyy.
+      $timestamp = strtotime($date_parts[1] . '/01/' . $date_parts[0]);
+      $node_title_date = date('F Y', $timestamp);
+
+      /*
+       * We use this to set the archive_id to the current date in the form of YYYY_MM.
+       */
+      $row->setSourceProperty('archive_id', $archive_id);
+
+      if (isset($migration->field_pdf_document)) {
+        $row->setSourceProperty('field_pdf_document', $migration->field_pdf_document);
+      }
+
+      /*
+       * We need to manufacture a custom alias for the node based on archive_id.
+       */
+      $alias_dates = explode('_', $archive_id);
+      $alias_year = $alias_dates[0] ? $alias_dates[0] : date('Y');
+      $alias_month = $alias_dates[1] ? $alias_dates[1] : date('m');
+
+      $alias_suffix = usc_vacancies_get_vacancy_types_from_migration($migration->id());
+      $custom_alias = "/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/$alias_year/$alias_month/$alias_suffix";
+      $row->setSourceProperty('custom_alias', $custom_alias);
+
+      /*
+       * Doing this for the Year Field.
+       */
+      $row->setSourceProperty('field_year', $alias_year);
+
+      /*
+       * Doing this for the Node Title.
+       */
+      $row->setSourceProperty('node_title_date', $node_title_date);
+
+      /*
+       * Compile the individual array data into a cohesive array for processing.
+       * The child_entity_generate plugin doesn't handle xml data seamlessly so we massage it here.
+       */
+      $vacancy_rows = usc_vacancies_compile_vacancy_rows_data($row, $source, $migration->id());
+      $row->setSourceProperty('vacancy_rows', $vacancy_rows);
+      break;
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * Redirect to the PDF file URL if 'field_pdf_document' contains a file.
+ *
+ * @throws \Drupal\Core\File\Exception\InvalidStreamWrapperException
+ * @throws \InvalidArgumentException
+ */
+function usc_vacancies_preprocess_node(&$variables) {
+  // Check if the node has the field 'field_pdf_document'.
+  if ($variables['node']->bundle() == 'vacancy' && isset($variables['node']->field_pdf_document) && !$variables['node']->field_pdf_document->isEmpty()) {
+    /* @phpstan-ignore-next-line */
+    $node = $variables['node'];
+    // Get the file entity from the field.
+    /* @phpstan-ignore-next-line */
+    $file = $node->get('field_pdf_document')->entity;
+
+    if ($file) {
+      $file_uri = $file->getFileUri();
+      $file_url = \Drupal::service('file_url_generator')->generateAbsoluteString($file_uri);
+      // Perform the redirect to the file URL.
+      $response = new RedirectResponse($file_url);
+      $response->send();
+      exit();
+    }
+  }
+}
+
+/**
+ * Helper function to process row data for importing paragraphs.
+ *
+ * We need to compile the individual arrays from xml flat file into a suitable
+ * format for us to handle in the migration. This allows us to create the paragraphs
+ * for the vacancy node.
+ *
+ * We want:
+ * $vacancy_rows = [
+ *   'circuit' => '01',
+ *   'district' => 'MA',
+ *   'incumbent' => 'Doe,John A.',
+ *    etc.
+ * ];
+ *
+ * @param Drupal\migrate\Row $row
+ *   The row data to process.
+ * @param Drupal\migrate\Plugin\MigrateSourceInterface $source
+ *   The source to get the field data from.
+ *
+ * @return array
+ *   The master array for import.
+ */
+function usc_vacancies_compile_vacancy_rows_data(Row $row, MigrateSourceInterface $source, string $migration_id) {
+  $vacancy_rows = $field_array = [];
+  $fields = $source->fields();
+  $count = 0;
+
+  /*
+   * This data does not exist in the xml and is not something that will likely change,
+   * so we enter it here to get it into the system. In D7, it was added as a process via
+   * bash on the server.
+   */
+  $judgeships = [
+    0 => '179',
+    1 => '677',
+    2 => '9',
+    3 => '16',
+    4 => '9',
+    5 => '890',
+  ];
+
+  // This will get us the number of vacancies and allow us to process the list.
+  if (isset($fields['vacancies'])) {
+    $vacancies = $row->getSourceProperty('vacancies');
+    if (!is_null($vacancies) && is_array($vacancies)) {
+      $count = count($vacancies);
+    }
+
+    if ($count > 0) {
+      foreach ($fields as $field_key => $field_label) {
+        if ($row->hasSourceProperty($field_key) && $field_key != 'vacancies') {
+          $field_values = $row->getSourceProperty($field_key);
+          if (is_array($field_values)) {
+            $field_array[$field_key] = $field_values;
+          }
+        }
+      }
+
+      if ($migration_id == 'usc_vacancy_judicial_summary_feed') {
+        $field_array['authorized_judgeships'] = $judgeships;
+      }
+
+      // Now process the whole list and build a master array from the individual arrays.
+      if (!empty($field_array)) {
+        for ($i = 0; $i < $count; $i++) {
+          foreach ($field_array as $name => $array) {
+            $vacancy_rows[$i][$name] = $array[$i];
+          }
+        }
+      }
+    }
+  }
+
+  return $vacancy_rows;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ *
+ * @throws \LogicException
+ */
+function usc_vacancies_node_presave(NodeInterface $node) {
+  if ($node->bundle() == 'vacancy' && !$node->isNew()) {
+    $node->setRevisionCreationTime(\Drupal::time()->getRequestTime());
+    $node->setNewRevision(TRUE);
+    $node->isDefaultRevision(TRUE);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ *
+ * Massage fields for the display of Job Vacancy paragraphs.
+ */
+function usc_vacancies_paragraph_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity instanceof ParagraphInterface && $view_mode == 'job_vacancy_detail') {
+    $render_array = [
+      '#theme' => 'field',
+      '#title' => '',
+      '#label_display' => 'hidden',
+      '#view_mode' => 'job_vacancy_detail',
+      '#language' => 'en',
+      '#field_name' => '',
+      '#field_type' => 'string',
+      '#field_translatable' => FALSE,
+      '#entity_type' => 'paragraph',
+      '#bundle' => 'job_vacancy',
+      '#formatter' => 'string',
+      '#is_multiple' => FALSE,
+    ];
+
+    // We need a concatenated "location" field, so we are duplicating another field on the view mode and altering content.
+    if ($display->getComponent('field_vacancy_location')) {
+      // phpcs:disable
+      /* @phpstan-ignore-next-line */
+      $city = $entity->field_city->value;
+      // phpcs:enable
+      // phpcs:disable
+      /* @phpstan-ignore-next-line */
+      $state = $entity->field_state->value;
+      // phpcs:enable
+      $location_content = [
+        '#title' => 'Location',
+        '#field_name' => 'field_vacancy_location',
+        '0' => [
+          '#markup' => $city . ', ' . $state,
+        ]
+      ];
+      $build['field_vacancy_location'] = array_merge($render_array, $location_content);
+    }
+
+    // We need to create the opening/closing dates field using opening, closing and open until filled.
+    if ($display->getComponent('field_date_range')) {
+      $open = !empty($entity->field_opening_date->value) ? strtotime($entity->field_opening_date->value) : 0;
+      $close = !empty($entity->field_closing_date->value) ? strtotime($entity->field_closing_date->value) : 0;
+      // phpcs:disable
+      /* @phpstan-ignore-next-line */
+      $until_filled = $entity->field_open_until_filled->value;
+      // phpcs:enable
+      $date_range_content = date('m/d/Y', $open) . ' - ' . date('m/d/Y', $close);
+      if ($until_filled) {
+        $date_range_content = date('m/d/Y', $open) . ' - ' . 'Open Until Filled';
+      }
+      $date_range = [
+        '#title' => 'Opening and Closing Dates',
+        '#field_name' => 'field_date_range',
+        '0' => [
+          '#markup' => $date_range_content,
+        ]
+      ];
+      $build['field_date_range'] = array_merge($render_array, $date_range);
+    }
+
+    // We need to alter the duration label.
+    if ($display->getComponent('field_duration')) {
+      $build['field_duration']['#title'] = 'Appointment Type';
+    }
+
+    // We need to alter the grade label.
+    if ($display->getComponent('field_grade')) {
+      $build['field_grade']['#title'] = 'Classification Level/Grade';
+    }
+
+    // We need to create the salary range field from min and max.
+    if ($display->getComponent('field_salary_range')) {
+      $min = $max = 0;
+      $range = '';
+      if (!empty($entity->field_salary_minimum->value)) {
+        $min = $entity->field_salary_minimum->value;
+      }
+
+      if (!empty($entity->field_salary_maximum->value)) {
+        $max = $entity->field_salary_maximum->value;
+      }
+
+      if ($max > 0 && $min > 0 && $max > $min) {
+        $range = '$' . number_format($min, 0, '', ',') . ' - $' . number_format($max, 0, '', ',');
+      }
+      elseif ($min > 0) {
+        $range = 'Starting: $' . number_format($min, 0, '', ',');
+      }
+      else {
+        $range = 'Not specified';
+      }
+
+      $salary_range = [
+        '#title' => 'Salary',
+        '#field_name' => 'field_salary_range',
+        '#field_type' => 'integer',
+        '#formatter' => 'number_integer',
+        '0' => [
+          // phpcs:disable
+          /* @phpstan-ignore-next-line */
+          '#markup' =>  $range,
+          // phpcs:enable
+        ],
+      ];
+      $build['field_salary_range'] = array_merge($render_array, $salary_range);
+    }
+
+    // We need to alter the website label.
+    if ($display->getComponent('field_website')) {
+      $build['field_website']['#title'] = 'Link to Court Careers Information';
+    }
+
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function usc_vacancies_entity_extra_field_info() {
+  $extra = [];
+  $paragraph_bundle = 'job_vacancy';
+  $module_language_enabled = \Drupal::moduleHandler()->moduleExists('language');
+  if ($module_language_enabled) {
+    $configuration = ContentLanguageSettings::loadByEntityTypeBundle('paragraph', $paragraph_bundle);
+    if ($configuration->isLanguageAlterable()) {
+      $extra['paragraph'][$paragraph_bundle]['form']['language'] = [
+        'label' => t('Language'),
+        'description' => '',
+        'weight' => 0,
+      ];
+    }
+  }
+
+  $extra['paragraph'][$paragraph_bundle]['display']['field_vacancy_location'] = [
+    'label' => t('Location'),
+    'description' => t('Combine city and state for location.'),
+    'weight' => 5,
+    'visible' => TRUE,
+  ];
+
+  $extra['paragraph'][$paragraph_bundle]['display']['field_date_range'] = [
+    'label' => t('Date Range'),
+    'description' => t('Combine opening and closing dates and considering "open until filled" value.'),
+    'weight' => 6,
+    'visible' => TRUE,
+  ];
+
+  $extra['paragraph'][$paragraph_bundle]['display']['field_salary_range'] = [
+    'label' => t('Salary Range'),
+    'description' => t('Combine min and max salary values.'),
+    'weight' => 7,
+    'visible' => TRUE,
+  ];
+
+  return $extra;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * We want to set the select options to only reflect active alerts.
+ */
+function usc_vacancies_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-vacancies-job-job-listing') {
+
+    // Convert the state textfield to a select.
+    $state_field = $form['state'];
+    $states = usc_vacancies_get_states_options();
+    $form['state'] = [
+      '#type' => 'select',
+      '#title' => $state_field['#title'],
+      '#options' => $states,
+    ];
+
+    // Convert the salarymin textfield to a select.
+    $salary_minimum_field = $form['salarymin'];
+    $salaries = usc_vacancies_get_jnet_salarymins();
+    $form['salarymin'] = [
+      '#type' => 'select',
+      '#title' => $salary_minimum_field['#title'],
+      '#options' => $salaries,
+    ];
+
+    $input = $form_state->getUserInput();
+    $custom_action = $input['custom_action'] ?? Url::fromRoute('<current>')->toString();
+    $form['custom_action'] = [
+      '#type' => 'hidden',
+      '#value' => $custom_action,
+    ];
+    $form['#action'] = $custom_action;
+
+  }
+}
+
+/**
+ * Helper function to get options for the salary filter.
+ */
+function usc_vacancies_get_jnet_salarymins() {
+  $options = [
+    '0' => t('--Any--'),
+    '50000' => t('$50,000+'),
+    '75000' => t('$75,000+'),
+    '100000' => t('$100,000+'),
+    '125000' => t('$125,000+'),
+  ];
+  return $options;
+}
+
+/**
+ * Helper function to get vacancy types for the migration.
+ */
+function usc_vacancies_get_vacancy_types_from_migration($migration_id = '') {
+  if (empty($migration_id)) {
+    $migration_id = 'usc_vacancy_judicial_current_feed';
+  }
+
+  $vacancy_types = [
+    'usc_vacancy_judicial_summary_feed' => 'summary',
+    'usc_vacancy_judicial_current_feed' => 'vacancies',
+    'usc_vacancy_judicial_emergency_feed' => 'emergencies',
+    'usc_vacancy_judicial_future_feed' => 'future',
+    'usc_vacancy_judicial_confirmation_feed' => 'confirmations',
+    'usc_vacancy_judicial_summary_html_feed' => 'summary',
+    'usc_vacancy_judicial_current_html_feed' => 'vacancies',
+    'usc_vacancy_judicial_emergency_html_feed' => 'emergencies',
+    'usc_vacancy_judicial_future_html_feed' => 'future',
+    'usc_vacancy_judicial_confirmation_html_feed' => 'confirmations',
+    'usc_vacancy_judicial_summary_pdf_feed' => 'summary',
+    'usc_vacancy_judicial_current_pdf_feed' => 'vacancies',
+    'usc_vacancy_judicial_emergency_pdf_feed' => 'emergencies',
+    'usc_vacancy_judicial_future_pdf_feed' => 'future',
+    'usc_vacancy_judicial_confirmation_pdf_feed' => 'confirmations',
+  ];
+  return $vacancy_types[$migration_id];
+}
+
+/**
+ * Helper function to get options for the state filter.
+ */
+function usc_vacancies_get_states_options() {
+  $options = ['' => '--' . t('All') . '--'];
+
+  $results = [
+    'AL' => t('Alabama'),
+    'AK' => t('Alaska'),
+    'AZ' => t('Arizona'),
+    'AR' => t('Arkansas'),
+    'CA' => t('California'),
+    'CO' => t('Colorado'),
+    'CT' => t('Connecticut'),
+    'DE' => t('Delaware'),
+    'DC' => t('District Of Columbia'),
+    'FL' => t('Florida'),
+    'GA' => t('Georgia'),
+    'GU' => t('Guam'),
+    'HI' => t('Hawaii'),
+    'ID' => t('Idaho'),
+    'IL' => t('Illinois'),
+    'IN' => t('Indiana'),
+    'IA' => t('Iowa'),
+    'KS' => t('Kansas'),
+    'KY' => t('Kentucky'),
+    'LA' => t('Louisiana'),
+    'ME' => t('Maine'),
+    'MD' => t('Maryland'),
+    'MA' => t('Massachusetts'),
+    'MI' => t('Michigan'),
+    'MN' => t('Minnesota'),
+    'MS' => t('Mississippi'),
+    'MO' => t('Missouri'),
+    'MT' => t('Montana'),
+    'NE' => t('Nebraska'),
+    'NV' => t('Nevada'),
+    'NH' => t('New Hampshire'),
+    'NJ' => t('New Jersey'),
+    'NM' => t('New Mexico'),
+    'NY' => t('New York'),
+    'NC' => t('North Carolina'),
+    'ND' => t('North Dakota'),
+    'MP' => t('Northern Marianas Islands'),
+    'OH' => t('Ohio'),
+    'OK' => t('Oklahoma'),
+    'OR' => t('Oregon'),
+    'PA' => t('Pennsylvania'),
+    'PR' => t('Puerto Rico'),
+    'RI' => t('Rhode Island'),
+    'SC' => t('South Carolina'),
+    'SD' => t('South Dakota'),
+    'TN' => t('Tennessee'),
+    'TX' => t('Texas'),
+    'UT' => t('Utah'),
+    'VT' => t('Vermont'),
+    'VI' => t('Virgin Islands'),
+    'VA' => t('Virginia'),
+    'WA' => t('Washington'),
+    'WV' => t('West Virginia'),
+    'WI' => t('Wisconsin'),
+    'WY' => t('Wyoming'),
+  ];
+
+  return array_merge($options, $results);
+}
+
+/**
+ * Implements hook_query_views_alter().
+ */
+function usc_vacancies_query_views_alter(AlterableInterface $query) {
+  if ($query instanceof SelectInterface && $query->hasTag('usc_vacancies')) {
+    $tables =& $query->getTables();
+    if (isset($tables['node__field_vacancy_reference'])) {
+      $tables['node__field_vacancy_reference']['condition'] = 'paragraphs_item_field_data.id = node__field_vacancy_reference.field_vacancy_reference_target_id AND node__field_vacancy_reference.deleted = :views_join_condition_0';
+      $tables['field_vacancy_reference_paragraphs_item_field_data']['condition'] = 'node__field_vacancy_reference.entity_id = field_vacancy_reference_paragraphs_item_field_data.nid';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_table().
+ */
+function usc_vacancies_preprocess_views_view_table(&$variables) {
+  if (isset($variables['view']) && ($variables['view']->id() == 'vacancies_judicial_archives') && ($variables['view']->current_display == 'current_year' || $variables['view']->current_display == 'current_year_menu')) {
+    $view = &$variables['view'];
+    $archive_id = 0;
+    $new_rows = $links = [];
+
+    foreach ($view->result as $id => $record) {
+      // Consolidate the output array to be grouped by month.
+      if (isset($record->_entity->field_archive_id) && $archive_id != $record->_entity->field_archive_id->value) {
+        $archive_id = $record->_entity->field_archive_id->value;
+        $date_var = strtotime(str_replace('_', '-', $archive_id));
+        $year = date('Y', $date_var);
+        $variables['selected_year'] = $year;
+        $variables['new_caption'] = 'Year ' . $year;
+        $month = $label = date('F', $date_var);
+        if ($variables['view']->current_display == 'current_year_menu') {
+          $variables['new_caption'] = date('F Y', $date_var);
+          $label = t('Archived judicial vacancies for ') . $variables['new_caption'];
+        }
+        $new_rows[$month]['columns']['month']['content'][] = [
+          'field_output' => [
+            '#markup' => $label,
+          ],
+        ];
+
+        $new_rows[$month]['attributes'] = $variables['rows'][$id]['attributes'];
+      }
+
+      // Build an array for an item_list.
+      if (isset($month)) {
+        $links[$month][] = $variables['rows'][$id]['columns']['title']['content'][0]['field_output'];
+      }
+    }
+
+    foreach ($links as $month => $value) {
+      $items = [
+        '#theme' => 'item_list',
+        '#list_type' => 'ul',
+        '#items' => $value,
+      ];
+
+      $expected_reports = [
+        '/emergencies' => 'Judicial Emergencies',
+        '/summary' => 'Vacancy Summary',
+        '/future' => 'Future Judicial Vacancies',
+        '/confirmations' => 'Judicial Confirmations'
+      ];
+
+      // Check which reports are missing.
+      foreach ($value as $key => $report_link) {
+        foreach ($expected_reports as $key2 => $report) {
+          $rendered_markup = (string) $report_link['#markup'];
+          if (str_contains($rendered_markup, $key2)) {
+            unset($expected_reports[$key2]);
+          }
+        }
+      }
+
+      // Build message with missing reports.
+      if (!empty($expected_reports)) {
+        if (count($expected_reports) > 1) {
+          $message = t('These reports are unavailable: ') . implode(', ', $expected_reports);
+        }
+        else {
+          $message = t('This report is unavailable: ') . current($expected_reports);
+        }
+
+        $items['#items'][] = $message;
+      }
+
+      $new_rows[$month]['columns']['links']['content'][] = [
+        'field_output' => $items,
+      ];
+    }
+
+    $variables['header'] = [
+      'month' => [
+        'content' => 'Month',
+      ],
+      'links' => [
+        'content' => 'Vacancies',
+      ],
+    ];
+
+    if ($variables['view']->current_display == 'current_year_menu') {
+      $variables['header'] = [];
+    }
+
+    $variables['new_rows'] = $new_rows;
+  }
+}
+
+/**
+ * Implements hook_views_pre_redner().
+ */
+function usc_vacancies_views_pre_render(ViewExecutable $view) {
+  if (($view->id() == 'vacancies_judicial_archives') && ($view->current_display == 'all_years')) {
+
+    // We need to remove duplicate values from the result.
+    $filtered_results = $items = [];
+    $year = 0;
+    foreach ($view->result as $result) {
+      // phpcs:disable
+      /* @phpstan-ignore-next-line */
+      if ($result->_entity->field_year->value != $year) {
+        // phpcs:enable
+        $filtered_results[] = $result;
+        // phpcs:disable
+        /* @phpstan-ignore-next-line */
+        $year = $result->_entity->field_year->value;
+        // phpcs:enable
+      }
+    }
+    // Important to set index values for view results rendering.
+    foreach ($filtered_results as $key => $row) {
+      $row->index = $key;
+    }
+
+    $view->result = $filtered_results;
+    $view->total_rows = count($filtered_results);
+  }
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function usc_vacancies_views_pre_build(ViewExecutable $view) {
+  if (($view->id() == 'vacancies_judicial_archives') && ($view->current_display == 'current_year')) {
+    if (empty($view->args) || is_null($view->args) || is_null($view->args[0])) {
+      // Make sure we don't have a url parameter.
+      $params = \Drupal::request()->query->all();
+      if (!isset($params['year'])) {
+        $args = [
+          date('Y'),
+        ];
+        $view->setArguments($args);
+      }
+    }
+  }
+}

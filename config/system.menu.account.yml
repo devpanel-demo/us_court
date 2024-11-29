@@ -1,0 +1,10 @@
+uuid: 797da042-30cb-4d62-9ad1-318d6b5ae0bd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M_Bh81osDyUQ4wV0GgU_NdBNqkzM87sLxjaCdFj9mnw
+id: account
+label: 'User menu'
+description: 'DO NOT USE - Default menu provided by Drupal.'
+locked: true

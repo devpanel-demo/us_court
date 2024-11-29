@@ -1,0 +1,37 @@
+uuid: d8ba09ef-775e-4ec4-8c6d-83500af460d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+  enforced:
+    module:
+      - book
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+_core:
+  default_config_hash: 2gWGA-X4ERc4McStS7cMEG3ZBpDEqfNRDPTjB1v674Y
+name: 'Book page'
+type: book
+description: '<em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

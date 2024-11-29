@@ -1,0 +1,84 @@
+uuid: 7c5d59a1-9c70-44c8-8c80-9fc6946e4cf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.form.body
+    - field.field.node.form.field_additional_info
+    - field.field.node.form.field_date_effective
+    - field.field.node.form.field_date_superseded
+    - field.field.node.form.field_date_updated
+    - field.field.node.form.field_document_pdf
+    - field.field.node.form.field_form_category
+    - field.field.node.form.field_form_number
+    - field.field.node.form.field_hide_left_navigation
+    - field.field.node.form.field_metatag
+    - field.field.node.form.field_short_title
+    - field.field.node.form.field_superseded
+    - field.field.node.form.field_tags
+    - field.field.node.form.field_usc_additional_content
+    - field.field.node.form.field_usc_govdelivery_form
+    - field.field.node.form.field_usc_notification
+    - field.field.node.form.field_usc_related_news
+    - field.field.node.form.field_usc_table_of_contents
+    - field.field.node.form.field_workbench_access
+    - node.type.form
+  module:
+    - sdc_display
+    - summary_only
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.form.sidebar
+targetEntityType: node
+bundle: form
+mode: sidebar
+content:
+  body:
+    type: text_summary_only
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_summary: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  content_moderation_control: true
+  extra_field_child_menu_items: true
+  field_additional_info: true
+  field_date_effective: true
+  field_date_superseded: true
+  field_date_updated: true
+  field_document_pdf: true
+  field_form_category: true
+  field_form_number: true
+  field_hide_left_navigation: true
+  field_metatag: true
+  field_short_title: true
+  field_superseded: true
+  field_tags: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  links: true
+  search_api_excerpt: true

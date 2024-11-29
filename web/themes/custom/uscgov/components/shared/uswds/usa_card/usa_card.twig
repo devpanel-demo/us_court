@@ -1,0 +1,71 @@
+{% set wrapper_element = settings.wrapper_element ?: 'article' %}
+
+{% set has_link_wrapper = cta.show and (cta.title is not defined or cta.title == '') %}
+{% set has_child_links = child_items is defined %}
+{% set title_id = 'card-id-' ~ title|striptags|clean_unique_id %}
+
+{% set classes = [
+  classes,
+  'usa-card',
+  settings.flag ? 'usa-card--flag',
+  settings.media_right ? 'usa-card--media-right',
+  settings.header_first ? 'usa-card--header-first',
+] %}
+<{{ wrapper_element }}{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+  <div class="usa-card__container">
+    <div class="usa-card__header">
+      {% if has_link_wrapper %}
+        <a class="usa-card__cta" href="{{ cta.url }}" target="{{ cta.target }}">
+          <h2 id="{{ title_id }}" class="usa-card__heading">{{ title|striptags('<br>')|raw }}</h2>
+        </a>
+      {% else %}
+        <h2 id="{{ title_id }}" class="usa-card__heading">{{ title|striptags('<br>')|raw }}</h2>
+      {% endif %}
+      {% if has_child_links %}
+        <nav class="collection-card__nav" aria-labelledby="{{ title_id }}">
+          {{ child_items }}
+        </nav>
+      {% endif %}
+    </div>
+    {% if image %}
+      <div class="usa-card__media {{ settings.media_inset ? 'usa-card__media--inset' }} {{ settings.media_exdent ? 'usa-card__media--exdent' }}">
+        <div class="usa-card__img">
+          {% if has_link_wrapper %}
+            <a class="usa-card__cta" href="{{ cta.url }}" target="{{ cta.target }}">
+          {% endif %}
+          {% if image is iterable  %}
+            {% if image.type == 'url' %}
+              <img
+                src="{{ image.url }}"
+                alt="{{ image.alt }}"
+                title="{{ image.title }}"
+              />
+            {% elseif image.type == 'entity' %}
+              {{ image.entity }}
+            {% elseif image.0 %}
+              {{ image }}
+            {% endif %}
+          {% else %}
+            {{ image }}
+          {% endif %}
+          {% if has_link_wrapper %}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block('body')|trim %}
+      <div class="usa-card__body {{ settings.body_exdent ? 'usa-card__body--exdent' }}">
+        {% block body %}{% endblock %}
+      </div>
+    {% endif %}
+
+    {% if cta.url and cta.title %}
+      <div class="usa-card__footer {{ settings.footer_exdent ? 'usa-card__footer--exdent' }}">
+        <a href="{{ cta.url }}" target="{{ cta.target }}" class="usa-button">{{ cta.title }}</a>
+      </div>
+    {% endif %}
+  </div>
+</{{ wrapper_element }}>

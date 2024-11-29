@@ -1,0 +1,19 @@
+uuid: 869ae4d0-f15b-4d65-90d5-25d5d2ce7881
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_title
+    - node.type.form
+id: node.form.field_short_title
+field_name: field_short_title
+entity_type: node
+bundle: form
+label: 'Short Title'
+description: 'If provided, short title is displayed as h1, and long title (form name) becomes part of lead paragraph text. Short title is also displayed on view tables and related content sidebar.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,38 @@
+uuid: e5b95404-25df-4f7b-8e80-d6ad04e038cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-utility
+  module:
+    - block_visibility_groups
+    - menu_block
+  theme:
+    - uscgov
+id: uscgov_utilitymenu
+theme: uscgov
+region: sidebar
+weight: 0
+provider: null
+plugin: 'menu_block:menu-utility'
+settings:
+  id: 'menu_block:menu-utility'
+  label: 'Utility Menu'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: true
+  label_type: root
+  level: 2
+  depth: 3
+  expand_all_items: true
+  parent: 'menu-utility:'
+  render_parent: false
+  suggestion: main__sidebar
+  hide_on_nonactive: true
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''

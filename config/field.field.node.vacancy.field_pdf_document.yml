@@ -1,0 +1,27 @@
+uuid: 452dca43-1d8f-4257-8822-65585fb9aac4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdf_document
+    - node.type.vacancy
+  module:
+    - file
+id: node.vacancy.field_pdf_document
+field_name: field_pdf_document
+entity_type: node
+bundle: vacancy
+label: 'PDF Document'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: vacancies_documents
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

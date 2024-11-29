@@ -1,0 +1,36 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 10ad57b5-eb7e-4fc3-b1af-5be84337810e
+entity_type: node
+bundle: faqs
+base_fields:
+  title: 'Visual regression test: FAQ'
+  status: true
+  langcode: en
+  created: '1719837455'
+  changed: 1719837455
+  author: jamesdavison@ao.uscourts.gov
+  url: /test/visual-regression-test-faq
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque diam augue, tincidunt et accumsan sed, facilisis in eros. Mauris ut neque justo. Praesent dui neque, dignissim sodales porta quis, tempor nec enim. Vestibulum eu felis ac augue auctor vulputate. Proin vitae iaculis diam. Curabitur venenatis et quam eu mollis. Phasellus auctor orci urna, nec dapibus nulla efficitur ac. Nam non leo venenatis nisl ornare consequat at et leo. Sed a dapibus diam, non dapibus nunc.</p>'
+      summary: ''
+      format: wysiwyg
+  field_faqs:
+    -
+      question: 'This is my faq'
+      answer: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque diam augue, tincidunt et accumsan sed, facilisis in eros. Mauris ut neque justo. Praesent dui neque, dignissim sodales porta quis, tempor nec enim. Vestibulum eu felis ac augue auctor vulputate. Proin vitae iaculis diam. Curabitur venenatis et quam eu mollis. Phasellus auctor orci urna, nec dapibus nulla efficitur ac. Nam non leo venenatis nisl ornare consequat at et leo. Sed a dapibus diam, non dapibus nunc.</p>'
+      answer_format: wysiwyg
+    -
+      question: 'uis eleifend justo sit amet ante egestas, vitae semper velit tincidunt. Maecenas leo nibh, congue nec elementum at, consequat accumsan metus. In hac habitasse platea dictumst. Donec at enim erat. Aliquam mi orci, sodales in pellentesque id, porta at mi.'
+      answer: '<p>Mauris at scelerisque odio. Proin ut turpis sodales, dictum eros non, vestibulum neque. Mauris quis tellus nec justo sollicitudin sollicitudin. Cras accumsan efficitur ex, nec vulputate nisi tempus in. Nam pharetra ultrices dui tempor aliquet. Donec eget tortor vitae purus egestas bibendum. Donec lobortis lobortis massa et pretium. Duis sodales orci nulla, et euismod lectus pulvinar vitae. Aenean est purus, elementum a interdum hendrerit, malesuada ut lorem.</p>'
+      answer_format: wysiwyg
+  field_lead_paragraph:
+    -
+      value: "<p>This page's function is to serve as a base for visual regression testing.</p>"
+      format: wysiwyg
+  field_metatag: null
+  field_workbench_access: null

@@ -1,0 +1,125 @@
+uuid: 8c495e99-0f86-46a3-840e-6907878e6e65
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.data_table.body
+    - field.field.node.data_table.feeds_item
+    - field.field.node.data_table.field_current_table_number
+    - field.field.node.data_table.field_data_table_all_tables
+    - field.field.node.data_table.field_data_table_category_prefix
+    - field.field.node.data_table.field_data_table_range
+    - field.field.node.data_table.field_data_table_title
+    - field.field.node.data_table.field_date_updated
+    - field.field.node.data_table.field_document_pdf
+    - field.field.node.data_table.field_metatag
+    - field.field.node.data_table.field_publication_table_number
+    - field.field.node.data_table.field_publication_type
+    - field.field.node.data_table.field_report_name
+    - field.field.node.data_table.field_reporting_period_increment
+    - field.field.node.data_table.field_tags
+    - field.field.node.data_table.field_topic
+    - field.field.node.data_table.field_usc_additional_content
+    - field.field.node.data_table.field_usc_govdelivery_form
+    - field.field.node.data_table.field_usc_import_timestamp
+    - field.field.node.data_table.field_usc_notification
+    - field.field.node.data_table.field_usc_related_news
+    - field.field.node.data_table.field_usc_table_of_contents
+    - field.field.node.data_table.field_workbench_access
+    - node.type.data_table
+  module:
+    - nomarkup
+    - sdc_display
+    - smart_trim
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.data_table.teaser
+targetEntityType: node
+bundle: data_table
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  feeds_item: true
+  field_current_table_number: true
+  field_data_table_all_tables: true
+  field_data_table_category_prefix: true
+  field_data_table_range: true
+  field_data_table_title: true
+  field_date_updated: true
+  field_document_pdf: true
+  field_metatag: true
+  field_publication_table_number: true
+  field_publication_type: true
+  field_report_name: true
+  field_reporting_period_increment: true
+  field_tags: true
+  field_topic: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_import_timestamp: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  search_api_excerpt: true

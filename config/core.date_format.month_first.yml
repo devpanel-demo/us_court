@@ -1,0 +1,8 @@
+uuid: 1a5b498b-04d3-47e7-a2ee-1a3b116a5fb5
+langcode: en
+status: true
+dependencies: {  }
+id: month_first
+label: 'Month First'
+locked: false
+pattern: 'F j, Y'

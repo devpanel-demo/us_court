@@ -1,0 +1,141 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in Toolbox.
+ */
+
+use Drupal\config_pages\Entity\ConfigPages;
+use Drupal\Core\Link;
+use Drupal\Core\Render\Markup;
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param array $variables
+ *   An array of variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+function uscgov_preprocess_html(&$variables, $hook) {
+  $global_site_settings = ConfigPages::config('global_site_settings');
+  if ($global_site_settings && $global_site_settings->hasField('field_slogan')) {
+    $slogan = $global_site_settings->get('field_slogan')->value;
+  }
+  $fallback_sitename = \Drupal::config('system.site')->get('name');
+  if ($variables['project_id'] == 'toolbox') {
+    $is_front_page = \Drupal::service('path.matcher')->isFrontPage();
+    if (!empty($variables['page']['#title'])) {
+      $head_title = [
+        'title' => Markup::create(trim(strip_tags($variables['page']['#title']))),
+        'name' => $variables['site_name'] ?? $fallback_sitename,
+        'slogan' => $slogan ?? '',
+      ];
+    }
+    elseif ($is_front_page) {
+      $head_title = [
+        'title' => t('Home'),
+        'name' => $variables['site_name'] ?? $fallback_sitename,
+        'slogan' => $slogan ?? '',
+      ];
+    }
+    else {
+      $head_title = [
+        'name' => $variables['site_name'] ?? $fallback_sitename,
+        'slogan' => $slogan ?? '',
+      ];
+    }
+    $variables['head_title'] = $head_title;
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function uscgov_preprocess_block__uscgov_page_title(&$variables) {
+  $is_front_page = \Drupal::service('path.matcher')->isFrontPage();
+  if ($is_front_page) {
+    $variables['content'] = [];
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function uscgov_preprocess_paragraph(&$variables) {
+  $paragraph_type = $variables['paragraph']->getType();
+  if ($paragraph_type == 'hero_cta_block') {
+    $hero_type = $variables['paragraph']->getParentEntity()->get('field_hero_type')->value;
+    $variables['hero_type'] = $hero_type;
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function uscgov_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  $search_views = [
+    'search_content' => [
+      'label' => t('Content'),
+      'display_id' => 'page_1',
+    ],
+    'search_media' => [
+      'label' => t('Media'),
+      'display_id' => 'page_1',
+    ],
+  ];
+  if (in_array($view->id(), array_keys($search_views))) {
+    $request = $view->getRequest();
+    $keys = $request->query->get('keys') ?? '';
+    $options = [];
+    if ($keys) {
+      $options['query'] = ['keys' => $keys];
+    }
+    $items = [];
+    foreach ($search_views as $view_id => $config) {
+      $text = $config['label'];
+      $display_id = $config['display_id'];
+      $link_options = $options;
+      if ($view_id == $view->id()) {
+        $link_options['attributes']['class'] = ['active'];
+      }
+      $items[] = Link::createFromRoute($text, "view.{$view_id}.{$display_id}", [], $link_options);
+    }
+    $variables['header']['buttons'] = [
+      '#theme' => 'item_list',
+      '#list_type' => 'ul',
+      '#items' => $items,
+      '#weight' => -1000,
+    ];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Creates a quicklinks array to pass to SDC component.
+ *
+ * @throws \Exception
+ */
+function uscgov_preprocess_field__config_pages__field_hompage_quick_links(array &$variables) {
+  foreach ($variables['items'] as &$item) {
+    if ($item['content']['#paragraph']->field_icon_link_link->first()) {
+      if (!empty($item['content']['#paragraph']->field_icon->entity->field_media_file->entity)) {
+        $svg_path = \Drupal::service('file_url_generator')->generateString(
+          $item['content']['#paragraph']->field_icon->entity->field_media_file->entity->uri->value
+        );
+      }
+      else {
+        $active_theme = \Drupal::theme()->getActiveTheme();
+        $path = $active_theme->getPath();
+        $svg_path = '/' . $path . '/icons/font-awesome/solid/wrench.svg';
+      }
+      $variables['quicklinks'][] = [
+        'url' => $item['content']['#paragraph']->field_icon_link_link->first()->getUrl(),
+        'title' => $item['content']['#paragraph']->field_icon_link_link->title,
+        'svg_path' => $svg_path,
+      ];
+    }
+  }
+}

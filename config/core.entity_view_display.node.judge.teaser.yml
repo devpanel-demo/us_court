@@ -1,0 +1,81 @@
+uuid: 175fa5e2-529e-4a65-962b-37bd5ad176d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.judge.body
+    - field.field.node.judge.field_landing_page_image
+    - field.field.node.judge.field_milestone_activities
+    - field.field.node.judge.field_tags
+    - field.field.node.judge.field_usc_additional_content
+    - field.field.node.judge.field_usc_govdelivery_form
+    - field.field.node.judge.field_usc_notification
+    - field.field.node.judge.field_usc_related_news
+    - field.field.node.judge.field_usc_table_of_contents
+    - field.field.node.judge.field_workbench_access
+    - node.type.judge
+  module:
+    - entity_reference_revisions
+    - field_formatter_range
+    - nomarkup
+    - sdc_display
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.judge.teaser
+targetEntityType: node
+bundle: judge
+mode: teaser
+content:
+  field_milestone_activities:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 0
+        offset: 0
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  content_moderation_control: true
+  extra_field_child_menu_items: true
+  field_landing_page_image: true
+  field_tags: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  links: true
+  search_api_excerpt: true

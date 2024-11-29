@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 84801a7d-ed0c-496a-847d-68ca0723df58
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Court Programs'
+  status: true
+  langcode: en
+  created: '1719232499'
+  changed: 1731343447
+  author: jamesdavison@ao.uscourts.gov
+  url: /court-programs
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p class=\"\"></p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:uswdscollection/basic {\"nodeIds\":[\"3266\",\"1770\",\"33714\",\"1969\",\"1962\",\"1987\"],\"viewMode\":\"section_landing\",\"collectionRange\":6} /-->"
+      summary: 'The U.S. Courts are an independent national judiciary providing fair and impartial justice within the jurisdiction conferred by the Constitution and Congress. As an equal branch of government, the federal Judiciary preserves and enhances its core values as the courts meet changing national and local needs.'
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>The U.S. Courts are an independent national judiciary providing fair and impartial justice within the jurisdiction conferred by the Constitution and Congress. As an equal branch of government, the federal Judiciary preserves and enhances its core values as the courts meet changing national and local needs.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: f979f2cc-c919-413d-a2f6-7f2f52e86928
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Landing Pages'
+        weight: 2
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

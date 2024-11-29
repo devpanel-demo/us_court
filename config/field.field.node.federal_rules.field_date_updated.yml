@@ -1,0 +1,21 @@
+uuid: 63d2c49e-35bc-486e-8df8-eb80a4a32e93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_updated
+    - node.type.federal_rules
+  module:
+    - datetime
+id: node.federal_rules.field_date_updated
+field_name: field_date_updated
+entity_type: node
+bundle: federal_rules
+label: Date
+description: 'PLEASE NOTE:<br/>For Agenda Books, Committee Reports, or Meeting Minutes, this will appear on the page under the heading “Date” and display as Month and Year (i.e.- November 2001).<br/> For Comments and Suggestions, this date will appear on the page under the heading “Date Received” and display as Month, Day, and Year (i.e. November 3, 2001).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

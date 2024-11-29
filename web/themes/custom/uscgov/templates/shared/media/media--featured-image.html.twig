@@ -1,0 +1,8 @@
+{% embed 'uscgov:featured-image' with {
+  description: content.field_file_description|render,
+  image: content.field_media_image ?: content.field_media_banner_image,
+} %}
+  {% block content_image %}
+    {{ image }}
+  {% endblock %}
+{% endembed %}

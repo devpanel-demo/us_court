@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: e9c97c7d-3419-4b6a-a6e6-e1f0edc573a8
+entity_type: media
+bundle: icon
+base_fields:
+  name: yen-sign.svg
+  created: '1721137264'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/yen-sign.svg'
+      url: '/sites/default/files/icons/yen-sign.svg'

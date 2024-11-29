@@ -1,0 +1,9 @@
+ui:
+  version: VERSION
+  js:
+    js/piksel_media_library.ui.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
+    - core/tabbable
+    - media_library/ui

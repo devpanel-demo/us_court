@@ -1,0 +1,52 @@
+uuid: 625beb22-e9f5-473f-90ba-46038b678bfe
+langcode: en
+status: true
+dependencies: {  }
+id: node.news.url
+label: URL
+display_label: false
+name: url
+description: 'Node URL.'
+base_entity_type_id: node
+base_bundle_type_id: news
+field_type_id: token
+field_type_config:
+  type: textfield
+  token: '[node:url]'
+field_type_condition:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  config_pages_values_access:
+    id: config_pages_values_access
+  response_code:
+    id: response_code
+    negate: false
+    response_codes: ''
+  current_theme:
+    id: current_theme
+    negate: false
+    theme: ''
+  response_status:
+    id: response_status
+    negate: false
+    status_codes: {  }
+  request_path:
+    id: request_path
+    negate: false
+    pages: ''
+  webform:
+    id: webform
+    negate: false
+    context_mapping: {  }
+    webforms: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: entity_extra_field.target_entity
+    bundles: {  }
+field_conditions_all_pass: false
+display:
+  type: view

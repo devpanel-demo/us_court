@@ -1,0 +1,63 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: d7255682-66a8-4113-8499-bd0f42c0a10f
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Federal Court Reporting'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/1962'
+      title: ''
+      options: {  }
+  weight: 4
+  parent:
+    uuid: 9a51a6f3-19d1-4705-946b-f4fc46a287cd
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Court Programs'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'internal:/court-programs'
+          title: ''
+          options: {  }
+      weight: -70
+      parent: ''
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Learn about federal court programs and services to help provide fair and impartial justice. '
+      field_enable_megamenu:
+        -
+          value: '1'
+      field_popular_links:
+        -
+          uri: 'entity:node/2805'
+          title: 'Bankruptcy Basics'
+          options: {  }
+        -
+          uri: 'entity:node/9330'
+          title: 'Filing Without an Attorney'
+          options: {  }
+        -
+          uri: 'entity:node/1769'
+          title: 'Summoned for Federal Jury Service?'
+          options: {  }
+custom_fields:
+  field_description_text:
+    -
+      value: 'Federal court reporters record proceedings and produce transcripts of court proceedings.'
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

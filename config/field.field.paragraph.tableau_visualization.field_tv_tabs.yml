@@ -1,0 +1,23 @@
+uuid: 758bf595-d99e-4af5-8478-18f9cc1c15e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tv_tabs
+    - paragraphs.paragraphs_type.tableau_visualization
+  module:
+    - options
+id: paragraph.tableau_visualization.field_tv_tabs
+field_name: field_tv_tabs
+entity_type: paragraph
+bundle: tableau_visualization
+label: 'Show tabs?'
+description: 'If the visualization includes multiple views, display navigational tabs.'
+required: false
+translatable: false
+default_value:
+  -
+    value: hide-tabs
+default_value_callback: ''
+settings: {  }
+field_type: list_string

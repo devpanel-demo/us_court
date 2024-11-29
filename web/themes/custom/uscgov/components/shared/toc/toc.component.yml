@@ -1,0 +1,10 @@
+libraryOverrides:
+  css:
+    component:
+      toc.css: {}
+  js:
+    ../../../node_modules/tocbot/dist/tocbot.min.js: { minified: true }
+    toc.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

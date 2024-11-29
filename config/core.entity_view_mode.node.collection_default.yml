@@ -1,0 +1,11 @@
+uuid: 481c0fb8-5e37-4f87-999d-3d26b965bbd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.collection_default
+label: 'Collection Default'
+description: ''
+targetEntityType: node
+cache: true

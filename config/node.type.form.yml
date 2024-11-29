@@ -1,0 +1,32 @@
+uuid: 786033e1-699d-4f01-b005-aa5db1213a97
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Form
+type: form
+description: 'This content type is used for uploading a form (PDF) along with storing metadata, instructions and misc. information about the form.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

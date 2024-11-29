@@ -1,0 +1,15 @@
+{% set accordion_item_id = random() %}
+<h4{{ attributes.addClass('usa-accordion__heading') }}>
+  <button
+    class="usa-accordion__button"
+    aria-expanded="{{ open }}"
+    aria-controls="{{ accordion_item_id }}"
+  >
+    {{ heading }}
+  </button>
+</h4>
+<div id="{{ accordion_item_id }}" class="usa-accordion__content usa-prose">
+  {% block accordion_item_content %}
+    {{ content }}
+  {% endblock %}
+</div>

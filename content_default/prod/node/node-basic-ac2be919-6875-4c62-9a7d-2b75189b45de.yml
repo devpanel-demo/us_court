@@ -1,0 +1,239 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: ac2be919-6875-4c62-9a7d-2b75189b45de
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Visit a Federal Court'
+  status: true
+  langcode: en
+  created: '1422727696'
+  changed: 1730911158
+  author: Emily_Poland@ao.uscourts.gov
+  url: /about-federal-courts/educational-resources/about-educational-outreach/visit-federal-court
+  revision_log_message: 'Edited by courtney.mcilroy.'
+  revision_uid: '9974'
+  menu_link:
+    uuid: 445e19d5-1353-4f1c-b770-b1a62236424e
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Visit a Federal Court'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/4345'
+          title: null
+          options: {  }
+      weight: 0
+      parent:
+        uuid: e8541e33-61e7-416a-8325-b9ff43a278d5
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'About Educational Outreach'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/4304'
+              title: ''
+              options: {  }
+          weight: 3
+          parent:
+            uuid: 04eb5c59-a6cb-4eba-8826-69f380a397f3
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Educational Resources'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/4314'
+                  title: ''
+                  options: {  }
+              weight: -48
+              parent:
+                uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'About Federal Courts'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/4'
+                      title: ''
+                      options: {  }
+                  weight: -71
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/12916'
+                      title: 'Court Website Links'
+                      options: {  }
+                    -
+                      uri: 'entity:node/2769'
+                      title: 'Authorized Judgeships'
+                      options: {  }
+                    -
+                      uri: 'entity:node/4305'
+                      title: 'Supreme Court Landmarks'
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Find realistic simulations and memorable, interactive approaches to court basics.'
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>A person who wishes to observe a court in session may check the court calendar online or at the courthouse and watch a proceeding. The U.S. Constitution and court tradition give citizens right of access to court proceedings. Citizens gain confidence in the courts by seeing judicial work in action, and learn first-hand how the judicial system works.</p><h2>Access for Teachers and Students</h2><p>Teachers should contact their local <a href="/node/12916" data-entity-type="node" data-entity-uuid="587c8944-527e-46b0-ae1a-ae3255291fa1" data-entity-substitution="canonical">U.S. District Clerk''s Office to set up a visit</a>. Because the courts tend to be very busy, teachers should be prepared to allow several weeks of lead time when arranging a visit. The personnel in the clerk’s office can help teachers select an appropriate date for a class visit and can even find out what cases are on the docket if students wish to observe a court session. The clerk also will provide important logistical information, such as parking, for court visits. Some questions you may want to ask the clerk’s office:</p><ul><li>How many students may I bring to the court at one time?</li><li>Which days and times are best to bring students to the court?</li><li>What can my students do at the court?</li><li>If we come to see a specific case and it settles, is there a back-up activity we might do?</li><li>What web resources should we review before the visit?</li><li>What are the rules of court decorum and dress the students must follow?</li><li>Are there any judges who would be willing to speak to students? Prosecutors? Public defenders? Other court personnel? How can I set up a meeting with them?</li></ul><h3>Before Visiting a Court</h3><p>The best time to visit a court is during a unit on the judicial system or the rights that the system protects. In this context, students can put their new knowledge to use by observing and interpreting court sessions and finding out more information from judges and other court personnel. In particular, it may be helpful for students to learn about the structure, functions, and procedures&nbsp;of the court before attending.</p><h3>Follow up After Visit</h3><p>Following up on a visit to the court is just as important as the preparation for the visit. Teachers should reinforce learning from the court experience through continued classroom activities on the judicial system. Whenever possible, they should refer to what students learned while at the courts to help them make connections between the court and their classroom experiences.</p><p>It is also important to follow up with a note of thanks, preferably signed by the students, addressed to those who helped make the experience meaningful.</p><h2>Visiting a Courthouse</h2><p>Learning centers and educational exhibits across the country include:</p><h3>California</h3><ul><li><a href="https://www.sacjlc.com/learning-center">Justice Anthony M. Kennedy Library and Learning Center</a>, Robert T. Matsui U.S. Courthouse in Sacramento</li></ul><h3>Illinois</h3><ul><li><a href="https://www.ilnd.uscourts.gov/Pages.aspx?GWv81axJLez65XN3EahxGmSS70p/4hSQ">Court History Museum</a>, Everett McKinley Dirksen U.S. Courthouse in Chicago</li></ul><h3>Indiana</h3><ul><li><a href="https://www.insd.uscourts.gov/federal-court-learning-center">Federal Court Learning Center</a>,&nbsp;Birch Bayh Federal Building and U.S. Courthouse in Indianapolis</li></ul><h3>Missouri</h3><ul><li><a href="https://www.moed.uscourts.gov/judicial-learning-center">The Judicial Learning Center</a>, Thomas F. Eagleton U.S. Courthouse in St. Louis</li><li><a href="https://www.moed.uscourts.gov/sites/moed/files/documents/Judicial%20Education%20History%20Center.pdf">Judicial Education and History Center</a>, Rush H. Limbaugh, Sr., U.S. Courthouse in Cape Girardeau</li></ul><h3>New York</h3><ul><li><a href="https://justiceforall.ca2.uscourts.gov/learning_center_home.html">Justice for All: Courts and the Community Learning Center</a>, Thurgood Marshall U.S. Courthouse in New York City</li></ul><h3>Oklahoma</h3><ul><li><a href="http://www.wdokhistory.org/aboutfjlcm">Federal Judicial Learning Center &amp; Museum</a>, U.S. Bankruptcy Courthouse in Oklahoma City</li></ul><h3>Washington, DC</h3><p>The&nbsp;<a href="http://www.dcd.uscourts.gov">E. Barrett Prettyman U.S. Courthouse</a>&nbsp;in the District of Columbia, because of its location in the nation''s capital, handles many cases that shape the history of our country. There is an exhibit of some of these cases in the&nbsp;William Benson Bryant Annex of the D.C. courthouse. The next time you&nbsp;are in Washington, you are invited to visit the courthouse to learn about these cases from the past that have an impact on American life today. You also may want to observe a live trial. Courthouses are public buildings and courtrooms are open to the public.</p><p>Learn more about the <a href="http://dcchs.org/">history of the D.C. Circuit</a>.&nbsp;</p><p>The following are some of the historic cases heard at the U.S. Courthouse in the District of Columbia.</p><p><strong>Watergate</strong><br>The Nixon Tapes<br>Executive Privilege<br>Executive Privilege and the Fifth Amendment</p><p><strong>The First Amendment</strong><br>The Pentagon Papers<br>Arthur Miller<br>The Mayday Protestors</p><p><strong>Criminal Law and Criminal Trials</strong><br>The Assassination of President Lincoln<br>The Assassination of President Garfield<br>Due Process Rights<br>A Union Leader and the Law<br>Temporary Insanity Defense<br>The Attempt to Assassinate President Reagan</p><p><strong>Courts in War Time</strong><br>Military Commissions<br>"Axis Sally"<br>The President at War</p><p><strong>Enforcing Equal Justice Guarantees</strong><br>School Desegregation<br>Equal Pay for Women<br>Women on Navy Ships</p>'
+      summary: "<p>\r\n\tVisit a federal court and learn first-hand about the tradition and purpose of the American judicial process. \r\n</p>\r\n"
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: b62f1fef-92ac-4b50-9edd-999d2d2b9391
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1730169174'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>Many federal courthouses are historic buildings, and all are designed for the public to visit and learn first-hand about the tradition and purpose of the American judicial process.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: bb4d84c4-b00b-4175-a639-9da51b8a6a25
+      entity_type: paragraph
+      bundle: usc_graphic_photo
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_image:
+          -
+            uuid: e501494e-d0f2-4d86-bd62-eb37ce081139
+            entity_type: media
+            base_fields:
+              name: activities_for_students.jpg
+              created: '1513174694'
+              status: true
+              langcode: en
+            bundle: image
+        field_usc_label:
+          -
+            value: 'Graphic/Photo Activities for Students'
+        field_usc_title:
+          -
+            value: 'Activities for Students'
+    -
+      uuid: b8875069-292e-449c-93cf-b439a0199905
+      entity_type: paragraph
+      bundle: usc_video
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	How do federal judges have an impact on individual rights every day, even for people who may never enter a courtroom? Ten federal judges answer that question and others.
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Video Fair & Impartial Judiciary'
+        field_usc_title:
+          -
+            value: 'Fair & Impartial Judiciary'
+        field_usc_video:
+          -
+            uuid: b4648c30-291a-47cc-aea4-e315273ce378
+            entity_type: media
+            base_fields:
+              name: 'Court Shorts: Fair and Impartial Judiciary'
+              created: '1677696836'
+              status: true
+              langcode: en
+            bundle: remote_video
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: bf31b7f6-d55e-4cf1-98e8-fb1df54e5666
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Educational  Resources'
+        weight: 12
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

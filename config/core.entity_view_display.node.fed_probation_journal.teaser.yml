@@ -1,0 +1,64 @@
+uuid: 6d95aa9d-3931-4d60-ab4f-c7d651446026
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fed_probation_journal.body
+    - field.field.node.fed_probation_journal.feeds_item
+    - field.field.node.fed_probation_journal.field_auther
+    - field.field.node.fed_probation_journal.field_document_pdf
+    - field.field.node.fed_probation_journal.field_metatag
+    - field.field.node.fed_probation_journal.field_mydate
+    - field.field.node.fed_probation_journal.field_tags
+    - field.field.node.fed_probation_journal.field_test
+    - field.field.node.fed_probation_journal.field_usc_additional_content
+    - field.field.node.fed_probation_journal.field_usc_govdelivery_form
+    - field.field.node.fed_probation_journal.field_usc_import_timestamp
+    - field.field.node.fed_probation_journal.field_usc_notification
+    - field.field.node.fed_probation_journal.field_usc_related_news
+    - field.field.node.fed_probation_journal.field_usc_table_of_contents
+    - field.field.node.fed_probation_journal.field_volume_and_issue_number
+    - field.field.node.fed_probation_journal.field_workbench_access
+    - node.type.fed_probation_journal
+  module:
+    - user
+id: node.fed_probation_journal.teaser
+targetEntityType: node
+bundle: fed_probation_journal
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  extra_field_child_menu_items: true
+  feeds_item: true
+  field_auther: true
+  field_document_pdf: true
+  field_metatag: true
+  field_mydate: true
+  field_tags: true
+  field_test: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_import_timestamp: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_volume_and_issue_number: true
+  field_workbench_access: true
+  search_api_excerpt: true

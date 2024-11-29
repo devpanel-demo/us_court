@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 0a193df8-ba27-4736-bf71-c4acb9d345c0
+entity_type: media
+bundle: icon
+base_fields:
+  name: laptop-code-solid.svg
+  created: '1721137137'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/laptop-code-solid.svg'
+      url: '/sites/default/files/icons/laptop-code-solid.svg'

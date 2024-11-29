@@ -1,0 +1,21 @@
+uuid: db394bc0-592a-45cb-b05e-2e8fb219af47
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_judge_comments
+label: 'Content - Judge Comments'
+type: 'canonical_entities:node'
+pattern: 'rules-policies/proposed-changes-code-and-jcd-rules/public-comment-proposed/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      judge_comments: judge_comments
+selection_logic: and
+weight: -2
+relationships: {  }

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 52d90a43-6765-430b-a7f5-d96ac78e1dd1
+entity_type: media
+bundle: icon
+base_fields:
+  name: paperclip.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/paperclip.svg'
+      url: '/sites/default/files/icons/paperclip.svg'

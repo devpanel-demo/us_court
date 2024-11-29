@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: b7f9a52b-0f0f-46bf-a856-c2fa1dde6079
+entity_type: media
+bundle: icon
+base_fields:
+  name: bug.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/bug.svg'
+      url: '/sites/default/files/icons/bug.svg'

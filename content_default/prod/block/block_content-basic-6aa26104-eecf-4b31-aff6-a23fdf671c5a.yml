@@ -1,0 +1,16 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 6aa26104-eecf-4b31-aff6-a23fdf671c5a
+entity_type: block_content
+bundle: basic
+base_fields:
+  info: Disclaimer
+  reusable: true
+  langcode: en
+  block_revision_id: '1'
+  enforce_new_revision: true
+custom_fields:
+  body:
+    -
+      value: '<p><em><strong>DISCLAIMER:</strong> These resources are created by the Administrative Office of the U.S. Courts for educational purposes only. They may not reflect the current state of the law, and are not intended to provide legal advice, guidance on litigation, or commentary on any pending case or legislation.</em></p>'
+      summary: ''
+      format: wysiwyg

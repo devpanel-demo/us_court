@@ -1,0 +1,29 @@
+uuid: 36220c59-19d5-4af1-aa8e-301a2a011a1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.sidebar
+    - field.field.file.image.field_file_description
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+    - field.field.file.image.field_link
+  module:
+    - file
+    - text
+id: file.image.sidebar
+targetEntityType: file
+bundle: image
+mode: sidebar
+content:
+  field_file_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_title_text: true
+  field_link: true

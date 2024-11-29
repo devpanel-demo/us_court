@@ -1,0 +1,203 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: c3fc428c-7b73-475e-8c1f-b9ffdf1aeac5
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'U.S. Courts of Appeals Basics - U.S. Courts of Appeals and Their Impact on Your Life'
+  status: true
+  langcode: en
+  created: '1471292257'
+  changed: 1727753530
+  author: Emily_Poland@ao.uscourts.gov
+  url: /about-federal-courts/court-role-and-structure/about-us-courts-appeals-educational-activity
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '43'
+  menu_link:
+    uuid: 59e5b1be-32c8-4b62-ad77-596906dcb6e1
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'U.S. Courts of Appeals Basics - U.S. Courts of Appeals and Their Impact on Your Life'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/14335'
+          title: null
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 66f900c1-ae29-4c5c-ad5e-eed3b52145a5
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'U.S. Courts of Appeals and Their Impact on Your Life'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/14332'
+              title: ''
+              options: {  }
+          weight: -42
+          parent:
+            uuid: 2f0ea32c-b1d8-4c3d-9b41-fa77b0b9fbcc
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Educational Activities'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/9111'
+                  title: ''
+                  options: {  }
+              weight: 0
+              parent:
+                uuid: 04eb5c59-a6cb-4eba-8826-69f380a397f3
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Educational Resources'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/4314'
+                      title: ''
+                      options: {  }
+                  weight: -48
+                  parent:
+                    uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+                    entity_type: menu_link_content
+                    bundle: main
+                    base_fields:
+                      title: 'About Federal Courts'
+                      enabled: true
+                      expanded: false
+                      langcode: en
+                      menu_name: main
+                      description: null
+                      link:
+                        -
+                          uri: 'entity:node/4'
+                          title: ''
+                          options: {  }
+                      weight: -71
+                      parent: ''
+                    custom_fields:
+                      field_description_text:
+                        -
+                          value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+                      field_enable_megamenu:
+                        -
+                          value: '1'
+                      field_popular_links:
+                        -
+                          uri: 'entity:node/12916'
+                          title: 'Court Website Links'
+                          options: {  }
+                        -
+                          uri: 'entity:node/2769'
+                          title: 'Authorized Judgeships'
+                          options: {  }
+                        -
+                          uri: 'entity:node/4305'
+                          title: 'Supreme Court Landmarks'
+                          options: {  }
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'Find realistic simulations and memorable, interactive approaches to court basics.'
+                  field_enable_megamenu:
+                    -
+                      value: '0'
+                  field_popular_links: null
+            custom_fields:
+              field_description_text: null
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<h2>Significance of U.S. Circuit Courts of Appeals</h2><p>The Supreme Court of the United States hears about 100 to&nbsp;150 appeals of the more than 7,000 cases it is asked to review every year. That means the decisions made by the 12 Circuit Courts of Appeals across the country and the Federal Circuit Court are the last word in thousands of cases.</p><h2>How Appellate Courts are Different from Trial Courts</h2><p>At a trial in a U.S. District Court, witnesses give testimony and a judge or jury decides who is guilty or not guilty — or who is liable or not liable. The appellate courts do not retry cases or hear new evidence. They do not hear witnesses testify. There is no jury. Appellate courts review the procedures and the decisions in the trial court to make sure that the proceedings were fair and that the proper law was applied correctly.</p><h2>The Right to Appeal</h2><p>An appeal is available if, after a trial in the U.S. District Court, the losing side has issues with the trial court proceedings, the law that was applied, or how the law was applied. Generally, on these grounds, litigants have the right to an appellate court review of the trial court’s actions. In criminal cases, the government does not have the right to appeal.</p><h2>Grounds for Making an Appeal</h2><p>The reasons for an appeal vary. However, a common reason is that the dissatisfied side claims that the trial was conducted unfairly or that the trial judge applied the wrong law, or applied the law incorrectly. The dissatisfied side may also claim that the law the trial court applied violates the U.S. Constitution or a state constitution.</p><h2>Roles and Terms</h2><p>The side that seeks an appeal is called the petitioner. It is the side that brings the petition (request) asking the appellate court to review its case. The other side is known as the respondent. It is the side that comes to court to respond to and argue against the petitioner’s case.</p><h2>Preparing for an Appellate Argument</h2><p>Before lawyers come to court to argue their appeal, each side submits to the court a written argument called a brief. Briefs can actually be lengthy documents in which lawyers lay out the case for the judges prior to oral arguments in court.&nbsp;</p>'
+      summary: "<p>\r\n\tWhat happens when the Supreme Court comes to a tied decision? One outcome is that the decision made by the Court of Appeals that heard the case stands. Find practical, need-to-know information about the U.S. Courts of Appeals, their role, their importance, and their impact on the daily lives of law-abiding citizens.\r\n</p>\r\n"
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: d6140f3c-aaaa-49a4-823b-a34207e2effe
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>\r\n\tIn the federal system, 94 district courts are organized into 12 circuits, or regions. Each circuit has its own Court of Appeals that reviews cases decided in U.S. District Courts within the&nbsp;circuit. The U.S. Court of Appeals for the Federal Circuit brings the number of federal appellate courts to 13. This court takes cases from across the nation, but only particular types of cases.\r\n</p>\r\n"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: bf31b7f6-d55e-4cf1-98e8-fb1df54e5666
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Educational  Resources'
+        weight: 12
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

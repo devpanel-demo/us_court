@@ -1,0 +1,21 @@
+uuid: ddcf4612-50cb-42be-981c-5a7659880443
+langcode: en
+status: true
+dependencies: {  }
+name: graphic_16x9
+label: 'Graphic 16x9'
+effects:
+  c976597f-38d1-409a-a32c-b0b588b415e4:
+    uuid: c976597f-38d1-409a-a32c-b0b588b415e4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 338
+      anchor: center-center
+  900af48c-4328-4a33-8d54-1f59b548409e:
+    uuid: 900af48c-4328-4a33-8d54-1f59b548409e
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

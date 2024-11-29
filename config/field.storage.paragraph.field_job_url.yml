@@ -1,0 +1,19 @@
+uuid: fd976f8f-9e32-495c-aa59-6bacf53a4fcc
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_job_url
+field_name: field_job_url
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

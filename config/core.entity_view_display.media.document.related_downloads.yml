@@ -1,0 +1,73 @@
+uuid: 87173c35-a43d-44b2-94dd-b8266e619477
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.related_downloads
+    - field.field.media.document.field_date_updated
+    - field.field.media.document.field_file_description
+    - field.field.media.document.field_file_title
+    - field.field.media.document.field_media_document
+    - media.type.document
+  module:
+    - file
+    - nomarkup
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.document.related_downloads
+targetEntityType: media
+bundle: document
+mode: related_downloads
+content:
+  field_file_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  field_media_document:
+    type: file_url_plain
+    label: visually_hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_date_updated: true
+  field_file_description: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

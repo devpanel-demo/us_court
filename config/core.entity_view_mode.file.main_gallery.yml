@@ -1,0 +1,11 @@
+uuid: 98e0b244-6c83-44d2-a0cf-c0fca7deb1ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.main_gallery
+label: main_gallery
+description: ''
+targetEntityType: file
+cache: true

@@ -1,0 +1,19 @@
+uuid: cf7caac4-cddb-4610-a0c2-6c1610d92b3b
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_fc_be_video_caption
+field_name: field_fc_be_video_caption
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

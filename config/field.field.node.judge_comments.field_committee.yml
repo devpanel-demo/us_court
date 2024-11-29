@@ -1,0 +1,30 @@
+uuid: 820fcdaf-dbec-4f3c-9dad-140f7095b086
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_committee
+    - node.type.judge_comments
+    - taxonomy.vocabulary.committees_judge_comments
+id: node.judge_comments.field_committee
+field_name: field_committee
+entity_type: node
+bundle: judge_comments
+label: Committee
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      committees_judge_comments: committees_judge_comments
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 1
+field_type: entity_reference

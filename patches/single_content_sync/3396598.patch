@@ -1,0 +1,28 @@
+From 80656c5499be81a064b86d7c278e23e108414ec1 Mon Sep 17 00:00:00 2001
+From: Oleksandr Kuzava <oleksandr.kuzava@dropsolid.com>
+Date: Sat, 27 Jan 2024 12:05:02 +0200
+Subject: [PATCH] Issue #3396598: Call to a member function getFileUri()
+
+---
+ src/Plugin/SingleContentSyncFieldProcessor/FileAsset.php | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/src/Plugin/SingleContentSyncFieldProcessor/FileAsset.php b/src/Plugin/SingleContentSyncFieldProcessor/FileAsset.php
+index 93ddb46..bf03ef8 100644
+--- a/src/Plugin/SingleContentSyncFieldProcessor/FileAsset.php
++++ b/src/Plugin/SingleContentSyncFieldProcessor/FileAsset.php
+@@ -113,6 +113,11 @@ class FileAsset extends SingleContentSyncFieldProcessorPluginBase implements Con
+     foreach ($field->getValue() as $item) {
+       $file = $file_storage->load($item['target_id']);
+ 
++      // The file could not be loaded. Check other files in the field.
++      if (!$file instanceof FileInterface) {
++        continue;
++      }
++
+       $file_item = [
+         'uri' => $file->getFileUri(),
+         'url' => $file->createFileUrl(FALSE),
+-- 
+GitLab
+

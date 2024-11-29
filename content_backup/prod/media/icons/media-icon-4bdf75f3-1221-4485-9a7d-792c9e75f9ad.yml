@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 4bdf75f3-1221-4485-9a7d-792c9e75f9ad
+entity_type: media
+bundle: icon
+base_fields:
+  name: facebook.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/facebook.svg'
+      url: '/sites/default/files/icons/facebook.svg'

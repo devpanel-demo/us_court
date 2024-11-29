@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Court Finder Result
+status: experimental
+props:
+  type: object
+  properties:
+    title:
+      title: Title
+      type: string
+      description: Court label.
+    address:
+      title: Address
+      type: string
+      description: Court Address.
+    type:
+      title: Type
+      type: string
+      description: Court type.
+    directions_url:
+      title: Directions URL
+      type: string
+      description: Court directions.
+    phone:
+      title: Phone
+      type: string
+      description: Court phone.
+    headquaters:
+      title: Headquaters
+      type: string
+      description: Show the headquaters tag.

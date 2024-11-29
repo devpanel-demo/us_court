@@ -1,0 +1,21 @@
+uuid: cca80eed-1791-4245-b841-3ea351084616
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_notice_date
+    - paragraphs.paragraphs_type.judicial_vacancy
+  module:
+    - datetime
+id: paragraph.judicial_vacancy.field_notice_date
+field_name: field_notice_date
+entity_type: paragraph
+bundle: judicial_vacancy
+label: 'Notice Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

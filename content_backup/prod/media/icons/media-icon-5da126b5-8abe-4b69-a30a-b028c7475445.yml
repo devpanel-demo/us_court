@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 5da126b5-8abe-4b69-a30a-b028c7475445
+entity_type: media
+bundle: icon
+base_fields:
+  name: compass-outline.svg
+  created: '1721136999'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/compass-outline.svg'
+      url: '/sites/default/files/icons/compass-outline.svg'

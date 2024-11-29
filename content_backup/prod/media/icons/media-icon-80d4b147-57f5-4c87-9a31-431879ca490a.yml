@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 80d4b147-57f5-4c87-9a31-431879ca490a
+entity_type: media
+bundle: icon
+base_fields:
+  name: book.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/book.svg'
+      url: '/sites/default/files/icons/book.svg'

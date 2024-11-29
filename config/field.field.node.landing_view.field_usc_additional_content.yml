@@ -1,0 +1,96 @@
+uuid: 98abccd1-118f-4ac6-b43c-1b33b367cb6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usc_additional_content
+    - node.type.landing_view
+    - paragraphs.paragraphs_type.usc_graphic_photo
+    - paragraphs.paragraphs_type.usc_related_content
+    - paragraphs.paragraphs_type.usc_related_files
+    - paragraphs.paragraphs_type.usc_related_links
+    - paragraphs.paragraphs_type.usc_video
+  module:
+    - entity_reference_revisions
+id: node.landing_view.field_usc_additional_content
+field_name: field_usc_additional_content
+entity_type: node
+bundle: landing_view
+label: 'Additional Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      usc_related_links: usc_related_links
+      usc_graphic_photo: usc_graphic_photo
+      usc_related_content: usc_related_content
+      usc_related_files: usc_related_files
+      usc_video: usc_video
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 11
+        enabled: false
+      body_enhanced:
+        weight: 12
+        enabled: false
+      icon_link:
+        weight: 15
+        enabled: false
+      job_vacancy:
+        weight: 24
+        enabled: false
+      judicial_vacancy:
+        weight: 25
+        enabled: false
+      milestone_activities:
+        weight: 16
+        enabled: false
+      piksel_programs:
+        weight: 17
+        enabled: false
+      referenced_nodes:
+        weight: 18
+        enabled: false
+      social_media_item:
+        weight: 19
+        enabled: false
+      usc_govdelivery:
+        weight: 21
+        enabled: false
+      usc_graphic_photo:
+        weight: 28
+        enabled: true
+      usc_highcharts:
+        weight: 32
+        enabled: false
+      usc_map:
+        weight: 33
+        enabled: false
+      usc_notification:
+        weight: 24
+        enabled: false
+      usc_related_content:
+        weight: 30
+        enabled: true
+      usc_related_files:
+        weight: 31
+        enabled: true
+      usc_related_links:
+        weight: 20
+        enabled: true
+      usc_related_news:
+        weight: 38
+        enabled: false
+      usc_table_of_contents:
+        weight: 26
+        enabled: false
+      usc_video:
+        weight: 34
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,191 @@
+uuid: 6964717a-dd70-4416-9f7e-9add6cf5d9b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fed_probation_journal.body
+    - field.field.node.fed_probation_journal.field_auther
+    - field.field.node.fed_probation_journal.field_document_pdf
+    - field.field.node.fed_probation_journal.field_mydate
+    - field.field.node.fed_probation_journal.field_test
+    - field.field.node.fed_probation_journal.field_volume_and_issue_number
+    - field.field.node.fed_probation_journal.field_workbench_access
+    - node.type.fed_probation_journal
+  module:
+    - feeds_log
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      131ff490-c15b-42b0-b5d6-a392ca1c43c6:
+        separator: ','
+        limit: null
+        uuid: 131ff490-c15b-42b0-b5d6-a392ca1c43c6
+        plugin: explode
+        source: topic
+        weight: 0
+        label: Explode
+      99d8e1e4-8aad-4be1-9935-a6bd54fd443b:
+        default_value: 'Probation and  Pretrial Services'
+        only_if_empty: true
+        uuid: 99d8e1e4-8aad-4be1-9935-a6bd54fd443b
+        plugin: default_value
+        source: section
+        weight: 0
+        label: 'Set value or default value'
+label: 'Federal Probation Journal'
+id: federal_probation_journal
+description: 'Import Federal Probation Journal nodes from CSV file.'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: fed_probation_journal
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 66
+custom_sources:
+  title:
+    value: 'Article Title'
+    label: 'Article Title'
+    machine_name: title
+    type: csv
+  author:
+    value: Author
+    label: Author
+    machine_name: author
+    type: csv
+  date:
+    value: Date
+    label: Date
+    machine_name: date
+    type: csv
+  volume_no:
+    value: 'Volume:No.'
+    label: 'Volume:No.'
+    machine_name: volume_no
+    type: csv
+  article_file_name:
+    value: 'Article File Name'
+    label: 'Article File Name'
+    machine_name: article_file_name
+    type: csv
+  abstract:
+    value: Abstract
+    label: Abstract
+    machine_name: abstract
+    type: csv
+  abstracttext:
+    value: Abstract
+    label: Abstract
+    machine_name: abstracttext
+    type: csv
+  topic:
+    value: Topic
+    label: Topic
+    machine_name: topic
+    type: csv
+  section:
+    value: Section
+    label: Section
+    machine_name: section
+    type: blank
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_auther
+    map:
+      value: author
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_mydate
+    map:
+      value: date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_volume_and_issue_number
+    map:
+      value: volume_no
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_document_pdf
+    map:
+      target_id: article_file_name
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+      autocreate_bundle: false
+  -
+    target: body
+    map:
+      value: abstracttext
+      summary: abstract
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_test
+    map:
+      target_id: topic
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: probation_journal_topic
+  -
+    target: field_workbench_access
+    map:
+      target_id: section
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: site_sections

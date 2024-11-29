@@ -1,0 +1,49 @@
+uuid: dd2bbbf9-641c-487e-b652-972856ec6846
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_milestone_activities
+    - node.type.judge
+    - paragraphs.paragraphs_type.milestone_activities
+  module:
+    - entity_reference_revisions
+id: node.judge.field_milestone_activities
+field_name: field_milestone_activities
+entity_type: node
+bundle: judge
+label: Activities
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      milestone_activities: milestone_activities
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 2
+        enabled: false
+      body_enhanced:
+        weight: 3
+        enabled: false
+      criminogenic_extra_downlds:
+        weight: 4
+        enabled: false
+      criminogenic_worksheets:
+        weight: 5
+        enabled: false
+      milestone_activities:
+        weight: 1
+        enabled: true
+      piksel_programs:
+        weight: 6
+        enabled: false
+      referenced_nodes:
+        weight: 7
+        enabled: false
+field_type: entity_reference_revisions

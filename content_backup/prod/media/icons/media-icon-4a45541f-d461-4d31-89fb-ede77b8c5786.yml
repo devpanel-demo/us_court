@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 4a45541f-d461-4d31-89fb-ede77b8c5786
+entity_type: media
+bundle: icon
+base_fields:
+  name: tablet.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/tablet.svg'
+      url: '/sites/default/files/icons/tablet.svg'

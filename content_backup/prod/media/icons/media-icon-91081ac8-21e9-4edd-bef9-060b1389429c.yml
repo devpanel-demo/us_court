@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 91081ac8-21e9-4edd-bef9-060b1389429c
+entity_type: media
+bundle: icon
+base_fields:
+  name: business-id-card.svg
+  created: '1724357459'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/business-id-card.svg'
+      url: '/sites/default/files/icons/business-id-card.svg'
+      description: ''

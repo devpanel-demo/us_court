@@ -1,0 +1,19 @@
+uuid: b8bbc26a-3e92-4877-b51f-af7cbad63de9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_table_title
+    - node.type.data_table
+id: node.data_table.field_data_table_title
+field_name: field_data_table_title
+entity_type: node
+bundle: data_table
+label: 'Short Table Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,12 @@
+.usa-collection {
+  margin: 0;
+}
+
+.usa-prose .usa-collection__item {
+  border-top-style: none;
+  padding-block: 1rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--border-muted-dark);
+  }
+}

@@ -1,0 +1,32 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: ff462171-98f5-42f1-909c-65dd8179393a
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'New Landing page testing buttons EAP'
+  status: true
+  langcode: en
+  created: '1715793507'
+  changed: 1715793507
+  author: jamesdavison@ao.uscourts.gov
+  url: /new-landing-page-testing-buttons-eap
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:buttons -->\r\n<div class=\"wp-block-buttons\"><!-- wp:button -->\r\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link\" href=\"https://www.uscourts.gov/\">Go means go</a></div>\r\n<!-- /wp:button -->\r\n\r\n<!-- wp:button {\"backgroundColor\":\"brand-green-3\",\"textColor\":\"brand-red-3\",\"className\":\"is-style-outline\"} -->\r\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-brand-red-3-color has-brand-green-3-background-color has-text-color has-background\" href=\"https://www.uscourts.gov/\">No means no</a></div>\r\n<!-- /wp:button -->\r\n\r\n<!-- wp:button {\"style\":{\"color\":{\"background\":\"#a3009c\"}}} -->\r\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-background\" href=\"http://uscmod-test.jdc.ao.dcn/sites/default/files/2024-05/23-cv-f-suggestion-from-31-companies-rule-16.pdf\" style=\"background-color:#a3009c\">Yo means yo</a></div>\r\n<!-- /wp:button --></div>\r\n<!-- /wp:buttons -->\r\n\r\n<!-- wp:paragraph -->\r\n<p></p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

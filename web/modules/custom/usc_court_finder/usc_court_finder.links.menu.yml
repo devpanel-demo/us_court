@@ -1,0 +1,20 @@
+# Content
+usc_court_finder.content:
+  title: 'Court Finder'
+  route_name: entity.usc_location.collection
+  description: 'Find and manage Court Finder entities.'
+  parent: system.admin_content
+  weight: 100
+
+entity.usc_location.settings:
+  title: 'Federal court finder Location'
+  description: 'Configure a Federal court finder entity type.'
+  route_name:  entity.usc_location.settings
+  parent: system.admin_structure
+
+usc_court_finder.configuration:
+  title: 'US Courts Finder configuration'
+  description: 'US Courts Finder configuration'
+  route_name: 'usc_court_finder.configuration'
+  parent: 'usc.admin'
+  weight: 3

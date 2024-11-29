@@ -1,0 +1,24 @@
+uuid: 47a5b1d5-eeff-4a14-b4f5-e1c4eacf7f2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_gallery
+    - media.type.image
+    - node.type.educational_activity
+id: node.educational_activity.field_lead_gallery
+field_name: field_lead_gallery
+entity_type: node
+bundle: educational_activity
+label: 'Lead Gallery'
+description: 'If you choose to upload/attach only one image, it will appear as a lead image. If you choose to upload/attach multiple images (up to 10), they will appear in slide show.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+field_type: entity_reference

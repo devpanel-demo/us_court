@@ -1,0 +1,20 @@
+uuid: 3cc857e1-4b0b-47aa-847c-7b6f55297559
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_confirmation_date
+field_name: field_confirmation_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: cb8da11e-c947-46ca-8faf-b60e02f97513
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fc_be_audio
+    - media.type.audio
+    - node.type.basic
+id: node.basic.field_fc_be_audio
+field_name: field_fc_be_audio
+entity_type: node
+bundle: basic
+label: Audio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+field_type: entity_reference

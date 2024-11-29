@@ -1,0 +1,23 @@
+uuid: 51cff1d9-8afc-4530-8f5c-f94d98f40d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_url
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - link
+id: paragraph.job_vacancy.field_job_url
+field_name: field_job_url
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Job Url'
+description: 'Link to Original Job Url.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 16
+field_type: link

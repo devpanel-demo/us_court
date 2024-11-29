@@ -1,0 +1,378 @@
+uuid: 3ab01a57-b026-4e39-a230-f3675f5847fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_updated
+    - field.storage.node.field_term_entity_reference3
+    - node.type.federal_rules
+    - taxonomy.vocabulary.file_types
+    - taxonomy.vocabulary.submitted_to
+  content:
+    - 'taxonomy_term:file_types:b5b913c2-deba-4e52-956f-05313fc7e6a7'
+  module:
+    - datetime
+    - node
+    - taxonomy
+    - user
+id: federal_rules_landing_rules_packages
+label: 'Federal Rules Landing Rules Packages'
+module: views
+description: ''
+tag: 'landing page'
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: ''
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          alter:
+            word_boundary: false
+            ellipsis: false
+        field_date_updated:
+          id: field_date_updated
+          table: node__field_date_updated
+          field: field_date_updated
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Date Submitted'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'F j, Y'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_term_entity_reference3:
+          id: field_term_entity_reference3
+          table: node__field_term_entity_reference3
+          field: field_term_entity_reference3
+          plugin_id: field
+          label: 'Rules Package'
+          settings:
+            bypass_access: 0
+            link: 0
+      pager:
+        type: full
+        options:
+          offset: 0
+          pagination_heading_level: h4
+          items_per_page: 30
+          id: 0
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: 'Apply Filters'
+          reset_button: true
+          reset_button_label: 'Reset Filters'
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+      cache:
+        type: none
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          empty: true
+          content:
+            value: 'Your search did not match any results. Please try again using fewer search criteria.'
+            format: wysiwyg
+      sorts:
+        field_date_updated_value:
+          id: field_date_updated_value
+          table: node__field_date_updated
+          field: field_date_updated_value
+          plugin_id: datetime
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            federal_rules: federal_rules
+        field_term_entity_reference2_target_id:
+          id: field_term_entity_reference2_target_id
+          table: node__field_term_entity_reference2
+          field: field_term_entity_reference2_target_id
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            895: 895
+          vid: file_types
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: 'Select a Rules Package'
+            description: ''
+            use_operator: false
+            operator: in
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: submitted_to
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_date_updated_value:
+          id: field_date_updated_value
+          table: node__field_date_updated
+          field: field_date_updated_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date_year
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_updated_value_op
+            label: 'Select a year'
+            description: ''
+            use_operator: false
+            operator: field_date_updated_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_editor: '0'
+              administrator: '0'
+              publisher: '0'
+              approver: '0'
+              content_creator: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          granularity: year
+          year_range: '-5:+0'
+      style:
+        type: table
+        options:
+          columns:
+            title: title
+            field_date_updated: field_date_updated
+            field_term_entity_reference3: field_term_entity_reference3
+          default: field_date_updated
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_date_updated:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_term_entity_reference3:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+          class: ''
+      query:
+        type: views_query
+        options: {  }
+      use_more_always: false
+      display_extenders: {  }
+      style_plugin: table
+      style_options:
+        columns:
+          title: title
+          field_date_updated: field_date_updated
+          field_term_entity_reference3: field_term_entity_reference3
+        class: ''
+        default: field_date_updated
+        info:
+          title:
+            sortable: 1
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_date_updated:
+            sortable: 1
+            default_sort_order: desc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_term_entity_reference3:
+            sortable: 1
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_date_updated'
+        - 'config:field.storage.node.field_term_entity_reference3'
+  block_federal_rules_landing_rules_packages:
+    id: block_federal_rules_landing_rules_packages
+    display_title: 'Block - Federal Rules Landing Rules Packages'
+    display_plugin: block
+    position: 1
+    display_options:
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_date_updated'
+        - 'config:field.storage.node.field_term_entity_reference3'

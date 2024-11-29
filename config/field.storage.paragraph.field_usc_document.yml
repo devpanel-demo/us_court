@@ -1,0 +1,20 @@
+uuid: 78fc43e8-ae08-433f-8f62-ff4a7ea80ab7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_usc_document
+field_name: field_usc_document
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

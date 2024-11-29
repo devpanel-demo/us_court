@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 9daf5a1a-4056-4def-8e78-bc42a157a56e
+entity_type: media
+bundle: icon
+base_fields:
+  name: shekel-sign.svg
+  created: '1721137216'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/shekel-sign.svg'
+      url: '/sites/default/files/icons/shekel-sign.svg'

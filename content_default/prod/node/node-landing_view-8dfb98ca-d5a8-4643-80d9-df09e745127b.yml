@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 8dfb98ca-d5a8-4643-80d9-df09e745127b
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Statistical Reports'
+  status: true
+  langcode: en
+  created: '1719236575'
+  changed: 1731344299
+  author: jamesdavison@ao.uscourts.gov
+  url: /statistical-reports
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":["9115","9099","9109","2866","19394","9108","8944","2864","8940","13278","14091","29558"],"viewMode":"featured","collectionRange":12} /-->'
+      summary: 'The following materials provide information related to the work of the U.S. courts. Data appear in detailed statistical tables and charts, and many reports offer analyses of key data. '
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>The following materials provide information related to the work of the U.S. courts. Data appear in detailed statistical tables and charts, and many reports offer analyses of key data.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: f979f2cc-c919-413d-a2f6-7f2f52e86928
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Landing Pages'
+        weight: 2
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

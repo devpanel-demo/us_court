@@ -1,0 +1,44 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Footer
+status: experimental
+group: USWDS
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    org_name:
+      type: string
+      title: Name of the organization
+    phone:
+      type: string
+      title: Phone number (eg (800) 354-2337)
+    email:
+      type: string
+      title: Organization email address
+    logo:
+      title: Logo
+      type: object
+      required:
+        - path
+        - alt
+        - width
+        - height
+      properties:
+        path:
+          type: string
+          title: Logo path
+        alt:
+          type: string
+          title: Alt text
+        width:
+          type: number
+          title: Width of the image
+        height:
+          type: number
+          title: Height of the image
+slots:
+  footer_primary:
+    title: Footer Primary
+  footer_secondary:
+    title: Footer Secondary

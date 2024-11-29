@@ -1,0 +1,96 @@
+{#
+/**
+ * @file
+ * Implementation to present a menu_link_content entity.
+ *
+ * Available variables:
+ * - menu_link_content: Menu link entity.
+ * - show_item_link: Indicator for menu item link.
+ *
+ * @see template_preprocess_menu_link_content()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% import _self as menu %}
+{{ menu.build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) }}
+
+{% macro build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) %}
+  {% set megamenu_enabled = menu_link_content.field_enable_megamenu.value %}
+  {#
+    We need to wrap the last word of the title in a <span> and set that not
+    to wrap. This ensures that the following arrow icon never hangs on a
+    new line by itself. To do this, we split the title, and use a for loop
+    to add a <span> around the last word.
+    #}
+  {% set title_words = menu_link_content.title.value|split(' ') %}
+  {% set title %}
+    {% for word in title_words %}
+      {% if loop.last %}
+        <span class="last-word">{{ word }}</span>
+      {% else %}
+        {{ word }}
+      {% endif %}
+    {% endfor %}
+  {% endset %}
+  {% set menu_level = elements['#menu_level'] %}
+  {% if menu_level == 0 and content.children %}
+    <div class="primary-menu__dropdown-first">
+      {# Placement of the title at desktop widths. It gets hidden at mobile. #}
+      <h3 class="primary-menu__dropdown-title">
+        {{ link(title, menu_link_content.link.uri, { class: ['primary-menu__dropdown-title-link'] }) }}
+      </h3>
+      <button class="primary-menu__mobile-back-button">
+        <span class="visually-hidden">{{ 'Back to'|t }}</span>
+        {{ 'Main Menu'|t }}
+      </button>
+      {% if megamenu_enabled and content.field_description_text.0 %}
+        <p class="primary-menu__mega-description-text">
+          {{ content.field_description_text|add_suggestion('bare') }}
+        </p>
+      {% endif %}
+      {% if megamenu_enabled and  content.field_popular_links.0 %}
+        <div class="primary-menu__mega-quick-links">
+          <h4 class="primary-menu__mega-popular-links-title">
+            {{ 'Popular'|t }}
+          </h4>
+          {{ content.field_popular_links }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="primary-menu__dropdown-second">
+    {# Placement of the title at mobile widths. It gets hidden at desktop. #}
+      <h3 class="primary-menu__dropdown-title">
+        {{ link(title, menu_link_content.link.uri, { class: ['primary-menu__dropdown-title-link'] }) }}
+      </h3>
+      {# Submenu #}
+      {{ content.children }}
+    </div>
+  {% elseif content.children %}
+    {% set wrapper_classes = ['primary-menu__level-' ~ (menu_level + 1) ~ '-wrapper'] %}
+    <div{{ attributes.addClass(wrapper_classes) }}>
+      <div class="primary-menu__dropdown-first">
+        <button class="primary-menu__mobile-back-button">
+          {# Text of this button is replaced by JavaScript. #}
+          Back
+        </button>
+
+        {% set title_words = menu_link_content.title.value|split(' ') %}
+        {% set title %}
+          {% for word in title_words %}
+            {% if loop.last %}
+              <span class="last-word">{{ word }}</span>
+            {% else %}
+              {{ word }}
+            {% endif %}
+          {% endfor %}
+        {% endset %}
+      </div>
+      <h4 class="primary-menu__dropdown-title">
+        {{ link(title, menu_link_content.link.uri, { class: ['primary-menu__dropdown-title-link'] }) }}
+      </h4>
+      {{ content.children }}
+    </div>
+  {% endif %}
+{% endmacro %}

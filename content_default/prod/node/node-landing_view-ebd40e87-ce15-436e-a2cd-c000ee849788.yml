@@ -1,0 +1,113 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: ebd40e87-ce15-436e-a2cd-c000ee849788
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Caseload Statistics Data Tables'
+  status: true
+  langcode: en
+  created: '1409933695'
+  changed: 1727753530
+  author: aviva.lebson@eyestreet.com
+  url: /statistics-reports/caseload-statistics-data-tables
+  revision_log_message: 'Edited by admin.'
+  revision_uid: '75'
+  menu_link:
+    uuid: 3f2e70e9-b726-4ce3-9a9a-f18956a85b79
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Data Tables'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/2526'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Data & News'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/8'
+              title: ''
+              options: {  }
+          weight: -68
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/16578'
+              title: 'Federal Court Scams'
+              options: {  }
+            -
+              uri: 'entity:node/3122'
+              title: "Director's Annual Report"
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Filter for caseload statistical data tables by topic, report, or date. '
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p> Filter for statistical tables by topic, report, or date. Topics include court of appeals, district and bankruptcy courts, and the U.S. Supreme Court. The district court topic includes sub-topics for data on jury, civil, criminal, magistrate judges, probation, pretrial services, and trials. </p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:drupalblock/views-block-caseload-statistics-data-block-caseload-statistics-data {\"blockId\":\"views_block:caseload_statistics_data-block_caseload_statistics_data\"} /-->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image:
+    -
+      uuid: ea6cc262-9f54-4c5d-9703-412200439868
+      entity_type: media
+      base_fields:
+        name: caseload-data-tables.jpg
+        created: '1425054483'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: '<p>This section of uscourts.gov provides statistical data on the business of the federal Judiciary. Specific publications address the work of the appellate, district, and bankruptcy courts; the probation and pretrial services systems; and other components of the U.S. courts.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: fd3653fb-7da9-49f8-85d2-cf599d0a5730
+      entity_type: taxonomy_term
+      base_fields:
+        name: Statistics
+        weight: 24
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

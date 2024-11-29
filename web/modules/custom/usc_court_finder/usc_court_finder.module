@@ -1,0 +1,114 @@
+<?php
+
+/**
+ * @file
+ * Provides USC Court Finder hooks.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Site\Settings;
+use Drupal\migrate\Plugin\MigrationInterface;
+
+/**
+ * Implements hook_js_alter().
+ */
+function usc_court_finder_js_alter(&$javascript, AttachedAssetsInterface $assets) {
+  // Add Google API key required by usc_court_finder/google-maps-places library.
+  $library_url = 'https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places';
+  $api_key = Settings::get('usc_court_finder.google_maps_places.api_key');
+  if (!empty($api_key) && isset($javascript[$library_url])) {
+    $javascript[$library_url]['data'] = "https://maps.googleapis.com/maps/api/js?key=$api_key&libraries=places";
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function usc_court_finder_theme() {
+  return [
+    'location_autocomplete' => [
+      'variables' => [],
+    ],
+    'usc_location' => [
+      'render element' => 'elements',
+      'template' => 'usc_location',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for federal court finder templates.
+ *
+ * Default template: usc-court-finder-location.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the federal court finder information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_usc_location(array &$variables): void {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Custom callback to dynamically provide urls for migration.
+ *
+ * @param Drupal\migrate\Plugin\MigrationInterface $migration
+ *   The migration to provide url for.
+ *
+ * @return array
+ *   The urls to import.
+ */
+function usc_court_finder_migrate_urls(MigrationInterface $migration): array {
+
+  $usc_court_finder_config = \Drupal::service('config.factory')->get('usc_court_finder.settings');
+
+  $urls = [];
+
+  if ($migration->id() === 'usc_court_finder_locations') {
+    $location_source_url = $usc_court_finder_config->get('location_source_url');
+    if (file_exists($location_source_url)) {
+      $urls[] = $location_source_url;
+    }
+  }
+
+  return $urls;
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function usc_court_finder_block_access(Block $block, $operation, AccountInterface $account) {
+
+  if ($operation === 'view') {
+    $target_block_id = 'facet_block:usc_district_id';
+    $query_param_key = 'search_api_fulltext';
+    $query_param_value = 'true';
+    if ($block->getPluginId() === $target_block_id) {
+      $current_query_param = \Drupal::request()->query->get($query_param_key);
+      // Determine access based on the query parameter value.
+      if (empty($current_query_param)) {
+        return AccessResult::allowed();
+      }
+      else {
+        return AccessResult::forbidden();
+      }
+    }
+  }
+  return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function usc_court_finder_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'usc_court_finder/google_analytics';
+}

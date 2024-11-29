@@ -1,0 +1,19 @@
+uuid: f6ded8ce-d2c3-4f03-900c-b3a49a37606e
+langcode: en
+status: true
+dependencies:
+  module:
+    - config_pages
+    - link
+id: config_pages.field_homepage_hero_sec_cta
+field_name: field_homepage_hero_sec_cta
+entity_type: config_pages
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

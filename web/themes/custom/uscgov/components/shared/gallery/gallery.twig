@@ -1,0 +1,28 @@
+{%
+  set classes = [
+    'usc-gallery',
+    'spacing-component',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="splide main-slider">
+
+    {% if label %}
+      <h2 class="usc-gallery__label"> {{ label }}</h2>
+    {% endif %}
+
+    <div class="splide__arrows">
+      <button class="button button--arrow button--arrow-back splide__arrow splide__arrow--prev">
+      </button>
+      <button class="button button--arrow splide__arrow splide__arrow--next">
+      </button>
+    </div>
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for item in items %}
+          {{ item.content }}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,116 @@
+@use "uswds-core" as *;
+
+.usa-card-wrapper {
+  display: block;
+  text-decoration: none;
+}
+
+.usa-card {
+  border-color: var(--border-muted-dark);
+  filter: drop-shadow(0px 4px 8px rgba(64, 72, 97, 0.12));
+}
+
+.usa-card__container {
+  --gap: 24px;
+  --container-padding-y: 32px;
+  --container-padding-x: 32px;
+
+  gap: var(--gap);
+  margin: 0;
+  border-radius: 30px;
+  overflow: hidden; // Needed for border radius.
+
+  &:has(.usa-card__media--inset) {
+    --container-padding-x: 24px;
+  }
+
+  .usa-card--flag & {
+    --container-padding-x: 24px;
+
+    min-height: 158px;
+  }
+}
+
+.usa-card__media--inset .usa-card__img {
+  background-color: transparent;
+
+  img {
+    border-radius: 20px;
+  }
+}
+
+.usa-card__img img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  .usa-card--flag & {
+    width: 250px;
+    aspect-ratio: 1;
+  }
+}
+
+.usa-card__header {
+  padding: calc(var(--container-padding-y) - var(--gap)) var(--container-padding-x) 0;
+
+  .usa-card--header-first:not(.usa-card--flag) & {
+    padding-block: 24px 0;
+  }
+
+  .usa-card--flag & {
+    padding-block: var(--container-padding-y) 0;
+  }
+}
+
+[class].usa-card__heading {
+  @include u-font-family('sans');
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.usa-card__body  {
+  padding: 0 var(--container-padding-x);
+  font-size: 16px;
+
+  .usa-prose {
+    font-size: inherit;
+
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.usa-card--flag.usa-card--header-first .usa-card__body {
+  padding-top: 0;
+}
+.usa-card--flag.usa-card--header-first .usa-card__header {
+  padding-bottom: 0;
+}
+
+.usa-card__footer  {
+  padding: 0 var(--container-padding-x) var(--container-padding-y);
+}
+
+:not(:is(.usa-card--header-first, .usa-card--flag)) .usa-card__header:nth-last-child(2) {
+  margin-bottom: 32px;
+}
+
+.usa-prose .collection-card__nav {
+  font-size: 16px;
+
+  ul {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: 4px 0;
+    list-style: none;
+  }
+}

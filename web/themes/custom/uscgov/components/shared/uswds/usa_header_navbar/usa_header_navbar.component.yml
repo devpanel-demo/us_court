@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Header Navbar
+status: experimental
+group: USWDS
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    title_suffix:
+      type: array
+    site_logo_url:
+      title: Logo URL
+      type: string
+      description: The site logo URL.
+    site_name:
+      title: Site name
+      type: string
+      description: The site name.
+    site_slogan:
+      title: Site slogan
+      type: string
+      description: The site slogan.

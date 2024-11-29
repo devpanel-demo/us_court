@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 34b41b23-111d-4f9b-beb9-504e69a48f47
+entity_type: media
+bundle: icon
+base_fields:
+  name: stop-circle.svg
+  created: '1721137227'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/stop-circle.svg'
+      url: '/sites/default/files/icons/stop-circle.svg'

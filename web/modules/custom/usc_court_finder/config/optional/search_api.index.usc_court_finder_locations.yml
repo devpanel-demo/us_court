@@ -1,0 +1,94 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.usc_location.field_geofield
+    - search_api.server.usc_server
+  module:
+    - usc_court_finder
+    - taxonomy
+    - search_api_location
+    - search_api
+id: usc_court_finder_locations
+name: 'USC court finder - locations'
+description: ''
+read_only: false
+field_settings:
+  address:
+    label: Address
+    datasource_id: 'entity:usc_location'
+    property_path: address
+    type: string
+    dependencies:
+      module:
+        - usc_court_finder
+  building_state:
+    label: 'Building State'
+    datasource_id: 'entity:usc_location'
+    property_path: building_state
+    type: string
+    dependencies:
+      module:
+        - usc_court_finder
+  circuit_id:
+    label: 'Circuit ID'
+    datasource_id: 'entity:usc_location'
+    property_path: circuit_id
+    type: integer
+    dependencies:
+      module:
+        - usc_court_finder
+  court_type:
+    label: 'Court Type'
+    datasource_id: 'entity:usc_location'
+    property_path: court_type
+    type: string
+    dependencies:
+      module:
+        - usc_court_finder
+  district_id:
+    label: 'District ID'
+    datasource_id: 'entity:usc_location'
+    property_path: district_id
+    type: integer
+    dependencies:
+      module:
+        - usc_court_finder
+  field_geofield:
+    label: Coordinates
+    datasource_id: 'entity:usc_location'
+    property_path: field_geofield
+    type: location
+    dependencies:
+      config:
+        - field.storage.usc_location.field_geofield
+  office_name:
+    label: 'Office Name'
+    datasource_id: 'entity:usc_location'
+    property_path: office_name
+    type: string
+    dependencies:
+      module:
+        - usc_court_finder
+datasource_settings:
+  'entity:usc_location': {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  hierarchy:
+    weights:
+      preprocess_index: -45
+    fields:
+      district_id: taxonomy_term-parent
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: usc_server

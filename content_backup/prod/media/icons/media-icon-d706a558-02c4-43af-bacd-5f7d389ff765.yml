@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: d706a558-02c4-43af-bacd-5f7d389ff765
+entity_type: media
+bundle: icon
+base_fields:
+  name: dollar-sign.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/dollar-sign.svg'
+      url: '/sites/default/files/icons/dollar-sign.svg'

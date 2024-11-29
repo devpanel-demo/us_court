@@ -1,0 +1,11 @@
+uuid: dc8ef162-38c5-44c8-9e43-840a7f32e912
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.related_news
+label: 'Related news'
+description: 'Used in Related News view, which is referenced on Related News paragraph types. '
+targetEntityType: node
+cache: true

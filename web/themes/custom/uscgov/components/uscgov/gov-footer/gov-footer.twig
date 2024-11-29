@@ -1,0 +1,46 @@
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      {% block footer_above %}{% endblock %}
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-container container">
+      <div class="footer__bottom-first">
+        <div class="footer__branding">
+          {% block footer_seal %}{% endblock %}
+          <div class="footer__branding-text">{{ brand_text }}</div>
+        </div>
+        {% block footer_below %}{% endblock %}
+      </div>
+      <div class="footer__bottom-second">
+        <form class="footer__subscribe" action="/form/contact" method="post">
+          <h2 class="footer__subscribe-title">{{ 'Subscribe to Updates'|t }}</h2>
+          <div class="footer__subscribe-description">{{ 'To receive updates, enter your email address and select the topics that interest you.'|t }}</div>
+          {% set id = 'footer-email-subscribe'|clean_unique_id %}
+          <label for="{{ id }}" class="visually-hidden">
+            {{ 'Email address' |t }}
+          </label>
+          <div class="footer__subscribe-form-wrapper">
+            <input class="footer__subscribe-input" id="{{ id }}" type="email" name="email" width="60">
+            <input type="hidden" name="topic_id" value="USFEDCOURTS_C13">
+            <button class="footer__subscribe-button" name="commit" type="submit">{{ 'Submit'|t }}</button>
+          </div>
+        </form>
+        {% block footer_social_media %}{% endblock %}
+      </div>
+      {% if footer_cta_title|render or footer_cta_link|render or footer_cta_body|render %}
+        <div class="footer__bottom-third">
+          <div class="footer__feedback">
+            <h2 class="footer__feedback-title">
+              <span class="footer__feedback-title-icon"></span>
+              {{ footer_cta_title }}
+            </h2>
+            <div class="footer__feedback-description">{{ footer_cta_body }}</div>
+            <div class="footer__feedback-link-wrapper">{{ footer_cta_link }}</div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</footer>

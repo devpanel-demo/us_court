@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 45f234bd-253a-4b9a-8d87-f3595c84a882
+entity_type: media
+bundle: icon
+base_fields:
+  name: clock-solid.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/clock-solid.svg'
+      url: '/sites/default/files/icons/clock-solid.svg'

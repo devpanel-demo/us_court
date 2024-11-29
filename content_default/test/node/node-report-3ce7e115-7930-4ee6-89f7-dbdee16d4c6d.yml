@@ -1,0 +1,137 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 3ce7e115-7930-4ee6-89f7-dbdee16d4c6d
+entity_type: node
+bundle: report
+base_fields:
+  title: 'test high chart'
+  status: true
+  langcode: en
+  created: '1715719241'
+  changed: 1715719241
+  author: jamesdavison@ao.uscourts.gov
+  url: /test-high-chart
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: ca1c2c43-f427-4bb6-a355-c5aeea1d682d
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715719280'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget:
+          -
+            uuid: e6a0524c-88ec-4ef9-8471-3f223b145693
+            entity_type: paragraph
+            bundle: usc_highcharts
+            base_fields:
+              status: true
+              langcode: en
+              created: '1715719354'
+              behavior_settings: {  }
+            custom_fields:
+              field_usc_highcharts_script:
+                -
+                  value: "(function($) {\r\n    Highcharts.setOptions({\r\ncolors: ['#0071BC', '#112E51', '#871517', '#C5AA63', '#7E6B59', '#2E8540', '#4C2C92', '#98897A']\r\n    });\r\n    var chart;\r\n     jQuery(document).ready(function() {\r\n        chart = new Highcharts.Chart({\r\n            chart: {\r\n                renderTo: 'container1',\r\n                type: 'line'\r\n            },\r\n            title: {\r\n                text: 'Appeals Cases Filed, Terminated, and Pending'\r\n            },\r\n            subtitle: {\r\n                text: ''\r\n            },\r\n            xAxis: {\r\n\t\t\t\ttitle: {\r\n        \t    \tenabled: true,\r\n                    text: '12-Month Periods Ending September 30'\r\n                },\r\n                categories: ['2012', '2013', '2014', '2015', \"2016\"]\r\n            },\r\n            yAxis: {\r\n                title: {\r\n                    text: ''\r\n                },\r\n\t\t\t\tlabels: {\r\n\t            \tformatter: function() {\r\n                \t\treturn Highcharts.numberFormat(this.value, 0);\r\n                \t}\r\n\t\t\t\t},\r\n\t            plotLines: [{\r\n            \t    value: 0,\r\n                    width: 1,\r\n                    color: '#808080'\r\n                }]\r\n            },\r\n            tooltip: {\r\n                formatter: function() {\r\n                    return ''+ this.series.name +': '+ Highcharts.numberFormat(this.y, 0) +'';\r\n                }\r\n            },\r\n            series: [{\r\n                name: 'Filed',\r\n                data: [57501, 56475, 54988, 52698, 60357]\r\n            }, {\r\n                name: 'Terminated',\r\n                data: [57570, 58393, 55216, 53213, 57744]\r\n            }, {\r\n                name: 'Pending',\r\n                data: [43588, 41979, 41323, 40662, 43275]\r\n            }]\r\n        });\r\n    });\r\n})(jQuery);"
+                  format: widget
+              field_usc_label:
+                -
+                  value: 'highchart testing'
+              field_usc_title:
+                -
+                  value: 'fun with numbers'
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 91dd2ee3-55a7-401a-a72c-345d33b6a14d
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715719390'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget:
+          -
+            uuid: a77196e7-9d56-41e1-8046-81a3e66cdd4e
+            entity_type: paragraph
+            bundle: usc_map
+            base_fields:
+              status: true
+              langcode: en
+              created: '1715719466'
+              behavior_settings: {  }
+            custom_fields:
+              field_usc_label:
+                -
+                  value: 'Tableau - Interactive map testing'
+              field_usc_tableau_object_code:
+                -
+                  value: "<script type='text/javascript' src='https://www.visualizations.uscourts.gov/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 600px; height: 481px;'><object class='tableauViz' width='600' height='481' style='display:none;'><param name='host_url' value='https%3A%2F%2Fwww.visualizations.uscourts.gov%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;JDAO' /><param name='name' value='Appeals_FilingTermPend&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /></object></div>"
+                  format: widget
+              field_usc_title:
+                -
+                  value: tableau
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2024-05-31'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_report_children: null
+  field_report_name:
+    -
+      uuid: 58c812a4-9b78-49bc-ba67-7a059a094b9f
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Business'
+        weight: 3
+        langcode: en
+        description: '<p>Judicial Business</p>'
+        parent: 0
+      bundle: report_names
+  field_sidebar_title: null
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

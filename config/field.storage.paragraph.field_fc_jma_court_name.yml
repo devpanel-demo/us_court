@@ -1,0 +1,21 @@
+uuid: 321be68f-2b7d-4204-909a-6f3b3e3f704c
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_fc_jma_court_name
+field_name: field_fc_jma_court_name
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 214f0263-9a38-4ac4-8ceb-aafc07dc0d7e
+entity_type: media
+bundle: icon
+base_fields:
+  name: copy-solid.svg
+  created: '1721137017'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/copy-solid.svg'
+      url: '/sites/default/files/icons/copy-solid.svg'

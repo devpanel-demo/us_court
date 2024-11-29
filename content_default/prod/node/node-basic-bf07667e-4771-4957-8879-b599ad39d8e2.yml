@@ -1,0 +1,72 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: bf07667e-4771-4957-8879-b599ad39d8e2
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'About U.S. District Courts'
+  status: true
+  langcode: en
+  created: '1719249453'
+  changed: 1731348113
+  author: jamesdavison@ao.uscourts.gov
+  url: /about-us-district-courts
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 0137211d-ff76-49d6-a0eb-70d6402823d2
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719249521'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<h2>What are District Courts?&nbsp;</h2><p>District courts conduct trials and hearings, resolving disputes by determining the facts and applying the law to those facts. Within limits set by Congress and the Constitution, district courts have jurisdiction to hear nearly all categories of <a href="/node/1980" data-entity-type="node" data-entity-uuid="fffdc67a-9955-4848-81d6-058c99aa005c" data-entity-substitution="canonical"><u>federal civil and criminal cases</u></a>.&nbsp;&nbsp;</p><p>The vast majority of civil and criminal cases are filed in state courts. Sometimes a case can be filed under similar statutes in either state or federal court.&nbsp;</p><h2>What is the Structure of District Courts?&nbsp;</h2><p>There are 94 federal judicial districts. There is at least one district court in each state, and the District of Columbia. Each district includes a U.S. bankruptcy court as a unit of the district court. Four territories of the United States have courts that hear federal cases, including bankruptcy cases: Puerto Rico, the Virgin Islands, Guam, and the Northern Mariana Islands.</p><p>There are also two special trial courts. The <a href="http://www.cit.uscourts.gov/"><u>Court of International Trade</u></a> addresses cases involving international trade and customs laws. The <a href="http://www.uscfc.uscourts.gov/"><u>U.S. Court of Federal Claims</u></a> deals with most claims for money damages against the U.S. government.&nbsp;</p><h2>What Types of Cases are Heard in District Courts?&nbsp;</h2><p>Within limits set by Congress and the Constitution, district courts have jurisdiction to hear nearly all categories of federal civil and criminal cases.&nbsp;</p><ul><li><a href="/node/2856" data-entity-type="node" data-entity-uuid="9e74b443-e150-433f-9abd-2bfa5d25a3f8" data-entity-substitution="canonical"><u>Criminal cases</u></a> involve an allegation by the government that an individual or entity violated the criminal laws of the United States.&nbsp;&nbsp;</li><li><a href="/node/2855" data-entity-type="node" data-entity-uuid="ef2e80ba-498f-4b8a-9dd9-747145f89162" data-entity-substitution="canonical"><u>Civil cases</u></a> arise from disputes involving the Constitution, federal laws, or treaties. They also can be brought in district court if the parties are citizens of different states or countries and the amount in controversy exceeds a certain amount of money.&nbsp;</li></ul><h2>Who Serves in District Courts?&nbsp;</h2><p>Trial courts include <a href="/node/17357" data-entity-type="node" data-entity-uuid="05d8e9b8-adad-434c-b079-4ffea682a80f" data-entity-substitution="canonical"><u>district judges</u> and magistrate judges</a> who try the case, often before a jury that decides the case.&nbsp;Magistrate judges assist district judges in preparing cases for trial, as delegated by statute and the court''s district judges.&nbsp;</p><p>All but three districts have lifetime-appointed Article III judges. Judges serve 10-year terms in three territorial districts: the U.S. Virgin Islands, Guam, and the Northern Mariana Islands.</p><p>A district court’s ruling can be appealed to a U.S. court of appeals.</p><h2>District Court Statistics&nbsp;</h2><p>The following reports contain data and analysis of the workload of the district courts, including comparing criminal and civil caseload data to previous years.&nbsp;&nbsp;</p><ul><li><a href="https://www.uscourts.gov/statistics-reports/analysis-reports/judicial-business-united-states-courts"><u>Judicial Business</u></a> covers a 12-month period ending September 30.&nbsp; &nbsp;</li><li><a href="https://www.uscourts.gov/statistics-reports/analysis-reports/federal-judicial-caseload-statistics"><u>Federal Judicial Caseload Statistics</u></a> covers a 12-month period ending March 31.&nbsp;&nbsp;</li><li><a href="https://www.uscourts.gov/statistics-reports/analysis-reports/statistical-tables-federal-judiciary"><u>Statistical Tables for the Federal Judiciary</u></a> covers 12-month periods ending June 30 and December 31.&nbsp;</li></ul><p>For additional information about district courts, see:&nbsp;</p><ul><li><a href="https://www.uscourts.gov/sites/default/files/understanding-federal-courts.pdf"><u>Understanding the Federal Courts</u></a>&nbsp;&nbsp;</li><li><a href="https://www.uscourts.gov/statistics-reports/federal-court-media-basics-journalists-guide"><u>A Journalist’s Guide to Federal Courts</u></a>&nbsp;</li></ul>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>U.S. district courts are the primary trial courts of the federal court system.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 88a7b5f3-a2f7-4edb-986d-b09d68bd7489
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'About Federal Courts'
+        weight: 3
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

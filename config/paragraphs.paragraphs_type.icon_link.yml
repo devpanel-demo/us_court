@@ -1,0 +1,10 @@
+uuid: 71e32ee5-289a-443f-acc9-075c42e0c878
+langcode: en
+status: true
+dependencies: {  }
+id: icon_link
+label: 'Icon Link'
+icon_uuid: null
+icon_default: null
+description: 'Grouping of SVG Icon with a hyperlink'
+behavior_plugins: {  }

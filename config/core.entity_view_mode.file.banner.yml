@@ -1,0 +1,11 @@
+uuid: 3d6c5bb3-acb4-4bad-bf1b-742466a3bd7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.banner
+label: banner
+description: ''
+targetEntityType: file
+cache: true

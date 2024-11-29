@@ -1,0 +1,108 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: "${PROJECT}-db"
+    volumes:
+      - db-data:/var/lib/mysql
+    restart: unless-stopped
+    env_file: .env
+    networks:
+      - internal
+    labels:
+      - traefik.enable=false
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+
+  php:
+    build:
+      context: .
+      dockerfile: ./.deploy/php/Dockerfile
+    container_name: "${PROJECT}-php"
+    volumes:
+      - ./:/var/www/html
+      - /var/sites/uscourts-d7/docroot:/usc-d7files
+    ports:
+      - '9000:80'
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      - db
+    networks:
+      - internal
+      - database
+    labels:
+      - traefik.enable=false
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+
+  web:
+    image: webdevops/apache:latest
+    container_name: ${PROJECT}-web
+    volumes:
+      - ./:/var/www/html:ro
+      - ./.deploy/apache/main.conf:/opt/docker/etc/httpd/main.conf
+    environment:
+      WEB_DOCUMENT_ROOT: /var/www/html/web
+    restart: unless-stopped
+    depends_on:
+      - php
+    networks:
+      - internal
+      - web
+      - database
+    ports:
+      - "8080:80"  # Exposing Apache on port 8080
+    links:
+      - php
+
+  redis:
+    image: redis:6
+    networks:
+      - internal
+    labels:
+      - traefik.enable=false
+    restart: unless-stopped
+
+  varnish:
+    image: varnish:stable
+    container_name: "${PROJECT}-varnish"
+    depends_on:
+      - web
+    networks:
+      - internal
+      - web
+    volumes:
+      - ./varnish/default.vcl:/etc/varnish/default.vcl
+    configs:
+      - source: varnish_cfg
+        target: /etc/varnish/default.vcl
+    ports:
+      - "6081:6081"
+    environment:
+      VARNISH_BACKEND_PORT: 8080  # Point to the new Apache port
+      VARNISH_BACKEND_ADDRESS: web
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.${PROJECT}.tls=true
+
+networks:
+  internal:
+    driver: bridge
+  web:
+    external: true
+  database:
+    driver: bridge
+    external: true
+
+volumes:
+  db-data:
+
+configs:
+  varnish_cfg:
+    file: ./varnish/default.vcl

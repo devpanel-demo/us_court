@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: f6cc90b3-e810-44cf-a1c4-dcc614747312
+entity_type: media
+bundle: icon
+base_fields:
+  name: pause.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/pause.svg'
+      url: '/sites/default/files/icons/pause.svg'

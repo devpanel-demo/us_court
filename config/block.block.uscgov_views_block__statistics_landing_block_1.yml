@@ -1,0 +1,38 @@
+uuid: e8e49260-a2cb-4dd7-a3f4-3f3401c701da
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.statistics_landing
+  module:
+    - block_visibility_groups
+    - node
+    - views
+  theme:
+    - uscgov
+id: uscgov_views_block__statistics_landing_block_1
+theme: uscgov
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:statistics_landing-block_1'
+settings:
+  id: 'views_block:statistics_landing-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      report: report

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: b26ef4f4-e6d0-4ee2-a053-cead9031a876
+entity_type: media
+bundle: icon
+base_fields:
+  name: chart-area.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/chart-area.svg'
+      url: '/sites/default/files/icons/chart-area.svg'

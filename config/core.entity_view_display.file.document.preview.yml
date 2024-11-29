@@ -1,0 +1,44 @@
+uuid: 7a59ec99-e12a-4b50-869d-d1b5c43a3989
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.preview
+    - field.field.file.document.field_date_updated
+    - field.field.file.document.field_file_description
+    - field.field.file.document.field_file_title
+  module:
+    - datetime
+    - file
+    - text
+id: file.document.preview
+targetEntityType: file
+bundle: document
+mode: preview
+content:
+  field_date_updated:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: month_year
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_file_description:
+    type: text_trimmed
+    label: inline
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_file_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

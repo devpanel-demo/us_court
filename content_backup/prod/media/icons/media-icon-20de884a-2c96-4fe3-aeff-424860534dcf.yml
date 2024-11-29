@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 20de884a-2c96-4fe3-aeff-424860534dcf
+entity_type: media
+bundle: icon
+base_fields:
+  name: closed-captioning-solid.svg
+  created: '1721138307'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/closed-captioning-solid.svg'
+      url: '/sites/default/files/icons/closed-captioning-solid.svg'

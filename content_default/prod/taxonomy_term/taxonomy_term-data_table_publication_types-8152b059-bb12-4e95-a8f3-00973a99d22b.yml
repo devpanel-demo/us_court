@@ -1,0 +1,11 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 8152b059-bb12-4e95-a8f3-00973a99d22b
+entity_type: taxonomy_term
+bundle: data_table_publication_types
+base_fields:
+  name: 'U.S. District Courts—Supervision Hearings in Trials and Nontrials, by District'
+  weight: 0
+  langcode: en
+  description: null
+  parent: 0
+custom_fields: {  }

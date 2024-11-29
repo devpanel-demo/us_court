@@ -1,0 +1,21 @@
+@forward "../../sass/uswds/settings";
+@forward "usa-header/src/styles";
+@use "uswds-core";
+@forward "override";
+
+// Setting the active status for first level links.
+.usa-header--basic .usa-nav__primary-item > a.is-active {
+  position: relative;
+
+  &::after {
+    @include uswds-core.u-bg('primary');
+    border-radius: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.25rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: -0.25rem;
+  }
+}

@@ -1,0 +1,70 @@
+uuid: b0fd7e8d-7dfe-4da4-8637-dc3f8136cb65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_info.field_additional_info_type
+    - field.field.paragraph.additional_info.field_document_pdf
+    - field.field.paragraph.additional_info.field_file_description
+    - paragraphs.paragraphs_type.additional_info
+  module:
+    - field_formatter_range
+    - nomarkup
+    - options
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.additional_info.default
+targetEntityType: paragraph
+bundle: additional_info
+mode: default
+content:
+  field_additional_info_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_document_pdf:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: download
+      link: false
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 0
+        offset: 0
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_file_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

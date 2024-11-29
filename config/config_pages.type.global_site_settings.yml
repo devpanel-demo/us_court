@@ -1,0 +1,17 @@
+uuid: 959cf202-0d38-488b-a732-099b0a074753
+langcode: en
+status: true
+dependencies: {  }
+id: global_site_settings
+label: 'Global Site Settings'
+token: true
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: /admin/site-settings
+  weight: 0
+  description: 'Global Site Settings'

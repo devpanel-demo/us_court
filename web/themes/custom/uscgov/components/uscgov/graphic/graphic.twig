@@ -1,0 +1,31 @@
+{% set attributes = attributes ?: create_attribute() %}
+{% set fieldname_attribute = field_name ? 'data-test-' ~ field_name|clean_class : false %}
+<div{{ attributes.addClass('graphic').setAttribute(fieldname_attribute, true) }}>
+  <div class="graphic__inner">
+    <div class="graphic__image">
+      {% if link %}
+        <a href="{{ link }}">
+      {% endif %}
+        {{ image }}
+      {% if link %}
+        </a>
+      {% endif %}
+    </div>
+    <div class="graphic__content">
+      <h3 class="graphic__title">{{ title }}</h3>
+      {% if body %}
+        <div class="graphic__body">{{ body|raw }}</div>
+      {% endif %}
+      {% if link %}
+        <a href="{{ link }}">
+          {% trans %}
+            Read more
+            <span class="visually-hidden">
+              about {{ title }}
+            </span>
+          {% endtrans %}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

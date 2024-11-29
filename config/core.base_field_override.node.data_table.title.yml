@@ -1,0 +1,18 @@
+uuid: 21f0fe36-0a20-454e-9bbd-a4a3c5b1dae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.data_table
+id: node.data_table.title
+field_name: title
+entity_type: node
+bundle: data_table
+label: 'Table Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

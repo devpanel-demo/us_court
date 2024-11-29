@@ -1,0 +1,10 @@
+uuid: a2bc1bde-abe9-4375-ac0e-7336714d90e3
+langcode: en
+status: true
+dependencies: {  }
+id: tableau_visualization
+label: 'Tableau Visualization'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

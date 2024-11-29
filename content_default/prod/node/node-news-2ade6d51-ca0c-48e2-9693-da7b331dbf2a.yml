@@ -1,0 +1,434 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 2ade6d51-ca0c-48e2-9693-da7b331dbf2a
+entity_type: node
+bundle: news
+base_fields:
+  title: 'The Judicial Conference: A Century of Service to the Federal Judiciary'
+  status: true
+  langcode: en
+  created: '1661872772'
+  changed: 1661872772
+  author: courtney_mcilroy@ao.uscourts.gov
+  url: /news/2022/09/23/judicial-conference-century-service-federal-judiciary
+  revision_log_message: 'Edited by courtney.mcilroy.'
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: ''
+      summary: "<p>\r\n\tWhile meetings of judges to discuss policy are routine today, that first Judicial Conference was a unique milestone in the Judiciary’s history. Chief Justice William Howard Taft had a vision that federal judges could chart their own path as an efficient and independent branch of government. It would begin with judges working together on issues of common interest.<br />\r\n\t<br />\r\n\tFast forward 100 years; what Taft envisioned has evolved into the Judicial Conference of the United States, a body that is central to the modern federal Judiciary.\r\n</p>\r\n"
+      format: wysiwyg
+  field_body_enhanced:
+    -
+      uuid: 1fbd07eb-5763-4b2d-a8d3-2ed26ac8e24a
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tOn Dec. 28, 1922, Chief Justice William Howard Taft convened a meeting in the Capitol building, in the rooms then reserved for the Supreme Court. The present Supreme Court building had not yet been built. Joining him were the most senior judges from each of the nine existing circuit courts. It was known as the Conference of Senior Circuit Judges.\r\n</p>\r\n\r\n<p>\r\n\tThe group listened to a report from the attorney general, who told them that federal court cases had increased dramatically in the past year. He attributed this increase to “the vast number of Prohibition cases which had been filed.” &nbsp;\r\n</p>\r\n\r\n<p>\r\n\tWhile meetings of judges to discuss policy are routine today, that first gathering was a unique milestone in the Judiciary’s history. Taft, who previously had served as president and as a judge for the Sixth Circuit, had a vision that federal judges could chart their own path as an efficient and independent branch of government. It would begin with judges working together on issues of common interest.\r\n</p>\r\n\r\n<p>\r\n\t“Heretofore, each judge has paddled his own canoe and has done the best he could with his district,” Taft said. “He has been subject to little supervision, if any … [H]e is likely to cooperate much more readily in an organized effort to get rid of business and do justice than under the ‘go-as-you-please’ system of our present federal judges.”\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: db1b8b18-658e-44fa-bf65-6bf8fbbf19f1
+            entity_type: media
+            base_fields:
+              name: the_jcus_100th_anniversary_icon.png
+              created: '1664478681'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 9d642cb2-e924-4881-9905-8f6a9f7d6d3b
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution:
+          -
+            value: 'Chief Justice John G. Roberts, Jr.'
+        field_callout_body:
+          -
+            value: '<p>The Judiciary’s power to manage its internal affairs insulates courts from inappropriate political influence and is crucial to preserving public trust in its work as a separate and co-equal branch of government.</p>'
+            format: wysiwyg
+        field_callout_pull_quote:
+          -
+            value: '1'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Fast forward 100 years; what Taft envisioned has evolved into the Judicial Conference of the United States, a body that is central to the modern federal Judiciary.</p><p>The Conference, formed by Congress in 1922, establishes policy for the Judiciary. The Conference operates through 25 committees that work on virtually every facet of the federal court system — including budget, court administration, facilities, human resources, the public defense function, information technology, judicial security, and rules of practice and procedure. This work is supported by the Administrative Office of the United States Courts (AO), whose director serves as Secretary of the Judicial Conference.&nbsp;</p><p>In addition to ensuring more efficient administration, the Conference has helped the Judiciary meet new challenges, including national emergencies such as COVID-19, and it has protected the Judiciary’s Constitutional role and independence through effective self-governance.</p><p>“Taft knew that no one seriously questioned that judges ‘should be independent in their judgments,’” wrote Chief Justice John G. Roberts, Jr., in his <a href="https://www.supremecourt.gov/publicinfo/year-end/2021year-endreport.pdf">2021 Year-End Report on the Federal Judiciary</a>. “But Taft recognized that courts also require ample institutional independence. The Judiciary’s power to manage its internal affairs insulates courts from inappropriate political influence and is crucial to preserving public trust in its work as a separate and co-equal branch of government.”</p><p>On Sept. 20, 2022, the Conference, which now meets twice annually, gathered in the Supreme Court building and marked its centennial year.</p><p>In some ways, the Conference has exhibited surprising continuity from its initial meeting in 1922. During their first deliberations about heavy Prohibition caseloads, the judges recommended a solution that continues today: permitting judges from less busy districts to help districts with heavier caseloads.</p><p>To take one modern example, visiting judges have helped courts in border states to cope with large immigration dockets. Case statistics, judgeship requests, and courthouse needs also have been recurring topics through the decades.</p><p>But Taft and the original judges would have been hard-pressed to predict other changes. In 1922, the judges would have traveled by train to the first Conference. Movies were still silent, and conference calls did not exist. In recent decades, technology has transformed the courts. In response to the COVID-19 pandemic, federal courts have conducted many proceedings by video, and the Conference and its committees met virtually for two years.</p><p>And like the federal Judiciary as a whole, the Judicial Conference is larger and more diverse than 100 years ago. The membership includes chief judges from all circuits, the chief judge of the Court of International Trade, and one district judge from each of 12 regional circuits, who are chosen by their peers.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: c50ca9a1-c645-492c-9242-148bcf689094
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Carl E. Stewart, who was chief judge in the Fifth Circuit from 2012 to 2019, noted that he was one of four African American members in the Conference in 2016, and again in 2018 with a different set of judges. “That was remarkable,” Stewart said. “Those moments stand out for me for a personal reason.”</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: d429407b-6505-4bf2-9e1e-ea1002ebb849
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Stewart, who was a member of the Executive Committee from 2017 to 2019 and also chaired the Conference’s strategic planning process, said one of the greatest values of the Conference is that it brings judges together from across the country, with a shared goal of improving the delivery of justice.</p><p>“We all have common concerns and common interests,” Stewart said. “To represent my circuit as the chief circuit judge, sitting around the table in the East Conference Room at the Supreme Court with all my colleagues and contemporaries, I was thrilled and honored to have the opportunity to be in that space.”</p><p>According to the judges gathering for the Conference this September, Taft’s vision of a national body to set Judiciary policy has been validated over time — especially when courts face large-scale emergencies that require a collective response.</p><p>And they feel privileged to be a part of the Conference’s 100-year history.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: 575ba8c2-fa2d-4535-b429-404de2c5a20c
+            entity_type: media
+            base_fields:
+              name: stewart-portrait_enhanced.jpg
+              created: '1663868584'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 71e80cb6-ce00-43d2-aeab-1259af20a62b
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\t“I am extremely proud, but I am also so grateful to have had the opportunities I had, and to hopefully contribute a little to the work of the Conference,” said Judge Claire V. Eagan, chair of the Judicial Conference’s Executive Committee. “Chief Justice Taft was very prescient. He realized that we had an opportunity to communicate more, and to assist the courts to give them a more cohesive and national framework. It had to be done, but he’s the one who did it.”\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 34b2e235-b7f2-4b41-9fe1-216ae8162a3f
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>While today’s Conference may be a more efficient and diverse body than in the past, its mission has largely remained the same. Running like threads through its history are concerns about case management, judgeships, security, budget, court staffing, rules of procedure, and the independence of the judicial branch.&nbsp;</p><p>“The independence of our courts is a hallmark of the federal Judiciary,” said U.S. District Judge Roslynn R. Mauskopf, director of the AO and secretary to the Conference. “We are a nationwide court system, sharing common challenges and common goals. The work of the Conference and its committees unify us in the administration of justice, and brings a real dimension of camaraderie and collegiality to the Branch as a whole.”</p><p>Information about the Judicial Conference’s history is available on the <a href="node/2752">Judicial Conference page</a>, and in a <a href="https://www.fjc.gov/judicial-conference-united-states-timeline">timeline of historical milestones</a>. Below are some highlights from the Conference’s century of service.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: 84eca875-c5a1-4ccc-9a1d-4a2f499cfe29
+            entity_type: media
+            base_fields:
+              name: judge_roslynn_r_mauskopf-300px.jpg
+              created: '1645629757'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 95db0b65-47b8-45c3-8fa5-debcf112231d
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>The Judiciary has not always controlled its own budget. When Taft and his fellow judges convened for the first time, the attorney general and the Department of Justice were responsible for the Judiciary’s accounts. There were frequent inter-branch conflicts. These were resolved in 1939, when Congress created the AO. The legislation provided that the AO Director, as the administrative officer of the courts, disburse appropriations and other funds for the maintenance and operation of the courts, under the supervision and direction of the Conference. Since then, the chair of the Budget Committee and the AO Director have presented the <a href="node/13806">Judiciary’s annual budget request</a> each year to Congress.&nbsp;</p><p>In the past 25 years, the Judiciary has weathered numerous financial storms, including sharp budget cuts known as sequestration, lapses in federal appropriations, and unforeseen expenses due to the COVID-19 pandemic. The Conference has approved emergency measures and cost-containment initiatives, such as reducing the Judiciary’s space requirements, to meet budgetary challenges.</p><h2>Court Administration</h2><p>The Conference continually considers ways to improve case management and court administration. Over the Conference''s long history, these initiatives have run the gamut from encouraging clerks'' offices in 1951, to adopt effective receipt systems, loose-leaf dockets, and card indices; to directing the AO in 1985, to develop an office automation plan. This led eventually to an electronic case filing system, which was introduced nationwide in 2001. The new system also gave public access to electronic court records through <a href="https://pacer.uscourts.gov/">PACER</a>.</p><p>In the past quarter century, the Judiciary has continued to make technological advances. The Conference has approved measures allowing circuit courts to live stream certain proceedings. In addition, in March 2022, the Conference endorsed recommendations by the Committee on Court Administration and Case Management to make searches free of charge for all non-commercial users of any future new modernized case management, electronic filing, and public access systems implemented by the Judiciary. Efforts to replace the Judiciary’s <a href="node/1985">Case Management/Electronic Case Files</a> technology are currently underway.</p><h2>Courthouse Construction</h2><p>Although the General Services Administration is responsible for the Judiciary''s courthouse needs, the Conference is a partner in the process. Shortly after World War II, a Conference committee submitted a manual establishing general standards of design and construction for federal court space in federal buildings. This manual evolved into the&nbsp;<a href="node/20052">U.S. Courts Design Guide</a>, which was adopted in 1984, revised in 1991, and further updated in 2021, with the Conference''s approval. The Conference also reviews and endorses an annual list of Courthouse Project Priorities developed by the Space and Facilities Committee.</p><p>In the wake of the terrorist attacks on Sept. 11, 2001, courts around the country reviewed their security measures. The Conference has approved the construction of special security pavilions and other security measures to safeguard federal courthouses.&nbsp;</p><p>The Conference also supported an ambitious and ultimately successful effort to cut long-term costs by reducing overall space capacity by 3 percent as well as requiring that circuits not expand their total space in the future.&nbsp;</p><h2>Court Staff</h2><p>The Conference sets qualifications and salary levels for nearly every type of court employee, including probation officers, court reporters, and law clerks. The Conference also authorizes work measurement studies that provide empirical data to help determine staffing levels. The Conference has strived over the years to pay staff on par with the other branches of government, and to support a diverse and inclusive workplace.</p><p>In his <a href="https://www.supremecourt.gov/publicinfo/year-end/2017year-endreport.pdf">2017 year-end report</a>, Chief Justice Roberts called for the creation of a working group to examine the sufficiency of the federal Judiciary’s policies and procedures addressing inappropriate conduct in the workplace, with a goal of ensuring “an exemplary workplace for every judge and every court employee.”</p><p>For the past four years, the <a href="node/17118">Federal Judiciary Workplace Conduct Working Group</a>, the Judicial Conference, the courts and circuits, the Administrative Office of the U.S. Courts, and the Federal Judicial Center have made significant strides to strengthen protections and streamline processes to ensure a workplace of respect, civility, fairness, tolerance, and dignity, free of discrimination and harassment.&nbsp;</p><p>The <a href="node/17118">AO established the Office of Judicial Integrity</a>, and Directors of Workplace Relations positions were created in each circuit. In addition, the Conference has approved or endorsed updates to the Model Employment Dispute Resolution (EDR) Plan for judiciary employees, the codes of conduct for judges and judicial employees, and the Rules for Judicial Conduct and Disability proceedings.</p><h2>Emergencies</h2>'
+            format: wysiwyg
+        field_fc_be_heading:
+          -
+            value: Budget
+        field_fc_be_image:
+          -
+            uuid: 776db769-6ec9-4baa-85ca-df4adda67bf9
+            entity_type: media
+            base_fields:
+              name: taft_portrait_enhanced.jpg
+              created: '1663868789'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: d1378993-ffed-4112-8e4a-712e08236f84
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tIn recent decades, the Judicial Conference has handled several national emergencies, starting with the abrupt suspension of a Conference meeting during the Sept. 11, 2001, terrorist attacks. Other emergencies have required coordinated national responses. These included sharp budget cuts mandated by sequestration, government shutdowns, natural disasters such as Hurricane Katrina, and most recently <a href=\"node/18694\">COVID-19</a>.\r\n</p>\r\n\r\n<p>\r\n\tWhile federal courts retain considerable administrative autonomy, making many decisions at a circuit and local level, judges acknowledge that the Conference and AO have been essential in informing and assisting the courts during times of crisis.\r\n</p>\r\n\r\n<p>\r\n\t“There have been a lot of emergencies in the last 20 years,” said Judge Eagan, chair of the Conference’s Executive Committee. “We’ve had climate emergencies, we've had security emergencies, we've had health emergencies. We had the aftermath of terrorist attacks. Because of this experience, the Conference is now poised to handle any future emergencies effectively and efficiently.”\r\n</p>\r\n\r\n<h2>\r\n\tJudgeships\r\n</h2>\r\n\r\n<p>\r\n\tIn 1964, the Conference adopted a policy of submitting a comprehensive report to Congress every four years on the judgeship needs of the appellate and district courts. In 1977, the Conference changed the frequency of these judgeship reports to every other year. It has become the means by which the judicial branch communicates its Article III judgeship needs to Congress.\r\n</p>\r\n\r\n<p>\r\n\tFor example, the <a href=\"file/40422/download\">2021 biennial survey of judgeship needs</a>&nbsp;(pdf) needs prompted a request to Congress to create two additional circuit court judgeships for the courts of appeals and 77 additional district court judgeships. In addition, the Conference agreed to request five total additional judgeships in the Eastern and Northern Districts of Oklahoma. Felony filings have significantly increased in those districts after the Supreme Court’s decision in <em>McGirt v. Oklahoma</em>, which shifted many criminal prosecutions involving Native Americans from state to federal courts.\r\n</p>\r\n\r\n<h2>\r\n\tLegislation\r\n</h2>\r\n\r\n<p>\r\n\tFrom the beginning, pending national legislation was considered at Conference meetings. In 1922, one topic was a bill to form a commission “to formulate recommendations for statutory changes in the practice and procedure in the federal courts to enable a more expeditious dispatch of their business.”\r\n</p>\r\n\r\n<p>\r\n\tOver the next 100 years, the Conference reviewed nearly every bill introduced in Congress that might affect the courts, from the most comprehensive crime bill to the smallest proposals for technical changes in judicial procedure or court operations.\r\n</p>\r\n\r\n<p>\r\n\tOn occasion, the Conference affirmatively proposes legislation to improve the administration of justice. For example, following Hurricane Katrina’s devastating impact in 2005, Congress passed <a href=\"https://www.congress.gov/bill/109th-congress/house-bill/3650\">legislation</a>, requested by the Conference, that allows federal courts to conduct business outside their normal geographical boundaries when their own facilities are not reasonably accessible.\r\n</p>\r\n\r\n<h2>\r\n\tRules of Procedure\r\n</h2>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: 88efbf60-a649-48c0-bafc-361fd699a89b
+            entity_type: media
+            base_fields:
+              name: eagan-portrait_enhanced.jpg
+              created: '1663868849'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 2be5cf47-a281-4e16-b27b-80e8f1d7c7f0
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tUnder the Rules Enabling Act passed in 1934, Congress delegated to the Judiciary nearly all authority to establish rules for the courts, but reserved to itself the power to reject, amend, or defer any such rules. The Conference has played a pivotal role in this process.&nbsp;\r\n</p>\r\n\r\n<p>\r\n\tThe Conference's Standing Committee on Rules of Practice and Procedure and five advisory committees on civil, criminal, appellate, bankruptcy, and evidence rules conduct studies, draft new and amended rules, hold hearings, and make recommendations for Conference action. For example, the Conference recommended, and the Supreme Court adopted, the Federal Rules of Appellate Procedure in 1968, the Federal Rules of Bankruptcy Procedure in 1973, and the rules governing post-conviction collateral (habeas corpus) remedies in 1977. Amendments have been adopted periodically as needed.\r\n</p>\r\n\r\n<p>\r\n\tNew rules typically take at least three years to gain final approval. The Judicial Conference, Supreme Court, and Congress all must assent to proposed changes.\r\n</p>\r\n\r\n<p>\r\n\t“The rulemaking process within the Judiciary is much like a legislative process. And it's not a closed process,” said Judge John D. Bates, chair of the Committee on Rules of Practice and Procedure, who also served as AO director from 2013 to 2015. “Public attendance at meetings is routine, particularly for some of the committees. You get suggestions from academia, from other judges and from members of the bar and from organizations. It’s a very lengthy, thorough, careful process.”\r\n</p>\r\n\r\n<p>\r\n\tIn the early stages of COVID-19, the Judiciary needed to move far more quickly to enable courts to continue functioning by using virtual technologies.\r\n</p>\r\n\r\n<p>\r\n\tCollaborating with other Conference committees, the AO, the Justice Department, and congressional staffers, the Committee on Rules of Practice and Procedure helped in a matter of weeks to hammer out language that ultimately was added to the 2020 CARES Act.\r\n</p>\r\n\r\n<p>\r\n\tThe legislation authorized video and teleconferencing for certain criminal proceedings during the COVID emergency. Shortly after, the Conference’s executive committee approved an exception to rules prohibiting broadcasting of court proceedings, permitting the public and media to listen to virtual sessions.\r\n</p>\r\n\r\n<p>\r\n\tThe CARES Act authorization will end 30 days after the President’s national emergency declaration terminates, or when the Judicial Conference finds that emergency conditions are no longer affecting court functions. The temporary exception to the broadcasting policy will end 120 days after the Judicial Conference finds that the emergency conditions are no longer materially affecting court functions.&nbsp;&nbsp;&nbsp;\r\n</p>\r\n\r\n<p>\r\n\tCollectively, the Judicial Conference of the United States, its 25 committees, and the Administrative Office of the U.S. Courts have fulfilled and expanded on Chief Justice Taft’s guiding vision. By setting policy and overseeing the full range of administrative needs, the Judicial Conference has provided a century of service to the Judiciary, and to the public. &nbsp;\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: ed5724e5-310c-4151-bf8b-bd8d2ec46f4f
+            entity_type: media
+            base_fields:
+              name: judge_bates.png
+              created: '1663878428'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2022-09-23'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery:
+    -
+      uuid: a0ea4863-6c1a-41db-9f31-e5c72477f2f4
+      entity_type: media
+      base_fields:
+        name: first_judicial_conference_uscourts_712x480.jpg
+        created: '1663865457'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph: null
+  field_metatag: null
+  field_news_issue:
+    -
+      uuid: c29b393a-d568-43de-a02e-bf82b4696d47
+      entity_type: node
+      base_fields: {  }
+      bundle: news_issue
+  field_related_topics:
+    -
+      uuid: a5afe17b-cb82-4215-906e-1a59636b2544
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Conference of the United States'
+        weight: 0
+        langcode: en
+        description: '<p>Aritcles related to the Judicial Conference of the United States, the policy making body for the U.S. Courts.</p>'
+        parent: 0
+      bundle: topics
+    -
+      uuid: 2aff839e-baa0-49a8-83e5-a0c1f50f2051
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial History'
+        weight: 0
+        langcode: en
+        description: '<p>All articles related to Judicial History.</p>'
+        parent: 0
+      bundle: topics
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	Subscribe to be notified when the news section is updated.
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary | News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary | News'
+        field_usc_view_more:
+          -
+            uri: 'internal:/node/4283'
+            title: 'See All News Stories'
+            options:
+              attributes: {  }
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: e6e4aa9c-e40e-4002-a9a7-f95b3f1cc998
+      entity_type: taxonomy_term
+      base_fields:
+        name: News
+        weight: 20
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

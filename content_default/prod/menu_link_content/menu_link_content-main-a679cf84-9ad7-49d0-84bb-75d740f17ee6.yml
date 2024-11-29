@@ -1,0 +1,51 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: a679cf84-9ad7-49d0-84bb-75d740f17ee6
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Court Records Schedule'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/1992'
+      title: ''
+      options: {  }
+  weight: 4
+  parent:
+    uuid: 72790a00-4c27-45a1-b94a-4bc19802ecec
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Court Records'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/7'
+          title: ''
+          options: {  }
+      weight: -66
+      parent: ''
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Learn how to file and access case files and court records information. '
+      field_enable_megamenu:
+        -
+          value: '1'
+      field_popular_links: null
+custom_fields:
+  field_description_text:
+    -
+      value: 'These national record disposition schedules govern most judiciary records, including case files.'
+  field_enable_megamenu:
+    -
+      value: '0'
+  field_popular_links: null

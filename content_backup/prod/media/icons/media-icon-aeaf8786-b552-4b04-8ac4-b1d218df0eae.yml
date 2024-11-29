@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: aeaf8786-b552-4b04-8ac4-b1d218df0eae
+entity_type: media
+bundle: icon
+base_fields:
+  name: microphone.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/microphone.svg'
+      url: '/sites/default/files/icons/microphone.svg'

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: d18e7d74-6566-42c7-ae37-20cf79e66587
+entity_type: media
+bundle: icon
+base_fields:
+  name: headphones.svg
+  created: '1721137124'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/headphones.svg'
+      url: '/sites/default/files/icons/headphones.svg'

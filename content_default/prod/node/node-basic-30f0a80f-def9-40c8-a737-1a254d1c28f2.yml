@@ -1,0 +1,155 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 30f0a80f-def9-40c8-a737-1a254d1c28f2
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Handbooks & Manuals'
+  status: true
+  langcode: en
+  created: '1416419942'
+  changed: 1731344962
+  author: james_davison@ao.uscourts.gov
+  url: /data-news/reports/handbooks-manuals
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '43'
+  menu_link:
+    uuid: 50f26b60-541e-4465-8437-b667ea848b71
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Handbooks & Manuals'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/3267'
+          title: ''
+          options: {  }
+      weight: 2
+      parent:
+        uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: Reports
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/3129'
+              title: ''
+              options: {  }
+          weight: 1
+          parent:
+            uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Data & News'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/8'
+                  title: ''
+                  options: {  }
+              weight: -68
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/16578'
+                  title: 'Federal Court Scams'
+                  options: {  }
+                -
+                  uri: 'entity:node/3122'
+                  title: "Director's Annual Report"
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p><a href="node/29817">Asset Management Planning Process (2022)</a> - This handbook communicates the Judiciary’s AMP process and related activities.&nbsp;</p><p><a href="node/9354">Civil Litigation Management Manual (2010)</a> - This manual&nbsp;provides trial judges a handbook on managing civil cases.</p><p><a href="node/4367">Courtroom Technology Manual (1999)</a> -&nbsp;This manual outlines initiatives aimed at reducing the judiciary''s reliance on paper and achieving economics in its way of doing business.</p><p><a href="node/2877">Federal Court System in the U.S.</a> - An introduction for judges and judicial administrators from other countries&nbsp;to the U.S. federal judicial system and its relationship to the other parts of the U.S. government.</p><p><a href="node/2875">Journalist''s Guide to the Federal Courts</a> - Assists reporters assigned to cover the federal courts.</p>'
+      summary: 'The federal Judiciary and Administrative Office produce a variety of publications for the public, Congress, and other parties to educate, inform about the work of the courts.'
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: ee742b71-459f-459b-b53e-71bf1b773b80
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>\r\n\tThe federal Judiciary and Administrative Office produce a variety of publications for the public, Congress, and other parties&nbsp;to educate, inform about the work of the courts.\r\n</p>\r\n"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

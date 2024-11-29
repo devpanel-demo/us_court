@@ -1,0 +1,26 @@
+uuid: e0790377-6255-463f-ba97-ba731958513a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_description
+    - filter.format.wysiwyg
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.usc_video
+  module:
+    - text
+id: paragraph.usc_video.field_usc_description
+field_name: field_usc_description
+entity_type: paragraph
+bundle: usc_video
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+    - wysiwyg
+field_type: text_long

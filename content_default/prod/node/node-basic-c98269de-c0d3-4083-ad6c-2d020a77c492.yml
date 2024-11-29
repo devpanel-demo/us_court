@@ -1,0 +1,221 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: c98269de-c0d3-4083-ad6c-2d020a77c492
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Business Opportunities'
+  status: true
+  langcode: en
+  created: '1409162496'
+  changed: 1727753530
+  author: kate_suttapakti@ao.uscourts.gov
+  url: /court-programs/business-opportunities
+  revision_log_message: 'Edited by Paul.Williams.'
+  revision_uid: '43'
+  menu_link:
+    uuid: 9b0fb8f9-70df-4a8e-be56-88a517b18d33
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Business Opportunities'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/1987'
+          title: ''
+          options: {  }
+      weight: 5
+      parent:
+        uuid: 9a51a6f3-19d1-4705-946b-f4fc46a287cd
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Court Programs'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/court-programs'
+              title: ''
+              options: {  }
+          weight: -70
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Learn about federal court programs and services to help provide fair and impartial justice. '
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/2805'
+              title: 'Bankruptcy Basics'
+              options: {  }
+            -
+              uri: 'entity:node/9330'
+              title: 'Filing Without an Attorney'
+              options: {  }
+            -
+              uri: 'entity:node/1769'
+              title: 'Summoned for Federal Jury Service?'
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: "The U.S. courts provide business opportunities for organizations that follow its' policies."
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: ''
+      summary: "<p>\r\n\tThe federal Judiciary provides business opportunities for companies and organizations that follow the procurement policies of the Judicial Conference of the United States.\r\n</p>\r\n"
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 756cbd4f-a864-40f8-8fee-fd22b1e41411
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1727126092'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Procurement within the federal judiciary is not subject to the Federal Acquisition Regulation (FAR), which applies to most Executive Branch agencies. Judiciary procurement policies are the responsibility of the Procurement Management Division (PMD) within the Administrative Office of the U.S. Courts (AO), and are issued in the <a href="https://node/1972"><em>Guide to Judiciary Policy</em>, Volume 14 (Procurement)</a>. Offerors or contractors wishing to find the full text of individual provisions or clauses incorporated by reference in judiciary solicitations and contracts are directed to <a href="https://file/721">Appendix 1B of Volume 14</a>.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: c38d4087-6ea7-4dc2-8369-02b6e5a27237
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body:
+          -
+            value: '<p>Email: <a href="mailto:albert_tripp@ao.uscourts.gov">Albert Tripp</a><br>Phone: 202-502-1330<br>Fax: 202-502-1066</p>'
+            format: wysiwyg
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title:
+          -
+            value: 'Contact Us'
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<h2>Open Market Solicitations</h2><p>In addition to publishing judiciary procurement policy, PMD provides operational contract support for the AO, and awards various judiciary-wide Blanket Purchase Agreements and indefinite contracts. Information on open market solicitations over $100,000 issued by either PMD,&nbsp;by local court units, or federal public defenders may be found on GSA’s&nbsp;<a href="https://www.fbo.gov/">Federal Business Opportunities</a>. &nbsp;</p><p>Smaller dollar open market solicitations issued by PMD are listed below.&nbsp;Information about smaller dollar open market solicitations issued by local court units or federal public defenders may be found on the individual court or federal public defender website.</p><h2>Limited Sources Justification (LSJ)</h2><table><tbody><tr><td>Task Order</td><td>Point of Contact</td><td>Title/Description</td></tr><tr><td><a href="file/27344/download">USCA15F1003</a>&nbsp;(pdf)</td><td><a href="mailto:Christina_Carter-Kurant@ao.uscourts.gov">Christina_Carter-Kurant@ao.uscourts.gov</a></td><td>LSJ to Extend the AT&amp;T Wireless Services Task Order USCA15F1003 for 6 months in accordance with 2-90C Option to Extend Services (Apr 2013).</td></tr><tr><td><a href="file/28271/download">USCA15BPAC1020</a> (pdf)</td><td><a href="mailto:Candace_Browne@ao.uscourts.gov">Candace_Browne@ao.uscourts.gov</a></td><td>LSJ to extend the Axxum order for up to an additional one year period in accordance with 2-90C Option to Extend Services (Apr 2013).</td></tr></tbody></table><h2>Solicitations for Review</h2><table><tbody><tr><td>Task Order</td><td>Point of Contact</td><td>Title/Description</td></tr><tr><td><a href="file/33982/download">USCA21F4041</a> (pdf)<br><a href="file/33989/download">USCA21F4042</a> (pdf)</td><td><a href="mailto:Candace_Browne@ao.uscourts.gov">Candace_Browne@ao.uscourts.gov</a><br><a href="mailto:Kimeerly_Fleming@ao.uscourts.gov">Kimeerly_Fleming@ao.uscourts.gov</a></td><td>This JEFO supports the award of two task orders, under the General Services Administration’s (GSA’s) Enterprise Infrastructure Solutions (EIS) contract, to AT&amp;T in support of the Administrative of Office of the U.S. Courts’ (AOUSC’s) and the Federal Public Defenders’ (FPD’s) Internet Data Center (IDC) requirements. Both task orders shall have a period of performance consisting of one 24-month base period, one (1) 12-Month option period for the&nbsp; San Diego IDC location, and six (6) 12-month option periods for the Ashburn location.&nbsp;Throughout the period of performance of these task orders, AOUSC and FPD will be working through the competitive procurement process for long-term solutions to fulfill these IDC requirements.</td></tr></tbody></table><p>&nbsp;</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image:
+    -
+      uuid: d290dbd9-a230-4f6c-971d-7a2f01ac1076
+      entity_type: media
+      base_fields:
+        name: doing-business-with-the-court.jpg
+        created: '1429133742'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>\r\n\tThe federal Judiciary provides business opportunities for companies and organizations that follow the policies of the Judicial Conference of the United States.\r\n</p>\r\n"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: 9ac96b48-9cac-42d3-8ca3-078ed3b18aba
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_label:
+          -
+            value: 'Related Links'
+        field_usc_links:
+          -
+            uri: 'internal:/node/1972'
+            title: 'Guide to Judiciary Policy, Vol 14 (Procurement)'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'internal:/file/721'
+            title: 'Solicitation Provisions and Contract Clauses'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'internal:/node/1969'
+            title: 'Court Interpreters Contract Information'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'internal:/node/1962'
+            title: 'Court Reporters Contract Information'
+            options:
+              attributes:
+                target: 0
+        field_usc_title:
+          -
+            value: 'Related Links'
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: eaea8d2d-b4f7-47db-95c7-cf3ba5b1c85a
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Budget, Accounting, Procurement'
+        weight: 5
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

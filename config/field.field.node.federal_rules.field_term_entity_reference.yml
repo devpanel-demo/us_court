@@ -1,0 +1,32 @@
+uuid: b51ffdb6-c171-473a-859b-8da42b629a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term_entity_reference
+    - node.type.federal_rules
+    - taxonomy.vocabulary.committees_
+id: node.federal_rules.field_term_entity_reference
+field_name: field_term_entity_reference
+entity_type: node
+bundle: federal_rules
+label: Committee
+description: 'Note: Standing only applies to Agenda Books, Committee Reports, and Meeting Minutes (not Comments, Suggestions, or Superseded Rules).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      committees_: committees_
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+    behaviors:
+      views-select-list:
+        status: 1
+field_type: entity_reference

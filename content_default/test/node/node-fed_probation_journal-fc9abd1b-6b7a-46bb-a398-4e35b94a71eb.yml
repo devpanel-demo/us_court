@@ -1,0 +1,113 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: fc9abd1b-6b7a-46bb-a398-4e35b94a71eb
+entity_type: node
+bundle: fed_probation_journal
+base_fields:
+  title: 'CE Test The Vexing Dilemma of Character-Based Units (CBUs) in Prison'
+  status: true
+  langcode: en
+  created: '1718132883'
+  changed: 1718132883
+  author: jamesdavison@ao.uscourts.gov
+  url: /ce-test-vexing-dilemma-character-based-units-cbus-prison
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Character-based Units (CBUs) can be defined as prison units, dorms, or in some cases entire facilities that provide enhanced programming in a more residential environment. &nbsp;Validation of recidivism reduction from their use has yet to occur, and validation issues are confounded by problems such as widely disparate variants and requirements and issues with establishing proper companion groups. However, there is evidence that incarcerated populations in CBUs experience more access to programs, staffing, volunteers, and other resources that could serve as an entry point to building up existing strength and assets.</p>'
+      summary: ''
+      format: wysiwyg
+  feeds_item: null
+  field_auther:
+    -
+      value: 'William T. Miller'
+    -
+      value: 'Celine Zidar'
+  field_document_pdf:
+    -
+      uuid: 1a70ef10-467a-4716-8e8f-b13cc63628d7
+      entity_type: media
+      base_fields:
+        name: 82_1_5.pdf
+        created: '1718133033'
+        status: true
+        langcode: en
+      bundle: document
+  field_metatag: null
+  field_mydate:
+    -
+      value: '2023-09-01'
+  field_tags: null
+  field_test:
+    -
+      uuid: a53ba484-e755-4c02-8b19-1ee5a8960aac
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Criminal Justice System'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: probation_journal_topic
+    -
+      uuid: 6bb549a2-76a5-4dda-a4f3-ad9f03f0d130
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Evidence-based Practices'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: probation_journal_topic
+    -
+      uuid: 31fd7e06-6ff6-4694-8c7f-877cea6c0bac
+      entity_type: taxonomy_term
+      base_fields:
+        name: Prison
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: probation_journal_topic
+  field_usc_additional_content:
+    -
+      uuid: 8e5388d1-a3f5-479a-b881-49aede654f45
+      entity_type: paragraph
+      bundle: usc_related_files
+      base_fields:
+        status: true
+        langcode: en
+        created: '1718133134'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: '<p>Not required.</p>'
+            format: wysiwyg
+        field_usc_document:
+          -
+            uuid: 83d703c2-1694-4aae-b58d-cc602fdcebab
+            entity_type: media
+            base_fields:
+              name: federal-probation-journal-june-2016.pdf
+              created: '1718133111'
+              status: true
+              langcode: en
+            bundle: document
+        field_usc_label:
+          -
+            value: test
+        field_usc_title:
+          -
+            value: 'Download the Issue'
+  field_usc_govdelivery_form: null
+  field_usc_import_timestamp: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_volume_and_issue_number:
+    -
+      value: '87:2'
+  field_workbench_access: null

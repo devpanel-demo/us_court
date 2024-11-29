@@ -1,0 +1,25 @@
+{{ attach_library('usc_court_finder/districts_facets') }}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+
+{% embed 'uscgov:details' with {
+  attributes,
+  classes,
+  title_prefix,
+  title_suffix,
+  title_attributes,
+  label,
+  content,
+  open: true,
+  help_link: drupal_config('usc_court_finder.configuration', 'fcf_districts_help'),
+  help_description: 'Closest Districts Definitions' | t,
+} %}
+  {% block details_content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}

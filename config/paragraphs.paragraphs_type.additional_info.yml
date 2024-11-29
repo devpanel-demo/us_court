@@ -1,0 +1,10 @@
+uuid: ff752671-607f-4593-af61-ea1f274a03fd
+langcode: en
+status: true
+dependencies: {  }
+id: additional_info
+label: 'Additional info'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_additional_info'
+behavior_plugins: {  }

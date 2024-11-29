@@ -1,0 +1,7 @@
+{% set items = [{ content: items.0.content }] %}
+
+{{ include('uscgov:label-pill', {
+  field_name,
+  items,
+  label: 'Released on'|t,
+}, with_context = false) }}

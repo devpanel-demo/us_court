@@ -1,0 +1,19 @@
+uuid: d08ca6c3-f51d-4ddf-a2ce-f13d74b6cb29
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_program_description
+field_name: field_program_description
+entity_type: media
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

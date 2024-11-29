@@ -1,0 +1,19 @@
+uuid: ba563b5c-092b-46f1-9e39-fa4aa3e62acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_label
+    - paragraphs.paragraphs_type.usc_related_news
+id: paragraph.usc_related_news.field_usc_label
+field_name: field_usc_label
+entity_type: paragraph
+bundle: usc_related_news
+label: Label
+description: 'A human-friendly identifier used for the Paragraph Library. It is not shown on the attached page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

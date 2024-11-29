@@ -1,0 +1,19 @@
+uuid: eaf10371-bad9-4a59-9708-3d1b3560eb9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_authorized_judgeships
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_authorized_judgeships
+field_name: field_authorized_judgeships
+entity_type: paragraph
+bundle: judicial_vacancy
+label: 'Authorized Judgeships'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: 4ee71c53-2a0d-4aff-8121-c75c2518db58
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
+id: footer
+label: 'Footer Top'
+description: 'Appears in gray above the footer'
+locked: true

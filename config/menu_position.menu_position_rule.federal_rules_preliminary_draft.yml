@@ -1,0 +1,33 @@
+uuid: 0f10ce5d-fc36-4ba7-b376-660f232a026f
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - system
+id: federal_rules_preliminary_draft
+label: 'Federal Rules Preliminary Draft'
+menu_name: main
+parent: 'menu_link_content:8ebd282a-fb3a-45b7-9d9c-e8ee0bf59a0a'
+menu_link: 'menu_position_link:federal_rules_preliminary_draft'
+enabled: true
+weight: 5
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/rules-policies/archives/preliminary-draft/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      federal_rules: federal_rules

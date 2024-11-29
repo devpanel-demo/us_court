@@ -1,0 +1,27 @@
+{% import '@uscgov/shared/macros/_bytestosize.twig' as bytestosize %}
+{% import '@uscgov/shared/macros/_filetype.twig' as filetype %}
+{% set filesize = bytestosize.bytestosize(media.field_media_document.entity.getSize()) %}
+{% set icon = filetype.filetype(media.field_media_document.entity.getMimeType()) %}
+{% set fileuri = media.field_media_document.entity.getFileUri() %}
+
+{% if filesize and fileuri %}
+  {% set filemeta = fileuri|get_ext ~ ', ' ~ filesize %}
+{% endif %}
+
+<a{{ attributes.addClass('button', 'button--download') }} href="{{ content.field_media_document|render|striptags|trim }}">
+  <div class="download-button">
+    <div class="{{ icon }} download-button__icon-type usc-icon icon-clear"></div>
+    <div class="download-button__content">
+      <div class="download-button__label">
+      {{ download_text|render|striptags|trim ?: 'Download'|t }}
+      {% if screenreader_text|render|striptags|trim %}
+        <div class="visually-hidden">{{ screenreader_text }}</div>
+      {% endif %}
+      </div>
+      {% if filemeta %}
+        <div class="download-button__meta">{{ filemeta }}</div>
+      {% endif %}
+    </div>
+    <div class="download-button_icon-download"></div>
+  </div>
+</a>

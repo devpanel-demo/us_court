@@ -1,0 +1,32 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 2804631d-f6be-4006-b4a3-cdd6674d20c6
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Testing table styles'
+  status: true
+  langcode: en
+  created: '1726518789'
+  changed: 1726518789
+  author: Emily_Poland@ao.uscourts.gov
+  url: /testing-table-styles
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:uswds/table {\"buttonStates\":{\"intColBef\":true,\"intColAft\":false,\"intRowBef\":true,\"intRowAft\":false,\"delCol\":true,\"delRow\":true},\"currentCell\":{\"row\":\"-1\",\"col\":\"0\"},\"showColHeadings\":true,\"useRowHeadings\":true,\"showCaption\":true,\"numRows\":3,\"showTable\":true,\"sortable\":true,\"borderless\":true} -->\r\n<table class=\"wp-block-uswds-table usa-table usa-table--borderless\"><caption>Table caption aka name of table. enabled column and row headers and made sortable - made this option borderless. </caption><thead><tr><th scope=\"col\" role=\"columnheader\" class=\"sort\" data-sort=\"colnum-0\">Column Header</th><th scope=\"col\" role=\"columnheader\" class=\"sort\" data-sort=\"colnum-1\"></th><th scope=\"col\" role=\"columnheader\" class=\"sort\" data-sort=\"colnum-2\"></th></tr></thead><tbody class=\"list\"><tr><th class=\"colnum-0\" scope=\"row\">Column 1</th><td class=\"colnum-1\">Column 2</td><td class=\"colnum-2\">Column 3</td></tr><tr><th class=\"colnum-0\" scope=\"row\">Row 1</th><td class=\"colnum-1\">Row 2</td><td class=\"colnum-2\">Row 3</td></tr><tr><th class=\"colnum-0\" scope=\"row\"></th><td class=\"colnum-1\"></td><td class=\"colnum-2\"></td></tr></tbody></table>\r\n<!-- /wp:uswds/table -->\r\n\r\n<!-- wp:uswds/table {\"buttonStates\":{\"intColBef\":true,\"intColAft\":true,\"intRowBef\":true,\"intRowAft\":true,\"delCol\":true,\"delRow\":true},\"currentCell\":{\"row\":\"0\",\"col\":\"0\"},\"showCaption\":true,\"numRows\":\"3\",\"showTable\":true,\"striped\":true} -->\r\n<table class=\"wp-block-uswds-table usa-table usa-table--striped\"><caption>Made table striped, no enabling of column and row headers, and did make sorting available</caption><tbody class=\"list\"><tr><td class=\"colnum-0\"></td><td class=\"colnum-1\"></td><td class=\"colnum-2\"></td></tr><tr><td class=\"colnum-0\"></td><td class=\"colnum-1\"></td><td class=\"colnum-2\"></td></tr><tr><td class=\"colnum-0\"></td><td class=\"colnum-1\"></td><td class=\"colnum-2\"></td></tr></tbody></table>\r\n<!-- /wp:uswds/table -->\r\n\r\n<!-- wp:uswds/table {\"buttonStates\":{\"intColBef\":true,\"intColAft\":true,\"intRowBef\":true,\"intRowAft\":true,\"delCol\":true,\"delRow\":true},\"showCaption\":true,\"numRows\":\"3\",\"showTable\":true} -->\r\n<table class=\"wp-block-uswds-table usa-table\"><caption>Regular table - nothing fancy</caption><tbody class=\"list\"><tr><td class=\"colnum-0\"></td><td class=\"colnum-1\"></td><td class=\"colnum-2\"></td></tr><tr><td class=\"colnum-0\"></td><td class=\"colnum-1\"></td><td class=\"colnum-2\"></td></tr><tr><td class=\"colnum-0\"></td><td class=\"colnum-1\"></td><td class=\"colnum-2\"></td></tr></tbody></table>\r\n<!-- /wp:uswds/table -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 803ccd26-6c80-4a76-960f-6bc6072c3b03
+entity_type: media
+bundle: icon
+base_fields:
+  name: briefcase-solid.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/briefcase-solid.svg'
+      url: '/sites/default/files/icons/briefcase-solid.svg'

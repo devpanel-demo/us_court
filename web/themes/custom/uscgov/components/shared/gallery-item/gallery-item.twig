@@ -1,0 +1,21 @@
+{%
+  set classes = [
+    'splide__slide',
+    'is-image-slide'
+  ]
+%}
+<li{{ attributes.addClass(classes).setAttribute('data-splide-hash', hash) }}>
+  {{ title_suffix }}
+  <div class="slide-content-wrapper">
+    {% if media %}
+      <div class="splide__slide__container" asset-url="{{asset}}">
+        {{ media }}
+      </div>
+    {% endif %}
+    {% if block('details')|trim %}
+      <div class="details-box">
+        {% block details %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</li>

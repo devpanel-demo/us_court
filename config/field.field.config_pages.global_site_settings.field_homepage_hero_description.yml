@@ -1,0 +1,21 @@
+uuid: 2f4560a7-23da-4779-865f-de8161979640
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_homepage_hero_description
+id: config_pages.global_site_settings.field_homepage_hero_description
+field_name: field_homepage_hero_description
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Homepage Hero Description'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly and impartially, within the jurisdiction established by the Constitution and Congress. This section will help you learn more about the Judicial Branch and its work.'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

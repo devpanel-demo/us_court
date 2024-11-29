@@ -1,0 +1,22 @@
+uuid: f393f8a6-55d0-424c-a9af-078644827dfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fed_probation_journal
+id: node.fed_probation_journal.promote
+field_name: promote
+entity_type: node
+bundle: fed_probation_journal
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

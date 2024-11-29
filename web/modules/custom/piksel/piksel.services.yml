@@ -1,0 +1,20 @@
+services:
+  # The service that provides the piksel media items.
+  piksel.search:
+    class: Drupal\piksel\PikselSearch
+    arguments: ['@plugin.manager.piksel_provider', '@pager.manager', '@piksel.cache.wrapper']
+  # Add a plugin manager for piksel media provider plugins.
+  plugin.manager.piksel_provider:
+    class: Drupal\piksel\Plugin\PikselProviderManager
+    parent: default_plugin_manager
+  # Add a cache wrapper service to cache API calls of plugins.
+  piksel.cache.wrapper:
+    class: Drupal\piksel\PikselCacheWrapper
+    arguments: ['@cache.piksel', '@datetime.time']
+  # Add a custom cache bin for piksel media API results.
+  cache.piksel:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    tags:
+      - { name: cache.bin }
+    factory: cache_factory:get
+    arguments: [ piksel ]

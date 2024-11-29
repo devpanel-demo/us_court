@@ -1,0 +1,105 @@
+uuid: 36f2c397-7cb5-4982-9849-62e049df3630
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: cameras_in_courts_thumbnails
+label: 'Cameras in Courts Thumbnails'
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      fields:
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          plugin_id: custom
+          label: ''
+          alter:
+            text: '<p class="playlist-status" tabindex="0"><i class="fa fa-play-circle-o fa-2x"></i><br>Click to Play Video</p>'
+          element_label_colon: false
+          element_default_classes: false
+      pager:
+        type: none
+        options:
+          offset: 0
+      exposed_form:
+        type: basic
+      access:
+        type: perm
+      cache:
+        type: none
+      arguments:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          plugin_id: node_nid
+          default_action: empty
+          default_argument_type: fixed
+          summary_options:
+            items_per_page: 25
+          summary:
+            number_of_records: 0
+            format: default_summary
+      style:
+        type: default
+        options:
+          row_class: citc-thumbnail-row
+      row:
+        type: fields
+      query:
+        type: views_query
+        options: {  }
+      relationships:
+        field_piksel_programs_value:
+          id: field_piksel_programs_value
+          table: node__field_piksel_programs
+          field: field_piksel_programs_value
+          plugin_id: standard
+          required: true
+          delta: '-1'
+          target_type: paragraph
+          field_name: field_piksel_programs
+      use_more_always: false
+      display_extenders: {  }
+      style_plugin: default
+      style_options:
+        row_class: citc-thumbnail-row
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_1:
+    id: block_1
+    display_title: Block
+    display_plugin: block
+    position: 2
+    display_options:
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 4aa5b3bc-4b29-4ba8-b52f-6e5bfebe261f
+entity_type: media
+bundle: icon
+base_fields:
+  name: comment-outline.svg
+  created: '1721136999'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/comment-outline.svg'
+      url: '/sites/default/files/icons/comment-outline.svg'

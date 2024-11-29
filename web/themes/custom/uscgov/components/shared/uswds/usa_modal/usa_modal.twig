@@ -1,0 +1,50 @@
+{% set theme_path = '/' ~ componentMetadata.path|replace({"/components/shared/uswds/usa_modal": ''}) %}
+{% set modal_id = random() %}
+<div{{ attributes }}>
+  {# Button #}
+  {% set button_attributes = create_attribute() %}
+  <a {{ button_attributes
+    .addClass(is_button_unstyled ? 'usa-link' : 'usa-button')
+    .setAttribute('href', "#" ~ modal_id)
+    .setAttribute('aria-controls', modal_id)
+    .setAttribute('data-open-modal', true)
+  }}>
+    {{ button_text }}
+  </a>
+
+  {# Modal #}
+  {% set modal_attributes = create_attribute() %}
+  {%
+    set modal_classes = [
+      'usa-modal',
+      is_large ? 'usa-modal--lg',
+    ]
+  %}
+  <div {{ modal_attributes
+    .addClass(modal_classes)
+    .setAttribute('id', modal_id)
+    .setAttribute('aria-labelledby', modal_id ~ "-heading")
+    .setAttribute('aria-describedby', modal_id ~ "-description")
+  }}>
+    <div class="usa-modal__content">
+      <div class="usa-modal__main">
+        <h2 class="usa-modal__heading" id="modal-1-heading">
+          {{ modal_title }}
+        </h2>
+        <div class="usa-prose" id={{ modal_id ~ "-description" }}>
+          {{ modal_content }}
+        </div>
+      </div>
+      <button
+        type="button"
+        class="usa-button usa-modal__close"
+        aria-label="Close this window"
+        data-close-modal
+      >
+        <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+          <use xlink:href="{{ theme_path ~ '/dist/uswds/img/sprite.svg#close' }}"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

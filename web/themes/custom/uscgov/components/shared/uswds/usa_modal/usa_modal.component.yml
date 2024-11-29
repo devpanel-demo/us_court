@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Modal
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - button_text
+    - modal_title
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    button_text:
+      title: Button Text
+      type: string
+      description: The text of the opener button.
+    is_large:
+      title: Is Large Modal
+      type: boolean
+      description: Show large size modal.
+    is_button_unstyled:
+      title: Is Button Unstyled
+      type: boolean
+      description: Show button as link.
+    modal_title:
+      title: Modal Title
+      type: string
+      description: The modal title.
+slots:
+  modal_content:
+    title: Modal Content
+libraryOverrides:
+  dependencies:
+    - uscgov/uswds-button
+    - uscgov/uswds-icon

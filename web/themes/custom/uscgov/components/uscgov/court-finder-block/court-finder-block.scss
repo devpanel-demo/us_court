@@ -1,0 +1,150 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
+.court-finder-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid var(--border-muted-dark);
+  background: var(--surface-base-light);
+  color: var(--text-on-surface-base-light);
+}
+
+.court-finder-block__toggle {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 30px;
+  border: 1px solid var(--border-muted-dark);
+  background: var(--surface-base-medium);
+}
+
+.court-finder-block__title {
+  @include u-font-family('sans');
+  margin: 0;
+  color: var(--text-on-surface-base-light-dark);
+}
+
+.court-finder-block__description {
+  margin: 0;
+}
+
+.court-finder-block__toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 30px;
+  padding: 5px 15px;
+  font-size: 14px;
+  color: var(--text-on-surface-base-medium);
+  white-space: nowrap;
+  cursor: pointer;
+
+  input:checked + & {
+    background: var(--surface-button);
+    color: var(--text-on-surface-button);
+
+    &:after {
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: "";
+      background: currentColor;
+      mask-image: url('images/check.svg');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+  }
+
+  input:focus + & {
+    outline: .25rem solid #2491ff;
+  }
+}
+
+.court-finder-block__location-form-label {
+  font-size: 13px;
+}
+
+.court-finder-block__form {
+  display: none;
+}
+
+.court-finder-block__form-item-wrapper {
+  display: flex;
+  height: 40px;
+  background: white;
+  border-radius: 30px;
+  border: 1px solid var(--border-form);
+
+  &:has(input:focus) {
+    outline: .25rem solid #2491ff;
+    outline-offset: 2px;
+  }
+}
+
+.court-finder-block[data-active="court-location-radio"] {
+  .court-finder-block__form--location {
+    display: block;
+  }
+}
+
+.court-finder-block[data-active="court-name-radio"] {
+  .court-finder-block__form--name {
+    display: block;
+  }
+}
+
+.court-finder-block__input {
+  flex-shrink: 1;
+  width: 100%;
+  padding-inline: 10px;
+  border: 0;
+  appearance: none;
+  background: transparent;
+
+  // Override specificity
+  &[class][class][class] {
+    border: 0;
+    background-image: none;
+  }
+
+  &:not([disabled]):focus {
+    outline: 0;
+  }
+}
+
+.court-finder-block__form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-on-surface-body);
+  cursor: pointer;
+
+  &:after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    content: "";
+    background: currentColor;
+    mask-image: url('images/magnify.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+}
+
+.court-finder-block__form-label {
+  font-size: 13px;
+  color: var(--text-on-surface-base-light);
+}

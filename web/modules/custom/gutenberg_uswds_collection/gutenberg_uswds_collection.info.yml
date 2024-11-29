@@ -1,0 +1,7 @@
+name: Gutenberg Collection
+type: module
+description: Allow editors to embed content collections in Gutenberg pages.
+package: Content
+core_version_requirement: ^9.3 || ^10
+dependencies:
+  - gutenberg:gutenberg

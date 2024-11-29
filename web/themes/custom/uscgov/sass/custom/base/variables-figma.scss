@@ -1,0 +1,104 @@
+@forward "../../sass/uswds/settings";
+@use "../global/media-queries" as *;
+@use "uswds-core" as *;
+
+.uscgov-root,
+.editor-styles-wrapper,
+.interface-interface-skeleton__sidebar {
+  --color-primitive-neutral-white: white;
+  --color-primitive-neutral-base-light: #FEFEFE;
+  --color-primitive-neutral-base-dark: #080A0D;
+  --color-primitive-neutral-gray-background: #F9FAFB;
+  --color-primitive-neutral-gray-surface-variant: #F8F9FF;
+  --color-primitive-neutral-gray-background-variant: #F4F6FB;
+  --color-primitive-neutral-gray-surface-variant-dark: #E4E4E4;
+  --color-primitive-neutral-gray-muted-light: #BEC2CC;
+  --color-primitive-neutral-gray-muted-dark: #8C91A0;
+  --color-primitive-neutral-gray-medium: #727583;
+  --color-primitive-neutral-gray-base-secondary-dark: #{color('base-dark')}; // #525661
+
+  --color-primitive-theme-primary-lighter: #{color('primary-lighter')}; // #E6F1FA
+  --color-primitive-theme-primary-light: #73A4CF;
+  --color-primitive-theme-primary-primary: #{color('primary')}; // #0057A3
+  --color-primitive-theme-primary-dark: #{color('primary-vivid')}; // #01417F
+  --color-primitive-theme-primary-darker: #{color('primary-dark')}; // #002D5A;
+  --color-primitive-theme-primary-darkest: #{color('primary-darker')}; // #002045
+
+  --color-primitive-theme-secondary-gold-lighter: #FCF6E7;
+  --color-primitive-theme-secondary-gold-light: #{color('secondary-light')}; // #EFD388
+  --color-primitive-theme-secondary-gold-primary: #DFA611;
+  --color-primitive-theme-secondary-gold-dark: #A07510;
+  --color-primitive-theme-secondary-gold-darker: #725214;
+  --color-primitive-theme-secondary-gold-darkest: #433205;
+
+  --color-primitive-theme-secondary-gray-lighter: #F1F1F3;
+  --color-primitive-theme-secondary-gray-light: #AAACB5;
+  --color-primitive-theme-secondary-gray-primary: #727583;
+  --color-primitive-theme-secondary-gray-dark: #44464F;
+  --color-primitive-theme-secondary-gray-darker: #222327;
+  --color-primitive-theme-secondary-gray-darkest: #0B0C0D;
+
+  --color-primitive-theme-accent-red-lighter: #DAB4A9;
+  --color-primitive-theme-accent-red-light: #C76F57;
+  --color-primitive-theme-accent-red-primary: #A34329;
+  --color-primitive-theme-accent-red-dark: #722F1D;
+  --color-primitive-theme-accent-red-darker: #522215;
+
+  --color-primitive-theme-accent-green-lighter: #C9D6B3;
+  --color-primitive-theme-accent-green-light: #819E4D;
+  --color-primitive-theme-accent-green-primary: #4B7500;
+  --color-primitive-theme-accent-green-dark: #2D4600;
+  --color-primitive-theme-accent-green-darker: #1E2F00;
+
+  --color-primitive-theme-accent-gold-lighter: var(--color-primitive-theme-secondary-gold-lighter);
+  --color-primitive-theme-accent-gold-light: var(--color-primitive-theme-secondary-gold-light);
+  --color-primitive-theme-accent-gold-primary: var(--color-primitive-theme-secondary-gold-primary);
+  --color-primitive-theme-accent-gold-dark: #A07510;
+  --color-primitive-theme-accent-gold-darker: var(--color-primitive-theme-secondary-gold-darker);
+
+
+  --color-token-base-background-surface: var(--color-primitive-neutral-base-light);
+  --color-token-base-background-surface-variant: var(--color-primitive-neutral-gray-surface-variant);
+  --color-token-base-background-background-variant: var(--color-primitive-neutral-gray-background-variant);
+  --color-token-base-background-background: var(--color-primitive-neutral-gray-background);
+  --color-token-base-background-surface-variant-dark: var(--color-primitive-neutral-gray-surface-variant-dark);
+
+  --color-token-base-border-muted-dark: var(--color-primitive-neutral-gray-muted-dark);
+  --color-token-base-border-base-secondary-dark: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --color-token-base-border-muted-light: var(--color-primitive-neutral-gray-muted-light);
+
+  --color-token-base-text-icon-base-dark: var(--color-token-base-theme-base-dark);
+  --color-token-base-text-icon-base-secondary-dark: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --color-token-base-text-icon-muted-dark: var(--color-primitive-neutral-gray-muted-dark);
+  --color-token-base-text-icon-muted-light: var(--color-primitive-neutral-gray-muted-light);
+  --color-token-base-text-icon-base-light: var(--color-primitive-neutral-base-light);
+
+  --color-token-base-theme-base-light: #FEFEFE;
+  --color-token-base-theme-base-dark: #080A0D;
+
+  --color-token-primary-link-icon-link: var(--color-token-primary-blue-primary);
+  --color-token-primary-link-icon-icon: var(--color-token-primary-blue-dark);
+  --color-token-primary-link-icon-link-visited: ;
+  --color-token-primary-link-icon-link-hover: var(--color-token-primary-blue-dark);
+
+  --color-token-primary-blue-darkest: var(--color-primitive-theme-primary-darkest);
+  --color-token-primary-blue-darker: var(--color-primitive-theme-primary-darker);
+  --color-token-primary-blue-dark: var(--color-primitive-theme-primary-dark);
+  --color-token-primary-blue-primary: var(--color-primitive-theme-primary-primary);
+  --color-token-primary-blue-light: var(--color-primitive-theme-primary-light);
+  --color-token-primary-blue-lighter: var(--color-primitive-theme-primary-lighter);
+
+  --color-token-secondary-gold-lighter: var(--color-primitive-theme-secondary-gold-lighter);
+  --color-token-secondary-gold-light: var(--color-primitive-theme-secondary-gold-light);
+  --color-token-secondary-gold-primary: var(--color-primitive-theme-secondary-gold-primary);
+  --color-token-secondary-gold-dark: var(--color-primitive-theme-secondary-gold-dark);
+  --color-token-secondary-gold-darker: var(--color-primitive-theme-secondary-gold-darker);
+  --color-token-secondary-gold-darkest: var(--color-primitive-theme-secondary-gold-darkest);
+
+  --color-token-secondary-gray-lighter: var(--color-primitive-theme-secondary-gray-lighter);
+  --color-token-secondary-gray-light: var(--color-primitive-theme-secondary-gray-light);
+  --color-token-secondary-gray-primary: var(--color-primitive-theme-secondary-gray-primary);
+  --color-token-secondary-gray-dark: var(--color-primitive-theme-secondary-gray-dark);
+  --color-token-secondary-gray-darker: var(--color-primitive-theme-secondary-gray-darker);
+  --color-token-secondary-gray-darkest: var(--color-primitive-theme-secondary-gray-darkest);
+}

@@ -1,0 +1,24 @@
+uuid: dc66a6b6-8fe5-4beb-bd1b-947435419f00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_tableau_object_code
+    - filter.format.widget
+    - paragraphs.paragraphs_type.usc_map
+  module:
+    - text
+id: paragraph.usc_map.field_usc_tableau_object_code
+field_name: field_usc_tableau_object_code
+entity_type: paragraph
+bundle: usc_map
+label: 'Tableau object code'
+description: 'Enter markup between <object>...</object> tag.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - widget
+field_type: text_long

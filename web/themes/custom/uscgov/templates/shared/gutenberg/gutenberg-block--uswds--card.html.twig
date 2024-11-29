@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an example Gutenberg block server-side.
+ *
+ * Available variables:
+ * - block_name: The Gutenberg block name.
+ * - block_content: The content of this block.
+ * - block_attributes: The attributes of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *
+ * @see template_preprocess_gutenberg_block()
+ * @see template_preprocess_gutenberg_block__uswds__card()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set settings = {
+  wrapper_element: 'article',
+  flag: block_attributes.layout == 'flag' ? true : false,
+  header_first: block_attributes.titleAtTop ? true : false,
+  media_inset: block_attributes.insetMedia ? true : false,
+  media_right: block_attributes.mediaOnRight ? true : false,
+  media_exdent: false,
+  body_exdent: false,
+  footer_exdent: false,
+} %}
+
+{% embed 'uscgov:usa_card' with {
+  attributes,
+  title_suffix,
+  classes: '',
+  settings,
+  title: block_attributes.title|default(''),
+  image: {
+    type: block_attributes.mediaEntity.media_details.sizes.large.source_url ? 'url' : 'none',
+    url: block_attributes.mediaEntity.media_details.sizes.large.source_url ?: '',
+    alt: block_attributes.mediaEntity.alt ?: '',
+    title: block_attributes.mediaEntity.title ?: ''
+  },
+  body: block_content,
+  cta: {
+    show: block_attributes.showButton ? true : false,
+    title: block_attributes.button ?: '',
+    url: block_attributes.buttonUrl ?: '',
+    target: block_attributes.buttonOpenNewTab ? '_blank' : '_self'
+  },
+} only %}
+  {% block body %}
+    {{ body }}
+  {% endblock %}
+{% endembed %}

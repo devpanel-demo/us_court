@@ -1,0 +1,7 @@
+name: 'US Courts sitemap'
+type: module
+description: 'Alter the simple sitemap for media entities'
+package: US Courts
+core_version_requirement: ^10
+dependencies:
+  - simple_sitemap:simple_sitemap

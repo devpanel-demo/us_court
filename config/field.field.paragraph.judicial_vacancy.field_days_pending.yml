@@ -1,0 +1,23 @@
+uuid: 45f14ba3-c9fd-4edf-99e5-55841f3aec2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_days_pending
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_days_pending
+field_name: field_days_pending
+entity_type: paragraph
+bundle: judicial_vacancy
+label: 'Days Pending'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

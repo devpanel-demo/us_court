@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 4297a65d-f7e4-4ee3-b3f0-9bad96a437fa
+entity_type: media
+bundle: icon
+base_fields:
+  name: paste.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/paste.svg'
+      url: '/sites/default/files/icons/paste.svg'

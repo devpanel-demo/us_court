@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 505ff188-8aa8-4077-ae38-403f660abb67
+entity_type: media
+bundle: icon
+base_fields:
+  name: chart-bar.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/chart-bar.svg'
+      url: '/sites/default/files/icons/chart-bar.svg'

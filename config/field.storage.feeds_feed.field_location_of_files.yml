@@ -1,0 +1,21 @@
+uuid: ae14ced8-59c0-47b8-ad10-05e1858e44e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - feeds
+id: feeds_feed.field_location_of_files
+field_name: field_location_of_files
+entity_type: feeds_feed
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

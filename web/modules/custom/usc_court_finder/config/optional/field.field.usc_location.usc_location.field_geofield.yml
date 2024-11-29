@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.usc_location.field_geofield
+  module:
+    - geofield
+    - usc_court_finder
+id: usc_location.usc_location.field_geofield
+field_name: field_geofield
+entity_type: usc_location
+bundle: usc_location
+label: Coordinates
+description: 'Geographic coordinates'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

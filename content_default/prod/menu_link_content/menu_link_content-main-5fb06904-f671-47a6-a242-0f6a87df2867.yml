@@ -1,0 +1,130 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 5fb06904-f671-47a6-a242-0f6a87df2867
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Korematsu v. U.S. — Balancing Liberties and Safety'
+  enabled: true
+  expanded: false
+  langcode: und
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/15030'
+      title: null
+      options: {  }
+  weight: 0
+  parent:
+    uuid: e863de3c-84dc-42e5-bf2a-9a248cf70edd
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Asian Pacific American Heritage Month'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/13323'
+          title: ''
+          options: {  }
+      weight: -57
+      parent:
+        uuid: de25d003-95a3-41ef-97b0-95814cf8bbbb
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Annual Observances'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/4296'
+              title: ''
+              options: {  }
+          weight: 2
+          parent:
+            uuid: 04eb5c59-a6cb-4eba-8826-69f380a397f3
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Educational Resources'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/4314'
+                  title: ''
+                  options: {  }
+              weight: -48
+              parent:
+                uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'About Federal Courts'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/4'
+                      title: ''
+                      options: {  }
+                  weight: -71
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/12916'
+                      title: 'Court Website Links'
+                      options: {  }
+                    -
+                      uri: 'entity:node/2769'
+                      title: 'Authorized Judgeships'
+                      options: {  }
+                    -
+                      uri: 'entity:node/4305'
+                      title: 'Supreme Court Landmarks'
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Find realistic simulations and memorable, interactive approaches to court basics.'
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu: null
+  field_popular_links: null

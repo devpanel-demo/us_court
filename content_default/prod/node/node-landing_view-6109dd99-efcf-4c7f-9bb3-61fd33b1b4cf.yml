@@ -1,0 +1,191 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 6109dd99-efcf-4c7f-9bb3-61fd33b1b4cf
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Public Comment on Proposed Changes to Code of Conduct for U.S. Judges and Judicial Conduct and Disability Rules'
+  status: true
+  langcode: en
+  created: '1536690895'
+  changed: 1727753530
+  author: george_cherussery@ao.uscourts.gov
+  url: /public-comment-proposed-changes-code-conduct-us-judges-and-judicial-conduct-and-disability-rules
+  revision_log_message: 'Edited by george.cherussery.'
+  revision_uid: '1'
+  menu_link:
+    uuid: 88beddc6-f9b4-46b0-ad5d-12872087a8c0
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Judge Comments'
+      enabled: true
+      expanded: false
+      langcode: und
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/16862'
+          title: null
+          options:
+            attributes: {  }
+            item_attributes:
+              id: ''
+              class: ''
+              style: ''
+      weight: 0
+      parent:
+        uuid: 4178ad5d-fbe2-46a6-b477-152168e517da
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Proposed Changes to Code of Conduct for U.S. Judges and Judicial Conduct and Disability Rules'
+          enabled: true
+          expanded: false
+          langcode: und
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/16859'
+              title: null
+              options: {  }
+          weight: 0
+          parent:
+            uuid: ccf20a41-2329-4635-af8e-b1ce38a4fc5d
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Code of Conduct for U.S. Judges'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/1796'
+                  title: ''
+                  options: {  }
+              weight: 8
+              parent:
+                uuid: c2d8ce5e-02f9-4c0a-8864-dfed0dff70ad
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Ethics Policies'
+                  enabled: true
+                  expanded: false
+                  langcode: und
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/1764'
+                      title: null
+                      options: {  }
+                  weight: 6
+                  parent:
+                    uuid: 55deb605-f6af-409a-960b-073c772000bb
+                    entity_type: menu_link_content
+                    bundle: main
+                    base_fields:
+                      title: 'Judiciary Policies'
+                      enabled: true
+                      expanded: false
+                      langcode: en
+                      menu_name: main
+                      description: null
+                      link:
+                        -
+                          uri: 'entity:node/1983'
+                          title: ''
+                          options: {  }
+                      weight: 7
+                      parent:
+                        uuid: 723fb64b-6e47-4536-8468-7e967dd271f6
+                        entity_type: menu_link_content
+                        bundle: main
+                        base_fields:
+                          title: 'Administration & Policies'
+                          enabled: true
+                          expanded: false
+                          langcode: en
+                          menu_name: main
+                          description: null
+                          link:
+                            -
+                              uri: 'internal:/administration-policies'
+                              title: ''
+                              options: {  }
+                          weight: -69
+                          parent: ''
+                        custom_fields:
+                          field_description_text:
+                            -
+                              value: 'Administration and governance of the Judicial occurs at both a national and regional level.'
+                          field_enable_megamenu:
+                            -
+                              value: '1'
+                          field_popular_links:
+                            -
+                              uri: 'entity:node/1796'
+                              title: 'Code of Conduct for U.S. Judges'
+                              options: {  }
+                    custom_fields:
+                      field_description_text:
+                        -
+                          value: 'This policy guidance governs the national operations of the federal judiciary.'
+                      field_enable_megamenu:
+                        -
+                          value: '0'
+                      field_popular_links: null
+                custom_fields:
+                  field_description_text: null
+                  field_enable_megamenu: null
+                  field_popular_links: null
+            custom_fields:
+              field_description_text: null
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu: null
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:drupalblock/views-block-usc-judge-comments-block-usc-judge-comments {"blockId":"views_block:usc_judge_comments-block_usc_judge_comments"} /-->'
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>Read public comments on proposed changes to the Code of Conduct for U.S. Judges and the Judicial Conduct and Disability Rules.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 0fce0a29-d388-4550-abef-3f51cd4f4b05
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Ethics & Compensation'
+        weight: 15
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

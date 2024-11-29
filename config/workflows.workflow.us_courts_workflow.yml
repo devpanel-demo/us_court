@@ -1,0 +1,149 @@
+uuid: 3122b209-3894-4ef7-838b-19b740ff4e78
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic
+    - node.type.camera
+    - node.type.data_table
+    - node.type.educational_activity
+    - node.type.faqs
+    - node.type.fed_probation_journal
+    - node.type.federal_rules
+    - node.type.fee
+    - node.type.form
+    - node.type.judge
+    - node.type.judge_comments
+    - node.type.landing_view
+    - node.type.news
+    - node.type.news_issue
+    - node.type.report
+  module:
+    - content_moderation
+id: us_courts_workflow
+label: 'US Courts Workflow'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      weight: 0
+      published: false
+      default_revision: false
+    needs_review:
+      label: 'Needs Approval'
+      weight: 2
+      published: false
+      default_revision: false
+    published:
+      label: Published
+      weight: 1
+      published: true
+      default_revision: true
+    ready_publishing:
+      label: 'Ready for Publishing'
+      weight: 3
+      published: false
+      default_revision: false
+    unpublished:
+      label: Unpublished
+      weight: 4
+      published: false
+      default_revision: true
+  transitions:
+    draft_draft:
+      label: draft-draft
+      from:
+        - draft
+      to: draft
+      weight: 12
+    draft_needs_review:
+      label: draft-needs_review
+      from:
+        - draft
+      to: needs_review
+      weight: 0
+    draft_published:
+      label: draft_published
+      from:
+        - draft
+      to: published
+      weight: 10
+    draft_ready:
+      label: draft_ready
+      from:
+        - draft
+      to: ready_publishing
+      weight: 9
+    needs_review_draft:
+      label: needs_review-draft
+      from:
+        - needs_review
+      to: draft
+      weight: 1
+    needs_review_ready_publishing:
+      label: needs_review-ready_publishing
+      from:
+        - needs_review
+      to: ready_publishing
+      weight: 2
+    published_draft:
+      label: published-draft
+      from:
+        - published
+      to: draft
+      weight: 6
+    published_needs_review:
+      label: published-needs_review
+      from:
+        - published
+      to: needs_review
+      weight: 7
+    published_ready_publishing:
+      label: published-ready_publishing
+      from:
+        - published
+      to: ready_publishing
+      weight: 8
+    ready_publishing_draft:
+      label: ready_publishing-draft
+      from:
+        - ready_publishing
+      to: draft
+      weight: 3
+    ready_publishing_needs_review:
+      label: ready_publishing-needs_review
+      from:
+        - ready_publishing
+      to: needs_review
+      weight: 4
+    ready_publishing_published:
+      label: ready_publishing-published
+      from:
+        - ready_publishing
+      to: published
+      weight: 5
+    unpublished:
+      label: Unpublished
+      from:
+        - published
+      to: unpublished
+      weight: 11
+  entity_types:
+    node:
+      - basic
+      - camera
+      - data_table
+      - educational_activity
+      - faqs
+      - fed_probation_journal
+      - federal_rules
+      - fee
+      - form
+      - judge
+      - judge_comments
+      - landing_view
+      - news
+      - news_issue
+      - report
+  default_moderation_state: draft

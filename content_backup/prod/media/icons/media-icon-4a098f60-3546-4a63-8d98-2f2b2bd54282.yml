@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 4a098f60-3546-4a63-8d98-2f2b2bd54282
+entity_type: media
+bundle: icon
+base_fields:
+  name: volume-off.svg
+  created: '1721137253'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/volume-off.svg'
+      url: '/sites/default/files/icons/volume-off.svg'

@@ -1,0 +1,101 @@
+uuid: ff89c200-1dea-489b-ad52-b20e1760c44a
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_data_table_category_prefix
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Data Table Category Prefix)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: data_table_category_prefix
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_taxonomy_term_tags
+        - upgrade_d7_taxonomy_term_form_categories
+        - upgrade_d7_taxonomy_term_milestone_categories
+        - upgrade_d7_taxonomy_term_milestone_positions
+        - upgrade_d7_taxonomy_term_report_names
+        - upgrade_d7_taxonomy_term_data_table_topics
+        - upgrade_d7_taxonomy_term_committees_
+        - upgrade_d7_taxonomy_term_file_types
+        - upgrade_d7_taxonomy_term_site_sections
+        - upgrade_d7_taxonomy_term_court_name
+        - upgrade_d7_taxonomy_term_procedural_posture
+        - upgrade_d7_taxonomy_term_subject_matter
+        - upgrade_d7_taxonomy_term_glossary
+        - upgrade_d7_taxonomy_term_educational_activity_categories
+        - upgrade_d7_taxonomy_term_topics
+        - upgrade_d7_taxonomy_term_table_number
+        - upgrade_d7_taxonomy_term_data_table_publication_types
+        - upgrade_d7_taxonomy_term_data_table_category_prefix
+        - upgrade_d7_taxonomy_term_probation_journal_topic
+        - upgrade_d7_taxonomy_term_committees_judge_comments
+        - upgrade_d7_taxonomy_term_submitted_to
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: data_table_category_prefix
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary

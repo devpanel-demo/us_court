@@ -1,0 +1,54 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: d4deb848-1683-4e76-a8aa-9cc1b0ea69bb
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: Reports
+  status: true
+  langcode: en
+  created: '1412190966'
+  changed: 1731344411
+  author: george_cherussery@ao.uscourts.gov
+  url: /data-news/reports
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":["60009","60011","3267","60004"],"viewMode":"featured","collectionRange":4} /-->'
+      summary: ''
+      format: gutenberg
+  field_landing_page_image:
+    -
+      uuid: ee968577-1350-46b5-b257-7640d6a484ea
+      entity_type: media
+      base_fields:
+        name: analysis-reports.jpg
+        created: '1425054576'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: '<p>The following materials provide information related to the work of the U.S. courts. Data appear in detailed statistical tables and charts, and many reports offer analyses of key data.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: d859807a-8a57-4edc-a630-112ae20888e1
+      entity_type: taxonomy_term
+      base_fields:
+        name: Reports
+        weight: 22
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

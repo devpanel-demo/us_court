@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 7454e0c1-d0a0-45b8-a008-17fa8a1881fb
+entity_type: media
+bundle: icon
+base_fields:
+  name: landmark-flag-solid.svg
+  created: '1724357534'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/landmark-flag-solid.svg'
+      url: '/sites/default/files/icons/landmark-flag-solid.svg'
+      description: ''

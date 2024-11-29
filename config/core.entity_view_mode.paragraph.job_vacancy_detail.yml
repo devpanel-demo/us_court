@@ -1,0 +1,11 @@
+uuid: 669979a5-7b5e-4e82-aebf-6febeab92da0
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.job_vacancy_detail
+label: 'Job Vacancy Detail'
+description: ''
+targetEntityType: paragraph
+cache: true

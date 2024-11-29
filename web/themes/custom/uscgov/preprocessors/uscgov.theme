@@ -1,0 +1,339 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in uscourts.gov.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Site\Settings;
+use Drupal\Core\Url;
+use Drupal\media\MediaInterface;
+use Drupal\node\NodeInterface;
+use Drupal\paragraphs\ParagraphInterface;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uscgov_preprocess_field__field_usc_content_nodes(&$variables) {
+  // Within the Table of Contents paragraph (aka "In this section"), if the link
+  // matches the current route, add an 'active' CSS class.
+  $nid = \Drupal::service('request_stack')->getCurrentRequest()->attributes->get('node')->id();
+  foreach ($variables['items'] as $id => $item) {
+    if (isset($item['content']['#entity']) && $item['content']['#entity']->id() == $nid) {
+      $variables['items'][$id]['attributes']->addClass(['active']);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function uscgov_preprocess_field__node__field_milestone_activities(&$variables) {
+
+  $sort = function ($a, $b): int {
+    if (!isset($a["content"]["#paragraph"]) || !isset($b["content"]["#paragraph"])) {
+      return 0;
+    }
+    $a_date = $a["content"]["#paragraph"]->field_fc_jma_date->value;
+    $b_date = $b["content"]["#paragraph"]->field_fc_jma_date->value;
+    return ($a_date > $b_date) ? -1 : 1;
+  };
+
+  usort($variables['items'], $sort);
+
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * Adds node variables.
+ */
+function uscgov_preprocess_node(&$variables) {
+  if (!empty($variables['content']['field_related_topics'])) {
+    $entities = $variables['node']->get('field_related_topics')->referencedEntities();
+    if (!empty($entities)) {
+      $tags = [];
+      foreach ($entities as $key => $entity) {
+        $url = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $entity->id()]);
+        $link = Link::fromTextAndUrl($entity->getName(), $url);
+        $tags[] = $link->toRenderable();
+      }
+      $variables['tags'][] = [
+        'list_items' => $tags,
+        'aria_label' => t('Related Topics'),
+      ];
+    }
+  }
+
+  if ($variables["node"] && $variables["node"]->bundle() === 'report' && $variables["view_mode"] === 'full') {
+    $date = $variables["node"]->get('field_date_updated')->value;
+    $report_name = $variables['node']->get('field_report_name')->referencedEntities();
+    // Hide former sidebar components if the report has field_date_updated and
+    // field_report_name. It is the business logic from D7.
+    if ($date && $report_name) {
+      $sidebar_keys = [
+        'field_usc_notification',
+        'field_usc_additional_content',
+        'field_usc_govdelivery_form',
+        'field_usc_related_news',
+        'extra_field_report_links',
+        'field_usc_table_of_contents',
+      ];
+      foreach ($sidebar_keys as $sidebar_key) {
+        unset($variables["content"][$sidebar_key]);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for the lead gallery field.
+ *
+ * This changes the view mode if there's only one item.
+ */
+function uscgov_preprocess_field__node__field_lead_gallery(&$variables) {
+  if (!array_key_exists(1, $variables['items'])) {
+    $variables['items'][0]['content']['#view_mode'] = 'lead_image';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for the body enhanced gallery field.
+ *
+ * This changes the view mode if there's only one item.
+ */
+function uscgov_preprocess_field__paragraph__field_gallery(&$variables) {
+  if (!array_key_exists(1, $variables['items'])) {
+    $variables['items'][0]['content']['#view_mode'] = 'lead_image';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page title.
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function uscgov_preprocess_page_title(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() == 'view.vacancies_job.job_detail_page') {
+    $paragraph_id = \Drupal::routeMatch()->getParameter('arg_0');
+
+    if ($paragraph_id) {
+      /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+      $paragraph = \Drupal::entityTypeManager()->getStorage('paragraph')->load($paragraph_id);
+      if ($paragraph && $paragraph->hasField('field_job_title')) {
+        $variables['title']['#markup'] = t('Job Details for ') . $paragraph->get('field_job_title')->value;
+      }
+    }
+  }
+}
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param array $variables
+ *   An array of variables to pass to the theme template.
+ * @param string $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+function uscgov_preprocess_html(&$variables, $hook) {
+  $variables['browsealoud_sri_version'] = Settings::get('browsealoud.sri_version');
+  $variables['browsealoud_sri_digest'] = Settings::get('browsealoud.sri_digest');
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for the piksel program.
+ *
+ * This adds the alt text as an attribute for the thumbnail image.
+ */
+function uscgov_preprocess_media__piksel_program(&$variables) {
+  $thumbnail = &$variables["content"]["thumbnail"];
+  $media = $variables["media"];
+
+  if (!$media->field_alternate_text->isEmpty()) {
+    $alt = $media->field_alternate_text->value;
+    $thumbnail[0]["#item_attributes"]['alt'] = $alt;
+  }
+
+  if (!empty($media->getName())) {
+    $title = $media->getName();
+    $thumbnail[0]["#item_attributes"]['title'] = $title;
+  }
+
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder('media');
+
+  $variables['content']['modal_description'] = $view_builder->viewField($media->get('field_program_description'), [
+    'label' => 'hidden',
+    'type' => 'smart_trim',
+    'settings' => [
+      'trim_length' => 122,
+      'trim_suffix' => '...',
+    ],
+  ]);
+  $variables["content"]['modal_description']['#field_name'] = 'modal_description';
+  $variables["content"]['modal_description']['#weight'] = 10;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for the gallery items.
+ *
+ * This adds the alt text to the thumbnail images.
+ */
+function uscgov_preprocess_field__gallery_items(&$variables) {
+  foreach ($variables["items"] as $i => &$item) {
+    $media = $item["content"]["#media"];
+    if ($media->hasField('field_alternate_text')) {
+      if (!$media->field_alternate_text->isEmpty()) {
+        $alt = $media->field_alternate_text->value;
+      }
+      else {
+        $alt = $media->name->value;
+      }
+      $media->set('field_alternate_text', t("Slide @number: @alt", ['@number' => $i + 1, '@alt' => $alt]));
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for the field_document_pdf field.
+ *
+ * @throws \InvalidArgumentException
+ */
+function uscgov_preprocess_field__field_document_pdf(&$variables) {
+  $entity = $variables["element"]["#object"];
+
+  foreach ($variables["items"] as $item) {
+    if ($item["content"]["#view_mode"] === 'download') {
+      $media = $item["content"]["#media"];
+      _uscgov_set_download_link_label($entity, $media);
+    }
+  }
+}
+
+/**
+ * Sets the download link label for a media entity based on the parent entity.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $parent_entity
+ *   The parent entity, which could be a Node or Paragraph entity.
+ * @param \Drupal\media\MediaInterface $media
+ *   The media entity for which the download label is being set.
+ *
+ * @return void
+ *   No return
+ *
+ * @throws \InvalidArgumentException
+ */
+function _uscgov_set_download_link_label(EntityInterface $parent_entity, MediaInterface $media): void {
+
+  if ($parent_entity instanceof NodeInterface) {
+    $type = $parent_entity->bundle();
+    switch ($type) {
+      case 'data_table':
+        $download_label = t('Download Data Table');
+        break;
+
+      case 'federal_rules':
+        $download_label = t('Download Document');
+        break;
+
+      case 'judge_comments':
+        $download_label = t('Download Comment');
+        break;
+
+      case 'criminogenic':
+        $download_label = t('Download the Manual');
+        break;
+
+      case 'form':
+        $download_label = t('Download Form');
+        break;
+    }
+  }
+  elseif ($parent_entity instanceof ParagraphInterface) {
+    if ($parent_entity->hasField('field_additional_info_type')) {
+      $type = $parent_entity->get('field_additional_info_type')->value;
+      if ($type !== NULL) {
+        switch ($type) {
+          case 0:
+            $download_label = t('Download Form Instructions');
+            break;
+
+          case 1:
+            $download_label = t('Download Committee Notes');
+            break;
+
+          case 2:
+            $download_label = t('Download Revision Notes');
+            break;
+        }
+      }
+    }
+  }
+
+  if (!isset($download_label)) {
+    if (!$media->get('field_file_title')->isEmpty()) {
+      $download_label = t("Download @file_title", ['@file_title' => $media->get('field_file_title')->value]);
+    }
+    else {
+      // Provide the default link text.
+      if (!$media->get('name')->isEmpty()) {
+        $download_label = t("Download @file_title", ['@file_title' => $media->get('name')->value]);
+      }
+      else {
+        $download_label = t("Download");
+      }
+    }
+  }
+
+  $media->set('field_file_title', $download_label);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for the author field.
+ *
+ * This changes the content link with /probation-journal-author/{$author}.
+ *
+ * @throws \InvalidArgumentException
+ */
+function uscgov_preprocess_field__node__field_auther(&$variables) {
+  foreach ($variables['items'] as &$item) {
+    if ($item['content']['#title']['#context']['value'] && $item['content']['#url']) {
+      $title = $item['content']['#title']['#context']['value'];
+      // Generate the URL to match uri /probation-journal-author/{$title}.
+      $url = Url::fromUri('internal:/probation-journal-author/' . rawurlencode($title));
+      // Update the URL object in the item.
+      $item['content']['#url'] = $url;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Creates a quicklinks array to pass to SDC component.
+ *
+ * @throws \Exception
+ */
+function uscgov_preprocess_field__config_pages__field_hompage_quick_links(array &$variables) {
+  foreach ($variables['items'] as &$item) {
+    if ($item['content']['#paragraph']->field_icon_link_link->first()) {
+      if (!empty($item['content']['#paragraph']->field_icon->entity->field_media_file_1->entity)) {
+        $svg_path = \Drupal::service('file_url_generator')->generateString(
+          $item['content']['#paragraph']->field_icon->entity->field_media_file_1->entity->uri->value
+        );
+      }
+      else {
+        $active_theme = \Drupal::theme()->getActiveTheme();
+        $path = $active_theme->getPath();
+        $svg_path = '/' . $path . '/icons/font-awesome/solid/wrench.svg';
+      }
+      $variables['quicklinks'][] = [
+        'url' => $item['content']['#paragraph']->field_icon_link_link->first()->getUrl(),
+        'title' => $item['content']['#paragraph']->field_icon_link_link->title,
+        'svg_path' => $svg_path,
+      ];
+    }
+  }
+}

@@ -1,0 +1,11 @@
+uuid: 6387e7ab-18ae-44c0-ac31-f49e03cb05eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.news_issue_view
+label: news_issue_view
+description: ''
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,22 @@
+uuid: 420969e5-fbc1-4912-99bc-e11023e403ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.file.field_file_description
+  module:
+    - file
+    - text
+id: file.image.field_file_description
+field_name: field_file_description
+entity_type: file
+bundle: image
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

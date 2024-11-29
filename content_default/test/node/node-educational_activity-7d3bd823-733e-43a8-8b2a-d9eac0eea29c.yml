@@ -1,0 +1,135 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 7d3bd823-733e-43a8-8b2a-d9eac0eea29c
+entity_type: node
+bundle: educational_activity
+base_fields:
+  title: 'Default Content - Educational Activity'
+  status: true
+  langcode: en
+  created: '1717611545'
+  changed: 1717611545
+  author: jamesdavison@ao.uscourts.gov
+  url: /default-content-educational-activity
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      summary: ''
+      format: wysiwyg
+  field_activity_category:
+    -
+      uuid: d8ea4932-12ba-462f-802b-4b67f12485ab
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'First Amendment'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: educational_activity_categorie
+  field_body_enhanced:
+    -
+      uuid: 7d200912-37a0-42bd-b719-2704d857d5af
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1717611561'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery:
+          -
+            uuid: 1a79fe16-d2eb-4de6-b6f4-d73583fd139d
+            entity_type: media
+            base_fields:
+              name: nature-7045133_1920.jpeg
+              created: '1713912999'
+              status: true
+              langcode: en
+            bundle: image
+          -
+            uuid: b76e04d9-a476-4c05-a43e-a8ef43ca7bee
+            entity_type: media
+            base_fields:
+              name: pexels-photo-346529_0.jpeg
+              created: '1713912950'
+              status: true
+              langcode: en
+            bundle: image
+          -
+            uuid: 49aa2b47-8606-434e-822f-39c5aa375353
+            entity_type: media
+            base_fields:
+              name: beach-1852945_1920.jpeg
+              created: '1713909965'
+              status: true
+              langcode: en
+            bundle: image
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery:
+    -
+      uuid: 1a79fe16-d2eb-4de6-b6f4-d73583fd139d
+      entity_type: media
+      base_fields:
+        name: nature-7045133_1920.jpeg
+        created: '1713912999'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: b76e04d9-a476-4c05-a43e-a8ef43ca7bee
+      entity_type: media
+      base_fields:
+        name: pexels-photo-346529_0.jpeg
+        created: '1713912950'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: 49aa2b47-8606-434e-822f-39c5aa375353
+      entity_type: media
+      base_fields:
+        name: beach-1852945_1920.jpeg
+        created: '1713909965'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+      format: wysiwyg
+  field_logo:
+    -
+      uuid: 1a79fe16-d2eb-4de6-b6f4-d73583fd139d
+      entity_type: media
+      base_fields:
+        name: nature-7045133_1920.jpeg
+        created: '1713912999'
+        status: true
+        langcode: en
+      bundle: image
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

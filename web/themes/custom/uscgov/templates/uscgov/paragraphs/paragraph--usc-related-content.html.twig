@@ -1,0 +1,4 @@
+{{ include('uscgov:related-content', {
+  title: content.field_usc_title|add_suggestion('bare'),
+  content: content|without('field_usc_title'),
+  }, with_context = false) }}

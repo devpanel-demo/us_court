@@ -1,0 +1,52 @@
+uuid: ac7a9379-bb4f-4ff9-8527-52cfae556e89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_video.field_usc_description
+    - field.field.paragraph.usc_video.field_usc_label
+    - field.field.paragraph.usc_video.field_usc_title
+    - field.field.paragraph.usc_video.field_usc_video
+    - paragraphs.paragraphs_type.usc_video
+  module:
+    - media_library
+    - text
+id: paragraph.usc_video.default
+targetEntityType: paragraph
+bundle: usc_video
+mode: default
+content:
+  field_usc_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_video:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

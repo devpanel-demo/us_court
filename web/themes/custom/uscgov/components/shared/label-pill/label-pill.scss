@@ -1,0 +1,48 @@
+.label-pill {
+  margin-bottom: 16px;
+  font-size: 14px;
+
+  * {
+    display: inline-block;
+  }
+}
+
+.label-pill__label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.label-pill__content {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.label-pill__content-item {
+  // If the item doesn't have a link, and isn't the last, then insert a comma
+  // after it.
+   &:not(:is(:last-child), :has(a)) {
+    &:after {
+      content: ', ';
+      white-space: pre;
+    }
+  }
+
+  a {
+    padding: 4px 6px;
+    border-radius: 15px;
+    border: 1px solid var(--border-primary-light);
+    background: var(--surface-primary-lighter);
+    text-decoration: none;
+    color: var(--text-on-surface-base-lighter--light);
+
+    &:hover {
+      color: var(--surface-body);
+      background: var(--text-link);
+    }
+
+    &:active {
+      background: var(--surface-button-dark);
+    }
+  }
+}

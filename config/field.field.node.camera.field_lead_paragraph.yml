@@ -1,0 +1,22 @@
+uuid: 79678754-7bcb-4b48-9f31-61a9d8548004
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_paragraph
+    - node.type.camera
+  module:
+    - text
+id: node.camera.field_lead_paragraph
+field_name: field_lead_paragraph
+entity_type: node
+bundle: camera
+label: 'Lead Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

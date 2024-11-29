@@ -1,0 +1,15 @@
+<article{{ attributes.addClass('teaser') }}>
+  {{ title_suffix }}
+  <h2 class="teaser__title">
+    <a href="{{ url }}">
+      {{ title }}
+    </a>
+  </h2>
+  {% if meta %}
+    <div class="teaser__meta">{{ meta }}</div>
+  {% endif %}
+  <div class="teaser__content">
+    {{ image }}
+    {{ body }}
+  </div>
+</article>

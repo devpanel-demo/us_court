@@ -1,0 +1,21 @@
+uuid: dcf9af33-07ea-4327-be57-a96a20b8b993
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_opening_date
+    - paragraphs.paragraphs_type.judicial_vacancy
+  module:
+    - datetime
+id: paragraph.judicial_vacancy.field_opening_date
+field_name: field_opening_date
+entity_type: paragraph
+bundle: judicial_vacancy
+label: 'Opening Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

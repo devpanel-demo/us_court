@@ -1,0 +1,221 @@
+$hero_medium: 'width >= 700px';
+$hero_wide: 'width >= 1200px';
+
+.homepage-hero {
+  position: relative;
+  color: var(--text-on-surface-primary-darker);
+  border-top: solid 5px var(--accent);
+  background-color: var(--surface-primary-dark);
+
+  @media ($hero_wide) {
+    border-bottom: solid 5px var(--accent);
+    background: linear-gradient(to right, var(--surface-primary-dark) 50%, var(--surface-base-lightest) 0);
+  }
+}
+
+.homepage-hero__image-wide {
+  display: none;
+
+  @media ($hero_wide) {
+    display: contents;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.homepage-hero__image-narrow {
+  display: contents;
+
+  @media ($hero_wide) {
+    display: none;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.homepage-hero__container {
+  @media ($hero_wide) {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.homepage-hero__left {
+  position: relative;
+  height: 500px; // Content is absolutely positioned to the bottom of this.
+  margin-inline: calc(-1 * var(--container-inline-spacing));
+
+  @media ($hero_wide) {
+    width: 40%;
+    height: auto;
+    margin-inline: unset;
+  }
+}
+
+.homepage-hero__right {
+  position: relative;
+  margin-inline: calc(-1 * var(--container-inline-spacing));
+  padding-block: 32px;
+  padding-inline: var(--container-inline-spacing);
+  background-color: var(--surface-base-lightest);
+  color: var(--text-on-surface-base-lightest);
+
+  @media ($hero_medium) {
+    padding-inline: 64px;
+  }
+
+  @media ($hero_wide) {
+    width: 60%;
+    margin-inline: 0;
+    padding-block: 40px;
+    padding-inline: 64px 0;
+  }
+
+  > div {
+    padding: 24px;
+    border-top: 1px solid var(--border-muted-dark);
+
+    &:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  h3 {
+    margin-block: 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  a {
+    font-size: 17px;
+  }
+}
+
+.homepage-hero__information {
+  position: absolute;
+  bottom: 0;
+  color: var(--text-on-surface-primary-dark);
+  padding: 64px var(--container-inline-spacing) 24px;
+  width: 100%;
+
+  @media ($hero_medium) {
+    padding: 64px;
+  }
+
+  @media ($hero_wide) {
+    padding-block: 64px 24px;
+    padding-inline: 0 64px;
+  }
+
+  // This is the overlay that appears behind the text. It needs to extend to the
+  // edge of the each viewport at small widths, and the left needs to extend to
+  // the edge of the viewport at wide widths.
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(to top, var(--surface-primary-dark) calc(100% - 64px), transparent 100%);
+
+    @media ($hero_wide) {
+      --wide-width: calc(100% + (50vw + var(--container-inline-spacing) - var(--site-max-width)/2));
+      --medium-width: calc(100% + var(--container-inline-spacing));
+
+      width: max(var(--medium-width), var(--wide-width));
+    }
+  }
+}
+
+.homepage-hero__title {
+  position: relative; // Establish stacking context to appear on top of parent's ::before pseudo-element.
+  margin: 0;
+  font-size: 28px;
+  line-height: 33.6px;
+  text-wrap: pretty;
+
+  @media ($hero_wide) {
+    font-size: 40px;
+    line-height: 1.15;
+  }
+}
+
+.homepage-hero__description {
+  position: relative; // Establish stacking context to appear on top of parent's ::before pseudo-element.
+  margin: 0;
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: left;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.homepage-hero__cta-wrapper {
+  position: relative; // Establish stacking context to appear on top of parent's ::before pseudo-element.
+  margin-top: 16px;
+
+  a:before {
+    display: block;
+    width: 18px;
+    height: 18px;
+    content: "";
+    background-color: currentColor;
+    mask-image: url('images/court.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    @media (forced-colors: active) {
+      background-color: buttonText;
+    }
+  }
+}
+
+.quicklinks-wrapper--hero-informational[class] {
+  @media ($hero_medium) {
+    padding-inline: 48px;
+  }
+
+  @media ($hero_wide) {
+    padding-inline: var(--container-inline-spacing);
+  }
+
+  .quicklinks {
+    margin-top: 32px;
+  }
+
+  .quicklinks__title {
+    margin: 0;
+  }
+
+  .quicklinks__list {
+    gap: 20px 24px;
+    margin-top: 8px;
+    padding-block: 16px;
+  }
+}

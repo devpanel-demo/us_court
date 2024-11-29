@@ -1,0 +1,29 @@
+uuid: 4871614c-d483-4bfd-9c09-f8f861728528
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_image
+    - media.type.image
+    - paragraphs.paragraphs_type.usc_graphic_photo
+id: paragraph.usc_graphic_photo.field_usc_image
+field_name: field_usc_image
+entity_type: paragraph
+bundle: usc_graphic_photo
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

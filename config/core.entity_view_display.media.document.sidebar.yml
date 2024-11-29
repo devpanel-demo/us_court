@@ -1,0 +1,52 @@
+uuid: 4ca414db-0e2d-4cf8-a4df-fc451e2d2654
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.sidebar
+    - field.field.media.document.field_date_updated
+    - field.field.media.document.field_file_description
+    - field.field.media.document.field_file_title
+    - field.field.media.document.field_media_document
+    - image.style.thumbnail
+    - media.type.document
+  module:
+    - image
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.document.sidebar
+targetEntityType: media
+bundle: document
+mode: sidebar
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_date_updated: true
+  field_file_description: true
+  field_file_title: true
+  field_media_document: true
+  name: true
+  search_api_excerpt: true
+  uid: true

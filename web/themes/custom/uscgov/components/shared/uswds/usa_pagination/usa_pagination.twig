@@ -1,0 +1,80 @@
+{% set theme_path = '/' ~ componentMetadata.path|replace({"/components/uswds/usa_pagination": ''}) %}
+<nav aria-label="Pagination" class="usa-pagination pager" role="navigation">
+  <ul class="usa-pagination__list pager__items js-pager__items">
+    {% if previous %}
+      <li class="usa-pagination__item usa-pagination__arrow">
+        <a
+          href="{{ previous.href }}"
+          title="{{ 'Go to previous page'|t }}"
+          aria-label="Previous page"
+          {{ previous.attributes.addClass('usa-pagination__link usa-pagination__previous-page')|without('href', 'title') }}
+          ><svg class="usa-icon" aria-hidden="true" role="img">
+            <use xlink:href="{{ theme_path ~ '/dist/uswds/img/sprite.svg#navigate_before' }}"></use>
+          </svg>
+          <span class="usa-pagination__link-text">{{ 'Previous'|t }}</span></a
+        >
+      </li>
+    {% endif %}
+
+    {% if ellipsis_previous %}
+      <li
+        class="usa-pagination__item usa-pagination__overflow"
+        aria-label="ellipsis indicating non-visible pages"
+      >
+        <span>…</span>
+      </li>
+    {% endif %}
+
+    {% for key, item in pages %}
+      <li class="usa-pagination__item usa-pagination__page-no">
+        {% set item_attributes = item.attributes %}
+        {# Classes #}
+        {%
+          set classes = [
+            'usa-pagination__button',
+            current == key ? 'usa-current',
+          ]
+        %}
+        {# Title #}
+        {% set title = current == key ? 'Current page'|t : 'Go to page @key'|t({'@key': key}) %}
+        {# Aria Current #}
+        {% if current == key %}
+          {% set item_attributes = item.attributes.setAttribute('aria-current', 'page') %}
+        {% endif %}
+        {# Anchor #}
+        <a
+          href="{{ item.href }}"
+          aria-label="{{ 'Page @key'|t({'@key': key}) }}"
+          {{ item_attributes.addClass(classes).setAttribute('title', title)|without('href') }}>
+          {{- key -}}
+        </a>
+      </li>
+    {% endfor %}
+
+    {% if ellipsis_next %}
+      <li
+        class="usa-pagination__item usa-pagination__overflow"
+        aria-label="ellipsis indicating non-visible pages"
+      >
+        <span>…</span>
+      </li>
+    {% endif %}
+
+
+    {% if next %}
+      <li class="usa-pagination__item usa-pagination__arrow">
+        <a
+          href="{{ next.href }}"
+          title="{{ 'Go to next page'|t }}"
+          aria-label="{{ 'Next page'|t }}"
+          {{ next.attributes.addClass('usa-pagination__link usa-pagination__next-page')|without('href', 'title') }}
+        >
+          <span class="usa-pagination__link-text">{{ 'Next'|t }}</span>
+          <svg class="usa-icon" aria-hidden="true" role="img">
+            <use xlink:href="{{ theme_path ~ '/dist/uswds/img/sprite.svg#navigate_next' }}"></use>
+          </svg>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

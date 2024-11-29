@@ -1,0 +1,55 @@
+uuid: fdda1199-92d2-4eee-adf6-53e36075175c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.banner_image.field_media_banner_image
+    - image.style.featured_image
+    - media.type.banner_image
+  module:
+    - image
+    - nomarkup
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.banner_image.default
+targetEntityType: media
+bundle: banner_image
+mode: default
+content:
+  field_media_banner_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: featured_image
+      image_loading:
+        attribute: eager
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

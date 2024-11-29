@@ -1,0 +1,50 @@
+{% set heading_id = 'Pagination'|clean_unique_id %}
+{% set theme_path = '/' ~ componentMetadata.path|replace({"/components/uswds/usa_pagination_mini": ''}) %}
+
+{% if items.previous or items.next %}
+  <nav class="usa-pagination" aria-labelledby="{{ heading_id }}">
+    <h4 id="{{ heading_id }}" class="pager__heading visually-hidden">{{ 'Pagination'|t }}</h4>
+    <ul class="usa-pagination__list js-pager__items">
+      {% if items.previous %}
+        <li class="usa-pagination__item usa-pagination__arrow">
+          <a
+            class="usa-pagination__link usa-pagination__previous-page"
+            href="{{ items.previous.href }}" title="{{ 'Go to previous page'|t }}"
+            rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}
+            aria-label="{{ 'Previous page'|t }}">
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use xlink:href="{{ theme_path ~ '/dist/uswds/img/sprite.svg#navigate_before' }}"></use>
+            </svg>
+            <span class="usa-pagination__link-text">{{ 'Previous'|t }}</span>
+          </a>
+        </li>
+      {% endif %}
+      {% if items.current %}
+        <li class="usa-pagination__item usa-pagination__page-no">
+          <a
+            href="javascript:void(0);"
+            class="usa-pagination__button usa-current"
+            aria-label="{{ 'Page'|t ~ ' ' ~ items.current }}"
+            aria-current="page"
+          >
+            {{ items.current }}
+          </a>
+        </li>
+      {% endif %}
+      {% if items.next %}
+        <li class="usa-pagination__item usa-pagination__arrow">
+          <a
+            href="{{ items.next.href }}"
+            class="usa-pagination__link usa-pagination__next-page"
+            aria-label="{{ 'Next page'|t }}"
+          >
+            <span class="usa-pagination__link-text">{{ 'Next'|t }}</span>
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use xlink:href="{{ theme_path ~ '/dist/uswds/img/sprite.svg#navigate_next' }}"></use>
+            </svg>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}

@@ -1,0 +1,168 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 23c23160-4380-49a6-9082-cc4763c378e5
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Testing adding video'
+  status: true
+  langcode: en
+  created: '1715719560'
+  changed: 1715719560
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-adding-video
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 28e16126-ea8a-40ed-8247-018bd67dc496
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715719593'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget:
+          -
+            uuid: 0cc3a6fb-593f-44f9-bed0-cfe288f899b5
+            entity_type: paragraph
+            bundle: usc_video
+            base_fields:
+              status: true
+              langcode: en
+              created: '1715719659'
+              behavior_settings: {  }
+            custom_fields:
+              field_usc_description:
+                -
+                  value: '<p>Testing description field</p>'
+                  format: wysiwyg
+              field_usc_label:
+                -
+                  value: 'video test'
+              field_usc_title:
+                -
+                  value: 'video test'
+              field_usc_video:
+                -
+                  uuid: ec6d3ff2-fd05-4cd9-8bfc-82e6fe171439
+                  entity_type: media
+                  base_fields:
+                    name: 'Criminal Justice Act: Protecting the Right to Counsel for 60 Years'
+                    created: '1715719647'
+                    status: true
+                    langcode: en
+                  bundle: remote_video
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: b284a01b-d907-4b40-b1cd-7a2635a7dd5b
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715719697'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget:
+          -
+            uuid: 705cb374-177a-4355-9cac-94134803e35d
+            entity_type: paragraph
+            bundle: usc_video
+            base_fields:
+              status: true
+              langcode: en
+              created: '1715719750'
+              behavior_settings: {  }
+            custom_fields:
+              field_usc_description:
+                -
+                  value: '<p>description</p>'
+                  format: wysiwyg
+              field_usc_label:
+                -
+                  value: 'video test 2'
+              field_usc_title:
+                -
+                  value: 'video test 2'
+              field_usc_video:
+                -
+                  uuid: ef58e616-9457-4680-8c7c-b8c23f2362bf
+                  entity_type: media
+                  base_fields:
+                    name: 'Judge Aleta Trauger Opened Doors for Women in Law'
+                    created: '1715719738'
+                    status: true
+                    langcode: en
+                  bundle: remote_video
+        field_fc_be_body:
+          -
+            value: '<p>For 60 years, the Criminal Justice Act (CJA) has ensured that defendants who cannot afford to retain an attorney receive professional legal counsel. In commemoration of the passage of the 1964 law, U.S. District Judge Myron H. Thompson gave a keynote address to over 100 federal defenders and CJA panel attorneys at the Edward A. Garmatz U.S. Courthouse, in Baltimore on Feb. 8, 2024. Thompson witnessed the implementation and evolution of the CJA first-hand, with his appointment as a CJA panel attorney in the early 1970s. Thompson reflected on how this important legislation continues to protect a right that many Americans now take for granted: the right to competent counsel, which is assured to every person charged of a federal crime, regardless of their means. U.S. District Chief Judge James K. Bredar, of the District of Maryland, and U.S. District Judge Cathy Seibel, of the Southern District of New York and Chair of the Judicial Conference Committee on Defender Services, provided introductory remarks at the event.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 16e42a0e-0291-4834-848f-76e393920c01
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1715719803'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>Aleta A. Trauger earned a reputation as a tough prosecutor after convicting a former Tennessee governor during her stint at the U.S. attorney’s office. The 1981 case, which dealt with selling liquor licenses to political friends, gave her credibility in a male-dominated space.</p><p>“It really set me up as a woman who was tough and could do litigation,” said Judge Trauger, who serves in the Middle District of Tennessee.</p><p>“My mother was a legal secretary my whole life, but I never thought of being a lawyer,” Trauger said. “It just never occurred to me. And so, I became a teacher.”</p><p>After several years of teaching, Trauger enrolled at Vanderbilt University Law School in 1973, when women made up an increasing, yet small percentage of law school admissions.</p><p>“I entered law school really on a lark … I'd done better on the LSAT than I thought I would do, but I didn't know that I could do it,” Trauger said.</p><p>She recounted how female students shared a single restroom at the law school building. In protest, Trauger and other female students commandeered one of the larger and more centrally located men’s restrooms until the administration yielded and designated it as an additional women’s restroom.</p><p>Passionate about opening doors for future generations of women, Trauger helped form the Tennessee Lawyers' Association for Women as a tool to help connect women lawyers and equip them with the knowledge of how to become a judge.</p><p>“I've been on the district court bench 25 years, and I remember in the early days, I would just be so thrilled when, if by chance in a lawsuit, I had women on both sides of the case because it was kind of unusual,” Trauger said. “And now of course, it's just commonplace and it's very gratifying. And I think it's important that we tell our stories, however, and not take it all for granted.”</p><p>Before becoming the first female district judge in the Middle District of Tennessee in 1998, Trauger served as a U.S. bankruptcy judge and an assistant U.S. attorney in the district.</p><p>• Sign up for U.S. Courts email updates: http://www.uscourts.gov/email-updates​&nbsp;<br>• Follow @USCourts on Twitter: https://twitter.com/uscourts​&nbsp;<br>• Follow U.S. Courts on LinkedIn: https://www.linkedin.com/company/us-courts</p>"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

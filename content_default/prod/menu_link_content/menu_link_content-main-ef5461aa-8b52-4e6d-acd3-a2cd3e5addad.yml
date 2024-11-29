@@ -1,0 +1,130 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: ef5461aa-8b52-4e6d-acd3-a2cd3e5addad
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'First Student Loan Slip Up: What to Know Before You Borrow'
+  enabled: true
+  expanded: false
+  langcode: und
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/15073'
+      title: null
+      options: {  }
+  weight: 4
+  parent:
+    uuid: 2aed6ae7-e044-402b-baf3-1fa9e26c656d
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Financial Literacy: Financial Firsts Can Be Financial Pitfalls'
+      enabled: true
+      expanded: false
+      langcode: und
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/15070'
+          title: ''
+          options: {  }
+      weight: -43
+      parent:
+        uuid: 2f0ea32c-b1d8-4c3d-9b41-fa77b0b9fbcc
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Educational Activities'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/9111'
+              title: ''
+              options: {  }
+          weight: 0
+          parent:
+            uuid: 04eb5c59-a6cb-4eba-8826-69f380a397f3
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Educational Resources'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/4314'
+                  title: ''
+                  options: {  }
+              weight: -48
+              parent:
+                uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'About Federal Courts'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/4'
+                      title: ''
+                      options: {  }
+                  weight: -71
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/12916'
+                      title: 'Court Website Links'
+                      options: {  }
+                    -
+                      uri: 'entity:node/2769'
+                      title: 'Authorized Judgeships'
+                      options: {  }
+                    -
+                      uri: 'entity:node/4305'
+                      title: 'Supreme Court Landmarks'
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Find realistic simulations and memorable, interactive approaches to court basics.'
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu: null
+  field_popular_links: null

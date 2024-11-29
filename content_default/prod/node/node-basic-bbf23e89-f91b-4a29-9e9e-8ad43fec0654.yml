@@ -1,0 +1,328 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: bbf23e89-f91b-4a29-9e9e-8ad43fec0654
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'LGBTQ Pride Month'
+  status: true
+  langcode: en
+  created: '1590156269'
+  changed: 1727753530
+  author: courtney_mcilroy@ao.uscourts.gov
+  url: /about-federal-courts/educational-resources/annual-observances/lgbtq-pride-month
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '1'
+  menu_link:
+    uuid: 0d3cf57c-b653-4768-89f4-27ba5f025f47
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'LGBTQ Pride Month'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/18610'
+          title: ''
+          options: {  }
+      weight: -56
+      parent:
+        uuid: de25d003-95a3-41ef-97b0-95814cf8bbbb
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Annual Observances'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/4296'
+              title: ''
+              options: {  }
+          weight: 2
+          parent:
+            uuid: 04eb5c59-a6cb-4eba-8826-69f380a397f3
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Educational Resources'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/4314'
+                  title: ''
+                  options: {  }
+              weight: -48
+              parent:
+                uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'About Federal Courts'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/4'
+                      title: ''
+                      options: {  }
+                  weight: -71
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/12916'
+                      title: 'Court Website Links'
+                      options: {  }
+                    -
+                      uri: 'entity:node/2769'
+                      title: 'Authorized Judgeships'
+                      options: {  }
+                    -
+                      uri: 'entity:node/4305'
+                      title: 'Supreme Court Landmarks'
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Find realistic simulations and memorable, interactive approaches to court basics.'
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 45278930-6694-451b-bf85-d12e9daa87c2
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tSince 1999, when a presidential proclamation cited June as Pride Month, Americans have recounted and recognized the struggles and achievements of a community striving for equality and inclusion. Many consider the <a href=\"https://www.history.com/topics/gay-rights/the-stonewall-riots\">Stonewall Uprising</a> that made the news on June 28, 1969, as the tipping point in the rights movement that has impacted lesbian, gay, bisexual, transgender and queer individuals and their communities as well as the broader society.\r\n</p>\r\n\r\n<p>\r\n\tLearn about the federal judge who led the way for others in the judiciary.\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: b79b2554-d887-4837-b972-4a7e694fe52c
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tThe late U.S. District Judge Deborah A. Batts was the first openly gay federal judge in the nation. She was nominated in 1994 by President William J. Clinton to the U.S. District Court in the Southern District of New York (New York City). Her sexual orientation, about which she was open, was not raised during her confirmation hearing and the Senate confirmed her appointment on a voice vote.\r\n</p>\r\n\r\n<p>\r\n\tBatts was sworn in on June 23, 1994 during Gay Pride Week in New York City. She was widely known for mentoring and inspiring a generation of law students and law clerks, some of whom joined her on the bench in the Southern District of New York more than a decade after her appointment. She died on February 3, 2020 at age 72.\r\n</p>\r\n\r\n<p>\r\n\tDuring her college and law school years, Batts was a leader. She was the student body president at Radcliffe College, and at Harvard Law School she served on the editorial board of the Harvard Civil Rights-Civil Liberties Law Review.&nbsp;\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading:
+          -
+            value: 'The First LGBTQ Federal Judge'
+        field_fc_be_image:
+          -
+            uuid: 18b37b36-976e-429f-a922-753fb1d201c7
+            entity_type: media
+            base_fields:
+              name: judgebatts.jpg
+              created: '1590526570'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 3c299714-1430-4586-ab00-fb3c791ec6f5
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution:
+          -
+            value: 'U.S. District Judge Deborah A. Batts'
+        field_callout_body:
+          -
+            value: "<p>\r\n\t“Never shy away because you think [others are] not going to let you do it. Give them the opportunity to let you do it by being there and showing that’s what you want to do ….”\r\n</p>\r\n"
+            format: wysiwyg
+        field_callout_pull_quote:
+          -
+            value: '1'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tAfter law school, she clerked for a federal judge, then joined the litigation department at a major New York law firm. Six years later she became a federal prosecutor. Throughout her judicial career Batts was committed to assisting newly released prison inmates make the transition back into society. In fact, while recovering in the hospital after knee surgery, shortly before her death, she wrote a reference letter for a former inmate seeking housing in his community.\r\n</p>\r\n\r\n<p>\r\n\tAs a district judge in one of the busiest courts in the country, Batts handled high-profile corruption and terrorism cases and the civil suit involving the Central Park Five, the young men who were wrongly convicted in 1989 of beating and raping a female jogger.\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: b9bb1cf9-512b-47a8-8562-2a8f15e85a4a
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tBatts was the first black faculty member at Fordham Law School, where she taught until her death in 2020. As a law professor and as a judge, Batts was known for her commitment to mentoring law students and law clerks. In a videotaped panel discussion with three judicial colleagues, including U.S. District Judge J. Paul Oetken, who followed in her footsteps and became the first openly gay male federal judge, she said it’s important for people to go after their career goals.\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video:
+          -
+            uuid: 31c99397-01a4-4a51-972c-62dbe5302b29
+            entity_type: media
+            base_fields:
+              name: 'LGBT Firsts Judge Batts'
+              created: '1590525317'
+              status: true
+              langcode: en
+            bundle: remote_video
+        field_fc_be_video_caption:
+          -
+            value: 'Video provided by the Second Circuit’s civic education initiative Justice for All: Courts and the Community.'
+        field_gallery: null
+    -
+      uuid: 78f51fa5-b197-4164-a06f-fb1f0ac308e8
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution:
+          -
+            value: 'U.S. District Judge J. Paul Oetken'
+        field_callout_body:
+          -
+            value: "<p>\r\n\t“The presence of openly gay people in people’s lives makes all the difference.”\r\n</p>\r\n"
+            format: wysiwyg
+        field_callout_pull_quote:
+          -
+            value: '1'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tIn 2011, 17 years after Batts’ confirmation, Oetken joined her on the bench in the Southern District of New York. As a law clerk for Supreme Court Justice Harry S. Blackman at the time Batts was confirmed, Oetken remembered the occasion as a moment that he started to think seriously about becoming a judge himself.\r\n</p>\r\n\r\n<p>\r\n\tBatts and Oetken were later joined on the U.S. District Court bench by other judges from the LGBTQ community. <a href=\"https://justiceforall.ca2.uscourts.gov/\">In a videotaped conversation</a> with Oetken, and U.S. District Court Judges Pamela Chen and Alison Nathan, Batts smiled as she described herself during the years on the bench before they arrived: “There was this lone wolf sitting up here in the Southern District of New York, and I can’t tell you — I can’t tell you — how happy I was when I got company.”\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video:
+          -
+            uuid: 6d04cab8-cec8-4200-9d46-f1cebc368e0b
+            entity_type: media
+            base_fields:
+              name: 'LGBT Firsts Judge Oetkin'
+              created: '1590524987'
+              status: true
+              langcode: en
+            bundle: remote_video
+        field_fc_be_video_caption:
+          -
+            value: 'Video excerpt from a Pride Month event in June 2019.'
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>\r\n\tLesbian, Gay, Bisexual, Transgender, and Queer (LGBTQ) Pride Month, popularly known as Pride Month, is celebrated in June. The federal courts join in celebrating the community’s contributions in the Judiciary.\r\n</p>\r\n"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: bf31b7f6-d55e-4cf1-98e8-fb1df54e5666
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Educational  Resources'
+        weight: 12
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

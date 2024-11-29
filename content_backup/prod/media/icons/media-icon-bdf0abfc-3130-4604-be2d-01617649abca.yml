@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: bdf0abfc-3130-4604-be2d-01617649abca
+entity_type: media
+bundle: icon
+base_fields:
+  name: mobile-alt.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/mobile-alt.svg'
+      url: '/sites/default/files/icons/mobile-alt.svg'

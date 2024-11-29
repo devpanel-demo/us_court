@@ -1,0 +1,199 @@
+uuid: 855e1cdb-108c-4adf-bdff-cb49fe09fe42
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.field.config_pages.global_site_settings.field_footer_cta_body
+    - field.field.config_pages.global_site_settings.field_footer_cta_link
+    - field.field.config_pages.global_site_settings.field_footer_cta_title
+    - field.field.config_pages.global_site_settings.field_footer_seal
+    - field.field.config_pages.global_site_settings.field_gov_delivery_news_block
+    - field.field.config_pages.global_site_settings.field_hero_background_image
+    - field.field.config_pages.global_site_settings.field_homepage_hero_cta
+    - field.field.config_pages.global_site_settings.field_homepage_hero_description
+    - field.field.config_pages.global_site_settings.field_homepage_hero_sec_cta
+    - field.field.config_pages.global_site_settings.field_homepage_hero_seco_desc
+    - field.field.config_pages.global_site_settings.field_homepage_hero_secondary_bl
+    - field.field.config_pages.global_site_settings.field_homepage_hero_title
+    - field.field.config_pages.global_site_settings.field_homepage_quick_links_title
+    - field.field.config_pages.global_site_settings.field_hompage_quick_links
+    - field.field.config_pages.global_site_settings.field_latest_news_block
+    - field.field.config_pages.global_site_settings.field_seal_te
+    - field.field.config_pages.global_site_settings.field_site_logo
+    - field.field.config_pages.global_site_settings.field_social_media
+    - image.style.site_logo
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+id: config_pages.global_site_settings.default
+targetEntityType: config_pages
+bundle: global_site_settings
+mode: default
+content:
+  field_footer_cta_body:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_footer_cta_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_footer_cta_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_footer_seal:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: square_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_gov_delivery_news_block:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_hero_background_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero_responsive_image
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_homepage_hero_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_homepage_hero_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_homepage_hero_sec_cta:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_homepage_hero_seco_desc:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_homepage_hero_secondary_bl:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_homepage_hero_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_homepage_quick_links_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_hompage_quick_links:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_latest_news_block:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_seal_te:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_site_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: site_logo
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_social_media:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

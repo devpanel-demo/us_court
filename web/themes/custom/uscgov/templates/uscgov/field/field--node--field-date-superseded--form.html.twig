@@ -1,0 +1,7 @@
+{% set content = 'Superseded on @date'|t({ '@date': items.0.content|render }) %}
+{% set items = [{content}] %}
+
+{{ include('uscgov:label-pill', {
+  field_name,
+  items,
+}, with_context = false) }}

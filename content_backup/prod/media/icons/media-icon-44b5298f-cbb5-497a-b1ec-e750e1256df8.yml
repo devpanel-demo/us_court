@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 44b5298f-cbb5-497a-b1ec-e750e1256df8
+entity_type: media
+bundle: icon
+base_fields:
+  name: step-backward.svg
+  created: '1721137216'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/step-backward.svg'
+      url: '/sites/default/files/icons/step-backward.svg'

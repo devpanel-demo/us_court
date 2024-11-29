@@ -1,0 +1,7 @@
+services:
+  usc.content_sync.commands:
+    class: \Drupal\usc_content_sync\Commands\UscContentSyncCommands
+    arguments:
+      - '@usc_content_sync.sync_service'
+    tags:
+      - { name: drush.command }

@@ -1,0 +1,49 @@
+@use "../global/mixins" as *;
+
+.uscgov-root,
+.editor-styles-wrapper {
+  /*
+   * Color palette for this variant.
+   *
+   * Sets css variables for this color variant.
+   * @todo: This palette may be used below to reduce complexity.
+   */
+  $color-variants: (
+    "primary": "primary",
+    "secondary": "secondary-gray",
+    "accent": "accent-green"
+  );
+  @include set-css-color-variables-for-variants($color-variants);
+
+  /**
+   * Surface and text colors
+   */
+
+  // Secondary
+  --surface-secondary-dark: var(--color-primitive-theme-secondary-gray-dark);
+  --text-on-surface-secondary-dark: var(--color-primitive-neutral-base-light);
+  --surface-secondary-lighter: var(--color-token-secondary-gray-lighter);
+  --text-on-surface-secondary-lighter: var(--color-primitive-neutral-base-dark);
+
+  // Secondary text
+  --text-secondary-darker: var(--color-primitive-theme-secondary-gray-darker);
+
+  /**
+   * Accent
+   */
+  --accent: #4B7500;
+
+  /**
+   * Links, forms, and buttons
+   */
+  --surface-button-secondary: var(--color-primitive-theme-secondary-gray-light);
+  --surface-button-accent: var(--accent);
+
+  /**
+   * Borders
+   */
+  --border-secondary: var(--color-primitive-theme-secondary-gray-primary);
+  --border-secondary-dark: var(--color-primitive-theme-secondary-gray-dark);
+  --border-secondary-dark: var(--color-primitive-theme-secondary-gray-dark);
+
+}

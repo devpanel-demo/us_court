@@ -1,0 +1,13 @@
+usc.admin:
+  title: 'US Courts'
+  description: 'Manage US Courts specific configuration'
+  route_name: 'usc.admin'
+  parent: 'system.admin'
+  weight: -10
+
+usc.global_sites_settings:
+  title: 'Global Site Settings'
+  description: 'Manage US Courts specific configuration'
+  route_name: 'config_pages.global_site_settings'
+  parent: 'usc.admin'
+  weight: -20

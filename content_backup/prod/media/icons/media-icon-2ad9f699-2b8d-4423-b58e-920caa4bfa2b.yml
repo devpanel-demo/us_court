@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 2ad9f699-2b8d-4423-b58e-920caa4bfa2b
+entity_type: media
+bundle: icon
+base_fields:
+  name: computer-mouse-solid.svg
+  created: '1721137017'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/computer-mouse-solid.svg'
+      url: '/sites/default/files/icons/computer-mouse-solid.svg'

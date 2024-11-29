@@ -1,0 +1,10 @@
+uuid: 38e8a0a3-b31d-443e-83ac-7a0870dddd88
+langcode: en
+status: true
+dependencies: {  }
+id: social_media_item
+label: 'Social Media Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,26 @@
+uuid: c7c7217e-b267-4a69-a245-727cbb0bf186
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.section_landing
+    - field.field.paragraph.referenced_nodes.field_fc_rn_node_row
+    - field.field.paragraph.referenced_nodes.field_fc_rn_row_style
+    - paragraphs.paragraphs_type.referenced_nodes
+id: paragraph.referenced_nodes.section_landing
+targetEntityType: paragraph
+bundle: referenced_nodes
+mode: section_landing
+content:
+  field_fc_rn_node_row:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: section_landing
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_fc_rn_row_style: true
+  search_api_excerpt: true

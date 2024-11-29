@@ -1,0 +1,10 @@
+uuid: 97b53684-83da-4702-995d-790e6b0e44c3
+langcode: en
+status: true
+dependencies: {  }
+id: milestone_activities
+label: 'Milestone activities'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_milestone_activities'
+behavior_plugins: {  }

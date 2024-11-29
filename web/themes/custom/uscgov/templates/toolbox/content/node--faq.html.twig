@@ -1,0 +1,9 @@
+{% embed 'uscgov:usa_accordion_item' with {
+    heading: label,
+    open: '',
+    content,
+  } only %}
+  {% block accordion_item_content %}
+    {{ content.body }}
+  {% endblock %}
+{% endembed %}

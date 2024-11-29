@@ -1,0 +1,93 @@
+uuid: 1d952375-7127-40bb-817b-d9d61c83de3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_latest_news_block
+    - paragraphs.paragraphs_type.usc_related_news
+  module:
+    - entity_reference_revisions
+id: config_pages.global_site_settings.field_latest_news_block
+field_name: field_latest_news_block
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Related News Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: usc_paragraph
+  handler_settings:
+    view:
+      view_name: usc_paragraph_library
+      display_name: entity_reference_1
+      arguments:
+        - usc_related_news
+    negate: '0'
+    target_bundles:
+      usc_related_news: usc_related_news
+    target_bundles_drag_drop:
+      additional_info:
+        weight: '21'
+        enabled: 0
+      body_enhanced:
+        weight: '22'
+        enabled: 0
+      icon_link:
+        weight: '23'
+        enabled: 0
+      job_vacancy:
+        weight: '24'
+        enabled: 0
+      judicial_vacancy:
+        weight: '25'
+        enabled: 0
+      milestone_activities:
+        weight: '26'
+        enabled: 0
+      piksel_programs:
+        weight: '27'
+        enabled: 0
+      referenced_nodes:
+        weight: '28'
+        enabled: 0
+      social_media_item:
+        weight: '29'
+        enabled: 0
+      usc_govdelivery:
+        weight: '30'
+        enabled: 0
+      usc_graphic_photo:
+        weight: '31'
+        enabled: 0
+      usc_highcharts:
+        weight: '32'
+        enabled: 0
+      usc_map:
+        weight: '33'
+        enabled: 0
+      usc_notification:
+        weight: '34'
+        enabled: 0
+      usc_related_content:
+        weight: '35'
+        enabled: 0
+      usc_related_files:
+        weight: '36'
+        enabled: 0
+      usc_related_links:
+        weight: '37'
+        enabled: 0
+      usc_related_news:
+        enabled: '1'
+        weight: '38'
+      usc_table_of_contents:
+        weight: '39'
+        enabled: 0
+      usc_video:
+        weight: '40'
+        enabled: 0
+field_type: entity_reference_revisions

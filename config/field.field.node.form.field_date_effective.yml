@@ -1,0 +1,21 @@
+uuid: 7416ce25-d8cb-4942-8cf6-ea624965b81b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_effective
+    - node.type.form
+  module:
+    - datetime
+id: node.form.field_date_effective
+field_name: field_date_effective
+entity_type: node
+bundle: form
+label: 'Effective Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

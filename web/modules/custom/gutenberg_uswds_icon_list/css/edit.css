@@ -1,0 +1,15 @@
+/**
+ * Don't edit this file. Find all style at ./sass folder.
+ **/
+ul.usa-icon-list {
+  padding-left: 0;
+  padding-right: 15px;
+}
+ul.usa-icon-list .wp-block-uswds-icon-list-item {
+  display: flex;
+}
+ul.usa-icon-list .usa-icon-list__content .block-editor-inner-blocks p {
+  margin: 2px 4px;
+}
+
+/*# sourceMappingURL=edit.css.map */

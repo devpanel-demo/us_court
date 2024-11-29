@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display an example Gutenberg block server-side.
+ *
+ * Available variables:
+ * - block_name: The Gutenberg block name.
+ * - block_content: The content of this block.
+ * - block_attributes: The attributes of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *
+ * @see template_preprocess_gutenberg_block()
+ * @see template_preprocess_gutenberg_block__gutenberg_uswds__accordion_item()
+ *
+ * @ingroup themeable
+ */
+#}
+{% embed 'uscgov:usa_accordion_item' with {
+  attributes,
+  open: (block_attributes.open) ? 'true' : 'false',
+  heading: block_attributes.heading,
+  content: block_content,
+} only %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}

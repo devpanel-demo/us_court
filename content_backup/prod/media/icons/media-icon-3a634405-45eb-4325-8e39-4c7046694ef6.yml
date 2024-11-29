@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 3a634405-45eb-4325-8e39-4c7046694ef6
+entity_type: media
+bundle: icon
+base_fields:
+  name: columns.svg
+  created: '1721136999'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/columns.svg'
+      url: '/sites/default/files/icons/columns.svg'

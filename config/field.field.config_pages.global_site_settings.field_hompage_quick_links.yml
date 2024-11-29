@@ -1,0 +1,49 @@
+uuid: ba901280-be9a-453f-88c1-b09803aad08a
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_hompage_quick_links
+    - paragraphs.paragraphs_type.icon_link
+  module:
+    - entity_reference_revisions
+id: config_pages.global_site_settings.field_hompage_quick_links
+field_name: field_hompage_quick_links
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Hompage Quick Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      icon_link: icon_link
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 10
+        enabled: false
+      body_enhanced:
+        weight: 11
+        enabled: false
+      icon_link:
+        weight: 14
+        enabled: true
+      milestone_activities:
+        weight: 15
+        enabled: false
+      piksel_programs:
+        weight: 16
+        enabled: false
+      referenced_nodes:
+        weight: 17
+        enabled: false
+      social_media_item:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

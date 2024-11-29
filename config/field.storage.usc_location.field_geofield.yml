@@ -1,0 +1,22 @@
+uuid: 00148cb4-ebdd-4c08-9294-6f32aa283ff1
+langcode: en
+status: true
+dependencies:
+  module:
+    - geofield
+    - usc_court_finder
+_core:
+  default_config_hash: xcTuFSSo1cvXLbrb2R09RG8JF4E8cRTgMLIn7vXo3lE
+id: usc_location.field_geofield
+field_name: field_geofield
+entity_type: usc_location
+type: geofield
+settings:
+  backend: geofield_backend_default
+module: geofield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

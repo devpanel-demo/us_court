@@ -1,0 +1,32 @@
+uuid: 98db1933-28eb-4fc0-bcc6-bbde59ecc612
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.file.audio.field_file_description
+    - field.field.file.audio.field_file_title
+  module:
+    - file
+    - text
+id: file.audio.default
+targetEntityType: file
+bundle: audio
+mode: default
+content:
+  field_file_description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_file_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

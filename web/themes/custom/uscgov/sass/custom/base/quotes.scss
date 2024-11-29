@@ -1,0 +1,115 @@
+/**
+ * Custom pullquote and blockquote styles.
+ */
+.wp-block-pullquote {
+  border: 0;
+  margin: var(--spacing-component) 0;
+  padding: 0;
+  text-align: unset;
+  color: var(--text-on-surface-base-light);
+}
+
+
+.wp-block-quote,
+.wp-block-pullquote blockquote {
+  &:before {
+    content: none;
+  }
+}
+
+.wp-block-pullquote cite {
+  color: var(--text-on-surface-primary-light);
+}
+
+.wp-block-pullquote__citation,
+.wp-block-pullquote cite,
+.wp-block-pullquote footer {
+  text-transform: unset;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.wp-block-pullquote.alignleft,
+.wp-block-pullquote.alignright {
+  max-width: unset;
+}
+
+.wp-block-pullquote.alignleft p,.wp-block-pullquote cite
+.wp-block-pullquote.alignright p {
+  font-size: unset;
+}
+
+.wp-block-pullquote p {
+  font-size: unset;
+  line-height: unset;
+}
+
+.wp-block-pullquote blockquote p {
+  font-size: 22px;
+}
+
+.wp-block-quote,
+blockquote:where(:not(.usc-pullquote)) {
+  margin: var(--spacing-component) 0;
+  padding: 24px;
+  border-left: 4px solid var(--border-secondary-dark);
+  font-family: var(--font-serif);
+  font-size: 22px;
+
+  p {
+    font-size: inherit;
+  }
+
+  // Blockquotes that do not have any descendent elements.
+  &:not(:has(> *)) {
+    &:before {
+      display: inline;
+      content: "\201C";
+    }
+
+    &:after {
+      display: inline;
+      content: "\201D";
+    }
+  }
+
+  // First element.
+  > :first-child {
+    margin-top: 0;
+
+    &:before {
+      content: "\201C";
+    }
+  }
+
+  // Last element that is not a <cite>.
+  > :where(:nth-last-child(1 of :not(cite))) {
+    margin-bottom: 0;
+
+    &:after {
+      content: "\201D";
+    }
+  }
+
+  // Gutenberg editor specific styles.
+  [role="textbox"] {
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+
+  .wp-block-pullquote__citation,
+  .wp-block-quote__citation,
+  cite {
+    display: block;
+    margin-top: 16px;
+    text-transform: capitalize;
+    font-style: italic;
+    font-size: 17px;
+
+    &:before {
+      content: "\2014 ";
+    }
+  }
+}

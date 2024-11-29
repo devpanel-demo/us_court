@@ -1,0 +1,16 @@
+{
+  "name": "gutenberg_uswds_alert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "./node_modules/.bin/drupal-js-build watch --css",
+    "build": "./node_modules/.bin/drupal-gutenberg-translations && ./node_modules/.bin/drupal-js-build --css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "drupal-gutenberg-translations": "^1.0.2",
+    "drupal-js-build": "^1.1.1"
+  }
+}

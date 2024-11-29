@@ -1,0 +1,10 @@
+name: USC Galleries
+type: module
+description: Audio-visual galleries
+package: US Courts
+core_version_requirement: ^10
+dependencies:
+  - drupal:media
+  - media_library_edit:media_library_edit
+  - drupal:media_library
+  - pathauto:pathauto

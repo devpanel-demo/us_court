@@ -1,0 +1,19 @@
+uuid: 0a3954a1-6b6f-4ea1-a241-675292ec6075
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.vacancy
+id: node.vacancy.field_year
+field_name: field_year
+entity_type: node
+bundle: vacancy
+label: Year
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

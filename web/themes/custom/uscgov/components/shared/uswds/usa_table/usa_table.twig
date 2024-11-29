@@ -1,0 +1,119 @@
+{%
+  set classes = [
+    'usa-table',
+    'views-table',
+    'views-view-table',
+    'cols-' ~ header|length,
+    borderless ? 'usa-table--borderless',
+    striped ? 'usa-table--striped',
+    responsive ? 'responsive-enabled',
+    sticky ? 'sticky-enabled',
+  ]
+%}
+<div tabindex="0" class="full-width-content usa-table-container--scrollable">
+  <table{{ attributes.addClass(classes) }}>
+    {% if caption_needed %}
+      <caption>
+      {% if caption %}
+        {{ caption }}
+      {% else %}
+        {{ title }}
+      {% endif %}
+      {% if (summary is not empty) %}
+        {{ summary }}
+      {% endif %}
+      </caption>
+    {% endif %}
+    {% if header %}
+      <thead>
+        <tr>
+          {% for key, column in header %}
+            {% if column.default_classes %}
+              {%
+                set column_classes = [
+                  'views-field',
+                  fields[key] ? 'views-field-' ~ fields[key],
+                  column.url ? 'field-sortable'
+                ]
+              %}
+            {% endif %}
+            <th{{ column.attributes.addClass(column_classes).setAttribute('scope', 'col') }}>
+              {%- if column.url -%}
+                {{ column.content }}
+                {% if column.sort_indicator %}
+                  {% if column.sort_indicator['#style'] == 'desc' %}
+                    <a
+                      href="{{ column.url }}"
+                      title="{{ 'Click to sort by @title in descending order.'|t({'@title': column.content}) }}"
+                      class="usa-table__header__link text-gray-50"
+                      rel="nofollow"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" height="20" width="15" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+                    </a>
+                  {% endif %}
+
+                  {% if column.sort_indicator['#style'] == 'asc' %}
+                    <a
+                      href="{{ column.url }}"
+                      title="{{ 'Click to sort by @title in ascending order.'|t({'@title': column.content}) }}"
+                      class="usa-table__header__link text-gray-50"
+                      rel="nofollow"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" height="20" width="15" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                    </a>
+                  {% endif %}
+                {% else %}
+                  <a
+                    href="{{ column.url }}"
+                    title="{{ 'Click to sort by @title.'|t({'@title': column.content}) }}"
+                    class="usa-table__header__link text-gray-50"
+                    rel="nofollow"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="12.5" viewBox="0 0 320 512"><path d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8L32 224c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8l256 0c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"/></svg>
+                  </a>
+                {% endif %}
+              {%- else -%}
+                {{- column.content }}{{ column.sort_indicator }}
+              {%- endif -%}
+            </th>
+          {% endfor %}
+        </tr>
+      </thead>
+    {% endif %}
+    <tbody>
+      {% for row in rows %}
+        <tr{{ row.attributes }}>
+          {% for key, column in row.columns %}
+            {% if column.default_classes %}
+              {% set column_attributes = column.attributes %}
+              {%
+                set column_classes = [
+                  'views-field'
+                ]
+              %}
+              {% for field in column.fields %}
+                {% if 'is-active' in field %}
+                  {% set column_attributes = column_attributes.setAttribute('data-sort-active', true) %}
+                {% endif %}
+                {% set column_classes = column_classes|merge(['views-field-' ~ field]) %}
+              {% endfor %}
+            {% endif %}
+            <td{{ column_attributes.addClass(column_classes) }}>
+              {%- if column.wrapper_element -%}
+                <{{ column.wrapper_element }}>
+                {% for content in column.content %}
+                  {{ content.separator }}{{ content.field_output }}
+                {% endfor %}
+                </{{ column.wrapper_element }}>
+              {%- else -%}
+                {% for content in column.content %}
+                  {{- content.separator }}{{ content.field_output -}}
+                {% endfor %}
+              {%- endif %}
+            </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

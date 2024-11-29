@@ -1,0 +1,47 @@
+uuid: da82a00c-8301-4a27-a866-3eb7a925dcec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_notification.field_usc_description
+    - field.field.paragraph.usc_notification.field_usc_label
+    - field.field.paragraph.usc_notification.field_usc_title
+    - paragraphs.paragraphs_type.usc_notification
+  module:
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.usc_notification.default
+targetEntityType: paragraph
+bundle: usc_notification
+mode: default
+content:
+  field_usc_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_usc_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_usc_label: true
+  search_api_excerpt: true

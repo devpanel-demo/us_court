@@ -1,0 +1,19 @@
+uuid: 7592927a-5859-4bf7-8e40-8741aa2681fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.global_site_settings
+    - field.storage.config_pages.field_homepage_hero_secondary_bl
+id: config_pages.global_site_settings.field_homepage_hero_secondary_bl
+field_name: field_homepage_hero_secondary_bl
+entity_type: config_pages
+bundle: global_site_settings
+label: 'Homepage Hero Secondary Block Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

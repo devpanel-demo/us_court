@@ -1,0 +1,22 @@
+uuid: 576d4602-89eb-46e0-9d9f-1e6b428a2878
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uscgov
+_core:
+  default_config_hash: C-xbrhbdGEzRe2WV3pPD8ixBtDvkes8uSb-c6m8VSaA
+id: uscgov_messages
+theme: uscgov
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

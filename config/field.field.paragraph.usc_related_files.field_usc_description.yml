@@ -1,0 +1,25 @@
+uuid: 17e48d89-73b1-4c30-94e8-4d42ff93c3df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_description
+    - filter.format.wysiwyg
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.usc_related_files
+  module:
+    - text
+id: paragraph.usc_related_files.field_usc_description
+field_name: field_usc_description
+entity_type: paragraph
+bundle: usc_related_files
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

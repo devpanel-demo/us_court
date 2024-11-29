@@ -1,0 +1,10 @@
+uuid: 21d0a606-b96a-4bcf-9622-80df48202d16
+langcode: en
+status: true
+dependencies: {  }
+id: usc_related_news
+label: 'Related News'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean_usc_latestnews'
+behavior_plugins: {  }

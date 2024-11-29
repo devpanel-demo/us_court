@@ -1,0 +1,153 @@
+@use "sass:map";
+@use "sass:string";
+
+/**
+ * List of button default color grades used to simplify the definition of 'button-palette-colors' by mapping from these values.
+ */
+$button-default-color-grades: (
+  "default": (
+    "text": "button-text",
+
+    "surface": "primary",
+    "surface-hover": "dark",
+    "surface-active": "darker",
+
+    "border-active": "light",
+  ),
+  "outline": (
+    "text": "primary",
+    "text-hover": "darker",
+    "text-active": "dark",
+
+    "surface-hover": "lighter",
+    "surface-active": "lighter",
+
+    "border": "primary",
+    "border-hover": "darker",
+    "border-active": "light",
+  ),
+);
+
+/**
+ * List of colors for all button variants and corresponding button types.
+ * 
+ * Note: When a variant's button type doesn't set one of the button color variables
+ *   then that variable will use the color set for that type from 'primary' variant.
+ *   e.g. "secondary.default.text-hover" was not set so it will fallback to "primary.default.text-hover"
+ */
+$button-palette-colors: (
+  "primary": (
+    "default": (
+      "text": "get_from_default_grade",
+      "text-hover": var(--color-primitive-neutral-base-light),
+      "text-active": var(--color-primitive-neutral-base-light),
+
+      "surface": "get_from_default_grade",
+      "surface-hover": "get_from_default_grade",
+      "surface-active": "get_from_default_grade",
+
+      "border": var(--color-primitive-neutral-gray-muted-light),
+      "border-hover": var(--color-primitive-neutral-gray-muted-light),
+      "border-active": "get_from_default_grade",
+    ),
+    "outline": (
+      "text": "get_from_default_grade",
+      "text-hover": "get_from_default_grade",
+      "text-active": "get_from_default_grade",
+
+      "surface": var(--color-primitive-neutral-base-light),
+      "surface-hover": "get_from_default_grade",
+      "surface-active": "get_from_default_grade",
+
+      "border": "get_from_default_grade",
+      "border-hover": "get_from_default_grade",
+      "border-active": "get_from_default_grade",
+    ),
+  ),
+  "secondary": (
+    "default": (
+      "text": "get_from_default_grade",
+
+      "surface": "get_from_default_grade",
+      "surface-hover": "get_from_default_grade",
+      "surface-active": "get_from_default_grade",
+
+      "border-active": "get_from_default_grade",
+    ),
+    "outline": (
+      "text": "get_from_default_grade",
+      "text-hover": "get_from_default_grade",
+      "text-active": "get_from_default_grade",
+
+      "surface": var(--color-primitive-neutral-base-light),
+      "surface-hover": "get_from_default_grade",
+      "surface-active": "get_from_default_grade",
+
+      "border": "get_from_default_grade",
+      "border-hover": "get_from_default_grade",
+      "border-active": "get_from_default_grade",
+    ),
+  ),
+  "accent": (
+    "default": (
+      "text": "get_from_default_grade",
+
+      "surface": "get_from_default_grade",
+      "surface-hover": "get_from_default_grade",
+      "surface-active": "get_from_default_grade",
+
+      "border-active": "get_from_default_grade",
+    ),
+    "outline": (
+      "text": "get_from_default_grade",
+      "text-hover": "get_from_default_grade",
+      "text-active": "get_from_default_grade",
+
+      "surface": var(--color-primitive-neutral-base-light),
+      "surface-hover": "get_from_default_grade",
+      "surface-active": "get_from_default_grade",
+
+      "border": "get_from_default_grade",
+      "border-hover": "get_from_default_grade",
+      "border-active": "get_from_default_grade",
+    ),
+  ),
+);
+
+
+/**
+ * Styles for button color variables.
+ *   - Uses the configured color palette as base.
+ *   - Sets colors for each button variant and button type.
+ */
+.uscgov-root,
+.editor-styles-wrapper,
+.interface-interface-skeleton__sidebar {
+  // Define the class prefixes for button color selectors.
+  $class-prefix: 'usc-button';
+  $class-prefix-color-variant: '';
+  $class-prefix-button-type: '';
+  // Set the class prefixes for button color selectors.
+  $prefix-button-color: "#{$class-prefix}--#{$class-prefix-color-variant}";
+  $prefix-button-type: "#{$class-prefix}--#{$class-prefix-button-type}";
+
+  // Generate '--button-color-' CSS variables for each button color and variants.
+  @each $color-variant, $button-types in $button-palette-colors {
+    $suffix-button-color: if($color-variant != "primary", ".#{$prefix-button-color}#{$color-variant}", "");
+    @each $button-type, $button-type-colors in $button-types {
+      $suffix-button-type: if($button-type != "default", ".#{$prefix-button-type}#{$button-type}", "");
+      // Add button color CSS variables to corresponding selectors.
+      & #{$suffix-button-color}#{$suffix-button-type} {
+        @each $button-type-color, $color-value in $button-type-colors {
+          @if $color-value {
+            @if $color-value == "get_from_default_grade" {
+              $color-value: var(--color-#{string.unquote($color-variant)}-#{string.unquote(map.get($button-default-color-grades, $button-type, $button-type-color))});
+            }
+            // Set the button color CSS variable.
+            #{'--button-color-' + $button-type-color}: #{$color-value};
+          }
+        }
+      }
+    }
+  }
+}

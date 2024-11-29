@@ -1,0 +1,88 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: a3fc428c-7b73-475e-8c1f-b9ffdf1aead2
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'About the U.S. Courts of Appeals'
+  status: true
+  langcode: en
+  created: '1719249075'
+  changed: 1719249395
+  author: jamesdavison@ao.uscourts.gov
+  url: /about-us-courts-appeals
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 38dfb5cb-de92-4f5b-ac95-4093ef95d815
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719249136'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<h2>What are Courts of Appeals?&nbsp;</h2><p>Federal courts of appeals review the procedures and the decisions in the district courts, also known as trial courts, to make sure that the proceedings were fair and that the law was applied correctly.&nbsp;&nbsp;</p><p>The courts of appeals routinely handle more than 50,000 cases each year. Ten percent or fewer of those decisions are appealed to the U.S. Supreme Court, which in turn hears oral arguments in fewer than 100 cases annually.&nbsp;&nbsp;</p><p>Thus, most courts of appeals decisions are final, and they are binding on lower courts within the same circuit.&nbsp;</p><h2>What is the Structure of Courts of Appeals?&nbsp;</h2><p>In the federal system, 94 district courts are organized into 12 regional circuits. Each circuit has its own court of appeals that reviews cases decided in U.S. district courts within the circuit. Unlike trial courts, appellate courts do not retry cases or hear new evidence; they do not hear witnesses testify; and there is no jury.&nbsp;</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 2804ccd5-9b77-4053-a117-a60e93fcf16c
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719249136'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Download a <a href="https://www.uscourts.gov/file/18039/download"><u>map of the 12 regional circuits</u></a>.&nbsp;</p><p>The appellate courts also can hear cases that originated in state courts when they involve claims that a state or local law or action violates rights guaranteed under the U.S. Constitution. And they can review decisions by federal administrative agencies, as well as hear some original proceedings filed directly with the courts of appeals.&nbsp;&nbsp;</p><p>In addition, a 13th court of appeals, the U.S. Court of Appeals for the Federal Circuit, has nationwide jurisdiction to hear appeals in specialized cases, such as those involving patent laws, and cases decided by the <a href="http://www.cit.uscourts.gov/"><u>U.S. Court of International Trade</u></a> and the <a href="http://www.uscfc.uscourts.gov/"><u>U.S. Court of Federal Claims</u></a>.&nbsp;&nbsp;</p><p>Learn more about the <a href="https://www.uscourts.gov/about-federal-courts/types-cases/appeals"><u>appellate process</u></a>.&nbsp;</p><h2>Who Serves in Courts of Appeals?&nbsp;</h2><p><a href="https://www.uscourts.gov/judges-judgeships/about-federal-judges"><u>Court of appeals judges</u></a>, also called circuit judges, usually sit in a panel of three judges to determine whether the law was applied correctly by a lower court or administrative agency.&nbsp;&nbsp;</p><h2>Courts of Appeals Statistics&nbsp;</h2><p>The following reports contain data and analysis of the workload of the courts of appeals, including comparing caseload data to previous years.&nbsp; &nbsp;</p><ul><li><a href="https://www.uscourts.gov/statistics-reports/analysis-reports/judicial-business-united-states-courts"><u>Judicial Business</u></a> covers a 12-month period ending September 30.&nbsp; &nbsp;</li><li><a href="https://www.uscourts.gov/statistics-reports/analysis-reports/federal-judicial-caseload-statistics"><u>Federal Judicial Caseload Statistics</u></a> covers a 12-month period ending March 31.&nbsp;&nbsp;</li><li><a href="https://www.uscourts.gov/statistics-reports/analysis-reports/statistical-tables-federal-judiciary"><u>Statistical Tables for the Federal Judiciary</u></a> covers 12-month periods ending June 30 and December 31.&nbsp;</li></ul><p>For additional information about courts of appeals, see:&nbsp;&nbsp;</p><ul><li><a href="https://www.uscourts.gov/sites/default/files/understanding-federal-courts.pdf"><u>Understanding the Federal Courts</u></a>&nbsp;&nbsp;</li><li><a href="https://www.uscourts.gov/statistics-reports/federal-court-media-basics-journalists-guide"><u>A Journalist’s Guide to Federal Courts</u></a>&nbsp;</li></ul>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>Courts of appeals review challenges to court decisions to determine whether the law was applied correctly.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

@@ -1,0 +1,23 @@
+uuid: cccef5c1-5115-4f72-872f-7a1bac28694d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.federal_rules
+  module:
+    - feeds
+id: node.federal_rules.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: federal_rules
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

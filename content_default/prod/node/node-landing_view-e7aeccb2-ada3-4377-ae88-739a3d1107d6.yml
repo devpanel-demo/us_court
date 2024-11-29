@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: e7aeccb2-ada3-4377-ae88-739a3d1107d6
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'About Federal Courts'
+  status: true
+  langcode: und
+  created: '1392669273'
+  changed: 1728260383
+  author: jamesdavison@ao.uscourts.gov
+  url: /about-federal-courts
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:uswdscollection/basic {"nodeIds":[1977,1980,"17357","1963","1975",4314],"viewMode":"section_landing","collectionRange":7} /-->'
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>The U.S. Courts were created under Article III of the Constitution to administer&nbsp;justice fairly and impartially, within the jurisdiction established by the Constitution and Congress.&nbsp;This section will help you learn more about the Judicial Branch and its work.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 88a7b5f3-a2f7-4edb-986d-b09d68bd7489
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'About Federal Courts'
+        weight: 3
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_usc_type
+    - taxonomy.vocabulary.usc_court_finder_hierarchy
+  module:
+    - options
+id: taxonomy_term.usc_court_finder_hierarchy.field_usc_type
+field_name: field_usc_type
+entity_type: taxonomy_term
+bundle: usc_court_finder_hierarchy
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

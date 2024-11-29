@@ -1,0 +1,11 @@
+uuid: da93bb60-922d-4387-91b5-1395927899b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_item
+label: 'Featured Item'
+description: 'Present the content as feature item.'
+targetEntityType: node
+cache: true

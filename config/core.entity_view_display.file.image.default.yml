@@ -1,0 +1,28 @@
+uuid: f26555cb-b9ce-49b2-830f-a9d626c37122
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.file.image.field_file_description
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+    - field.field.file.image.field_link
+  module:
+    - file
+    - text
+id: file.image.default
+targetEntityType: file
+bundle: image
+mode: default
+content:
+  field_file_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_file_image_alt_text: true
+  field_file_image_title_text: true
+  field_link: true

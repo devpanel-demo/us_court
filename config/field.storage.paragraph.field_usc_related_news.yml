@@ -1,0 +1,21 @@
+uuid: 251cac9a-235a-41bd-8c74-a85e3059b7bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - views
+    - viewsreference
+id: paragraph.field_usc_related_news
+field_name: field_usc_related_news
+entity_type: paragraph
+type: viewsreference
+settings:
+  target_type: view
+module: viewsreference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

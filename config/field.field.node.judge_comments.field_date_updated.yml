@@ -1,0 +1,21 @@
+uuid: 92bd5242-c1ec-4cce-b351-9a3393ad9cca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_updated
+    - node.type.judge_comments
+  module:
+    - datetime
+id: node.judge_comments.field_date_updated
+field_name: field_date_updated
+entity_type: node
+bundle: judge_comments
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

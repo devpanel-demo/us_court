@@ -1,0 +1,65 @@
+# Content routes.
+entity.usc_location.collection:
+  path: '/admin/content/usc_court_finder/location'
+  defaults:
+    _entity_list: 'usc_location'
+    _title: 'Locations'
+  requirements:
+    _permission: 'view court_finder_content'
+
+entity.usc_court_finder_item.collection:
+  path: '/admin/content/usc_court_finder/item'
+  defaults:
+    _entity_list: 'usc_court_finder_item'
+    _title: 'Court Finder Items'
+  requirements:
+    _permission: 'view court_finder_content'
+
+# Admin routes.
+usc_court_finder.settings:
+  path: '/admin/structure/usc_court_finder'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Court Finder'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.court_finder_item.settings:
+  path: '/admin/structure/usc_court_finder/item/settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Court Finder Items'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+entity.usc_location.settings:
+  path: '/admin/structure/usc_court_finder/usc-location'
+  defaults:
+    _form: '\Drupal\usc_court_finder\Form\FederalCourtFinderSettingsForm'
+    _title: 'Location'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.configuration:
+  path: '/admin/fcf/configuration'
+  defaults:
+    _form: '\Drupal\usc_court_finder\Form\FederalCourtFinderConfigurationForm'
+    _title: 'USC Federal Finder configuration'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.past_url:
+  path: '/federal-court-finder'
+  defaults:
+    _controller: '\Drupal\usc_court_finder\Controller\RedirectController::redirectOldUrl'
+    _title: 'USC Federal Court Finder'
+  requirements:
+    _permission: 'view court_finder_content'
+
+usc_court_finder.past_search_url:
+  path: '/federal-court-finder/search'
+  defaults:
+    _controller: '\Drupal\usc_court_finder\Controller\RedirectController::redirectOldUrl'
+    _title: 'USC Federal Court Finder'
+  requirements:
+    _permission: 'view court_finder_content'

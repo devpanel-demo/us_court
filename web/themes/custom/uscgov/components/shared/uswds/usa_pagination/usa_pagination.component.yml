@@ -1,0 +1,106 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Pagination
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - pages
+    - current
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    pages:
+      title: Items
+      type: array
+      description: Pagination items.
+      items:
+        type: array
+        items:
+          type: object
+          required:
+            - href
+            - attributes
+          properties:
+            href:
+              title: Page Link URL
+              type: string
+    first:
+      title: First Page Link
+      type: object
+      required:
+        - visible
+      properties:
+        href:
+          title: Page Link URL
+          type: string
+        text:
+          title: Link text
+          type: string
+        visible:
+          title: Visible
+          type: boolean
+          description: If the first element is visible in the pages link.
+    last:
+      title: Last Page Link
+      type: object
+      required:
+        - visible
+      properties:
+        href:
+          title: Page Link URL
+          type: string
+        text:
+          title: Link text
+          type: string
+        visible:
+          title: Visible
+          type: boolean
+          description: If the last element is visible in the pages link.
+    previous:
+      title: Previous Page Link
+      type: ["object", "null"]
+      required:
+        - href
+        - attributes
+        - text
+      properties:
+        href:
+          title: Page Link URL
+          type: string
+        text:
+          title: Link text
+          type: string
+    next:
+      title: Next Page Link
+      type: ["object", "null"]
+      required:
+        - href
+        - attributes
+        - text
+      properties:
+        href:
+          title: Page Link URL
+          type: string
+        text:
+          title: Link text
+          type: string
+    ellipsis_previous:
+      title: Ellipsis Previous
+      type: boolean
+      description: Present if the currently visible list of pages does not start at the first page.
+    ellipsis_next:
+      title: Ellipsis Next
+      type: boolean
+      description: Present if the visible list of pages ends before the last page.
+    current:
+      title: Current
+      type: number
+      description: The page number of the current page.
+    last_page:
+      title: Last Page
+      type: number
+      description: The page number of the last page.
+libraryOverrides:
+  dependencies:
+    - uscgov/uswds-icon

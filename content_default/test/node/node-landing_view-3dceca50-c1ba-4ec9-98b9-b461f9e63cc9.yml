@@ -1,0 +1,32 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 3dceca50-c1ba-4ec9-98b9-b461f9e63cc9
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Testing pull quote - landing page - EAP'
+  status: true
+  langcode: en
+  created: '1716919932'
+  changed: 1716919932
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-pull-quote-landing-page-eap
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p>Bankruptcy filings rose 16 percent during the 12-month period ending March 31, 2024. That is a similar rate of acceleration as in the Dec. 31, 2023, quarterly report, but new bankruptcy cases remain significantly lower than before the start of the coronavirus (COVID-19) pandemic.</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>According to statistics released by the Administrative Office of the U.S. Courts, total filings rose to 467,774 new cases, compared with 403,273 cases reported during the year ending March 31, 2023.</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:pullquote -->\r\n<figure class=\"wp-block-pullquote\"><blockquote><p>Crash the party like a record scratch as I scream.</p><cite>Taylor Swift</cite></blockquote></figure>\r\n<!-- /wp:pullquote -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>Business filings increased 40.4 percent, from 14,467 in March 2023 to 20,316 in the newest report. Non-business filings rose 15.1 percent, from 388,806 in March 2023 to 447,458 in March 2024.</p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

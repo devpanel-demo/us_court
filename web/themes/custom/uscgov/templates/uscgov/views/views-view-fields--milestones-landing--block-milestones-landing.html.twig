@@ -1,0 +1,14 @@
+{% set parent = row._entity %}
+{% set url = path('entity.node.canonical', {'node': parent.id}) %}
+
+{{ include('uscgov:judicial-milestone', {
+  attributes,
+  name: parent.title.value,
+  activity: fields.field_fc_jma_category.content,
+  position: fields.field_fc_jma_position.content,
+  current_title: fields.field_fc_jma_current_title.content,
+  court: fields.field_fc_jma_court_name.content,
+  date: fields.field_fc_jma_date.content,
+  body: fields.field_fc_be_body.content,
+  url,
+}, with_context = false) }}

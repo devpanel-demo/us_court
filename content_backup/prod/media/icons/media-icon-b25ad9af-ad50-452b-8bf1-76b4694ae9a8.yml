@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: b25ad9af-ad50-452b-8bf1-76b4694ae9a8
+entity_type: media
+bundle: icon
+base_fields:
+  name: building-outline.svg
+  created: '1721136830'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/building-outline.svg'
+      url: '/sites/default/files/icons/building-outline.svg'

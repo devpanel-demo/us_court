@@ -1,0 +1,22 @@
+uuid: f36d509d-d9e7-4a4f-94cc-2eb99211c6de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fc_be_body
+    - paragraphs.paragraphs_type.milestone_activities
+  module:
+    - text
+id: paragraph.milestone_activities.field_fc_be_body
+field_name: field_fc_be_body
+entity_type: paragraph
+bundle: milestone_activities
+label: 'Additional Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

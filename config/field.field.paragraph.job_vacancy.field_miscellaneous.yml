@@ -1,0 +1,24 @@
+uuid: 37751b87-42d1-4001-97bb-96e2ce9e8e05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_miscellaneous
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - text
+id: paragraph.job_vacancy.field_miscellaneous
+field_name: field_miscellaneous
+entity_type: paragraph
+bundle: job_vacancy
+label: Miscellaneous
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

@@ -1,0 +1,11 @@
+uuid: d8fa29bb-5cf8-4c03-9077-46ed35488a75
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoNVreoTdTZTY7GuE8fI9Jmxqdz8vlo4ZJKixMNSosw
+name: Tags
+vid: tags
+description: 'Used for tagging content with multiple keywords.'
+weight: 0
+new_revision: false

@@ -1,0 +1,22 @@
+uuid: 6bb0e2b6-a0c7-4f9c-a2b7-6a2ed14374e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uscgov
+_core:
+  default_config_hash: C9s_w5UJNS_86Ghb8PeaLEAm4hte_B_PyddtuGUqi5I
+id: uscgov_breadcrumbs
+theme: uscgov
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

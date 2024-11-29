@@ -1,0 +1,20 @@
+uuid: 0c381f28-097e-47b7-8098-ae94cf4be0e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_salary_maximum
+field_name: field_salary_maximum
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

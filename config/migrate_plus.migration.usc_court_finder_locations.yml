@@ -1,0 +1,183 @@
+uuid: add1b414-7268-4501-b974-86309116a402
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: v5x3GNqQAsTENrbBA_dY5o_SfNjHzujUaldscYlfkeE
+id: usc_court_finder_locations
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: usc_court_finder
+label: 'US Court Finder Locations'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: usc_location_json
+  urls:
+    callback: usc_court_finder_migrate_urls
+  item_selector: /Locations
+  fields:
+    -
+      name: OrgCode
+      selector: /OrgCode
+    -
+      name: Unit
+      selector: /Unit
+    -
+      name: CourtType
+      selector: /CourtType
+    -
+      name: LocationId
+      selector: /LocationId
+    -
+      name: Circuit
+      selector: /Circuit
+    -
+      name: District
+      selector: /District
+    -
+      name: MainOffice
+      selector: /MainOffice
+    -
+      name: OfficeName
+      selector: /OfficeName
+    -
+      name: Url
+      selector: /Url
+    -
+      name: Phone
+      selector: /Phone
+    -
+      name: Fax
+      selector: /Fax
+    -
+      name: Opens
+      selector: /Opens
+    -
+      name: Closes
+      selector: /Closes
+    -
+      name: LunchStart
+      selector: /LunchStart
+    -
+      name: LunchEnd
+      selector: /LunchEnd
+    -
+      name: HasPublicLibrary
+      selector: /HasPublicLibrary
+    -
+      name: Longitude
+      selector: /Longitude
+    -
+      name: Latitude
+      selector: /Latitude
+    -
+      name: Room
+      selector: /Room
+    -
+      name: BuildingName
+      selector: /BuildingName
+    -
+      name: BuildingAddress
+      selector: /BuildingAddress
+    -
+      name: BuildingCity
+      selector: /BuildingCity
+    -
+      name: BuildingState
+      selector: /BuildingState
+    -
+      name: BuildingZip
+      selector: /BuildingZip
+    -
+      name: LocationGroup
+      selector: /LocationGroup
+    -
+      name: Address
+      selector: /Address
+    -
+      name: EJurorUrl
+      selector: /EJurorUrl
+    -
+      name: JuryServiceUrl
+      selector: /JuryServiceUrl
+    -
+      name: ECFurl
+      selector: /ECFurl
+    -
+      name: ECFUrl2
+      selector: /ECFUrl2
+    -
+      name: MailBox
+      selector: /MailBox
+    -
+      name: MailZip
+      selector: /MailZip
+  ids:
+    LocationId:
+      type: integer
+process:
+  org_code: OrgCode
+  unit:
+    plugin: usc_unit
+    source: OrgCode
+  court_type:
+    plugin: usc_court_type
+    source: OrgCode
+  location_id: LocationId
+  circuit_id:
+    -
+      plugin: usc_circuit
+      source:
+        - Circuit
+        - OfficeName
+    -
+      plugin: migration_lookup
+      migration: usc_court_finder_circuit_terms
+  district_id:
+    -
+      plugin: usc_district
+      source:
+        - District
+        - OfficeName
+    -
+      plugin: migration_lookup
+      migration: usc_court_finder_district_terms
+  main_office: MainOffice
+  office_name: OfficeName
+  url: Url
+  phone: Phone
+  fax: Fax
+  opens: Opens
+  closes: Closes
+  lunch_start: LunchStart
+  lunch_end: LunchEnd
+  has_public_library: HasPublicLibrary
+  field_geofield:
+    plugin: geofield_latlon
+    source:
+      - Latitude
+      - Longitude
+  room: Room
+  building_name: BuildingName
+  building_address: BuildingAddress
+  building_city: BuildingCity
+  building_state: BuildingState
+  building_zip: BuildingZip
+  location_group: LocationGroup
+  address: Address
+  ejuror_url: EJurorUrl
+  jury_service_url: JuryServiceUrl
+  ecf_url: ECFurl
+  ecf_url2: ECFUrl2
+  mail_box: MailBox
+  mail_zip: MailZip
+destination:
+  plugin: 'entity:usc_location'
+migration_dependencies:
+  required:
+    - usc_court_finder_circuit_terms
+    - usc_court_finder_state_terms
+    - usc_court_finder_district_terms

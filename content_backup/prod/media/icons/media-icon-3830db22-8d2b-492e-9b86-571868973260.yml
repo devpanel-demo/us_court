@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 3830db22-8d2b-492e-9b86-571868973260
+entity_type: media
+bundle: icon
+base_fields:
+  name: rss-square.svg
+  created: '1721137202'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/rss-square.svg'
+      url: '/sites/default/files/icons/rss-square.svg'

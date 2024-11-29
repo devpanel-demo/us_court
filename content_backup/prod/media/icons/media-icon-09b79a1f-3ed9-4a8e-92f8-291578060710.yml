@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 09b79a1f-3ed9-4a8e-92f8-291578060710
+entity_type: media
+bundle: icon
+base_fields:
+  name: radio-solid.svg
+  created: '1721137188'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/radio-solid.svg'
+      url: '/sites/default/files/icons/radio-solid.svg'

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: c28a1780-1dcc-4b92-9338-586562d9cd85
+entity_type: media
+bundle: icon
+base_fields:
+  name: tower-cell-solid.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/tower-cell-solid.svg'
+      url: '/sites/default/files/icons/tower-cell-solid.svg'

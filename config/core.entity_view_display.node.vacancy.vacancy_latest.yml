@@ -1,0 +1,106 @@
+uuid: 34b9a5ac-c909-4517-bcfe-a69939aed10c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.vacancy_latest
+    - field.field.node.vacancy.field_archive_id
+    - field.field.node.vacancy.field_congress
+    - field.field.node.vacancy.field_legacy_table_data
+    - field.field.node.vacancy.field_pdf_document
+    - field.field.node.vacancy.field_source_type
+    - field.field.node.vacancy.field_vacancy_reference
+    - field.field.node.vacancy.field_vacancy_type
+    - field.field.node.vacancy.field_year
+    - node.type.vacancy
+  module:
+    - entity_reference_revisions
+    - field_formatter_range
+    - nomarkup
+    - sdc_display
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.vacancy.vacancy_latest
+targetEntityType: node
+bundle: vacancy
+mode: vacancy_latest
+content:
+  field_authorized_judgeships:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_table:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_table_columns:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_table_preamble:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_total_future_pending:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_total_nominees_pending:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_total_vacancies:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_vacancy_reference:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: judicial_vacancy_summary
+      link: ''
+    third_party_settings:
+      field_formatter_range:
+        order: 0
+        limit: 0
+        offset: 0
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  field_archive_id: true
+  field_congress: true
+  field_legacy_table_data: true
+  field_pdf_document: true
+  field_source_type: true
+  field_vacancy_type: true
+  field_year: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,6 @@
+adding:
+  enabled: true
+  timeout: 129600
+removing:
+  enabled: false
+  timeout: 5400

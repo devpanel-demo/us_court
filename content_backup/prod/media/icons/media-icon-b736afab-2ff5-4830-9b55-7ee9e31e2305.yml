@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: b736afab-2ff5-4830-9b55-7ee9e31e2305
+entity_type: media
+bundle: icon
+base_fields:
+  name: robot-solid.svg
+  created: '1721137202'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/robot-solid.svg'
+      url: '/sites/default/files/icons/robot-solid.svg'

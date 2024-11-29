@@ -1,0 +1,18 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-block: .7em;
+  border-bottom: 1px dashed var(--surface-base-medium);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .icon-link__title {
+    margin-left: 5px;
+  }
+}

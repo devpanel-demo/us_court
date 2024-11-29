@@ -1,0 +1,33 @@
+uuid: c8e34bd9-4052-4b97-88a7-294d7685abac
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.hero_responsive_image
+    - field.field.media.high_resolution_image.field_media_image_1
+    - media.type.high_resolution_image
+    - responsive_image.styles.hero_full
+  module:
+    - responsive_image
+id: media.high_resolution_image.hero_responsive_image
+targetEntityType: media
+bundle: high_resolution_image
+mode: hero_responsive_image
+content:
+  field_media_image_1:
+    type: responsive_image
+    label: visually_hidden
+    settings:
+      responsive_image_style: hero_full
+      image_link: ''
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,14 @@
+{# templates/usc-tableau-script.html.twig #}
+
+{#
+  Theme implementation for tableau script.
+
+  Available variables:
+  - script: The tableau script.
+  - id: The tableau script id.
+#}
+{% if script is defined %}
+  <div class="content" id="{{ id }}">
+    {{ script|raw }}
+  </div>
+{% endif %}

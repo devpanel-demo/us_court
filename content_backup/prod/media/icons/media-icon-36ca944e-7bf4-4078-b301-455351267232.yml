@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 36ca944e-7bf4-4078-b301-455351267232
+entity_type: media
+bundle: icon
+base_fields:
+  name: tv.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/tv.svg'
+      url: '/sites/default/files/icons/tv.svg'

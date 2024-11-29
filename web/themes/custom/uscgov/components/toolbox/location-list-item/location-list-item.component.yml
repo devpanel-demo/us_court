@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Location List Item
+description: Present the location as a list item.
+status: experimental
+props:
+  type: object
+  required:
+    - title
+    - address
+  properties:
+    image:
+      title: Image
+      type: string
+    node_url:
+      title: URL
+      type: string
+    title:
+      title: Title
+      type: string
+      description: Title of the item.
+    address:
+      title: Address
+      type: string
+      description: Location address.
+    phone:
+      title: Phone
+      type: string
+      description: Location phone number.

@@ -1,0 +1,26 @@
+From 509398e2f93d6d9a07f8390c52a072669e305f0d Mon Sep 17 00:00:00 2001
+From: Stephan Zeidler <stephan@ramsalt.com>
+Date: Sun, 7 Jul 2024 18:48:52 +0200
+Subject: [PATCH] Issue #3456995 by alexpott, szeidler, doxigo, marcofernandes:
+ Media block isn't working on Drupal 10.3
+
+---
+ gutenberg.services.yml | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/gutenberg.services.yml b/gutenberg.services.yml
+index bc1468fd..981f0b27 100644
+--- a/gutenberg.services.yml
++++ b/gutenberg.services.yml
+@@ -59,6 +59,8 @@ services:
+     arguments: ['@renderer', '@entity_type.manager']
+   gutenberg.media_library.opener:
+     class: Drupal\gutenberg\MediaLibraryGutenbergOpener
++    tags:
++      - { name: media_library.opener }
+   gutenberg.media_type.guesser:
+     class: Drupal\gutenberg\MediaTypeGuesser
+     arguments: ['@entity_type.manager', '@gutenberg.file_extension_guesser']
+-- 
+GitLab
+

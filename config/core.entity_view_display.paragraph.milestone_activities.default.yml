@@ -1,0 +1,138 @@
+uuid: 177a65f7-88bf-4b9d-a370-8225263995ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.milestone_activities.field_fc_be_body
+    - field.field.paragraph.milestone_activities.field_fc_jma_category
+    - field.field.paragraph.milestone_activities.field_fc_jma_court_name
+    - field.field.paragraph.milestone_activities.field_fc_jma_current_title
+    - field.field.paragraph.milestone_activities.field_fc_jma_date
+    - field.field.paragraph.milestone_activities.field_fc_jma_position
+    - paragraphs.paragraphs_type.milestone_activities
+  module:
+    - datetime
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.milestone_activities.default
+targetEntityType: paragraph
+bundle: milestone_activities
+mode: default
+content:
+  field_fc_be_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 5
+    region: content
+  field_fc_jma_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+  field_fc_jma_court_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 4
+    region: content
+  field_fc_jma_current_title:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_fc_jma_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_day
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_fc_jma_position:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,7 @@
+name: 'US Courts text list migration tools'
+description: 'Migration tools from text lists to taxonomy terms'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - migrate_plus:migrate_plus

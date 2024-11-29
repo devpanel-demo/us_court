@@ -1,0 +1,48 @@
+uuid: dffd4cf1-b218-45f7-a717-3277b80b47c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_description_text
+    - field.field.menu_link_content.main.field_enable_megamenu
+    - field.field.menu_link_content.main.field_popular_links
+    - system.menu.main
+  module:
+    - link
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  field_description_text:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_enable_megamenu:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_popular_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  children: true
+  search_api_excerpt: true

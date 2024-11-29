@@ -1,0 +1,21 @@
+uuid: 22eb8f2f-9f29-43ba-9f21-87b44f12a6b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fc_jma_date
+    - paragraphs.paragraphs_type.milestone_activities
+  module:
+    - datetime
+id: paragraph.milestone_activities.field_fc_jma_date
+field_name: field_fc_jma_date
+entity_type: paragraph
+bundle: milestone_activities
+label: Date
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,23 @@
+uuid: 00969b30-aa9e-438e-a325-781768d9235b
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config_split/local/
+module:
+  devel: 0
+  stage_file_proxy: 0
+theme: {  }
+complete_list:
+  - robotstxt.settings
+  - stage_file_proxy.settings
+  - system.logging
+partial_list:
+  - autologout.settings
+  - core.extension

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 754a97b3-51b8-4af9-abfb-6fb80fa23a13
+entity_type: media
+bundle: icon
+base_fields:
+  name: file-shield-solid.svg
+  created: '1721137082'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/file-shield-solid.svg'
+      url: '/sites/default/files/icons/file-shield-solid.svg'

@@ -1,0 +1,20 @@
+uuid: bd49539c-1a3f-45e2-8488-641a28c61a53
+langcode: und
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_fc_jma_position
+field_name: field_fc_jma_position
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

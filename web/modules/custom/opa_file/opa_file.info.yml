@@ -1,0 +1,7 @@
+name: 'OPA File'
+description: 'File handling for OPA projects.'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - file:file

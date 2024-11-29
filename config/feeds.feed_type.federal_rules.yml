@@ -1,0 +1,178 @@
+uuid: fadeb489-e0ee-4897-aa92-3998f25452cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.federal_rules.field_date_updated
+    - field.field.node.federal_rules.field_document_pdf
+    - field.field.node.federal_rules.field_term_entity_reference
+    - field.field.node.federal_rules.field_term_entity_reference2
+    - field.field.node.federal_rules.field_workbench_access
+    - node.type.federal_rules
+  module:
+    - feeds_log
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      skipped: skipped
+      failed: failed
+    source: true
+  feeds_tamper:
+    tampers:
+      862913d0-d2b5-4fc0-bb64-498456754e04:
+        text: '[parent:field_location_of_files][file_name]'
+        uuid: 862913d0-d2b5-4fc0-bb64-498456754e04
+        plugin: rewrite
+        source: file_name
+        weight: 0
+        label: Rewrite
+      d8456d58-c36d-478f-bfc0-98a4790576d6:
+        default_value: ready_publishing
+        only_if_empty: false
+        uuid: d8456d58-c36d-478f-bfc0-98a4790576d6
+        plugin: default_value
+        source: published
+        weight: 0
+        label: 'Set as Published'
+      844e89d2-6d08-4e5e-932f-f93f7beb5d49:
+        default_value: Rules
+        only_if_empty: true
+        uuid: 844e89d2-6d08-4e5e-932f-f93f7beb5d49
+        plugin: default_value
+        source: section
+        weight: 0
+        label: 'Set value or default value'
+label: 'Federal Rules'
+id: federal_rules
+description: 'Import federal rules'
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: csv
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: federal_rules
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _delete
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  file_name:
+    value: 'File Name'
+    label: 'File Name'
+    machine_name: file_name
+    type: csv
+  category:
+    value: Category
+    label: Category
+    machine_name: category
+    type: csv
+  committee:
+    value: Committee
+    label: Committee
+    machine_name: committee
+    type: csv
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  year:
+    value: Year
+    label: Year
+    machine_name: year
+    type: csv
+  published:
+    value: published
+    label: published
+    machine_name: published
+    type: blank
+  section:
+    value: Section
+    label: Section
+    machine_name: section
+    type: blank
+mappings:
+  -
+    target: field_document_pdf
+    map:
+      target_id: file_name
+    settings:
+      language: ''
+      reference_by: filename
+      existing: '2'
+      autocreate: false
+      autocreate_bundle: false
+  -
+    target: field_term_entity_reference2
+    map:
+      target_id: category
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: file_types
+  -
+    target: field_term_entity_reference
+    map:
+      target_id: committee
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: committees_
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_date_updated
+    map:
+      value: year
+    settings:
+      language: ''
+      timezone: UTC
+  -
+    target: temporary_target
+    map:
+      temporary: 'parent:field_location_of_files'
+  -
+    target: moderation_state
+    map:
+      value: published
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_workbench_access
+    map:
+      target_id: section
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: site_sections

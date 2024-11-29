@@ -1,0 +1,10 @@
+uuid: 2b8a3557-b030-4de8-abfa-d66a0ebdbdbb
+langcode: en
+status: true
+dependencies: {  }
+id: usc_govdelivery
+label: 'GovDelivery Form'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean usc_govdelivery'
+behavior_plugins: {  }

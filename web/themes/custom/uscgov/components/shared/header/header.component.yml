@@ -1,0 +1,7 @@
+libraryOverrides:
+  js:
+    header-utils.js: {}
+    mobile-menu-wrapper.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

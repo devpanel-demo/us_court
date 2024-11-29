@@ -1,0 +1,11 @@
+uuid: d9fca815-6f2c-46bf-bf61-447d15205836
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.landing_page
+label: landing_page
+description: ''
+targetEntityType: file
+cache: true

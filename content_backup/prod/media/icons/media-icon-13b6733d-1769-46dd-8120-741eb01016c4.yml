@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 13b6733d-1769-46dd-8120-741eb01016c4
+entity_type: media
+bundle: icon
+base_fields:
+  name: inbox.svg
+  created: '1721137124'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/inbox.svg'
+      url: '/sites/default/files/icons/inbox.svg'

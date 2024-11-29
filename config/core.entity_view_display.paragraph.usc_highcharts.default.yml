@@ -1,0 +1,40 @@
+uuid: 3dd520e0-8daa-4b27-8359-16beefd7f2dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_highcharts.field_usc_highcharts_script
+    - field.field.paragraph.usc_highcharts.field_usc_label
+    - field.field.paragraph.usc_highcharts.field_usc_title
+    - paragraphs.paragraphs_type.usc_highcharts
+  module:
+    - sdc_display
+    - usc_core
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.usc_highcharts.default
+targetEntityType: paragraph
+bundle: usc_highcharts
+mode: default
+content:
+  field_usc_highcharts_script:
+    type: usc_highcharts_script_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_usc_label: true
+  field_usc_title: true
+  search_api_excerpt: true

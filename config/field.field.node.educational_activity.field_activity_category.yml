@@ -1,0 +1,29 @@
+uuid: b6f7c5ec-97cf-47cb-89af-84917ff699d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_activity_category
+    - node.type.educational_activity
+    - taxonomy.vocabulary.educational_activity_categorie
+id: node.educational_activity.field_activity_category
+field_name: field_activity_category
+entity_type: node
+bundle: educational_activity
+label: 'Activity Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      educational_activity_categorie: educational_activity_categorie
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

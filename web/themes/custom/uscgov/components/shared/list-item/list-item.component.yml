@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: List Item
+description: Present the content title as a list item, with an optional date.
+status: experimental
+props:
+  type: object
+  required:
+    - title
+    - url
+  properties:
+    title_suffix:
+      type: array
+      description: title_suffix is necessary for contextual links.
+    title:
+      title: Title
+      type: string
+      description: Title of the item.
+    url:
+      title: URL
+      type: string
+      description: Link of the card.
+    date:
+      title: Date
+      type: string
+      description: Date in a format supported by the strtotime function.

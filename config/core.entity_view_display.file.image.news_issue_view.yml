@@ -1,0 +1,22 @@
+uuid: 49e374d9-4d86-4c3f-971b-5d74fcb8219e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.news_issue_view
+    - field.field.file.image.field_file_description
+    - field.field.file.image.field_file_image_alt_text
+    - field.field.file.image.field_file_image_title_text
+    - field.field.file.image.field_link
+  module:
+    - file
+id: file.image.news_issue_view
+targetEntityType: file
+bundle: image
+mode: news_issue_view
+content: {  }
+hidden:
+  field_file_description: true
+  field_file_image_alt_text: true
+  field_file_image_title_text: true
+  field_link: true

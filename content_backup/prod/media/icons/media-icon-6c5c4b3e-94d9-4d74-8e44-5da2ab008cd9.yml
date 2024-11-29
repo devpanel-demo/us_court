@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 6c5c4b3e-94d9-4d74-8e44-5da2ab008cd9
+entity_type: media
+bundle: icon
+base_fields:
+  name: clock-regular.svg
+  created: '1724357472'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/clock-regular.svg'
+      url: '/sites/default/files/icons/clock-regular.svg'
+      description: ''

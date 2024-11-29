@@ -1,0 +1,112 @@
+/*
+ * @file
+ * Styling facet blocks.
+ */
+
+.block-facet--checkbox,
+.block-facets-summary {
+  position: relative; // Anchor chevron.
+  padding: 16px;
+}
+
+.block-facets-summary {
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.facets-widget-checkbox {
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &.active-checkbox > label:after {
+      width: 0;
+      border: none;
+      content: none;
+    }
+  }
+  .collapsed-facet{
+    display: none;
+  }
+  .show-more{
+    display: none;
+  }
+  .expandable-facet{
+    .show-more{
+      display: block;
+    }
+  }
+  .facet-link{
+    margin: 0.5rem;
+  }
+  .inactive-checkbox > label:after {
+    width: 12px;
+    border-top: solid 2px white;
+    content: "";
+  }
+  & .widget-container > .facet-item:first-of-type > label:first-of-type {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22.95px;
+  }
+  .show-more{
+    margin-left: 22px;
+  }
+}
+
+.facet-summary-item--clear {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.facet-summary-item--facet a {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 32px 4px 12px;
+  background-color: var(--surface-secondary-lighter);
+  color: var(--text-on-surface-secondary-lighter);
+  border: solid 1px var(--border-secondary);
+  border-radius: 10px;
+  text-decoration: none;
+
+  // The (-) converted to an X
+  .facet-item__status  {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    display: block;
+    translate: 0 -50%;
+    width: 12px;
+    height: 12px;
+    text-indent: -999px;
+    overflow: hidden;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 0;
+      translate: -50% -50%;
+      rotate: 45deg;
+      border-top: solid 2px currentColor;
+      content: "";
+    }
+
+    &:after {
+      rotate: -45deg;
+    }
+  }
+}
+
+.block-facets .facets-widget-checkbox ul ul li {
+  margin-left: 30px;
+}

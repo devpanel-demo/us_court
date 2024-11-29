@@ -1,0 +1,76 @@
+diff --git a/menu_position.links.menu.yml b/menu_position.links.menu.yml
+index 85bea9f..b592e09 100644
+--- a/menu_position.links.menu.yml
++++ b/menu_position.links.menu.yml
+@@ -11,5 +11,5 @@ menu_position_rule.admin_settings:
+ menu_position_link:
+   class: 'Drupal\menu_position\Plugin\Menu\MenuPositionLink'
+   deriver: \Drupal\menu_position\Plugin\Derivative\MenuPositionLink
+-  route_name: '<current>'
++  route_name: 'menu_position.default_rule_route'
+   route_parameters: []
+diff --git a/menu_position.module b/menu_position.module
+index 3f3a3f1..2a92cb5 100644
+--- a/menu_position.module
++++ b/menu_position.module
+@@ -7,6 +7,7 @@
+ 
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Render\Element;
++use Drupal\Core\Url;
+ use Drupal\menu_position\Plugin\Menu\MenuPositionLink;
+ 
+ /**
+@@ -21,3 +22,24 @@ function menu_position_form_menu_edit_form_alter(&$form, FormStateInterface $for
+     }
+   }
+ }
++
++/**
++ * Implements hook_preprocess_HOOK().
++ */
++function menu_position_preprocess_menu(&$variables) {
++  $variables['items'] = menu_position_replace_current_path($variables['items']);
++}
++
++function menu_position_replace_current_path($items) {
++  if (!empty($items)) {
++    foreach ($items as &$item) {
++      if ($item['url']->isRouted() && $item['url']->getRouteName() === "menu_position.default_rule_route") {
++        $item['url'] = Url::fromUserInput(\Drupal::request()->getRequestUri());
++      }
++
++      $item['below'] = menu_position_replace_current_path($item['below']);
++    }
++  }
++
++  return $items;
++}
+diff --git a/menu_position.routing.yml b/menu_position.routing.yml
+index b74ae5f..086b9d9 100644
+--- a/menu_position.routing.yml
++++ b/menu_position.routing.yml
+@@ -37,3 +37,10 @@ menu_position.settings:
+     _title: 'Settings'
+   requirements:
+     _permission: 'administer site configuration'
++
++menu_position.default_rule_route:
++  path: '<menu-position-current>'
++  defaults:
++    _entity_view: 'menu_position_rule.default'
++  requirements:
++    _permission: 'access content'
+\ No newline at end of file
+diff --git a/src/Plugin/Derivative/MenuPositionLink.php b/src/Plugin/Derivative/MenuPositionLink.php
+index e5f2d63..90fd9ba 100644
+--- a/src/Plugin/Derivative/MenuPositionLink.php
++++ b/src/Plugin/Derivative/MenuPositionLink.php
+@@ -70,6 +70,7 @@ class MenuPositionLink extends DeriverBase implements ContainerDeriverInterface
+       if ($menu_link = $menu_position_rule->getMenuLinkPlugin()) {
+         // Link already exists, use that.
+         $definition = $menu_link->getPluginDefinition();
++        $definition['route_name'] = 'menu_position.default_rule_route';
+       }
+       else {
+         // Provide defaults, they will be updated by the rule.

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 64e9b221-4c8c-4e21-9775-100e409f4ac6
+entity_type: media
+bundle: icon
+base_fields:
+  name: random.svg
+  created: '1721137188'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/random.svg'
+      url: '/sites/default/files/icons/random.svg'

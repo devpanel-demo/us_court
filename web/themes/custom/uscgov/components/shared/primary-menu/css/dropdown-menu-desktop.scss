@@ -1,0 +1,177 @@
+@forward "../../sass/uswds/settings";
+@use "../../../../sass/custom/global/media-queries" as *;
+@use "../../../../sass/custom/global/mixins" as *;
+@use "uswds-core" as *;
+
+@include custom-desktop-nav {
+  .primary-menu__dropdown {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: var(--surface-base-lightest);
+    border: solid 1px color('base');
+  }
+
+  .primary-menu__button[aria-expanded="true"] ~ .primary-menu__dropdown {
+    display: flex;
+  }
+
+  .primary-menu__dropdown--mega {
+    width: 100%;
+  }
+
+  .primary-menu--level-1 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .primary_menu__level-1-inner {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .primary-menu__level-2-wrapper {
+    display: none;
+  }
+
+  .primary-menu__mobile-back-button {
+    display: none;
+  }
+
+  .primary-menu__dropdown-title {
+    margin-block: 0 var(--spacing-sm-1);
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .primary-menu__dropdown-second .primary-menu__dropdown-title {
+    display: none; // Hide the mobile version of the title.
+  }
+
+  .primary-menu__dropdown-title-link {
+    text-wrap: pretty;
+
+    .last-word {
+      white-space: nowrap;
+
+      &::after {
+        display: inline-block;
+        height: var(--spacing-sm-2);
+        width: 20px;
+        margin-left: var(--spacing-sm-1);
+        content: "";
+        mask-image: url('../images/arrow-right.svg');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        background: currentColor;
+      }
+    }
+  }
+
+  .primary-menu__mega-description-text {
+    font-size: 14px;
+    color: var(--text-on-surface-base-lightest);
+  }
+
+  .primary-menu__mega-quick-links {
+    margin-top: var(--spacing-sm-3);
+  }
+
+  .primary-menu__mega-popular-links-title {
+    margin-block: 0 var(--spacing-sm-1);
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-on-surface-base-lighter--light);
+    text-wrap: pretty;
+  }
+
+  .primary-menu__mega-quick-link-menu {
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: 20px;
+    list-style: none;
+  }
+
+  .primary-menu__mega-quick-link-item a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .primary-menu__mega-quick-link-item-inner {
+    padding-bottom: var(--spacing-sm-2);
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .primary-menu__button--level-1 {
+    display: none;
+  }
+
+  .primary-menu__dropdown--mega {
+    .primary-menu__dropdown-first {
+      flex-basis: 320px;
+      flex-shrink: 0;
+      padding: var(--spacing-md-2);
+      background: var(--surface-primary-lighter);
+    }
+
+    .primary-menu__dropdown-second {
+      flex-grow: 1;
+      padding: var(--spacing-md-2);
+    }
+
+    .primary-menu--level-1 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .primary-menu__link--level-1 {
+      position: relative; // Anchor pseudo-elements that make chevron.
+      display: block;
+      padding: var(--spacing-sm-2);
+      border-radius: 10px;
+      border: 1px solid transparent;
+      text-decoration: none;
+
+      &:hover {
+        border: 1px solid var(--border-primary);
+        background: var(--surface-primary-lighter);
+      }
+
+      &::after {
+        position: absolute;
+        top: 23px;
+        right: var(--spacing-sm-2);
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-left: solid 2px currentColor;
+        border-bottom: solid 2px currentColor;
+        rotate: -135deg;
+        content: "";
+      }
+
+      .primary-menu__link-main-text {
+        display: block;
+        margin-bottom: var(--spacing-sm-1);
+        padding-right: 10px; // Make visual room for chevron.
+        font-weight: bold;
+        color: var(--text-on-surface-base-lightest--dark);
+        text-wrap: pretty;
+      }
+
+      .primary-menu__link-description-text {
+        font-size: 14px;
+        color: var(--text-on-surface-base-lightest);
+      }
+    }
+  }
+}

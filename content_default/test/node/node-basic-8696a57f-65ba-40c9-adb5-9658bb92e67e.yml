@@ -1,0 +1,70 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 8696a57f-65ba-40c9-adb5-9658bb92e67e
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Testing cross link anchor 2 CE'
+  status: true
+  langcode: en
+  created: '1728409001'
+  changed: 1728409001
+  author: courtney_mcilroy@ao.uscourts.gov
+  url: /testing-cross-link-anchor-2-ce
+  revision_log_message: null
+  revision_uid: '197'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Federal defender organizations, together with the more than 12,000 private "panel attorneys" who accept CJA assignments annually, represent the vast majority of individuals who are prosecuted in our nation''s federal courts. CJA panel attorneys accept appointments in all CJA cases in the four districts not served by a federal defender organization. In those districts with a defender organization, panel attorneys are typically assigned between 30 percent and 40 percent of the CJA cases, generally those where a conflict of interest or some other factor precludes federal defender representation. Nationwide, federal defenders receive approximately 60 percent of CJA appointments, and the remaining 40 percent are assigned to the CJA panel.</p><p><a class="ck-anchor" id="b1"></a>Today, panel attorneys are paid an hourly rate of $172 in non-capital cases, and, in capital cases, a maximum hourly rate of $220. These rates are effective for work performed on or after January 1, 2024. The rates include both attorney compensation and office overhead. Compensation beyond statutory thresholds requires approval from the chief judge of the circuit or their delegate, depending on the category of representation (for example, $13,400 for felonies, $3,800 for misdemeanors, and $9,600 for appeals).</p>'
+      summary: ''
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 95713d18-7c46-41b9-b0dd-0b545574f5af
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1728409026'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: cfcee9b9-dc60-4e8a-b48d-f7a76641319a
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Conference'
+        weight: 14
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

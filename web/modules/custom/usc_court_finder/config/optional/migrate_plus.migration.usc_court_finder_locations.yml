@@ -1,0 +1,139 @@
+id: usc_court_finder_locations
+label: US Court Finder Locations
+migration_group: usc_court_finder
+
+source:
+  plugin: 'csv'
+  path: 'modules/custom/usc_court_finder/source_files/locations.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - location_id
+  fields:
+    0:
+      name: org_code
+    1:
+      name: unit
+    2:
+      name: court_type
+    3:
+      name: location_id
+    4:
+      name: circuit
+    5:
+      name: district
+    6:
+      name: main_office
+    7:
+      name: office_name
+    8:
+      name: url
+    9:
+      name: phone
+    10:
+      name: fax
+    11:
+      name: opens
+    12:
+      name: closes
+    13:
+      name: lunch_start
+    14:
+      name: lunch_end
+    15:
+      name: has_public_library
+    16:
+      name: longitude
+    17:
+      name: latitude
+    18:
+      name: room
+    19:
+      name: building_name
+    20:
+      name: building_address
+    21:
+      name: building_city
+    22:
+      name: building_state
+    23:
+      name: building_zip
+    24:
+      name: location_group
+    25:
+      name: address
+    26:
+      name: ejuror_url
+    27:
+      name: jury_service_url
+    28:
+      name: ecf_url
+    29:
+      name: ecf_url2
+    30:
+      name: mail_box
+    31:
+      name: mail_zip
+
+process:
+  org_code: org_code
+  unit: unit
+  court_type: court_type
+  location_id: location_id
+
+  circuit_id:
+    source: circuit
+    plugin: migration_lookup
+    migration: usc_court_finder_circuit_terms
+
+  district_id:
+    source: district
+    plugin: migration_lookup
+    migration: usc_court_finder_district_terms
+
+  main_office: main_office
+  office_name: office_name
+  url: url
+  phone: phone
+  fax: fax
+  opens: opens
+  closes: closes
+  lunch_start: lunch_start
+  lunch_end: lunch_end
+  has_public_library: has_public_library
+
+  field_geofield:
+    plugin: geofield_latlon
+    source:
+      - latitude
+      - longitude
+
+  room: room
+  building_name: building_name
+  building_address: building_address
+  building_city: building_city
+  building_state: building_state
+  building_zip: building_zip
+  location_group: location_group
+  address: address
+  ejuror_url: ejuror_url
+  jury_service_url: jury_service_url
+  ecf_url: ecf_url
+  ecf_url2: ecf_url2
+  mail_box: mail_box
+  mail_zip: mail_zip
+
+  state_id:
+    source: state_code
+    plugin: migration_lookup
+    migration: usc_court_finder_state_terms
+
+destination:
+  plugin: entity:usc_location
+
+migration_dependencies:
+  required:
+    - usc_court_finder_circuit_terms
+    - usc_court_finder_state_terms
+    - usc_court_finder_district_terms

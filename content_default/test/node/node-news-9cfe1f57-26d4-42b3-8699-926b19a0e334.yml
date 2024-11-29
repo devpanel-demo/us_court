@@ -1,0 +1,379 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 9cfe1f57-26d4-42b3-8699-926b19a0e334
+entity_type: node
+bundle: news
+base_fields:
+  title: 'Visual regression test: News'
+  status: true
+  langcode: en
+  created: '1719578561'
+  changed: 1719578561
+  author: jamesdavison@ao.uscourts.gov
+  url: /test/news/2024/06/05/visual-regression-test-news
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit.&nbsp;</h2><p>Ducimus maxime magni mollitia voluptatum quos! Doloribus, eaque numquam fugiat totam earum in nisi nostrum. Dolores placeat accusamus tempore quis neque debitis.</p><h3>Et, asperiores quod mollitia rem est sint cupiditate vitae debitis praesentium aliquam optio.&nbsp;</h3><p>Nihil obcaecati molestiae rem deserunt qui. Adipisci, veritatis? Repellat magni impedit ipsum laudantium animi molestias deserunt! Pariatur?</p><h4>Modi aliquid fugiat expedita debitis voluptate&nbsp;</h4><p>molestias enim distinctio quam praesentium doloremque nulla omnis, laboriosam autem aliquam nihil corrupti dicta earum quos doloribus dolore eius vel perferendis asperiores. Doloribus, expedita?</p><h5>Quis necessitatibus a quae omnis qui praesentium suscipit ut quibusdam perspiciatis alias accusamus quasi nulla magnam eaque, eum dolore rerum debitis, sit distinctio labore, architecto</h5><p>&nbsp;unde laudantium dolores excepturi. At.</p><h6>Perspiciatis, consectetur rerum. Eligendi veritatis omnis nemo delectus amet accusantium eum voluptas modi quasi iste! Amet laboriosam unde, voluptates error nostrum aut facilis voluptate in ipsum cumque odio. Laudantium, ad.</h6><p>Accusamus itaque nihil culpa quam! Fuga sunt nesciunt debitis, ullam, reiciendis, quibusdam assumenda dolorum cupiditate omnis quidem rerum eveniet doloremque fugiat esse laudantium ad reprehenderit voluptate mollitia ut natus quia?</p><ul><li>In ullam id beatae nisi! Cumque excepturi ea laborum distinctio,&nbsp;</li><li>quibusdam soluta sunt fugiat fugit officiis blanditiis consequuntur tempora iste natus quod,&nbsp;</li><li>officia reprehenderit praesentium beatae tempore dolorem non enim!</li></ul><blockquote><p>Veritatis porro cupiditate eius nostrum asperiores, animi sapiente, nobis harum quia maxime odio possimus dolorem molestias sequi tenetur est rem ut impedit quis vero voluptatem! Quis culpa ducimus ut repellat?</p></blockquote><p>Placeat et mollitia ad quos officiis, adipisci, dolorem error sunt, ex animi aliquid dicta quae quaerat totam qui illum omnis voluptatum vel. Expedita vitae officia, facere voluptatibus accusamus sed dolore.</p><ol><li>Dolores, aliquam. Atque quasi nobis voluptate ullam&nbsp;</li><li>ratione asperiores enim, modi quibusdam, deserunt nam optio&nbsp;</li><li>nostrum dolore alias sunt iusto illo! Consectetur molestias,&nbsp;</li><li>numquam obcaecati aliquam labore libero ea excepturi.</li></ol><p>Placeat et mollitia ad quos officiis, adipisci, dolorem error sunt, ex animi aliquid dicta quae quaerat totam qui illum omnis voluptatum vel. Expedita vitae officia, facere voluptatibus accusamus sed dolore.</p><p>Dolores, aliquam. Atque quasi nobis voluptate ullam ratione asperiores enim, modi quibusdam, deserunt nam optio nostrum dolore alias sunt iusto illo! Consectetur molestias, numquam obcaecati aliquam labore libero ea excepturi.</p><p>Placeat et mollitia ad quos officiis, adipisci, dolorem error sunt, ex animi aliquid dicta quae quaerat totam qui illum omnis voluptatum vel. Expedita vitae officia, facere voluptatibus accusamus sed dolore.</p><p>Dolores, aliquam. Atque quasi nobis voluptate ullam ratione asperiores enim, modi quibusdam, deserunt nam optio nostrum dolore alias sunt iusto illo! Consectetur molestias, numquam obcaecati aliquam labore libero ea excepturi.</p>'
+      summary: ''
+      format: wysiwyg
+  field_body_enhanced:
+    -
+      uuid: adfd2908-93b1-4953-86ec-b57d644182a6
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719578604'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2023-05-31'
+  field_fc_be_audio:
+    -
+      uuid: bc3d8282-db5d-4164-9400-bf2cfed5a8f0
+      entity_type: media
+      base_fields:
+        name: opa_2015-015.03_on_topic_new_jersey_vs_tlo.mp3
+        created: '1431019383'
+        status: true
+        langcode: en
+      bundle: audio
+  field_landing_page_image:
+    -
+      uuid: bff52204-3d96-4739-a914-cfda557328db
+      entity_type: media
+      base_fields:
+        name: us-court-1-.jpg
+        created: '1719336638'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_gallery:
+    -
+      uuid: bff52204-3d96-4739-a914-cfda557328db
+      entity_type: media
+      base_fields:
+        name: us-court-1-.jpg
+        created: '1719336638'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: ba6b0c28-426c-482f-b679-a909292ec752
+      entity_type: media
+      base_fields:
+        name: big-2.2-.png
+        created: '1719336607'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: 65931b26-f440-4f08-b42a-58e925b3279d
+      entity_type: media
+      base_fields:
+        name: opt_roadways-to-the-bench_florida.png
+        created: '1715963002'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: f125e507-338c-49e6-ba66-e7d867340fe9
+      entity_type: media
+      base_fields:
+        name: korematsu-dale-minami_resize.png
+        created: '1715863067'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: 8992da0d-7986-4aee-b0aa-86bb5db0174b
+      entity_type: media
+      base_fields:
+        name: karen-korematsu_resize.png
+        created: '1715782124'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: d628d03e-1f8d-4790-a8cf-86d11fa3d7d7
+      entity_type: media
+      base_fields:
+        name: karen-korematsu_resize.png
+        created: '1715782240'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: d54549a5-bd64-4b15-9179-b1e017227c00
+      entity_type: media
+      base_fields:
+        name: korematsu-eric-yamamoto_resize.png
+        created: '1715782259'
+        status: true
+        langcode: en
+      bundle: image
+    -
+      uuid: 86fe7f5d-88c0-421d-b792-d5180a26a175
+      entity_type: media
+      base_fields:
+        name: korematsu-panelists-and-volunteers_resize.png
+        created: '1715782290'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph: null
+  field_metatag: null
+  field_news_issue: null
+  field_related_topics:
+    -
+      uuid: ced89370-f3ba-4705-93a9-2b245be42244
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'A Lifetime of Service'
+        weight: 0
+        langcode: en
+        description: '<p>Learn more about federal judges who fought in World War II--and continue to hear cases 70 years later. <br /><br /></p>'
+        parent: 0
+      bundle: topics
+  field_tags:
+    -
+      uuid: 73ccb1f5-7b91-4898-9194-e8ffde988c24
+      entity_type: taxonomy_term
+      base_fields:
+        name: Bankruptcy
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: tags
+    -
+      uuid: 150c0eb6-33b3-46d7-9a37-4549710059ad
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Bankruptcy Courts'
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: tags
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content:
+    -
+      uuid: 2232e103-98d7-4cd6-9a98-adadd14cf6c8
+      entity_type: paragraph
+      bundle: usc_graphic_photo
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719578917'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_image:
+          -
+            uuid: a899bb29-123a-4f56-b4bd-c9d99ce45a71
+            entity_type: media
+            base_fields:
+              name: big-image-1.jpeg
+              created: '1722549843'
+              status: true
+              langcode: en
+            bundle: image
+        field_usc_label:
+          -
+            value: 'Test visual regression graphic'
+        field_usc_title:
+          -
+            value: 'Test visual regression graphic'
+    -
+      uuid: 7cf7f721-9ac4-444f-b7a0-8167d45dde4d
+      entity_type: paragraph
+      bundle: usc_related_files
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719578961'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: '<p>Test visual regression related downloads</p>'
+            format: wysiwyg
+        field_usc_document:
+          -
+            uuid: 95242055-f777-42c5-b6ea-ed90fe251e14
+            entity_type: media
+            base_fields:
+              name: dummy.pdf
+              created: '1717611288'
+              status: true
+              langcode: en
+            bundle: document
+        field_usc_label:
+          -
+            value: 'Test visual regression related downloads'
+        field_usc_title:
+          -
+            value: 'Test visual regression related downloads'
+    -
+      uuid: af9e3467-a84f-43c7-a59a-0df4ca32510d
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719579044'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: '<p>Test visual regression related links</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Test visual regression related links'
+        field_usc_links:
+          -
+            uri: 'internal:/'
+            title: Homepage
+            options: {  }
+          -
+            uri: 'entity:node/1737'
+            title: 'Subpoena to Appear and Testify at a Hearing or Trial in a Civil Action '
+            options: {  }
+          -
+            uri: 'entity:node/239'
+            title: 'Barker v. Asset Acceptance, LLC '
+            options: {  }
+        field_usc_title:
+          -
+            value: 'Test visual regression related links'
+    -
+      uuid: 256e856d-38f0-4057-a7db-89a04acd71e5
+      entity_type: paragraph
+      bundle: usc_related_content
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719580325'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_content_nodes:
+          -
+            uuid: e7aeccb2-ada3-4377-ae88-739a3d1107d6
+            entity_type: node
+            base_fields: {  }
+            bundle: landing_view
+          -
+            uuid: d6b5ee32-bfd6-4d4b-b61f-6393d540a49f
+            entity_type: node
+            base_fields: {  }
+            bundle: landing_view
+          -
+            uuid: 05d8e9b8-adad-434c-b079-4ffea682a80f
+            entity_type: node
+            base_fields: {  }
+            bundle: basic
+        field_usc_label:
+          -
+            value: 'Visual regression test Latest content'
+        field_usc_title:
+          -
+            value: 'Visual regression test Latest content'
+  field_usc_govdelivery_form:
+    -
+      uuid: bc79d653-81e5-480e-a563-6facdf06c128
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719578864'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: '12'
+        field_usc_description:
+          -
+            value: '<p>Test visual regression Gov Delivery</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Test visual regression Gov Delivery'
+        field_usc_title:
+          -
+            value: 'Test visual regression Gov Delivery'
+  field_usc_notification:
+    -
+      uuid: 499ae4f8-8a05-44f4-aeb0-f72640a4a282
+      entity_type: paragraph
+      bundle: usc_notification
+      base_fields:
+        status: true
+        langcode: en
+        created: '1719578903'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: '<p>Test visual regression Notification. <a href="/">Test visual regression Notification. </a>Test visual regression Notification. Test visual regression Notification.&nbsp;</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Test visual regression Notification'
+        field_usc_title:
+          -
+            value: 'Test visual regression Notification'
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary News'
+        field_usc_view_more:
+          -
+            uri: 'internal:/'
+            title: 'Link text'
+            options:
+              href: /
+              data-entity-type: ''
+              data-entity-uuid: ''
+              data-entity-substitution: ''
+  field_usc_table_of_contents: null
+  field_workbench_access: null

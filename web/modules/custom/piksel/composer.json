@@ -1,0 +1,10 @@
+{
+    "name": "drupal/piksel",
+    "type": "drupal-module",
+    "description": "Allows piksel media items to be added as media items.",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "require": {
+        "drupal/imagecache_external": "^3.0"
+    }
+}

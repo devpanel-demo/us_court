@@ -1,0 +1,29 @@
+uuid: 466cd11b-c355-48e1-8fd3-f3bbba0e175e
+langcode: en
+status: true
+dependencies: {  }
+name: config_pages_global_site_settings
+label: 'config_pages global_site_settings validation'
+entity_type: config_pages
+bundle: global_site_settings
+field_validation_rules:
+  52c492cc-eaa7-48b4-9917-fc98bd6a5624:
+    id: count_constraint_rule
+    title: 'Only 6 quicklinks allowed'
+    data:
+      validate_mode: default
+      min: '6'
+      max: '6'
+      maxMessage: 'Quicklinks require exactly 6 items.'
+      minMessage: 'Quicklinks require exactly 6 items.'
+      exactMessage: 'Quicklinks require exactly 6 items.'
+    weight: 1
+    uuid: 52c492cc-eaa7-48b4-9917-fc98bd6a5624
+    field_name: field_hompage_quick_links
+    column: ''
+    error_message: ''
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''

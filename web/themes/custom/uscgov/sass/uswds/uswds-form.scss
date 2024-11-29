@@ -1,0 +1,170 @@
+@use "uswds-core" as *;
+
+@forward "usa-checkbox";
+@forward "usa-combo-box";
+@forward "usa-date-picker";
+@forward "usa-error-message";
+@forward "usa-fieldset";
+@forward "usa-file-input";
+@forward "usa-form-group";
+@forward "usa-form";
+@forward "usa-hint";
+@forward "usa-input-prefix-suffix";
+@forward "usa-input";
+@forward "usa-input-mask";
+@forward "usa-label";
+@forward "usa-legend";
+@forward "usa-memorable-date";
+@forward "usa-radio";
+@forward "usa-range";
+@forward "usa-select";
+@forward "usa-textarea";
+@forward "usa-time-picker";
+
+.usa-form {
+  max-width: unset;
+}
+
+.usa-input-group .usa-input-group {
+  margin: 0;
+}
+
+.usa-fieldset {
+  margin-block: 18px;
+}
+
+.usa-textarea,
+.usa-input {
+  border-radius: 5px;
+  width: auto;
+
+  &[type="color"] {
+    width: revert;
+    padding: revert;
+  }
+}
+
+.usa-range {
+  width: auto;
+  background: transparent;
+}
+
+.usa-select {
+  border-radius: 5px;
+  width: auto;
+}
+
+.description {
+  margin-block: 9px;
+  font-size: 13px;
+  color: var(--text-on-surface-base-light);
+}
+
+.field__label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.field--label-inline * {
+  display: inline;
+}
+
+.usa-input-required {
+  &:after {
+    content: "*";
+  }
+}
+
+.usa-input-suffix {
+  left: 100%;
+  right: auto;
+  color: var(--text-on-surface-base-light);
+}
+
+/**
+ * Drupal fixes.
+ */
+.js input.form-autocomplete {
+  background-position: right 10px center;
+}
+
+a.tabledrag-handle .handle {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-position: center;
+}
+
+/**
+ * Webform fixes.
+ */
+.webform-multiple-table--operations > * {
+  display: inline;
+}
+
+.webform-multiple-table td input[type="image"] {
+  vertical-align: middle;
+}
+
+.form-type-checkbox:has(label + [type="checkbox"]:checked) label:before {
+  background-position: center center;
+  background-size: units(1.5) auto;
+  background-image: url('/themes/custom/uscgov/dist/uswds/img/correct8.svg'),linear-gradient(transparent,transparent);
+  background-repeat: no-repeat;
+  background-color: var(--color-primitive-theme-primary-primary);
+  box-shadow: 0 0 0 units($theme-input-select-border-width) var(--color-primitive-theme-primary-primary);
+}
+
+[class*="form-item-webform-tableselect-sort"] {
+  padding: 0.5rem;
+
+  label {
+    margin: 0 0.5rem;
+  }
+}
+
+.webform-submission-form {
+  input[type="number"] {
+    width: auto !important; // Override inline style.
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  }
+
+  .form-actions {
+    margin-top: 1.5rem;
+  }
+}
+
+.form-type-range .webform-range-output-delimiter {
+  display: revert;
+}
+
+.usa-select {
+  background-image: url('/themes/custom/uscgov/icons/misc/chevron-down.svg');
+
+  @media (forced-colors: active) {
+    appearance: revert;
+    background-image: none;
+  }
+}
+
+input[class*="datepicker"] {
+  background-image: url('/themes/custom/uscgov/icons/misc/date-picker.svg');
+  background-repeat: no-repeat;
+  background-position: center right 10px
+}
+
+.usa-file-input {
+  margin-bottom: var(--spacing-sm-2);
+}
+
+.field--name-field-milestone-activities {
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+}

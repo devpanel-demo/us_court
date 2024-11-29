@@ -1,0 +1,131 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: cf5d8e25-2bea-442e-b5f7-905f032b1529
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'Caseload Statistics 2019 Charts - Federal Judicial Caseload Statistics 2019'
+  enabled: true
+  expanded: false
+  langcode: und
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/18102'
+      title: null
+      options:
+        attributes: {  }
+        item_attributes:
+          id: ''
+          class: ''
+          style: ''
+  weight: 0
+  parent:
+    uuid: ce16a3aa-cd6b-4b4a-8a5f-8a868d405336
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Federal Judicial Caseload Statistics'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/2864'
+          title: ''
+          options: {  }
+      weight: 6
+      parent:
+        uuid: 38082044-557b-4fd8-bcf7-a7aa7bfdf86d
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Statistical Reports'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/statistical-reports'
+              title: ''
+              options: {  }
+          weight: 0
+          parent:
+            uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: Reports
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/3129'
+                  title: ''
+                  options: {  }
+              weight: 1
+              parent:
+                uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Data & News'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/8'
+                      title: ''
+                      options: {  }
+                  weight: -68
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/16578'
+                      title: 'Federal Court Scams'
+                      options: {  }
+                    -
+                      uri: 'entity:node/3122'
+                      title: "Director's Annual Report"
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu: null
+  field_popular_links: null

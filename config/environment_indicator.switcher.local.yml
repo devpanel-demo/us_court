@@ -1,0 +1,11 @@
+uuid: 3d1d717c-a491-47e9-aea5-b4fc95a40920
+langcode: en
+status: true
+dependencies: {  }
+machine: local
+description: null
+name: Local
+weight: 99
+url: 'https://uscourts.lndo.site'
+fg_color: '#ffffff'
+bg_color: '#000000'

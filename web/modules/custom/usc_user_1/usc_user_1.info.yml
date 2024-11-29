@@ -1,0 +1,7 @@
+name: 'USC User 1 restrictions'
+description: 'Block and protect user 1 in production environment.'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - usc_core:usc_core

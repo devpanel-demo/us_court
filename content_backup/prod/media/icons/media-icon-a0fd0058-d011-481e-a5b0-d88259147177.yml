@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: a0fd0058-d011-481e-a5b0-d88259147177
+entity_type: media
+bundle: icon
+base_fields:
+  name: rectangle-xmark-outline.svg
+  created: '1721137202'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/rectangle-xmark-outline.svg'
+      url: '/sites/default/files/icons/rectangle-xmark-outline.svg'

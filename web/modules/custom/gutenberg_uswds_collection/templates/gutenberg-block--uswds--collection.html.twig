@@ -1,0 +1,12 @@
+{% set classes = [
+  'usa-collection',
+  'view-mode--' ~ view_mode,
+] %}
+{% if view_mode == 'featured' or view_mode == 'section_landing' %}
+  {% set wrapper_element = 'div' %}
+{% else %}
+  {% set wrapper_element = 'ul' %}
+{% endif %}
+<{{ wrapper_element }}{{ attributes.addClass(classes) }}>
+	{{ content }}
+</{{ wrapper_element }}>

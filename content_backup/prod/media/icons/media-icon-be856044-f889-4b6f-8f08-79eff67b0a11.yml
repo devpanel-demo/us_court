@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: be856044-f889-4b6f-8f08-79eff67b0a11
+entity_type: media
+bundle: icon
+base_fields:
+  name: envelope-square.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/envelope-square.svg'
+      url: '/sites/default/files/icons/envelope-square.svg'

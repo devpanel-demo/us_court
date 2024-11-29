@@ -1,0 +1,5 @@
+enable_override: true
+view: federal_rules_landing
+view_display: page_federal_rules
+inherit_settings: true
+pass_arguments: false

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: a24768da-5127-4f35-9f7d-d22e1ab48815
+entity_type: media
+bundle: icon
+base_fields:
+  name: print.svg
+  created: '1721137188'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/print.svg'
+      url: '/sites/default/files/icons/print.svg'

@@ -1,0 +1,19 @@
+uuid: 1ec444cb-a794-4d91-9d3a-52e62d854083
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_state
+    - paragraphs.paragraphs_type.job_vacancy
+id: paragraph.job_vacancy.field_state
+field_name: field_state
+entity_type: paragraph
+bundle: job_vacancy
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

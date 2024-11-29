@@ -1,0 +1,29 @@
+uuid: 5ce60553-5c73-4728-9c80-268bc5c187c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fc_jma_position
+    - paragraphs.paragraphs_type.milestone_activities
+    - taxonomy.vocabulary.milestone_positions
+id: paragraph.milestone_activities.field_fc_jma_position
+field_name: field_fc_jma_position
+entity_type: paragraph
+bundle: milestone_activities
+label: Position
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      milestone_positions: milestone_positions
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

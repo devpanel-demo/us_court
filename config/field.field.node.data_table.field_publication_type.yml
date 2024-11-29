@@ -1,0 +1,29 @@
+uuid: 658b51e2-c773-49a6-b9e6-b2c910e46336
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_type
+    - node.type.data_table
+    - taxonomy.vocabulary.data_table_publication_types
+id: node.data_table.field_publication_type
+field_name: field_publication_type
+entity_type: node
+bundle: data_table
+label: 'Publication Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      data_table_publication_types: data_table_publication_types
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

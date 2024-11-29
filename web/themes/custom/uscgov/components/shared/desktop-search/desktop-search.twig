@@ -1,0 +1,45 @@
+{% set search_wrapper_id = 'search-wrapper'|clean_unique_id %}
+
+{% if search_type == 'searchapi' %}
+  {% set action = action_object is defined ? action_object : '/search/content' %}
+  {% set query_param = 'keys' %}
+{% else %}
+  {% set affiliate_object = drupal_config('usc_search.settings', 'affiliate') %}
+  {% set action_object = drupal_config('usc_search.settings', 'link') %}
+  {% set action = action_object is defined ? action_object : 'https://search.uscourts.gov/search' %}
+  {% set affiliate = affiliate_object is defined ? affiliate_object : 'uscourts.gov' %}
+  {% set query_param = 'query' %}
+{% endif %}
+
+<button class="desktop-search__button" aria-expanded="false" aria-controls="{{ search_wrapper_id }}">
+  <span class="desktop-search__button-search button {{ project_id == 'toolbox' ? 'button--ghost' : '' }}">
+    {{ 'Search'|t }}
+  </span>
+  <span class="desktop-search__button-close">
+    {{ 'Close'|t }}
+    <span class="desktop-search__button-close-icon"></span>
+  </span>
+</button>
+<search id="{{ search_wrapper_id }}" role="search" class="desktop-search__wrapper">
+  {% set search_id = 'desktop-search__input'|clean_unique_id %}
+  <form action="{{action}}" class="desktop-search__form">
+    {% if search_type == 'searchgov' %}
+      <input type="hidden" name="affiliate" id="affiliate" value="{{affiliate}}">
+      <input type="hidden" name="locale" id="locale" value="{{ language.getId() }}">
+    {% endif %}
+    <label for="{{ search_id }}" class="desktop-search__label">
+      {% if project_id == 'uscgov' %}
+        {{ 'Search content'|t }}
+      {% else %}
+        {{ 'Search'|t }}
+      {% endif %}
+    </label>
+    <div class="desktop-search__form-wrapper">
+      <input name="{{ query_param }}" id="{{ search_id }}" type="text" class="desktop-search__input">
+      <button class="desktop-search__submit-button {{ project_id == 'toolbox' ? 'button' : '' }}" type="submit">
+        <span class="visually-hidden">{{ 'Search'|t }}</span>
+        {{ include(componentMetadata.path ~ '/images/magnify.svg') }}
+      </button>
+    </div>
+  </form>
+</search>

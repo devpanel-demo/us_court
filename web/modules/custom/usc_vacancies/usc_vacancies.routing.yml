@@ -1,0 +1,15 @@
+usc_vacancy_settings:
+  path: '/admin/uscourts/vacancy-settings'
+  defaults:
+    _form: '\Drupal\usc_vacancies\Form\VacanciesConfigForm'
+    _title: 'Vacancy Settings'
+  requirements:
+    _permission: 'administer uscourts configurations'
+
+vacancies_archive_admin:
+  path: '/admin/uscourts/vacancies-archive'
+  defaults:
+    _form: '\Drupal\usc_vacancies\Form\VacanciesArchiveAdminForm'
+    _title: 'Vacancies Archive Admin'
+  requirements:
+    _permission: 'administer uscourts configurations'

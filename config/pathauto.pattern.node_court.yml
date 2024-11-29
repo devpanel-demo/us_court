@@ -1,0 +1,21 @@
+uuid: f40c87e1-998b-45e6-afbf-f829bf6564d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_court
+label: 'Content - Court'
+type: 'canonical_entities:node'
+pattern: 'court-locator/[node:title]-[node:court_city]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      court: court
+selection_logic: and
+weight: -9
+relationships: {  }

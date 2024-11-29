@@ -1,0 +1,8 @@
+
+{{ include('uscgov:graphic', {
+  title: content.field_usc_title|render,
+  image: content.field_usc_image,
+  body: paragraph.field_usc_image.entity.field_file_description.value,
+  link: paragraph.field_usc_image.entity.field_link.0.url,
+  field_name: 'graphic-photo',
+  }, with_context = false) }}

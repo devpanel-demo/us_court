@@ -1,0 +1,25 @@
+uuid: fc236ac5-7544-4a98-a702-49865a68e5c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - system
+id: job_vacancies
+label: 'Job Vacancies'
+menu_name: menu-utility
+parent: 'menu_link_content:bd4f908d-c9f2-4529-8a5b-8b703bf830c4'
+menu_link: 'menu_position_link:job_vacancies'
+enabled: true
+weight: 6
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/careers/current-job-openings/*'

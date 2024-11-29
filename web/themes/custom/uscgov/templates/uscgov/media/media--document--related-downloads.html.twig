@@ -1,0 +1,11 @@
+{{ attach_library('uscgov/file-icon') }}
+{% import '@uscgov/shared/macros/_bytestosize.twig' as bytestosize %}
+{% import '@uscgov/shared/macros/_filetype.twig' as filetype %}
+{% set filesize = bytestosize.bytestosize(media.field_media_document.entity.getSize()) %}
+{% set icon = filetype.filetype(media.field_media_document.entity.getMimeType()) %}
+
+<a href="{{ content.field_media_document|render|striptags|trim }}">
+  <div class="usc-icon {{ icon }}"></div>
+  {{ content.field_file_title }}
+  <div class="filesize">{{ filesize }}</div>
+</a>

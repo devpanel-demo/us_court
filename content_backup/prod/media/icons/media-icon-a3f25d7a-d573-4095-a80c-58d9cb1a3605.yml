@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: a3f25d7a-d573-4095-a80c-58d9cb1a3605
+entity_type: media
+bundle: icon
+base_fields:
+  name: microphone-lines-solid.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/microphone-lines-solid.svg'
+      url: '/sites/default/files/icons/microphone-lines-solid.svg'

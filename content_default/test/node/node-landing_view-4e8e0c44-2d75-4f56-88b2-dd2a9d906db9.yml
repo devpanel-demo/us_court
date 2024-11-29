@@ -1,0 +1,32 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 4e8e0c44-2d75-4f56-88b2-dd2a9d906db9
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Testing 1.13 Gutenberg stuff'
+  status: true
+  langcode: en
+  created: '1725637645'
+  changed: 1725637645
+  author: Emily_Poland@ao.uscourts.gov
+  url: /testing-113-gutenberg-stuff
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:uswds/accordion -->\r\n<!-- wp:uswds/accordion-item {\"heading\":\"accordion style testing\"} -->\r\n<!-- wp:paragraph -->\r\n<p>are we having fun yet? </p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/accordion-item -->\r\n\r\n<!-- wp:uswds/accordion-item {\"heading\":\"Breakaway\"} -->\r\n<!-- wp:paragraph -->\r\n<p>Kelly Clarkson</p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/accordion-item -->\r\n\r\n<!-- wp:uswds/accordion-item {\"heading\":\"Since you've been gone\"} -->\r\n<!-- wp:paragraph -->\r\n<p>i can breathe for the first time </p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/accordion-item -->\r\n<!-- /wp:uswds/accordion -->\r\n\r\n<!-- wp:uswds/alert {\"heading\":\"Stop\"} -->\r\n<!-- wp:paragraph -->\r\n<p>Collaborate and listen</p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/alert -->\r\n\r\n<!-- wp:uswds/summary-box -->\r\n<!-- wp:paragraph -->\r\n<p>This page is a summary of my testing and songs floating in my head. </p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/summary-box -->\r\n\r\n<!-- wp:uswds/process-list {\"title\":\"Steps to testing\"} -->\r\n<!-- wp:uswds/process-list-item {\"heading\":\"Turn on music you like\"} -->\r\n<!-- wp:paragraph -->\r\n<p>It helps make the task more enjoyable</p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/process-list-item -->\r\n\r\n<!-- wp:uswds/process-list-item {\"heading\":\"Open testing doc\"} -->\r\n<!-- wp:paragraph -->\r\n<p>follow instructions</p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/process-list-item -->\r\n\r\n<!-- wp:uswds/process-list-item {\"heading\":\"Document findings\"} -->\r\n<!-- wp:paragraph -->\r\n<p>How else will you know what you found</p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/process-list-item -->\r\n\r\n<!-- wp:uswds/process-list-item {\"heading\":\"Report stuff need fixing\"} -->\r\n<!-- wp:paragraph -->\r\n<p>Gitlab is your friend. </p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/process-list-item -->\r\n<!-- /wp:uswds/process-list -->\r\n\r\n<!-- wp:quote -->\r\n<blockquote class=\"wp-block-quote\"><p>Guess you never felt that way.</p><cite>Kelly Clarkson</cite></blockquote>\r\n<!-- /wp:quote -->\r\n\r\n<!-- wp:separator -->\r\n<hr class=\"wp-block-separator\"/>\r\n<!-- /wp:separator -->\r\n\r\n<!-- wp:paragraph -->\r\n<p></p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

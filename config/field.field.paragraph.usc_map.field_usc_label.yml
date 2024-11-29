@@ -1,0 +1,19 @@
+uuid: 9c9faf20-651e-4706-81ac-82f3eb9f77e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_label
+    - paragraphs.paragraphs_type.usc_map
+id: paragraph.usc_map.field_usc_label
+field_name: field_usc_label
+entity_type: paragraph
+bundle: usc_map
+label: Label
+description: 'A human-friendly identifier used for the Paragraph Library. It is not shown on the attached page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

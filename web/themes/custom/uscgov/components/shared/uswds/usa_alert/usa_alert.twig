@@ -1,0 +1,29 @@
+{% set alert_classes = {
+  'status': 'info',
+  'info': 'info',
+  'warning': 'warning',
+  'error': 'error',
+  'success': 'success',
+  'emergency': 'emergency',
+} %}
+{%
+  set classes = [
+    'usa-alert usa-alert--' ~ alert_classes[type],
+    icon == false ? "usa-alert--no-icon" : "",
+    slim == true ? "usa-alert--slim" : "",
+  ]
+%}
+{% set alertAttributes = create_attribute() %}
+<div {{ alertAttributes.addClass(classes).addClass(additional_classes) }}>
+  <div class="usa-alert__body">
+    {% if status_headings[type] or heading_text %}
+      <h4 class="usa-alert__heading">{{ status_headings[type] ?: heading_text }}</h4>
+    {% endif %}
+    {% for message in messages %}
+      <div class="usa-alert__text">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+  {% block dismiss_button %}{% endblock %}
+</div>

@@ -1,0 +1,22 @@
+uuid: 58cd48e0-dcfd-42ab-acba-1af65fdfad32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_paragraph
+    - node.type.basic
+  module:
+    - text
+id: node.basic.field_lead_paragraph
+field_name: field_lead_paragraph
+entity_type: node
+bundle: basic
+label: 'Lead Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,92 @@
+uuid: dda757d3-61d8-45cb-a7d6-1f9af2af8592
+langcode: en
+status: true
+dependencies: {  }
+id: usc_vacancy_judicial_summary_feed
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: usc_vacancies
+label: 'US Court HRMIS Summary Judicial Vacancies'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: simple_xml
+  urls:
+    callback: usc_vacancies_migrate_urls
+  item_selector: /data
+  constants:
+    TITLE_PREFIX: 'Vacancy Summary for '
+  fields:
+    -
+      name: archive_id
+      label: 'Archive ID'
+      selector: /data
+    -
+      name: court_type
+      label: 'Court Type'
+      selector: vacount/court_type
+    -
+      name: vacancies_count
+      label: Vacancies
+      selector: vacount/vacancies
+    -
+      name: pending
+      label: Pending
+      selector: vacount/pending
+    -
+      name: future_pending
+      label: 'Future Pending'
+      selector: vacount/future_pending
+    -
+      name: vacancies
+      label: Vacancies
+      selector: vacount
+  ids:
+    archive_id:
+      type: string
+process:
+  title:
+    plugin: concat
+    source:
+      - constants/TITLE_PREFIX
+      - node_title_date
+  path/pathauto:
+    plugin: default_value
+    default_value: 0
+  path/alias: custom_alias
+  field_source_type:
+    plugin: default_value
+    default_value: xml
+  field_court: court_type
+  field_vacancy_type:
+    plugin: default_value
+    default_value: judicial_summary
+  field_year: field_year
+  field_archive_id: archive_id
+  field_vacancy_reference:
+    -
+      plugin: sub_process
+      source: vacancy_rows
+      process:
+        court: court_type
+        count: vacancies_count
+        pend: pending
+        fut_pend: future_pending
+        auth_judg: authorized_judgeships
+    -
+      plugin: child_entity_generate
+      entity_type: paragraph
+      bundle: judicial_vacancy
+      values:
+        field_court_type: court
+        field_vacancies: count
+        field_pending: pend
+        field_future_pending: fut_pend
+        field_authorized_judgeships: auth_judg
+destination:
+  plugin: 'entity:node'
+  default_bundle: vacancy
+  new_revision: false
+migration_dependencies: {  }

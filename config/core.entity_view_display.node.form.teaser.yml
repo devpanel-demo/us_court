@@ -1,0 +1,117 @@
+uuid: 8b8c7672-62bc-4108-a9d1-6871a2e46fe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.form.body
+    - field.field.node.form.field_additional_info
+    - field.field.node.form.field_date_effective
+    - field.field.node.form.field_date_superseded
+    - field.field.node.form.field_date_updated
+    - field.field.node.form.field_document_pdf
+    - field.field.node.form.field_form_category
+    - field.field.node.form.field_form_number
+    - field.field.node.form.field_hide_left_navigation
+    - field.field.node.form.field_metatag
+    - field.field.node.form.field_short_title
+    - field.field.node.form.field_superseded
+    - field.field.node.form.field_tags
+    - field.field.node.form.field_usc_additional_content
+    - field.field.node.form.field_usc_govdelivery_form
+    - field.field.node.form.field_usc_notification
+    - field.field.node.form.field_usc_related_news
+    - field.field.node.form.field_usc_table_of_contents
+    - field.field.node.form.field_workbench_access
+    - node.type.form
+  module:
+    - nomarkup
+    - sdc_display
+    - smart_trim
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.form.teaser
+targetEntityType: node
+bundle: form
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  field_additional_info: true
+  field_date_effective: true
+  field_date_superseded: true
+  field_date_updated: true
+  field_document_pdf: true
+  field_form_category: true
+  field_form_number: true
+  field_hide_left_navigation: true
+  field_metatag: true
+  field_short_title: true
+  field_superseded: true
+  field_tags: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  search_api_excerpt: true

@@ -1,0 +1,5 @@
+enable_override: true
+view: cameras_in_court_landing
+view_display: taxonomy
+inherit_settings: false
+pass_arguments: false

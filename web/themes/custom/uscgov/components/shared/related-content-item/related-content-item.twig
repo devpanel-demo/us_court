@@ -1,0 +1,10 @@
+<div class="related-content-item">
+  <h3 class="related-content-item__title">
+    <a href="{{ url }}">{{ title }}</a>
+  </h3>
+  {% if content|render|striptags|trim %}
+    <div class="related-content-item__body">
+      {{ content }}
+    </div>
+  {% endif %}
+</div>

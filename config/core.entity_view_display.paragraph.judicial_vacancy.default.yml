@@ -1,0 +1,175 @@
+uuid: 2af0058a-6258-4b73-8902-d4919b0e5d78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.judicial_vacancy.field_adjusted
+    - field.field.paragraph.judicial_vacancy.field_authorized_judgeships
+    - field.field.paragraph.judicial_vacancy.field_circuit
+    - field.field.paragraph.judicial_vacancy.field_confirmation_date
+    - field.field.paragraph.judicial_vacancy.field_court_type
+    - field.field.paragraph.judicial_vacancy.field_days_pending
+    - field.field.paragraph.judicial_vacancy.field_district
+    - field.field.paragraph.judicial_vacancy.field_future_pending
+    - field.field.paragraph.judicial_vacancy.field_incumbent
+    - field.field.paragraph.judicial_vacancy.field_nomination_date
+    - field.field.paragraph.judicial_vacancy.field_nominee
+    - field.field.paragraph.judicial_vacancy.field_notice_date
+    - field.field.paragraph.judicial_vacancy.field_opening_date
+    - field.field.paragraph.judicial_vacancy.field_pending
+    - field.field.paragraph.judicial_vacancy.field_reason
+    - field.field.paragraph.judicial_vacancy.field_vacancies
+    - field.field.paragraph.judicial_vacancy.field_weighted
+    - paragraphs.paragraphs_type.judicial_vacancy
+  module:
+    - datetime
+id: paragraph.judicial_vacancy.default
+targetEntityType: paragraph
+bundle: judicial_vacancy
+mode: default
+content:
+  field_adjusted:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_authorized_judgeships:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_circuit:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_confirmation_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_court_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_days_pending:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_district:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_future_pending:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_incumbent:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_nomination_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_nominee:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_notice_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_opening_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_pending:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_reason:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_vacancies:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_weighted:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  search_api_excerpt: true

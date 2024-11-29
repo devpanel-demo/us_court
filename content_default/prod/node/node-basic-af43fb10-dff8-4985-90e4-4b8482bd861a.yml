@@ -1,0 +1,155 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: af43fb10-dff8-4985-90e4-4b8482bd861a
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Long Range Plan for Information Technology'
+  status: true
+  langcode: en
+  created: '1410977212'
+  changed: 1731344867
+  author: shao_chen@ao.uscourts.gov
+  url: /data-news/reports/strategic-planning/long-range-plan-information-technology
+  revision_log_message: null
+  revision_uid: '43'
+  menu_link:
+    uuid: 5daad62b-6578-40ff-bc2a-31dd9f0c6304
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Long Range Plan for Information Technology'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/2874'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 8d1f1e81-5f2d-41d5-9044-21f4eccc2f48
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Strategic Planning'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/60004'
+              title: ''
+              options: {  }
+          weight: 3
+          parent:
+            uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: Reports
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/3129'
+                  title: ''
+                  options: {  }
+              weight: 1
+              parent:
+                uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Data & News'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/8'
+                      title: ''
+                      options: {  }
+                  weight: -68
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/16578'
+                      title: 'Federal Court Scams'
+                      options: {  }
+                    -
+                      uri: 'entity:node/3122'
+                      title: "Director's Annual Report"
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<h2>Explore the Plan</h2><ul><li>Strategic Priorities<ul><li>Build and maintain robust and flexible technology systems and applications</li><li>Coordinate and integrate national IT systems and applications</li><li>Develop system-wide approaches to the utilization of technology</li><li>Continuously improve security practices</li></ul></li><li>Investing in the IT Program<ul><li>Resource Requirements</li><li>JITF Program Components</li></ul></li></ul>'
+      summary: "Provides an overview of the Judiciary's information technology programs, describes key strategic priorities, and summarizes resource requirements."
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>\r\n\tThe Long Range Plan for Information Technology in the Federal Judiciary provides an overview of the Judiciary's information technology programs, describes key strategic priorities for the next three to five years, and summarizes the Judiciary's anticipated resource requirements for fiscal years 2024 through 2028.\r\n</p>\r\n"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: fd3653fb-7da9-49f8-85d2-cf599d0a5730
+      entity_type: taxonomy_term
+      base_fields:
+        name: Statistics
+        weight: 24
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

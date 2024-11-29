@@ -1,0 +1,28 @@
+{% set classes = [
+  'location__list_item',
+  image ? 'has-image',
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if image %}
+    <a class="location__list_item__image" href="{{ node_url|striptags }}">
+      {{ image }}
+    </a>
+  {% endif %}
+
+  <div class="location__list_item__info">
+    <h4 class="location__list_item__heading">
+      <a href="{{ node_url|striptags }}">
+        {{ title }}
+      </a>
+    </h4>
+    <div class="location__list_item__address">
+      {{ address }}
+    </div>
+    {% if phone %}
+      <div class="location__list_item__phone">
+        {{ phone }}
+      </div>
+    {% endif %}
+  </div>
+</div>

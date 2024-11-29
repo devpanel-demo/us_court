@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 5cb001b6-b423-4746-8c7c-16146a6809ee
+entity_type: media
+bundle: icon
+base_fields:
+  name: bitcoin-sign-solid.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/bitcoin-sign-solid.svg'
+      url: '/sites/default/files/icons/bitcoin-sign-solid.svg'

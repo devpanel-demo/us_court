@@ -1,0 +1,23 @@
+uuid: 843e8663-891a-4f44-91f7-c0b097190706
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usc_import_timestamp
+    - node.type.data_table
+id: node.data_table.field_usc_import_timestamp
+field_name: field_usc_import_timestamp
+entity_type: node
+bundle: data_table
+label: 'Import Timestamp'
+description: 'If this page was created as part of a spreadsheet import, this timestamp tracks the creation batch. Do not edit.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,6 @@
+services:
+  usc_migrate_list.process_row:
+    class: Drupal\usc_migrate_list\EventSubscriber\USCListMigrationSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }

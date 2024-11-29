@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 07460bb0-65c5-4496-819e-a7dbd054ab31
+entity_type: media
+bundle: icon
+base_fields:
+  name: envelope-open-solidbottom.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/envelope-open-solidbottom.svg'
+      url: '/sites/default/files/icons/envelope-open-solidbottom.svg'

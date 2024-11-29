@@ -1,0 +1,7 @@
+{{
+  include('uscgov:search-result-item', {
+    url: path('entity.media.canonical', {'media': media.id}),
+    title: name,
+    snippet: content.search_api_excerpt
+  })
+}}

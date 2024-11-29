@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Featured Item
+description: Present the content as feature item.
+status: experimental
+props:
+  type: object
+  required:
+    - title
+    - url
+  properties:
+    title_suffix:
+      type: array
+      description: title_suffix is necessary for contextual links.
+    title:
+      title: Title
+      type: string
+      description: Title of the item.
+    url:
+      title: URL
+      type: string
+      description: Link of the content.
+    date:
+      title: Date
+      type: string
+      description: The content date.
+slots:
+  image:
+    title: Image
+  content:
+    title: Content

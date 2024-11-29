@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: nominatim
+label: Nominatim
+plugin: nominatim
+configuration:
+  throttle:
+    period: 60
+    limit: 5
+  geocoder:
+    locale: ''
+  rootUrl: 'https://nominatim.openstreetmap.org'
+  userAgent: chrome
+  referer: 'https://uscourts.gov/'

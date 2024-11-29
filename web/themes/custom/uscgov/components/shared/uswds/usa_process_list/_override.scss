@@ -1,0 +1,34 @@
+.usa-process-list__item {
+  list-style: none;
+  padding-left: 2.5em;
+
+  &::before {
+    border-color: var(--border-secondary);
+    color: var(--text-secondary-darker);
+  }
+}
+
+ul.usa-process-list {
+  padding: 0;
+  margin: 0;
+
+  .usa-process-list__item {
+    border-color: var(--border-secondary-dark);
+    font-size: 17px;
+
+    &:before {
+      border-color: var(--border-secondary);
+      color: var(--text-secondary-darker);
+    }
+
+    &:last-child {
+      border-color: transparent;
+    }
+  }
+
+  .usa-process-list__heading {
+    color: var(--text-on-surface-base-light);
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

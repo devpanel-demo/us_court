@@ -1,0 +1,79 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: aea02c01-7efa-4bbf-873e-aa02fe4ef361
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'govDelivery, yo!'
+  status: true
+  langcode: en
+  created: '1716154286'
+  changed: 1716154286
+  author: jamesdavison@ao.uscourts.gov
+  url: /govdelivery-yo
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 7c3cfc62-6c72-4cd8-94f9-4aabb945e0b2
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1716154292'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: edd83f74-ef82-48fc-98b7-45905e956e7d
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1716155191'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_374
+        field_usc_description:
+          -
+            value: '<p>Subscribe to be notified when the news section is updated.</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

@@ -1,0 +1,85 @@
+uuid: 5e33bfc7-e4e3-464e-9f01-0cec58b81e65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_video.field_usc_description
+    - field.field.paragraph.usc_video.field_usc_label
+    - field.field.paragraph.usc_video.field_usc_title
+    - field.field.paragraph.usc_video.field_usc_video
+    - paragraphs.paragraphs_type.usc_video
+  module:
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.usc_video.default
+targetEntityType: paragraph
+bundle: usc_video
+mode: default
+content:
+  field_usc_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_usc_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  field_usc_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: '1'
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+hidden:
+  field_usc_label: true
+  search_api_excerpt: true

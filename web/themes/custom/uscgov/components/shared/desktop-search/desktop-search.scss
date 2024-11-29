@@ -1,0 +1,212 @@
+@forward "../../sass/uswds/settings";
+@use "../../../sass/custom/global/media-queries" as *;
+@use "../../../sass/custom/global/mixins" as *;
+@use "uswds-core" as *;
+
+.desktop-search__button {
+  --padding-inline: var(--spacing-sm-2);
+
+  display: none;
+  width: 140px; // Ensure width doesn't change when it's in an open state.
+  margin-right: calc(-1 * var(--padding-inline));
+  padding: 9px var(--padding-inline);
+  appearance: none;
+  border: 0;
+  background: none;
+  color: var(--text-link);
+  cursor: pointer;
+
+  @include custom-desktop-nav {
+    display: unset;
+  }
+
+  &:hover {
+    color: color('primary-vivid');
+  }
+
+  &[aria-expanded="true"] {
+    position: relative; // Anchor pseudo.
+    border-radius: 10px 10px 0 0;
+    border-top: 1px solid var(--border-muted-dark);
+    border-right: 1px solid var(--border-muted-dark);
+    border-left: 1px solid var(--border-muted-dark);
+    background: var(--surface-base-lightest);
+
+    &:before {
+      position: absolute;
+      top: 100%;
+      left: -1px;
+      z-index: 2; // Appear above dropdown.
+      width: calc(100% + 2px);
+      height: 40px; // @todo magic number.
+      border-right: 1px solid var(--border-muted-dark);
+      border-left: 1px solid var(--border-muted-dark);
+      background: var(--surface-base-lightest);
+      content: "";
+
+      .header--fixed.is-slim & {
+        height: 22px;
+      }
+    }
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.desktop-search__button-search {
+  display: flex;
+  gap: var(--spacing-sm-1);
+  align-items: center;
+
+  [aria-expanded="true"] & {
+    display: none;
+  }
+
+  &:after {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    mask-image: url('images/magnify.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: currentColor;
+  }
+}
+
+.desktop-search__button-close {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--spacing-sm-1);
+  font-size: 16px;
+
+  [aria-expanded="false"] & {
+    display: none;
+  }
+}
+
+.desktop-search__button-close-icon {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 0;
+    translate: -50% -50%;
+    rotate: 45deg;
+    border: solid 1px currentColor;
+    content: "";
+  }
+
+  &:after {
+    rotate: -45deg;
+  }
+}
+
+.desktop-search__wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+  visibility: hidden;
+  width: 100%;
+  height: 200px;
+  padding: var(--spacing-md-1);
+  background: var(--surface-base-lightest);
+  border: solid 1px var(--border-muted-dark);
+  text-align: center;
+
+  @include custom-desktop-nav {
+    display: unset;
+  }
+
+  &.is-active {
+    visibility: visible;
+  }
+}
+
+.desktop-search__label {
+  display: block;
+  margin-bottom: var(--spacing-sm-1);
+  color: var(--text-on-surface-base-light);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.desktop-search__form-wrapper {
+  --form-background: var(--surface-form);
+
+  display: flex;
+  max-width: 600px;
+  height: var(--spacing-lg-1);
+  margin-inline: auto;
+  background: var(--form-background);
+  border: solid 1px var(--border-muted-dark);
+  border-radius: 30px;
+
+  &:has(input:focus) {
+    outline: 4px solid #2491ff;
+    outline-offset: 2px;
+  }
+}
+
+.desktop-search__input {
+  flex-grow: 1;
+  max-width: 100%;
+  min-width: 100px;
+  padding-left: 20px;
+  background: var(--form-background);
+  border: 0;
+  border-radius: 30px 0 0 30px;
+  appearance: none;
+  font-size: 20px;
+
+  &:not([disabled]):focus {
+    outline: 0;
+  }
+}
+
+.desktop-search__submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: solid 1px transparent;
+  appearance: none;
+  background: var(--surface-primary);
+  color: var(--form-background);
+
+  path {
+    fill: currentColor;
+
+    @media (forced-colors: active) {
+      fill: buttonText;
+    }
+  }
+}
+
+// Toolbox.
+.project-toolbox {
+  .desktop-search__button {
+    &[aria-expanded="true"] {
+      &:before {
+        height: 5px; // @todo magic number.
+      }
+    }
+
+    .desktop-search__button-search {
+      padding: 0;
+    }
+  }
+}

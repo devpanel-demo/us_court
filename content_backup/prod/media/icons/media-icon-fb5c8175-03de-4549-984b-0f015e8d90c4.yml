@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: fb5c8175-03de-4549-984b-0f015e8d90c4
+entity_type: media
+bundle: icon
+base_fields:
+  name: plug.svg
+  created: '1721137188'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/plug.svg'
+      url: '/sites/default/files/icons/plug.svg'

@@ -1,0 +1,84 @@
+uuid: 3f9272ed-d652-4936-a021-eaadf7ca7ff2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usc_table_of_contents
+    - node.type.judge_comments
+    - paragraphs.paragraphs_type.usc_table_of_contents
+  module:
+    - entity_reference_revisions
+id: node.judge_comments.field_usc_table_of_contents
+field_name: field_usc_table_of_contents
+entity_type: node
+bundle: judge_comments
+label: 'Table of Contents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: usc_paragraph
+  handler_settings:
+    view:
+      view_name: usc_paragraph_library
+      display_name: entity_reference_1
+      arguments:
+        - usc_table_of_contents
+    negate: '0'
+    target_bundles:
+      usc_table_of_contents: usc_table_of_contents
+    target_bundles_drag_drop:
+      additional_info:
+        weight: '18'
+        enabled: 0
+      body_enhanced:
+        weight: '19'
+        enabled: 0
+      criminogenic_extra_downlds:
+        weight: '20'
+        enabled: 0
+      criminogenic_worksheets:
+        weight: '21'
+        enabled: 0
+      icon_link:
+        weight: '22'
+        enabled: 0
+      milestone_activities:
+        weight: '23'
+        enabled: 0
+      piksel_programs:
+        weight: '24'
+        enabled: 0
+      referenced_nodes:
+        weight: '25'
+        enabled: 0
+      social_media_item:
+        weight: '26'
+        enabled: 0
+      usc_govdelivery:
+        weight: '27'
+        enabled: 0
+      usc_graphic_photo:
+        weight: '28'
+        enabled: 0
+      usc_notification:
+        weight: '29'
+        enabled: 0
+      usc_related_content:
+        weight: '30'
+        enabled: 0
+      usc_related_files:
+        weight: '31'
+        enabled: 0
+      usc_related_links:
+        weight: '32'
+        enabled: 0
+      usc_table_of_contents:
+        enabled: '1'
+        weight: '33'
+      usc_video:
+        weight: '34'
+        enabled: 0
+field_type: entity_reference_revisions

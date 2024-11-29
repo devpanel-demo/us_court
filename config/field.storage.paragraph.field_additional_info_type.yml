@@ -1,0 +1,30 @@
+uuid: 155402a3-6b07-4b70-918e-955e32f9fb7a
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_additional_info_type
+field_name: field_additional_info_type
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: 'Form Instructions'
+    -
+      value: 1
+      label: 'Committee Notes'
+    -
+      value: 2
+      label: 'Revision Notes'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

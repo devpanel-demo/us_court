@@ -1,0 +1,25 @@
+uuid: 5f824800-7741-4a36-b3f3-2e99aab3112a
+langcode: en
+status: true
+dependencies:
+  module:
+    - scheduler
+third_party_settings:
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Procedural Posture'
+vid: procedural_posture
+description: 'Used in Cameras in Court content type.'
+weight: 0
+new_revision: false

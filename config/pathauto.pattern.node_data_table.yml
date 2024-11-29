@@ -1,0 +1,21 @@
+uuid: 7c7b64ee-7032-4e1a-a6dc-9c3c271175f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_data_table
+label: 'Content - Data Table'
+type: 'canonical_entities:node'
+pattern: 'statistics/table/[node:field_current_table_number]/[node:field_report_name]/[node:field_date_updated:date:custom:Y]/[node:field_date_updated:date:custom:m]/[node:field_date_updated:date:custom:d]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      data_table: data_table
+selection_logic: and
+weight: -8
+relationships: {  }

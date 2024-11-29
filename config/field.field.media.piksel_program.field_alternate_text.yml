@@ -1,0 +1,19 @@
+uuid: 3866fb26-3467-4036-888b-8be8fedb51d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_alternate_text
+    - media.type.piksel_program
+id: media.piksel_program.field_alternate_text
+field_name: field_alternate_text
+entity_type: media
+bundle: piksel_program
+label: 'Alternate text'
+description: 'This text will be used by screen readers, search engines, or when the image cannot be loaded.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

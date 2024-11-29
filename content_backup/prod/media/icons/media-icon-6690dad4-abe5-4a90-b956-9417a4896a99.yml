@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 6690dad4-abe5-4a90-b956-9417a4896a99
+entity_type: media
+bundle: icon
+base_fields:
+  name: sync.svg
+  created: '1721137227'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/sync.svg'
+      url: '/sites/default/files/icons/sync.svg'

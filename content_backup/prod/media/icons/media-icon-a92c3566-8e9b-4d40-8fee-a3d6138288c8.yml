@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: a92c3566-8e9b-4d40-8fee-a3d6138288c8
+entity_type: media
+bundle: icon
+base_fields:
+  name: file-video-outline.svg
+  created: '1721137082'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/file-video-outline.svg'
+      url: '/sites/default/files/icons/file-video-outline.svg'

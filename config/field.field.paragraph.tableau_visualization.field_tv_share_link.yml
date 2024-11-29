@@ -1,0 +1,24 @@
+uuid: 19f58c75-8c7f-4826-8619-4e71ba387ca3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tv_share_link
+    - filter.format.widget
+    - paragraphs.paragraphs_type.tableau_visualization
+  module:
+    - text
+id: paragraph.tableau_visualization.field_tv_share_link
+field_name: field_tv_share_link
+entity_type: paragraph
+bundle: tableau_visualization
+label: 'Share Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - widget
+field_type: text_long

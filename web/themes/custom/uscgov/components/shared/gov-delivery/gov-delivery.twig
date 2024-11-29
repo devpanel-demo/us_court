@@ -1,0 +1,10 @@
+<div{{ attributes.addClass('gov-delivery') }}>
+  {{ include(componentMetadata.path ~ '/images/envelope.svg') }}
+  <div class="gov-delivery__content">
+    <h2 class="gov-delivery__title">{{ content.field_usc_title|add_suggestion('bare') }}</h2>
+    {% if content.field_usc_description|render|striptags|trim %}
+      <div class="gov-delivery__description">{{ content.field_usc_description|add_suggestion('bare') }}</div>
+    {% endif %}
+    {{ content.field_usc_category_topic_id|add_suggestion('bare') }}
+  </div>
+</div>

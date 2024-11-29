@@ -1,0 +1,74 @@
+uuid: 940b3acd-3934-4879-ad11-f271ba3d1897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.usc_court_finder_hierarchy.field_usc_code
+    - field.field.taxonomy_term.usc_court_finder_hierarchy.field_usc_coordinates
+    - field.field.taxonomy_term.usc_court_finder_hierarchy.field_usc_type
+    - taxonomy.vocabulary.usc_court_finder_hierarchy
+  module:
+    - path
+    - text
+id: taxonomy_term.usc_court_finder_hierarchy.default
+targetEntityType: taxonomy_term
+bundle: usc_court_finder_hierarchy
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_type:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  tvi:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_usc_code: true
+  field_usc_coordinates: true
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

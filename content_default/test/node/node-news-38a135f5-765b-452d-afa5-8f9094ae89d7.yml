@@ -1,0 +1,182 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 38a135f5-765b-452d-afa5-8f9094ae89d7
+entity_type: node
+bundle: news
+base_fields:
+  title: 'Testing TOC block'
+  status: true
+  langcode: en
+  created: '1714846395'
+  changed: 1714846395
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-toc-block
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>Separate sections of the report address the appellate, district, and bankruptcy courts; the probation and pretrial services system; and other components of the federal Judiciary. Caseload totals for the major programs of the federal Judiciary appear in the table of judicial caseload indicators.</p><p>In the regional courts of appeals, filings dropped 4 percent to 39,987. Total filings in the U.S. district courts rose 18 percent to 405,878 as civil case filings increased 24 percent to 339,731, while criminal defendant filings decreased 3 percent to 66,147. Bankruptcy court filings went up 13 percent to 433,658 as 85 of the 90 bankruptcy courts received more petitions. The number of persons under post-conviction supervision on September 30, 2023, remained stable at 122,824, less than 1 percent below the total one year earlier. Cases activated in the pretrial services system, excluding pretrial diversion cases, fell 3 percent to 71,297.</p><h2>Caseload Highlights</h2><h3>U.S. Courts of Appeals</h3><ul><li>Filings in the regional courts of appeals dropped 4 percent to 39,987 in fiscal year 2023.</li><li>Filings by pro se litigants, which accounted for 46 percent of new cases, decreased 4 percent to 18,517.</li><li>Civil appeals fell 2 percent to 21,756.</li><li>Criminal appeals declined 3 percent to 9,649.</li></ul><h2>U.S. District Courts</h2><p>Combined filings in the district courts for civil cases and criminal defendants grew 18 percent to 405,878.<br>&nbsp;</p><h3>Civil Filings</h3><p>Civil case filings rose 24 percent to 339,731.<br>Cases involving diversity of citizenship climbed 47 percent to 154,629.<br>Federal question cases grew 5 percent to 138,311.<br>Filings with the United States as defendant increased 23 percent to 43,671, and filings with the United States as plaintiff went up 10 percent to 3,118.<br>Criminal Filings<br>Filings for criminal defendants (including those transferred from other districts) declined 3 percent to 66,147.<br>Drug offense defendants dropped 8 percent to 18,103. Filings for defendants accused of crimes involving marijuana fell 37 percent, and filings related to non-marijuana drug crimes decreased 6 percent.<br>Defendants prosecuted for immigration violations rose 3 percent to 19,645. The southwestern border districts, which received 87 percent of immigration crime defendants, had a combined increase in filings of 1 percent.<br>Filings for defendants charged with crimes involving firearms and explosives fell 7 percent to 10,118.<br>U.S. Bankruptcy Courts<br>Bankruptcy petition filings grew 13 percent to 433,658.<br>Nonbusiness (i.e., largely consumer) petitions went up 12 percent to 416,607, and business petitions climbed 30 percent to 17,051.<br>Increases occurred in filings under chapter 7 (up 8 percent), chapter 13 (up 20 percent), and chapter 11 (up 36 percent).<br>Filings rose in 85 of the 90 bankruptcy courts.<br>Federal Probation and Pretrial Services System<br>The total of 122,824 persons under post-conviction supervision on September 30, 2023, was less than 1 percent lower than the total one year earlier.<br>Persons serving terms of supervised release on that date after leaving correctional institutions held steady, growing less than 1 percent to 110,112 and accounting for 90 percent of all persons under supervision.<br>Cases opened in the pretrial services system, excluding pretrial diversion cases, dropped 3 percent to 71,297.</p>'
+      summary: ''
+      format: wysiwyg
+  field_body_enhanced:
+    -
+      uuid: ba68729a-ec90-4789-8c67-5b6b28196b65
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714846429'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated:
+    -
+      value: '2024-05-20'
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>This report presents statistics on the work of the federal Judiciary for the fiscal year ending September 30, 2023, comparing data for this year with data for prior years and, when possible, explaining increases or decreases in caseloads.</p>'
+      format: wysiwyg
+  field_metatag: null
+  field_news_issue: null
+  field_related_topics: null
+  field_tags: null
+  field_toc:
+    -
+      value: '1'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form:
+    -
+      uuid: 4df0166f-bbdf-4d05-b258-1151fac7fa6f
+      entity_type: paragraph
+      bundle: usc_govdelivery
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_category_topic_id:
+          -
+            value: USFEDCOURTS_138
+        field_usc_description:
+          -
+            value: '<p>Subscribe to be notified when the news section is updated.</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'GovDelivery Form Subscribe to News Updates'
+        field_usc_title:
+          -
+            value: 'Subscribe to News Updates'
+  field_usc_notification: null
+  field_usc_related_news:
+    -
+      uuid: f986ec5e-1851-48ec-8e58-8a365ee1343c
+      entity_type: paragraph
+      bundle: usc_related_news
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_label:
+          -
+            value: 'Judiciary News Judiciary News'
+        field_usc_related_news:
+          -
+            target_id: usc_latest_news
+            display_id: block_1
+            data: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+        field_usc_title:
+          -
+            value: 'Judiciary News'
+        field_usc_view_more:
+          -
+            uri: 'internal:/'
+            title: 'Link text'
+            options:
+              href: /
+              data-entity-type: ''
+              data-entity-uuid: ''
+              data-entity-substitution: ''
+  field_usc_table_of_contents:
+    -
+      uuid: a6bbeb19-a488-4d48-bab2-e6297498b776
+      entity_type: paragraph
+      bundle: usc_table_of_contents
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714846559'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_content_nodes:
+          -
+            uuid: 0629df28-2f66-4cff-9b5f-8b2b01b801a2
+            entity_type: node
+            base_fields: {  }
+            bundle: report
+          -
+            uuid: a75234b4-d008-40e1-abf4-1732af07fdaf
+            entity_type: node
+            base_fields: {  }
+            bundle: report
+          -
+            uuid: 1a959c41-8616-471b-923d-e838f9472d9e
+            entity_type: node
+            base_fields: {  }
+            bundle: report
+          -
+            uuid: 212748e5-2a20-4287-a80a-7f5385f4c1e5
+            entity_type: node
+            base_fields: {  }
+            bundle: report
+          -
+            uuid: e1258dea-a5f0-4961-88fc-a8c4716f1a10
+            entity_type: node
+            base_fields: {  }
+            bundle: report
+          -
+            uuid: 6b3eccee-fd86-4c0e-8e1b-b35b832af435
+            entity_type: node
+            base_fields: {  }
+            bundle: report
+          -
+            uuid: 8ae947a7-cbee-436e-9861-7400ee7315c7
+            entity_type: node
+            base_fields: {  }
+            bundle: report
+          -
+            uuid: 7e6204a2-b5cd-487f-9bb6-330adbcc11fc
+            entity_type: node
+            base_fields: {  }
+            bundle: report
+        field_usc_description:
+          -
+            value: '<p>Explore other pages in this report.</p>'
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Testing TOC'
+        field_usc_title:
+          -
+            value: 'Table of Contents'
+  field_workbench_access: null

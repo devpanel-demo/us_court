@@ -1,0 +1,16 @@
+{% set accordion_id = random() %}
+{# Expand/Collapse All #}
+{% if control_button %}
+<div class="operations-group collapsed">
+  <a href="" target="blank" class="expand-link" data-controls="{{ accordion_id }}">{{ 'Expand all' | t }}</a>
+  <a href="" target="blank" class="collapse-link" data-controls="{{ accordion_id }}">{{ 'Collapse all' | t }}</a>
+</div>
+{% endif %}
+{# Multiselect #}
+{% if multiselect %}
+  {% set attributes = attributes.addClass('usa-accordion--multiselectable').setAttribute('data-allow-multiple', multiselect) %}
+{% endif %}
+{# Accordion #}
+<div{{ attributes.addClass('usa-accordion').setAttribute('id', accordion_id) }}>
+  {% block accordion_items %}{% endblock %}
+</div>

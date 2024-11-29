@@ -1,0 +1,29 @@
+uuid: 0eba9b9e-2291-4698-91f9-23f1d2881242
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topic
+    - node.type.data_table
+    - taxonomy.vocabulary.data_table_topics
+id: node.data_table.field_topic
+field_name: field_topic
+entity_type: node
+bundle: data_table
+label: Topic(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      data_table_topics: data_table_topics
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: data_table_topics
+field_type: entity_reference

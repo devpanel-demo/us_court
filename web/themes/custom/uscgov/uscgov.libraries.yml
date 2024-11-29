@@ -1,0 +1,148 @@
+global:
+  css:
+    base:
+      dist/uswds/css/fonts.css: {}
+      dist/custom/css/base/base.css: {}
+      dist/custom/css/base/utilities.css: {}
+    component:
+      dist/custom/css/components/autocomplete.css: {}
+      dist/custom/css/views/search.css: {}
+      dist/custom/css/components/misc.css: {}
+    layout:
+      dist/custom/css/layout/layout.css: {}
+  dependencies:
+    - uscgov/variables
+uswds:
+  css:
+    base:
+      # dist/uswds/css/helpers.css: {  }
+      dist/uswds/css/styles.css: {}
+      dist/uswds/css/typography.css: {}
+  js:
+    dist/uswds/js/uswds-init.min.js:
+      minified: true
+    dist/uswds/js/uswds.min.js:
+      minified: true
+  dependencies:
+    - sdc/uscgov--usa_table
+variables:
+  css:
+    base:
+      dist/custom/css/base/variables-figma.css: {}
+      dist/custom/css/base/variables-colors.css: {}
+      dist/custom/css/base/variables-button-colors.css: {}
+      dist/custom/css/base/variables-spacing.css: {}
+exposed_filters:
+  css:
+    component:
+      dist/custom/css/components/views-exposed-filters.css: {}
+uswds-utilities:
+  css:
+    base:
+      dist/uswds/css/utilities.css: {}
+uswds-button:
+  css:
+    component:
+      dist/uswds/css/uswds-button.css: {}
+uswds-icon:
+  css:
+    component:
+      dist/uswds/css/uswds-icon.css: {}
+uswds-form:
+  css:
+    component:
+      dist/uswds/css/uswds-form.css: {}
+button:
+  css:
+    component:
+      dist/custom/css/base/buttons.css: {}
+facets:
+  css:
+    component:
+      dist/custom/css/components/facets/facets.css: {}
+      dist/custom/css/components/facets/facets-checkbox.css: {}
+glossary:
+  css:
+    component:
+      dist/custom/css/views/glossary.css: {}
+gutenberg:
+  css:
+    base:
+      dist/custom/css/base/gutenberg.css: {}
+usc-court-finder-locations:
+  css:
+    component:
+      dist/custom/css/views/usc-court-finder-locations.css: {}
+  dependencies:
+    - uscgov/facets
+extlink:
+  css:
+    component:
+      dist/custom/css/components/extlink.css: {}
+file-icon:
+  css:
+    component:
+      dist/custom/css/components/file-icon.css: {}
+quotes:
+  css:
+    component:
+      dist/custom/css/base/quotes.css: {}
+judicial-vacancies-archives:
+  css:
+    component:
+      dist/custom/css/views/judicial-vacancies-archives.css: {}
+# Variants.
+gold_green:
+  css:
+    base:
+      dist/custom/css/variants/gold_green.css: {}
+  dependencies:
+    - uscgov/variables
+gray_gold:
+  css:
+    base:
+      dist/custom/css/variants/gray_gold.css: {}
+  dependencies:
+    - uscgov/variables
+gray_green:
+  css:
+    base:
+      dist/custom/css/variants/gray_green.css: {}
+  dependencies:
+    - uscgov/variables
+gray_red:
+  css:
+    base:
+      dist/custom/css/variants/gray_red.css: {}
+  dependencies:
+    - uscgov/variables
+gutenberg_components:
+  css:
+    component:
+      dist/custom/css/components/gutenberg/color-mappings.css: {}
+      dist/custom/css/components/gutenberg/media-text.css: {}
+      dist/custom/css/components/gutenberg/layout.css: {}
+      dist/custom/css/components/gutenberg/embed.css: {}
+      dist/custom/css/components/gutenberg/file-download-button.css: {}
+      dist/custom/css/components/gutenberg/table.css: {}
+      dist/custom/css/components/gutenberg/separator.css: {}
+      dist/custom/css/components/gutenberg/columns.css: {}
+      dist/custom/css/components/gutenberg/cards.css: {}
+webform:
+  css:
+    component:
+      dist/custom/css/components/webform.css: {}
+news-and-announcements:
+  css:
+    component:
+      dist/custom/css/views/news-and-announcements.css: {}
+news-landing:
+  css:
+    component:
+      dist/custom/css/views/news-landing.css: {}
+iframe-helper:
+  js:
+    js/iframe-helper.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

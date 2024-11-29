@@ -1,0 +1,11 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: ed3dd624-cdff-46d5-8385-b3b064918310
+entity_type: taxonomy_term
+bundle: period_time
+base_fields:
+  name: '5 Years'
+  weight: 4
+  langcode: en
+  description: null
+  parent: 0
+custom_fields: {  }

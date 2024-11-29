@@ -1,0 +1,244 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 8bd1cd3b-62d1-471e-af41-7c623d5577cd
+entity_type: node
+bundle: report
+base_fields:
+  title: 'Strategic Plan for the Federal Judiciary'
+  status: true
+  langcode: en
+  created: '1440700630'
+  changed: 1730913385
+  author: milton_snider@ao.uscourts.gov
+  url: /data-news/strategic-plan-federal-judiciary
+  revision_log_message: 'Edited by courtney.mcilroy.'
+  revision_uid: '9974'
+  menu_link:
+    uuid: 5922548f-0fbe-4310-9485-e3dff8d9e7bb
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Strategic Plan for the Federal Judiciary'
+      enabled: true
+      expanded: false
+      langcode: und
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/13282'
+          title: null
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 8d1f1e81-5f2d-41d5-9044-21f4eccc2f48
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Strategic Planning'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/60004'
+              title: ''
+              options: {  }
+          weight: 3
+          parent:
+            uuid: 4a71eccf-c4ff-489c-bcb8-a3b741971075
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: Reports
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/3129'
+                  title: ''
+                  options: {  }
+              weight: 1
+              parent:
+                uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Data & News'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'entity:node/8'
+                      title: ''
+                      options: {  }
+                  weight: -68
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/16578'
+                      title: 'Federal Court Scams'
+                      options: {  }
+                    -
+                      uri: 'entity:node/3122'
+                      title: "Director's Annual Report"
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The following materials provide analysis and information related to the work of the U.S. courts. '
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: ''
+      summary: "<p>\r\n\tThe federal judiciary is respected throughout America and the world for its excellence, for the independence of its judges, and for its delivery of equal justice under the law. Through this plan, the judiciary identifies a set of strategies that will enable it to continue as a model in providing fair and impartial justice.\r\n</p>\r\n"
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 7dfae9cd-80e3-4657-a55e-d98a289c92e2
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1730169174'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>The federal judiciary is respected throughout America and the world for its excellence, for the independence of its judges, and for its delivery of equal justice under the law. Through this plan, the judiciary identifies a set of strategies that will enable it to continue as a model in providing fair and impartial justice.</p><p>This plan begins with expressions of the mission and core values of the federal judiciary. Although any plan is by nature aspirational, these are constants which this plan strives to preserve. The aim is to stimulate and promote beneficial change within the federal judiciary—change that helps fulfill, and is consistent with, the mission and core values.</p><h2>Mission</h2><p>The United States Courts are an independent, national judiciary providing fair and impartial justice within the jurisdiction conferred by the Constitution and Congress. As an equal branch of government, the federal judiciary preserves and enhances its core values as the courts meet changing national and local needs.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image:
+          -
+            uuid: 8c768840-e5d4-477b-9af5-342c3bce50fd
+            entity_type: media
+            base_fields:
+              name: strategic_plan_2020_front_cover_opt.jpg
+              created: '1600098363'
+              status: true
+              langcode: en
+            bundle: image
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 240d8c00-ea18-41de-89bb-b3b4e0819119
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1730169174'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<h2>Core Values</h2><p><strong>Rule of Law</strong>: legal predictability, continuity, and coherence; reasoned decisions made through publicly visible processes and based faithfully on the law.</p><p><strong>Equal Justice</strong>: fairness and impartiality in the administration of justice; accessibility of court processes; treatment of all with dignity and respect.</p><p><strong>Judicial Independence</strong>: the ability to render justice without fear that decisions may threaten tenure, compensation, or security; sufficient structural autonomy for the judiciary as an equal branch of government in matters of internal governance and management.</p><p><strong>Diversity and Respect</strong>: a workforce of judges and employees that reflects the diversity of the public it serves; an exemplary workplace in which everyone is treated with dignity and respect.</p><p><strong>Accountability</strong>: stringent standards of conduct; self-enforcement of legal and ethical rules; good stewardship of public funds and property; effective and efficient use of resources.</p><p><strong>Excellence</strong>: adherence to the highest jurisprudential and administrative standards; effective recruitment, development and retention of highly competent and diverse judges and employees; commitment to innovative management and administration; availability of sufficient financial and other resources.</p><p><strong>Service</strong>: commitment to the faithful discharge of official duties; allegiance to the Constitution and laws of the United States; dedication to meeting the needs of jurors, court users, and the public in a timely and effective manner.</p><h2>The Plan in Brief</h2><p>The <em>Strategic Plan for the Federal Judiciary</em>, updated in 2020, continues the judiciary’s tradition of meeting challenges and taking advantage of opportunities while preserving its core values. It takes into consideration various trends and issues affecting the judiciary, many of which challenge or complicate the judiciary’s ability to perform its mission effectively. In addition, this plan recognizes that the future may provide tremendous opportunities for improving the fair and impartial delivery of justice.</p><p>This plan anticipates a future in which the federal judiciary is noteworthy for its accessibility, timeliness, and efficiency; attracts to judicial service the nation’s finest legal talent; is an employer of choice providing an exemplary workplace for a diverse group of highly qualified judges and employees; works effectively with the other branches of government; and enjoys the people’s trust and confidence.</p><p>This plan serves as an agenda outlining actions needed to preserve the judiciary’s successes and, where appropriate, bring about positive change. Although its stated goals and strategies do not include every important activity, project, initiative, or study that is underway or being considered, this plan focuses on issues that affect the judiciary at large, and on responding to those matters in ways that benefit the entire judicial branch and the public it serves.</p><p>Identified in this plan are seven fundamental issues that the judiciary must now address, and a set of responses for each issue. The scope of these issues includes the fair and impartial delivery of justice; the public’s trust and confidence in, and understanding of, the federal courts; the effective and efficient management of resources; a diverse workforce and an exemplary workplace; technology’s potential; access to justice and the judicial process; and relations with the other branches of government.</p><h2>Strategic Issues for the Federal Judiciary</h2><p>The strategies and goals in this plan are organized around seven issues— fundamental policy questions or challenges that are based on an assessment of key trends affecting the judiciary’s mission and core values:</p><p>Issue 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="node/13287">Providing Justice</a></p><p>Issue 2: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="node/13305">Preserving Public Trust, Confidence, and Understanding</a></p><p>Issue 3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="node/13312">The Effective and Efficient Management of Public Resources&nbsp;</a></p><p>Issue 4: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="node/13313">The Judiciary Workforce and Workplace</a></p><p>Issue 5: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="node/13314">Harnessing Technology’s Potential</a></p><p>Issue 6: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="node/13315">Enhancing Access to Justice and the Judicial Process</a></p><p>Issue 7: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="node/13316">The Judiciary’s Relationships with the Other Branches of Government</a></p><p>These issues also take into account the judiciary’s organizational culture. The strategies and goals developed in response to these issues are designed with the judiciary’s decentralized systems of governance and administration in mind.</p><p><a href="/file/18424/download">Download the report</a>&nbsp;(pdf).</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated: null
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_report_children: null
+  field_report_name: null
+  field_sidebar_title: null
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content:
+    -
+      uuid: c58bf305-061e-4b34-9149-76ae34d1696e
+      entity_type: paragraph
+      bundle: usc_related_files
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_document:
+          -
+            uuid: 4786eb97-ec9f-4d2a-b5c2-4ba149fc94ec
+            entity_type: media
+            base_fields:
+              name: federaljudiciary_strategicplan2020.pdf
+              created: '1601056547'
+              status: true
+              langcode: en
+            bundle: document
+        field_usc_label:
+          -
+            value: 'Related Downloads Download the Report'
+        field_usc_title:
+          -
+            value: 'Download the Report'
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 0f304352-989d-4ef0-a66a-8555520cac77
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Deputy Director’s Office'
+        weight: 11
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

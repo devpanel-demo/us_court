@@ -1,0 +1,24 @@
+uuid: 53db18ce-f700-486f-845f-0642ab4b6e82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.fed_probation_journal
+  module:
+    - text
+id: node.fed_probation_journal.body
+field_name: body
+entity_type: node
+bundle: fed_probation_journal
+label: Abstract
+description: 'Use the Abstract field to display additional details.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

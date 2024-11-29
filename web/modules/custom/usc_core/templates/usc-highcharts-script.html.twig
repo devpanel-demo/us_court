@@ -1,0 +1,17 @@
+{# templates/usc-highcharts-script.html.twig #}
+
+{#
+  Theme implementation for highcharts script.
+
+  Available variables:
+  - script: The highcharts script.
+  - id: The highcharts chart id.
+#}
+{% if script is defined %}
+  {{ attach_library('usc_core/highcharts') }}
+  <div class="content" id="{{ id }}">
+    <script type="text/javascript">
+      {{ script|raw }}
+    </script>
+  </div>
+{% endif %}

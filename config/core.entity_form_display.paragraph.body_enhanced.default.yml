@@ -1,0 +1,163 @@
+uuid: efbf0529-9924-436a-871b-122cbf04221f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.body_enhanced.field_callout_attribution
+    - field.field.paragraph.body_enhanced.field_callout_body
+    - field.field.paragraph.body_enhanced.field_callout_pull_quote
+    - field.field.paragraph.body_enhanced.field_callout_title
+    - field.field.paragraph.body_enhanced.field_embedded_widget
+    - field.field.paragraph.body_enhanced.field_fc_be_body
+    - field.field.paragraph.body_enhanced.field_fc_be_heading
+    - field.field.paragraph.body_enhanced.field_fc_be_image
+    - field.field.paragraph.body_enhanced.field_fc_be_video
+    - field.field.paragraph.body_enhanced.field_fc_be_video_caption
+    - field.field.paragraph.body_enhanced.field_gallery
+    - paragraphs.paragraphs_type.body_enhanced
+  module:
+    - field_group
+    - inline_entity_form
+    - media_library
+    - media_library_edit
+    - text
+third_party_settings:
+  field_group:
+    group_video:
+      children:
+        - field_fc_be_video
+        - field_fc_be_video_caption
+      label: Video
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        classes: 'group-video field-group-fieldset'
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_fc_be_callout:
+      children:
+        - field_callout_pull_quote
+        - field_callout_title
+        - field_callout_body
+        - field_callout_attribution
+      label: Callout
+      region: content
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: 'Appears in top-right corner of body (enhanced).  Body text will wrap around this element.'
+        required_fields: true
+id: paragraph.body_enhanced.default
+targetEntityType: paragraph
+bundle: body_enhanced
+mode: default
+content:
+  field_callout_attribution:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_callout_body:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_callout_pull_quote:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_callout_title:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_embedded_widget:
+    type: inline_entity_form_complex
+    weight: 6
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_fc_be_body:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_fc_be_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fc_be_image:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+  field_fc_be_video:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_fc_be_video_caption:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_gallery:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+hidden:
+  created: true
+  status: true

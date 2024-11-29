@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: 7_WG1rbVGLpwM3uA6xEV4oKbyil5t-xJebq_mRO7YE8
+usc_dir_judicial: ../data/jv_hrmis
+usc_dir_judicial_archive: archive
+usc_dir_judicial_summary: jdarjcnt.xml
+usc_dir_judicial_vacancies: jdarvac1_current.xml
+usc_dir_judicial_future: jdarvac1_future.xml
+usc_dir_judicial_confirmations: jdarvac2.xml
+usc_dir_judicial_emergencies: jdarevac.xml
+usc_dir_job: ../data/jv_jnet
+usc_file_job_vacancies: job-notice-feed.xml
+usc_prefix_cache: usc_cache_
+usc_prefix_judicial: judicial_

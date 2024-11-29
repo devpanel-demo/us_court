@@ -1,0 +1,158 @@
+uuid: f4e0092a-aaf1-4c3b-ac17-063dcd4d04c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.section_landing
+    - field.field.node.news_issue.body
+    - field.field.node.news_issue.field_banner_image
+    - field.field.node.news_issue.field_landing_page_image
+    - field.field.node.news_issue.field_lead_paragraph
+    - field.field.node.news_issue.field_logo
+    - field.field.node.news_issue.field_usc_additional_content
+    - field.field.node.news_issue.field_usc_govdelivery_form
+    - field.field.node.news_issue.field_usc_notification
+    - field.field.node.news_issue.field_usc_related_news
+    - field.field.node.news_issue.field_usc_table_of_contents
+    - image.style.featured_image
+    - field.field.node.news_issue.field_workbench_access
+    - node.type.news_issue
+  module:
+    - media
+    - nomarkup
+    - sdc_display
+    - smart_trim
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'uscgov:usa_card'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          settings:
+            wrapper_element: div
+            flag: null
+            media_right: null
+            header_first: null
+            media_inset: null
+            media_exdent: null
+            body_exdent: null
+            footer_exdent: null
+          classes: ''
+          title: ''
+          image:
+            type: ''
+            url: ''
+            alt: ''
+            title: ''
+          cta:
+            url: ''
+            title: ''
+            show: '1'
+            new_tab: null
+          child_items: ''
+        slots:
+          body:
+            value: ''
+            format: wysiwyg
+      dynamic:
+        props:
+          title_suffix: ''
+          settings: ''
+          classes: ''
+          title: title
+          image: field_landing_page_image
+          cta: ''
+          child_items: extra_field_child_menu_items
+        slots:
+          body:
+            body: null
+            content_moderation_control: null
+            extra_field_child_menu_items: null
+            field_landing_page_image: null
+            links: null
+            sharethis: null
+            uid: null
+            title: null
+            created: null
+id: node.news_issue.section_landing
+targetEntityType: node
+bundle: news_issue
+mode: section_landing
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  extra_field_child_menu_items:
+    type: extra_field_child_menu_items
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_landing_page_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: featured_image
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  field_banner_image: true
+  field_lead_paragraph: true
+  field_logo: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  search_api_excerpt: true

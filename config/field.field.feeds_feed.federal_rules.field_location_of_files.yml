@@ -1,0 +1,21 @@
+uuid: dc467b5c-1116-41d1-bada-03374e67974f
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.federal_rules
+    - field.storage.feeds_feed.field_location_of_files
+id: feeds_feed.federal_rules.field_location_of_files
+field_name: field_location_of_files
+entity_type: feeds_feed
+bundle: federal_rules
+label: 'Location of file attachments'
+description: 'The base URL of the place where you uploaded the file attachments.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'https://www.uscourts.gov/courts/historical_rules/'
+default_value_callback: ''
+settings: {  }
+field_type: string

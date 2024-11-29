@@ -1,0 +1,42 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: febbf065-d6d7-47c9-a787-2e7e2f0d5350
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Test 1.18 - Style Caption'
+  status: true
+  langcode: en
+  created: '1728597761'
+  changed: 1728597761
+  author: Emily_Poland@ao.uscourts.gov
+  url: /test-118-style-caption
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:uswds/table {\"buttonStates\":{\"intColBef\":false,\"intColAft\":false,\"intRowBef\":false,\"intRowAft\":false,\"delCol\":false,\"delRow\":false},\"currentCell\":{\"row\":\"1\",\"col\":\"0\"},\"showCaption\":true,\"showTable\":true} -->\r\n<table class=\"wp-block-uswds-table usa-table\"><caption>Table caption - check this</caption><tbody class=\"list\"><tr><td class=\"colnum-0\">d</td><td class=\"colnum-1\">d</td><td class=\"colnum-2\">d</td></tr><tr><td class=\"colnum-0\">d</td><td class=\"colnum-1\">d</td><td class=\"colnum-2\">d</td></tr></tbody></table>\r\n<!-- /wp:uswds/table -->\r\n\r\n<!-- wp:paragraph -->\r\n<p class=\"\">Linda - using this table also check row 12 in the spreadsheet: Inspect the table, Note that wrapping &lt;div> around the table now has the tabindex=\"0\" attribute and value</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n<p class=\"\"></p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

@@ -1,0 +1,25 @@
+uuid: af736687-554c-42b3-b5e1-c30a317b76f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - system
+id: judicial_vacancies_archive
+label: 'Judicial Vacancies Archive'
+menu_name: main
+parent: 'menu_link_content:7e12b98e-56f0-4e8c-95ee-b5b1571e7790'
+menu_link: 'menu_position_link:judicial_vacancies_archive'
+enabled: true
+weight: -4
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/*\r\n/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/*/*/*"

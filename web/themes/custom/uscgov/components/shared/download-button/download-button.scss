@@ -1,0 +1,61 @@
+/**
+ * Download button styles.
+ */
+
+.button:has(>.download-button) {
+  margin-bottom: var(--spacing-component);
+  padding: 8px 16px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:has(+ .button--download) {
+    margin-right: 8px;
+  }
+}
+
+.download-button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+[class].download-button__icon-type {
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.download-button__content {
+  text-align: center;
+  text-decoration: none;
+  text-wrap: pretty;
+}
+
+.download-button__label {
+  font-size: 17px;
+}
+
+.download-button__meta {
+  margin-top: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.download-button_icon-download {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  mask-image: url('images/download-light.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: currentColor;
+
+  @media (forced-colors: active) {
+    background-color: linkText;
+  }
+}

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 96b5ab59-8a1d-4685-8c64-daa47471d1fb
+entity_type: media
+bundle: icon
+base_fields:
+  name: deaf.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/deaf.svg'
+      url: '/sites/default/files/icons/deaf.svg'

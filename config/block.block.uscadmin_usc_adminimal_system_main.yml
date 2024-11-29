@@ -1,0 +1,22 @@
+uuid: eae77130-c201-489a-9976-80e2d5504f49
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uscadmin
+_core:
+  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+id: uscadmin_usc_adminimal_system_main
+theme: uscadmin
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }

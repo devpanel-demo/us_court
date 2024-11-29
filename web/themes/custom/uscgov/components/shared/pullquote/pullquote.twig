@@ -1,0 +1,6 @@
+<blockquote class="usc-pullquote">
+  <div class="pullquote-body">{{ callout_body }}</div>
+  {% if callout_attribution|render|striptags|trim %}
+    <cite class="pullquote-attribution">{{ callout_attribution }}</cite>
+  {% endif %}
+</blockquote>

@@ -1,0 +1,21 @@
+uuid: cea7c7fe-5f65-4432-9cac-adb09b98e5d6
+langcode: en
+status: true
+dependencies: {  }
+name: featured_image
+label: 'Featured image'
+effects:
+  5bcbee07-fe1b-4f34-86ce-4db8fb49092e:
+    uuid: 5bcbee07-fe1b-4f34-86ce-4db8fb49092e
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: false
+  b5a03dd7-490a-4d52-a9f4-7a217aaadb24:
+    uuid: b5a03dd7-490a-4d52-a9f4-7a217aaadb24
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

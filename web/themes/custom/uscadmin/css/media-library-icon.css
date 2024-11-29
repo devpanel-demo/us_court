@@ -1,0 +1,20 @@
+.media-library-icon {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  background-color: currentColor;
+  -webkit-mask-image: var(--icon-path);
+  mask-image: var(--icon-path);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+@media (forced-colors: active) {
+  .media-library-icon {
+    background-color: buttonText;
+  }
+}

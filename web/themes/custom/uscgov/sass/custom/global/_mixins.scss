@@ -1,0 +1,91 @@
+@use "media-queries" as *;
+@use "sass:string";
+
+// Keep content available to screen readers while hiding from sighted users.
+@mixin visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+// Creates custom scoped media query to ensure that desktop navigation styles
+// never apply when the `.is-mobile-nav` is *not* applied to the body tag.
+@mixin custom-desktop-nav {
+  #{if(&, '&:where(body.project-uscgov:not(.is-mobile-nav) *)', ':where(body.project-uscgov:not(.is-mobile-nav))')} {
+    @media ($uscgov_desktop_break) {
+      @content;
+    }
+  }
+  #{if(&, '&:where(body.project-toolbox:not(.is-mobile-nav) *)', ':where(body.project-toolbox:not(.is-mobile-nav))')} {
+    @media ($toolbox_desktop_break) {
+      @content;
+    }
+  }
+}
+
+// Creates custom scoped media query to ensure that mobile navigation styles
+// only apply when
+// 1) Any time the `.is-mobile-nav` *is* applied to the body tag.
+// 2) Below the specified minimum viewport width.
+@mixin custom-mobile-nav {
+  #{if(&, '&:is(body.is-mobile-nav *)', 'body.is-mobile-nav')} {
+    @content;
+  }
+
+  #{if(&, '&:where(body.project-uscgov *)', ':where(body.project-uscgov)')} {
+    @media ($uscgov_mobile_break) {
+      @content;
+    }
+  }
+
+  #{if(&, '&:where(body.project-toolbox *)', ':where(body.project-toolbox)')} {
+    @media ($toolbox_mobile_break) {
+      @content;
+    }
+  }
+}
+
+// @todo This is a workaround. To properly handle this case the header menus implementation may need a review.
+// Used to adjust spacing below header menu buttons.
+@mixin adjust-margin-bottom--header-menu-buttons($height-for-expanded-button-before: 3px) {
+  // Set a new margin-bottom for header menu buttons.
+  $margin-bottom-for-header-menu-buttons: var(--spacing-sm-2);
+  // Adjust margin-bottom for this header menu button.
+  margin-bottom: $margin-bottom-for-header-menu-buttons;
+  // Adjust before's height that appear when this header menu button is expanded.
+  &[aria-expanded=true]:before {
+    height: calc( $height-for-expanded-button-before + $margin-bottom-for-header-menu-buttons );
+  }
+}
+
+// Set color on extlink's svg.
+@mixin change-extlink-svg-color($extlink-color: currentColor) {
+  &[data-extlink] {
+    svg {
+      fill: $extlink-color;
+      path {
+        stroke: $extlink-color;
+      }
+    }
+  }
+}
+
+// Generates CSS color variables for provided variants.
+@mixin set-css-color-variables-for-variants($color-variants) {
+  $color-grades: 'primary', 'light', 'lighter', 'dark', 'darker';
+
+  @each $color-variant, $variant-name in $color-variants {
+    // Use 'dark' button text for '*-gold' variants.
+    $color-button-text: if(str-index($variant-name, '-gold'), 'neutral-base-dark', 'neutral-base-light');
+
+    // Set 'button text' CSS variables for variant.
+    --color-#{$color-variant}-button-text: var(--color-primitive-#{string.unquote($color-button-text)});
+    // Set 'color grades' CSS variables for variant.
+    @each $color-grade in $color-grades {
+      --color-#{$color-variant}-#{$color-grade} : var(--color-primitive-theme-#{string.unquote($variant-name)}-#{string.unquote($color-grade)});
+    }
+  }
+}

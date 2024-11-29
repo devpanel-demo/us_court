@@ -1,0 +1,482 @@
+<?php
+
+/**
+ * @file
+ * Provides USC Core hooks.
+ */
+
+use Drupal\content_moderation\Entity\ContentModerationState;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
+use Drupal\usc_core\DataTableDateHandler;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function usc_core_views_pre_render(ViewExecutable $view) {
+  // Natural sorting forms by number.
+  // MySQL does not support natural sort so we do it on php level.
+  if ($view->id() == 'forms_landing_superseded') {
+    $query = $view->getQuery();
+    // $query does not provide any methods to get a orderby property and it is
+    // public so we just bypass phpstan.
+    // phpcs:disable
+    /** @phpstan-ignore-next-line */
+    $orderby = $query->orderby;
+    // phpcs:enable
+
+    if (!empty($orderby[1]['field']) && $orderby[1]['field'] === 'node__field_form_number.field_form_number_value') {
+      $direction = $orderby[1]['direction'];
+
+      $comparator = function ($row1, $row2) use ($direction) {
+        $form_number1 = $row1->_entity->field_form_number->first()->value;
+        $form_number2 = $row2->_entity->field_form_number->first()->value;
+        if (!empty($direction) && $direction === 'DESC') {
+          $sort = strnatcmp($form_number2, $form_number1);
+        }
+        else {
+          $sort = strnatcmp($form_number1, $form_number2);
+        }
+        return $sort;
+      };
+
+      $results = $view->result;
+      usort($results, $comparator);
+      $view->result = $results;
+
+    }
+  }
+
+  // Adding a known text_format to the description field.
+  if ($view->id() === 'glossary1'  && $view->current_display === 'block_1') {
+    foreach ($view->result as $index => $result) {
+      if (isset($result->_entity->description->format) && $result->_entity->description->format === 'full_html') {
+        // @phpstan-ignore-next-line.
+        $view->result[$index]->_entity->description->format = 'basic_html';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function usc_core_views_data_alter(array &$data) {
+
+  // Adds a custom view filter.
+  $data['node_field_data']['custom_date'] = [
+    'group' => 'Custom Date Filters',
+    'title' => t('Custom Date filter'),
+    'filter' => [
+      'title' => t('Custom Date filter'),
+      'help' => t('Filter nodes by custom date format'),
+      'field' => 'title',
+      'id' => 'custom_date',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function usc_core_node_presave(EntityInterface $entity) {
+
+  if ($entity->bundle() === 'news' && $entity->isNew()) {
+
+    // Set a Related News field for a new-created News node according business
+    // requrements.
+    // phpcs:disable
+    /** @phpstan-ignore-next-line */
+    if ($entity->field_usc_related_news->isEmpty()) {
+    // phpcs:enable
+      // Althrough we know exact ids from the legacy site and we could use the
+      // migrate lookup service to get new ids, the service requires to have
+      // the migration source database be present to work and it uses the
+      // migrate map table to get results, but it is not guaranteed that the
+      // database and the migrate map tables remain after the migration is fully
+      // done, so we use our best guess to get the default Related News
+      // paragraph.
+      $query = \Drupal::entityQuery('paragraph');
+      $query->condition('type', 'usc_related_news');
+      $query->accessCheck(TRUE);
+      $query->sort('id', 'ASC');
+      $query->range(0, 1);
+      $results = $query->execute();
+
+      if (!empty($results)) {
+        foreach ($results as $revision_id => $id) {
+          // phpcs:disable
+          /** @phpstan-ignore-next-line */
+          $entity->field_usc_related_news = [
+          // phpcs:enable
+            'target_id' => $id,
+            'target_revision_id' => $revision_id,
+          ];
+        }
+      }
+    }
+
+    // Set a GovDelivery Form field for a new-created News node according business
+    // requrements.
+    // phpcs:disable
+    /** @phpstan-ignore-next-line */
+    if ($entity->field_usc_govdelivery_form->isEmpty()) {
+      // phpcs:enable
+      // We use the same justification as for the Related News but also filter
+      // out results by category id which used as a default on the legacy site.
+      $query = \Drupal::entityQuery('paragraph');
+      $query->condition('type', 'usc_govdelivery');
+      $query->condition('field_usc_category_topic_id', 'USFEDCOURTS_138');
+      $query->accessCheck(TRUE);
+      $query->sort('id', 'ASC');
+      $query->range(0, 1);
+      $results = $query->execute();
+
+      if (!empty($results)) {
+        foreach ($results as $revision_id => $id) {
+          // phpcs:disable
+          /** @phpstan-ignore-next-line */
+          $entity->field_usc_govdelivery_form = [
+          // phpcs:enable
+            'target_id' => $id,
+            'target_revision_id' => $revision_id,
+          ];
+        }
+      }
+    }
+  }
+  if ($entity->bundle() === 'camera') {
+    // Invalidate releated piksel programs to update slide numbers in alt text.
+    // phpcs:disable
+    /** @phpstan-ignore-next-line */
+    $programs = $entity->field_program;
+    // phpcs:enable
+    $tags = [];
+    foreach ($programs as $program) {
+      $media_id = $program->target_id;
+      if ($media_id) {
+        $tags[] = 'media:' . $media_id;
+      }
+    }
+    Cache::invalidateTags($tags);
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function usc_core_theme() {
+  return [
+    'usc_highcharts_script' => [
+      'variables' => [
+        'script' => NULL,
+        'id' => NULL,
+      ],
+      'template' => 'usc-highcharts-script',
+    ],
+    'usc_tableau_script' => [
+      'variables' => [
+        'script' => NULL,
+        'id' => NULL,
+      ],
+      'template' => 'usc-tableau-script',
+    ],
+    'usc_map_script' => [
+      'variables' => [
+        'script' => NULL,
+        'id' => NULL,
+      ],
+      'template' => 'usc-map-script',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function usc_core_form_alter(array &$form, FormStateInterface $form_state, string $form_id) {
+
+  $bef_forms = [
+    'views-exposed-form-statistics-landing-page-1',
+    'views-exposed-form-statistics-landing-page-2',
+    'views-exposed-form-statistics-landing-page-3',
+    'views-exposed-form-caseload-statistics-data-block-caseload-statistics-data',
+  ];
+
+  if ($form_id === 'node_data_table_edit_form' || $form_id === 'node_data_table_form') {
+    if (isset($form["field_date_updated"]["widget"][0]["value"])) {
+      // Datelist element #date_date_callbacks callbacks must be methods of a
+      // class  that implements \Drupal\Core\Security\TrustedCallbackInterface or
+      // be an anonymous function.
+      // An anonymous function triggers an Exception: Serialization of 'Closure'
+      // is not allowed in serialize()
+      // (line 14 of /app/web/core/lib/Drupal/Component/Serialization/PhpSerialize.php).
+      $form["field_date_updated"]["widget"][0]["value"]["#date_date_callbacks"][] = [
+        DataTableDateHandler::class,
+        'processDataTableDate'
+      ];
+    }
+  }
+  // BEF filters hardcode the year range by only 10 recent years but we need
+  // it till 1990 the same as in D7.
+  elseif ($form_id === 'views_exposed_form' && in_array($form["#id"], $bef_forms)) {
+    $extraYearOptions = range(date('Y'), 1990);
+    $yearOptions = ['' => t('-- Year --')] + array_combine($extraYearOptions, $extraYearOptions);
+    if (isset($form["date_wrapper"]["date_wrapper"]["date"]["year_between"])) {
+      $form["date_wrapper"]["date_wrapper"]["date"]["year_between"]["#options"] = $yearOptions;
+    }
+
+    // Hide month filter as we do not need it for this view as BEF does not
+    // have the option to show only year.
+    if ($form["#id"] === "views-exposed-form-caseload-statistics-data-block-caseload-statistics-data") {
+      if (isset($form["y_wrapper"]["y_wrapper"]["y"]["month_between"])) {
+        $form["y_wrapper"]["y_wrapper"]["y"]["month_between"] = [
+          '#type' => 'hidden',
+          '#default_value' => '',
+        ];
+      }
+      if (isset($form["y_wrapper"]["y_wrapper"]["y"]["year_between"])) {
+        $form["y_wrapper"]["y_wrapper"]["y"]["year_between"]["#options"] = $yearOptions;
+      }
+    }
+  }
+
+  if (strpos($form_id, 'node_landing_view_edit_form') !== FALSE || strpos($form_id, 'node_landing_view_form') !== FALSE) {
+    $current_user = \Drupal::currentUser();
+    // Check if the user has the custom permission.
+    if (!$current_user->hasPermission('show gutenberg advanced section:')) {
+      $form['#attached']['library'][] = 'usc_core/gutenberg_customizations';
+    }
+  }
+
+  if (strpos($form_id, 'media_piksel_program') !== FALSE) {
+    $form['name']['widget']['#title'] = t('Title');
+    $form['name']['widget'][0]['#title'] = t('Title');
+    $form['name']['widget'][0]['value']['#title'] = t('Title');
+    $form['name']['widget'][0]['value']['#description'] = t('The title is used as a tool tip when the user hovers the mouse over the image.');
+  }
+
+  if ($form_id == 'sitewide_alert_edit_form' || $form_id == 'sitewide_alert_add_form') {
+    // Validating the title field.
+    $form['#validate'][] = 'usc_core_sitewide_alert_form_validate';
+
+    // Adding the condition manually to avoid error with the CF module.
+    $form['field_title']['#states'] = [
+      'visible' => [
+        ['select[name="style"]' => ['value' => 'standard']],
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function usc_core_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity instanceof NodeInterface && $entity->bundle() == 'form') {
+    // Grab the title from the proper field.
+    if ($entity->hasField('field_short_title') && $entity->get('field_short_title')->value) {
+      $build['title'][0]['#context']['value'] = $entity->get('field_short_title')->value;
+    }
+    // Alter the title if the form is superseded.
+    if ($entity->hasField('field_superseded') && $entity->get('field_superseded')->value) {
+      $title = $build['title'][0]['#context']['value'];
+      $new_title = t('@title (Superseded)', ['@title' => $title]);
+      $build['title'][0]['#context']['value'] = $new_title;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function usc_core_preprocess_html(&$variables) {
+  // Alter the htlm title if the form is superseded.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node && $node->bundle() == 'form') {
+    if ($node->field_superseded->value) {
+      $title = $variables['head_title']['title'];
+      $new_title = t('@title (Superseded)', ['@title' => $title]);
+      $variables['head_title']['title'] = $new_title->__toString();
+    }
+  }
+}
+
+/**
+ * Implements hook_js_settings_alter().
+ */
+function usc_core_js_settings_alter(array &$settings, AttachedAssetsInterface $assets) {
+  if (!empty($settings['password'])) {
+    $settings['password']['tooShort'] = t('Make it at least 8 characters');
+    $settings['password']['addPunctuation'] = t('Add special characters');
+  }
+}
+
+/**
+ * Prepares variables for RSS feed templates.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - view: A ViewExecutable object.
+ *   - rows: The raw row data.
+ *
+ * @throws \InvalidArgumentException
+ */
+function usc_core_preprocess_views_view_rss(&$variables) {
+  $view = $variables['view'];
+
+  // Get the display object.
+  $display = $view->getDisplay();
+
+  // Retrieve the path from the display settings.
+  $path = $display->getOption('path');
+
+  // Ensure the path has a leading slash.
+  if ($path && $path[0] !== '/') {
+    $path = '/' . $path;
+  }
+
+  $variables['link'] = Url::fromUserInput($path)->setAbsolute()->toString();
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ */
+function usc_core_entity_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  $enabled = (bool) $display->getThirdPartySetting('sdc_display', 'enabled');
+  if (!$enabled) {
+    return;
+  }
+  $component_id = $display->getThirdPartySetting('sdc_display', 'component')['machine_name'] ?? NULL;
+  if (!$component_id) {
+    return;
+  }
+  if ($component_id == 'uscgov:usa_card') {
+    $cta = $build['component']['#props']['cta'];
+    if (!empty($cta['show']) && empty($cta['url'])) {
+      $build['component']['#props']['cta']['url'] = $build['#node']->toUrl()->toString();
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function usc_core_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  // Check that we're dealing with a node or paragraph.
+  if ($entity->getEntityTypeId() == 'node' || $entity->getEntityTypeId() == 'paragraph') {
+    // @phpstan-ignore-next-line.
+    foreach ($entity->getFieldDefinitions() as $field_name => $field_definition) {
+      if (isset($build[$field_name])) {
+        // Check if the field has a format and is null.
+        if (isset($build[$field_name][0]) && array_key_exists('#format', $build[$field_name][0]) && $build[$field_name][0]['#format'] === NULL) {
+          // Set the format to basic_html.
+          $build[$field_name][0]['#format'] = 'basic_html';
+
+          // Set the format to wysiwyg for the lead_paragraph field.
+          if ($field_name == 'field_lead_paragraph') {
+            $build[$field_name][0]['#format'] = 'wysiwyg';
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_access().
+ */
+function usc_core_node_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  if ($entity instanceof NodeInterface && $operation === 'delete revision') {
+    // Check if the revision state is 'draft'.
+    $content_moderation_state = ContentModerationState::loadFromModeratedEntity($entity);
+
+    if ($content_moderation_state) {
+      $revision_state = $content_moderation_state->get('moderation_state')->value;
+      if ($revision_state === 'draft' && $entity->getOwnerId() === $account->id()) {
+        // Check if the user has the 'delete own draft revisions' permission.
+        if ($account->hasPermission('delete own draft revisions')) {
+          return AccessResult::allowed();
+        }
+      }
+    }
+  }
+
+  // Fallback to default access.
+  return AccessResult::neutral();
+
+}
+
+/**
+ * Implements hook_pathologic_alter().
+ *
+ * @throws \InvalidArgumentException
+ */
+function usc_core_pathologic_alter(&$url_params, &$parts, &$cached_settings) {
+  // Adjusting node id URLs.
+  if ($parts['path'] != '<front>') {
+    $alias = \Drupal::service('path_alias.manager')->getAliasByPath('/' . $url_params['path']);
+    $url_params['path'] = ltrim($alias, '/');
+  }
+}
+
+/**
+ * Implements hook_entity_load().
+ */
+function usc_core_entity_load(array &$entities, $entity_type) {
+  if ($entity_type === 'node') {
+    foreach ($entities as $entity) {
+      if ($entity->bundle() === 'news') {
+        $config_pages = \Drupal::service('config_pages.loader');
+        $config = $config_pages->load('global_site_settings');
+        $field_names = [
+          'field_latest_news_block' => 'field_usc_related_news',
+          'field_gov_delivery_news_block' => 'field_usc_govdelivery_form'
+        ];
+
+        foreach ($field_names as $key => $value) {
+          if (!empty($config->get($key)->referencedEntities())) {
+            $news_paragraph = $config->get($key)->entity;
+            $node_paragraphs = $entity->get($value)->referencedEntities();
+            $paragraph_ids = array_map(fn($p) => $p->id(), $node_paragraphs);
+            if (!in_array($news_paragraph->id(), $paragraph_ids)) {
+              $new_paragraphs = array_merge(
+              $entity->get($value)->getValue(),
+                [
+                  [
+                    'target_id' => $news_paragraph->id(),
+                    // @phpstan-ignore-next-line.
+                    'target_revision_id' => $news_paragraph->getRevisionId(),
+                  ],
+                ]
+              );
+              $entity->set($value, $new_paragraphs);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Callback function for hook_form_alter().
+ */
+function usc_core_sitewide_alert_form_validate(&$form, FormStateInterface $form_state) {
+  // Validating the title field.
+  if ($form_state->getValue('style')[0]['value'] === 'standard' && empty($form_state->getValue('field_title')[0]['value'])) {
+    $form_state->setErrorByName('field_title', t('The Title field is required.'));
+  }
+  elseif ($form_state->getValue('style')[0]['value'] !== 'standard') {
+    // Removing title value if the style is no standard.
+    $form_state->setValue('field_title', ['value' => NULL]);
+  }
+}

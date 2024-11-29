@@ -1,0 +1,50 @@
+<article{{ attributes.addClass('court-finder-court') }}>
+  <div class="court-finder-court__first">
+    {% if address %}
+      <address class="court-finder-court__address">
+        {{ address }}
+      </address>
+    {% endif %}
+    {% if opens and closes %}
+      {% set closestime = closes ~ 'pm' %}
+      <p>Hours of Operation: <time datetime="Mo-Fr {{opens}}-{{closestime|date("H:i")}}">Mon - Fri {{opens}} a.m. - {{closes}} p.m.</time></p>
+    {% endif %}
+    {% if lunch_start and lunch_end %}
+      {% if lunch_start == '12:00' %}
+        {% set lunchtext = 'Noon' %}
+      {% else %}
+        {% set lunchtext = lunch_start ~ 'pm' %}
+        {% set lunch_start = lunch_start ~ 'pm' %}
+      {% endif %}
+      {% set lunchend = lunch_end ~ 'pm' %}
+      <p>Lunch Break: <time datetime="Mo-Fr {{lunch_start|date("H:i")}}-{{lunchend|date("H:i")}}">Mon - Fri {{lunchtext}}  - {{lunch_end}} p.m.</time></p>
+    {% endif %}
+  </div>
+  <div class="court-finder-court__second">
+    {% if directions_url %}
+      <a href="{{- directions_url -}}" target="_blank" class="button button--small court-finder-court__button-directions">
+        {{ 'Get directions'|t }}
+      </a>
+    {% endif %}
+    {% if phone %}
+      <a href="tel:{{- phone -}}" target="_blank" class="button button--small court-finder-court__button-phone">
+        {{ phone }}
+      </a>
+    {% endif %}
+  </div>
+  <div class="court-finder-court__third">
+    {% if court_type %}
+      <div class="court-finder-court__court-type">
+        {{ 'Court type'|t }}: {{ court_type }}
+      </div>
+    {% endif %}
+
+    {% if main_office %}
+      <div class="court-finder-court__main-office">
+        {{ 'Headquarters'|t }}
+      </div>
+    {% endif %}
+  </div>
+</article>
+
+{{ links }}

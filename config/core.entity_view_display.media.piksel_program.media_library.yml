@@ -1,0 +1,39 @@
+uuid: 004c9b17-c11b-4cf7-9bf9-02bb422a6d4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.piksel_program.field_alternate_text
+    - field.field.media.piksel_program.field_file_title
+    - field.field.media.piksel_program.field_program_description
+    - field.field.media.piksel_program.field_title
+    - image.style.medium
+    - media.type.piksel_program
+  module:
+    - image
+id: media.piksel_program.media_library
+targetEntityType: media
+bundle: piksel_program
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_alternate_text: true
+  field_file_title: true
+  field_program_description: true
+  field_title: true
+  name: true
+  search_api_excerpt: true
+  uid: true

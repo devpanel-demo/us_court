@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: f878923a-fbf2-47a0-8565-163cfe862f22
+entity_type: media
+bundle: icon
+base_fields:
+  name: stack-overflow-brands-solid.svg
+  created: '1724357504'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/stack-overflow-brands-solid.svg'
+      url: '/sites/default/files/icons/stack-overflow-brands-solid.svg'
+      description: ''

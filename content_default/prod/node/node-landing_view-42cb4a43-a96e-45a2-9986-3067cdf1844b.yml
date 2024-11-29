@@ -1,0 +1,127 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 42cb4a43-a96e-45a2-9986-3067cdf1844b
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Future Judicial Vacancies'
+  status: true
+  langcode: en
+  created: '1408174256'
+  changed: 1727753530
+  author: jamesdavison@ao.uscourts.gov
+  url: /judges-judgeships/judicial-vacancies/future-judicial-vacancies
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '1'
+  menu_link:
+    uuid: 3e1e4006-a42e-4f9a-a316-d6dc3bc51f89
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Future Judicial Vacancies'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/1690'
+          title: ''
+          options: {  }
+      weight: 1
+      parent:
+        uuid: 88545e66-e999-4681-8cf0-d18a106368f0
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Judicial Vacancies'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/4282'
+              title: ''
+              options: {  }
+          weight: 2
+          parent:
+            uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Data & News'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/8'
+                  title: ''
+                  options: {  }
+              weight: -68
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/16578'
+                  title: 'Federal Court Scams'
+                  options: {  }
+                -
+                  uri: 'entity:node/3122'
+                  title: "Director's Annual Report"
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Find a summary of current and future judicial vacancies.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:drupalblock/views-block-vacancies-judicial-future {"blockId":"views_block:vacancies_judicial-future"} /-->'
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>This table lists judicial vacancies that will occur in the future, for instance if a current federal judge announces his or her retirement. Find out&nbsp;the court where the vacancy will occur, the name of the incumbent, the vacancy reason, the vacancy date, the nominee (if applicable), and the nomination date.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

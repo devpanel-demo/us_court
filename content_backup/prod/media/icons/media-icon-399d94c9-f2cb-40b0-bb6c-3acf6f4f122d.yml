@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 399d94c9-f2cb-40b0-bb6c-3acf6f4f122d
+entity_type: media
+bundle: icon
+base_fields:
+  name: clipboard-solid.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/clipboard-solid.svg'
+      url: '/sites/default/files/icons/clipboard-solid.svg'

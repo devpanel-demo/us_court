@@ -1,0 +1,178 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 314f8bf4-081e-44fe-8643-f2429e320670
+entity_type: node
+bundle: report
+base_fields:
+  title: 'Reports of the Proceedings 1950s'
+  status: true
+  langcode: en
+  created: '1415030089'
+  changed: 1415030089
+  author: deborah_hill@ao.uscourts.gov
+  url: /administration-policies/reports-proceedings-1950s
+  revision_log_message: 'Edited by George.Cherussery.'
+  revision_uid: '43'
+  menu_link:
+    uuid: 4e398813-7ddf-4726-87a0-a2c8526bfc0f
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Reports of the Proceedings 1950s'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/3234'
+          title: null
+          options: {  }
+      weight: 7
+      parent:
+        uuid: e362004e-3fc8-43a7-9382-3dadeea6246b
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Reports of the Judicial Conference Proceedings'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/3254'
+              title: ''
+              options: {  }
+          weight: 1
+          parent:
+            uuid: d0763fd9-622b-4943-a6f4-d638011c9e9f
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Governance & the Judicial Conference'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/2751'
+                  title: ''
+                  options: {  }
+              weight: 0
+              parent:
+                uuid: 723fb64b-6e47-4536-8468-7e967dd271f6
+                entity_type: menu_link_content
+                bundle: main
+                base_fields:
+                  title: 'Administration & Policies'
+                  enabled: true
+                  expanded: false
+                  langcode: en
+                  menu_name: main
+                  description: null
+                  link:
+                    -
+                      uri: 'internal:/administration-policies'
+                      title: ''
+                      options: {  }
+                  weight: -69
+                  parent: ''
+                custom_fields:
+                  field_description_text:
+                    -
+                      value: 'Administration and governance of the Judicial occurs at both a national and regional level.'
+                  field_enable_megamenu:
+                    -
+                      value: '1'
+                  field_popular_links:
+                    -
+                      uri: 'entity:node/1796'
+                      title: 'Code of Conduct for U.S. Judges'
+                      options: {  }
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The Judicial Conference of the U.S. is the national policymaking body for the federal courts.'
+              field_enable_megamenu:
+                -
+                  value: '0'
+              field_popular_links: null
+        custom_fields:
+          field_description_text: null
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu: null
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<p>1959: &nbsp;&nbsp; <a href="/file/2069/download">March</a> | <a href="/file/2070/download">September</a><br>1958: &nbsp;&nbsp; <a href="/file/2067/download">March</a> | <a href="/file/18005/download">September</a><br>1957: &nbsp;&nbsp; <a href="/file/2065/download">March</a> | <a href="/file/2066/download">September</a><br>1956: &nbsp;&nbsp; <a href="/file/2063/download">March</a> | <a href="/file/2064/download">September</a><br>1955: &nbsp;&nbsp; <a href="/file/2061/download">March</a> | <a href="/file/2062/download">September</a><br>1954: &nbsp;&nbsp; <a href="/file/2059/download">April</a> | <a href="/file/2060/download">September</a><br>1953: &nbsp;&nbsp; <a href="/file/1585/download">March</a> | <a href="/file/1587/download">May</a> | <a href="/file/2058/download">September</a><br>1952: &nbsp;&nbsp; <a href="/file/1583/download">March</a> | <a href="/file/1584/download">September</a><br>1951: &nbsp;&nbsp; <a href="/file/1581/download">March</a> | <a href="/file/1582/download">September</a><br>1950: &nbsp;&nbsp; <a href="/file/1579/download">March</a> | <a href="/file/1580/download">September</a></p>'
+      summary: ''
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 379bddc6-87f2-416b-a20e-cbb1dc614c29
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body: null
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_date_updated: null
+  field_fc_be_audio: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>\r\n\tA Report of the Proceedings is issued after each meeting of the Judicial Conference of the U.S. that details actions taken, who was present at the meeting, and other information shared. This section links to reports dating back to the beginning of the Conference.\r\n</p>\r\n"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_report_children: null
+  field_report_name: null
+  field_sidebar_title: null
+  field_tags: null
+  field_toc:
+    -
+      value: '0'
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: cfcee9b9-dc60-4e8a-b48d-f7a76641319a
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Conference'
+        weight: 14
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

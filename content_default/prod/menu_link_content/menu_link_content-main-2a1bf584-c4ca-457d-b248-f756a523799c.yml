@@ -1,0 +1,72 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 2a1bf584-c4ca-457d-b248-f756a523799c
+entity_type: menu_link_content
+bundle: main
+base_fields:
+  title: 'FAQs:  Case Management / Electronic Case Files (CM/ECF)'
+  enabled: true
+  expanded: false
+  langcode: und
+  menu_name: main
+  description: null
+  link:
+    -
+      uri: 'entity:node/3271'
+      title: null
+      options: {  }
+  weight: 0
+  parent:
+    uuid: 4fbf776b-b35d-4559-8881-3bf0fae7278c
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'File a Case (CM/ECF)'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'internal:/node/1985'
+          title: ''
+          options: {  }
+      weight: 2
+      parent:
+        uuid: 72790a00-4c27-45a1-b94a-4bc19802ecec
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Court Records'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/7'
+              title: ''
+              options: {  }
+          weight: -66
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Learn how to file and access case files and court records information. '
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links: null
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Attorneys and other filers can submit files to the court electronically using the CM/ECF system.'
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+custom_fields:
+  field_description_text: null
+  field_enable_megamenu: null
+  field_popular_links: null

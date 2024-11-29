@@ -1,0 +1,36 @@
+uuid: 219c2311-67c4-410a-875a-76f2ddccccae
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:11b47c46-4a4a-4a56-bb72-7cc87116540c'
+  module:
+    - block_content
+    - block_visibility_groups
+    - system
+  theme:
+    - uscgov
+id: uscgov_searchformforpagenotfound
+theme: uscgov
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:11b47c46-4a4a-4a56-bb72-7cc87116540c'
+settings:
+  id: 'block_content:11b47c46-4a4a-4a56-bb72-7cc87116540c'
+  label: 'Search form for page not found'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+  response_status:
+    id: response_status
+    negate: false
+    status_codes:
+      - 404

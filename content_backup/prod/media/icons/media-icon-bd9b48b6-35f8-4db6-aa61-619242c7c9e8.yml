@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: bd9b48b6-35f8-4db6-aa61-619242c7c9e8
+entity_type: media
+bundle: icon
+base_fields:
+  name: undo.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/undo.svg'
+      url: '/sites/default/files/icons/undo.svg'

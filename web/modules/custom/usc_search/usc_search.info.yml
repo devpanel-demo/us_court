@@ -1,0 +1,5 @@
+name: 'US Courts search'
+type: module
+description: 'Search.gov integration'
+package: US Courts
+core_version_requirement: ^10

@@ -1,0 +1,29 @@
+uuid: c894bc23-7a7f-487b-9402-b6245c720c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_current_table_number
+    - node.type.data_table
+    - taxonomy.vocabulary.table_number
+id: node.data_table.field_current_table_number
+field_name: field_current_table_number
+entity_type: node
+bundle: data_table
+label: 'Current Table Number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      table_number: table_number
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

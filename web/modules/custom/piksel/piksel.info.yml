@@ -1,0 +1,7 @@
+name: 'US Courts Piksel'
+description: 'Piksel programs'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - media:media

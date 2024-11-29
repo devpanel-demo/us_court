@@ -1,0 +1,68 @@
+uuid: be617e3c-0875-4b14-b897-92b92ac2e4b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.news_issue_view
+    - field.field.paragraph.body_enhanced.field_callout_attribution
+    - field.field.paragraph.body_enhanced.field_callout_body
+    - field.field.paragraph.body_enhanced.field_callout_pull_quote
+    - field.field.paragraph.body_enhanced.field_callout_title
+    - field.field.paragraph.body_enhanced.field_embedded_widget
+    - field.field.paragraph.body_enhanced.field_fc_be_body
+    - field.field.paragraph.body_enhanced.field_fc_be_heading
+    - field.field.paragraph.body_enhanced.field_fc_be_image
+    - field.field.paragraph.body_enhanced.field_fc_be_video
+    - field.field.paragraph.body_enhanced.field_fc_be_video_caption
+    - field.field.paragraph.body_enhanced.field_gallery
+    - paragraphs.paragraphs_type.body_enhanced
+  module:
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.body_enhanced.news_issue_view
+targetEntityType: paragraph
+bundle: body_enhanced
+mode: news_issue_view
+content:
+  field_fc_be_body:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 0
+    region: content
+hidden:
+  field_callout_attribution: true
+  field_callout_body: true
+  field_callout_pull_quote: true
+  field_callout_title: true
+  field_embedded_widget: true
+  field_fc_be_heading: true
+  field_fc_be_image: true
+  field_fc_be_video: true
+  field_fc_be_video_caption: true
+  field_gallery: true
+  search_api_excerpt: true

@@ -1,0 +1,21 @@
+uuid: dbdb23f4-0c25-45a9-9139-89d13911d2d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_enable_megamenu
+    - system.menu.main
+id: menu_link_content.main.field_enable_megamenu
+field_name: field_enable_megamenu
+entity_type: menu_link_content
+bundle: main
+label: 'Enable Megamenu'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

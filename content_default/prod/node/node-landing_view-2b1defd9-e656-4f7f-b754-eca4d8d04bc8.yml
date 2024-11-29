@@ -1,0 +1,120 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 2b1defd9-e656-4f7f-b754-eca4d8d04bc8
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Committee Reports'
+  status: true
+  langcode: en
+  created: '1429215338'
+  changed: 1727753530
+  author: james_davison@ao.uscourts.gov
+  url: /rules-policies/records-and-archives-rules-committees/committee-reports
+  revision_log_message: 'Edited by courtney.mcilroy.'
+  revision_uid: '41'
+  menu_link:
+    uuid: 244b5afa-62a8-40b5-bdca-afbd47429e35
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Committee Reports'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/9365'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 14caded5-40a4-4a36-abe9-455c299536e3
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Records of the Rules Committees'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/9366'
+              title: ''
+              options: {  }
+          weight: 5
+          parent:
+            uuid: cc5f410e-b67a-4fbc-82a1-fd7bdfae36c7
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Forms & Rules'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/9'
+                  title: ''
+                  options: {  }
+              weight: -67
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Link to the national federal rules of practice and procedures, and forms in effect.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/2004'
+                  title: 'Bankruptcy: Proof of Claim Form'
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Reference the records of the rules committees, including agendas, minutes, and rules suggestions.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:uswds/intro-text -->\r\n<!-- wp:paragraph -->\r\n<p>The Administrative Office of the U.S. Courts maintains the Standing Committee Reports to the Judicial Conference and Advisory Committee Reports to the Standing Committee.</p>\r\n<!-- /wp:paragraph -->\r\n<!-- /wp:uswds/intro-text -->\r\n\r\n<!-- wp:drupalblock/views-block-federal-rules-landing-committee-reports-block-federal-rules-landing-committee-reports {\"blockId\":\"views_block:federal_rules_landing_committee_reports-block_federal_rules_landing_committee_reports\"} /-->"
+      summary: "<p>\r\n\tThe Administrative Office of the U.S. Courts archives and maintains the Standing Committee Reports to the Judicial Conference and Advisory Committee Reports.\r\n</p>\r\n"
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: f979f2cc-c919-413d-a2f6-7f2f52e86928
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Landing Pages'
+        weight: 2
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

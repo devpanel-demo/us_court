@@ -1,0 +1,24 @@
+uuid: 2bd16da3-e24f-459d-887b-57b9c91f359e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_pdf
+    - media.type.document
+    - node.type.form
+id: node.form.field_document_pdf
+field_name: field_document_pdf
+entity_type: node
+bundle: form
+label: File
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+field_type: entity_reference

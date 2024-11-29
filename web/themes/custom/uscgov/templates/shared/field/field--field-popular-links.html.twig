@@ -1,0 +1,10 @@
+<ol{{ attributes.addClass('primary-menu__mega-quick-link-menu') }}>
+  {% for item in items %}
+    <li{{ item.attributes.addClass('primary-menu__mega-quick-link-item') }}>
+      {# Extra <div> needed to ensure Safari doesn't break CSS columns. 🤮 #}
+      <div class="primary-menu__mega-quick-link-item-inner">
+        {{ item.content }}
+      </div>
+    </li>
+  {% endfor %}
+</ol>

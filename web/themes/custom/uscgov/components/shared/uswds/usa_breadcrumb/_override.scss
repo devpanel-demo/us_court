@@ -1,0 +1,83 @@
+$breadcrumb_breakpoint: 'max-width: 800px';
+
+.usa-breadcrumb {
+  background: revert;
+  color: var(--text-on-surface-base-light);
+  font-size: 16px;
+}
+
+.usa-breadcrumb__link,
+.usa-breadcrumb__link:visited {
+  color: var(--text-link);
+  text-decoration: none;
+
+  span {
+    text-decoration: revert;
+  }
+}
+
+.usa-breadcrumb__list-item {
+  white-space: revert;
+
+  &:not(:last-child)::after {
+    background-color: currentColor;
+  }
+}
+
+@media ($breadcrumb_breakpoint) {
+  .usa-breadcrumb__list-item {
+    position: revert; // Override USWDS.
+
+    &:not(:is(:first-child, :nth-last-child(2))) {
+      display: none;
+    }
+
+    &:first-child {
+      &:after {
+        display: inline-block;
+        height: 2ex;
+        width: 0;
+        content: ""; // Necessary because USWDS removes this at narrow widths.
+        margin-left: 8px;
+        mask-image: none;
+        background: none;
+        border-right: solid 1px currentColor;
+      }
+    }
+
+    &:nth-last-child(2) {
+      padding-left: 8px;
+
+      &:before {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        content: "";
+        background-color: currentColor;
+        mask-image: url('images/arrow.svg');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+      }
+
+      &:after {
+        content: none;
+      }
+
+      // Lots of overrides to unnecessarily complex USWDS selectors here.
+      .usa-breadcrumb__link {
+        &:before {
+          content: none;
+        }
+
+        &:visited {
+          color: var(--text-link);
+        }
+
+        span {
+          all: revert;
+        }
+      }
+    }
+  }
+}

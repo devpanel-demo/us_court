@@ -1,0 +1,10 @@
+uuid: c9bd5678-efaa-48ff-b982-7dbca6f89df6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BCM-vV1zzRaLHN18dqAR_CuGOj8AFJvTx7BKl_8Gcxc
+id: tools
+label: Navigation
+description: 'DO NOT MODIFY - Default menu provided by Drupal.'
+locked: true

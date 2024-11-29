@@ -1,0 +1,21 @@
+uuid: d14275bd-ee06-4303-9d44-bb0bd7d10fec
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_form_categories
+label: 'Taxonomy term - Form Categories'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'forms/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      form_categories: form_categories
+selection_logic: and
+weight: 5
+relationships: {  }

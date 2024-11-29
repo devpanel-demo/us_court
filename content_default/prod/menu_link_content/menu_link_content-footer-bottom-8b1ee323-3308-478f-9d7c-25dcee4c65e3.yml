@@ -1,0 +1,19 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 8b1ee323-3308-478f-9d7c-25dcee4c65e3
+entity_type: menu_link_content
+bundle: footer-bottom
+base_fields:
+  title: 'Download Plug-Ins'
+  enabled: true
+  expanded: false
+  langcode: en
+  menu_name: footer-bottom
+  description: null
+  link:
+    -
+      uri: 'entity:node/9310'
+      title: ''
+      options: {  }
+  weight: -48
+  parent: ''
+custom_fields: {  }

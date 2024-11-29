@@ -1,0 +1,19 @@
+uuid: 969d29a9-a75d-440d-8366-8635124d0a60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_circuit
+    - paragraphs.paragraphs_type.judicial_vacancy
+id: paragraph.judicial_vacancy.field_circuit
+field_name: field_circuit
+entity_type: paragraph
+bundle: judicial_vacancy
+label: Circuit
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

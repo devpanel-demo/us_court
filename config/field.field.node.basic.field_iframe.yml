@@ -1,0 +1,31 @@
+uuid: e991fb04-6d0c-42c1-aea8-cfb8cf520cce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_iframe
+    - node.type.basic
+  module:
+    - iframe
+id: node.basic.field_iframe
+field_name: field_iframe
+entity_type: node
+bundle: basic
+label: '<iframe>'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: null
+  headerlevel: '3'
+  class: ''
+  frameborder: '0'
+  scrolling: auto
+  transparency: '1'
+  allowfullscreen: '0'
+  tokensupport: '0'
+  width: null
+  height: null
+field_type: iframe

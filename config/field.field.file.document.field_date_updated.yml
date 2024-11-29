@@ -1,0 +1,21 @@
+uuid: 2898932c-4de1-408f-b02d-c7d38c919eac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.file.field_date_updated
+  module:
+    - datetime
+    - file
+id: file.document.field_date_updated
+field_name: field_date_updated
+entity_type: file
+bundle: document
+label: 'Last Modified Date'
+description: 'Date value is appended to file name to make it unique. For example: filename-abc-form.pdf becomes filename-abc-form-112007.pdf if the the entered is November 25, 2007.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

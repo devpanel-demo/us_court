@@ -1,0 +1,10 @@
+/**
+ * Main menu icons.
+ */
+.toolbar-icon-usc-admin:before {
+  background-image: url(../images/usc-gray.svg);
+}
+.toolbar-icon-usc-admin:active:before,
+.toolbar-icon-usc-admin.is-active:before {
+  background-image: url(../images/usc-black.svg);
+}

@@ -1,0 +1,32 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 413e1b10-c420-49b8-85b9-aa47c463c06b
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Test - Styled Gutenberg block that matches the design in Figma'
+  status: false
+  langcode: en
+  created: '1725635732'
+  changed: 1725635732
+  author: Emily_Poland@ao.uscourts.gov
+  url: /test-styled-gutenberg-block-matches-design-figma
+  revision_log_message: null
+  revision_uid: '43'
+  moderation_state: draft
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:file {\"id\":78750,\"href\":\"/sites/default/files/data_tables/cjra_4_0331.2024.pdf\",\"displayPreview\":false,\"mediaAttrs\":{\"data-entity-type\":\"file\",\"data-entity-uuid\":\"194ce85a-f114-4e1b-8097-d1377218ae7f\",\"data-image-style\":\"original\"}} -->\r\n<div class=\"wp-block-file\"><a href=\"/sites/default/files/data_tables/cjra_4_0331.2024.pdf\" class=\"wp-block-file__button\" download data-entity-type=\"file\" data-entity-uuid=\"194ce85a-f114-4e1b-8097-d1377218ae7f\" data-image-style=\"original\">Download document</a></div>\r\n<!-- /wp:file -->\r\n\r\n<!-- wp:paragraph -->\r\n<p></p>\r\n<!-- /wp:paragraph -->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

@@ -1,0 +1,82 @@
+uuid: 3c3ec334-db1d-4d6f-b6ea-d70a93a6ae9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.federal_rules.body
+    - field.field.node.federal_rules.feeds_item
+    - field.field.node.federal_rules.field_date_updated
+    - field.field.node.federal_rules.field_document_pdf
+    - field.field.node.federal_rules.field_metatag
+    - field.field.node.federal_rules.field_rules_rule_or_form
+    - field.field.node.federal_rules.field_rules_status
+    - field.field.node.federal_rules.field_tags
+    - field.field.node.federal_rules.field_term_entity_reference
+    - field.field.node.federal_rules.field_term_entity_reference2
+    - field.field.node.federal_rules.field_term_entity_reference3
+    - field.field.node.federal_rules.field_usc_additional_content
+    - field.field.node.federal_rules.field_usc_govdelivery_form
+    - field.field.node.federal_rules.field_usc_import_timestamp
+    - field.field.node.federal_rules.field_usc_notification
+    - field.field.node.federal_rules.field_usc_related_news
+    - field.field.node.federal_rules.field_usc_table_of_contents
+    - field.field.node.federal_rules.field_workbench_access
+    - node.type.federal_rules
+  module:
+    - sdc_display
+    - summary_only
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: node.federal_rules.sidebar
+targetEntityType: node
+bundle: federal_rules
+mode: sidebar
+content:
+  body:
+    type: text_summary_only
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_summary: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  content_moderation_control: true
+  extra_field_child_menu_items: true
+  feeds_item: true
+  field_date_updated: true
+  field_document_pdf: true
+  field_metatag: true
+  field_rules_rule_or_form: true
+  field_rules_status: true
+  field_tags: true
+  field_term_entity_reference: true
+  field_term_entity_reference2: true
+  field_term_entity_reference3: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_import_timestamp: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  links: true
+  search_api_excerpt: true

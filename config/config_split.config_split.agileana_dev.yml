@@ -1,0 +1,30 @@
+uuid: 2c9b975e-5c40-454c-ad26-9f6668e8c084
+langcode: en
+status: false
+dependencies: {  }
+id: agileana_dev
+label: 'Agileana Development'
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config_split/agileana_dev/
+module:
+  devel: 0
+  stage_file_proxy: 0
+theme: {  }
+complete_list:
+  - robotstxt.settings
+  - system.logging
+  - google_tag.container.gtm_khxckx8p
+partial_list:
+  - autologout.settings
+  - core.extension
+  - user.role.administrator
+  - user.role.approver
+  - user.role.authenticated
+  - user.role.content_creator
+  - user.role.publisher
+  - user.role.admin
+  - user.role.content_editor

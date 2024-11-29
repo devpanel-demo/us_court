@@ -1,0 +1,23 @@
+uuid: 8519bfcb-873b-4df3-bb81-b7c813ebd1bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usc_import_timestamp
+    - node.type.fed_probation_journal
+id: node.fed_probation_journal.field_usc_import_timestamp
+field_name: field_usc_import_timestamp
+entity_type: node
+bundle: fed_probation_journal
+label: 'Import Timestamp'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

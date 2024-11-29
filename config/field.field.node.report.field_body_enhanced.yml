@@ -1,0 +1,49 @@
+uuid: 82f27184-19e4-44d7-b0b7-06adc8887721
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_enhanced
+    - node.type.report
+    - paragraphs.paragraphs_type.body_enhanced
+  module:
+    - entity_reference_revisions
+id: node.report.field_body_enhanced
+field_name: field_body_enhanced
+entity_type: node
+bundle: report
+label: 'Body (Enhanced)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      body_enhanced: body_enhanced
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 2
+        enabled: false
+      body_enhanced:
+        weight: 1
+        enabled: true
+      criminogenic_extra_downlds:
+        weight: 3
+        enabled: false
+      criminogenic_worksheets:
+        weight: 4
+        enabled: false
+      milestone_activities:
+        weight: 5
+        enabled: false
+      piksel_programs:
+        weight: 6
+        enabled: false
+      referenced_nodes:
+        weight: 7
+        enabled: false
+field_type: entity_reference_revisions

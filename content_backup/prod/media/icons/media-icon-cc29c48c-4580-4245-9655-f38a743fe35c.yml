@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: cc29c48c-4580-4245-9655-f38a743fe35c
+entity_type: media
+bundle: icon
+base_fields:
+  name: phone-square.svg
+  created: '1721137168'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/phone-square.svg'
+      url: '/sites/default/files/icons/phone-square.svg'

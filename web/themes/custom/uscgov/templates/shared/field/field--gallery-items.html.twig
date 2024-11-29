@@ -1,0 +1,11 @@
+{% if items.1 %}
+ {{ include('uscgov:gallery', {
+    title_suffix,
+    items,
+    label: label_hidden ? false,
+  }, with_context = false) }}
+{% else %}
+  {% for item in items %}
+    {{ item.content|add_suggestion('bare') }}
+  {% endfor %}
+{% endif %}

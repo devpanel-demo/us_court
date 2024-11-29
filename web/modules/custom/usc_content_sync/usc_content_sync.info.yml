@@ -1,0 +1,7 @@
+name: 'USC Content Sync'
+description: 'Custom functionality to sync content among multiple environments.'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - single_content_sync:single_content_sync

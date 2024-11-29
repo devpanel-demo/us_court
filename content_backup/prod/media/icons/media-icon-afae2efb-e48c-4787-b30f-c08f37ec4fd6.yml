@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: afae2efb-e48c-4787-b30f-c08f37ec4fd6
+entity_type: media
+bundle: icon
+base_fields:
+  name: handcuffs-solid.svg
+  created: '1721137124'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/handcuffs-solid.svg'
+      url: '/sites/default/files/icons/handcuffs-solid.svg'

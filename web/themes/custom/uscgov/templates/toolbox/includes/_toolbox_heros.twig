@@ -1,0 +1,111 @@
+{% set hero_type = config_pages_field('global_site_settings', 'field_hero_type', 'full')[0]['#markup'] %}
+{% set quicklinks = config_pages_field('global_site_settings', 'field_hompage_quick_links', 'full') %}
+
+{% if hero_type == 'news_and_announcements' %}
+  {% embed 'uscgov:homepage-toolbox-hero-news-and-announcements' with {
+    title: config_pages_field('global_site_settings', 'field_hero_headline', 'full')|add_suggestion('bare'),
+    description: config_pages_field('global_site_settings', 'field_hero_description', 'full')|add_suggestion('bare'),
+    hero_type,
+    quicklinks,
+  } %}
+    {% block homepage_hero_image %}
+      {{ config_pages_field('global_site_settings', 'field_hero_image', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+    {% block homepage_hero_link %}
+      {% embed 'uscgov:link-button' with {
+        variant: 'accent',
+        cta: config_pages_field('global_site_settings', 'field_hero_cta', 'full')
+      } %}
+      {% endembed %}
+    {% endblock %}
+    {% block hero_right_content %}
+      {{ drupal_view('judiciary_news', 'homepage') }}
+    {% endblock %}
+  {% endembed %}
+
+{% elseif hero_type == 'informational' %}
+  {% embed 'uscgov:homepage-toolbox-hero-informational' with {
+    title: config_pages_field('global_site_settings', 'field_hero_headline', 'full')|add_suggestion('bare'),
+    description: config_pages_field('global_site_settings', 'field_hero_description', 'full')|add_suggestion('bare'),
+    hero_type,
+    quicklinks,
+  } %}
+    {% block homepage_hero_image %}
+      {{ config_pages_field('global_site_settings', 'field_hero_image', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+    {% block homepage_hero_link %}
+      {% embed 'uscgov:link-button' with {
+        variant: 'accent',
+        cta: config_pages_field('global_site_settings', 'field_hero_cta', 'full')
+      } %}
+      {% endembed %}
+    {% endblock %}
+    {% block hero_right_content %}
+      {{ config_pages_field('global_site_settings', 'field_informational_content', 'full') }}
+    {% endblock %}
+  {% endembed %}
+
+{% elseif hero_type == 'featured_content' %}
+  {% embed 'uscgov:homepage-toolbox-hero-featured-content' with {
+    title: config_pages_field('global_site_settings', 'field_hero_headline', 'full')|add_suggestion('bare'),
+    description: config_pages_field('global_site_settings', 'field_hero_description', 'full')|add_suggestion('bare'),
+    hero_type,
+    quicklinks,
+  } %}
+    {% block homepage_hero_image %}
+      {{ config_pages_field('global_site_settings', 'field_hero_image', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+    {% block homepage_hero_link %}
+      {% embed 'uscgov:link-button' with {
+        variant: 'accent',
+        cta: config_pages_field('global_site_settings', 'field_hero_cta', 'full')
+      } %}
+      {% endembed %}
+    {% endblock %}
+    {% block hero_right_content %}
+        <div class="cta-blocks-wrapper">
+          {{ config_pages_field('global_site_settings', 'field_cta_blocks', 'full')|add_suggestion('bare') }}
+        </div>
+        {{ quicklinks }}
+    {% endblock %}
+  {% endembed %}
+{% elseif hero_type == 'minimal' %}
+  {% embed 'uscgov:homepage-toolbox-hero-minimal' with {
+    title: config_pages_field('global_site_settings', 'field_hero_headline', 'full')|add_suggestion('bare'),
+    description: config_pages_field('global_site_settings', 'field_hero_description', 'full')|add_suggestion('bare'),
+    hero_type,
+    quicklinks,
+  } %}
+    {% block homepage_hero_link %}
+      {% embed 'uscgov:link-button' with {
+        variant: 'accent',
+        cta: config_pages_field('global_site_settings', 'field_hero_cta', 'full')
+      } %}
+      {% endembed %}
+    {% endblock %}
+    {% block hero_right_content %}
+      {{ config_pages_field('global_site_settings', 'field_cta_blocks', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+  {% endembed %}
+{% else %}
+  {% embed 'uscgov:homepage-toolbox-hero-default' with {
+    title: config_pages_field('global_site_settings', 'field_hero_headline', 'full')|add_suggestion('bare'),
+    description: config_pages_field('global_site_settings', 'field_hero_description', 'full')|add_suggestion('bare'),
+    hero_type,
+    quicklinks,
+  } %}
+    {% block homepage_hero_image %}
+      {{ config_pages_field('global_site_settings', 'field_hero_image', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+    {% block homepage_hero_link %}
+      {% embed 'uscgov:link-button' with {
+        variant: 'accent',
+        cta: config_pages_field('global_site_settings', 'field_hero_cta', 'full')
+      } %}
+      {% endembed %}
+    {% endblock %}
+    {% block hero_right_content %}
+        {{ config_pages_field('global_site_settings', 'field_cta_blocks', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+  {% endembed %}
+{% endif %}

@@ -1,0 +1,109 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: a3599819-fa1c-4bf1-9cfc-035b660901bf
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: Forms
+  status: true
+  langcode: en
+  created: '1409932791'
+  changed: 1727753530
+  author: aviva.lebson@eyestreet.com
+  url: /services-forms/forms
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '75'
+  menu_link:
+    uuid: 725c1a63-10c7-4218-92de-d04ebc21eb58
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: Forms
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/2524'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: cc5f410e-b67a-4fbc-82a1-fd7bdfae36c7
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Forms & Rules'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/9'
+              title: ''
+              options: {  }
+          weight: -67
+          parent: ''
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Link to the national federal rules of practice and procedures, and forms in effect.'
+          field_enable_megamenu:
+            -
+              value: '1'
+          field_popular_links:
+            -
+              uri: 'entity:node/2004'
+              title: 'Bankruptcy: Proof of Claim Form'
+              options: {  }
+    custom_fields:
+      field_description_text:
+        -
+          value: 'Find a national federal court form that can be used in all federal courts.'
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p>Search for national federal court forms by keyword, number, or filter by category. Forms are grouped into the following categories: Attorney, Bankruptcy, Civil, Court Reporter, Criminal, Criminal Justice Act (CJA), Human Resources, Jury, and Other. </p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:drupalblock/views-block-forms-landing-block-forms-landing {\"blockId\":\"views_block:forms_landing-block_forms_landing\"} /-->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image:
+    -
+      uuid: 64d33f6e-5b3a-4bd0-934d-796d792a4c55
+      entity_type: media
+      base_fields:
+        name: court-forms.jpg
+        created: '1430414429'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: '<p>Find a national federal court form. National court forms can be used in all federal courts. Each federal court maintains their own local court forms. Use the <a href="/court-locator">Court Locator</a> to find a federal court and their local court forms.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 578011e4-4690-4080-a840-87eddd806658
+      entity_type: taxonomy_term
+      base_fields:
+        name: Forms
+        weight: 13
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

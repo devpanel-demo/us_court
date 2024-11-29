@@ -1,0 +1,124 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 3f5c34af-9def-4ee1-9830-d7254bfcb245
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Remote Public Access to Proceedings'
+  status: true
+  langcode: en
+  created: '1695746308'
+  changed: 1730827424
+  author: Emily_Poland@ao.uscourts.gov
+  url: /remote-public-access-proceedings
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '43'
+  menu_link:
+    uuid: 8108b000-d527-43c2-aa29-4babc8326bf6
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Remote Public Access to Proceedings'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/36115'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 23413c28-8ab4-4b5b-b3c8-abace54ec969
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Access to Court Proceedings'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'internal:/access-court-proceedings'
+              title: ''
+              options: {  }
+          weight: 3
+          parent:
+            uuid: 72790a00-4c27-45a1-b94a-4bc19802ecec
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Court Records'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/7'
+                  title: ''
+                  options: {  }
+              weight: -66
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Learn how to file and access case files and court records information. '
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links: null
+        custom_fields:
+          field_description_text:
+            -
+              value: 'The public may visit a federal court to watch each step of the federal judicial process.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<h2>Appellate Proceedings</h2><p>Each court of appeals can determine whether appellate proceedings will be broadcast at their court.&nbsp;<a href="/node/12916" data-entity-type="node" data-entity-uuid="587c8944-527e-46b0-ae1a-ae3255291fa1" data-entity-substitution="canonical">Visit a court of appeals website</a>&nbsp;for information on how to observe a proceeding remotely.&nbsp;</p><h2>Civil and Bankruptcy Proceedings</h2><p>The public can access live audio of certain civil and bankruptcy non-trial proceedings as long as a witness is not testifying. <a href="node/36418">The policy</a>, which went into <a href="/node/36010" data-entity-type="node" data-entity-uuid="3b3fd5f1-036e-4227-abbb-f572a9f21918" data-entity-substitution="canonical">effect on Sept. 22, 2023</a>, allows judges to use their discretion in deciding whether to permit remote public audio access to any portion of eligible proceedings.&nbsp;</p><h2>Criminal Proceedings</h2><p>There is generally no remote public access to criminal proceedings. As stated in Federal Rule of Criminal Procedure 53: "[e]xcept as otherwise provided by a statute or these rules, the court must not permit the taking of photographs in the courtroom during judicial proceedings or the broadcasting of judicial proceedings from the courtroom."</p><h2>History of Cameras, Broadcasting, and Remote Access</h2><p><a href="node/2758">Read a history</a> of federal court broadcasting and remote access policies since 1946.</p><h2>Remote-Pilot Studies</h2><p>Since 2011, two pilot studies permitted an analysis of remote access to federal proceedings in designated courts. Both studies have ended, although three districts in the Ninth Circuit may continue to post video recordings of some civil proceedings.</p><h3>Cameras in Courts Pilot</h3><p>The Judicial Conference authorized a pilot project that evaluated the effect of cameras in district court courtrooms, by conducting video recordings of civil proceedings and publishing these recordings. Fourteen courts participated in the pilot, which began in 2011 and ended in 2015. Since then, the Ninth Circuit Judicial Council, in cooperation with the Judicial Conference, authorized the Northern District of California, District of Guam, and Western District of Washington to continue with the pilot.&nbsp;</p><ul><li><a href="node/235">View available court videos and terms of the pilot</a>.</li></ul><h3>Audio Streaming Pilot</h3><p>The Judicial Conference authorized an audio pilot program, from 2020-2023, that allowed district courts to livestream audio of civil proceedings in order to evaluate the technical, operational, and administrative costs and issues associated with providing live audio streaming. The pilot revealed that there were not any major administrative or technical challenges for using livestreaming technology.&nbsp;</p><ul><li><a href="node/19049">View pilot guidelines</a>.</li></ul>'
+      summary: ''
+      format: wysiwyg
+  field_banner_image: null
+  field_body_enhanced: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: '<p>Most federal courtroom proceedings are open to the public. Remote access to court proceedings is guided by various sources, including the Federal Rules of Practice and Procedure and Judiciary policy. Read a summary of remote access practices in federal courts.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: f58101c0-fb1d-4837-8cc6-a990226d28be
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Court Services'
+        weight: 9
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

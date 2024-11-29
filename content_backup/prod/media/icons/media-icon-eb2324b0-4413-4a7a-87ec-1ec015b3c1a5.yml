@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: eb2324b0-4413-4a7a-87ec-1ec015b3c1a5
+entity_type: media
+bundle: icon
+base_fields:
+  name: flag-usa-solid.svg
+  created: '1724357482'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/flag-usa-solid.svg'
+      url: '/sites/default/files/icons/flag-usa-solid.svg'
+      description: ''

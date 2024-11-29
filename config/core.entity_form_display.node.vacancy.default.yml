@@ -1,0 +1,322 @@
+uuid: 7ce9ebd4-fabb-43a8-9d95-2e617ca0bba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vacancy.field_archive_id
+    - field.field.node.vacancy.field_congress
+    - field.field.node.vacancy.field_legacy_table_data
+    - field.field.node.vacancy.field_pdf_document
+    - field.field.node.vacancy.field_source_type
+    - field.field.node.vacancy.field_vacancy_reference
+    - field.field.node.vacancy.field_vacancy_type
+    - field.field.node.vacancy.field_year
+    - node.type.vacancy
+  module:
+    - content_moderation
+    - file
+    - paragraphs
+    - path
+    - scheduler
+    - scheduler_content_moderation_integration
+    - text
+id: node.vacancy.default
+targetEntityType: node
+bundle: vacancy
+mode: default
+content:
+  field_archive_id:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_congress:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        bb382ce7-bd3c-44a7-a2c5-6246a3009cc9:
+          entity_type: node
+          bundle: vacancy
+          dependee: field_vacancy_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: judicial_vacancy
+            effect: show
+            effect_options: {  }
+            selector: ''
+        973c65fd-2a66-41c5-b2aa-9a5ee11dd793:
+          entity_type: node
+          bundle: vacancy
+          dependee: field_vacancy_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: judicial_future
+            effect: show
+            effect_options: {  }
+            selector: ''
+        c397baea-19c7-44c0-8d45-121588a16396:
+          entity_type: node
+          bundle: vacancy
+          dependee: field_vacancy_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: judicial_confirmation
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_lead_paragraph:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_legacy_table_data:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_pdf_document:
+    type: file_generic
+    weight: 43
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_vacancy_reference:
+    type: paragraphs
+    weight: 6
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: judicial_vacancy
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_vacancy_type:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_year:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  group_emergency_vacancy_info:
+    weight: 28
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        128fb855-6b9a-43c3-92c1-96c1fb8cd147:
+          entity_type: node
+          bundle: vacancy
+          dependee: field_vacancy_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: judicial_emergency
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: propagate
+              apply_to_parent: '0'
+              recurse: '0'
+  group_job_vacancy:
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        c739177c-fcc3-4133-a65d-df9e58810adc:
+          entity_type: node
+          bundle: vacancy
+          dependee: field_vacancy_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: job_vacancy
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: propagate
+              apply_to_parent: apply_to_parent
+              recurse: recurse
+  group_judicial_vacancy:
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        76732693-e687-4634-8918-a05848075df4:
+          entity_type: node
+          bundle: vacancy
+          dependee: field_vacancy_type
+          settings:
+            state: '!visible'
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: job_vacancy
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: propagate
+              apply_to_parent: apply_to_parent
+              recurse: recurse
+  group_vacancy_summary:
+    weight: 42
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        4c1e2c99-b164-4b39-9414-20de9fa67e2d:
+          entity_type: node
+          bundle: vacancy
+          dependee: field_vacancy_type
+          settings:
+            state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: judicial_summary
+            effect: show
+            effect_options: {  }
+            selector: ''
+            inheritance:
+              propagate: '0'
+              apply_to_parent: '0'
+              recurse: '0'
+  moderation_state:
+    type: moderation_state_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_source_type: true
+  promote: true
+  simple_sitemap: true
+  simple_sitemap_index_now: true
+  sticky: true
+  uid: true
+  unpublish_on: true
+  unpublish_state: true
+  url_redirects: true

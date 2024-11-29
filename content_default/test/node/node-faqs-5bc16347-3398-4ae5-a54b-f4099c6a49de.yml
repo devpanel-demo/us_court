@@ -1,0 +1,36 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 5bc16347-3398-4ae5-a54b-f4099c6a49de
+entity_type: node
+bundle: faqs
+base_fields:
+  title: 'Testing add lead paragraph to FAQ - eap'
+  status: true
+  langcode: en
+  created: '1716921511'
+  changed: 1716921511
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-add-lead-paragraph-faq-eap
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_faqs:
+    -
+      question: 'Bankruptcies Rise 16 Percent Over Previous Year'
+      answer: '<p>Bankruptcy filings rose 16 percent during the 12-month period ending March 31, 2024. That is a similar rate of acceleration as in the Dec. 31, 2023, quarterly report, but new bankruptcy cases remain significantly lower than before the start of the coronavirus (COVID-19) pandemic.</p>'
+      answer_format: wysiwyg
+    -
+      question: 'About Federal Courts'
+      answer: '<p>The U.S. Courts were created under Article III of the Constitution to administer justice fairly and impartially, within the jurisdiction established by the Constitution and Congress. This section will help you learn more about the Judicial Branch and its work.</p>'
+      answer_format: wysiwyg
+    -
+      question: 'What is CM/ECF?'
+      answer: '<p>CM/ECF -- the Case Management/Electronic Case Files program -- is a joint program of the Administrative Office of the U.S. Courts and the federal courts to replace old case management systems with a system based on current technology, new software, and increased functionality. This system gives federal courts the ability to maintain electronic case files and to offer electronic filing of court documents over the Internet.</p>'
+      answer_format: wysiwyg
+  field_lead_paragraph:
+    -
+      value: "<p>I can read your mind. She's having the time of her life.</p>"
+      format: wysiwyg
+  field_metatag: null
+  field_workbench_access: null

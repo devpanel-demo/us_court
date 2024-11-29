@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 4b26b9e0-7481-48b2-8f7b-1a7d598e49e7
+entity_type: media
+bundle: icon
+base_fields:
+  name: pause-circle-outline.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/pause-circle-outline.svg'
+      url: '/sites/default/files/icons/pause-circle-outline.svg'

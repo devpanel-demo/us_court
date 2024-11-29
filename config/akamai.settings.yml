@@ -1,0 +1,23 @@
+_core:
+  default_config_hash: wbD9a1lSFlzefyZbT7berzkarufh5L0yc5p0e9pywE4
+version: v3
+disabled: false
+rest_api_url: 'https://xxxx-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx.luna.akamaiapis.net/'
+storage_method: file
+client_token: ''
+client_secret: ''
+access_token: ''
+edgerc_path: ''
+edgerc_section: default
+basepath: null
+timeout: 5
+domain:
+  production: true
+  staging: false
+action_v3:
+  delete: true
+  invalidate: false
+log_requests: false
+edge_cache_tag_header: false
+purge_urls_with_hostname: false
+edgescape_support: false

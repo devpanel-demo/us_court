@@ -1,0 +1,19 @@
+uuid: 39a5a881-e90b-449b-879e-c4ede0afa89c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_file_title
+    - media.type.audio
+id: media.audio.field_file_title
+field_name: field_file_title
+entity_type: media
+bundle: audio
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

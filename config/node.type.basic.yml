@@ -1,0 +1,32 @@
+uuid: d662582d-163e-40a7-aa0c-503ddbb8a4ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Basic
+type: basic
+description: 'Similar to Simple Basic Page, except the body content allows for more items such as photo, video, and infographic.  <strong>Note:</strong> Tables created within the body field of this content type will not be responsive.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

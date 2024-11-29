@@ -1,0 +1,9 @@
+<div{{ attributes.addClass('related-documents') }}>
+  <h2 class="related-documents__title">{{ title }}</h2>
+  {% if description|render|trim|striptags %}
+    <div class="related-documents__description">
+      {{ description }}
+    </div>
+  {% endif %}
+  {{ downloads }}
+</div>

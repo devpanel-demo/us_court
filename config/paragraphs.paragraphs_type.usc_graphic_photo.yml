@@ -1,0 +1,10 @@
+uuid: 5866999d-770c-4a90-9fe2-5ad183ee2856
+langcode: en
+status: true
+dependencies: {  }
+id: usc_graphic_photo
+label: Graphic/Photo
+icon_uuid: null
+icon_default: null
+description: 'Migrated from bean graphic_photo'
+behavior_plugins: {  }

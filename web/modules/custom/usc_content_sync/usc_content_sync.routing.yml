@@ -1,0 +1,27 @@
+usc_content_settings:
+  path: '/admin/uscourts/content-sync-settings'
+  defaults:
+    _form: '\Drupal\usc_content_sync\Form\ContentSyncConfigForm'
+    _title: 'Content Sync Settings'
+  requirements:
+    _permission: 'administer uscourts configurations'
+
+usc_content_sync.content_overview:
+  path: '/admin/content/sync-overview'
+  defaults:
+    _controller: '\Drupal\usc_content_sync\Controller\ContentSyncController::overview'
+    _title: 'Content Sync Overview'
+  requirements:
+    _permission: 'administer uscourts configurations'
+
+usc_content_sync.exclude_confirmation_page:
+  path: '/admin/usc-content-sync/exclude/node/{node}'
+  defaults:
+    _form: '\Drupal\usc_content_sync\Form\ExcludeSyncConfirmationForm'
+    _title: 'Confirmation'
+  requirements:
+    _permission: 'administer uscourts configurations'
+  options:
+    parameters:
+      node:
+        type: 'entity:node'

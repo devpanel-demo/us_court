@@ -1,0 +1,120 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: d73ba594-9315-450d-9ff4-08a5e6648e00
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Superseded Rules Pamphlets'
+  status: true
+  langcode: en
+  created: '1464029748'
+  changed: 1727753530
+  author: milton_snider@ao.uscourts.gov
+  url: /rules-policies/records-and-archives-rules-committees/superseded-rules-pamphlets
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '67'
+  menu_link:
+    uuid: d969e84d-4ab8-4860-9942-a92c1d60a889
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Superseded Rules Pamphlets'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/14183'
+          title: ''
+          options: {  }
+      weight: 0
+      parent:
+        uuid: 14caded5-40a4-4a36-abe9-455c299536e3
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Records of the Rules Committees'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/9366'
+              title: ''
+              options: {  }
+          weight: 5
+          parent:
+            uuid: cc5f410e-b67a-4fbc-82a1-fd7bdfae36c7
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Forms & Rules'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/9'
+                  title: ''
+                  options: {  }
+              weight: -67
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'Link to the national federal rules of practice and procedures, and forms in effect.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/2004'
+                  title: 'Bankruptcy: Proof of Claim Form'
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Reference the records of the rules committees, including agendas, minutes, and rules suggestions.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p>Each year, the House of Representatives' Committee on the Judiciary publishes a pamphlet version of each of the Federal Rules of Procedure (Appellate, Bankruptcy, Civil, Criminal, and Evidence). Superseded copies of the rules pamphlets are collected below. </p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:drupalblock/views-block-federal-rules-landing-superseded-rules-block-federal-rules-landing-superseded-rules {\"blockId\":\"views_block:federal_rules_landing_superseded_rules-block_federal_rules_landing_superseded_rules\"} /-->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph: null
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: f979f2cc-c919-413d-a2f6-7f2f52e86928
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Landing Pages'
+        weight: 2
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

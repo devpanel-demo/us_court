@@ -1,0 +1,90 @@
+<?php
+
+/**
+ * @file
+ * Module hooks for the Gutenberg example block.
+ */
+
+use Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException;
+use Drupal\Component\Plugin\Exception\PluginNotFoundException;
+use Drupal\Core\File\Exception\InvalidStreamWrapperException;
+
+/**
+ * Preprocess the example dynamic block.
+ */
+function template_preprocess_gutenberg_block__uswds__gallery(&$variables) {
+  // Dynamic block attribute.
+  $entity_type_manager = \Drupal::entityTypeManager();
+  try {
+    $media_storage = $entity_type_manager->getStorage('media');
+    $view_builder = $entity_type_manager->getViewBuilder('media');
+
+    $items = [];
+    foreach ($variables['block_attributes']['medias'] as $media) {
+      $media_entity = $media_storage->load($media['media_entity']['id']);
+      $items[] = ['content' => $view_builder->view($media_entity, 'gallery_item')];
+    }
+
+    $variables['items'] = $items;
+  }
+  catch (InvalidPluginDefinitionException | PluginNotFoundException | InvalidArgumentException) {
+    $variables['items'] = [];
+  }
+}
+
+/**
+ * Implements template_preprocess_media().
+ */
+function gutenberg_uswds_gallery_preprocess_media(&$variables) {
+  /** @var \Drupal\media\MediaInterface $media */
+  $media = $variables['media'];
+
+  if ($variables['view_mode'] === 'gallery_item') {
+    if ($media->bundle() === 'image') {
+      $replaced_media_name = $media->get('field_media_image')->getValue()[0] ?? NULL;
+      if ($replaced_media_name && !empty($replaced_media_name['title'])) {
+        $variables['content']['name'] = [
+          '#type' => 'markup',
+          '#markup' => $replaced_media_name['title'],
+          '#prefix' => '<strong>',
+          '#suffix' => '</strong>',
+        ];
+      }
+      else {
+        unset($variables['content']['name']);
+      }
+    }
+
+    if ($media->bundle() === 'remote_video') {
+      /** @var \Drupal\Core\File\FileUrlGeneratorInterface $file_url_generator */
+      $file_url_generator = \Drupal::service('file_url_generator');
+
+      $resource = $media->getSource();
+      $thumbnail_uri = $resource->getMetadata($media, 'thumbnail_uri');
+
+      if ($media->hasField('field_media_oembed_title') && !$media->get('field_media_oembed_title')->isEmpty()) {
+        $variables['content']['field_media_oembed_title']['#prefix'] = '<strong>';
+        $variables['content']['field_media_oembed_title']['#suffix'] = '</strong>';
+      }
+
+      try {
+        if (!$thumbnail_uri && isset($media->get('thumbnail')->entity)) {
+          /** @var \Drupal\file\Entity\File $file_entity */
+          $file_entity = $media->get('thumbnail')->entity;
+          $thumbnail_uri = $file_entity->getFileUri();
+        }
+
+        $file_url = $file_url_generator->generateAbsoluteString($thumbnail_uri);
+
+        $variables['thumbnail_uri'] = [
+          '#type' => 'inline_template',
+          '#template' => '<a href="' . $file_url . '"><img src="' . $file_url . '" alt="' . $media->label() . '" /></a>',
+        ];
+      }
+      catch (InvalidStreamWrapperException) {
+      }
+
+      $variables['player_url'] = $media->get('field_media_oembed_video')->getString();
+    }
+  }
+}

@@ -1,0 +1,49 @@
+From 164dacc82037c3cfc0ffb7ee490629efc1589fe8 Mon Sep 17 00:00:00 2001
+From: jidrone <jidrone20@gmail.com>
+Date: Mon, 8 Apr 2024 13:40:37 -0500
+Subject: [PATCH] Removed default colors to respect default styling
+
+---
+ modules/gutenberg_uswds_summary_box/js/index.es6.js | 4 ++--
+ modules/gutenberg_uswds_summary_box/js/index.js     | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/modules/gutenberg_uswds_summary_box/js/index.es6.js b/modules/gutenberg_uswds_summary_box/js/index.es6.js
+index a881aa3..5985cf8 100644
+--- a/modules/gutenberg_uswds_summary_box/js/index.es6.js
++++ b/modules/gutenberg_uswds_summary_box/js/index.es6.js
+@@ -17,11 +17,11 @@ const settings = {
+     },
+     backgroundColor: {
+       type: 'string',
+-      default: '#e7f6f8'
++      default: ''
+     },
+     borderColor: {
+       type: 'string',
+-      default: '#99deea'
++      default: ''
+     }
+   },
+ 
+diff --git a/modules/gutenberg_uswds_summary_box/js/index.js b/modules/gutenberg_uswds_summary_box/js/index.js
+index 7c1e5ff..2a33542 100644
+--- a/modules/gutenberg_uswds_summary_box/js/index.js
++++ b/modules/gutenberg_uswds_summary_box/js/index.js
+@@ -48,11 +48,11 @@ var settings = {
+     },
+     backgroundColor: {
+       type: 'string',
+-      default: '#e7f6f8'
++      default: ''
+     },
+     borderColor: {
+       type: 'string',
+-      default: '#99deea'
++      default: ''
+     }
+   },
+   edit: function edit(_ref) {
+-- 
+GitLab
+

@@ -1,0 +1,8 @@
+{% for item in items %}
+  {% if (item.content|render == 'On') %}
+    <div class="usc-toc">
+      <h2 class="usc-toc__heading">{{ 'On this page'|t }}</h2>
+      <div id="usc-toc-content" class="usc-toc__content"></div>
+    </div>
+  {% endif %}
+{% endfor %}

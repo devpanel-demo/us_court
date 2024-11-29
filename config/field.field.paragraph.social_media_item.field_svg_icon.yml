@@ -1,0 +1,29 @@
+uuid: 8a4f41a5-6a64-467d-be2b-f96bc4a4e771
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_svg_icon
+    - media.type.icon
+    - paragraphs.paragraphs_type.social_media_item
+id: paragraph.social_media_item.field_svg_icon
+field_name: field_svg_icon
+entity_type: paragraph
+bundle: social_media_item
+label: 'SVG Icon'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      icon: icon
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,7 @@
+{% if items.0.content %}
+  <figcaption>
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  </figcaption>
+{% endif %}

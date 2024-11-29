@@ -1,0 +1,6 @@
+usc_search.settings:
+  title: 'Search GOV Settings'
+  description: 'Configure settings for Search.gov'
+  parent: system.admin_config_search
+  route_name: usc_search.settings_form
+  weight: 100

@@ -1,0 +1,92 @@
+@use "settings";
+@forward "uswds-typography";
+
+h1 {
+  margin-block: 0 32px;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 115%;
+}
+
+h2 {
+  &,
+  .usa-prose & {
+    font-size: 32px;
+    font-weight: normal;
+    font-weight: 400;
+  }
+}
+
+h3 {
+  &,
+  .usa-prose & {
+    font-size: 28px;
+    font-family: var(--font-sans);
+    font-weight: bold;
+  }
+}
+
+h4 {
+  &,
+  .usa-prose & {
+    font-size: 24px;
+    font-family: var(--font-sans);
+    font-weight: normal;
+  }
+}
+
+h5 {
+  &,
+  .usa-prose & {
+    font-size: 20px;
+    font-family: var(--font-sans);
+    font-weight: bold;
+  }
+}
+
+h6 {
+  &,
+  .usa-prose & {
+    font-size: 18px;
+    font-family: var(--font-sans);
+    font-weight: bold;
+    color: var(--text-on-surface-base-light)
+  }
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: normal;
+  line-height: 1.15;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  &,
+  .usa-prose & {
+    margin-block: var(--spacing-header-top) var(--spacing-header-bottom);
+    line-height: 115%;
+    clear: none; // Necessary for images to be floated next to headlines (per design).
+  }
+}
+
+.usa-prose > p {
+  max-width: none;
+}
+
+.prose-max-width,
+.field--name-body {
+  max-width: var(--prose-max-width);
+}
+
+.field--name-body {
+  > *:last-child {
+    margin-bottom: var(--spacing-header-top);
+  }
+}
+
+.block__title {
+  margin-top: var(--spacing-sm-2);
+}

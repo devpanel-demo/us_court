@@ -1,0 +1,28 @@
+From f779d71c20bf8640ee51c7febdd19e948048344e Mon Sep 17 00:00:00 2001
+From: Joshua Mitchell <20983-joshuami@users.noreply.drupalcode.org>
+Date: Thu, 11 Jul 2024 16:34:35 +0000
+Subject: [PATCH] Update file scheduler_content_moderation_integration.install
+
+---
+ scheduler_content_moderation_integration.install | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/scheduler_content_moderation_integration.install b/scheduler_content_moderation_integration.install
+index ac3f7c1..5a362f5 100644
+--- a/scheduler_content_moderation_integration.install
++++ b/scheduler_content_moderation_integration.install
+@@ -39,3 +39,11 @@ function scheduler_content_moderation_integration_update_9003() {
+   $output = _scheduler_content_moderation_integration_remove_fields();
+   return $output ? implode('</li><li>', $output) : t('No update required.');
+ }
++
++/**
++ * Add publish state and unpublish state fields to newly supported entity types.
++ */
++function scheduler_content_moderation_integration_update_10301() {
++  $output = _scheduler_content_moderation_integration_add_fields();
++  return $output ? implode('</li><li>', $output) : t('No update required.');
++}
+-- 
+GitLab
+

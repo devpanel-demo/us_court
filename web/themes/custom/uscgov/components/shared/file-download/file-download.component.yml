@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: File Download
+status: experimental
+group: Custom
+props:
+  type: object
+  properties:
+    file:
+      type: ['array', 'null']
+      description: The file entity.
+    download_text:
+      type: string
+      description: The text to display for the download link.
+libraryOverrides:
+  dependencies:
+    - uscgov/file-icon

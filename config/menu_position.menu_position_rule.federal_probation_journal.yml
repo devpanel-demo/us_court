@@ -1,0 +1,33 @@
+uuid: ac290bbb-c3eb-4cde-9ca6-d81e73eb42fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+    - system
+id: federal_probation_journal
+label: 'Federal Probation Journal'
+menu_name: main
+parent: 'menu_link_content:26dcb934-679c-4b0e-b2e2-73e92f477217'
+menu_link: 'menu_position_link:federal_probation_journal'
+enabled: true
+weight: 7
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/federal-probation-journal/*'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      fed_probation_journal: fed_probation_journal

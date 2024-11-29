@@ -1,0 +1,131 @@
+@use "../global/mixins" as *;
+
+.uscgov-root,
+.editor-styles-wrapper,
+.interface-interface-skeleton__sidebar {
+  /*
+   * Color palette for this variant.
+   *
+   * Sets css variables for this color variant.
+   * @todo: This palette may be used below to reduce complexity.
+   */
+  $color-variants: (
+    "primary": "primary",
+    "secondary": "secondary-gold",
+    "accent": "accent-red"
+  );
+  @include set-css-color-variables-for-variants($color-variants);
+
+  /**
+   * Surface and text colors
+   */
+
+  // Primary
+  --surface-primary: var(--color-primitive-theme-primary-primary); // #0057A3
+  --text-on-surface-primary: var(--color-primitive-neutral-base-light); // #FEFEFE
+
+  // Primary light
+  --surface-primary-light: var(--color-primitive-theme-primary-light); // #73A4CF
+  --text-on-surface-primary-light: var(--color-primitive-neutral-base-dark); // #080A0D
+
+  // Primary dark
+  --surface-primary-dark: var(--color-primitive-theme-primary-dark); // #01417F
+  --text-on-surface-primary-dark: var(--color-primitive-neutral-base-light); // #FEFEFE
+
+  // Primary darker
+  --surface-primary-darker: var(--color-primitive-theme-primary-darker); // #002D5A
+  --text-on-surface-primary-darker: var(--color-primitive-neutral-base-light); // #FEFEFE
+
+  // Primary lighter
+  --surface-primary-lighter: var(--color-primitive-theme-primary-lighter); // #E6F1FA
+  --text-on-surface-primary-lighter: var(--color-primitive-neutral-base-dark); // #080A0D
+  --text-on-surface-base-lighter--light: var(--color-token-base-text-icon-base-secondary-dark); // #525661
+  --text-on-surface-base-lighter--primary: var(--color-primitive-theme-primary-dark); // #01417F
+
+  // Secondary
+  --surface-secondary-dark: var(--color-primitive-theme-secondary-gold-dark) // #A07510;
+  --text-on-surface-secondary-dark: var(--color-primitive-neutral-base-light); // #FEFEFE
+  --surface-secondary-lighter: var(--color-token-secondary-gold-lighter); // #FCF6E7
+  --text-on-surface-secondary-lighter: var(--color-primitive-neutral-base-dark); // #080A0D
+
+  // Secondary text
+  --text-secondary-darker: var(--color-primitive-theme-secondary-gold-darker);
+
+  // Body
+  --surface-body: var(--color-primitive-neutral-base-light); // #FEFEFE // #FEFEFE
+  --text-on-surface-body: var(--color-primitive-neutral-gray-base-secondary-dark);
+
+  // Base lighter
+  --surface-base-lighter: var(--color-primitive-neutral-gray-background); // #F9FAFB
+  --text-on-surface-base-lighter: var(--color-primitive-neutral-base-dark); // #080A0D
+  --text-on-surface-base-lighter-light: var(--color-primitive-neutral-gray-base-secondary-dark); // #525661
+
+  // Base light
+  --surface-base-light: var(--color-primitive-neutral-gray-surface-variant); // #F8F9FF
+  --text-on-surface-base-light: var(--color-primitive-neutral-gray-base-secondary-dark); // #525661
+  --text-on-surface-base-light-dark: var(--color-primitive-neutral-base-dark); // #080A0D
+
+  // Base lightest
+  --surface-base-lightest: var(--color-token-base-background-background-variant); // #F4F6FB
+  --text-on-surface-base-lightest: var(--color-token-base-text-icon-base-secondary-dark);
+  --text-on-surface-base-lightest--dark: var(--color-primitive-neutral-base-dark); // #080A0D
+
+  // Base medium
+  --surface-base-medium: var(--color-primitive-neutral-gray-surface-variant-dark); // #E4E4E4
+  --text-on-surface-base-medium: var(--color-primitive-neutral-gray-base-secondary-dark); // #525661
+  --text-on-surface-base-medium-dark: var(--color-primitive-neutral-base-dark); // #080A0D
+
+  // Base muted light
+  --surface-base-muted-light: var(--color-primitive-neutral-gray-muted-light); //#BEC2CC
+  --text-on-surface-base-muted-light: var(--color-primitive-neutral-base-dark); // #080A0D
+
+  /**
+   * Links, forms, and buttons
+   */
+
+  //  Links
+  --text-link: var(--color-primitive-theme-primary-primary); // color('primary') #0057A3
+  --text-link-dark: var(--color-primitive-theme-primary-dark);  // #01417F
+  --text-link-darkest: var(--color-primitive-theme-primary-darkest); // #002045
+
+  // Forms
+  --surface-form: var(--color-primitive-neutral-white);
+
+  --surface-button: var(--surface-primary);
+  --text-on-surface-button: var(--text-on-surface-primary);
+
+  --surface-button-accent: var(--accent);
+  --text-on-surface-button-accent: var(--color-primitive-neutral-base-light); // #FEFEFE
+
+  --surface-button-dark: var(--color-primitive-theme-primary-dark); // #01417F
+  --surface-button-darker: var(--color-primitive-theme-primary-darker); // #002D5A
+
+  --surface-button-secondary: var(--color-primitive-theme-secondary-gold-light); // #EFD388
+  --text-on-surface-button-secondary: var(--color-primitive-theme-primary-darkest);
+
+  /**
+   * Borders
+   */
+  --border-primary: var(--color-primitive-theme-primary-primary); // #0057A3
+  --border-primary-light: var(--color-primitive-theme-primary-light); // #73A4CF
+  --border-primary-dark: var(--color-primitive-theme-primary-dark); // #01417F
+  --border-primary-darker: var(--color-primitive-theme-primary-darker); // #002D5A
+  --border-muted-dark: var(--color-token-base-border-muted-dark); // #8C91A0
+  --border-muted-light: var(--color-primitive-neutral-gray-muted-light); //#BEC2CC
+  --border-secondary: var(--color-primitive-theme-secondary-gold-primary); // #DFA611;
+  --border-secondary-dark: var(--color-primitive-theme-secondary-gold-dark); // #A07510
+  --border-form: var(--border-muted-dark); // color('base') #8C91A0
+  --border-secondary-dark: var(--color-primitive-theme-secondary-gold-dark);
+
+  /**
+   * Accent
+   */
+  --accent: #A34329;
+  --accent-dark: #722F1D;
+  --accent-darkest: #522215;
+
+  /*
+   * Misc
+   */
+  --focus-ring: #2491ff;
+}

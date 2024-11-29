@@ -1,0 +1,7 @@
+services:
+  usc.vacancies.commands:
+    class: \Drupal\usc_vacancies\Commands\UscVacanciesCommands
+    arguments:
+      - '@usc_vacancies.import_service'
+    tags:
+      - { name: drush.command }

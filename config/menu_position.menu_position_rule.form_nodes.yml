@@ -1,0 +1,27 @@
+uuid: a89eb5ee-1ad2-4cf0-af80-b290e8638898
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+id: form_nodes
+label: 'Form Nodes'
+menu_name: main
+parent: 'menu_link_content:725c1a63-10c7-4218-92de-d04ebc21eb58'
+menu_link: 'menu_position_link:form_nodes'
+enabled: true
+weight: -8
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      form: form

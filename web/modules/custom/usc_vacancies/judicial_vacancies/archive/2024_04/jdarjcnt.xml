@@ -1,0 +1,39 @@
+<?xml version='1.0'?>                                                                                                        
+<data>
+<vacount>
+<court_type>US Court of Appeals</court_type>
+<vacancies>2</vacancies>
+<pending>2</pending>
+<future_pending>2</future_pending>
+</vacount>
+<vacount>
+<court_type>US District Courts (includes territorial courts*)</court_type>
+<vacancies>42</vacancies>
+<pending>12</pending>
+<future_pending>7</future_pending>
+</vacount>
+<vacount>
+<court_type>US Court of International Trade</court_type>
+<vacancies>0</vacancies>
+<pending>0</pending>
+<future_pending>0</future_pending>
+</vacount>
+<vacount>
+<court_type>US Court of Federal Claims</court_type>
+<vacancies>1</vacancies>
+<pending>1</pending>
+<future_pending>0</future_pending>
+</vacount>
+<vacount>
+<court_type>US Supreme Court</court_type>
+<vacancies>0</vacancies>
+<pending>0</pending>
+<future_pending>0</future_pending>
+</vacount>
+<vacount>
+<court_type>Total</court_type>
+<vacancies>45</vacancies>
+<pending>15</pending>
+<future_pending>9</future_pending>
+</vacount>
+</data>

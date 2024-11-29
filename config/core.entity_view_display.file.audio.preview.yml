@@ -1,0 +1,18 @@
+uuid: ef1c5746-e0b1-473c-83ef-25a8574ecc91
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.file.preview
+    - field.field.file.audio.field_file_description
+    - field.field.file.audio.field_file_title
+  module:
+    - file
+id: file.audio.preview
+targetEntityType: file
+bundle: audio
+mode: preview
+content: {  }
+hidden:
+  field_file_description: true
+  field_file_title: true

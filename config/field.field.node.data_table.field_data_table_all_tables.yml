@@ -1,0 +1,23 @@
+uuid: 7b7c68c2-20be-4218-b057-c78a0c6a3abc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_table_all_tables
+    - node.type.data_table
+id: node.data_table.field_data_table_all_tables
+field_name: field_data_table_all_tables
+entity_type: node
+bundle: data_table
+label: 'All Tables?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

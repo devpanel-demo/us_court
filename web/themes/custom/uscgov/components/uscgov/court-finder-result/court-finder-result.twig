@@ -1,0 +1,15 @@
+
+<div class="court-finder-result">
+  {{ title }}
+  <div class="court-finder-result__type">{{ type }}</div>
+  {% if headquaters == '1' %}
+    <div class="court-finder-result__headquarters">{{ 'Headquarters'|t }}</div>
+  {% endif %}
+  <div class="court-finder-result__distance"></div>
+  <div class="court-finder-result__address">{{ address }}</div>
+  <div class="court-finder-result__cta">
+    <a class="button button--small court-finder-result__directions" href="{{ directions_url }}">{{ 'Get Directions'|t }}</a>
+    <a class="button button--small court-finder-result__phone" href="{{ 'tel:' ~ phone }}">{{ phone }}</a>
+  </div>
+
+</div>

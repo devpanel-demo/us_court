@@ -1,0 +1,107 @@
+uuid: fbb8b2f0-f5b8-4993-bc3a-e65da8b2c22b
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_related_news
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - Sidebar
+migration_group: migrate_drupal_7
+label: 'Sidebar (Related News) to Paragraphs'
+source:
+  plugin: bean
+  type: bean_usc_latestnews
+process:
+  id:
+    -
+      plugin: migration_lookup
+      migration: sidebar_related_news
+      no_stub: true
+      source: bid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 0
+  revision_id:
+    -
+      plugin: migration_lookup
+      migration: sidebar_related_news
+      no_stub: true
+      source:
+        - bid
+        - vid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 1
+  langcode:
+    -
+      plugin: default_value
+      default_value: en
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  changed:
+    -
+      plugin: get
+      source: changed
+  revision_created:
+    -
+      plugin: get
+      source: created
+  field_usc_label: label
+  field_usc_title: title
+  field_usc_related_news/0/target_id:
+    -
+      plugin: default_value
+      default_value: usc_latest_news
+  field_usc_related_news/0/display_id:
+    -
+      plugin: default_value
+      default_value: block_1
+  field_usc_related_news/0/data:
+    -
+      plugin: default_value
+      default_value: 'a:5:{s:5:"title";N;s:5:"limit";N;s:8:"argument";N;s:6:"offset";N;s:5:"pager";N;}'
+  link/0/url:
+    -
+      plugin: get
+      source: data/link
+  link/0/attributes:
+    -
+      plugin: default_value
+      default_value: 'a:0:{}'
+  link/0/title:
+    -
+      plugin: get
+      source: data/more_text
+  field_usc_view_more:
+    -
+      plugin: field_link
+      source: '@link'
+destination:
+  plugin: 'entity_complete:paragraph'
+  default_bundle: usc_related_news
+  translations: true
+migration_dependencies: {  }

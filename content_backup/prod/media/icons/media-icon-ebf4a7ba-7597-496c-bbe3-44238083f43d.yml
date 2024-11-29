@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: ebf4a7ba-7597-496c-bbe3-44238083f43d
+entity_type: media
+bundle: icon
+base_fields:
+  name: address-card-outline.svg
+  created: '1721136798'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/address-card-outline.svg'
+      url: '/sites/default/files/icons/address-card-outline.svg'

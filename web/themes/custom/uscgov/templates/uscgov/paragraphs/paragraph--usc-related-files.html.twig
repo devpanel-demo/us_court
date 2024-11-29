@@ -1,0 +1,5 @@
+{{ include('uscgov:related-documents', {
+  title: content.field_usc_title|add_suggestion('bare'),
+  description: content.field_usc_description|add_suggestion('bare'),
+  downloads: content.field_usc_document|add_suggestion('unordered-list')|add_class('related-documents__documents'),
+  }, with_context = false) }}

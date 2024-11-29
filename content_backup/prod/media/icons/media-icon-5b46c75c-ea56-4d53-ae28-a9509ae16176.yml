@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 5b46c75c-ea56-4d53-ae28-a9509ae16176
+entity_type: media
+bundle: icon
+base_fields:
+  name: assistive-listening-systems.svg
+  created: '1721136798'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/assistive-listening-systems.svg'
+      url: '/sites/default/files/icons/assistive-listening-systems.svg'

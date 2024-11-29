@@ -1,0 +1,11 @@
+uuid: fa13effa-727f-4fbc-8771-b60ba8271692
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.usc_download_in_table
+label: 'Download in table'
+description: ''
+targetEntityType: media
+cache: true

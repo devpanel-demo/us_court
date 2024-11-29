@@ -1,0 +1,17 @@
+uuid: 822f6991-c719-4d7f-96ca-a1f8638ff07e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.piksel_programs.field_piksel_program_description
+    - field.field.paragraph.piksel_programs.field_piksel_program_title
+    - paragraphs.paragraphs_type.piksel_programs
+id: paragraph.piksel_programs.default
+targetEntityType: paragraph
+bundle: piksel_programs
+mode: default
+content: {  }
+hidden:
+  field_piksel_program_description: true
+  field_piksel_program_title: true
+  search_api_excerpt: true

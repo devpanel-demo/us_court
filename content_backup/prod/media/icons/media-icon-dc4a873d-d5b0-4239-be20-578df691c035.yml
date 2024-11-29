@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: dc4a873d-d5b0-4239-be20-578df691c035
+entity_type: media
+bundle: icon
+base_fields:
+  name: registered-solid.svg
+  created: '1721137202'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/registered-solid.svg'
+      url: '/sites/default/files/icons/registered-solid.svg'

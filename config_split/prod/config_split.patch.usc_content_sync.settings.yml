@@ -1,0 +1,4 @@
+adding:
+  usc_cs_import_folder: ../content_default/prod
+removing:
+  usc_cs_import_folder: ../content_default/test

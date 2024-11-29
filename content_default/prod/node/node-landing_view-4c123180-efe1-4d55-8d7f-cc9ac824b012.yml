@@ -1,0 +1,127 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 4c123180-efe1-4d55-8d7f-cc9ac824b012
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Judicial Emergencies'
+  status: true
+  langcode: en
+  created: '1408174256'
+  changed: 1727753530
+  author: jamesdavison@ao.uscourts.gov
+  url: /judges-judgeships/judicial-vacancies/judicial-emergencies
+  revision_log_message: 'Edited by courtney.mcilroy.'
+  revision_uid: '1'
+  menu_link:
+    uuid: 834da220-fb84-4de2-8bec-648e86e0c1a8
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Judicial Emergencies'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/1692'
+          title: ''
+          options: {  }
+      weight: 3
+      parent:
+        uuid: 88545e66-e999-4681-8cf0-d18a106368f0
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'Judicial Vacancies'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/4282'
+              title: ''
+              options: {  }
+          weight: 2
+          parent:
+            uuid: 04d340e0-e3c7-468c-8096-ec4e80708cd6
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'Data & News'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/8'
+                  title: ''
+                  options: {  }
+              weight: -68
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'This section provides statistical data and news on the business of the federal Judiciary.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/16578'
+                  title: 'Federal Court Scams'
+                  options: {  }
+                -
+                  uri: 'entity:node/3122'
+                  title: "Director's Annual Report"
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Find a summary of current and future judicial vacancies.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: "<!-- wp:paragraph -->\r\n<p>\r\n\t*Adjusted Filings per Panel and Weighted Filings per Judgeship are Calendar Year Data\r\n</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>\r\n\tBeginning with calendar year 2015, weighted filings are based on the new district court case weights <a href=\"node/14017\">approved by the Judicial Conference</a> in March 2016.\r\n</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n<p> The new weighted filings definition may affect whether specific vacancies qualify as judicial emergencies.  Read about how a <a href=\"node/12991\">judicial emergency is defined</a>.  </p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:drupalblock/views-block-vacancies-judicial-emergencies {\"blockId\":\"views_block:vacancies_judicial-emergencies\"} /-->"
+      summary: ''
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>Find current federal judiciary judicial vacancies that the Judicial Conference has deemed as judicial emergencies and an explanation of what is a judicial emergency.&nbsp;</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 267b88a0-59ee-45d0-bded-9321a87bd2bb
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Services'
+        weight: 17
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

@@ -1,0 +1,26 @@
+uuid: e9732dce-c926-4e19-88d6-dbc7a7caa826
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_usc_description
+    - filter.format.wysiwyg
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.usc_govdelivery
+  module:
+    - text
+id: paragraph.usc_govdelivery.field_usc_description
+field_name: field_usc_description
+entity_type: paragraph
+bundle: usc_govdelivery
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+    - wysiwyg
+field_type: text_long

@@ -1,0 +1,272 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 05d8e9b8-adad-434c-b079-4ffea682a80f
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Types of Federal Judges'
+  status: true
+  langcode: en
+  created: '1550181626'
+  changed: 1731347989
+  author: Emily_Poland@ao.uscourts.gov
+  url: /about-federal-courts/types-federal-judges
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '43'
+  menu_link:
+    uuid: b6444deb-0863-4188-a124-7af835eb2848
+    entity_type: menu_link_content
+    bundle: main
+    base_fields:
+      title: 'Types of Federal Judges'
+      enabled: true
+      expanded: false
+      langcode: en
+      menu_name: main
+      description: null
+      link:
+        -
+          uri: 'entity:node/17357'
+          title: ''
+          options: {  }
+      weight: -49
+      parent:
+        uuid: 75153e3b-b740-483d-b391-e261ad2fa3eb
+        entity_type: menu_link_content
+        bundle: main
+        base_fields:
+          title: 'About Federal Judges'
+          enabled: true
+          expanded: false
+          langcode: en
+          menu_name: main
+          description: null
+          link:
+            -
+              uri: 'entity:node/5'
+              title: ''
+              options: {  }
+          weight: -51
+          parent:
+            uuid: 372d4f2b-d2fc-4e10-8384-fad886d4c078
+            entity_type: menu_link_content
+            bundle: main
+            base_fields:
+              title: 'About Federal Courts'
+              enabled: true
+              expanded: false
+              langcode: en
+              menu_name: main
+              description: null
+              link:
+                -
+                  uri: 'entity:node/4'
+                  title: ''
+                  options: {  }
+              weight: -71
+              parent: ''
+            custom_fields:
+              field_description_text:
+                -
+                  value: 'The U.S. Courts were created under Article III of the Constitution to administer justice fairly.'
+              field_enable_megamenu:
+                -
+                  value: '1'
+              field_popular_links:
+                -
+                  uri: 'entity:node/12916'
+                  title: 'Court Website Links'
+                  options: {  }
+                -
+                  uri: 'entity:node/2769'
+                  title: 'Authorized Judgeships'
+                  options: {  }
+                -
+                  uri: 'entity:node/4305'
+                  title: 'Supreme Court Landmarks'
+                  options: {  }
+        custom_fields:
+          field_description_text:
+            -
+              value: 'Federal judges work to ensure equal justice under the law.'
+          field_enable_megamenu:
+            -
+              value: '0'
+          field_popular_links: null
+    custom_fields:
+      field_description_text: null
+      field_enable_megamenu:
+        -
+          value: '0'
+      field_popular_links: null
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 37e9111f-1374-49d5-918e-32e8cb37dd70
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<h2>\r\n\tArticle III Judges\r\n</h2>\r\n\r\n<p>\r\n\tArticle III of the Constitution governs the appointment, tenure, and payment of Supreme Court justices, and federal circuit and district judges. These judges, often referred to as “Article III judges,” are nominated by the president and confirmed by the U.S. Senate.\r\n</p>\r\n\r\n<p>\r\n\tArticle III states that these judges “hold their office during good behavior,” which means they have a lifetime appointment, except under very limited circumstances. Article III judges can be removed from office only through impeachment by the House of Representatives and conviction by the Senate. Article III judgeships are&nbsp;created by legislation enacted by Congress. <a href=\"node/2769\">Track authorized judgeships</a> from 1789 to present.\r\n</p>\r\n\r\n<p>\r\n\tThe Constitution also provides that judges’ salaries cannot be reduced while they are in office. <a href=\"node/2839\">Article III judicial salaries</a> are not affected by geography or length of tenure.\r\n</p>\r\n\r\n<h3>\r\n\tSupreme Court Justices\r\n</h3>\r\n\r\n<p>\r\n\tThe nine justices of the U.S. Supreme Court are nominated by the president and confirmed by the U.S. Senate. They hear cases and controversies arising under the Constitution or U.S. law and controversies that involve the United States as a party of entities and parties of different states,&nbsp;that are appealed from federal courts or state courts.\r\n</p>\r\n\r\n<p>\r\n\tLearn more about <a href=\"https://www.supremecourt.gov/about/about.aspx\">Supreme Court justices</a>.\r\n</p>\r\n\r\n<h3>\r\n\tCourt of Appeals Judges\r\n</h3>\r\n\r\n<p>\r\n\tCourt of Appeals judges, also known as circuit judges, sit in one of the 12 regional circuits across the United States, or the Federal Circuit. They usually sit in a panel of three judges and determine whether or not the law was applied correctly in the district court, also known as trial court, as well as appeals from decisions of federal administrative agencies and some original proceedings filed directly with the courts of appeals.\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 0cd139da-f30e-40ee-9068-470078379b64
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Learn more about the court of appeals from the following resources:</p><ul><li><a href="node/2859">Appellate Cases</a></li></ul><h3>District Court Judges</h3><p>District court judges sit in one of 94 district or trial courts across the United States. They handle civil and criminal cases. A district court judge typically is responsible for supervising the pretrial process and conducting trials, which includes a variety of procedures including:</p><ul><li>managing the selection of juries and the instructions jurors receive throughout a trial;</li><li>ruling on admission of evidence;</li><li>pleas in criminal cases;</li><li>resolving any issues surrounding the acceptance of the verdict and entry of judgment; and</li><li>sentencing the defendant if a trial results in conviction.</li></ul><p>Learn more about district courts from the following resources:</p><ul><li><a href="node/2855">Civil Cases</a></li><li><a href="node/2856">Criminal Cases</a></li><li><a href="https://www.fjc.gov/history/courts/u.s.-district-courts-and-federal-judiciary">Federal Judicial Center U.S. District Court History and Information</a>&nbsp;</li></ul><p>Learn more about <a href="node/2769">appellate court and district court judgeships</a>, which are created by legislation enacted by Congress.</p><h3>Senior Judges</h3><p>Article III judges who have met age and service requirements set by federal statute are eligible to take senior status if they are at least 65 years old and have served at least 15 years on the bench, or any combination of age and years of service thereafter that equals 80. Regardless of age, judges must serve at least 10 years to qualify for senior status.</p><p>Upon taking senior status, judges may choose to handle a reduced caseload. Senior judges handle about 20 percent of the total district and appellate caseload. By taking senior status, even if maintaining a full caseload, a judge creates a vacancy on the court, to be filled by the nomination and confirmation process for Article III judges.</p><p>Senior judges receive the salary of their position at the time of taking senior status as an annuity.&nbsp;</p><p>Because there is no mandatory retirement age for Article III judges, there is no requirement that they take senior status.&nbsp;</p><h2>Other Types of Judges</h2><p>There are other types of judges and judicial offers preside over certain kinds of cases, matters, and proceedings.</p><h3>Magistrate Judges</h3><p>Magistrate judges are judicial officers of the U.S. district court appointed by the district judges of the court to handle a variety of judicial proceedings.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video:
+          -
+            uuid: efd46b13-574f-4546-b864-26b310de4c3d
+            entity_type: media
+            base_fields:
+              name: 'Knowledge Seminar: An Inside Look at Federal Appellate Courts'
+              created: '1550181164'
+              status: true
+              langcode: en
+            bundle: remote_video
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 365589c0-89f6-4fe2-a974-a41f2be04b04
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>In criminal cases, they have authority to issue warrants, conduct preliminary proceedings, such as initial appearances and arraignments, try cases involving petty offenses committed on federal lands, and try other misdemeanor cases with the consent of the defendant. In most districts, magistrate judges handle pretrial motions and hearings in civil and criminal cases. While most civil cases are tried by district judges, magistrate judges may also preside over civil trials if all parties consent.</p><p>Like other federal judges, all full-time magistrate judges are paid the same salary, regardless of where they serve or their years of service.</p><p>The position and authority of magistrate judges was established in 1968. By federal law, magistrate judges must meet specified eligibility criteria, including at least five years as a member in good standing of a state or territory’s highest court bar. They must also be vetted by a merit selection panel that consists of lawyers and non-lawyers from the community. By majority vote of the U.S. district judges of the court, magistrate judges are appointed for a renewable term of eight years. In addition, there are a small number of part-time magistrate judges who serve four-year terms.</p><p>The number and location of magistrate judges is determined by the <a href="node/2752">Judicial Conference of the United States</a>.</p><p>Learn more about magistrate judges from the following resources:</p><ul><li><a href="file/25762/download">A Guide to the Legislative History of the Federal Magistrate Judges System</a> (pdf)</li><li><a href="file/25763/download">Inventory of United States Magistrate Judge Duties</a> (pdf)</li><li><a href="https://www.fjc.gov/node/7501">Federal Judicial Center Information on Magistrate Judgeships</a></li></ul><h3>Bankruptcy Judges</h3><p>Bankruptcy judges are judicial officers of the district court who preside exclusively over <a href="node/2857">bankruptcy proceedings</a>&nbsp;and cases.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video:
+          -
+            uuid: 674efeae-451f-4073-aaa7-71aa034c1a97
+            entity_type: media
+            base_fields:
+              name: 'Knowledge Seminar:  Magistrate Judges-Integral to the Judiciary'
+              created: '1563308656'
+              status: true
+              langcode: en
+            bundle: remote_video
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 2c83ed9c-55ac-400b-9997-2c08689952f2
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: "<p>\r\n\tBankruptcy judges receive the same annual salary, no matter where they serve or how many years of service.\r\n</p>\r\n\r\n<p>\r\n\tThey are appointed to renewable 14-year terms by a majority of the judges of the U.S. Court of Appeals for their circuit with assistance from the circuit council.\r\n</p>\r\n\r\n<p>\r\n\tThe bankruptcy judge position was established in 1978, and the appointment process is set by Judicial Conference policy, in accordance with the Bankruptcy Amendments and Federal Judgeship Act of 1984. Bankruptcy judges must meet eligibility criteria, including being a member of the bar in good standing. Circuit councils&nbsp;may appoint a merit selection panel, consisting of judges and other legal professionals, to review and recommend candidates for appointment. &nbsp;\r\n</p>\r\n\r\n<p>\r\n\tBankruptcy judgeships are created pursuant to legislation enacted by Congress. Learn more about the history of bankruptcy judges from the following resources:\r\n</p>\r\n\r\n<ul>\r\n\t<li>\r\n\t\t<a href=\"https://www.fjc.gov/node/7486\">Federal Judicial Center Information on Bankruptcy Judges</a>\r\n\t</li>\r\n</ul>\r\n\r\n<h3>\r\n\tRecalled Judges\r\n</h3>\r\n\r\n<p>\r\n\tSimilar to senior status Article III judges, bankruptcy and magistrate judges may continue to provide judicial assistance after they have retired. Generally, recalled judges exercise all the powers and duties that they had as an active judge. Circuit councils determine whether there is a substantial need for recall services from bankruptcy and magistrate judges based on court workload. In addition, recall requests that seek staffing or that cost more than a certain amount in additional salary and travel expenses must be approved by a Judicial Conference committee. Retired bankruptcy and magistrate judges are appointed for recall service for a specific period of time but no more than three years, which may be renewed.\r\n</p>\r\n\r\n<h3>\r\n\tVisiting Judges\r\n</h3>\r\n\r\n<p>\r\n\tVisiting judges who may sit by designation and assignment in any other federal court having a need for their service. They provide temporary assistance not only when a court’s own judges must disqualify themselves, but also to help meet the caseload needs arising from vacancies, lack of sufficient judgeships, specific emergencies, and other workload imbalances.\r\n</p>\r\n\r\n<p>\r\n\tJudges sitting with another court within their circuit are on an intracircuit assignment, which is approved by the circuit chief judge. Judges sitting with a court outside of their home circuit are on an intercircuit assignment. For Article III judges, intercircuit assignments must be approved by the Chief Justice of the U.S. Supreme Court. Temporary assignments for bankruptcy and magistrate judges are coordinated by chief judges of the courts and circuits.\r\n</p>\r\n"
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video:
+          -
+            uuid: 12b13d85-9a59-4fc6-97a5-fce80b43776f
+            entity_type: media
+            base_fields:
+              name: 'Bankruptcy Courts, and Paths to the Bench'
+              created: '1691068922'
+              status: true
+              langcode: en
+            bundle: remote_video
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image:
+    -
+      uuid: 470308a8-fd74-4d7d-9216-0d1c4f3d3da7
+      entity_type: media
+      base_fields:
+        name: judicial-vacancies.jpg
+        created: '1430412714'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>\r\n\tFederal judges work to ensure equal justice under the law. Learn about the different kinds of federal judges and the cases they hear.\r\n</p>\r\n"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 267b88a0-59ee-45d0-bded-9321a87bd2bb
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Judicial Services'
+        weight: 17
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

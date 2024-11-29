@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme for link-button SDC.
+ *
+ * Styles links as buttons by including related button classes to the link.
+ *
+ * Available variables:
+ * - cta: A rendered link element or an object with title and url strings.
+ * - variant: The button color variant to use.
+ * - outline: Whether to outline the resulting button.
+ *
+ */
+#}
+
+{# Get the link from provided cta. #}
+{% set is_cta_object = cta.url is defined or cta.title is defined %}
+{% if is_cta_object %}
+  {% set link_title = cta.title %}
+  {% set link_url = cta.url %}
+{% else %}
+  {# When multiple provided, fallback to the first one (if is a link). #}
+  {% set cta = (cta.0 is defined and cta.0['#type'] == 'link') ? cta.0 : cta %}
+
+  {% set link_title = cta['#title'] %}
+  {% set link_url = cta['#url'] %}
+{% endif %}
+
+{% set link = {
+  title: link_title | default(''),
+  url: link_url | default(path('<current>')),
+} %}
+
+
+{% set button_classes = [
+  classes,
+  'button',
+  'usc-button',
+  variant is defined and not (variant == 'primary') ? 'usc-button--' ~ variant|clean_class,
+  outline ? 'usc-button--outline',
+] %}
+
+
+{# TODO: Other attributes (e.g. 'target') should be handled by this SDC as parameters. #}
+{% set button_attributes = create_attribute() %}
+
+<a{{ button_attributes
+  .addClass(button_classes)
+  .setAttribute('href', link.url|render)
+}}>
+  {{ link.title }}
+</a>

@@ -1,0 +1,73 @@
+@use "../global/mixins" as *;
+
+.views-exposed-form {
+  position: relative; // Establish stacking context.
+  z-index: 2; // Ensure that any autocomplete dropdowns will not be obscured by sortable table headers (which have position relative set).
+  container-type: inline-size;
+
+  .form--inline {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 8px;
+    padding: var(--spacing-sm-2);
+    border: solid 1px var(--border-muted-dark);
+    border-radius: 10px;
+    background-color: var(--surface-base-lightest);
+    color: var(--text-on-surface-base-lightest);
+
+    @container (inline-size > 1000px) {
+      padding: var(--spacing-md-3);
+    }
+
+    label {
+      margin-top: 0;
+    }
+
+    .form-actions {
+      margin-top: 30px; // Magic number. We cannot align to `flex-end` because it will mis-align if form element has a description.
+
+      input {
+        margin: 0;
+
+        + input {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .form-item :is(input, select) {
+      min-width: 100%;
+    }
+
+    // We're using a fieldset as a label at
+    // `/statistics-reports/caseload-statistics-data-tables`.
+    // This visually fixes the margin.
+    .usa-fieldset {
+      margin-block: 0;
+    }
+  }
+
+  // Special rules for date wrappers.
+  [data-drupal-selector="edit-date-wrapper"] {
+    margin: 0;
+
+    .fieldset-wrapper {
+      display: flex;
+      column-gap: 16px;
+    }
+
+    // Hacky hack way to hide divs that don't contain visible elements.
+    .form-item:has(> input.visually-hidden:only-child) {
+      @include visually-hidden;
+    }
+  }
+}
+
+// Allow exposed filters to break out of "narrow content" wrapper.
+.layout-main:not(:has(> .layout-sidebar)) .views-exposed-form {
+  --width: calc(var(--site-max-width) - var(--padding-left) - var(--container-inline-spacing));
+  --page-width: calc(100vw - 2 * var(--container-inline-spacing));
+
+  width: min(var(--page-width), var(--width));
+}

@@ -1,0 +1,2 @@
+usc_content_sync.local_tasks:
+  deriver: 'Drupal\usc_content_sync\Plugin\Derivative\DynamicLocalTasks'

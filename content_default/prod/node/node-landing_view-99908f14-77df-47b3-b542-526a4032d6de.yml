@@ -1,0 +1,200 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 99908f14-77df-47b3-b542-526a4032d6de
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Educational Activities (view)'
+  status: false
+  langcode: en
+  created: '1415044425'
+  changed: 1727753530
+  author: james_davison@ao.uscourts.gov
+  url: /about-federal-courts/educational-resources/educational-activities-view
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '1'
+  moderation_state: draft
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:drupalblock/views-block-educational-activities-block-educational-activities {"blockId":"views_block:educational_activities-block_educational_activities"} /-->'
+      summary: "<p>\r\n\tBring high-impact Supreme Court and federal court decisions into everyday life with educational activities applied to realistic, teen situations.\r\n</p>\r\n"
+      format: gutenberg
+  field_landing_page_image:
+    -
+      uuid: a931deb8-c59b-40d7-ad66-a5be323b3eb8
+      entity_type: media
+      base_fields:
+        name: educational-activities.jpg
+        created: '1535124900'
+        status: true
+        langcode: en
+      bundle: image
+  field_lead_paragraph:
+    -
+      value: '<p>Get involved in your federal courts. Bring high-impact Supreme Court and federal court decisions into everyday life with these educational activities applied to realistic, teen situations.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content:
+    -
+      uuid: 55c88b83-0b74-4e50-9a13-e39a146671cd
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_label:
+          -
+            value: 'Related Links'
+        field_usc_links:
+          -
+            uri: 'internal:/node/4334'
+            title: 'Law Related Websites'
+            options:
+              attributes:
+                target: 0
+        field_usc_title:
+          -
+            value: 'Related Links'
+    -
+      uuid: e4ea0740-ee8d-4326-9aef-eabbe8e75356
+      entity_type: paragraph
+      bundle: usc_graphic_photo
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_image:
+          -
+            uuid: 92d5ab83-962f-47ba-85e5-d7c376416af4
+            entity_type: media
+            base_fields:
+              name: opendoors-art.jpg
+              created: '1463056043'
+              status: true
+              langcode: en
+            bundle: image
+        field_usc_label:
+          -
+            value: 'Graphic/Photo Elonis v. U.S.'
+        field_usc_title:
+          -
+            value: 'Elonis v. U.S.'
+    -
+      uuid: f7d5eb41-d9ce-4092-b024-d04ae8e6d044
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description: null
+        field_usc_label:
+          -
+            value: 'Related Links Related Videos'
+        field_usc_links:
+          -
+            uri: 'https://youtu.be/bmAKAHDSnGs'
+            title: 'Court Shorts: Rule of Law'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://youtu.be/fVrb5mHFyvg'
+            title: 'Court Shorts: Separation of Powers'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://youtu.be/FNGMgrSP6r8'
+            title: 'Court Shorts: Fair and Impartial Judiciary'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://youtu.be/4YwHLjZdebM'
+            title: 'Court Shorts: Jury Service, Hands-on Justice'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'https://youtu.be/d89WyKPgczY'
+            title: 'Court Shorts: The Right to Counsel'
+            options:
+              attributes:
+                target: 0
+          -
+            uri: 'internal:/node/1855'
+            title: 'Pathways to the Bench: Profiles of Federal Judges'
+            options:
+              attributes:
+                target: 0
+        field_usc_title:
+          -
+            value: 'Related Videos'
+    -
+      uuid: f4d1a02e-1c0c-47cc-bdb8-d2ef57883cb8
+      entity_type: paragraph
+      bundle: usc_related_links
+      base_fields:
+        status: true
+        langcode: en
+        created: '1714539110'
+        behavior_settings: {  }
+      custom_fields:
+        field_usc_description:
+          -
+            value: |
+              <p>
+              	Read the U.S. Constitution and&nbsp;Bill of Rights, and explore other civics resources.
+              </p>
+            format: wysiwyg
+        field_usc_label:
+          -
+            value: 'Related Links Constitution Resources'
+        field_usc_links:
+          -
+            uri: 'http://www.archives.gov/exhibits/charters/constitution.html'
+            title: 'U.S. Constitution & Bill of Rights'
+            options:
+              attributes:
+                target: _blank
+          -
+            uri: 'https://www.civicsrenewalnetwork.org/'
+            title: 'Civics Renewal Network'
+            options:
+              attributes:
+                target: _blank
+          -
+            uri: 'https://constitutioncenter.org/interactive-constitution'
+            title: 'Constitution Center Interactive Constitution'
+            options:
+              attributes:
+                target: 0
+        field_usc_title:
+          -
+            value: 'Constitution Resources'
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 1f665d18-97d7-4e00-896e-93824e88670e
+      entity_type: taxonomy_term
+      base_fields:
+        name: Sitewide
+        weight: 0
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

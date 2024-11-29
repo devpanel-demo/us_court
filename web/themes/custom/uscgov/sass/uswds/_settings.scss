@@ -1,0 +1,116 @@
+/*
+----------------------------------------
+USWDS with settings overrides
+----------------------------------------
+Uncomment the following lines and add a list of changed settings
+in the form $setting: value,
+----------------------------------------
+*/
+
+@use "uswds-core" with (
+  $theme-show-compile-warnings: false,
+  $theme-show-notifications: false,
+  $theme-image-path: '/themes/custom/uscgov/dist/uswds/img',
+  $theme-grid-container-max-width: "widescreen",
+  $theme-banner-max-width: "widescreen",
+  $theme-header-max-width: "widescreen",
+  $theme-footer-max-width: "widescreen",
+  $theme-font-path: '/themes/custom/uscgov/fonts',
+  $theme-respect-user-font-size: true,
+  // $theme-font-role-heading:  'serif', // @todo this isn't working.
+  $theme-font-type-sans: 'source-sans-pro',
+  $theme-font-type-serif: "source-serif-pro",
+  $theme-font-serif-custom-src: (
+   dir: 'source-serif-pro',
+   roman: (
+     100: false,
+     200: false,
+     300: false,
+     400: 'sourceserifpro-regular-webfont',
+     500: false,
+     600: 'sourceserifpro-semibold-webfont',
+     700: 'sourceserifpro-bold-webfont',
+     800: false,
+     900: false,
+   ),
+   italic: (
+     100: false,
+     200: false,
+     300: false,
+     400: false,
+     500: false,
+     600: false,
+     700: false,
+     800: false,
+     900: false,
+   ),
+ ),
+ $theme-typeface-tokens: (
+   'source-serif-pro': (
+     'display-name': 'source-serif-pro',
+     'cap-height': 364px, // the default, leave it for now per https://designsystem.digital.gov/design-tokens/typesetting/font-family/
+     'stack': 'Georgia, serif',
+   ),
+ ),
+  $theme-type-scale-3xs: 1, // 12px
+  $theme-type-scale-2xs: 3, // 14px
+  $theme-type-scale-xs: 5, // 16px
+  $theme-type-scale-sm: 6, // 17px
+  $theme-type-scale-md: 9, // 22px
+  $theme-type-scale-lg: 10, // 24px
+  $theme-type-scale-xl: 12, // 32px
+  $theme-type-scale-2xl: 14, // 40px
+  $theme-type-scale-3xl: 16, // 56px
+  $theme-h1-font-size: '3xl',
+  $theme-h2-font-size: '2xl',
+  $theme-h3-font-size: 'xl',
+  $theme-h4-font-size: 'lg',
+  $theme-h5-font-size: 'md',
+  $theme-h6-font-size: 'sm',
+  $theme-body-font-size: 'xs',
+  $theme-small-font-size: '3xs',
+  $theme-display-font-size: '3xl',
+
+  // Colors.
+  // Use these with the USWDS color() function.
+  //
+  // @use "uswds-core" as *;
+  // .selector {
+  //   color: color('base-light'); // Maps to $theme-color-base-light.
+  // }
+  $theme-color-base-lightest: #f0f0f0,
+  $theme-color-base-lighter: #E4E4E4,
+  $theme-color-base-light: #BEC2CC,
+  $theme-color-base: #8C91A0,
+  $theme-color-base-dark: #525661,
+  $theme-color-base-darker: #080A0D,
+  $theme-color-base-darkest: #080A0D,
+  $theme-color-base-ink: #080A0D,
+
+  $theme-color-primary-lighter: #E6F1FA,
+  $theme-color-primary-light: #73A4CF,
+  $theme-color-primary: #0057A3,
+  $theme-color-primary-vivid: #01417F,
+  $theme-color-primary-dark: #002D5A,
+  $theme-color-primary-darker: #002045,
+
+  $theme-color-secondary-lighter: #FCF6E7,
+  $theme-color-secondary-light: #EFD388,
+  $theme-color-secondary: #DFA611,
+  $theme-color-secondary-vivid: #9C740C,
+  $theme-color-secondary-dark: #735214,
+  $theme-color-secondary-darker: #433205,
+
+  $theme-color-accent-cool-lighter: #DAB4A9,
+  $theme-color-accent-cool-light: #AC563E,
+  $theme-color-accent-cool: #823621,
+  $theme-color-accent-cool-dark: #522215,
+  $theme-color-accent-cool-darker: #31140C,
+
+  $theme-color-accent-warm-lighter: #DAB4A9,
+  $theme-color-accent-warm-light: #AC563E,
+  $theme-color-accent-warm: #823621,
+  $theme-color-accent-warm-dark: #522215,
+  $theme-color-accent-warm-darker: #31140C,
+
+);

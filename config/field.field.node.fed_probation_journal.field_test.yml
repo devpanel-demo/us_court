@@ -1,0 +1,26 @@
+uuid: 6916a3bf-2c0a-4e93-bda9-859cf457c81d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test
+    - node.type.fed_probation_journal
+    - taxonomy.vocabulary.probation_journal_topic
+id: node.fed_probation_journal.field_test
+field_name: field_test
+entity_type: node
+bundle: fed_probation_journal
+label: Topic
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      probation_journal_topic: probation_journal_topic
+    sort:
+      field: _none
+field_type: entity_reference

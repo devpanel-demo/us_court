@@ -1,0 +1,49 @@
+@forward "../../sass/uswds/settings";
+
+ul:has(> li.list_item) {
+  padding: 0;
+  margin: 0;
+}
+
+li.list_item {
+  list-style-type: none;
+  border-bottom: 1px solid var(--border-muted-dark);
+
+  &:last-child {
+    border-bottom: none
+  }
+}
+
+.list_item__link {
+  display: block;
+  padding: 24px;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+
+  &:hover {
+    border-top: 2px solid var(--text-link);
+    border-bottom: 2px solid var(--text-link);
+    background-color: var(--surface-primary-lighter);
+  }
+
+  @media (forced-colors: active) {
+    border: none;
+  }
+}
+
+.list_item__date[class] {
+  margin-top: var(--spacing-xs-3);
+  color: var(--text-on-surface-base-light);
+  font-size: 14px;
+}
+
+.list_item__heading[class] {
+  margin-top: var(--spacing-sm-1);
+  margin-bottom: var(--spacing-sm-1);
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: normal;
+  font-family: var(--font-serif);
+  text-decoration: underline;
+}

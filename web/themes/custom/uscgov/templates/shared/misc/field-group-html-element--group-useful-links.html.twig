@@ -1,0 +1,7 @@
+{% set title_id = title|clean_unique_id %}
+<aside {{ attributes.addClass('court-finder-court__links').setAttribute('aria-labelledby', title_id) }}>
+  <h2{{ title_attributes.addClass('court-finder-court__links-title').setAttribute('id', title_id) }}>{{ title }}</h2>
+  <div class="court-finder-court__links-list">
+    {{ children }}
+  </div>
+</aside>

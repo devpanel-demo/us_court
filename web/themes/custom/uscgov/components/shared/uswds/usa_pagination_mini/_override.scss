@@ -1,0 +1,22 @@
+.usa-pagination__list {
+  flex-wrap: wrap;
+  gap: 0.5rem
+}
+
+.usa-pagination__item {
+  margin-inline: 0;
+}
+
+.usa-pagination .usa-current {
+  background: var(--surface-primary-dark);
+}
+
+.usa-pagination__arrow {
+  display: inherit;
+}
+
+.usa-pagination__button:hover,
+.usa-pagination__button:focus,
+.usa-pagination__button:active {
+  border-color: var(--border-primary-dark);
+}

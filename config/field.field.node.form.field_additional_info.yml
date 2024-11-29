@@ -1,0 +1,49 @@
+uuid: 8059695f-bc42-4622-af7d-2ae21f7a13c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_info
+    - node.type.form
+    - paragraphs.paragraphs_type.additional_info
+  module:
+    - entity_reference_revisions
+id: node.form.field_additional_info
+field_name: field_additional_info
+entity_type: node
+bundle: form
+label: 'Additional Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      additional_info: additional_info
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 1
+        enabled: true
+      body_enhanced:
+        weight: 2
+        enabled: false
+      criminogenic_extra_downlds:
+        weight: 3
+        enabled: false
+      criminogenic_worksheets:
+        weight: 4
+        enabled: false
+      milestone_activities:
+        weight: 5
+        enabled: false
+      piksel_programs:
+        weight: 6
+        enabled: false
+      referenced_nodes:
+        weight: 7
+        enabled: false
+field_type: entity_reference_revisions

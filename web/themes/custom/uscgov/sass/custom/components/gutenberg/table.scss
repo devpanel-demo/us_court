@@ -1,0 +1,113 @@
+// Regular (non-striped) Gutenberg tables.
+.wp-block-uswds-table > .usa-table[class][class],
+.wp-block-uswds-table.usa-table[class][class] {
+  thead th {
+    padding: 10px;
+  }
+
+  th {
+    background-color: var(--surface-base-muted-light);
+    color: var(--text-on-surface-base-muted-light);
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  td {
+    padding: 15px 10px;
+    background: var(--surface-base-lighter);
+    border-color: var(--border-muted-dark);
+    color: var(--text-on-surface-base-lighter-light);
+    font-size: 16px;
+  }
+
+  .sort:after {
+    position: absolute;
+    right: 0.25rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 1.5rem;
+    width: 1.5rem;
+    display: block;
+    content: "";
+    background-image: url('/themes/custom/uscgov/icons/misc/sortable.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .sort.asc {
+    background-color: var(--surface-primary-light);
+    color: var(--text-on-surface-primary-light);
+
+    &:after {
+      background-image: url('/themes/custom/uscgov/icons/misc/arrow-up-dark.svg');
+    }
+  }
+
+  .sort.desc {
+    background-color: var(--surface-primary-light);
+    color: var(--text-on-surface-primary-light);
+
+    &:after {
+      background-image: url('/themes/custom/uscgov/icons/misc/arrow-up-dark.svg');
+      scale: -1;
+      translate: 0 -100%;
+    }
+  }
+
+  [sorted="colnum-1"] & .colnum-1,
+  [sorted="colnum-2"] & .colnum-2,
+  [sorted="colnum-3"] & .colnum-3,
+  [sorted="colnum-4"] & .colnum-4,
+  [sorted="colnum-5"] & .colnum-5,
+  [sorted="colnum-6"] & .colnum-6,
+  [sorted="colnum-7"] & .colnum-7,
+  [sorted="colnum-8"] & .colnum-8,
+  [sorted="colnum-9"] & .colnum-9,
+  [sorted="colnum-10"] & .colnum-10 {
+    background-color: var(--surface-primary-lighter);
+    color: var(--text-on-surface-primary-lighter);
+  }
+}
+
+// Striped Gutenberg tables.
+.wp-block-uswds-table > .usa-table.usa-table--striped[class][class],
+.wp-block-uswds-table.usa-table.usa-table--striped[class][class] {
+  td {
+    color: var(--text-on-surface-base-lighter);
+  }
+
+  tbody tr:nth-child(even) td {
+    background: var(--surface-base-medium);
+    color: var(--text-on-surface-base-medium-dark);
+  }
+
+  [sorted="colnum-0"] & tbody tr:nth-child(even) .colnum-0,
+  [sorted="colnum-1"] & tbody tr:nth-child(even) .colnum-1,
+  [sorted="colnum-2"] & tbody tr:nth-child(even) .colnum-2,
+  [sorted="colnum-3"] & tbody tr:nth-child(even) .colnum-3,
+  [sorted="colnum-4"] & tbody tr:nth-child(even) .colnum-4,
+  [sorted="colnum-5"] & tbody tr:nth-child(even) .colnum-5,
+  [sorted="colnum-6"] & tbody tr:nth-child(even) .colnum-6,
+  [sorted="colnum-7"] & tbody tr:nth-child(even) .colnum-7,
+  [sorted="colnum-8"] & tbody tr:nth-child(even) .colnum-8,
+  [sorted="colnum-9"] & tbody tr:nth-child(even) .colnum-9,
+  [sorted="colnum-10"] & tbody tr:nth-child(even) .colnum-10 {
+    background-color: var(--surface-primary-lighter);
+    color: var(--text-on-surface-primary-lighter);
+  }
+
+  [sorted="colnum-0"] & tbody tr:nth-child(odd) .colnum-0,
+  [sorted="colnum-1"] & tbody tr:nth-child(odd) .colnum-1,
+  [sorted="colnum-2"] & tbody tr:nth-child(odd) .colnum-2,
+  [sorted="colnum-3"] & tbody tr:nth-child(odd) .colnum-3,
+  [sorted="colnum-4"] & tbody tr:nth-child(odd) .colnum-4,
+  [sorted="colnum-5"] & tbody tr:nth-child(odd) .colnum-5,
+  [sorted="colnum-6"] & tbody tr:nth-child(odd) .colnum-6,
+  [sorted="colnum-7"] & tbody tr:nth-child(odd) .colnum-7,
+  [sorted="colnum-8"] & tbody tr:nth-child(odd) .colnum-8,
+  [sorted="colnum-9"] & tbody tr:nth-child(odd) .colnum-9,
+  [sorted="colnum-10"] & tbody tr:nth-child(odd) .colnum-10 {
+    background-color: var(--surface-base-lightest);
+    color: var(--text-on-surface-base-lightest--dark);
+  }
+}

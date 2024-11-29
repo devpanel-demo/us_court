@@ -1,0 +1,24 @@
+uuid: 826b246b-d1fe-444b-bca4-556a735437ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_employee_benefits
+    - filter.format.wysiwyg
+    - paragraphs.paragraphs_type.job_vacancy
+  module:
+    - text
+id: paragraph.job_vacancy.field_employee_benefits
+field_name: field_employee_benefits
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Employee Benefits'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - wysiwyg
+field_type: text_long

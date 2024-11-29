@@ -1,0 +1,34 @@
+{% if search_type == 'searchapi' %}
+  {% set action = action_object is defined ? action_object : '/search/content' %}
+  {% set query_param = 'keys' %}
+{% else %}
+  {% set affiliate_object = drupal_config('usc_search.settings', 'affiliate') %}
+  {% set action_object = drupal_config('usc_search.settings', 'link') %}
+  {% set action = action_object is defined ? action_object : 'https://search.uscourts.gov/search' %}
+  {% set affiliate = affiliate_object is defined ? affiliate_object : 'uscourts.gov' %}
+  {% set query_param = 'query' %}
+{% endif %}
+
+
+<search class="search-block">
+  {% block above_text %}{% endblock %}
+
+  <form class="search-block__form" action="{{ action }}">
+    {% if search_type == 'searchgov' %}
+      <input type="hidden" name="affiliate" id="affiliate" value="{{affiliate}}">
+      <input type="hidden" name="locale" id="locale" value="{{ language.getId() }}">
+    {% endif %}
+    {% set id = 'search-block'|clean_unique_id %}
+    <label for="{{ id }}" class="visually-hidden">
+      {{ 'Search'|t }}
+    </label>
+    <div class="search-block__form-wrapper">
+      <input placeholder="{{ 'Search'|t }}" class="search-block__input" id="{{ id }}" type="search" name="{{ query_param }}" width="60">
+      <button class="search-block__button" type="submit">
+        <span class="visually-hidden">{{ 'Search'|t }}</span>
+        {{ include(componentMetadata.path ~ '/images/magnify.svg') }}
+      </button>
+    </div>
+  </form>
+  {% block below_text %}{% endblock %}
+</search>

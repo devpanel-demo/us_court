@@ -1,0 +1,424 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/icheck",
+                "version": "1.0.2 ",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://api.github.com/repos/drgullin/icheck/zipball/8a6eb37bd7dab1e843c1b630c91c6398ff409d05",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "splidejs/splide",
+                "version": "3.6.12",
+                "dist": {
+                    "url": "https://github.com/splidejs/splide/archive/refs/tags/v3.6.12.zip",
+                    "type": "zip"
+                },
+                "type": "drupal-library"
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "splidejs/splide-extension-video",
+                "version": "3",
+                "dist": {
+                    "url": "https://github.com/splidejs/splide-extension-video/archive/refs/heads/v3.zip",
+                    "type": "zip"
+                },
+                "type": "drupal-library"
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "splidejs/splide-extension-url-hash",
+                "version": "3",
+                "dist": {
+                    "url": "https://github.com/splidejs/splide-extension-url-hash/archive/refs/heads/v3.zip",
+                    "type": "zip"
+                },
+                "type": "drupal-library"
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "biati-digital/glightbox",
+                "version": "3.2.0",
+                "dist": {
+                    "url": "https://github.com/biati-digital/glightbox/archive/refs/tags/3.2.0.zip",
+                    "type": "zip"
+                },
+                "type": "drupal-library"
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "5.9.3",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dropzone/dropzone/releases/download/v5.9.3/dist.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "biati-digital/glightbox": "^3",
+        "composer/installers": "^2.2",
+        "consolidation/robo": "^4",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/akamai": "^5.0@RC",
+        "drupal/anchor_link": "~3.0",
+        "drupal/antibot": "^2.0",
+        "drupal/ape": "^1.6",
+        "drupal/auto_entitylabel": "^3.0",
+        "drupal/autologout": "^1.4",
+        "drupal/bean_migrate": "^1.0",
+        "drupal/bef_date_filters": "^1.0",
+        "drupal/better_exposed_filters": "^6.0",
+        "drupal/block_visibility_groups": "^2.0",
+        "drupal/chosen": "^4.0",
+        "drupal/conditional_fields": "^4.0@alpha",
+        "drupal/config_import_single": "^2.0",
+        "drupal/config_pages": "^2.15",
+        "drupal/config_split": "^2.0",
+        "drupal/core-composer-scaffold": "^10.1",
+        "drupal/core-recommended": "^10.3.1",
+        "drupal/customerror": "^1.0@beta",
+        "drupal/dropzonejs": "^2.11",
+        "drupal/entity_extra_field": "2.0.0-alpha5",
+        "drupal/entity_hierarchy": "5.0.0-alpha4",
+        "drupal/environment_indicator": "^4.0",
+        "drupal/events_log_track": "^3.1",
+        "drupal/extlink": "^1.7",
+        "drupal/extra_field_plus": "^3.0@beta",
+        "drupal/facets": "^2.0",
+        "drupal/facets_custom_order": "^1.0@beta",
+        "drupal/faqfield": "^7.1",
+        "drupal/feeds": "^3.0@beta",
+        "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/field_formatter_range": "^1.4",
+        "drupal/field_group": "^3.4",
+        "drupal/field_validation": "^3.0@beta",
+        "drupal/file_mdm": "^3.0",
+        "drupal/flood_control": "^2.3",
+        "drupal/fpa": "^4.0",
+        "drupal/geocoder": "^4.18",
+        "drupal/geofield": "^1.57",
+        "drupal/glossify": "^3.0",
+        "drupal/google_tag": "^1.0",
+        "drupal/google_translator": "^2.1",
+        "drupal/gutenberg": "^2.8",
+        "drupal/gutenberg_content_embed": "^1.0",
+        "drupal/gutenberg_uswds": "^1.0@beta",
+        "drupal/html_processors": "^1.0",
+        "drupal/htmlpurifier": "^1.0",
+        "drupal/iframe": "^3.0",
+        "drupal/image_link_formatter": "^2.1",
+        "drupal/inline_entity_form": "^3.0@RC",
+        "drupal/jquery_ui_autocomplete": "^2.0",
+        "drupal/legal": "^3.0",
+        "drupal/libraries": "^4.0",
+        "drupal/linkit": "^6.1",
+        "drupal/maxlength": "^2.1",
+        "drupal/media_library_edit": "^3.0",
+        "drupal/media_migration": "^1.0@alpha",
+        "drupal/menu_block": "^1.10",
+        "drupal/menu_breadcrumb": "^2.0@alpha",
+        "drupal/menu_item_extras": "^3.0",
+        "drupal/menu_link_attributes": "^1.3",
+        "drupal/menu_position": "^1.1",
+        "drupal/metatag": "^2.0",
+        "drupal/migrate_child_entity_generate": "^1.0",
+        "drupal/migrate_devel": "^2.3",
+        "drupal/migrate_directory": "^2.0",
+        "drupal/migrate_manifest": "^3.1",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_source_csv": "^3.6",
+        "drupal/migrate_source_html": "^1.0",
+        "drupal/migrate_tools": "^6.0",
+        "drupal/migrate_upgrade": "^4.0",
+        "drupal/moderated_content_bulk_publish": "^3.0@beta",
+        "drupal/nomarkup": "^1.0",
+        "drupal/paragraphs": "^1.16",
+        "drupal/password_policy": "^4.0",
+        "drupal/pathauto": "^1.12",
+        "drupal/pathologic": "^2.0@alpha",
+        "drupal/purge": "^3.6",
+        "drupal/quick_node_clone": "^1.16",
+        "drupal/readmore": "^2.0@alpha",
+        "drupal/redirect": "^1.9",
+        "drupal/redis": "^1.7",
+        "drupal/remote_stream_wrapper": "^2.0",
+        "drupal/robotstxt": "^1.5",
+        "drupal/role_hierarchy": "^3.4",
+        "drupal/scheduler": "^2.0",
+        "drupal/scheduler_content_moderation_integration": "^2.0@beta",
+        "drupal/sdc_display": "^1.0@beta",
+        "drupal/search_api_location": "^1.0@alpha",
+        "drupal/search_autocomplete": "^3.0",
+        "drupal/seckit": "^2.0",
+        "drupal/simple_media_bulk_upload": "^2.0",
+        "drupal/simple_sitemap": "^4.1",
+        "drupal/single_content_sync": "1.4.5",
+        "drupal/sitewide_alert": "^2.2",
+        "drupal/smart_trim": "^2.1",
+        "drupal/summary_only": "^2.0@RC",
+        "drupal/svg_formatter": "^2.0",
+        "drupal/taxonomy_manager": "2.0.9",
+        "drupal/taxonomy_parent_autocomplete": "^1.0",
+        "drupal/term_condition": "^2.0",
+        "drupal/token_views_filter": "^2.0",
+        "drupal/transliterate_filenames": "^2.0",
+        "drupal/tvi": "^2.0@alpha",
+        "drupal/twig_tweak": "^3.3",
+        "drupal/usfedgov_google_analytics": "^2.0",
+        "drupal/varnish_purge": "^2.2",
+        "drupal/varnish_purge_tags_override": "^1.0@alpha",
+        "drupal/views_arg_entity_field": "^2.0",
+        "drupal/views_bulk_operations": "^4.2",
+        "drupal/views_filters_populate": "^2.1",
+        "drupal/views_year_filter": "^2.1",
+        "drupal/viewsreference": "^2.0@beta",
+        "drupal/wbm2cm": "^3.0",
+        "drupal/webform": "^6.2",
+        "drupal/workbench": "^1.4",
+        "drupal/workbench_access": "^2.0",
+        "drupal/yoast_seo": "^2.0@alpha",
+        "drush/drush": "^12.1",
+        "enyo/dropzone": "^5.9",
+        "geocoder-php/nominatim-provider": "^5.7",
+        "mglaman/composer-drupal-lenient": "^1.0",
+        "northernco/ckeditor5-anchor-drupal": "^0.5.0",
+        "splidejs/splide": "^3.6",
+        "splidejs/splide-extension-url-hash": "^3",
+        "splidejs/splide-extension-video": "^3",
+        "symfony/http-client": "^6.3",
+        "wikimedia/composer-merge-plugin": "^2.1"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true,
+            "mglaman/composer-drupal-lenient": true,
+            "php-http/discovery": true,
+            "wikimedia/composer-merge-plugin": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "installer-types": ["bower-asset", "npm-asset"],
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/autologout": {
+                "3409707 - Deprecated function: explode(): Passing null to parameter #2": "https://www.drupal.org/files/issues/2024-02-22/3409707.patch",
+                "3348394 - Ajax component issue": "https://www.drupal.org/files/issues/2023-08-24/3348394-8.patch"
+            },
+            "drupal/bean_migrate": {
+                "3369198 - Automated Drupal 10 compatibility fixes": "https://www.drupal.org/files/issues/2023-11-27/3369198-4.patch"
+            },
+            "drupal/core": {
+                "Array filter issue": "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch",
+                "Migrate views issue": "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch",
+                "3359497 - Log an error message when library definitions have a license with no URL defined": "https://www.drupal.org/files/issues/2023-10-07/fix-license-missing-url.patch",
+                "3052608 - DateTimeComputed tries to compute from an empty value": "https://www.drupal.org/files/issues/2022-08-25/DateTimeComputed-tries-to-compute-from-an-empty-value-3052608-16.patch",
+                "3145188 - Paragraphs fields cause overflow of content forms in Claro" : "https://www.drupal.org/files/issues/2023-12-06/3145188_46.patch",
+                "2744851 - Node lock translations" : "https://www.drupal.org/files/issues/2022-06-14/core9.2-node-lock-translations-2744851.patch",
+                "3294680 - deprecation: str_replace(): Passing null to parameter #3" : "https://www.drupal.org/files/issues/2024-05-10/deprecation_error.patch",
+                "3313185 - PHP8.1 drupal core utility deprecations" : "https://www.drupal.org/files/issues/2022-10-03/utility.patch",
+                "3456176 - 10.3 upgrade now missing status-message theme suggestions" : "https://www.drupal.org/files/issues/2024-06-28/3456176-45-missing-status-messages-theme-suggestions.patch",
+                "3446877 - You can only change the parent menu link for the published version of this content" : "https://www.drupal.org/files/issues/2024-05-13/menu_revision_langcode-3446877.patch",
+                "2769407 - Views UI should offer a 'Treat NULL values as FALSE' on boolean field filtering to expose the already existing code path for handling this": "https://www.drupal.org/files/issues/2024-06-26/2769407_views_ui_null_option-10.3.x-90.patch",
+                "3265147 - Varnish issue with dynamic page cache module": "https://www.drupal.org/files/issues/2024-06-25/3265147-19.patch",
+                "3200949 - Non-default entity revisions are migrated as default revision": "https://www.drupal.org/files/issues/2021-03-01/core-allow_migrating_forward_revisions-3200949-9.patch",
+                "2928108 - Call to a member function isTranslatable() on null in SqlContentEntityStorage": "https://www.drupal.org/files/issues/2024-08-06/2928108-78-MR9099-11.x.diff",
+                "2844620 - Automatically split headers into multiple lines when they exceed 8k": "https://git.drupalcode.org/project/drupal/-/merge_requests/7432.diff"
+            },
+            "drupal/faqfield": {
+                "3012114 - Migrate process plugin?": "https://www.drupal.org/files/issues/2020-11-19/add-migrate-support-3012114-4.patch"
+            },
+            "drupal/htmlpurifier": {
+                "3167171 - Drupal 7 → 8/9 migration": "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch",
+                "Adding missing schema.yml file": "patches/htmlpurifier-missing-schema-file.patch"
+            },
+            "drupal/paragraphs": {
+                "Fixed of missing current revisions (Patch is needed for migration only, can be deleted after that)": "patches/fixed_revisions.patch"
+            },
+            "drupal/password_policy": {
+                "3452575 - password_length constraint error saving": "https://git.drupalcode.org/project/password_policy/-/merge_requests/82.diff",
+                "3342129 - change the order of the table": "https://www.drupal.org/files/issues/2024-06-05/password_policy-3342129-MR76-12.patch"
+            },
+            "drupal/readmore": {
+                "3450975 - The text is trimmed in unexpected places": "https://www.drupal.org/files/issues/2024-06-10/3450975.patch"
+            },
+            "drupal/search_api_location": {
+                "3310137 - Exposed filter doesn't display Distance units for Select list input": "https://www.drupal.org/files/issues/2022-09-16/3310137-exposed-filter-doesnt.patch",
+                "3343143 - PHP notice with Drupal 9.5 - Search API location views": "https://www.drupal.org/files/issues/2023-02-20/php-notice-views-default-3343143-3.patch"
+            },
+            "drupal/migrate_directory": {
+                "D10 Supports": "https://www.drupal.org/files/issues/2022-06-16/migrate_directory.2.0.0.rector.patch"
+            },
+            "drupal/menu_item_extras": {
+                "Deprecated function: mb_strtolower(): Passing null": "https://www.drupal.org/files/issues/2024-03-15/menu_item_extras-3427956.patch"
+            },
+            "drupal/sdc_display": {
+                "3426470 - Extrafields not being rendered": "patches/sdc_display/extrafield.patch",
+                "3458850 - Add the ability to alter props and slots": "https://www.drupal.org/files/issues/2024-07-03/alter-props-and-slots-3458850-4.patch"
+            },
+            "drupal/gutenberg": {
+                "3456995 - Media block isn't working on Drupal 10.3": "patches/gutenberg/168.patch",
+                "3452390 - Undefined array key “className” in processBlock()": "patches/gutenberg/3452390.patch",
+                "3107837 - Cannot add custom type media": "https://www.drupal.org/files/issues/2023-11-09/remote-video-in-media-browser-3107837-27.patch"
+            },
+            "drupal/gutenberg_content_embed": {
+                "3324044 - Can't edit referenced node, Fixing quick typing": "patches/gutenberg_content_embed/clear_content_fix_quick_typing.patch"
+            },
+            "drupal/feeds": {
+                "2928904 - Add a mapping target to media field": "patches/feeds/2928904.patch"
+            },
+            "drupal/single_content_sync": {
+                "3452092 - Bulk import from directory": "https://www.drupal.org/files/issues/2024-06-18/bulk-import-from-directory-3452092-3.patch"
+            },
+            "drupal/sitewide_alert": {
+                "3291075 - Render site alerts as part of the page content": "https://www.drupal.org/files/issues/2024-09-09/3291075-21.patch"
+            },
+            "drupal/scheduler_content_moderation_integration": {
+                "3447266 - 10.3 makes terms moderatable so makes this module need to provide an update path": "patches/scheduler_content_moderation_integration/63.patch"
+            },
+            "drupal/gutenberg_uswds": {
+                "3439486 - Summary Box colors cannot be reset": "patches/gutenberg_uswds/3439486.patch",
+                "3486799 - Flag layout - Make \"Inset Media\" option available.": "https://www.drupal.org/files/issues/2024-11-11/flag-layout-inset-media.patch"
+            },
+            "drupal/wbm2cm": {
+                "3034764 - Content that has a published revision and a draft revision is unpublished after migration": "https://git.drupalcode.org/project/wbm2cm/-/merge_requests/3.diff"
+            },
+            "drupal/search_autocomplete": {
+                "Autocomplete table issues on claro and USCADMIN theme": "patches/search_autocomplete/claro_theme_issues.patch"
+            },
+            "drupal/menu_position": {
+                "3392139 - Wrong breadcrumb due to route alterations": "patches/menu_position/3106746.patch",
+                "2888419 - caching issues": "https://www.drupal.org/files/issues/2021-08-09/menu_position-link_caching-2888419-11.patch"
+            },
+            "drupal/migrate_plus": {
+                "Allow callback for Url source, and single item Json plugin": "https://www.drupal.org/files/issues/2023-02-15/3040427-42-migrate_plus_multiple_urls.patch",
+                "Migration failed with source plugin exception: Serialization of SimpleXMLElement is not allowed": "https://www.drupal.org/files/issues/2023-01-13/2837684-14-migrate-plus-xml-return-as-xml.patch"
+            },
+            "drupal/google_translator": {
+              "3396703 - Use once to avoid attaching behavior multiple times": "https://www.drupal.org/files/issues/2024-10-07/3396703-mr.patch"
+            },
+            "drupal/media_migration": {
+                "Assumed same ids": "patches/media_migration/remove-mapping.patch"
+            },
+            "drupal/linkit": {
+                "3022261 - Add better support for linking to anchors": "https://www.drupal.org/files/issues/2024-03-17/3022261-41.patch"
+            }
+        },
+        "drupal-lenient": {
+            "allowed-list": ["drupal/bean_migrate", "drupal/migrate_directory"]
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json",
+                "web/modules/contrib/anchor_link/composer.libraries.json"
+            ]
+        }
+    },
+    "require-dev": {
+        "dmore/behat-chrome-extension": "^1.3",
+        "dmore/chrome-mink-driver": "dev-main as 2.9.2",
+        "drevops/behat-screenshot": "^1.1",
+        "drupal/coder": "^8.3",
+        "drupal/core-dev": "^10",
+        "drupal/devel": "^5.3",
+        "drupal/drupal-extension": "^5.0",
+        "drupal/stage_file_proxy": "^3.1",
+        "kint-php/kint": "^5.0",
+        "mglaman/drupal-check": "^1.1",
+        "mglaman/phpstan-drupal": "^1",
+        "phpspec/prophecy-phpunit": "^2",
+        "squizlabs/php_codesniffer": "^3.6",
+        "symfony/var-dumper": "^6.2"
+    }
+}

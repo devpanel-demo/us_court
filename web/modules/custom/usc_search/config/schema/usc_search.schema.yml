@@ -1,0 +1,10 @@
+usc_search.settings:
+  type: config_object
+  label: 'Search.gov settings'
+  mapping:
+    link:
+      type: text
+      label: 'Link'
+    affiliate:
+      type: string
+      label: 'Affiliate'

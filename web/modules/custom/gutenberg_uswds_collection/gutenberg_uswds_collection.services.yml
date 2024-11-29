@@ -1,0 +1,9 @@
+services:
+  logger.channel.gutenberg_uswds_collection:
+    parent: logger.channel_base
+    arguments: ['gutenberg_uswds_collection']
+  gutenberg_uswds_collection.block_processor_uswds_collection:
+    class: Drupal\gutenberg_uswds_collection\BlockProcessor\UswdsCollectionProcessor
+    arguments: ['@entity_type.manager', '@renderer', '@logger.channel.gutenberg_uswds_collection']
+    tags:
+      - { name: gutenberg_block_processor, priority: 50 }

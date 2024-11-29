@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: c6f50bc8-9343-48c9-9b50-6709fa3c7554
+entity_type: media
+bundle: icon
+base_fields:
+  name: edit-outline.svg
+  created: '1721137031'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/edit-outline.svg'
+      url: '/sites/default/files/icons/edit-outline.svg'

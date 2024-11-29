@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div class="spacing-component">
+    {% embed 'uscgov:usa_accordion' with {
+      control_button: false,
+      multiselect: false,
+      content,
+      } only %}
+      {% block accordion_items %}
+        {{ content.field_main_content|add_suggestion('bare') }}
+        {{ content.field_hearing_calendar|add_suggestion('bare') }}
+      {% endblock %}
+    {% endembed %}
+  </div>
+
+  {{ content|without('field_main_content', 'field_hearing_calendar') }}
+</article>

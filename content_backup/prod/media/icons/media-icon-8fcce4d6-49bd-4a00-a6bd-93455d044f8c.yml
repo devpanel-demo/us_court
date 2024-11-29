@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 8fcce4d6-49bd-4a00-a6bd-93455d044f8c
+entity_type: media
+bundle: icon
+base_fields:
+  name: barcode.svg
+  created: '1721136814'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/barcode.svg'
+      url: '/sites/default/files/icons/barcode.svg'

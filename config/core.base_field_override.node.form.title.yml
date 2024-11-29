@@ -1,0 +1,18 @@
+uuid: 8aca378b-c290-4d31-8213-e13a0230933b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.form
+id: node.form.title
+field_name: title
+entity_type: node
+bundle: form
+label: 'Form Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 23d14f06-cb6c-4ed4-ba5b-c22f9dcc1e0f
+langcode: und
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_fc_be_video
+field_name: field_fc_be_video
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

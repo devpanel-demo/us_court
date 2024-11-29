@@ -1,0 +1,20 @@
+uuid: a6380a32-40b0-47cd-8683-78d4930c2c91
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_term_entity_reference3
+field_name: field_term_entity_reference3
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

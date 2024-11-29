@@ -1,0 +1,31 @@
+From 2a0bc0aec3c2e8b287192334a5bf7b1c9de417d2 Mon Sep 17 00:00:00 2001
+From: jidrone <jidrone20@gmail.com>
+Date: Thu, 7 Mar 2024 13:44:57 -0500
+Subject: [PATCH] Fixed extrafields rendering
+
+---
+ src/Util.php | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/src/Util.php b/src/Util.php
+index 49a95d7..0727576 100644
+--- a/src/Util.php
++++ b/src/Util.php
+@@ -93,9 +93,11 @@ class Util {
+       $field_name = $dynamic_mappings[$name] ?? '';
+       $skip_static_mapping =
+         !empty($field_name)
+-        && $entity instanceof FieldableEntityInterface
+-        && $entity->hasField($field_name)
+-        && !$entity->get($field_name)->isEmpty();
++        && $entity instanceof FieldableEntityInterface;
++
++      if ($entity->hasField($field_name)) {
++        $skip_static_mapping = !$entity->get($field_name)->isEmpty();
++      }
+ 
+       if (isset($element['#attached']['drupalSettings']['field_group']['sdc_display']['mode'])) {
+         $display = \Drupal::entityTypeManager()
+-- 
+GitLab
+

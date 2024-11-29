@@ -1,0 +1,119 @@
+@forward "usa-accordion";
+
+.expand-link,
+.collapse-link {
+  position: relative;
+  float: right;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  color: var(--text-link);
+  text-decoration: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1px);
+    display: block;
+    width: 12px;
+    height: 0;
+    content: "";
+    border-top: solid 2px currentColor;
+  }
+
+  &:after {
+    rotate: 90deg;
+  }
+
+  &:visited {
+    color: var(--text-link);
+  }
+}
+
+.collapse-link {
+  &::after {
+    content: none;
+  }
+}
+
+.operations-group {
+  display: inline-block;
+  width: 100%;
+
+  .expand-link {
+    display: none;
+  }
+
+  &.collapsed {
+    .collapse-link {
+      display: none;
+    }
+    .expand-link {
+      display: inline-block;
+    }
+  }
+}
+
+// Ensure accordion items that have nested required fields are marked with an asterisk.
+.usa-accordion:has(.usa-accordion__content :is([required], .required, [aria-required="true"])) {
+  .usa-accordion__button:after {
+    content: "*";
+  }
+}
+
+.editor-styles-wrapper .usa-accordion__heading,
+.usa-accordion__heading:not(:first-child),
+.usa-prose .usa-accordion__heading:not(:first-child) {
+  margin-block: 0;
+}
+
+.usa-accordion__button[aria-expanded] {
+  position: relative;
+  background: none; // Override USWDS.
+  border-top: solid 1px var(--border-form);
+  font-size: inherit;
+
+  &:hover {
+    background: var(--surface-primary-lighter);
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    right: 25px;
+    top: calc(50% - 1.5px);
+    content: "";
+    width: 14px;
+    height: 0;
+    border-top: solid 3px var(--accent);
+  }
+
+  &:after {
+    rotate: 90deg;
+  }
+
+  &[aria-expanded="true"] {
+    background: var(--surface-primary-dark);
+    color: var(--text-on-surface-primary-dark);
+
+    &:before {
+      border-color: currentColor;
+    }
+
+    &:after {
+      opacity: 0;
+    }
+  }
+}
+
+.usa-accordion__content {
+  background: transparent;
+}
+
+.editor-styles-wrapper .wp-block[aria-label="Block: Accordion Item"] {
+  margin-block: 0;
+}
+
+.usa-accordion__content {
+
+}

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 62a02b27-2e3c-4281-81cf-447c90926a9c
+entity_type: media
+bundle: icon
+base_fields:
+  name: fast-forward.svg
+  created: '1721137067'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/fast-forward.svg'
+      url: '/sites/default/files/icons/fast-forward.svg'

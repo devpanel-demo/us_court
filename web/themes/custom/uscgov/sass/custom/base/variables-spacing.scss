@@ -1,0 +1,38 @@
+@forward "../../uswds/settings";
+@use "uswds-core" as *;
+
+.uscgov-root,
+.editor-styles-wrapper {
+  // Typography
+  --font-sans: #{family('sans')};
+  --font-serif: #{family('serif')};
+
+  // Layout
+  --site-max-width: 1360px;
+  --text-max-width: 650px;
+
+  // // Spacing
+  --spacing-xs-1: 2px;
+  --spacing-xs-2: 4px;
+  --spacing-xs-3: 6px;
+  --spacing-sm-1: 8px;
+  --spacing-sm-2: 16px;
+  --spacing-sm-3: 24px;
+  --spacing-md-1: 32px;
+  --spacing-md-2: 40px;
+  --spacing-md-3: 48px;
+  --spacing-lg-1: 56px;
+  --spacing-lg-2: 64px;
+  --spacing-lg-3: 72px;
+  --spacing-xl-1: 80px;
+  --spacing-xl-2: 88px;
+  --spacing-xl-3: 96px;
+  --spacing-xl-1: 80px;
+  --spacing-xxl-1: 104px;
+
+  --spacing-component: var(--spacing-md-1);
+  --spacing-header-top: var(--spacing-md-1);
+  --spacing-header-bottom: var(--spacing-sm-1);
+
+  --container-inline-spacing: 26px;
+}

@@ -1,0 +1,45 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 01588fb5-6203-4fdc-badf-aea2e7724594
+entity_type: node
+bundle: landing_view
+base_fields:
+  title: 'Federal Probation Journal'
+  status: true
+  langcode: en
+  created: '1508168787'
+  changed: 1727753530
+  author: george_cherussery@ao.uscourts.gov
+  url: /about-federal-courts/probation-and-pretrial-services/federal-probation-journal
+  revision_log_message: 'Edited by emily.poland.'
+  revision_uid: '66'
+  moderation_state: published
+custom_fields:
+  body:
+    -
+      value: '<!-- wp:drupalblock/views-block-federal-probation-journal-landing-new-block-federal-probation-journal-landing {"blockId":"views_block:federal_probation_journal_landing_new-block_federal_probation_journal_landing"} /-->'
+      summary: "<p>\r\n\tFederal Probation Journal, published each June, September, and December, presents current thought, research, and practice in corrections, community supervision, and criminal justice.\r\n</p>\r\n"
+      format: gutenberg
+  field_landing_page_image: null
+  field_lead_paragraph:
+    -
+      value: '<p>Federal Probation Journal, published each June, September, and December, presents current thought, research, and practice in corrections, community supervision, and criminal justice.</p>'
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access:
+    -
+      uuid: 4993c040-35d0-4dd9-a8ac-b68abcef939e
+      entity_type: taxonomy_term
+      base_fields:
+        name: 'Probation and  Pretrial Services'
+        weight: 21
+        langcode: en
+        description: null
+        parent: 0
+      bundle: site_sections

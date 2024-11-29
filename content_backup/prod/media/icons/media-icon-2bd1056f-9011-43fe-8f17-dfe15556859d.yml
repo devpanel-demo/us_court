@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 2bd1056f-9011-43fe-8f17-dfe15556859d
+entity_type: media
+bundle: icon
+base_fields:
+  name: network-wired-solid.svg
+  created: '1721137152'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/network-wired-solid.svg'
+      url: '/sites/default/files/icons/network-wired-solid.svg'

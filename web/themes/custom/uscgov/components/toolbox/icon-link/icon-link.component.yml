@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Icon Link
+status: stable
+props:
+  type: object
+  properties:
+    title:
+      title: Title
+      type: string
+      description: Icon label.
+    url:
+      title: URL
+      type: string
+      description: Link URL.
+    icon:
+      title: Icon
+      type: object
+      description: Icon.

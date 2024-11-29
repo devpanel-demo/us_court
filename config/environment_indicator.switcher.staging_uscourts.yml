@@ -1,0 +1,11 @@
+uuid: 2c624f34-4257-444e-ade5-cbb1703d7cd6
+langcode: en
+status: true
+dependencies: {  }
+machine: staging_uscourts
+description: null
+name: 'Staging USCourts'
+weight: 3
+url: 'http://uscourts-stage.jdc.ao.dcn'
+fg_color: '#ffffff'
+bg_color: '#0057a3'

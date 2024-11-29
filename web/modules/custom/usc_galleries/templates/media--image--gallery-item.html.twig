@@ -1,0 +1,19 @@
+{%
+  set classes = [
+    'splide__slide',
+    'is-image-slide'
+  ]
+%}
+<li{{ attributes.addClass(classes).setAttribute('data-splide-hash', media.id) }}>
+  {{ title_suffix.contextual_links }}
+  <div class="slide-content-wrapper">
+    {% if content.field_media_image %}
+      <div class="splide__slide__container">
+        {{ content.field_media_image }}
+      </div>
+    {% endif %}
+    <div class="details-box">
+      {{ content|without('field_media_image') }}
+    </div>
+  </div
+</li>

@@ -1,0 +1,52 @@
+@use "../../global/variables" as *;
+
+.wp-block-file .wp-block-file__button {
+  --surface-color: var(--surface-button);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--surface-color);
+  border: solid 1px var(--border-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 115%;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:after {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    mask-image: url('#{$icon-path}/misc/download-light.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: currentColor;
+
+    @media (forced-colors: active) {
+      background-color: linkText;
+    }
+  }
+
+  &:not([disabled]):hover {
+    --surface-color: var(--surface-button-dark);
+    text-decoration: underline;
+    opacity: unset;
+  }
+
+  &:not([disabled]):active {
+    --surface-color: var(--surface-button-darker);
+    text-decoration: underline;
+  }
+
+  &:not([disabled]):focus {
+    opacity: unset;
+    text-decoration: unset;
+  }
+}

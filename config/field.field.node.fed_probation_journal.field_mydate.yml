@@ -1,0 +1,21 @@
+uuid: acabf19a-e11a-426f-90ae-20874331fd84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mydate
+    - node.type.fed_probation_journal
+  module:
+    - datetime
+id: node.fed_probation_journal.field_mydate
+field_name: field_mydate
+entity_type: node
+bundle: fed_probation_journal
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

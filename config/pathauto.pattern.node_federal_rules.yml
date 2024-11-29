@@ -1,0 +1,21 @@
+uuid: 9d187d7a-f266-4d26-a49f-d7acf4f4f092
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_federal_rules
+label: 'Content - Federal Rules'
+type: 'canonical_entities:node'
+pattern: 'rules-policies/archives/[node:field_term_entity_reference2]/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      federal_rules: federal_rules
+selection_logic: and
+weight: -5
+relationships: {  }

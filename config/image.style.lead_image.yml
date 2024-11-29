@@ -1,0 +1,21 @@
+uuid: 7ee66538-d0d8-48d7-aec5-7412acaaa24e
+langcode: en
+status: true
+dependencies: {  }
+name: lead_image
+label: 'Lead image'
+effects:
+  555a8d46-b6db-4ad4-b935-949a564c11fe:
+    uuid: 555a8d46-b6db-4ad4-b935-949a564c11fe
+    id: image_scale
+    weight: 1
+    data:
+      width: 1000
+      height: null
+      upscale: false
+  21187138-ad88-44c6-9fd6-2660f2729640:
+    uuid: 21187138-ad88-44c6-9fd6-2660f2729640
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

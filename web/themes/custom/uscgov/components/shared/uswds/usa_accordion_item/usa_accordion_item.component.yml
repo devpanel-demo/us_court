@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Accordion Item
+status: experimental
+group: USWDS
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    heading:
+      title: Heading
+      type: string
+    open:
+      title: Open
+      type: string
+      description: If item is open by default.
+slots:
+  accordion_item_content:
+    title: Content

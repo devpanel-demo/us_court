@@ -1,0 +1,79 @@
+/**
+ * Don't edit this file. Find all style at ./sass folder.
+ **/
+.content-embed-autocomplete .components-placeholder__fieldset {
+  position: relative;
+}
+.content-embed-autocomplete .components-placeholder__fieldset input {
+  width: 350px;
+  height: 45px;
+  border-radius: 4px;
+  border: 2px solid #777777;
+  padding: 0 10px;
+}
+.content-embed-autocomplete .components-placeholder__fieldset ul.suggestions,
+.content-embed-autocomplete .components-placeholder__fieldset .no-suggestions {
+  position: absolute;
+  top: 55px;
+  width: 350px;
+  border: 1px solid #d7d7d7;
+  box-shadow: 2px 2px 10px #d7d7d7;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: white;
+}
+.content-embed-autocomplete .components-placeholder__fieldset ul.suggestions li,
+.content-embed-autocomplete .components-placeholder__fieldset .no-suggestions li {
+  list-style: none;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.content-embed-autocomplete .components-placeholder__fieldset ul.suggestions li:last-child,
+.content-embed-autocomplete .components-placeholder__fieldset .no-suggestions li:last-child {
+  margin-bottom: 0;
+}
+.content-embed-autocomplete .components-placeholder__fieldset ul.suggestions li:hover,
+.content-embed-autocomplete .components-placeholder__fieldset .no-suggestions li:hover {
+  color: #777777;
+}
+
+.usa-collection .selected__element,
+.usa-collection .unselected__element {
+  display: grid;
+}
+.usa-collection .selected__element {
+  border: 1px solid red;
+  outline: var(--focus-outline);
+  box-shadow: var(--focus-box-shadow);
+}
+.usa-collection li.usa-collection__item {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.usa-collection li.usa-collection__item h4.usa-collection__heading {
+  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.46rem;
+  line-height: 1.3;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.usa-collection li.usa-collection__item ul.usa-collection__meta {
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.25rem;
+}
+.usa-collection li.usa-collection__item ul.usa-collection__meta li.usa-collection__meta-item {
+  background-color: #E4E4E4;
+  line-height: 0.9;
+  padding: 0.25rem 0.5rem;
+  color: #080A0D;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

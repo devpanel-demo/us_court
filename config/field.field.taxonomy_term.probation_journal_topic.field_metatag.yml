@@ -1,0 +1,21 @@
+uuid: b7043fab-a200-4fcb-addf-7e7f11e59cc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_metatag
+    - taxonomy.vocabulary.probation_journal_topic
+  module:
+    - metatag
+id: taxonomy_term.probation_journal_topic.field_metatag
+field_name: field_metatag
+entity_type: taxonomy_term
+bundle: probation_journal_topic
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

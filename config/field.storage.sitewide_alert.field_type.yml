@@ -1,0 +1,27 @@
+uuid: 8a08e745-2481-47e6-b2ad-c7dd88978692
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sitewide_alert
+id: sitewide_alert.field_type
+field_name: field_type
+entity_type: sitewide_alert
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: info
+      label: Info
+    -
+      value: emergency
+      label: Emergency
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

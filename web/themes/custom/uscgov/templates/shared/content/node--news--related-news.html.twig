@@ -1,0 +1,7 @@
+{{ include('uscgov:related-news-item', {
+  attributes,
+  title_suffix,
+  title: label,
+  formatted_date: node.changed.value|format_date('custom', 'F j, Y'),
+  url,
+}, with_context = false) }}

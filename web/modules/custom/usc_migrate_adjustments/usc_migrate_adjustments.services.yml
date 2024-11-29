@@ -1,0 +1,14 @@
+services:
+  usc_migrate_adjustments.event_subscriber:
+    class: Drupal\usc_migrate_adjustments\EventSubscriber\AdjustMigrationSubscriber
+    arguments:
+      - '@usc_migrate_adjustments.upgrade_database'
+    tags:
+      - { name: event_subscriber }
+  usc_migrate_adjustments.upgrade_database:
+    class: Drupal\Core\Database\Connection
+    factory: Drupal\Core\Database\Database::getConnection
+    arguments: [default, upgrade]
+  usc_migrate_adjustments.migrate_alterer:
+    class: Drupal\usc_migrate_adjustments\MigrateAlterer
+    arguments: {}

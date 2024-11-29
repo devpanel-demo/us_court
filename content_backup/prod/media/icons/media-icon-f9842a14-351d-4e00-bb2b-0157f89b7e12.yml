@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: f9842a14-351d-4e00-bb2b-0157f89b7e12
+entity_type: media
+bundle: icon
+base_fields:
+  name: copy-outline.svg
+  created: '1721137017'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/copy-outline.svg'
+      url: '/sites/default/files/icons/copy-outline.svg'

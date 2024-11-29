@@ -1,0 +1,28 @@
+id: usc_court_finder_circuit_terms
+label: US Court Finder Circuit terms
+migration_group: usc_court_finder
+
+source:
+  plugin: 'csv'
+  path: 'modules/custom/usc_court_finder/source_files/circuits.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - code
+  fields:
+    0:
+      name: code
+    1:
+      name: name
+
+process:
+  field_usc_code: code
+  name: name
+  field_usc_type:
+    plugin: default_value
+    default_value: circuit
+
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: usc_court_finder_hierarchy

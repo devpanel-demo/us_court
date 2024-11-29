@@ -1,0 +1,20 @@
+<details{{ attributes.addClass(classes).addClass('details').setAttribute('open', open ? 'true' : false) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <summary class="details__summary">
+    <h2{{ title_attributes.addClass('details__title') }}>{{ label }}</h2>
+    {% if help_link and help_description %}
+      <a target="_blank" href="{{ help_link }}" class="details__help" title="{{ help_description }}" data-position="bottom">
+        <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+          <image xlink:href="/{{ active_theme_path() }}/icons/font-awesome/solid/circle-info.svg" width="15" height="15"/>
+        </svg>
+        <span class="usa-sr-only">{{ help_description }}</span>
+      </a>
+    {% endif %}
+  </summary>
+  <div class="details__content">
+    {% block details_content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</details>

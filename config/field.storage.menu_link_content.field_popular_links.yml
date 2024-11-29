@@ -1,0 +1,19 @@
+uuid: 9d4f7ccc-75f5-4529-895d-e0d1e2fc89bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - menu_link_content
+id: menu_link_content.field_popular_links
+field_name: field_popular_links
+entity_type: menu_link_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 261fb5dd-7663-4f1e-8e03-5f1296b12f17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_updated
+    - node.type.camera
+  module:
+    - datetime
+id: node.camera.field_date_updated
+field_name: field_date_updated
+entity_type: node
+bundle: camera
+label: 'Last Updated'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 984a0de5-c13a-466d-b3f0-2c2d8c9783d0
+entity_type: media
+bundle: icon
+base_fields:
+  name: window-close-solid.svg
+  created: '1721137264'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/window-close-solid.svg'
+      url: '/sites/default/files/icons/window-close-solid.svg'

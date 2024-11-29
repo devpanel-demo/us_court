@@ -1,0 +1,87 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS USWDS Collection Item
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - title
+    - url
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    title_suffix:
+      type: array
+      description: title_suffix is necessary for contextual links.
+    title:
+      title: Title
+      type: string
+      description: Title of the item.
+    url:
+      title: URL
+      type: string
+      description: Link of the card.
+    date:
+      title: Date
+      type: string
+      description: Date in a format supported by the strtotime function.
+    publish_date:
+      title: Publish Date
+      type: array
+      description: Publish Date rederable array.
+    image:
+      title: Image
+      type: object
+      properties:
+        type:
+          title: Type
+          type: string
+          description: The type of image entity or url.
+          enum: ["none", "entity", "url"]
+          default: 'none'
+        entity:
+          title: The file entity.
+          type: object
+          description: The file entity.
+        url:
+          title: URL
+          type: string
+          description: The image URL.
+        alt:
+          title: Type
+          type: string
+          description: The image alt.
+        title:
+          title: Type
+          type: string
+          description: The image title.
+    meta:
+      title: Metadata
+      type: array
+      description: The list of CTAs.
+      items:
+        type: object
+        required:
+          - aria_label
+          - list_items
+        properties:
+          type:
+            title: Type
+            type: string
+            description: The type of the list.
+            enum: ["default", "tags"]
+            default: 'default'
+          aria_label:
+            title: Aria Label
+            type: string
+            description: The aria label of the list.
+          list_items:
+            title: List items
+            type: array
+            description: The lists of metadata.
+            items:
+              type: object
+              description: The item text.
+slots:
+  body:
+    title: Body

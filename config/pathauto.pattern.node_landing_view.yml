@@ -1,0 +1,21 @@
+uuid: f1552119-a633-4039-9786-e9ad3f0c2485
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_landing_view
+label: 'Content - Landing (View)'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      landing_view: landing_view
+selection_logic: and
+weight: 0
+relationships: {  }

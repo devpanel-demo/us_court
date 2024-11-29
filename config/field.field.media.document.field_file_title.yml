@@ -1,0 +1,19 @@
+uuid: cb859db7-a821-48f4-8ecd-5c2658920f7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_file_title
+    - media.type.document
+id: media.document.field_file_title
+field_name: field_file_title
+entity_type: media
+bundle: document
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

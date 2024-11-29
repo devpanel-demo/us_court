@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: e3279f64-c137-4ddf-9a17-9e5e7964d842
+entity_type: media
+bundle: icon
+base_fields:
+  name: address-card-solid.svg
+  created: '1721136798'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/address-card-solid.svg'
+      url: '/sites/default/files/icons/address-card-solid.svg'

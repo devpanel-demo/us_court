@@ -1,0 +1,27 @@
+uuid: 1dd0e416-afb9-4dbb-a8cc-ee6c204caa83
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - node
+id: camera_nodes
+label: 'Camera Nodes'
+menu_name: main
+parent: 'menu_link_content:3261bc4a-337a-487d-986e-27e509aa9703'
+menu_link: 'menu_position_link:camera_nodes'
+enabled: true
+weight: -6
+conditions:
+  condition_group:
+    id: condition_group
+    negate: false
+    context_mapping: {  }
+    block_visibility_group: ''
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      camera: camera

@@ -1,0 +1,11 @@
+{% if not label_hidden %}
+  {{ include('uscgov:label-pill', {
+    field_name,
+    items,
+    label
+  }, with_context = false) }}
+{% else %}
+  {% for item in items %}
+    {{ item.content }}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,9 @@
+<div{{ attributes.addClass('related-news') }}>
+  <div class="related-news__header">
+    <h2 class="related-news__title">{{ title }}</h2>
+    {{ related_news_more }}
+  </div>
+  <div class="related-news__content">
+    {% block related_news_content %}{% endblock %}
+  </div>
+</div>

@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: e7d760ac-5af2-4364-9688-507d4ece4a72
+entity_type: media
+bundle: icon
+base_fields:
+  name: globe.svg
+  created: '1721137124'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/globe.svg'
+      url: '/sites/default/files/icons/globe.svg'

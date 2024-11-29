@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 452d3e9d-2578-4400-b076-3a440231c2c2
+entity_type: media
+bundle: icon
+base_fields:
+  name: play-circle-solid.svg
+  created: '1721137168'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/play-circle-solid.svg'
+      url: '/sites/default/files/icons/play-circle-solid.svg'

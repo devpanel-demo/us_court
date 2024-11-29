@@ -1,0 +1,11 @@
+@forward "../../sass/uswds/settings";
+@forward "usa-process-list/src/styles";
+@forward "override";
+
+ol.usa-process-list {
+  &.usa-process-list--alphabetical {
+    li.usa-process-list__item::before {
+      content: counter(usa-numbered-list, upper-alpha);
+    }
+  }
+}

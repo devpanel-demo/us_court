@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: bb70d5c3-0ec7-44d2-a034-5aec1414ee99
+entity_type: media
+bundle: icon
+base_fields:
+  name: chart-line.svg
+  created: '1721136868'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/chart-line.svg'
+      url: '/sites/default/files/icons/chart-line.svg'

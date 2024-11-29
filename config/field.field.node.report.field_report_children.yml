@@ -1,0 +1,25 @@
+uuid: 05241b75-dd63-44e1-a790-126c931ef93b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_report_children
+    - node.type.report
+id: node.report.field_report_children
+field_name: field_report_children
+entity_type: node
+bundle: report
+label: 'Report Children'
+description: 'Indicate which other report pages should be listed as the children of this page in the right sidebar.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: report_children_entityreference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

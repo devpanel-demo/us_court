@@ -1,0 +1,42 @@
+uuid: 24ed77fb-d018-474a-92f5-28222ef8665b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.icon.field_media_file_1
+    - media.type.icon
+id: media.icon.media_library
+targetEntityType: media
+bundle: icon
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_file_1: true
+  path: true
+  publish_on: true
+  publish_state: true
+  scheduler_settings: true
+  status: true
+  uid: true
+  unpublish_on: true
+  unpublish_state: true

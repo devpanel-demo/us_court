@@ -1,0 +1,55 @@
+uuid: f3a05c59-b1ad-4706-925a-81dba5b983b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.audio.field_file_description
+    - field.field.media.audio.field_file_title
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
+  module:
+    - file
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: media.audio.default
+targetEntityType: media
+bundle: audio
+mode: default
+content:
+  field_file_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_audio_file:
+    type: file_audio
+    label: visually_hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_file_description: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

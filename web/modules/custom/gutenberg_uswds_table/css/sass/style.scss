@@ -1,0 +1,203 @@
+$uswds-black: #343a40;
+.usa-table-container {
+  overflow-x: scroll;
+}
+table.wp-block-uswds-table {
+  width: 100%;
+  caption {
+    padding-top: 0;
+    padding-bottom: 0;
+    color: $uswds-black;
+    caption-side: top;
+  }
+  &.fixed-layout {
+    table-layout: fixed;
+  }
+  .sort {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:after {
+      position: absolute;
+      right: 0.25rem;
+      text-align: center;
+      text-decoration: none;
+      top: 50%;
+      transform: translate(0,-50%);
+      height: 1.5rem;
+      width: 1.5rem;
+      opacity: 0.6;
+      content: url("data:image/svg+xml,%3Csvg class='usa-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='15.17 15 13 17.17 13 6.83 15.17 9 16.58 7.59 12 3 7.41 7.59 8.83 9 11 6.83 11 17.17 8.83 15 7.42 16.41 12 21 16.59 16.41 15.17 15'%3E%3C/polygon%3E%3C/svg%3E");
+    }
+    &.asc:after {
+      content: url("data:image/svg+xml,%3Csvg class='usa-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath transform='rotate(180, 12, 12)' d='M17 17L15.59 15.59L12.9999 18.17V2H10.9999V18.17L8.41 15.58L7 17L11.9999 22L17 17Z'%3E%3C/path%3E%3C/svg%3E");
+    }
+    &.desc:after {
+      content: url("data:image/svg+xml,%3Csvg class='usa-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17 17L15.59 15.59L12.9999 18.17V2H10.9999V18.17L8.41 15.58L7 17L11.9999 22L17 17Z'%3E%3C/path%3E%3C/svg%3E");
+    }
+    &.asc, &.desc{
+      background-color: #97d4ea;
+    }
+  }
+  thead th {
+    color: $uswds-black;
+    position: relative;
+  }
+  tbody th {
+    background-color: #fff;
+    color: $uswds-black;
+    background-clip: padding-box;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+}
+.wp-block-uswds-table {
+  // Sort highlight.
+  &[sorted="colnum-0"] .colnum-0,
+  &[sorted="colnum-1"] .colnum-1,
+  &[sorted="colnum-2"] .colnum-2,
+  &[sorted="colnum-3"] .colnum-3,
+  &[sorted="colnum-4"] .colnum-4,
+  &[sorted="colnum-5"] .colnum-5,
+  &[sorted="colnum-6"] .colnum-6,
+  &[sorted="colnum-7"] .colnum-7,
+  &[sorted="colnum-8"] .colnum-8,
+  &[sorted="colnum-9"] .colnum-9,
+  &[sorted="colnum-10"] .colnum-10 {
+    background-color: #e1f3f8;
+  }
+  input.search {
+    width: 100%;
+    @media (min-width:770px) {
+      width: 49%;
+    }
+  }
+  &.is-view-block {
+    .views-exposed-form {
+      .form-row {
+        display: block;
+      }
+      .form-type-textfield {
+        width: 100%;
+        @media (min-width:770px) {
+          width: 50%;
+        }
+        input {
+          border-radius: 0;
+          color: #3d4551;
+          display: block;
+          margin-top: 0.5rem;
+          max-width: 30rem;
+          padding: 0.5rem;
+          border-width: 1px;
+          border-color: #565c65;
+          border-style: solid;
+          height: 2.5rem;
+          width: 100%;
+        }
+      }
+      .form-submit {
+        height: 2.5rem;
+        display: none;
+      }
+    }
+    table {
+      background-color: #fff;
+      border: 1px solid #3d4551;
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+      thead th {
+        background-color: #dfe1e2;
+        border: 1px solid #3d4551;
+        padding: 0.5rem 1rem;
+        font-weight: 700;
+        line-height: 1.4;
+        position: relative;
+        cursor: pointer;
+        a {
+          color: #343a40;
+        }
+        &:hover a {
+          text-decoration: underline;
+        }
+        &:not(.is-active)::after {
+          position: absolute;
+          right: 0.25rem;
+          text-align: center;
+          text-decoration: none;
+          top: 50%;
+          transform: translate(0,-50%);
+          height: 1.5rem;
+          width: 1.5rem;
+          opacity: 0.6;
+          content: url("data:image/svg+xml,%3Csvg class='usa-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='15.17 15 13 17.17 13 6.83 15.17 9 16.58 7.59 12 3 7.41 7.59 8.83 9 11 6.83 11 17.17 8.83 15 7.42 16.41 12 21 16.59 16.41 15.17 15'%3E%3C/polygon%3E%3C/svg%3E");
+        }
+        .tablesort {
+          position: absolute;
+          right: 0.25rem;
+          text-align: center;
+          text-decoration: none;
+          top: 50%;
+          transform: translate(0,-50%);
+          height: 1.5rem;
+          width: 1.5rem;
+          opacity: 0.6;
+        }
+        .tablesort--desc {
+          background-image: url("data:image/svg+xml,%3Csvg class='usa-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath transform='rotate(180, 12, 12)' d='M17 17L15.59 15.59L12.9999 18.17V2H10.9999V18.17L8.41 15.58L7 17L11.9999 22L17 17Z'%3E%3C/path%3E%3C/svg%3E");
+        }
+        .tablesort--asc {
+          background-image: url("data:image/svg+xml,%3Csvg class='usa-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17 17L15.59 15.59L12.9999 18.17V2H10.9999V18.17L8.41 15.58L7 17L11.9999 22L17 17Z'%3E%3C/path%3E%3C/svg%3E");
+        }
+      }
+      tbody {
+        td {
+          background-color: #fff;
+          border: 1px solid #3d4551;
+          font-weight: 400;
+          padding: 0.5rem 1rem;
+        }
+        td.is-active {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+    &.usa-table--borderless table {
+      border: 0;
+      thead th {
+        background-color: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+      tbody {
+        td {
+          border-left: 0;
+          border-right: 0;
+        }
+      }
+    }
+    &.usa-table--striped table {
+      tbody tr:nth-child(odd) td {
+        background-color: #f0f0f0;
+        color: #3d4551;
+        &.is-active {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+    &.fixed-layout {
+      table {
+        table-layout: fixed;
+      }
+    }
+  }
+}
+.usa-pagination__item.active {
+  .usa-pagination__button {
+    background-color: $uswds-black;
+    border-color: transparent;
+    color: #fff;
+  }
+}

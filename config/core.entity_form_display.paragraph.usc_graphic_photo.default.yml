@@ -1,0 +1,42 @@
+uuid: 52fb6e3b-7968-4344-b02e-2caa32f1d6c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.usc_graphic_photo.field_usc_image
+    - field.field.paragraph.usc_graphic_photo.field_usc_label
+    - field.field.paragraph.usc_graphic_photo.field_usc_title
+    - paragraphs.paragraphs_type.usc_graphic_photo
+  module:
+    - media_library
+id: paragraph.usc_graphic_photo.default
+targetEntityType: paragraph
+bundle: usc_graphic_photo
+mode: default
+content:
+  field_usc_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_usc_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_usc_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

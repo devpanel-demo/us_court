@@ -1,0 +1,13 @@
+uuid: 50598612-2745-4e86-a7c0-7845d03232ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - moderated_content_bulk_publish
+_core:
+  default_config_hash: LG5X_3pItrdFCa4jIcrtrGgKrMV643Yi7Yo0ItIsbqQ
+id: publish_latest
+label: 'Publish latest revision'
+type: node
+plugin: publish_latest_revision_action
+configuration: {  }

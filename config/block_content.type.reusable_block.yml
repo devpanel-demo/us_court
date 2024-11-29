@@ -1,0 +1,13 @@
+uuid: fa9c46c8-a444-4816-a1a0-6e268879f5d8
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - gutenberg
+_core:
+  default_config_hash: r3t6MLUWkQk97pf7x3OiHCBZanFJKsKLS3uuQbmw-Yo
+id: reusable_block
+label: 'Reusable block'
+revision: false
+description: 'Build your block on Gutenberg editor and re-use it everywhere!'

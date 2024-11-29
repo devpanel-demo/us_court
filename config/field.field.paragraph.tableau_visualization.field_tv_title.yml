@@ -1,0 +1,19 @@
+uuid: 0a622902-a1a4-402b-ad0e-ee2156a7872d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tv_title
+    - paragraphs.paragraphs_type.tableau_visualization
+id: paragraph.tableau_visualization.field_tv_title
+field_name: field_tv_title
+entity_type: paragraph
+bundle: tableau_visualization
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

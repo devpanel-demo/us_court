@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 0f73acea-b6f8-42d8-a0bb-27dc610c6374
+entity_type: media
+bundle: icon
+base_fields:
+  name: train-solid.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/train-solid.svg'
+      url: '/sites/default/files/icons/train-solid.svg'

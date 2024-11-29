@@ -1,0 +1,28 @@
+diff --git a/search_autocomplete.module b/search_autocomplete.module
+index f4dc07a..05d1008 100644
+--- a/search_autocomplete.module
++++ b/search_autocomplete.module
+@@ -204,13 +204,16 @@ function search_autocomplete_library_info_build() {
+  * Implements hook_library_info_alter().
+  */
+ function search_autocomplete_library_info_alter(array &$libraries, $extension) {
+-  if ($extension == 'core' && isset($libraries['drupal.autocomplete'])) {
+-    $libraries['drupal.autocomplete']['js'] = array_merge($libraries['drupal.autocomplete']['js'], [
+-      '/' . \Drupal::service('extension.list.module')->getPath('search_autocomplete') . '/js/jquery.autocomplete.js' => ['weight' => 0],
+-    ]);
+-    $libraries['drupal.autocomplete']['dependencies'] = array_merge($libraries['drupal.autocomplete']['dependencies'], [
+-      'search_autocomplete/search_autocomplete.purify'
+-    ]);
++
++  if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
++    if ($extension == 'core' && isset($libraries['drupal.autocomplete'])) {
++      $libraries['drupal.autocomplete']['js'] = array_merge($libraries['drupal.autocomplete']['js'], [
++        '/' . \Drupal::service('extension.list.module')->getPath('search_autocomplete') . '/js/jquery.autocomplete.js' => ['weight' => 0],
++      ]);
++      $libraries['drupal.autocomplete']['dependencies'] = array_merge($libraries['drupal.autocomplete']['dependencies'], [
++        'search_autocomplete/search_autocomplete.purify'
++      ]);
++    }
+   }
+ }
+ 

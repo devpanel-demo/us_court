@@ -1,0 +1,6 @@
+{{ include('uscgov:graphic', {
+  title: content.field_usc_title|render,
+  image: content.field_usc_video,
+  body: content.field_usc_description|render,
+  field_name: 'video',
+  }, with_context = false) }}

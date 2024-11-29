@@ -1,0 +1,141 @@
+uuid: 8bbaf8cd-b411-487e-ac64-120ee2c4ab4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.usc_location.finder_result
+    - field.field.usc_location.usc_location.field_geofield
+  module:
+    - nomarkup
+    - sdc_display
+    - usc_court_finder
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'uscgov:court-finder-result'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          address: ''
+          type: ''
+          directions_url: ''
+          phone: ''
+          headquaters: ''
+      dynamic:
+        props:
+          title: extra_field_court_finder_label
+          address: address
+          type: court_type
+          directions_url: extra_field_court_finder_maps_url
+          phone: phone
+          headquaters: main_office
+id: usc_location.usc_location.finder_result
+targetEntityType: usc_location
+bundle: usc_location
+mode: finder_result
+content:
+  address:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  court_type:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  extra_field_court_finder_headquater:
+    type: extra_field_court_finder_headquater
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  extra_field_court_finder_label:
+    type: extra_field_court_finder_label
+    settings:
+      link_to_entity: '1'
+      wrapper: h3
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  extra_field_court_finder_maps_url:
+    type: extra_field_court_finder_maps_url
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  main_office:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 6
+    region: content
+  phone:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+hidden:
+  building_address: true
+  building_city: true
+  building_name: true
+  building_state: true
+  building_zip: true
+  circuit_id: true
+  closes: true
+  district_id: true
+  ecf_url: true
+  ecf_url2: true
+  ejuror_url: true
+  extra_field_court_finder_court_ecf_link: true
+  extra_field_court_finder_court_ejuror_link: true
+  extra_field_court_finder_court_jury_info_link: true
+  extra_field_court_finder_court_page_link: true
+  fax: true
+  field_geofield: true
+  has_public_library: true
+  jury_service_url: true
+  location_group: true
+  location_id: true
+  lunch_end: true
+  lunch_start: true
+  mail_box: true
+  mail_zip: true
+  office_name: true
+  opens: true
+  org_code: true
+  room: true
+  search_api_excerpt: true
+  unit: true
+  url: true

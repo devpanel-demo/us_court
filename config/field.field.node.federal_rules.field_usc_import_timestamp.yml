@@ -1,0 +1,23 @@
+uuid: 0326de3e-6f04-4b7d-9ba8-c5d523cb5df5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usc_import_timestamp
+    - node.type.federal_rules
+id: node.federal_rules.field_usc_import_timestamp
+field_name: field_usc_import_timestamp
+entity_type: node
+bundle: federal_rules
+label: 'Import Timestamp'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

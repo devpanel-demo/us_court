@@ -1,0 +1,7 @@
+usc_search.settings_form:
+  path: '/admin/config/usc_search/settings'
+  defaults:
+    _form: '\Drupal\usc_search\Form\SearchConfigForm'
+    _title: 'Search GOV Settings'
+  requirements:
+    _permission: 'administer site configuration'

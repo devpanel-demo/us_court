@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 4743a183-974a-4af4-bfc0-3f72ceef8e58
+entity_type: media
+bundle: icon
+base_fields:
+  name: power-off-solid.svg
+  created: '1721137188'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/power-off-solid.svg'
+      url: '/sites/default/files/icons/power-off-solid.svg'

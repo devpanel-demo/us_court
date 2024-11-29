@@ -1,0 +1,70 @@
+uuid: c73dd3d8-c269-4b3e-882c-55a49588024b
+langcode: en
+status: true
+dependencies:
+  config:
+    - feeds.feed_type.federal_rules
+    - field.field.feeds_feed.federal_rules.field_location_of_files
+  module:
+    - feeds
+    - user
+id: feeds_feed.federal_rules.default
+targetEntityType: feeds_feed
+bundle: federal_rules
+mode: default
+content:
+  field_location_of_files:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  imported:
+    type: timestamp_ago
+    label: inline
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  item_count:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  next:
+    type: timestamp
+    label: inline
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  source:
+    type: feeds_uri_link
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: -3
+    region: content
+hidden:
+  search_api_excerpt: true

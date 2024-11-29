@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 32cb611e-d359-4cca-8235-5659171ba1fc
+entity_type: media
+bundle: icon
+base_fields:
+  name: undo-alt.svg
+  created: '1721137240'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/undo-alt.svg'
+      url: '/sites/default/files/icons/undo-alt.svg'

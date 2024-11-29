@@ -1,0 +1,126 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+uuid: 3f725429-188f-49ee-a2d4-1cb33e4de886
+entity_type: node
+bundle: basic
+base_fields:
+  title: 'Testing call out and pull quote - Basic - eap'
+  status: true
+  langcode: en
+  created: '1716917279'
+  changed: 1716917279
+  author: jamesdavison@ao.uscourts.gov
+  url: /testing-call-out-and-pull-quote-basic-eap
+  revision_log_message: null
+  revision_uid: '1'
+  moderation_state: published
+custom_fields:
+  body: null
+  field_banner_image: null
+  field_body_enhanced:
+    -
+      uuid: 4f3b9878-0cf7-4083-b2c0-068d65d30a53
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1716917381'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body: null
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title: null
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>The Department of Justice (DOJ) has advised the Administrative Office of the U.S. Courts that it has no funds available to transfer to the Judiciary to make additional payments to eligible chapter 7 bankruptcy trustees for fiscal year 2023. Trustees interested in receiving the additional payments for fiscal year 2024 should still file payment eligibility certifications.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: 0cb8b8b7-ce87-4e19-81df-195cd388f01a
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1716917381'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution:
+          -
+            value: 'Taylor Swift'
+        field_callout_body:
+          -
+            value: '<p>So I leap from the gallows</p>'
+            format: wysiwyg
+        field_callout_pull_quote:
+          -
+            value: '1'
+        field_callout_title:
+          -
+            value: 'pull quote'
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>The <a href="https://www.congress.gov/116/bills/s4996/BILLS-116s4996enr.pdf"><u>Bankruptcy Administration Improvement Act of 2020</u></a> (BAIA) established an additional payment for eligible chapter 7 trustees for fiscal years 2021 to 2026. The payments are funded by excess collections in the DOJ’s U.S. Trustee System Fund. Eligible chapter 7 trustees received an additional payment of $60 for each applicable case in fiscal year 2021. However, the DOJ has lacked sufficient funds for any additional payments in fiscal year 2022 and 2023 cases.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+    -
+      uuid: dcc796f2-bc14-434e-ba92-687b6dc6b9b2
+      entity_type: paragraph
+      bundle: body_enhanced
+      base_fields:
+        status: true
+        langcode: en
+        created: '1716917423'
+        behavior_settings: {  }
+      custom_fields:
+        field_callout_attribution: null
+        field_callout_body:
+          -
+            value: "<p>You don't get to tell me about sad.</p>"
+            format: wysiwyg
+        field_callout_pull_quote:
+          -
+            value: '0'
+        field_callout_title:
+          -
+            value: 'Call out box'
+        field_embedded_widget: null
+        field_fc_be_body:
+          -
+            value: '<p>Amounts available for payment to chapter 7 trustees are determined annually based on the available balance in the U.S. Trustee System Fund, and by the case count of new chapter 7 filings and cases converted to chapter 7 during a fiscal year.</p><p>Visit the <a href="https://www.uscourts.gov/services-forms/bankruptcy/trustees-and-administrators/bankruptcy-administration-improvement-act"><u>Bankruptcy Administration Improvement Act Chapter 7 Trustee Payments</u></a> page for additional information about the payment process, regulations, and eligibility requirements.</p><p><a href="https://public.govdelivery.com/accounts/USFEDCOURTS/subscriber/new?topic_id=USFEDCOURTS_2332"><u>Sign up to receive notification</u></a> annually on payment information for future fiscal years.</p>'
+            format: wysiwyg
+        field_fc_be_heading: null
+        field_fc_be_image: null
+        field_fc_be_video: null
+        field_fc_be_video_caption: null
+        field_gallery: null
+  field_fc_be_audio: null
+  field_iframe: null
+  field_landing_page_image: null
+  field_lead_gallery: null
+  field_lead_paragraph:
+    -
+      value: "<p>Who's afraid of little old me?</p>"
+      format: wysiwyg
+  field_logo: null
+  field_metatag: null
+  field_tags: null
+  field_usc_additional_content: null
+  field_usc_govdelivery_form: null
+  field_usc_notification: null
+  field_usc_related_news: null
+  field_usc_table_of_contents: null
+  field_workbench_access: null

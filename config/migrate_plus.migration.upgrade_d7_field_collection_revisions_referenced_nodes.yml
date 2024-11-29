@@ -1,0 +1,74 @@
+uuid: a01ca967-226f-4022-bc1f-d8bb58368f35
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_field_collection_revisions_referenced_nodes
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Field Collection Revisions Content'
+migration_group: migrate_drupal_7
+label: 'Field Collection Revisions (Referenced nodes)'
+source:
+  plugin: d7_field_collection_item_revision
+  field_name: field_referenced_nodes
+process:
+  id:
+    -
+      plugin: paragraphs_lookup
+      tags:
+        - 'Field Collection Content'
+      source: item_id
+    -
+      plugin: extract
+      index:
+        - id
+  type:
+    -
+      plugin: get
+      source: bundle
+  parent_id:
+    -
+      plugin: get
+      source: parent_id
+  parent_type:
+    -
+      plugin: get
+      source: parent_type
+  parent_field_name:
+    -
+      plugin: get
+      source: field_name
+  field_fc_rn_node_row:
+    -
+      plugin: get
+      source: field_fc_rn_node_row
+  field_fc_rn_row_style:
+    -
+      plugin: get
+      source: field_fc_rn_row_style
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  new_revisions: true
+  default_bundle: referenced_nodes
+migration_dependencies:
+  required:
+    - upgrade_d7_field_collection_body_enhanced
+    - upgrade_d7_field_collection_referenced_nodes
+    - upgrade_d7_field_collection_milestone_activities
+    - upgrade_d7_field_collection_additional_info
+    - upgrade_d7_field_collection_piksel_programs
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+  optional: {  }

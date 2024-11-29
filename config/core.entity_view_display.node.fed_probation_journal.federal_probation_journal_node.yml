@@ -1,0 +1,93 @@
+uuid: f2de2b3f-17a2-4790-8a68-78b4a1dfa87f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.federal_probation_journal_node
+    - field.field.node.fed_probation_journal.body
+    - field.field.node.fed_probation_journal.feeds_item
+    - field.field.node.fed_probation_journal.field_auther
+    - field.field.node.fed_probation_journal.field_document_pdf
+    - field.field.node.fed_probation_journal.field_metatag
+    - field.field.node.fed_probation_journal.field_mydate
+    - field.field.node.fed_probation_journal.field_tags
+    - field.field.node.fed_probation_journal.field_test
+    - field.field.node.fed_probation_journal.field_usc_additional_content
+    - field.field.node.fed_probation_journal.field_usc_govdelivery_form
+    - field.field.node.fed_probation_journal.field_usc_import_timestamp
+    - field.field.node.fed_probation_journal.field_usc_notification
+    - field.field.node.fed_probation_journal.field_usc_related_news
+    - field.field.node.fed_probation_journal.field_usc_table_of_contents
+    - field.field.node.fed_probation_journal.field_volume_and_issue_number
+    - field.field.node.fed_probation_journal.field_workbench_access
+    - node.type.fed_probation_journal
+  module:
+    - text
+    - user
+id: node.fed_probation_journal.federal_probation_journal_node
+targetEntityType: node
+bundle: fed_probation_journal
+mode: federal_probation_journal_node
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_auther:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_document_pdf:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: federal_probation_journal_displa
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_volume_and_issue_number:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  extra_field_child_menu_items: true
+  feeds_item: true
+  field_metatag: true
+  field_mydate: true
+  field_tags: true
+  field_test: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_import_timestamp: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: e6fa0132-10d8-4912-9fb0-71560b0bb6f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_salary_minimum
+    - paragraphs.paragraphs_type.job_vacancy
+id: paragraph.job_vacancy.field_salary_minimum
+field_name: field_salary_minimum
+entity_type: paragraph
+bundle: job_vacancy
+label: 'Minimum Salary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

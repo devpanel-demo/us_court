@@ -1,0 +1,24 @@
+uuid: 8fd2fa99-f38a-4f3d-b3ab-023164e504c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.educational_activity
+  module:
+    - text
+id: node.educational_activity.body
+field_name: body
+entity_type: node
+bundle: educational_activity
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

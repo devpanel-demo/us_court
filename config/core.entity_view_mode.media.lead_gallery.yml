@@ -1,0 +1,11 @@
+uuid: bd2e77d8-596f-40e3-92c1-cb7c8989616e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.lead_gallery
+label: lead_gallery
+description: ''
+targetEntityType: media
+cache: true

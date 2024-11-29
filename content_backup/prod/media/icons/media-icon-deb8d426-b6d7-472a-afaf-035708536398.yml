@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: deb8d426-b6d7-472a-afaf-035708536398
+entity_type: media
+bundle: icon
+base_fields:
+  name: building-solid.svg
+  created: '1721136830'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/building-solid.svg'
+      url: '/sites/default/files/icons/building-solid.svg'

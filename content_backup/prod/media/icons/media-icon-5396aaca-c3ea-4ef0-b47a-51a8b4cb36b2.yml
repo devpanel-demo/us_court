@@ -1,0 +1,15 @@
+site_uuid: d7bed51a-e7b2-48f3-ab88-fcb0d7c6be91
+
+uuid: 5396aaca-c3ea-4ef0-b47a-51a8b4cb36b2
+entity_type: media
+bundle: icon
+base_fields:
+  name: file-video-solid.svg
+  created: '1721137082'
+  status: true
+  langcode: en
+custom_fields:
+  field_media_file_1:
+    -
+      uri: 'public://icons/file-video-solid.svg'
+      url: '/sites/default/files/icons/file-video-solid.svg'

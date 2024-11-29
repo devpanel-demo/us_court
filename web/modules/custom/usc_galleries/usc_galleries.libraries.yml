@@ -1,0 +1,50 @@
+splide:
+  remote: https://splidejs.com/
+  version: 3.6.12
+  license:
+    name: MIT
+    url: https://github.com/splidejs/splide/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/splide/dist/js/splide.min.js: { minified: true }
+  css:
+    base:
+      /libraries/splide/dist/css/splide-core.min.css: { minified: true }
+
+splide_video:
+  remote: https://splidejs.com/extension-video/
+  version: 3
+  license:
+    name: MIT
+    url: https://github.com/splidejs/splide-extension-video/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/splide-extension-video/dist/js/splide-extension-video.min.js: { minified: true }
+  css:
+    base:
+      /libraries/splide-extension-video/dist/css/splide-extension-video.min.css: { minified: true }
+  dependencies:
+    - usc_galleries/splide
+
+glightbox:
+  remote: https://biati-digital.github.io/glightbox/
+  version: VERSION
+  license:
+    name: MIT
+    url: https://github.com/biati-digital/glightbox/blob/master/LICENSE.md
+    gpl-compatible: true
+  js:
+    /libraries/glightbox/dist/js/glightbox.min.js: { minified: true }
+  css:
+    theme:
+      /libraries/glightbox/dist/css/glightbox.min.css: { minified: true }
+
+gallery:
+  version: VERSION
+  js:
+    js/gallery.js: {}
+  dependencies:
+    - usc_galleries/splide
+    - usc_galleries/splide_video
+    - usc_galleries/glightbox
+    - core/drupal

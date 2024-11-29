@@ -1,0 +1,21 @@
+uuid: aab4807b-28ff-4b56-bb1a-36b78ac67fd1
+langcode: en
+status: true
+dependencies: {  }
+name: site_logo
+label: 'Site logo'
+effects:
+  a67fc77c-acf0-458e-b494-152f4b409c18:
+    uuid: a67fc77c-acf0-458e-b494-152f4b409c18
+    id: image_convert
+    weight: -9
+    data:
+      extension: webp
+  7b9ed384-003c-423f-a84a-a1886fda599b:
+    uuid: 7b9ed384-003c-423f-a84a-a1886fda599b
+    id: image_scale
+    weight: -10
+    data:
+      width: 320
+      height: null
+      upscale: false

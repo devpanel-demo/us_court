@@ -1,0 +1,29 @@
+.view-vacancies-judicial-archives {
+  table {
+    width: 100%;
+  }
+
+  h3 {
+    font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-size: 1.06rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    text-align: left;
+  }
+
+  .views-view-grid {
+    border: 1px solid var(--color-primitive-neutral-base-dark);
+    .views-row {
+      &:not(:is(:first-child)) {
+        border-top: 1px solid var(--color-primitive-neutral-base-dark);
+      }
+    }
+    .views-col {
+      padding: 1rem;
+      text-align: center;
+      &:not(:is(:first-child)) {
+        border-left: 1px solid var(--color-primitive-neutral-base-dark);
+      }
+    }
+  }
+}

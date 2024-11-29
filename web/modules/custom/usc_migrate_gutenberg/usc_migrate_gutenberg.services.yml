@@ -1,0 +1,6 @@
+services:
+  usc_migrate_gutenberg.process_row:
+    class: Drupal\usc_migrate_gutenberg\EventSubscriber\USCGutenbergMigrationSubscriber
+    arguments: ['@html_processors.html_gutenberg_parser']
+    tags:
+      - { name: event_subscriber }

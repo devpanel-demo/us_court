@@ -1,0 +1,156 @@
+uuid: 434eaedc-620a-48e3-bdb5-19cbc8e4eb91
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.section_landing
+    - field.field.node.educational_activity.body
+    - field.field.node.educational_activity.field_activity_category
+    - field.field.node.educational_activity.field_body_enhanced
+    - field.field.node.educational_activity.field_fc_be_audio
+    - field.field.node.educational_activity.field_landing_page_image
+    - field.field.node.educational_activity.field_lead_gallery
+    - field.field.node.educational_activity.field_lead_paragraph
+    - field.field.node.educational_activity.field_logo
+    - field.field.node.educational_activity.field_metatag
+    - field.field.node.educational_activity.field_tags
+    - field.field.node.educational_activity.field_usc_additional_content
+    - field.field.node.educational_activity.field_usc_govdelivery_form
+    - field.field.node.educational_activity.field_usc_notification
+    - field.field.node.educational_activity.field_usc_related_news
+    - field.field.node.educational_activity.field_usc_table_of_contents
+    - image.style.featured_image
+    - field.field.node.educational_activity.field_workbench_access
+    - node.type.educational_activity
+  module:
+    - media
+    - nomarkup
+    - sdc_display
+    - summary_only
+    - user
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'uscgov:usa_card'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          settings:
+            wrapper_element: div
+            flag: null
+            media_right: null
+            header_first: null
+            media_inset: null
+            media_exdent: null
+            body_exdent: null
+            footer_exdent: null
+          classes: ''
+          title: ''
+          image:
+            type: ''
+            url: ''
+            alt: ''
+            title: ''
+          cta:
+            url: ''
+            title: ''
+            show: '1'
+            new_tab: null
+          child_items: ''
+        slots:
+          body:
+            value: ''
+            format: wysiwyg
+      dynamic:
+        props:
+          title_suffix: ''
+          settings: ''
+          classes: ''
+          title: title
+          image: field_landing_page_image
+          cta: ''
+          child_items: extra_field_child_menu_items
+        slots:
+          body:
+            body: null
+            content_moderation_control: null
+            extra_field_child_menu_items: null
+            field_landing_page_image: null
+            links: null
+            sharethis: null
+            uid: null
+            title: null
+            created: null
+id: node.educational_activity.section_landing
+targetEntityType: node
+bundle: educational_activity
+mode: section_landing
+content:
+  body:
+    type: text_summary_only
+    label: hidden
+    settings:
+      trim_summary: false
+      trim_length: '600'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  extra_field_child_menu_items:
+    type: extra_field_child_menu_items
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_landing_page_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: featured_image
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  field_activity_category: true
+  field_body_enhanced: true
+  field_fc_be_audio: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_logo: true
+  field_metatag: true
+  field_tags: true
+  field_usc_additional_content: true
+  field_usc_govdelivery_form: true
+  field_usc_notification: true
+  field_usc_related_news: true
+  field_usc_table_of_contents: true
+  field_workbench_access: true
+  search_api_excerpt: true
