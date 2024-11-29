@@ -1,0 +1,50 @@
+.uscgov-root,
+.editor-styles-wrapper {
+  /*
+   * Color palette for this variant.
+   *
+   * Sets css variables for this color variant.
+   * @todo: This palette may be used below to reduce complexity.
+   */
+  --color-primary-button-text: var(--color-primitive-neutral-base-light);
+  --color-primary-primary: var(--color-primitive-theme-primary-primary);
+  --color-primary-light: var(--color-primitive-theme-primary-light);
+  --color-primary-lighter: var(--color-primitive-theme-primary-lighter);
+  --color-primary-dark: var(--color-primitive-theme-primary-dark);
+  --color-primary-darker: var(--color-primitive-theme-primary-darker);
+  --color-secondary-button-text: var(--color-primitive-neutral-base-dark);
+  --color-secondary-primary: var(--color-primitive-theme-secondary-gold-primary);
+  --color-secondary-light: var(--color-primitive-theme-secondary-gold-light);
+  --color-secondary-lighter: var(--color-primitive-theme-secondary-gold-lighter);
+  --color-secondary-dark: var(--color-primitive-theme-secondary-gold-dark);
+  --color-secondary-darker: var(--color-primitive-theme-secondary-gold-darker);
+  --color-accent-button-text: var(--color-primitive-neutral-base-light);
+  --color-accent-primary: var(--color-primitive-theme-accent-green-primary);
+  --color-accent-light: var(--color-primitive-theme-accent-green-light);
+  --color-accent-lighter: var(--color-primitive-theme-accent-green-lighter);
+  --color-accent-dark: var(--color-primitive-theme-accent-green-dark);
+  --color-accent-darker: var(--color-primitive-theme-accent-green-darker);
+  /**
+   * Surface and text colors
+   */
+  --surface-secondary-dark: var(--color-primitive-theme-secondary-gold-dark) // #A07510;
+  --text-on-surface-secondary-dark: var(--color-primitive-neutral-base-light);
+  --surface-secondary-lighter: var(--color-token-secondary-gold-lighter);
+  --text-on-surface-secondary-lighter: var(--color-primitive-neutral-base-dark);
+  --text-secondary-darker: var(--color-primitive-theme-secondary-gold-darker);
+  /**
+   * Accent
+   */
+  --accent: #4B7500;
+  /**
+   * Links, forms, and buttons
+   */
+  --surface-button-secondary: var(--color-primitive-theme-secondary-gold-light);
+  --surface-button-accent: var(--accent);
+  /**
+   * Borders
+   */
+  --border-secondary: var(--color-primitive-theme-secondary-gold-primary);
+  --border-secondary-dark: var(--color-primitive-theme-secondary-gold-dark);
+  --border-secondary-dark: var(--color-primitive-theme-secondary-gold-dark);
+}

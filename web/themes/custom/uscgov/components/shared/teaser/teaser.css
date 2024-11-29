@@ -1,0 +1,22 @@
+.teaser {
+  container-type: inline-size;
+}
+
+.teaser__meta {
+  margin-block: 16px;
+}
+.teaser__meta .spacing-component {
+  margin: 0;
+}
+
+.teaser__content {
+  margin-bottom: 16px;
+}
+@container (inline-size > 500px) {
+  .teaser__content img {
+    max-width: 300px;
+    float: right;
+    margin: 8px;
+  }
+}
+/*# sourceMappingURL=teaser.css.map */

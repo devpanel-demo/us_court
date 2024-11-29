@@ -1,0 +1,1 @@
+{"version":3,"sources":["toolbox/location-image/location-image.scss","toolbox/location-image/location-image.css"],"names":[],"mappings":"AACE;EACE,mBAAA;ACAJ","file":"location-image.css","sourcesContent":[".location-image {\n  img {\n    border-radius: 10px;\n  }\n}\n",".location-image img {\n  border-radius: 10px;\n}"]}

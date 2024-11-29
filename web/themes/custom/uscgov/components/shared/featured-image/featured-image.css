@@ -1,0 +1,9 @@
+.featured-image {
+  margin: var(--spacing-component) 0;
+}
+
+.featured-image__caption {
+  font-size: 14px;
+  font-style: italic;
+}
+/*# sourceMappingURL=featured-image.css.map */

@@ -1,0 +1,67 @@
+/**
+ * Download button styles.
+ */
+a[data-component-id="uscgov:file-download"] {
+  margin-top: var(--spacing-component);
+}
+
+.button:has(> .download-button) {
+  margin-bottom: var(--spacing-component);
+  padding: 8px 16px;
+}
+.button:has(> .download-button):hover {
+  text-decoration: none;
+}
+.button:has(> .download-button):has(+ .button--download) {
+  margin-right: 8px;
+}
+
+.download-button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+[class].download-button__icon-type {
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.download-button__content {
+  text-align: center;
+  text-decoration: none;
+  text-wrap: pretty;
+}
+
+.download-button__label {
+  font-size: 17px;
+}
+
+.download-button__meta {
+  margin-top: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.download-button_icon-download {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-image: url("images/download-light.svg");
+  mask-image: url("images/download-light.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: currentColor;
+}
+@media (forced-colors: active) {
+  .download-button_icon-download {
+    background-color: linkText;
+  }
+}
+/*# sourceMappingURL=file-download.css.map */

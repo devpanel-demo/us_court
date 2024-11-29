@@ -1,0 +1,10 @@
+.lead-image {
+  margin: 0 0 var(--spacing-component);
+}
+
+.lead-image__caption {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-on-surface-base-light);
+}
+/*# sourceMappingURL=lead-image.css.map */

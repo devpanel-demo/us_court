@@ -1,0 +1,107 @@
+.wp-block-uswds-table > .usa-table[class][class] thead th,
+.wp-block-uswds-table.usa-table[class][class] thead th {
+  padding: 10px;
+}
+.wp-block-uswds-table > .usa-table[class][class] th,
+.wp-block-uswds-table.usa-table[class][class] th {
+  background-color: var(--surface-base-muted-light);
+  color: var(--text-on-surface-base-muted-light);
+  font-size: 16px;
+  font-weight: bold;
+}
+.wp-block-uswds-table > .usa-table[class][class] td,
+.wp-block-uswds-table.usa-table[class][class] td {
+  padding: 15px 10px;
+  background: var(--surface-base-lighter);
+  border-color: var(--border-muted-dark);
+  color: var(--text-on-surface-base-lighter-light);
+  font-size: 16px;
+}
+.wp-block-uswds-table > .usa-table[class][class] .sort:after,
+.wp-block-uswds-table.usa-table[class][class] .sort:after {
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 1.5rem;
+  width: 1.5rem;
+  display: block;
+  content: "";
+  background-image: url("/themes/custom/uscgov/icons/misc/sortable.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.wp-block-uswds-table > .usa-table[class][class] .sort.asc,
+.wp-block-uswds-table.usa-table[class][class] .sort.asc {
+  background-color: var(--surface-primary-light);
+  color: var(--text-on-surface-primary-light);
+}
+.wp-block-uswds-table > .usa-table[class][class] .sort.asc:after,
+.wp-block-uswds-table.usa-table[class][class] .sort.asc:after {
+  background-image: url("/themes/custom/uscgov/icons/misc/arrow-up-dark.svg");
+}
+.wp-block-uswds-table > .usa-table[class][class] .sort.desc,
+.wp-block-uswds-table.usa-table[class][class] .sort.desc {
+  background-color: var(--surface-primary-light);
+  color: var(--text-on-surface-primary-light);
+}
+.wp-block-uswds-table > .usa-table[class][class] .sort.desc:after,
+.wp-block-uswds-table.usa-table[class][class] .sort.desc:after {
+  background-image: url("/themes/custom/uscgov/icons/misc/arrow-up-dark.svg");
+  scale: -1;
+  translate: 0 -100%;
+}
+[sorted=colnum-1] .wp-block-uswds-table > .usa-table[class][class] .colnum-1, [sorted=colnum-2] .wp-block-uswds-table > .usa-table[class][class] .colnum-2, [sorted=colnum-3] .wp-block-uswds-table > .usa-table[class][class] .colnum-3, [sorted=colnum-4] .wp-block-uswds-table > .usa-table[class][class] .colnum-4, [sorted=colnum-5] .wp-block-uswds-table > .usa-table[class][class] .colnum-5, [sorted=colnum-6] .wp-block-uswds-table > .usa-table[class][class] .colnum-6, [sorted=colnum-7] .wp-block-uswds-table > .usa-table[class][class] .colnum-7, [sorted=colnum-8] .wp-block-uswds-table > .usa-table[class][class] .colnum-8, [sorted=colnum-9] .wp-block-uswds-table > .usa-table[class][class] .colnum-9, [sorted=colnum-10] .wp-block-uswds-table > .usa-table[class][class] .colnum-10,
+[sorted=colnum-1] .wp-block-uswds-table.usa-table[class][class] .colnum-1,
+[sorted=colnum-2] .wp-block-uswds-table.usa-table[class][class] .colnum-2,
+[sorted=colnum-3] .wp-block-uswds-table.usa-table[class][class] .colnum-3,
+[sorted=colnum-4] .wp-block-uswds-table.usa-table[class][class] .colnum-4,
+[sorted=colnum-5] .wp-block-uswds-table.usa-table[class][class] .colnum-5,
+[sorted=colnum-6] .wp-block-uswds-table.usa-table[class][class] .colnum-6,
+[sorted=colnum-7] .wp-block-uswds-table.usa-table[class][class] .colnum-7,
+[sorted=colnum-8] .wp-block-uswds-table.usa-table[class][class] .colnum-8,
+[sorted=colnum-9] .wp-block-uswds-table.usa-table[class][class] .colnum-9,
+[sorted=colnum-10] .wp-block-uswds-table.usa-table[class][class] .colnum-10 {
+  background-color: var(--surface-primary-lighter);
+  color: var(--text-on-surface-primary-lighter);
+}
+
+.wp-block-uswds-table > .usa-table.usa-table--striped[class][class] td,
+.wp-block-uswds-table.usa-table.usa-table--striped[class][class] td {
+  color: var(--text-on-surface-base-lighter);
+}
+.wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) td,
+.wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) td {
+  background: var(--surface-base-medium);
+  color: var(--text-on-surface-base-medium-dark);
+}
+[sorted=colnum-0] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-0, [sorted=colnum-1] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-1, [sorted=colnum-2] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-2, [sorted=colnum-3] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-3, [sorted=colnum-4] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-4, [sorted=colnum-5] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-5, [sorted=colnum-6] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-6, [sorted=colnum-7] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-7, [sorted=colnum-8] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-8, [sorted=colnum-9] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-9, [sorted=colnum-10] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-10,
+[sorted=colnum-0] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-0,
+[sorted=colnum-1] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-1,
+[sorted=colnum-2] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-2,
+[sorted=colnum-3] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-3,
+[sorted=colnum-4] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-4,
+[sorted=colnum-5] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-5,
+[sorted=colnum-6] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-6,
+[sorted=colnum-7] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-7,
+[sorted=colnum-8] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-8,
+[sorted=colnum-9] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-9,
+[sorted=colnum-10] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(even) .colnum-10 {
+  background-color: var(--surface-primary-lighter);
+  color: var(--text-on-surface-primary-lighter);
+}
+[sorted=colnum-0] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-0, [sorted=colnum-1] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-1, [sorted=colnum-2] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-2, [sorted=colnum-3] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-3, [sorted=colnum-4] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-4, [sorted=colnum-5] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-5, [sorted=colnum-6] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-6, [sorted=colnum-7] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-7, [sorted=colnum-8] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-8, [sorted=colnum-9] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-9, [sorted=colnum-10] .wp-block-uswds-table > .usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-10,
+[sorted=colnum-0] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-0,
+[sorted=colnum-1] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-1,
+[sorted=colnum-2] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-2,
+[sorted=colnum-3] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-3,
+[sorted=colnum-4] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-4,
+[sorted=colnum-5] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-5,
+[sorted=colnum-6] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-6,
+[sorted=colnum-7] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-7,
+[sorted=colnum-8] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-8,
+[sorted=colnum-9] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-9,
+[sorted=colnum-10] .wp-block-uswds-table.usa-table.usa-table--striped[class][class] tbody tr:nth-child(odd) .colnum-10 {
+  background-color: var(--surface-base-lightest);
+  color: var(--text-on-surface-base-lightest--dark);
+}

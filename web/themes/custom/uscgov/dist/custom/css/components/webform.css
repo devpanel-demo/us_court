@@ -1,0 +1,27 @@
+.form-managed-file {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block: var(--spacing-sm-2);
+}
+.form-managed-file:has(.form-managed-file__main [value="Remove selected"]) {
+  flex-wrap: wrap;
+}
+.form-managed-file:has(.form-managed-file__main [value="Remove selected"]) .form-managed-file__main {
+  flex-basis: 100%;
+}
+.form-managed-file:has(.form-managed-file__main [value="Remove selected"]) .form-type-checkbox {
+  flex-basis: 100%;
+}
+.form-managed-file [type=file] {
+  margin: 0;
+  padding: 10px;
+  border: solid 1px var(--border-muted-light);
+}
+
+.form-managed-file__main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block: var(--spacing-sm-1);
+}

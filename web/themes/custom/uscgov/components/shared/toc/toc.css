@@ -1,0 +1,67 @@
+.usc-toc__heading {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.toc-list {
+  border-left: solid 1px var(--border-muted-dark);
+  margin: 0 0 var(--spacing-component);
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.toc-list .toc-list {
+  margin: 0;
+  border: 0;
+}
+
+.toc-list-item {
+  font-weight: bold;
+}
+.toc-list-item .toc-list-item {
+  font-weight: normal;
+}
+
+.toc-link {
+  display: block;
+  padding: var(--spacing-sm-1) var(--spacing-sm-2);
+  text-decoration: none;
+}
+.toc-link.toc-active-click {
+  position: relative;
+  color: #080A0D;
+}
+.toc-link.toc-active-click:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  content: "";
+  display: block;
+  border-left: solid 4px currentColor;
+}
+
+@container (inline-size > 1040px) {
+  .node__content:has(> .usc-toc) {
+    display: grid;
+    grid-template-columns: 100% 250px;
+    grid-column-gap: 20px;
+  }
+  .layout-main:has(> .layout-sidebar) .node__content:has(> .usc-toc) {
+    grid-template-columns: auto 250px;
+  }
+  .node__content:has(> .usc-toc) > * {
+    grid-column: 1;
+  }
+  .node__content:has(> .usc-toc) > .usc-toc {
+    grid-column: 2;
+    grid-row: span 99;
+  }
+  .node__content:has(> .usc-toc) .usc-toc__content {
+    position: sticky;
+    top: calc(10px + var(--drupal-displace-offset-top, 0px));
+  }
+}
+/*# sourceMappingURL=toc.css.map */

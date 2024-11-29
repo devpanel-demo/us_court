@@ -1,0 +1,98 @@
+.related-documents {
+  margin-bottom: var(--spacing-component);
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid var(--border-muted-dark);
+  box-shadow: 0px 4px 8px 0px rgba(64, 72, 97, 0.12);
+}
+
+.related-documents__title {
+  margin: 0 0 4px;
+  font-family: var(--sans);
+  font-size: 24px;
+}
+
+.related-documents__description {
+  color: var(--text-on-surface-base-light);
+  font-size: 14px;
+}
+
+.related-documents__documents {
+  margin: var(--spacing-sm-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.related-documents__documents li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.related-documents__documents a {
+  position: relative;
+  display: block;
+  padding: 16px 48px;
+  border-top: solid 1px var(--border-muted-dark);
+  text-decoration: none;
+  color: var(--text-on-surface-base-light);
+}
+.related-documents__documents a:hover {
+  background: var(--surface-primary-lighter);
+}
+.related-documents__documents a:hover:before {
+  position: absolute;
+  right: 9px;
+  top: calc(50% + 1px);
+  translate: 0 -50%;
+  display: block;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  content: "";
+  background: var(--surface-button-dark);
+}
+.related-documents__documents a:hover:after {
+  background: var(--surface-primary-lighter);
+}
+.related-documents__documents a:after {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  translate: 0 -50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  -webkit-mask-image: url("images/download.svg");
+  mask-image: url("images/download.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background: var(--surface-button-dark);
+}
+@media (forced-colors: active) {
+  .related-documents__documents a:after {
+    background: LinkText;
+  }
+}
+.related-documents__documents a .usc-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  translate: 0 -50%;
+  background: var(--surface-button-dark);
+}
+@media (forced-colors: active) {
+  .related-documents__documents a .usc-icon {
+    background: LinkText;
+  }
+}
+.related-documents__documents a .filesize {
+  font-size: 13px;
+}
+.related-documents__documents li:last-child a {
+  border-bottom: solid 1px var(--border-muted-dark);
+}
+/*# sourceMappingURL=related-documents.css.map */

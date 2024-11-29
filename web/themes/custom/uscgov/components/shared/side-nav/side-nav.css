@@ -1,0 +1,99 @@
+.side-nav {
+  --padding: 16px;
+}
+
+.side-nav__title {
+  margin: 0;
+  padding-inline: var(--padding);
+  padding-block: 45px 37px;
+  border-bottom: 2px solid var(--border-primary);
+  background: var(--surface-primary-lighter);
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: bold;
+}
+.side-nav__title a {
+  text-decoration: none;
+}
+.side-nav__title a:hover {
+  text-decoration: underline;
+}
+
+.side-nav__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-nav__menu-item {
+  padding-inline: var(--padding);
+  border-top: 0.5px solid var(--border-form);
+}
+.side-nav__menu-item .side-nav__menu-item {
+  padding-inline: 0;
+}
+
+.side-nav__link {
+  display: block;
+  padding: var(--padding);
+  text-decoration: none;
+  color: var(--text-on-surface-primary-lighter);
+}
+
+.side-nav__menu-item--expanded.side-nav__menu-item--active-trail > a,
+.side-nav__menu-item--active-trail > a {
+  position: relative;
+  padding-right: var(--padding);
+  font-weight: bold;
+}
+.side-nav__menu-item--expanded.side-nav__menu-item--active-trail > a.side-nav__link--level-1:before,
+.side-nav__menu-item--active-trail > a.side-nav__link--level-1:before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  translate: 0 -50%;
+  content: "";
+  height: 24px;
+  width: 0;
+  border-left: solid 5px var(--border-primary);
+}
+
+.side-nav__menu-item--active-trail {
+  background: var(--surface-base-lightest);
+}
+.side-nav__menu-item--active-trail .side-nav__menu-item--active-trail {
+  padding: 0;
+}
+.side-nav__menu-item--active-trail > .is-active {
+  font-weight: bold;
+}
+.side-nav__menu-item--active-trail .side-nav__menu {
+  padding-left: var(--padding);
+}
+.side-nav__menu-item--active-trail .side-nav__menu-item {
+  border: none;
+}
+
+.side-nav__menu-item--children > a {
+  position: relative;
+  padding-right: calc(2 * var(--padding));
+}
+.side-nav__menu-item--children > a:after {
+  position: absolute;
+  top: 17px;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  rotate: -45deg;
+  border-bottom: solid 2px currentColor;
+  border-left: solid 2px currentColor;
+  content: "";
+}
+.side-nav__menu-item--children.side-nav__menu-item--active-trail > a:after {
+  content: none;
+}
+
+.side-nav__menu-item--expanded:not(.side-nav__menu-item--active-trail) > .side-nav__menu {
+  display: none;
+}
+/*# sourceMappingURL=side-nav.css.map */

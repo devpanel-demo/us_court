@@ -1,0 +1,39 @@
+.label-pill {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.label-pill * {
+  display: inline-block;
+}
+
+.label-pill__label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.label-pill__content {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.label-pill__content-item:not(:is(:last-child), :has(a)):after {
+  content: ", ";
+  white-space: pre;
+}
+.label-pill__content-item a {
+  padding: 4px 6px;
+  border-radius: 15px;
+  border: 1px solid var(--border-primary-light);
+  background: var(--surface-primary-lighter);
+  text-decoration: none;
+  color: var(--text-on-surface-base-lighter--light);
+}
+.label-pill__content-item a:hover {
+  color: var(--surface-body);
+  background: var(--text-link);
+}
+.label-pill__content-item a:active {
+  background: var(--surface-button-dark);
+}
+/*# sourceMappingURL=label-pill.css.map */

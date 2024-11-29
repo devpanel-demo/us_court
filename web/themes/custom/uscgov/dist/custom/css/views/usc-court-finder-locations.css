@@ -1,0 +1,9 @@
+.view-usc-court-finder-locations .view-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.views-field-field-geofield-distance {
+  display: none;
+}

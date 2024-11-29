@@ -1,0 +1,22 @@
+.search-result__title {
+  margin: 0;
+  font-size: 22px;
+}
+.search-result__title a {
+  text-decoration: none;
+}
+.search-result__title a:hover {
+  text-decoration: underline;
+  color: var(--color-primitive-theme-primary-primary);
+}
+
+.search-result__snippet-info {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-primitive-neutral-base-dark);
+}
+.search-result__snippet-info p:last-child {
+  margin-bottom: 0;
+  margin-block: 0;
+}
+/*# sourceMappingURL=search-result-item.css.map */

@@ -1,0 +1,102 @@
+.uscgov-root,
+.editor-styles-wrapper,
+.interface-interface-skeleton__sidebar {
+  /*
+   * Color palette for this variant.
+   *
+   * Sets css variables for this color variant.
+   * @todo: This palette may be used below to reduce complexity.
+   */
+  --color-primary-button-text: var(--color-primitive-neutral-base-light);
+  --color-primary-primary: var(--color-primitive-theme-primary-primary);
+  --color-primary-light: var(--color-primitive-theme-primary-light);
+  --color-primary-lighter: var(--color-primitive-theme-primary-lighter);
+  --color-primary-dark: var(--color-primitive-theme-primary-dark);
+  --color-primary-darker: var(--color-primitive-theme-primary-darker);
+  --color-secondary-button-text: var(--color-primitive-neutral-base-dark);
+  --color-secondary-primary: var(--color-primitive-theme-secondary-gold-primary);
+  --color-secondary-light: var(--color-primitive-theme-secondary-gold-light);
+  --color-secondary-lighter: var(--color-primitive-theme-secondary-gold-lighter);
+  --color-secondary-dark: var(--color-primitive-theme-secondary-gold-dark);
+  --color-secondary-darker: var(--color-primitive-theme-secondary-gold-darker);
+  --color-accent-button-text: var(--color-primitive-neutral-base-light);
+  --color-accent-primary: var(--color-primitive-theme-accent-red-primary);
+  --color-accent-light: var(--color-primitive-theme-accent-red-light);
+  --color-accent-lighter: var(--color-primitive-theme-accent-red-lighter);
+  --color-accent-dark: var(--color-primitive-theme-accent-red-dark);
+  --color-accent-darker: var(--color-primitive-theme-accent-red-darker);
+  /**
+   * Surface and text colors
+   */
+  --surface-primary: var(--color-primitive-theme-primary-primary);
+  --text-on-surface-primary: var(--color-primitive-neutral-base-light);
+  --surface-primary-light: var(--color-primitive-theme-primary-light);
+  --text-on-surface-primary-light: var(--color-primitive-neutral-base-dark);
+  --surface-primary-dark: var(--color-primitive-theme-primary-dark);
+  --text-on-surface-primary-dark: var(--color-primitive-neutral-base-light);
+  --surface-primary-darker: var(--color-primitive-theme-primary-darker);
+  --text-on-surface-primary-darker: var(--color-primitive-neutral-base-light);
+  --surface-primary-lighter: var(--color-primitive-theme-primary-lighter);
+  --text-on-surface-primary-lighter: var(--color-primitive-neutral-base-dark);
+  --text-on-surface-base-lighter--light: var(--color-token-base-text-icon-base-secondary-dark);
+  --text-on-surface-base-lighter--primary: var(--color-primitive-theme-primary-dark);
+  --surface-secondary-dark: var(--color-primitive-theme-secondary-gold-dark) // #A07510;
+  --text-on-surface-secondary-dark: var(--color-primitive-neutral-base-light);
+  --surface-secondary-lighter: var(--color-token-secondary-gold-lighter);
+  --text-on-surface-secondary-lighter: var(--color-primitive-neutral-base-dark);
+  --text-secondary-darker: var(--color-primitive-theme-secondary-gold-darker);
+  --surface-body: var(--color-primitive-neutral-base-light);
+  --text-on-surface-body: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --surface-base-lighter: var(--color-primitive-neutral-gray-background);
+  --text-on-surface-base-lighter: var(--color-primitive-neutral-base-dark);
+  --text-on-surface-base-lighter-light: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --surface-base-light: var(--color-primitive-neutral-gray-surface-variant);
+  --text-on-surface-base-light: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --text-on-surface-base-light-dark: var(--color-primitive-neutral-base-dark);
+  --surface-base-lightest: var(--color-token-base-background-background-variant);
+  --text-on-surface-base-lightest: var(--color-token-base-text-icon-base-secondary-dark);
+  --text-on-surface-base-lightest--dark: var(--color-primitive-neutral-base-dark);
+  --surface-base-medium: var(--color-primitive-neutral-gray-surface-variant-dark);
+  --text-on-surface-base-medium: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --text-on-surface-base-medium-dark: var(--color-primitive-neutral-base-dark);
+  --surface-base-muted-light: var(--color-primitive-neutral-gray-muted-light);
+  --text-on-surface-base-muted-light: var(--color-primitive-neutral-base-dark);
+  /**
+   * Links, forms, and buttons
+   */
+  --text-link: var(--color-primitive-theme-primary-primary);
+  --text-link-dark: var(--color-primitive-theme-primary-dark);
+  --text-link-darkest: var(--color-primitive-theme-primary-darkest);
+  --surface-form: var(--color-primitive-neutral-white);
+  --surface-button: var(--surface-primary);
+  --text-on-surface-button: var(--text-on-surface-primary);
+  --surface-button-accent: var(--accent);
+  --text-on-surface-button-accent: var(--color-primitive-neutral-base-light);
+  --surface-button-dark: var(--color-primitive-theme-primary-dark);
+  --surface-button-darker: var(--color-primitive-theme-primary-darker);
+  --surface-button-secondary: var(--color-primitive-theme-secondary-gold-light);
+  --text-on-surface-button-secondary: var(--color-primitive-theme-primary-darkest);
+  /**
+   * Borders
+   */
+  --border-primary: var(--color-primitive-theme-primary-primary);
+  --border-primary-light: var(--color-primitive-theme-primary-light);
+  --border-primary-dark: var(--color-primitive-theme-primary-dark);
+  --border-primary-darker: var(--color-primitive-theme-primary-darker);
+  --border-muted-dark: var(--color-token-base-border-muted-dark);
+  --border-muted-light: var(--color-primitive-neutral-gray-muted-light);
+  --border-secondary: var(--color-primitive-theme-secondary-gold-primary);
+  --border-secondary-dark: var(--color-primitive-theme-secondary-gold-dark);
+  --border-form: var(--border-muted-dark);
+  --border-secondary-dark: var(--color-primitive-theme-secondary-gold-dark);
+  /**
+   * Accent
+   */
+  --accent: #A34329;
+  --accent-dark: #722F1D;
+  --accent-darkest: #522215;
+  /*
+   * Misc
+   */
+  --focus-ring: #2491ff;
+}

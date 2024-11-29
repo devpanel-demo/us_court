@@ -1,0 +1,352 @@
+/**
+ * Custom button styles.
+ */
+a.button,
+.button,
+.wp-block-button__link,
+.usa-button[class],
+.usc-button[class],
+button.ui-widget.button,
+input[type=submit] {
+  --surface-color: var(--surface-button);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--surface-color);
+  border: solid 1px var(--border-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 115%;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.button[data-extlink] svg,
+.button[data-extlink] svg,
+.wp-block-button__link[data-extlink] svg,
+.usa-button[class][data-extlink] svg,
+.usc-button[class][data-extlink] svg,
+button.ui-widget.button[data-extlink] svg,
+input[type=submit][data-extlink] svg {
+  fill: currentColor;
+}
+a.button[data-extlink] svg path,
+.button[data-extlink] svg path,
+.wp-block-button__link[data-extlink] svg path,
+.usa-button[class][data-extlink] svg path,
+.usc-button[class][data-extlink] svg path,
+button.ui-widget.button[data-extlink] svg path,
+input[type=submit][data-extlink] svg path {
+  stroke: currentColor;
+}
+a.button:where(:not([disabled])):hover,
+.button:where(:not([disabled])):hover,
+.wp-block-button__link:where(:not([disabled])):hover,
+.usa-button[class]:where(:not([disabled])):hover,
+.usc-button[class]:where(:not([disabled])):hover,
+button.ui-widget.button:where(:not([disabled])):hover,
+input[type=submit]:where(:not([disabled])):hover {
+  --surface-color: var(--surface-button-dark);
+  text-decoration: underline;
+}
+a.button:where(:not([disabled])):active,
+.button:where(:not([disabled])):active,
+.wp-block-button__link:where(:not([disabled])):active,
+.usa-button[class]:where(:not([disabled])):active,
+.usc-button[class]:where(:not([disabled])):active,
+button.ui-widget.button:where(:not([disabled])):active,
+input[type=submit]:where(:not([disabled])):active {
+  --surface-color: var(--surface-button-darker);
+  text-decoration: underline;
+}
+a.button[disabled],
+.button[disabled],
+.wp-block-button__link[disabled],
+.usa-button[class][disabled],
+.usc-button[class][disabled],
+button.ui-widget.button[disabled],
+input[type=submit][disabled] {
+  --surface-color: var(--surface-base-medium);
+  --text-color: var(--text-on-surface-base-medium);
+  cursor: not-allowed;
+}
+a.button[href^="tel:"]:after,
+.button[href^="tel:"]:after,
+.wp-block-button__link[href^="tel:"]:after,
+.usa-button[class][href^="tel:"]:after,
+.usc-button[class][href^="tel:"]:after,
+button.ui-widget.button[href^="tel:"]:after,
+input[type=submit][href^="tel:"]:after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: currentColor;
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/phone.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/phone.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+a.button:is(.button--outline, .usa-button--outline),
+.button:is(.button--outline, .usa-button--outline),
+.wp-block-button__link:is(.button--outline, .usa-button--outline),
+.usa-button[class]:is(.button--outline, .usa-button--outline),
+.usc-button[class]:is(.button--outline, .usa-button--outline),
+button.ui-widget.button:is(.button--outline, .usa-button--outline),
+input[type=submit]:is(.button--outline, .usa-button--outline) {
+  --surface-color: transparent;
+  --text-color: var(--text-link);
+  --border-color: currentColor;
+}
+a.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover, a.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover,
+.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.wp-block-button__link:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover,
+.wp-block-button__link:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.usa-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover,
+.usa-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.usc-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover,
+.usc-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+button.ui-widget.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover,
+button.ui-widget.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+input[type=submit]:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover,
+input[type=submit]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active {
+  --surface-color: var(--surface-primary-lighter);
+}
+a.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.wp-block-button__link:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.usa-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.usc-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+button.ui-widget.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+input[type=submit]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active {
+  border-width: 3px;
+}
+a.button:is(.button--outline, .usa-button--outline)[disabled],
+.button:is(.button--outline, .usa-button--outline)[disabled],
+.wp-block-button__link:is(.button--outline, .usa-button--outline)[disabled],
+.usa-button[class]:is(.button--outline, .usa-button--outline)[disabled],
+.usc-button[class]:is(.button--outline, .usa-button--outline)[disabled],
+button.ui-widget.button:is(.button--outline, .usa-button--outline)[disabled],
+input[type=submit]:is(.button--outline, .usa-button--outline)[disabled] {
+  --text-color: var(--color-primitive-neutral-gray-muted-dark);
+}
+a.button:is(.button--outline, .usa-button--outline):active,
+.button:is(.button--outline, .usa-button--outline):active,
+.wp-block-button__link:is(.button--outline, .usa-button--outline):active,
+.usa-button[class]:is(.button--outline, .usa-button--outline):active,
+.usc-button[class]:is(.button--outline, .usa-button--outline):active,
+button.ui-widget.button:is(.button--outline, .usa-button--outline):active,
+input[type=submit]:is(.button--outline, .usa-button--outline):active {
+  border-width: 1px;
+}
+a.button.button--ghost,
+.button.button--ghost,
+.wp-block-button__link.button--ghost,
+.usa-button[class].button--ghost,
+.usc-button[class].button--ghost,
+button.ui-widget.button.button--ghost,
+input[type=submit].button--ghost {
+  --surface-color: transparent;
+  --text-color: var(--text-link);
+  --border-color: transparent;
+  padding-inline: 0;
+  box-shadow: none;
+}
+a.button.button--ghost:where(:not([disabled])):hover,
+.button.button--ghost:where(:not([disabled])):hover,
+.wp-block-button__link.button--ghost:where(:not([disabled])):hover,
+.usa-button[class].button--ghost:where(:not([disabled])):hover,
+.usc-button[class].button--ghost:where(:not([disabled])):hover,
+button.ui-widget.button.button--ghost:where(:not([disabled])):hover,
+input[type=submit].button--ghost:where(:not([disabled])):hover {
+  --text-color: var(--text-on-surface-base-lighter--primary);
+}
+a.button.button--ghost:where(:not([disabled])):active,
+.button.button--ghost:where(:not([disabled])):active,
+.wp-block-button__link.button--ghost:where(:not([disabled])):active,
+.usa-button[class].button--ghost:where(:not([disabled])):active,
+.usc-button[class].button--ghost:where(:not([disabled])):active,
+button.ui-widget.button.button--ghost:where(:not([disabled])):active,
+input[type=submit].button--ghost:where(:not([disabled])):active {
+  --text-color: var(--color-primitive-theme-primary-darker);
+}
+a.button.button--ghost[disabled],
+.button.button--ghost[disabled],
+.wp-block-button__link.button--ghost[disabled],
+.usa-button[class].button--ghost[disabled],
+.usc-button[class].button--ghost[disabled],
+button.ui-widget.button.button--ghost[disabled],
+input[type=submit].button--ghost[disabled] {
+  --text-color: var(--color-primitive-neutral-gray-muted-dark);
+  background: transparent;
+}
+a.button.button--arrow:after,
+.button.button--arrow:after,
+.wp-block-button__link.button--arrow:after,
+.usa-button[class].button--arrow:after,
+.usc-button[class].button--arrow:after,
+button.ui-widget.button.button--arrow:after,
+input[type=submit].button--arrow:after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  -webkit-mask-image: url("../../../uswds/img/usa-icons/arrow_forward.svg");
+          mask-image: url("../../../uswds/img/usa-icons/arrow_forward.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: currentColor;
+}
+a.button.button--arrow-back:after,
+.button.button--arrow-back:after,
+.wp-block-button__link.button--arrow-back:after,
+.usa-button[class].button--arrow-back:after,
+.usc-button[class].button--arrow-back:after,
+button.ui-widget.button.button--arrow-back:after,
+input[type=submit].button--arrow-back:after {
+  -webkit-mask-image: url("../../../uswds/img/usa-icons/arrow_back.svg");
+          mask-image: url("../../../uswds/img/usa-icons/arrow_back.svg");
+}
+a.button.button--small,
+.button.button--small,
+.wp-block-button__link.button--small,
+.usa-button[class].button--small,
+.usc-button[class].button--small,
+button.ui-widget.button.button--small,
+input[type=submit].button--small {
+  padding: var(--spacing-xs-2) 12px;
+}
+a.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))),
+.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))),
+.wp-block-button__link[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))),
+.usa-button[class][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))),
+.usc-button[class][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))),
+button.ui-widget.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))),
+input[type=submit][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))) {
+  --surface-color: var(--button-color-surface);
+  --surface-color-hover: var(--button-color-surface-hover);
+  --surface-color-active: var(--button-color-surface-active);
+  --text-color: var(--button-color-text);
+  --text-color-hover: var(--button-color-text-hover);
+  --text-color-active: var(--button-color-text-active);
+  --border-color: var(--button-color-border);
+  --border-color-active: var(--button-color-border-active);
+  border: solid 0.5px var(--border-color);
+}
+a.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):focus, a.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):hover,
+.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):focus,
+.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):hover,
+.wp-block-button__link[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):focus,
+.wp-block-button__link[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):hover,
+.usa-button[class][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):focus,
+.usa-button[class][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):hover,
+.usc-button[class][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):focus,
+.usc-button[class][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):hover,
+button.ui-widget.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):focus,
+button.ui-widget.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):hover,
+input[type=submit][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):focus,
+input[type=submit][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):hover {
+  --surface-color: var(--surface-color-hover);
+  --text-color: var(--text-color-hover);
+}
+a.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):active,
+.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):active,
+.wp-block-button__link[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):active,
+.usa-button[class][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):active,
+.usc-button[class][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):active,
+button.ui-widget.button[class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):active,
+input[type=submit][class]:where(:not(:is(:disabled, .button--ghost, .button--outline, .usa-button--outline))):active {
+  --surface-color: var(--surface-color-active);
+  --text-color: var(--text-color-active);
+  --border-color: var(--border-color-active);
+  box-shadow: inset 0 0 0 2.5px var(--border-color-active);
+}
+
+div.wp-block-button.is-style-outline .wp-block-button__link {
+  --surface-color: transparent;
+  --text-color: var(--text-link);
+  --border-color: currentColor;
+  color: var(--text-color);
+  border: solid 1px currentColor;
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-primary-1-color {
+  --text-color: var(--color-primitive-theme-primary-lighter);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-primary-2-color {
+  --text-color: var(--color-primitive-theme-primary-light);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-primary-3-color {
+  --text-color: var(--color-primitive-theme-primary-primary);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-primary-4-color {
+  --text-color: var(--color-primitive-theme-primary-dark);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-primary-5-color {
+  --text-color: var(--color-primitive-theme-primary-darker);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-primary-6-color {
+  --text-color: var(--color-primitive-theme-primary-darkest);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-gold-1-color {
+  --text-color: var(--color-primitive-theme-secondary-gold-lighter);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-gold-2-color {
+  --text-color: var(--color-primitive-theme-secondary-gold-light);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-gold-3-color {
+  --text-color: var(color-primitive-theme-secondary-gold-primary);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-gold-4-color {
+  --text-color: var(--color-primitive-theme-secondary-gold-dark);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-gold-5-color {
+  --text-color: var(--color-primitive-theme-secondary-gold-darker);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-gold-6-color {
+  --text-color: var(--color-primitive-theme-secondary-gold-darkest);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-red-1-color {
+  --text-color: var(--color-primitive-theme-accent-red-lighter);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-red-2-color {
+  --text-color: var(--color-primitive-theme-accent-red-light);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-red-3-color {
+  --text-color: var(--color-primitive-theme-accent-red-primary);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-red-4-color {
+  --text-color: var(--color-primitive-theme-accent-red-dark);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-red-5-color {
+  --text-color: var(--color-primitive-theme-accent-red-darker);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-green-1-color {
+  --text-color: var(--color-primitive-theme-accent-green-lighter);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-green-2-color {
+  --text-color: var(--color-primitive-theme-accent-green-light);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-green-3-color {
+  --text-color: var(--color-primitive-theme-accent-green-primary);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-green-4-color {
+  --text-color: var(--color-primitive-theme-accent-green-dark);
+}
+div.wp-block-button.is-style-outline .wp-block-button__link.has-brand-green-5-color {
+  --text-color: var(--color-primitive-theme-accent-green-darker);
+}
+
+.wp-block-buttons {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}

@@ -1,0 +1,15 @@
+.js input.form-autocomplete {
+  border-width: 1px;
+  border-color: #565c65;
+  border-style: solid;
+  color: #1b1b1b;
+}
+
+.ui-autocomplete .ui-menu-item a {
+  display: block;
+  padding: 5px 10px;
+}
+.ui-autocomplete .ui-menu-item a:hover {
+  background-color: var(--surface-base-lightest);
+  color: var(--text-on-surface-base-lightest);
+}

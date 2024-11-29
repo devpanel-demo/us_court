@@ -1,0 +1,23 @@
+.view-vacancies-judicial-archives table {
+  width: 100%;
+}
+.view-vacancies-judicial-archives h3 {
+  font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1.06rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+.view-vacancies-judicial-archives .views-view-grid {
+  border: 1px solid var(--color-primitive-neutral-base-dark);
+}
+.view-vacancies-judicial-archives .views-view-grid .views-row:not(:is(:first-child)) {
+  border-top: 1px solid var(--color-primitive-neutral-base-dark);
+}
+.view-vacancies-judicial-archives .views-view-grid .views-col {
+  padding: 1rem;
+  text-align: center;
+}
+.view-vacancies-judicial-archives .views-view-grid .views-col:not(:is(:first-child)) {
+  border-left: 1px solid var(--color-primitive-neutral-base-dark);
+}

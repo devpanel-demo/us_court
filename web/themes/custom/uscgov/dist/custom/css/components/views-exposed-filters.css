@@ -1,0 +1,62 @@
+.views-exposed-form {
+  position: relative;
+  z-index: 2;
+  container-type: inline-size;
+}
+.views-exposed-form .form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 8px;
+  padding: var(--spacing-sm-2);
+  border: solid 1px var(--border-muted-dark);
+  border-radius: 10px;
+  background-color: var(--surface-base-lightest);
+  color: var(--text-on-surface-base-lightest);
+}
+@container (inline-size > 1000px) {
+  .views-exposed-form .form--inline {
+    padding: var(--spacing-md-3);
+  }
+}
+.views-exposed-form .form--inline label {
+  margin-top: 0;
+}
+.views-exposed-form .form--inline .form-actions {
+  margin-top: 30px;
+}
+.views-exposed-form .form--inline .form-actions input {
+  margin: 0;
+}
+.views-exposed-form .form--inline .form-actions input + input {
+  margin-left: 8px;
+}
+.views-exposed-form .form--inline .form-item :is(input, select) {
+  min-width: 100%;
+}
+.views-exposed-form .form--inline .usa-fieldset {
+  margin-block: 0;
+}
+.views-exposed-form [data-drupal-selector=edit-date-wrapper] {
+  margin: 0;
+}
+.views-exposed-form [data-drupal-selector=edit-date-wrapper] .fieldset-wrapper {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.views-exposed-form [data-drupal-selector=edit-date-wrapper] .form-item:has(> input.visually-hidden:only-child) {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+.layout-main:not(:has(> .layout-sidebar)) .views-exposed-form {
+  --width: calc(var(--site-max-width) - var(--padding-left) - var(--container-inline-spacing));
+  --page-width: calc(100vw - 2 * var(--container-inline-spacing));
+  width: min(var(--page-width), var(--width));
+}

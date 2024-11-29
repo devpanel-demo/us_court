@@ -1,0 +1,56 @@
+details {
+  position: relative;
+}
+
+details summary {
+  list-style: none; /* Remove default arrow */
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* Hide the default marker in Safari */
+}
+
+.details__summary {
+  padding-right: 30px;
+  cursor: pointer;
+}
+.details__summary:hover {
+  color: var(--border-secondary-dark);
+}
+.details__summary::marker, .details__summary::-webkit-details-marker {
+  content: "";
+}
+.details__summary:after {
+  position: absolute;
+  right: 28px;
+  top: 22px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  rotate: 45deg;
+  content: "";
+  border-bottom: solid 2px var(--border-secondary-dark);
+  border-right: solid 2px var(--border-secondary-dark);
+}
+[open] .details__summary:after {
+  top: 25px;
+  rotate: 225deg;
+}
+.details__summary > * {
+  display: contents;
+}
+
+.details__title {
+  font-size: 22px;
+}
+
+.details__content {
+  padding-top: var(--spacing-sm-2);
+}
+
+.details__help {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 3px;
+}
+/*# sourceMappingURL=details.css.map */

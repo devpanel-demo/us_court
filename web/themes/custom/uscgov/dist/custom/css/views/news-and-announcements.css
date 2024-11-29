@@ -1,0 +1,25 @@
+.view-news-and-announcements .view-footer {
+  margin-top: 24px;
+}
+.view-news-and-announcements .view-footer a {
+  font-size: 16px;
+  text-decoration: none;
+}
+.view-news-and-announcements .view-footer a:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+  margin-left: 4px;
+  margin-bottom: 2px;
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/misc/arrow-right-blue.svg");
+          mask-image: url("/themes/custom/uscgov/icons/misc/arrow-right-blue.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: currentColor;
+}

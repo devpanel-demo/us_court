@@ -1,0 +1,60 @@
+.usc-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  aspect-ratio: 1;
+  background: currentColor;
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+@media (forced-colors: active) {
+  .usc-icon {
+    background: linkText;
+  }
+}
+
+.usc-icon--pdf {
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-pdf.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-pdf.svg");
+}
+
+.usc-icon--word {
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-word.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-word.svg");
+}
+
+.usc-icon--powerpoint {
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-powerpoint.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-powerpoint.svg");
+}
+
+.usc-icon--excel {
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-excel.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-excel.svg");
+}
+
+.usc-icon--archive {
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-zipper.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-zipper.svg");
+}
+
+.usc-icon--image {
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-image.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-image.svg");
+}
+
+.usc-icon--audio {
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-audio.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-audio.svg");
+}
+
+.usc-icon--text {
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-lines.svg");
+          mask-image: url("/themes/custom/uscgov/icons/font-awesome/solid/file-lines.svg");
+}

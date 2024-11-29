@@ -1,0 +1,62 @@
+.court-finder-result {
+  padding-block: var(--spacing-md-1);
+  border-bottom: solid 1px var(--border-muted-dark);
+}
+.court-finder-result h3 {
+  margin-top: 0;
+}
+
+.court-finder-result__distance--processed {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: var(--spacing-sm-1);
+}
+.court-finder-result__distance--processed:before {
+  width: 12px;
+  height: 12px;
+  -webkit-mask-image: url("images/pin.svg");
+  mask-image: url("images/pin.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background: currentColor;
+  content: "";
+}
+
+@media (min-width: 900px) {
+  .court-finder-result__headquarters,
+  .court-finder-result__type {
+    float: right;
+    clear: both;
+  }
+}
+
+.court-finder-result__headquarters:before {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  -webkit-mask-image: url("images/university.svg");
+  mask-image: url("images/university.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background: currentColor;
+  content: "";
+}
+
+.court-finder-result__cta {
+  margin-top: var(--spacing-sm-2);
+}
+.court-finder-result__cta .button {
+  margin-right: 8px;
+  padding: var(--spacing-xs-2) 12px;
+}
+/*# sourceMappingURL=court-finder-result.css.map */

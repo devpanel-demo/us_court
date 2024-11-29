@@ -1,0 +1,18 @@
+.location-address {
+  display: flex;
+  flex-direction: row;
+}
+.location-address .location-address__icon {
+  width: 40px;
+}
+.location-address .location-address__text a {
+  display: inline-block;
+}
+.location-address .address-line1-element,
+.location-address .country-code-element {
+  display: block;
+}
+.location-address p {
+  margin: 0;
+}
+/*# sourceMappingURL=location-address.css.map */

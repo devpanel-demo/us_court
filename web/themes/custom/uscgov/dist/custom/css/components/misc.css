@@ -1,0 +1,79 @@
+.toolbar-oriented .toolbar-bar {
+  position: fixed;
+}
+
+.field--name-field-fc-be-image {
+  margin-block: 24px;
+}
+@media (min-width: 760px) {
+  .field--name-field-fc-be-image {
+    float: right;
+    width: min(300px, 43%);
+    margin: 0.5em 0 1em 1em;
+    clear: right;
+  }
+}
+.field--name-field-fc-be-image figure {
+  width: -moz-min-content;
+  width: min-content;
+  margin-inline: auto;
+}
+@media (min-width: 760px) {
+  .field--name-field-fc-be-image figure {
+    width: revert;
+    margin-inline: 0;
+  }
+}
+.field--name-field-fc-be-image img {
+  max-width: 90vw;
+}
+@media (min-width: 760px) {
+  .field--name-field-fc-be-image img {
+    max-width: 100%;
+  }
+}
+
+.back-to-top-wrapper {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.back-to-top-wrapper.is-hidden:not(:focus-within) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.back-to-top[class][class] {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-block: var(--spacing-sm-1);
+  margin-left: auto;
+  background-color: var(--surface-body);
+}
+.back-to-top[class][class]:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/misc/arrow-up.svg");
+          mask-image: url("/themes/custom/uscgov/icons/misc/arrow-up.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+
+.field--name-field-fc-be-video:has(+ .field--name-field-fc-be-video-caption) {
+  margin-top: var(--spacing-component);
+}
+
+.field--name-field-fc-be-video-caption {
+  margin-block: 4px var(--spacing-component);
+  font-size: 14px;
+  font-style: italic;
+}

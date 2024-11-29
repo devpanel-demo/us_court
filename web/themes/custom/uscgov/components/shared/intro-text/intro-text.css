@@ -1,0 +1,22 @@
+.intro-text {
+  margin-bottom: var(--spacing-component);
+  padding: var(--spacing-sm-3) var(--spacing-md-1);
+  border-top: 2px solid var(--border-secondary-dark);
+  border-bottom: 2px solid var(--border-secondary-dark);
+  background: var(--surface-base-lightest);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.35;
+  color: var(--text-on-surface-base-lightest);
+}
+
+.intro-text__content {
+  max-width: 900px;
+}
+.intro-text__content p:first-child {
+  margin-top: 0;
+}
+.intro-text__content p:last-child {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=intro-text.css.map */

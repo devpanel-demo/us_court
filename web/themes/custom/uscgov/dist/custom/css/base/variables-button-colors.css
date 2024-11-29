@@ -1,0 +1,85 @@
+/**
+ * List of button default color grades used to simplify the definition of 'button-palette-colors' by mapping from these values.
+ */
+/**
+ * List of colors for all button variants and corresponding button types.
+ * 
+ * Note: When a variant's button type doesn't set one of the button color variables
+ *   then that variable will use the color set for that type from 'primary' variant.
+ *   e.g. "secondary.default.text-hover" was not set so it will fallback to "primary.default.text-hover"
+ */
+/**
+ * Styles for button color variables.
+ *   - Uses the configured color palette as base.
+ *   - Sets colors for each button variant and button type.
+ */
+.uscgov-root,
+.editor-styles-wrapper,
+.interface-interface-skeleton__sidebar {
+  --button-color-text: var(--color-primary-button-text);
+  --button-color-text-hover: var(--color-primitive-neutral-base-light);
+  --button-color-text-active: var(--color-primitive-neutral-base-light);
+  --button-color-surface: var(--color-primary-primary);
+  --button-color-surface-hover: var(--color-primary-dark);
+  --button-color-surface-active: var(--color-primary-darker);
+  --button-color-border: var(--color-primitive-neutral-gray-muted-light);
+  --button-color-border-hover: var(--color-primitive-neutral-gray-muted-light);
+  --button-color-border-active: var(--color-primary-light);
+}
+.uscgov-root .usc-button--outline,
+.editor-styles-wrapper .usc-button--outline,
+.interface-interface-skeleton__sidebar .usc-button--outline {
+  --button-color-text: var(--color-primary-primary);
+  --button-color-text-hover: var(--color-primary-darker);
+  --button-color-text-active: var(--color-primary-dark);
+  --button-color-surface: var(--color-primitive-neutral-base-light);
+  --button-color-surface-hover: var(--color-primary-lighter);
+  --button-color-surface-active: var(--color-primary-lighter);
+  --button-color-border: var(--color-primary-primary);
+  --button-color-border-hover: var(--color-primary-darker);
+  --button-color-border-active: var(--color-primary-light);
+}
+.uscgov-root .usc-button--secondary,
+.editor-styles-wrapper .usc-button--secondary,
+.interface-interface-skeleton__sidebar .usc-button--secondary {
+  --button-color-text: var(--color-secondary-button-text);
+  --button-color-surface: var(--color-secondary-primary);
+  --button-color-surface-hover: var(--color-secondary-dark);
+  --button-color-surface-active: var(--color-secondary-darker);
+  --button-color-border-active: var(--color-secondary-light);
+}
+.uscgov-root .usc-button--secondary.usc-button--outline,
+.editor-styles-wrapper .usc-button--secondary.usc-button--outline,
+.interface-interface-skeleton__sidebar .usc-button--secondary.usc-button--outline {
+  --button-color-text: var(--color-secondary-primary);
+  --button-color-text-hover: var(--color-secondary-darker);
+  --button-color-text-active: var(--color-secondary-dark);
+  --button-color-surface: var(--color-primitive-neutral-base-light);
+  --button-color-surface-hover: var(--color-secondary-lighter);
+  --button-color-surface-active: var(--color-secondary-lighter);
+  --button-color-border: var(--color-secondary-primary);
+  --button-color-border-hover: var(--color-secondary-darker);
+  --button-color-border-active: var(--color-secondary-light);
+}
+.uscgov-root .usc-button--accent,
+.editor-styles-wrapper .usc-button--accent,
+.interface-interface-skeleton__sidebar .usc-button--accent {
+  --button-color-text: var(--color-accent-button-text);
+  --button-color-surface: var(--color-accent-primary);
+  --button-color-surface-hover: var(--color-accent-dark);
+  --button-color-surface-active: var(--color-accent-darker);
+  --button-color-border-active: var(--color-accent-light);
+}
+.uscgov-root .usc-button--accent.usc-button--outline,
+.editor-styles-wrapper .usc-button--accent.usc-button--outline,
+.interface-interface-skeleton__sidebar .usc-button--accent.usc-button--outline {
+  --button-color-text: var(--color-accent-primary);
+  --button-color-text-hover: var(--color-accent-darker);
+  --button-color-text-active: var(--color-accent-dark);
+  --button-color-surface: var(--color-primitive-neutral-base-light);
+  --button-color-surface-hover: var(--color-accent-lighter);
+  --button-color-surface-active: var(--color-accent-lighter);
+  --button-color-border: var(--color-accent-primary);
+  --button-color-border-hover: var(--color-accent-darker);
+  --button-color-border-active: var(--color-accent-light);
+}

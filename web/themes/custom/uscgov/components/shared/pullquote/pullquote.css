@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.usc-pullquote {
+  margin: 0;
+  padding: 24px;
+  border-left: 4px solid var(--border-secondary-dark);
+  background: var(--surface-body);
+}
+.usc-pullquote .pullquote-body {
+  font-family: var(--font-serif);
+  font-size: 22px;
+}
+.usc-pullquote .pullquote-body p {
+  font-size: inherit;
+}
+.usc-pullquote .pullquote-body :first-child {
+  margin-top: 0;
+}
+.usc-pullquote .pullquote-body :first-child:before {
+  content: "“";
+}
+.usc-pullquote .pullquote-body :last-child {
+  margin-bottom: 0;
+}
+.usc-pullquote .pullquote-body :last-child:after {
+  content: "”";
+}
+.usc-pullquote .pullquote-attribution {
+  display: block;
+  margin-top: 16px;
+  text-transform: capitalize;
+  font-style: italic;
+}
+.usc-pullquote .pullquote-attribution:before {
+  content: "—";
+}
+/*# sourceMappingURL=pullquote.css.map */

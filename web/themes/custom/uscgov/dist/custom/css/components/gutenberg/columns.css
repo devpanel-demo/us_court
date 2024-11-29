@@ -1,0 +1,5 @@
+@media (min-width: 782px) {
+  .wp-block-column:not(:first-child) {
+    margin-left: 1em;
+  }
+}

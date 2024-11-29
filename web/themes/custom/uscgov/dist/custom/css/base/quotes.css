@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**
+ * Custom pullquote and blockquote styles.
+ */
+.wp-block-pullquote {
+  border: 0;
+  margin: var(--spacing-component) 0;
+  padding: 0;
+  text-align: unset;
+  color: var(--text-on-surface-base-light);
+}
+
+.wp-block-quote:before,
+.wp-block-pullquote blockquote:before {
+  content: none;
+}
+
+.wp-block-pullquote cite {
+  color: var(--text-on-surface-primary-light);
+}
+
+.wp-block-pullquote__citation,
+.wp-block-pullquote cite,
+.wp-block-pullquote footer {
+  text-transform: unset;
+  font-size: 17px;
+  font-style: italic;
+}
+
+.wp-block-pullquote.alignleft,
+.wp-block-pullquote.alignright {
+  max-width: unset;
+}
+
+.wp-block-pullquote.alignleft p, .wp-block-pullquote cite .wp-block-pullquote.alignright p {
+  font-size: unset;
+}
+
+.wp-block-pullquote p {
+  font-size: unset;
+  line-height: unset;
+}
+
+.wp-block-pullquote blockquote p {
+  font-size: 22px;
+}
+
+.wp-block-quote,
+blockquote:where(:not(.usc-pullquote)) {
+  margin: var(--spacing-component) 0;
+  padding: 24px;
+  border-left: 4px solid var(--border-secondary-dark);
+  font-family: var(--font-serif);
+  font-size: 22px;
+}
+.wp-block-quote p,
+blockquote:where(:not(.usc-pullquote)) p {
+  font-size: inherit;
+}
+.wp-block-quote:not(:has(> *)):before,
+blockquote:where(:not(.usc-pullquote)):not(:has(> *)):before {
+  display: inline;
+  content: "“";
+}
+.wp-block-quote:not(:has(> *)):after,
+blockquote:where(:not(.usc-pullquote)):not(:has(> *)):after {
+  display: inline;
+  content: "”";
+}
+.wp-block-quote > :first-child,
+blockquote:where(:not(.usc-pullquote)) > :first-child {
+  margin-top: 0;
+}
+.wp-block-quote > :first-child:before,
+blockquote:where(:not(.usc-pullquote)) > :first-child:before {
+  content: "“";
+}
+.wp-block-quote > :where(:nth-last-child(1 of :not(cite))),
+blockquote:where(:not(.usc-pullquote)) > :where(:nth-last-child(1 of :not(cite))) {
+  margin-bottom: 0;
+}
+.wp-block-quote > :where(:nth-last-child(1 of :not(cite))):after,
+blockquote:where(:not(.usc-pullquote)) > :where(:nth-last-child(1 of :not(cite))):after {
+  content: "”";
+}
+.wp-block-quote [role=textbox]:before, .wp-block-quote [role=textbox]:after,
+blockquote:where(:not(.usc-pullquote)) [role=textbox]:before,
+blockquote:where(:not(.usc-pullquote)) [role=textbox]:after {
+  content: none;
+}
+.wp-block-quote .wp-block-pullquote__citation,
+.wp-block-quote .wp-block-quote__citation,
+.wp-block-quote cite,
+blockquote:where(:not(.usc-pullquote)) .wp-block-pullquote__citation,
+blockquote:where(:not(.usc-pullquote)) .wp-block-quote__citation,
+blockquote:where(:not(.usc-pullquote)) cite {
+  display: block;
+  margin-top: 16px;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 17px;
+}
+.wp-block-quote .wp-block-pullquote__citation:before,
+.wp-block-quote .wp-block-quote__citation:before,
+.wp-block-quote cite:before,
+blockquote:where(:not(.usc-pullquote)) .wp-block-pullquote__citation:before,
+blockquote:where(:not(.usc-pullquote)) .wp-block-quote__citation:before,
+blockquote:where(:not(.usc-pullquote)) cite:before {
+  content: "—";
+}

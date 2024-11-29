@@ -1,0 +1,90 @@
+.location__list_item {
+  text-decoration: none;
+  margin-bottom: 50px;
+  display: block;
+}
+.location__list_item .location__list_item__image {
+  flex-shrink: 0;
+}
+.location__list_item .location__list_item__image img {
+  border-radius: 10px;
+  display: block;
+}
+.location__list_item h4.location__list_item__heading {
+  font-weight: 700;
+  margin-block: var(--spacing-header-top) var(--spacing-header-bottom);
+}
+@media (min-width: 760px) {
+  .location__list_item h4.location__list_item__heading {
+    margin-block: 0 var(--spacing-header-bottom);
+  }
+}
+.location__list_item h4.location__list_item__heading a {
+  text-decoration: none;
+}
+.location__list_item .location__list_item__address,
+.location__list_item .location__list_item__phone {
+  color: var(--color-primitive-neutral-base-dark);
+  font-size: 16px;
+}
+.location__list_item .location__list_item__address .field__item,
+.location__list_item .location__list_item__phone .field__item {
+  margin-left: 30px;
+}
+.location__list_item .location__list_item__address:before,
+.location__list_item .location__list_item__phone:before {
+  float: left;
+  margin-top: 5px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  -webkit-mask-image: url("images/location_on.svg");
+  mask-image: url("images/location_on.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: currentColor;
+}
+.location__list_item .location__list_item__address {
+  margin-bottom: 0.5rem;
+  line-height: 21px;
+}
+.location__list_item .location__list_item__address .address-line1-element {
+  display: block;
+}
+.location__list_item .location__list_item__address a {
+  display: inline-block;
+}
+.location__list_item .location__list_item__address a[data-extlink] svg {
+  fill: currentColor;
+}
+.location__list_item .location__list_item__address a[data-extlink] svg path {
+  stroke: currentColor;
+}
+.location__list_item .location__list_item__address a .extlink-nobreak svg {
+  width: 20px;
+  height: 23px;
+  transform: translateY(4px);
+}
+.location__list_item .location__list_item__address a .extlink-nobreak svg path {
+  stroke-width: 2px;
+}
+.location__list_item .location__list_item__phone:before {
+  -webkit-mask-image: url("images/phone.svg");
+  mask-image: url("images/phone.svg");
+}
+
+@media (min-width: 640px) {
+  .location__list_item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 50px;
+  }
+  .location__list_item .location__list_item__image {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=location-list-item.css.map */

@@ -1,0 +1,95 @@
+.court-finder-court {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm-3);
+}
+
+.court-finder-court__second {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: var(--spacing-sm-1);
+}
+
+.court-finder-court__third {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: var(--spacing-sm-1);
+  flex-basis: 100%;
+  border-top: solid 1px var(--border-muted-dark);
+  margin-top: var(--spacing-sm-3);
+  padding-top: var(--spacing-sm-3);
+}
+
+.court-finder-court__address {
+  font-size: 20px;
+}
+
+.court-finder-court__main-office:before {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  -webkit-mask-image: url("images/university.svg");
+  mask-image: url("images/university.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background: currentColor;
+  content: "";
+}
+
+.court-finder-court__links-list > * {
+  margin-bottom: var(--spacing-sm-2);
+  padding: var(--spacing-sm-2);
+  border: solid 1px var(--border-muted-light);
+  border-radius: 20px;
+}
+.court-finder-court__links-list > * a {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: var(--spacing-sm-1);
+}
+
+.court-finder-court__links-title {
+  margin-bottom: var(--spacing-sm-2);
+}
+
+.usc-location-links {
+  display: flex;
+  justify-content: space-between;
+}
+.usc-location-links #back-to-results:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: currentColor;
+  -webkit-mask-image: url(images/arrow-left.svg);
+  mask-image: url(images/arrow-left.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  vertical-align: middle;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+.usc-location-links a {
+  text-decoration: none;
+}
+.usc-location-links a span {
+  -webkit-text-decoration: revert;
+  text-decoration: revert;
+}
+.usc-location-links a:nth-child(2) {
+  margin-left: auto;
+}
+/*# sourceMappingURL=court-finder-court.css.map */

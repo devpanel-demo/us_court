@@ -1,0 +1,38 @@
+.related-content-item, .related-content article {
+  padding-block: 24px;
+  border-bottom: solid 1px var(--border-muted-dark);
+}
+
+.related-content-item__title, .related-content article h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: var(--font-sans);
+  line-height: 135%;
+}
+
+.related-content-item__body, .related-content article .node__content {
+  margin-top: 16px;
+  font-size: 17px;
+}
+.related-content-item__body .field--name-body p, .related-content article .node__content .field--name-body p {
+  margin-bottom: 0;
+}
+.related-content-item__body :first-child, .related-content article .node__content :first-child {
+  margin-top: 0;
+}
+.related-content-item__body :last-child, .related-content article .node__content :last-child {
+  margin-bottom: 0;
+}
+
+.related-content {
+  margin-bottom: var(--spacing-component);
+}
+
+.related-content__title {
+  margin: 0 0 4px;
+  font-family: var(--font-sans);
+  line-height: 115%;
+  font-size: 24px;
+}
+/*# sourceMappingURL=related-content.css.map */

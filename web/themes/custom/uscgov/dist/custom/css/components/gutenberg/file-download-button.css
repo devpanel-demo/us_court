@@ -1,0 +1,50 @@
+.wp-block-file .wp-block-file__button {
+  --surface-color: var(--surface-button);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--surface-color);
+  border: solid 1px var(--border-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 115%;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.wp-block-file .wp-block-file__button:after {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  -webkit-mask-image: url("/themes/custom/uscgov/icons/misc/download-light.svg");
+          mask-image: url("/themes/custom/uscgov/icons/misc/download-light.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: currentColor;
+}
+@media (forced-colors: active) {
+  .wp-block-file .wp-block-file__button:after {
+    background-color: linkText;
+  }
+}
+.wp-block-file .wp-block-file__button:not([disabled]):hover {
+  --surface-color: var(--surface-button-dark);
+  text-decoration: underline;
+  opacity: unset;
+}
+.wp-block-file .wp-block-file__button:not([disabled]):active {
+  --surface-color: var(--surface-button-darker);
+  text-decoration: underline;
+}
+.wp-block-file .wp-block-file__button:not([disabled]):focus {
+  opacity: unset;
+  text-decoration: unset;
+}

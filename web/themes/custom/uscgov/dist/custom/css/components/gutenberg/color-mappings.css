@@ -1,0 +1,65 @@
+.wp-block-button__link[class] {
+  --surface-color: var(--surface-button);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+  background: var(--surface-color) !important;
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+.wp-block-button__link[class]:hover, .wp-block-button__link[class]:active {
+  text-decoration: underline;
+}
+.wp-block-button__link[class][disabled] {
+  --surface-color: var(--surface-base-medium);
+  --text-color: var(--text-on-surface-base-medium);
+  cursor: not-allowed;
+}
+.wp-block-button__link[class].has-primary-background-color {
+  --surface-color: var(--surface-button);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+}
+.wp-block-button__link[class].has-primary-background-color:where(:not([disabled])):hover {
+  --surface-color: var(--surface-button-dark);
+}
+.wp-block-button__link[class].has-primary-background-color:where(:not([disabled])):active {
+  --surface-color: var(--surface-button-darker);
+}
+.wp-block-button__link[class].has-accent-background-color {
+  --surface-color: var(--accent);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+}
+.wp-block-button__link[class].has-accent-background-color:where(:not([disabled])):hover {
+  --surface-color: var(--accent-dark);
+}
+.wp-block-button__link[class].has-accent-background-color:where(:not([disabled])):active {
+  --surface-color: var(--accent-darkest);
+}
+
+.is-style-outline .wp-block-button__link[class].has-primary-background-color {
+  --surface-color: transparent;
+  --text-color: var(--text-link);
+  --border-color: currentColor;
+}
+.is-style-outline .wp-block-button__link[class].has-primary-background-color:where(:not([disabled])):hover {
+  --surface-color: var(--surface-primary-lighter);
+  --text-color: var(--text-on-surface-base-lighter--primary-dark);
+  --border-color: currentColor;
+}
+.is-style-outline .wp-block-button__link[class].has-primary-background-color:where(:not([disabled])):active {
+  --surface-color: var(--surface-primary-lighter);
+  --text-color: var(--text-on-surface-base-lighter--primary);
+  --border-color: var(--border-primary-light);
+}
+.is-style-outline .wp-block-button__link[class].has-accent-background-color {
+  --surface-color: transparent;
+  --text-color: var(--accent);
+  --border-color: currentColor;
+}
+.is-style-outline .wp-block-button__link[class].has-accent-background-color:where(:not([disabled])):hover {
+  --text-color: var(--accent-dark);
+}
+.is-style-outline .wp-block-button__link[class].has-accent-background-color:where(:not([disabled])):active {
+  --text-color: var(--accent-darkest);
+}

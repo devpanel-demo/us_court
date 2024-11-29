@@ -1,0 +1,43 @@
+ul[data-input-ref=usc_court_finder_search_homepage] {
+  max-height: 250px;
+  overflow: auto;
+}
+ul[data-input-ref=usc_court_finder_search_homepage] .ui-autocomplete-content {
+  background: white;
+}
+ul[data-input-ref=usc_court_finder_search_homepage] .ui-menu-item a {
+  display: block;
+  padding: 10px 20px;
+}
+ul[data-input-ref=usc_court_finder_search_homepage] .ui-menu-item a:hover {
+  background-color: var(--surface-base-medium);
+  color: var(--text-on-surface-base-medium);
+}
+ul[data-input-ref=usc_court_finder_search_homepage] .ui-autocomplete-field-group {
+  padding: 10px 20px;
+  color: inherit;
+  opacity: revert;
+  font-weight: bold;
+  pointer-events: auto;
+}
+ul[data-input-ref=usc_court_finder_search_homepage] .ui-autocomplete-field-group ~ .ui-menu-item a {
+  padding-left: 30px;
+}
+ul[data-input-ref=usc_court_finder_search_homepage] .ui-autocomplete-container-more_results {
+  display: none;
+}
+
+.ui-autocomplete .ui-menu-item-wrapper {
+  padding: 10px 20px;
+}
+.ui-autocomplete .ui-menu-item-wrapper:hover {
+  border-color: transparent;
+  background-color: var(--surface-base-medium);
+  color: var(--text-on-surface-base-medium);
+}
+
+[data-input-ref=usc_court_finder_search_homepage] {
+  max-height: 250px;
+  overflow: auto;
+}
+/*# sourceMappingURL=court-finder-dropdown.css.map */
