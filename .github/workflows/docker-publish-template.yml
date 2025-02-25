@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       webserver:
-        image: devpanel/php:8.0-base
+        image: devpanel/php:8.1-base
         env:
           DP_APP_ID: 'drupal-governor'
           APP_ROOT: '/var/www/html'        
